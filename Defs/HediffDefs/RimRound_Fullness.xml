@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--Stuffing Hediff-->
+<Defs>
+	<HediffDef>
+		<defName>RimRound_Fullness</defName>
+		<label>Fullness</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>fullness</labelNoun>
+		<description>How full you are</description>	
+	
+	
+	
+	
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<comps>
+		</comps>
+		
+		<isBad>false</isBad>
+	
+	
+		<stages>
+			<!--Stage 1-->
+			<li>
+				<minSeverity>0.0</minSeverity>
+				<label>Empty Stomach</label>
+				<lifeThreatening>false</lifeThreatening>
+				
+				<capMods>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.20</offset>
+					</li>							
+				</capMods>
+			</li>
+			
+			<!--Stage 2-->
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Moderate Fullness</label>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			
+			<!--Stage 3-->
+			<li>
+				<minSeverity>0.60</minSeverity>
+				<label>Full</label>
+				<lifeThreatening>false</lifeThreatening>
+				
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>-0.30</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.10</offset>
+					</li>							
+				</capMods>
+			</li>
+			
+			<!--Stage 4-->
+			<li>
+				<minSeverity>0.70</minSeverity>
+				<label>Very Full</label>
+				<lifeThreatening>false</lifeThreatening>
+				
+				
+				<painOffset>0.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>-0.60</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>							
+				</capMods>
+			</li>
+			
+			<!--Stage 5-->
+			<li>
+				<minSeverity>0.80</minSeverity>
+				<label>Painfully Full</label>
+				<lifeThreatening>false</lifeThreatening>
+				
+				<painOffset>0.15</painOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>-0.80</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.50</offset>
+					</li>							
+				</capMods>
+			</li>	
+			
+			<!--Stage 6-->
+			<li>
+				<minSeverity>0.90</minSeverity>
+				<label>About to Burst</label>
+				<lifeThreatening>true</lifeThreatening>
+				
+				<painOffset>0.40</painOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>-0.90</offset>
+					</li>				
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.70</offset>
+					</li>							
+				</capMods>
+			</li>
+			
+			<!--Stage 7-->
+			<li>
+				<minSeverity>1.00</minSeverity>
+				<label>Stomach Ruptured</label>
+				<lifeThreatening>true</lifeThreatening>
+				
+
+				<destroyPart>false</destroyPart>
+				
+				
+				<painOffset>1.0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<setMax>0</setMax>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.80</offset>
+					</li>							
+				</capMods>
+			
+				
+				
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

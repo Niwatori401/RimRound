@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThinkTreeDef>
+		<defName>RR_TT_EatAtTube</defName>
+		<insertTag>Humanlike_PostMentalState</insertTag>
+		<insertPriority>69</insertPriority>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="RimRound.AI.ThinkNode_EatAtTubeConditional">
+					<subNodes>
+						<li Class="RimRound.AI.JobGiver_EatAtTube" />
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+</Defs>

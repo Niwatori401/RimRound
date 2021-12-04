@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RimRound</RootNamespace>
+    <AssemblyName>RimRound</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DevDependencies\Harmony.2.1.1.0\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AlienRace">
+      <HintPath>..\..\..\..\DevDependencies\AlienRaces-master\1.3\Assemblies\AlienRace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HugsLib">
+      <HintPath>..\..\..\..\DevDependencies\HugsLib_9.0.0\HugsLib\v1.3\Assemblies\HugsLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\JobGivers\JobGiver_EatAtTube.cs" />
+    <Compile Include="AI\ThinkNodes\ThinkNode_EatAtTubeConditional.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_Dislike.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_Fanatical.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_Love.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_Hate.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_Like.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_Neutral.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
+    <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
+    <Compile Include="AI\WorkGivers\WorkGiver_EatAtFoodDispenser.cs" />
+    <None Include="Garbage\Building_FeedingTube.cs" />
+    <Compile Include="Comps\CompProperties_FoodItems_NutritionDensity.cs" />
+    <Compile Include="Comps\Debug_ThingComp.cs" />
+    <Compile Include="Comps\ThingComp_FoodItems_NutritionDensity.cs" />
+    <Compile Include="Comps\ThingComp_GeneticDispositions.cs" />
+    <Compile Include="Comps\ThingComp_PawnAttitude.cs" />
+    <Compile Include="Comps\WorldComp_SaveValues.cs" />
+    <Compile Include="Defs\ThoughtDefOf.cs" />
+    <Compile Include="Defs\TraitDefOf.cs" />
+    <Compile Include="Enums\WeightOpinion.cs" />
+    <Compile Include="FeedingTube V2\Building_FoodFaucet.cs" />
+    <Compile Include="FeedingTube V2\Building_FoodVatSmall.cs" />
+    <Compile Include="FeedingTube V2\Building_FoodProcessor.cs" />
+    <Compile Include="FeedingTube V2\Building_FoodVatLarge.cs" />
+    <Compile Include="FeedingTube V2\Patches\Designator-Install_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
+    <Compile Include="FeedingTube V2\Patches\Designator-Build_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
+    <Compile Include="FeedingTube V2\FoodNet.cs" />
+    <Compile Include="FeedingTube V2\FoodNetStorage_CompProperties.cs" />
+    <Compile Include="FeedingTube V2\FoodNetStorage_ThingComp.cs" />
+    <Compile Include="FeedingTube V2\FoodNetTrader_CompProperties.cs" />
+    <Compile Include="FeedingTube V2\FoodNetTrader_ThingComp.cs" />
+    <Compile Include="FeedingTube V2\FoodTransmitter_CompProperties.cs" />
+    <Compile Include="Comps\FullnessAndDietStats_ThingComp.cs" />
+    <Compile Include="Comps\HideCovers_ThingComp.cs" />
+    <Compile Include="Comps\MakeBlobIntoBed_ThingComp.cs" />
+    <Compile Include="Comps\PawnBodyType_ThingComp.cs" />
+    <Compile Include="Comps\SleepingPosition_ThingComp.cs" />
+    <Compile Include="Defs\BodyTypeDefOf.cs" />
+    <None Include="Garbage\RimRound_CurLifeStageIndexPatch.cs" />
+    <None Include="Garbage\GenericDefOf.cs" />
+    <Compile Include="Defs\DamageDefOf.cs" />
+    <Compile Include="Defs\HediffDefOf.cs" />
+    <Compile Include="Defs\JobDefOf.cs" />
+    <Compile Include="Defs\ThingDefOf.cs" />
+    <Compile Include="Enums\DietMode.cs" />
+    <Compile Include="Enums\NutritionTable.cs" />
+    <Compile Include="FeedingTube V2\FoodTransmitter_NetManager.cs" />
+    <Compile Include="FeedingTube V2\FoodTransmitter_ThingComp.cs" />
+    <Compile Include="FeedingTube V2\FoodTransmitter_PlaceWorker.cs" />
+    <Compile Include="FeedingTube V2\FoodValve_ThingComp.cs" />
+    <Compile Include="FeedingTube V2\Graphic_LinkedFoodOverlay.cs" />
+    <Compile Include="FeedingTube V2\SectionLayer_ThingsFoodGrid.cs" />
+    <Compile Include="FeedingTube V2\Graphic_LinkedFood.cs" />
+    <None Include="Garbage\GarbagePatch.cs" />
+    <Compile Include="Hediffs\Fullness\Hediff_Fullness.cs" />
+    <Compile Include="AI\JobDrivers\JobDriver_StuffPrisoner.cs" />
+    <Compile Include="Patch\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
+    <Compile Include="Patch\RimWorldPatches\ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.cs" />
+    <Compile Include="Patch\RimWorldPatches\Faction_SetRelationDirect_UpdateCategoricalExemption.cs" />
+    <Compile Include="Patch\RimWorldPatches\FloatMenuMakerMap_AddHumanlikeOrders_AlterTextForFoodAboveHardLimit.cs" />
+    <Compile Include="Patch\RimWorldPatches\FoodUtility_FoodOptimality_AdjustOptimality.cs" />
+    <None Include="Garbage\PawnDownedWiggler_RandomDownedAngle_AdjustByWeight.cs" />
+    <Compile Include="FeedingTube V2\Patches\FoodUtility_GetFinalIngestibleDef_AddFoodFaucetSupport.cs" />
+    <Compile Include="FeedingTube V2\Patches\FoodUtility_GetFinalIngestibleDef_FeedingTubeSupport.cs" />
+    <Compile Include="FeedingTube V2\Patches\FoodUtility_SpawnedFoodSearchInnerScan_ChangeValidatorToAccountForFoodFaucet.cs" />
+    <Compile Include="Patch\RimWorldPatches\FoodUtility_StackCountForNutrition_MaxChangedToMin.cs" />
+    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_EmancipateSlave_UpdateCategoricalExemptions.cs" />
+    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_EnslavePrisoner_UpdateCategoricalExemptions.cs" />
+    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_PrisonerRelease_UpdateCategoricalExemptions.cs" />
+    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_SlaveRelease_UpdateCategoricalExemptions.cs" />
+    <Compile Include="Patch\RimWorldPatches\Graphic-Multi_Init_DontLogErrorsForRimRound.cs" />
+    <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_ResolveAllGraphicsPrefix_UpdatePawnBodySize.cs" />
+    <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_MakeNewToils_AddExceptionForFaucet.cs" />
+    <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_PrepareToIngestToils_AddFaucetSupport.cs" />
+    <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_TryMakePreToilReservations_AddExceptionForFaucet.cs" />
+    <Compile Include="Patch\RimWorldPatches\Pawn-HealthTracker_MakeDowned_SetCustomWiggleAngleInitial.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnDownedWiggler_WigglerTick_DisableOrSlowForHighWeights.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnGenerator_GeneratePawn_HarmonyPatch.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_DrawPawnBody_AddToggleForTattoos.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_GetBodyPos_HideBlankets.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_LayingFacing_SetRotation.cs" />
+    <None Include="Garbage\Pawn_RareTick_UpdateBodyGraphic.cs" />
+    <Compile Include="Patch\RimWorldPatches\StatWorker_GetValue_DynamicMassPatch.cs" />
+    <Compile Include="Patch\RimWorldPatches\Hediff_SeverityLabel_DisplayWeightOnHover.cs" />
+    <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_AddFullness.cs" />
+    <Compile Include="Patch\RimWorldPatches\JobGiver-GetFood_GetPriority_AdjustAIForDietMode.cs" />
+    <Compile Include="Patch\RimWorldPatches\Need-Food_NutritionWanted_AdjustAIForDietMode.cs" />
+    <Compile Include="Patch\RimWorldPatches\Pawn_RareTick_CryptoSleepSicknessRemoval.cs" />
+    <None Include="Garbage\Pawn_Tick_PassiveWeightLoss.cs" />
+    <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_HarmonyPatch.cs" />
+    <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_StomachBurstCheck.cs" />
+    <Compile Include="FeedingTube V2\Patches\ThingListGroupHelper_Includes_AddSupportForFaucet.cs" />
+    <Compile Include="UI\Gizmos\HideCoversGizmo.cs" />
+    <Compile Include="UI\MainTabWindow_RRGlobalSettings.cs" />
+    <Compile Include="UI\Gizmos\MakeBlobIntoBedGizmo.cs" />
+    <Compile Include="UI\Gizmos\PersonalDynamicBodyGizmo.cs" />
+    <Compile Include="UI\Gizmos\SleepingPositionGizmo.cs" />
+    <Compile Include="UI\Slider.cs" />
+    <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo_DeathWarning.cs" />
+    <None Include="Garbage\WeightGizmo_FeatureToggleButton.cs" />
+    <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo_FullnessBar.cs" />
+    <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo_ModeButton.cs" />
+    <Compile Include="Comps\WeightGizmo_ThingComp.cs" />
+    <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo_NutritionBar.cs" />
+    <Compile Include="Patch\HarmonyPatchMain.cs" />
+    <Compile Include="Utilities\Functions.cs" />
+    <Compile Include="Utilities\GlobalSettings.cs" />
+    <Compile Include="Utilities\Resources.cs" />
+    <Compile Include="Utilities\Values.cs" />
+    <Compile Include="Hediffs\Weight\Hediff_Weight.cs" />
+    <Compile Include="Hediffs\Weight\HediffDef_Weight.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo.cs" />
+    <None Include=".editorconfig" />
+    <Compile Include="AI\WorkGivers\WorkGiver_StuffPrisoner.cs" />
+    <None Include="Garbage\WorkGiver_TubeFeed.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

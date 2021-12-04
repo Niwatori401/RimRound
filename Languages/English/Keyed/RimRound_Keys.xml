@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+	<!--Units-->
+
+	<RR_WeightGainedText>+{0}.{1}lbs</RR_WeightGainedText>
+	<DietaryTarget>Dietary Target</DietaryTarget>
+	<DietaryTargetDesired>Dietary Target Desired</DietaryTargetDesired>
+	
+	
+	
+	<!--WeightGizmo-->
+	<DietMode_Nutrition>Nutrition Mode</DietMode_Nutrition>
+	<DietMode_Hybrid>Hybrid Mode</DietMode_Hybrid>
+	<DietMode_Fullness>Fullness Mode</DietMode_Fullness>
+	<DietMode_Disabled>Disabled</DietMode_Disabled>
+	
+	<DietMode_Tip>Test</DietMode_Tip>
+	<DietMode_CurrentMode>Current Mode</DietMode_CurrentMode>
+	
+	
+	<FullnessDeathWarningKill>Confirm</FullnessDeathWarningKill>
+	<FullnessDeathWarningCancel>Cancel</FullnessDeathWarningCancel>
+	<FullnessDeathWarningTitle>Confirm your choice.</FullnessDeathWarningTitle>
+	<FullnessDeathWarningExplanation>This target fullness is too much for {0} and, if they eat this much, their stomach will likely ruptuure. This will inflict serious, possibly lethal wounds. Are you sure you want to set their target fullness to this value?</FullnessDeathWarningExplanation>
+	
+	
+	<!--Main Tab Window-->
+	<RR_Mtw_Title>RimRound Control Panel</RR_Mtw_Title>
+	<RR_Mtw_MapNutritionStatsTitle>Map Nutrition</RR_Mtw_MapNutritionStatsTitle>
+	<RR_Mtw_ManagePawnDietsCheckboxLabel>Manage Pawn Diets</RR_Mtw_ManagePawnDietsCheckboxLabel>
+	
+
+	<RR_Mtw_NutritionOverview_TotalNutrition>Current Nutrition in all storage zones</RR_Mtw_NutritionOverview_TotalNutrition>
+	<RR_Mtw_NutritionOverview_SimpleMealNutrition>Nutrition from Simple Meals</RR_Mtw_NutritionOverview_SimpleMealNutrition>
+	<RR_Mtw_NutritionOverview_FineMealNutrition>Nutrition from Fine Meals</RR_Mtw_NutritionOverview_FineMealNutrition>
+	<RR_Mtw_NutritionOverview_LavishMealNutrition>Nutrition from Lavish Meals</RR_Mtw_NutritionOverview_LavishMealNutrition>
+	<RR_Mtw_NutritionOverview_UndesireableNutrition>Nutrition deemed Undesirable</RR_Mtw_NutritionOverview_UndesireableNutrition>
+	<RR_Mtw_NutritionOverview_OtherNutrition>Nutrition from all other sources</RR_Mtw_NutritionOverview_OtherNutrition>
+	<RR_Mtw_NutritionPerPawnLabel>Nutrition per colonist (including prisoners and slaves)</RR_Mtw_NutritionPerPawnLabel>
+	
+	<RR_Mtw_GlobalMultipliersSettingsTitle>Global Values</RR_Mtw_GlobalMultipliersSettingsTitle>
+	<RR_Mtw_GlobalWeightGainMultiplierTitle>Weight gain multiplier</RR_Mtw_GlobalWeightGainMultiplierTitle>
+	<RR_Mtw_GlobalWeightLossMultiplierTitle>Weight loss multiplier</RR_Mtw_GlobalWeightLossMultiplierTitle>
+	<RR_Mtw_GlobalDigestionRateMultiplierTitle>Digestion rate multiplier</RR_Mtw_GlobalDigestionRateMultiplierTitle>
+	<RR_Mtw_GlobalFullnessMultiplierTitle>Fullness gained multiplier</RR_Mtw_GlobalFullnessMultiplierTitle>
+	<RR_Mtw_GlobalStomachElasticityMultiplierTitle>Stomach elasticity multiplier</RR_Mtw_GlobalStomachElasticityMultiplierTitle>
+	<RR_Mtw_TicksPerHungerCheckTitle>Ticks per digestion calculation</RR_Mtw_TicksPerHungerCheckTitle>
+	<RR_Mtw_TicksPerBodyChangeCheckTitle>Ticks per body update check</RR_Mtw_TicksPerBodyChangeCheckTitle>
+	<RR_Mtw_GlobalHardLimitMultiplier>Hard limit multiplier</RR_Mtw_GlobalHardLimitMultiplier>
+	<RR_Mtw_GlobalSoftLimitMultiplier>Soft limit multiplier</RR_Mtw_GlobalSoftLimitMultiplier>
+	<RR_Mtw_GlobalBlobIntoBedThreshold>Min weight for blob bed</RR_Mtw_GlobalBlobIntoBedThreshold>
+	<RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>Min weight for alt wiggle angle</RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>
+	
+	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
+	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>
+	<RR_Mtw_BodyChangeExemptionSettings_Female>Dynamic bodies for Females</RR_Mtw_BodyChangeExemptionSettings_Female>
+	<RR_Mtw_BodyChangeExemptionSettings_HostileNPC>Dynamic bodies for Hostile NPCs</RR_Mtw_BodyChangeExemptionSettings_HostileNPC>
+	<RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC>Dynamic bodies for Friendly NPCs</RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC>
+	<RR_Mtw_BodyChangeExemptionSettings_Prisoner>Dynamic bodies for Prisoners</RR_Mtw_BodyChangeExemptionSettings_Prisoner>
+	<RR_Mtw_BodyChangeExemptionSettings_Slave>Dynamic bodies for Slaves</RR_Mtw_BodyChangeExemptionSettings_Slave>
+	
+	<RR_Mtw_GeneralSettings_Title>General Settings</RR_Mtw_GeneralSettings_Title>
+	<RR_Mtw_GeneralSettings_BurstingEnabled>Bursting enabled</RR_Mtw_GeneralSettings_BurstingEnabled>
+	<RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies>Tattoos for custom bodies</RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies>
+	<RR_Mtw_GeneralSettings_PreferDefaultOverNaked>Default clothing over naked</RR_Mtw_GeneralSettings_PreferDefaultOverNaked>
+
+	<RR_Mtw_GizmoSettingsTitle>Gizmo Settings</RR_Mtw_GizmoSettingsTitle>
+	
+	<RR_Mtw_GizmoSettings_PawnDietManagementGizmo>Show diet management gizmo</RR_Mtw_GizmoSettings_PawnDietManagementGizmo>
+	<RR_Mtw_GizmoSettings_SleepPostureManagementGizmo>Show sleep posture gizmo</RR_Mtw_GizmoSettings_SleepPostureManagementGizmo>
+	<RR_Mtw_GizmoSettings_BlanketMangementGizmo>Show blanket management gizmo</RR_Mtw_GizmoSettings_BlanketMangementGizmo>
+	<RR_Mtw_GizmoSettings_ExemptionGizmo>Show dynamic body type exemption gizmo</RR_Mtw_GizmoSettings_ExemptionGizmo>
+	<RR_Mtw_GizmoSettings_BlobIntoBedGizmo>Show blob into bed gizmo</RR_Mtw_GizmoSettings_BlobIntoBedGizmo>
+	
+	<!--Other-->
+	<FloatMenuCantConsumeTooBig>Can't consume {1_labelShort}: Too big</FloatMenuCantConsumeTooBig>
+	
+	<!--Weight Gained Notifications-->
+	<WGNotification_Stage0010G>{PAWN_labelShort} has gained weight, and will move slightly slower as a result. Weight gain is likely to continue if their diet remains unchanged.</WGNotification_Stage0010G>
+	<WGNotification_Stage0020G>{PAWN_labelShort} has gained weight to the point of obesity. {PAWN_pronoun} will move considerably slower, \nas well as consume more food and require more rest. Consider giving {PAWN_objective} a sedentary job.</WGNotification_Stage0020G>
+	<WGNotification_Stage0030G>{PAWN_labelShort} has gained enough weight to be considered morbidly obese. {PAWN_pronoun} is no longer suitable for active work, and must eat constantly to maintain {PAWN_possessive} exceptional girth.</WGNotification_Stage0030G>
+	<WGNotification_Stage0040G>{PAWN_labelShort} has gained so much weight that they are nearly immobile. {PAWN_pronoun} is only capable of sedentary labor, and will likely require assistance to remain happy and healthy.</WGNotification_Stage0040G>
+	<WGNotification_Stage0050G>{PAWN_labelShort} has become more fat than person. {PAWN_pronoun} is unsuitable for any kind of labor, and will require constant assistance in day-to-day life. {PAWN_pronoun} will be a significant drain on your colony's food and manpower.</WGNotification_Stage0050G>
+	<WGNotification_Stage0060G>{PAWN_labelShort} has become impossibly obese. {PAWN_possessive} ridiculous appetite and inability to do any kind of productive labor will be a constant strain on your colony's sustainability. Consider rebuilding your colony around {PAWN_objective} to increase efficiency.</WGNotification_Stage0060G>
+	
+	<WGNotification_Stage0010L>{PAWN_labelShort} has lost enough weight that they are now only chubby. {PAWN_pronoun} is mildly hindered by {PAWN_possessive} extra weight.</WGNotification_Stage0010L>
+	<WGNotification_Stage0020L>{PAWN_labelShort} has lost enough weight that they are now only fat. While still hindered by {PAWN_possessive} size, {PAWN_pronoun} is now capable of providing for the colony.</WGNotification_Stage0020L>
+	<WGNotification_Stage0030L>{PAWN_labelShort} has lost enough weight that they are now only morbidly obese. {PAWN_pronoun} is still unsuitable for active work, but is unlikely to require assistance in day-to-day life.</WGNotification_Stage0030L>
+	<WGNotification_Stage0040L>{PAWN_labelShort} has lost enough weight that they are no longer a blob. {PAWN_pronoun} is still almost completely immobile, but can once again do sedentary labor.</WGNotification_Stage0040L>
+	<WGNotification_Stage0050L>{PAWN_labelShort} has lost enough weight that they are now only considered a blob. If {PAWN_pronoun} continues this weight loss, {PAWN_pronoun} may once again be able to contribute to the colony.</WGNotification_Stage0050L>
+	
+	
+	<!--Feeding Tube Text-->
+	<RR_FT_RemainingFoodStored>Food Stored</RR_FT_RemainingFoodStored>
+	<RR_FT_NetInfo>Remaining food: {0}L / {1}L</RR_FT_NetInfo>
+	<RR_FT_BrokenDown>Broken down</RR_FT_BrokenDown>
+	<RR_FT_TraderUsing>Using {CONSUMPTIONRATE}L/s</RR_FT_TraderUsing>
+	
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnCapacityDef[defName="Moving"]/minForCapable</xpath>
+		<value>
+			<minForCapable>0.01</minForCapable>
+		</value>
+	</Operation>
+</Patch>

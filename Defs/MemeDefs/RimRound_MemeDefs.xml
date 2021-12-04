@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>RR_FoodSupremacy</defName>
+    <label>Food Indifference</label>
+    <description>Food is the foundation of all life. Our lives should revolve around it's production</description>
+    <iconPath>UI/Memes/TreeConnection</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>3</impact>
+    <renderOrder>120</renderOrder>
+    <requireOne>
+      <li>
+        <li>RR_FungusEating_Neutral</li>
+      </li>
+	  <li>
+		<li>Cannibalism_Acceptable</li>
+		<li>Cannibalism_Preferred</li>
+	  </li>
+      <li>
+        <li>NutrientPasteEating_DontMind</li>
+      </li>
+	  <li>
+		<li>InsectMeatEating_Loved</li>
+	  </li>
+    </requireOne>
+    <generalRules>
+      <rulesStrings>
+        <li>memeCreed->root</li>
+        <li>memeCreed->leaf</li>
+        <li>memeCreed->vine</li>
+        <li>memeCreed->glade</li>
+        <li>memeCreed->forest</li>
+        <li>memeConcept->trees</li>
+        <li>memeConcept->forests</li>
+        <li>memeAdjective->sturdy</li>
+        <li>memeAdjective->barky</li>
+        <li>memeHyphenPrefix->tree</li>
+        <li>memeHyphenPrefix->arbor</li>
+        <li>memeHyphenPrefix->twig</li>
+        <li>memeLeaderNoun->treekeeper</li>
+        <li>memeLeaderNoun->arborist</li>
+        <li>memeLeaderNoun->neodruid</li>
+        <li>memeLeaderAdjective->green</li>
+        <li>memeLeaderAdjective->root</li>
+        <li>memeLeaderAdjective->canopy</li>
+        <li>memeMoralist->treespeaker</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <!-- theist myth -->
+          <li>creation(tag=meme_TreeConnection)        ->[deity0_name] rooted the trees firmly in the ground, yet made them grow steadily towards heaven. This is [deity0_name]'s first lesson on how to know [deity0_objective].</li>
+          <li>episode(uses=1,tag=meme_TreeConnection)  ->[deity0_name]'s forests renew the air that [deity0_possessive] people breathe, and give the boughs under which they shelter, and is the larder in which they forage.</li>
+          <!-- theist founder -->
+          <li>intro(tag=meme_TreeConnection)           ->When the original arborists first came to the [place_summary] [place_name], they created a sacred grove of [TreeType] where they could worship the [deity0_type] [deity0_name].</li>
+          <li>conflict(tag=meme_TreeConnection)        ->A greedy [foeLeader] felled many forests for [foeLeader_possessive] farms and factories, and the [memberNamePlural] wept for the murdered trees.</li>
+          <li>founderJoin(tag=meme_TreeConnection)     ->The prophet [founderName] was miraculously born from a tree in [place_name], and discovered by [founder_possessive] parents in the boughs of an old [TreeType] tree.</li>
+          <li>victory(tag=meme_TreeConnection)         ->[founderName] found the [foeLeader] sleeping in the [place_powerCenter], and placed an acorn upon the [foeLeader]'s chest. With [deity0_name]'s fierce power it rooted there, growing through [foeLeader_possessive] body, taking our revenge on the tree-killer.</li>
+          <!-- ideological founder -->
+          <li>setup(tag=meme_TreeConnection)           ->In a world lacking depth and meaning, [founderName] meditated in a forest, connecting with branch and root and leaf, and founded our movement.</li>
+          <li>story(uses=1,tag=meme_TreeConnection)    ->[founderName] brought the tired to the forest so that they might rest in its shade, and breathe in its air, and be renewed.</li>
+          <!-- ideological lesson -->
+          <li>lessonIntro(tag=meme_TreeConnection)         ->It might seem to you like a joke to say that I learnt this while sitting under a tree. But listening to its whispering leaves, I knew that</li>
+          <li>lesson(tag=meme_TreeConnection)              ->no entity in the universe knows more than the trees</li>
+          <li>lessonReinforcement(tag=meme_TreeConnection) ->Let this seed of truth grow and bear its fruit in your soul.</li>
+          <!-- archist -->
+          <li>archistBasis(tag=meme_TreeConnection)    ->Trees symbolize the archotechs. Like an ancient oak they dwarf the small acorn from which they grew, and their influence spreads through unseen roots beneath the surface.</li>
+          <li>archistFact(tag=meme_TreeConnection)     ->The archotechs developed their psychic abilities after discovering the anima tree.</li>
+          <li>archistFact(tag=meme_TreeConnection)     ->The archotechs choose to express themselves through, of all things, a unique kind of tree.</li>
+          <li>archistProphecy(tag=meme_TreeConnection) ->[inTheEnd], the archotechs will grow a great forest. Transcendence will grown within those that enter the forest and eat its fruit. Those that have forgotten the trees will be forgotten by the archotechs.</li>
+          <!-- animist -->
+          <li>animistFact(tag=meme_TreeConnection)     ->The spirits of trees protect those abide beneath their branches.</li>
+          <li>animistFact(tag=meme_TreeConnection)     ->The spirits of trees are powerful, as they bridge the power of the air above with that of the ground beneath.</li>
+          <li>animistFact(tag=meme_TreeConnection)     ->If a tree falls in the forest, its spirit makes a sound that all other spirits can hear.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <startingResearchProjects>
+      <li>TreeSowing</li>
+    </startingResearchProjects>
+  </MemeDef>
+</Defs>

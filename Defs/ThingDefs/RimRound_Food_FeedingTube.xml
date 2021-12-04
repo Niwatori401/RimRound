@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RR_FeedingTubeFluid</defName>
+		<label>feeding tube fluid</label>
+		<graphicData>
+			<texPath>BlankTexture</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>0.0</MarketValue> <!-- Can be used like meat in recipes -->
+		  <Mass>0.045</Mass>
+		  <MaxHitPoints>1</MaxHitPoints>
+		  <Flammability>0.2</Flammability>
+		  <Nutrition>0.10</Nutrition>
+		  <FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>0.1</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		  <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+			<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+			<fullnessToNutritionRatio>0.0001</fullnessToNutritionRatio>
+		  </li>
+		</comps>
+		<socialPropernessMatters>true</socialPropernessMatters>		
+		<ingestible>
+			<preferability>MealSimple</preferability>
+			<foodType>Fluid</foodType>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tableDesired>false</tableDesired>
+		</ingestible>
+	</ThingDef>
+</Defs>

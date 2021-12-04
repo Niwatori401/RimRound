@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DamageDef>
+		<defName>RR_StomachBurst</defName>
+		<label>Burst</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage></deathMessage>
+		<hediff>Burst</hediff>
+		<hediffSkin>Burst</hediffSkin>
+		<hediffSolid>Burst</hediffSolid>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+	</DamageDef>
+</Defs>
