@@ -58,6 +58,7 @@ namespace RimRound.Patch
             {
                 if (eater is null || t is null || !(eater.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp))
                 {
+                    Functions.DebugLogMessage("");
                     return ogPredicate(t);
                 }
 
