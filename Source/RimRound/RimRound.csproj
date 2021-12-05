@@ -131,7 +131,7 @@
     <None Include="Garbage\GarbagePatch.cs" />
     <Compile Include="Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_StuffPrisoner.cs" />
-    <Compile Include="Patch\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
+    <Compile Include="Patch\RimWorldPatches\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.cs" />
     <Compile Include="Patch\RimWorldPatches\Faction_SetRelationDirect_UpdateCategoricalExemption.cs" />
     <Compile Include="Patch\RimWorldPatches\FloatMenuMakerMap_AddHumanlikeOrders_AlterTextForFoodAboveHardLimit.cs" />

@@ -29,6 +29,8 @@ namespace RimRound.UI
 
 			Text.Font = GameFont.Small;
 			Text.Anchor = TextAnchor.UpperLeft;
+			Rect titleRect = new Rect(rect2);
+			titleRect.height = Text.LineHeight;
 			Widgets.Label(rect2, "Dietary Management");
 
 			Text.Font = GameFont.Tiny;
@@ -36,12 +38,12 @@ namespace RimRound.UI
 			Widgets.Label(
 				new Rect
 				{
-					x = rect2.x,
-					y = rect2.y + 3f,
-					width = rect2.width,
-					height = rect2.height
+					x = titleRect.x,
+					y = titleRect.yMax + 1f,
+					width = titleRect.width,
+					height = titleRect.height
 				},
-				"\nTest Phrase");
+				$"Fullness: {(WGThingComp.fullnessbar.CurrentFullnessAsPercentOfSoftLimit * 100).ToString("F0")}% ({WGThingComp.CurrentFullness.ToString("F1")}/{WGThingComp.SoftLimit.ToString("F1")}L)");
 
 
 			float gapBetweenBars = 2f;

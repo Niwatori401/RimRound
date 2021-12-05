@@ -78,6 +78,13 @@ namespace RimRound.Comps
 
             if (((Pawn)parent)?.RaceProps.Humanlike ?? false)
             {
+                if (Functions.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn()) is null)
+                    Functions.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn());
+
+                if (Functions.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn()) is null)
+                    Functions.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn());
+
+
                 if (nutritionbar == null)
                     this.nutritionbar = new WeightGizmo_NutritionBar(((Pawn)parent));
 

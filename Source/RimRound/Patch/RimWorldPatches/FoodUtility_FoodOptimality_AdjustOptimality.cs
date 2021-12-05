@@ -17,7 +17,15 @@ namespace RimRound.Patch
     {
         public static void Postfix(ref float __result, Pawn __0, Thing __1, ThingDef __2) 
         {
+            if (__0 is null)
+            {
+                Functions.DebugLogMessage("Pawn was null in FoodUtility_FoodOptimality_AdjustOptimality");
+            }    
+
             FullnessAndDietStats_ThingComp comp1 = __0.TryGetComp<FullnessAndDietStats_ThingComp>();
+
+            if (comp1 is null)
+                return;
 
             //If it would kill them
             if (__1.GetStatValue(StatDefOf.Nutrition) * Values.defaultFullnessToNutritionRatio >= comp1.RemainingFullnessUntil(comp1.HardLimit))

@@ -14,12 +14,12 @@ namespace RimRound.Utilities
     public static class Values
     {
         public const float defaultSoftLimit = 0.9f;
-        public static Vector2 softLimitVariation = new Vector2(-0.20f, 0.40f);
+        public static Vector2 softLimitVariation = new Vector2(-0.10f, 0.50f);
         public const float defaultHardLimitAdditionalPercentage = 0.3f;
         public const float defaultPersonalStomachElasticity = 1f;
         //How much (in liters) the stomach grows when over the softlimit per tick.
         public const float baseStomachElasticity = 0.00001f;
-        public const float baseDigestionRate = 1.5f;
+        public const float baseDigestionRate = 3.0f;
         public const float defaultFullnessToNutritionRatio = 1f; //i.e. 0.5 Fullness for 1 nutrition is 0.5f
 
         //Note: you must add "_{bodyType.defName}" to this to get the shirt graphic or it will not work.

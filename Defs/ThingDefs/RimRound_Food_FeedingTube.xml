@@ -22,7 +22,7 @@
 		  </li>
 		  <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
 			<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-			<fullnessToNutritionRatio>0.0001</fullnessToNutritionRatio>
+			<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
 		  </li>
 		</comps>
 		<socialPropernessMatters>true</socialPropernessMatters>		
