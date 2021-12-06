@@ -17,6 +17,11 @@ namespace RimRound.AI
     {
         public override Job JobOnThing(Pawn feeder, Thing t, bool forced = false)
         {
+			if (t.AsPawn().guest.interactionMode != Defs.PrisonerInteractionModeDefOf.RR_Fatten && t.AsPawn().guest.interactionMode != Defs.PrisonerInteractionModeDefOf.RR_FattenForced)
+			{
+				return null;
+			}
+
 			Pawn feedee = t.AsPawn();
 
 			if (feedee is null || !PossibleToBeFed(feeder, t, false) || !PrisonerShouldBeStuffed(feedee, prisonerShouldBeFedThresholdPercent))
@@ -38,8 +43,7 @@ namespace RimRound.AI
 
 			feedeeFnDComp.DietMode = DietMode.Fullness;
 			feedeeFnDComp.SetRanges(
-				feedeeFnDComp.fullnessbar.CurrentFullnessAsPercentOfWhole + 0.01f, 
-				prisonerShouldBeFedMaxPercent / (prisonerShouldBeFedMaxPercent * feedeeFnDComp.fullnessbar.HardLimitAsPercentage)
+				feedeeFnDComp.fullnessbar.CurrentFullnessAsPercentOfWhole + 0.01f, (prisonerShouldBeFedMaxPercent * feedeeFnDComp.fullnessbar.HardLimitAsPercentage)
 				); 
 			float nutrition = FoodUtility.GetNutrition(thing, thingDef);
 			Job job = JobMaker.MakeJob(Defs.JobDefOf.RR_JD_StuffPrisoner, thing, feedee);
@@ -69,7 +73,7 @@ namespace RimRound.AI
 				p.guest.CanBeBroughtFood &&
 				p.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp comp &&
 				comp.CurrentFullness <= prisonerFeedThreshold;
-			; //&& p.InBed() && HealthAIUtility.ShouldSeekMedicalRest(p)
+			;
 		}
 
 

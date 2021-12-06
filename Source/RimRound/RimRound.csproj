@@ -93,6 +93,8 @@
     <Compile Include="Comps\ThingComp_GeneticDispositions.cs" />
     <Compile Include="Comps\ThingComp_PawnAttitude.cs" />
     <Compile Include="Comps\WorldComp_SaveValues.cs" />
+    <Compile Include="Defs\PrisonerInteractionDef.cs" />
+    <Compile Include="Defs\PrisonerInteractionDefOf.cs" />
     <Compile Include="Defs\ThoughtDefOf.cs" />
     <Compile Include="Defs\TraitDefOf.cs" />
     <Compile Include="Enums\WeightOpinion.cs" />
