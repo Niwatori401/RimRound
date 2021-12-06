@@ -15,10 +15,14 @@ namespace RimRound.Comps
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-
         }
 
-        public WeightOpinion weightOpinion;
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+
+            Scribe_Values.Look<WeightOpinion>(ref weightOpinion, "weightOpinion");
+        }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
@@ -120,5 +124,7 @@ namespace RimRound.Comps
 
             return weightOpinion;
         }
+
+        public WeightOpinion weightOpinion = WeightOpinion.None;
     }
 }

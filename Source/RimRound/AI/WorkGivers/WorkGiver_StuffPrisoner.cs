@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RimRound.Comps;
 using RimRound.Enums;
+using RimRound.Utilities;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -16,12 +17,9 @@ namespace RimRound.AI
     {
         public override Job JobOnThing(Pawn feeder, Thing t, bool forced = false)
         {
-			if (!ShouldFeedPrisoner(feeder, t, false))
-			{
-				return null;
-			}
-			Pawn feedee = (Pawn)t;
-			if (!PrisonerShouldBeStuffed(feedee, prisonerShouldBeFedPercent))
+			Pawn feedee = t.AsPawn();
+
+			if (feedee is null || !PossibleToBeFed(feeder, t, false) || !PrisonerShouldBeStuffed(feedee, prisonerShouldBeFedThresholdPercent))
 			{
 				return null;
 			}
@@ -37,12 +35,11 @@ namespace RimRound.AI
 			}
 
 			FullnessAndDietStats_ThingComp feedeeFnDComp = feedee.TryGetComp<FullnessAndDietStats_ThingComp>();
-			//WeightGizmo_ThingComp feedeeWGComp = feedee.TryGetComp<WeightGizmo_ThingComp>();
 
 			feedeeFnDComp.DietMode = DietMode.Fullness;
 			feedeeFnDComp.SetRanges(
 				feedeeFnDComp.fullnessbar.CurrentFullnessAsPercentOfWhole + 0.01f, 
-				prisonerShouldBeFedUpToPercent / (prisonerShouldBeFedUpToPercent * feedeeFnDComp.fullnessbar.HardLimitAsPercentage)
+				prisonerShouldBeFedMaxPercent / (prisonerShouldBeFedMaxPercent * feedeeFnDComp.fullnessbar.HardLimitAsPercentage)
 				); 
 			float nutrition = FoodUtility.GetNutrition(thing, thingDef);
 			Job job = JobMaker.MakeJob(Defs.JobDefOf.RR_JD_StuffPrisoner, thing, feedee);
@@ -52,7 +49,7 @@ namespace RimRound.AI
 			return job;
 		}
 
-		protected bool ShouldFeedPrisoner(Pawn warden, Thing prisoner, bool forced = false)
+		protected bool PossibleToBeFed(Pawn warden, Thing prisoner, bool forced = false)
 		{
             return 
 				prisoner is Pawn pawn && 
@@ -65,18 +62,18 @@ namespace RimRound.AI
 				warden.CanReserveAndReach(pawn, PathEndMode.OnCell, warden.NormalMaxDanger(), 1, -1, null, forced);
         }
 
-		private bool PrisonerShouldBeStuffed(Pawn p, float prisonerShouldBeFedPercent)
+		private bool PrisonerShouldBeStuffed(Pawn p, float prisonerFeedThreshold)
 		{
 			return
 				p.IsPrisonerOfColony &&
 				p.guest.CanBeBroughtFood &&
 				p.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp comp &&
-				comp.CurrentFullness <= prisonerShouldBeFedPercent;
+				comp.CurrentFullness <= prisonerFeedThreshold;
 			; //&& p.InBed() && HealthAIUtility.ShouldSeekMedicalRest(p)
 		}
 
 
-		float prisonerShouldBeFedPercent = 0.50f;
-		float prisonerShouldBeFedUpToPercent = 0.99f;
+		float prisonerShouldBeFedThresholdPercent = 0.50f;
+		float prisonerShouldBeFedMaxPercent = 0.99f;
 	}
 }

@@ -32,7 +32,7 @@ namespace RimRound.Patch
 
         public static void AddWeightOpinion(Pawn pawn)
         {
-            if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<ThingComp_PawnAttitude>() is ThingComp_PawnAttitude comp)
+            if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<ThingComp_PawnAttitude>() is ThingComp_PawnAttitude comp && comp.weightOpinion != Enums.WeightOpinion.None)
             {
                 comp.weightOpinion = Functions.TraitDefToWeightOpinion(Functions.AssignInitialWeightOpinionTraits(pawn));
             }

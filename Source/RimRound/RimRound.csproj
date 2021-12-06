@@ -86,6 +86,7 @@
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
     <Compile Include="AI\WorkGivers\WorkGiver_EatAtFoodDispenser.cs" />
     <None Include="Garbage\Building_FeedingTube.cs" />
+    <Compile Include="AI\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />
     <Compile Include="Comps\CompProperties_FoodItems_NutritionDensity.cs" />
     <Compile Include="Comps\Debug_ThingComp.cs" />
     <Compile Include="Comps\ThingComp_FoodItems_NutritionDensity.cs" />

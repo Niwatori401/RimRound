@@ -22,7 +22,7 @@
 	<FullnessDeathWarningKill>Confirm</FullnessDeathWarningKill>
 	<FullnessDeathWarningCancel>Cancel</FullnessDeathWarningCancel>
 	<FullnessDeathWarningTitle>Confirm your choice.</FullnessDeathWarningTitle>
-	<FullnessDeathWarningExplanation>This target fullness is too much for {0} and, if they eat this much, their stomach will likely ruptuure. This will inflict serious, possibly lethal wounds. Are you sure you want to set their target fullness to this value?</FullnessDeathWarningExplanation>
+	<FullnessDeathWarningExplanation>This target fullness is too much for {0} and, if they eat this much, their stomach will likely rupture. This will inflict serious, possibly lethal wounds. Are you sure you want to set their target fullness to this value?</FullnessDeathWarningExplanation>
 	
 	
 	<!--Main Tab Window-->
