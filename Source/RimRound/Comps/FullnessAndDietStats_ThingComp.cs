@@ -36,6 +36,7 @@ namespace RimRound.Comps
 
             Scribe_Values.Look<DietMode>(ref dietMode, "dietMode", DietMode.Disabled);
             Scribe_Values.Look<float>(ref currentFullness, "currentFullness", 0);
+            Scribe_Values.Look<float>(ref softLimitPersonal, "softLimit", Values.defaultSoftLimit);
             Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", Values.defaultFullnessToNutritionRatio);
             Scribe_Values.Look<float>(ref hardLimitAdditionalPercentage, "hardLimitAdditionalPercentage", Values.defaultHardLimitAdditionalPercentage);
             Scribe_Values.Look<float>(ref personalStomachElasticity, "personalStomachElasticity", Values.defaultPersonalStomachElasticity);
