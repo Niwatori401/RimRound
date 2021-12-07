@@ -31,6 +31,7 @@ namespace RimRound.AI
 				yield return Toils_Ingest.PickupIngestible(TargetIndex.A, this.Deliveree);
 			}
 			yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.Touch);
+			PawnUtility.ForceWait(pawn, 15000, null, true);
 			yield return Toils_Ingest.ChewIngestible(this.Deliveree, FeedDurationMultiplier, TargetIndex.A, TargetIndex.None).FailOnCannotTouch(TargetIndex.B, PathEndMode.Touch);
 			yield return Toils_Ingest.FinalizeIngest(this.Deliveree, TargetIndex.A);
 			yield break;

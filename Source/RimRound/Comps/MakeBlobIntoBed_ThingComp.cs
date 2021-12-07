@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,8 +39,8 @@ namespace RimRound.Comps
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (parent.AsPawn().Downed)
-                gizmo.Disable($"They must not be downed in order to be a bed!");
+            if (!parent.AsPawn().InBed())
+                gizmo.Disable($"They must be in a bed to be one!");
             else
                 gizmo.disabled = false;
 

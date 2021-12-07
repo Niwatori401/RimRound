@@ -21,8 +21,7 @@ namespace RimRound.Comps
                     icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                     action = delegate ()
                     {
-                        ((Pawn)parent).story.bodyType = RimRound.Defs.BodyTypeDefOf.M_005_Thick;
-                        Functions.UpdatePawnSprite((Pawn)parent, false, false, false, true);
+
                     }
                 };
 

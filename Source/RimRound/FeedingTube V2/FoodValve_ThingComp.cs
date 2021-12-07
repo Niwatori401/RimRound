@@ -16,7 +16,18 @@ namespace RimRound
             flickComp = parent.GetComp<CompFlickable>();
         }
 
-        public override bool TransmitsFoodNow => flickComp.SwitchIsOn;
+        public override bool TransmitsFoodNow 
+		{
+			get 
+			{
+				if (flickComp is null)
+					flickComp = parent.GetComp<CompFlickable>();
+
+				return flickComp?.SwitchIsOn ?? false;
+			}
+		
+		}
+
 
 		public override void ReceiveCompSignal(string signal)
 		{
