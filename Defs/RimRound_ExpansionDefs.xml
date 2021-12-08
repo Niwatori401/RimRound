@@ -17,6 +17,7 @@
     <iconPath>UI/HeroArt/RimWorldLogo</iconPath>
     <backgroundPath>UI/HeroArt/RoyaltyBG</backgroundPath>
 	<isCore>True</isCore>
+	<ignoreConfigErrors>True</ignoreConfigErrors>
   </ExpansionDef>   
   <!--ExpansionDef>
     <defName>RimRound_Expansion_Ideology</defName>

@@ -135,7 +135,6 @@
     <None Include="Garbage\GarbagePatch.cs" />
     <Compile Include="Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_StuffPrisoner.cs" />
-    <Compile Include="Patch\ExpansionDef_ConfigErrors_HideConfigErrorsForRimRound.cs" />
     <Compile Include="Patch\FeedPatientUtility_IsHungry_CheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.cs" />

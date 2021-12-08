@@ -24,7 +24,7 @@ namespace RimRound.Patch
 		{
 			List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 			List<CodeInstruction> newInstructions = new List<CodeInstruction>();
-			Label allForMeBeerAndTabacco = generator.DefineLabel();
+			Label label = generator.DefineLabel();
 
 			int startJndex = -1;
 
@@ -58,17 +58,17 @@ namespace RimRound.Patch
 			{
 				if (codeInstructions[jndex].opcode == OpCodes.Ret)
 				{
-					codeInstructions[jndex - 6].labels.Add(allForMeBeerAndTabacco);
+					codeInstructions[jndex - 6].labels.Add(label);
 					break;
 				}
 			}
 
-			newInstructions.Add(new CodeInstruction(OpCodes.Brtrue_S, allForMeBeerAndTabacco));
+			newInstructions.Add(new CodeInstruction(OpCodes.Brtrue_S, label));
 			newInstructions.Add(new CodeInstruction(OpCodes.Ldarg_0));
 			newInstructions.Add(new CodeInstruction(OpCodes.Ldarg_1));
 			newInstructions.Add(CodeInstruction.Call(
 				typeof(ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex),
-				nameof(Bugma)));
+				nameof(AddGraphicPathToIsNullDictionary)));
 
 			if (startJndex != -1)
 			{
@@ -99,16 +99,17 @@ namespace RimRound.Patch
 
 		public static Graphic BugmaOmega(string str, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType) 
 		{
-			bool eggy = false;
+
+			bool dictionaryContainsEntry = false;
 			if (!graphicPathResultIsNull.ContainsKey(str)) 
 			{
-				eggy = true;
+				dictionaryContainsEntry = true;
 			}
 			if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath)
 			{
-
+				str = apparel.WornGraphicPath;
 			} 
-			else if (GlobalSettings.preferDefaultOutfitOverNaked && (eggy || graphicPathResultIsNull[str]))//) 
+			else if (GlobalSettings.preferDefaultOutfitOverNaked && (dictionaryContainsEntry || graphicPathResultIsNull[str]))//) 
 			{
 				str = Values.defaultClothingSetGraphicPath + "_" + bodyType.defName;
 			}
@@ -116,9 +117,16 @@ namespace RimRound.Patch
 			return GraphicDatabase.Get<Graphic_Multi>(str, shader, vector, color);
 		}
 
-		public static bool Bugma(Apparel apparel, BodyTypeDef bodyType)
+		public static bool AddGraphicPathToIsNullDictionary(Apparel apparel, BodyTypeDef bodyType)
 		{
 			string path = apparel.WornGraphicPath + "_" + bodyType.defName;
+
+			if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath)
+			{
+				path = apparel.WornGraphicPath;
+			}
+
+
 			bool dustSettled = false;
 			while (!dustSettled) 
 			{
