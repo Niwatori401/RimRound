@@ -4,6 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 using RimRound.Comps;
+using RimRound.Utilities;
 
 namespace RimRound.UI
 {
@@ -33,17 +34,21 @@ namespace RimRound.UI
 			titleRect.height = Text.LineHeight;
 			Widgets.Label(rect2, "Dietary Management");
 
-			Text.Font = GameFont.Tiny;
-			Text.Anchor = TextAnchor.UpperLeft;
-			Widgets.Label(
-				new Rect
-				{
-					x = titleRect.x,
-					y = titleRect.yMax + 1f,
-					width = titleRect.width,
-					height = titleRect.height
-				},
-				$"Fullness: {(WGThingComp.fullnessbar.CurrentFullnessAsPercentOfSoftLimit * 100).ToString("F0")}% ({WGThingComp.CurrentFullness.ToString("F1")}/{WGThingComp.SoftLimit.ToString("F1")}L)");
+
+			if (WGThingComp.DietMode != Enums.DietMode.Disabled) 
+			{
+				Text.Font = GameFont.Tiny;
+				Text.Anchor = TextAnchor.UpperLeft;
+				Widgets.Label(
+					new Rect
+					{
+						x = titleRect.x,
+						y = titleRect.yMax + 1f,
+						width = titleRect.width,
+						height = titleRect.height
+					},
+					$"Fullness: {(WGThingComp.fullnessbar.CurrentFullnessAsPercentOfSoftLimit * 100).ToString("F0")}% ({WGThingComp.CurrentFullness.ToString("F1")}/{WGThingComp.SoftLimit.ToString("F1")}L)");
+			}
 
 
 			float gapBetweenBars = 2f;

@@ -11,20 +11,34 @@ namespace RimRound.Comps
 {
     public class Debug_ThingComp : ThingComp
     {
+        static public int paramNumber = 0;
+        static public float paramFloat = 1f;
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (Prefs.DevMode)
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = "lorem Magnus opus",
+                    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to param {paramNumber})",
                     icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                     action = delegate ()
                     {
-
+                        paramFloat += positivity * (offsetAmounts[offsetAmountsIndex]);
                     }
                 };
 
+                yield return new Command_Action
+                {
+                    defaultLabel = "Change Param",
+                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                    action = delegate ()
+                    {
+                        paramNumber++;
+                        paramNumber %= 7;
+                        Log.Message($"Param number: {paramNumber}");
+                    }
+                };
 
                 yield return new Command_Action
                 {

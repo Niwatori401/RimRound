@@ -34,16 +34,16 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref cachedSliderPos1, "cachedSliderPos1", -1);
             Scribe_Values.Look<float>(ref cachedSliderPos2, "cachedSliderPos2", -1);
 
-            Scribe_Values.Look<DietMode>(ref dietMode, "dietMode", DietMode.Disabled);
-            Scribe_Values.Look<float>(ref currentFullness, "currentFullness", 0);
-            Scribe_Values.Look<float>(ref softLimitPersonal, "softLimit", Values.defaultSoftLimit);
+            Scribe_Values.Look<DietMode>(ref dietMode,                     "dietMode",                        DietMode.Disabled);
+            Scribe_Values.Look<float>(ref currentFullness,                 "currentFullness",                 0);
+            Scribe_Values.Look<float>(ref softLimitPersonal,               "softLimit",                       Values.defaultSoftLimit);
             Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", Values.defaultFullnessToNutritionRatio);
-            Scribe_Values.Look<float>(ref hardLimitAdditionalPercentage, "hardLimitAdditionalPercentage", Values.defaultHardLimitAdditionalPercentage);
-            Scribe_Values.Look<float>(ref personalStomachElasticity, "personalStomachElasticity", Values.defaultPersonalStomachElasticity);
-            Scribe_Values.Look<float>(ref digestionRateBonusMult, "digestionRateBonusMult", 1f);
-            Scribe_Values.Look<float>(ref digestionRateBonusFlat, "digestionRateBonusFlat", 0f);
-            Scribe_Values.Look<float>(ref personalDigestionRateMult, "personalDigestionRateMult", 1f);
-            Scribe_Values.Look<float>(ref personalDigestionRateFlat, "personalDigestionRateFlat", 0f);
+            Scribe_Values.Look<float>(ref hardLimitAdditionalPercentage,   "hardLimitAdditionalPercentage",   Values.defaultHardLimitAdditionalPercentage);
+            Scribe_Values.Look<float>(ref personalStomachElasticity,       "personalStomachElasticity",       Values.defaultPersonalStomachElasticity);
+            Scribe_Values.Look<float>(ref digestionRateBonusMult,          "digestionRateBonusMult",          1f);
+            Scribe_Values.Look<float>(ref digestionRateBonusFlat,          "digestionRateBonusFlat",          0f);
+            Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
+            Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -223,8 +223,6 @@ namespace RimRound.Comps
 
                 ((Pawn)parent).TakeDamage(stomachRuptureDamageInfo);
             }
-            //DamageInfo stomachRuptureDamageInfo = new DamageInfo(Defs.DamageDefOf.RR_StomachBurst, currentStomachHealth - afterRuptureStomachHealth, 0, -1, null, pawnStomach);
-            //((Pawn)parent).TakeDamage(stomachRuptureDamageInfo);
         }
 
         private float currentFullnessToNutritionRatio = Values.defaultFullnessToNutritionRatio;

@@ -93,6 +93,7 @@
     <Compile Include="Comps\ThingComp_GeneticDispositions.cs" />
     <Compile Include="Comps\ThingComp_PawnAttitude.cs" />
     <Compile Include="Comps\WorldComp_SaveValues.cs" />
+    <Compile Include="Defs\ExpansionDefOf.cs" />
     <Compile Include="Defs\PrisonerInteractionDef.cs" />
     <Compile Include="Defs\PrisonerInteractionDefOf.cs" />
     <Compile Include="Defs\ThoughtDefOf.cs" />
@@ -134,6 +135,7 @@
     <None Include="Garbage\GarbagePatch.cs" />
     <Compile Include="Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_StuffPrisoner.cs" />
+    <Compile Include="Patch\ExpansionDef_ConfigErrors_HideConfigErrorsForRimRound.cs" />
     <Compile Include="Patch\FeedPatientUtility_IsHungry_CheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.cs" />
@@ -154,6 +156,8 @@
     <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_MakeNewToils_AddExceptionForFaucet.cs" />
     <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_PrepareToIngestToils_AddFaucetSupport.cs" />
     <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_TryMakePreToilReservations_AddExceptionForFaucet.cs" />
+    <Compile Include="Patch\RimWorldPatches\ModLister_AllExpansions_IncludeRimRound.cs" />
+    <Compile Include="Patch\RimWorldPatches\ModsConfig_LastInstalledExpansion_DefaultToRimRoundBG.cs" />
     <Compile Include="Patch\RimWorldPatches\Pawn-HealthTracker_MakeDowned_SetCustomWiggleAngleInitial.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnDownedWiggler_WigglerTick_DisableOrSlowForHighWeights.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnGenerator_GeneratePawn_HarmonyPatch.cs" />

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--ExpansionDef>
+    <defName>RimRound_Expansion_Vanilla</defName>
+    <label>RimRound Vanilla</label>
+	<linkedMod>Niwatori401.RimRound</linkedMod>
+    <description>Test</description>
+    <iconPath>UI/HeroArt/RimWorldLogo</iconPath>
+    <backgroundPath>UI/HeroArt/VanillaBG</backgroundPath>
+	<isCore>True</isCore>
+  </ExpansionDef-->
+   <ExpansionDef>
+    <defName>RimRound_Expansion_Royalty</defName>
+    <label>RimRound</label>
+	<linkedMod>Niwatori401.RimRound</linkedMod>
+    <description>Test</description>
+    <iconPath>UI/HeroArt/RimWorldLogo</iconPath>
+    <backgroundPath>UI/HeroArt/RoyaltyBG</backgroundPath>
+	<isCore>True</isCore>
+  </ExpansionDef>   
+  <!--ExpansionDef>
+    <defName>RimRound_Expansion_Ideology</defName>
+    <label>RimRound Ideology</label>
+	<linkedMod>Niwatori401.RimRound</linkedMod>
+    <description>Test</description>
+    <iconPath>UI/HeroArt/RimWorldLogo</iconPath>
+    <backgroundPath>UI/HeroArt/IdeologyBG</backgroundPath>
+	<isCore>True</isCore>
+  </ExpansionDef-->
+</Defs>
+  

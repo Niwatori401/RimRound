@@ -26,7 +26,7 @@ namespace RimRound.UI
 		}
 
 
-		public void DrawOnGUI(Rect inRect, float yPos, float customMargin = -1f, bool drawArrows = true, bool doTooltip = true, Rect? rectForTooltip = null)
+		public void DrawOnGUI(Rect inRect, float yPos, float customMargin = -1f, bool drawArrows = false, bool doTooltip = true, Rect? rectForTooltip = null)
 		{
 			List<float> threshPercentCopy = Traverse.Create(needFood).Field("threshPercent").GetValue() as List<float>;
 
