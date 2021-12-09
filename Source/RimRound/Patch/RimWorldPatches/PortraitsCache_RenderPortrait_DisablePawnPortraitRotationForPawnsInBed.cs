@@ -68,6 +68,9 @@ namespace RimRound.Patch
 
         static bool ShouldBeSideways(Pawn pawn) 
         {
+            if (pawn.Dead || (pawn.Downed && !pawn.InBed()))
+                return true;
+
             return false;
         }
     }

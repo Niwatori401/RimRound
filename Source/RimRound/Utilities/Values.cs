@@ -13,6 +13,8 @@ namespace RimRound.Utilities
 {
     public static class Values
     {
+        public static float debugFloat = 0;
+
         public const float defaultSoftLimit = 0.9f;
         public static Vector2 softLimitVariation = new Vector2(-0.10f, 0.50f);
         public const float defaultHardLimitAdditionalPercentage = 0.3f;

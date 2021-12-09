@@ -82,7 +82,7 @@ namespace RimRound.Patch
 				{
 					codeInstructions[jndex].operand =
 						typeof(ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex).GetMethod(
-							nameof(BugmaOmega),
+							nameof(AdjustGraphicPath),
 							BindingFlags.Public | BindingFlags.Static);
 					
 					codeInstructions.InsertRange(jndex,
@@ -97,7 +97,7 @@ namespace RimRound.Patch
 			return codeInstructions;
 		}
 
-		public static Graphic BugmaOmega(string str, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType) 
+		public static Graphic AdjustGraphicPath(string str, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType) 
 		{
 
 			bool dictionaryContainsEntry = false;

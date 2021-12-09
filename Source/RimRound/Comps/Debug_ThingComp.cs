@@ -20,6 +20,18 @@ namespace RimRound.Comps
             {
                 yield return new Command_Action
                 {
+                    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT)",
+                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                    action = delegate ()
+                    {
+                        Values.debugFloat += positivity * (offsetAmounts[offsetAmountsIndex]);
+                        Log.Message($"Debug Float is now: {Values.debugFloat}");
+                        Functions.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
+                    }
+                };
+
+                yield return new Command_Action
+                {
                     defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to param {paramNumber})",
                     icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                     action = delegate ()
