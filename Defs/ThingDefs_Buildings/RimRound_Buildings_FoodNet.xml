@@ -104,7 +104,7 @@
     </statBases>
     <placingDraggableDimensions>1</placingDraggableDimensions>
     <costList>
-		<Steel>3</Steel>
+		<Steel>5</Steel>
     </costList>
     <comps>
 		<li Class="RimRound.FoodTransmitter_CompProperties">
@@ -172,7 +172,7 @@
 		<size>(1,2)</size>
 		<placingDraggableDimensions>1</placingDraggableDimensions>
 		<costList>
-			<Steel>3</Steel>
+			<Steel>70</Steel>
 		</costList>
 		<comps>
 			<li Class="RimRound.FoodNetStorage_CompProperties">
@@ -239,7 +239,7 @@
 		<size>(1,1)</size>
 		<placingDraggableDimensions>1</placingDraggableDimensions>
 		<costList>
-			<Steel>3</Steel>
+			<Steel>35</Steel>
 		</costList>
 		<comps>
 			<li Class="RimRound.FoodNetStorage_CompProperties">
@@ -310,7 +310,8 @@
 		<size>(2,2)</size>
 		<placingDraggableDimensions>1</placingDraggableDimensions>
 		<costList>
-			<Steel>3</Steel>
+			<Steel>120</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -395,7 +396,8 @@
 		<size>(1,2)</size>
 		<placingDraggableDimensions>1</placingDraggableDimensions>
 		<costList>
-			<Steel>3</Steel>
+			<Steel>60</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<hasInteractionCell>true</hasInteractionCell>

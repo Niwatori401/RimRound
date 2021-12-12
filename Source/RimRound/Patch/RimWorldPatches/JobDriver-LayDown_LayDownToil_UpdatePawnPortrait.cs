@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Verse;
 
 namespace RimRound.Patch
 {
@@ -15,7 +16,8 @@ namespace RimRound.Patch
     {
         public static void Postfix(JobDriver_LayDown __instance) 
         {
-            Functions.UpdatePawnSprite(__instance.pawn, false, false, true, false);
+            if (Scribe.mode != LoadSaveMode.PostLoadInit)
+                Functions.UpdatePawnSprite(__instance.pawn, false, false, true, false);
         }
     }
 }

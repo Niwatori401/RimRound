@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -14,32 +15,22 @@ namespace RimRound.Patch
     [HarmonyPatch(nameof(PortraitsCache.Get))]
     public class PortraitsCache_Get_MakePortraitsScaleForBodySize
     {
-        public static bool Prefix(Pawn __0, ref Vector2 __1, ref Vector3 __3, ref float __4, bool __5 = true) 
+        public static bool Prefix(Pawn __0, ref Vector3 __3, ref float __4) 
         {
             //3 moves the portrait around
             //1 is the resolution?
             //4 is the zoom of everything
+            //if (Values.portraitOffsetByBodyType.ContainsKey(__0.story.bodyType))
+                __3.z += Values.debugFloat;
 
-            switch (RimRound.Comps.Debug_ThingComp.paramNumber)
-            {
-                case 0:
-                    break;
-                case 1:
-                    __1.Scale(new Vector2(Comps.Debug_ThingComp.paramFloat, Comps.Debug_ThingComp.paramFloat));
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    __3.z += Comps.Debug_ThingComp.paramFloat;
-                    break;
-                case 4:
-                    __4 *= Comps.Debug_ThingComp.paramFloat;
-                    break;
-                case 5:
-                    break;
-               default:
-                    break;
-            }
+            //if (Values.portraitZoomByBodyType.ContainsKey(__0.story.bodyType)) 
+            //{
+                __4 *= Comps.Debug_ThingComp.paramFloat1;
+           // }
+
+            Log.Message($"__3 {__3.ToString("F3")}, __4 = {__4}");
+
+            
 
             return true;
         }

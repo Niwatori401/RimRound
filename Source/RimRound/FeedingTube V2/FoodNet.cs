@@ -63,6 +63,7 @@ namespace RimRound
         {
             this.netGrid = new BoolGrid(map);
 
+            
             foreach (FoodTransmitter_ThingComp x in connectors) 
             {
                 AddNode(x);

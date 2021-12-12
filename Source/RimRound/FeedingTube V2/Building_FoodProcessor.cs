@@ -18,6 +18,21 @@ namespace RimRound
             this.trader = base.GetComp<FoodNetTrader_ThingComp>();
         }
 
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            //return base.GetGizmos();
+
+            yield return new Command_Action
+            {
+                defaultLabel = "Build Hopper",
+                icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Hopper),
+                action = delegate ()
+                {
+                    GenConstruct.PlaceBlueprintForBuild_NewTemp(RimWorld.ThingDefOf.Hopper, Position + new IntVec3(-1, 0, 2), this.Map, Rot4.East, Faction, null);
+                }
+            };
+        }
+
         public override void Tick()
         {
             base.Tick();

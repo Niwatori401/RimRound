@@ -64,11 +64,11 @@ namespace RimRound.Patch
 		{
 			if (renderFlags.FlagSet(PawnRenderFlags.Portrait))
 			{
-				GenDraw.DrawMeshNowOrLater(mesh, vector3 + new Vector3(0, 0, Values.debugFloat), quaternion, material, drawNow);
+				GenDraw.DrawMeshNowOrLater(mesh, vector3 + new Vector3(0, Values.debugFloat, 0), quaternion, material, drawNow);
 			}
 			else 
 			{
-				GenDraw.DrawMeshNowOrLater(mesh, vector3, quaternion, material, drawNow);
+				GenDraw.DrawMeshNowOrLater(mesh, vector3 + new Vector3(0, Values.debugFloat, 0), quaternion, material, drawNow);
 			}
 		}
 
@@ -76,6 +76,9 @@ namespace RimRound.Patch
         {
             if (renderFlags.FlagSet(PawnRenderFlags.Portrait))
             {
+                //pawnRendererPawnFI.GetValue(instance);
+                //float extraOffset = 
+
                 drawHeadHairMI.Invoke(instance, new object[] { rootloc, position + new Vector3(0, 0, Values.debugFloat), angle, bodyfacing, headfacing, rotDrawMode, renderFlags });
             }
             else
@@ -100,5 +103,6 @@ namespace RimRound.Patch
 
         static MethodInfo drawHeadHairAdjustedMI = typeof(PawnRenderer_RenderPawnInternal_AdjustHeadDrawPosForPortrait).GetMethod(nameof(DrawHeadHairAdjusted), BindingFlags.Static | BindingFlags.NonPublic);
 
+        static FieldInfo pawnRendererPawnFI = typeof(PawnRenderer).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
     }
 }

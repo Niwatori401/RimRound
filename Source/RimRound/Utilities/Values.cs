@@ -25,10 +25,43 @@ namespace RimRound.Utilities
         public const float defaultFullnessToNutritionRatio = 1f; //i.e. 0.5 Fullness for 1 nutrition is 0.5f
 
         //Note: you must add "_{bodyType.defName}" to this to get the shirt graphic or it will not work.
-        public static string defaultClothingSetGraphicPath = "Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic";
+        public static string defaultClothingSetGraphicPath = "Things/Pawn/Humanlike/Apparel/ShirtButton/ShirtButton";
 
         public static float severityPerKilo = 0.001f;
         public static float nutritionPerKilo = 1.0f;
+
+        public static Dictionary<BodyTypeDef, float> portraitOffsetByBodyType = new Dictionary<BodyTypeDef, float>()
+        {
+            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.55f },
+            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.60f },
+            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.82f },
+            {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.70f },
+            {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      0.76f },
+            {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       0.86f },
+            {RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    0.00f }
+        };
+
+        public static Dictionary<BodyTypeDef, float> portraitZoomByBodyType = new Dictionary<BodyTypeDef, float>()
+        {
+            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       0.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    0.00f }
+        };
+
 
         public static Dictionary<BodyTypeDef, float> bodyTypeWiggleSpeed = new Dictionary<BodyTypeDef, float>()
         {

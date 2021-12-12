@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\Alert_FoodProcessorNeedsDispenser.cs" />
     <Compile Include="AI\JobGivers\JobGiver_EatAtTube.cs" />
     <Compile Include="AI\ThinkNodes\ThinkNode_EatAtTubeConditional.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Dislike.cs" />
@@ -135,7 +136,8 @@
     <None Include="Garbage\GarbagePatch.cs" />
     <Compile Include="Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_StuffPrisoner.cs" />
-    <Compile Include="Patch\FeedPatientUtility_IsHungry_CheckForFullness.cs" />
+    <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_GetPawnMesh_GetMeshForPortraitsToo.cs" />
+    <Compile Include="Patch\RimWorldPatches\FeedPatientUtility_IsHungry_CheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.cs" />
     <Compile Include="Patch\RimWorldPatches\Faction_SetRelationDirect_UpdateCategoricalExemption.cs" />
