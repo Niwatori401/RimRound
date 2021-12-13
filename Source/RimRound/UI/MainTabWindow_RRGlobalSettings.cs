@@ -143,8 +143,11 @@ namespace RimRound.UI
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksPerBodyChangeCheck, numericFieldCount++, "RR_Mtw_TicksPerBodyChangeCheckTitle");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.softLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalSoftLimitMultiplier");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.hardLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalHardLimitMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxWeight, numericFieldCount++, "RR_Mtw_MaxWeight");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToBeBed, numericFieldCount++, "RR_Mtw_GlobalBlobIntoBedThreshold");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToAdjustWiggleAngle, numericFieldCount++, "RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold");
+            
+            
             /**/
             globalMultipliersSettingsFieldRect.height = numericFieldCount * spaceBetweenNumberFields;
 
@@ -257,6 +260,25 @@ namespace RimRound.UI
                 height = spaceBetweenCheckBoxes
             },
             "RR_Mtw_GeneralSettings_PreferDefaultOverNaked".Translate(), ref GlobalSettings.preferDefaultOutfitOverNaked, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+
+            Functions.CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 3,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+           "RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies".Translate(), ref GlobalSettings.alternateNorthHeadPositionForRRBodytypes, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+
+            Functions.CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 4,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_UseZoomPortraitStyle".Translate(), ref GlobalSettings.useZoomPortraitStyle, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+
 
             GUI.EndGroup();
             #endregion

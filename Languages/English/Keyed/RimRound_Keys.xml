@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LanguageData>
+	<!--Alerts-->
+	<NeedFoodHopperProcessorDesc>You have a food processor with no hopper next to it.\n\nTo work, food processors must draw from an adjacent hopper filled with raw food.\n\nBuild a hopper adjacent to the processor.</NeedFoodHopperProcessorDesc>
+
 	<!--Units-->
 
 	<RR_WeightGainedText>+{0}.{1}lbs</RR_WeightGainedText>
@@ -51,6 +54,8 @@
 	<RR_Mtw_GlobalSoftLimitMultiplier>Soft limit multiplier</RR_Mtw_GlobalSoftLimitMultiplier>
 	<RR_Mtw_GlobalBlobIntoBedThreshold>Min weight for blob bed</RR_Mtw_GlobalBlobIntoBedThreshold>
 	<RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>Min weight for alt wiggle angle</RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>
+	<RR_Mtw_MaxWeight>Maximum weight</RR_Mtw_MaxWeight>
+	
 	
 	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
 	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>
@@ -64,6 +69,8 @@
 	<RR_Mtw_GeneralSettings_BurstingEnabled>Bursting enabled</RR_Mtw_GeneralSettings_BurstingEnabled>
 	<RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies>Tattoos for custom bodies</RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies>
 	<RR_Mtw_GeneralSettings_PreferDefaultOverNaked>Default clothing over naked</RR_Mtw_GeneralSettings_PreferDefaultOverNaked>
+	<RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies>Use alternate head placement</RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies>
+	<RR_Mtw_GeneralSettings_UseZoomPortraitStyle>Use vanilla portrait style</RR_Mtw_GeneralSettings_UseZoomPortraitStyle>
 
 	<RR_Mtw_GizmoSettingsTitle>Gizmo Settings</RR_Mtw_GizmoSettingsTitle>
 	

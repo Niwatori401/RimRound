@@ -20,15 +20,14 @@ namespace RimRound
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            //return base.GetGizmos();
-
             yield return new Command_Action
             {
+                disabled = GenConstruct.CanPlaceBlueprintAt(RimWorld.ThingDefOf.Hopper, Position + new IntVec3(2, 0, 0), Rot4.West, this.Map) ? false : true,
                 defaultLabel = "Build Hopper",
                 icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Hopper),
                 action = delegate ()
                 {
-                    GenConstruct.PlaceBlueprintForBuild_NewTemp(RimWorld.ThingDefOf.Hopper, Position + new IntVec3(-1, 0, 2), this.Map, Rot4.East, Faction, null);
+                    GenConstruct.PlaceBlueprintForBuild_NewTemp(RimWorld.ThingDefOf.Hopper, Position + new IntVec3(2, 0, 0), this.Map, Rot4.West, Faction, null);
                 }
             };
         }

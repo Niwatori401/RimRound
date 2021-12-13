@@ -1,4 +1,5 @@
 ﻿using RimRound.Comps;
+using RimRound.Hediffs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace RimRound.Utilities
             Functions.AssignBodyTypeCategoricalExemptions(true);
         }
 
-        #region ********Gizmo Display Settings********
+        #region Gizmo Display Settings
         public static bool showPawnDietManagementGizmo = true;
         public static bool showSleepPostureManagementGizmo = true;
         public static bool showBlanketManagementGizmo = true;
@@ -25,7 +26,7 @@ namespace RimRound.Utilities
 
         #endregion
 
-        #region ********Body Change Exemption Settings********
+        #region Body Change Exemption Settings
 
         public static bool bodyChangeMale = true;
         public static bool bodyChangeFemale = true;
@@ -39,15 +40,19 @@ namespace RimRound.Utilities
         #endregion
 
         #region General Settings 
+
         public static bool showBodyTatoosForCustomSprites = false;
         public static bool burstingEnabled = true;
         public static bool haveWeightHediffMale = true;
         public static bool haveWeightHediffFemale = true;
         public static bool preferDefaultOutfitOverNaked = true;
+        public static bool alternateNorthHeadPositionForRRBodytypes = true;
+
+        public static bool useZoomPortraitStyle = false;
 
         #endregion
 
-        #region ********Value Settings********
+        #region Value Settings
 
         public static NumericFieldData<float> diabetes = new NumericFieldData<float>(1, 0, 1);
         public static NumericFieldData<float> aFLD = new NumericFieldData<float>(1, 0, 1);
@@ -64,6 +69,7 @@ namespace RimRound.Utilities
         public static NumericFieldData<float> weightGainMultiplier = new NumericFieldData<float>(1, 0, 100);
         public static NumericFieldData<float> digestionRateMultiplier = new NumericFieldData<float>(1, 0, 100);
         public static NumericFieldData<float> hypertension = new NumericFieldData<float>(1, 0, 1);
+        public static NumericFieldData<int> maxWeight = new NumericFieldData<int>(100000, Hediff_Weight.ModExtension.baseWeight, int.MaxValue);
 
         #endregion
     }

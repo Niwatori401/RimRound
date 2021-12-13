@@ -13,7 +13,7 @@ namespace RimRound.Utilities
 {
     public static class Values
     {
-        public static float debugFloat = 0;
+        public static float debugPos = 0;
 
         public const float defaultSoftLimit = 0.9f;
         public static Vector2 softLimitVariation = new Vector2(-0.10f, 0.50f);
@@ -30,36 +30,52 @@ namespace RimRound.Utilities
         public static float severityPerKilo = 0.001f;
         public static float nutritionPerKilo = 1.0f;
 
-        public static Dictionary<BodyTypeDef, float> portraitOffsetByBodyType = new Dictionary<BodyTypeDef, float>()
+        public static Dictionary<BodyTypeDef, float> portraitOffsetByBodyTypeOffsetMethod = new Dictionary<BodyTypeDef, float>()
         {
-            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.55f },
-            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.60f },
-            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.82f },
-            {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.70f },
-            {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      0.76f },
-            {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       0.86f },
+            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.30f },
+            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.30f },
+            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.35f },
+            {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.45f },
+            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.45f },
+            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.40f },
+            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.50f },
+            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.70f },
+            {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.50f },
+            {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      0.65f },
+            {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       0.79f },
             {RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    0.00f }
+        };
+
+        public static Dictionary<BodyTypeDef, float> portraitOffsetByBodyTypeZoomMethod = new Dictionary<BodyTypeDef, float>()
+        {
+            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.30f },
+            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.30f },
+            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.30f },
+            {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.40f },
+            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.44f },
+            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.50f },
+            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.70f },
+            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         1.00f },
+            {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.93f },
+            {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      1.10f },
+            {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       1.10f },
+            {RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    2.52f }
         };
 
         public static Dictionary<BodyTypeDef, float> portraitZoomByBodyType = new Dictionary<BodyTypeDef, float>()
         {
-            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       0.00f },
-            {RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    0.00f }
+            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         1.28205f },
+            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        1.28205f },
+            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        1.28205f },
+            {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.98205f },
+            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.88205f },
+            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.77205f },
+            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.65205f },
+            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.58205f },
+            {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.48205f },
+            {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      0.38205f },
+            {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       0.37205f },
+            {RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    0.22205f }
         };
 
 
@@ -152,16 +168,16 @@ namespace RimRound.Utilities
             {RimWorld.BodyTypeDefOf.Male, -1f},
             //{RimWorld.BodyTypeDefOf.Thin, -1f},
 
-            {RimWorld.BodyTypeDefOf.Thin,                     0.020f },
+            {RimWorld.BodyTypeDefOf.Thin,                     0.015f },
             {RimWorld.BodyTypeDefOf.Female,                   0.035f },
-            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.040f },
-            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.050f },
-            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.095f },
+            {RimRound.Defs.BodyTypeDefOf.F_005_Thick,         0.050f },
+            {RimRound.Defs.BodyTypeDefOf.F_006_Chonky,        0.065f },
+            {RimRound.Defs.BodyTypeDefOf.F_010_Chubby,        0.090f },
             {RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,     0.120f },
-            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.150f },
-            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.190f },
-            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.295f },
-            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.440f },
+            {RimRound.Defs.BodyTypeDefOf.F_030_Fat,           0.155f },
+            {RimRound.Defs.BodyTypeDefOf.F_040_Obese,         0.200f },
+            {RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese, 0.280f },
+            {RimRound.Defs.BodyTypeDefOf.F_060_Lardy,         0.430f },
             {RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      0.660f },
             {RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      0.965f },
             {RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       1.410f },

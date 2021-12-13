@@ -14,7 +14,7 @@ namespace RimRound.Patch
 {
 	[HarmonyPatch(typeof(PawnRenderer))]
     [HarmonyPatch("RenderPawnInternal")]
-    public class PawnRenderer_RenderPawnInternal_AdjustHeadDrawPosForPortrait
+    public class PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
@@ -35,7 +35,6 @@ namespace RimRound.Patch
                 {
                     codeInstructions[i].operand = drawHeadHairAdjustedMI;
                     codeInstructions[i].opcode = OpCodes.Call;
-                    //codeInstructions.Insert(i, new CodeInstruction(OpCodes.Ldarg_0));
                 }
             }
         }
@@ -55,20 +54,24 @@ namespace RimRound.Patch
                 if (codeInstructions[i].Calls(drawMeshNowOrLaterMI))
                 {
                     codeInstructions[i].operand = replacementFunctionMI;
-                    codeInstructions.Insert(i, new CodeInstruction(OpCodes.Ldarg_S, 6));
+                    codeInstructions.InsertRange(i, new List<CodeInstruction>() { new CodeInstruction(OpCodes.Ldarg_S, 6 ), new CodeInstruction(OpCodes.Ldarg_0)});
                 }
             }
         }
 
-        private static void DrawMeshForHeadBasedOnIfPortrait(Mesh mesh, Vector3 vector3, Quaternion quaternion, Material material, bool drawNow, PawnRenderFlags renderFlags) 
+        private static void DrawMeshForHeadBasedOnIfPortrait(Mesh mesh, Vector3 vector3, Quaternion quaternion, Material material, bool drawNow, PawnRenderFlags renderFlags, PawnRenderer instance) 
 		{
 			if (renderFlags.FlagSet(PawnRenderFlags.Portrait))
 			{
-				GenDraw.DrawMeshNowOrLater(mesh, vector3 + new Vector3(0, Values.debugFloat, 0), quaternion, material, drawNow);
+				GenDraw.DrawMeshNowOrLater(mesh, vector3, quaternion, material, drawNow);
 			}
 			else 
 			{
-				GenDraw.DrawMeshNowOrLater(mesh, vector3 + new Vector3(0, Values.debugFloat, 0), quaternion, material, drawNow);
+                Pawn pawn = pawnRendererPawnFI.GetValue(instance).AsPawn();
+
+                Vector3 extraOffset = new Vector3(0, (Functions.HasCustomBody(pawn) && GlobalSettings.alternateNorthHeadPositionForRRBodytypes) ? -headYOffset : 0 , 0);
+
+                GenDraw.DrawMeshNowOrLater(mesh, vector3 + extraOffset, quaternion, material, drawNow);
 			}
 		}
 
@@ -76,10 +79,7 @@ namespace RimRound.Patch
         {
             if (renderFlags.FlagSet(PawnRenderFlags.Portrait))
             {
-                //pawnRendererPawnFI.GetValue(instance);
-                //float extraOffset = 
-
-                drawHeadHairMI.Invoke(instance, new object[] { rootloc, position + new Vector3(0, 0, Values.debugFloat), angle, bodyfacing, headfacing, rotDrawMode, renderFlags });
+                drawHeadHairMI.Invoke(instance, new object[] { rootloc, position, angle, bodyfacing, headfacing, rotDrawMode, renderFlags });
             }
             else
             {
@@ -94,15 +94,17 @@ namespace RimRound.Patch
             new Type[] { typeof(Mesh), typeof(Vector3), typeof(Quaternion), typeof(Material), typeof(bool) },
             null);
 
-        static MethodInfo replacementFunctionMI = typeof(PawnRenderer_RenderPawnInternal_AdjustHeadDrawPosForPortrait).GetMethod(
+        static MethodInfo replacementFunctionMI = typeof(PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth).GetMethod(
             nameof(DrawMeshForHeadBasedOnIfPortrait),
             BindingFlags.NonPublic | BindingFlags.Static);
 
 
         static MethodInfo drawHeadHairMI = typeof(PawnRenderer).GetMethod("DrawHeadHair", BindingFlags.NonPublic | BindingFlags.Instance);
 
-        static MethodInfo drawHeadHairAdjustedMI = typeof(PawnRenderer_RenderPawnInternal_AdjustHeadDrawPosForPortrait).GetMethod(nameof(DrawHeadHairAdjusted), BindingFlags.Static | BindingFlags.NonPublic);
+        static MethodInfo drawHeadHairAdjustedMI = typeof(PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth).GetMethod(nameof(DrawHeadHairAdjusted), BindingFlags.Static | BindingFlags.NonPublic);
 
         static FieldInfo pawnRendererPawnFI = typeof(PawnRenderer).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
+
+        const float headYOffset = 0.01f;
     }
 }

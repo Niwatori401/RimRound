@@ -166,7 +166,7 @@
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_GetBodyPos_HideBlankets.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_LayingFacing_SetRotation.cs" />
     <None Include="Garbage\Pawn_RareTick_UpdateBodyGraphic.cs" />
-    <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_RenderPawnInternal_AdjustHeadDrawPosForPortrait.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth.cs" />
     <Compile Include="Patch\RimWorldPatches\PortraitsCache_Get_MakePortraitsScaleForBodySize.cs" />
     <Compile Include="Patch\RimWorldPatches\PortraitsCache_RenderPortrait_DisablePawnPortraitRotationForPawnsInBed.cs" />
     <Compile Include="Patch\RimWorldPatches\StatWorker_GetValue_DynamicMassPatch.cs" />

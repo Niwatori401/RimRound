@@ -22,7 +22,7 @@ namespace RimRound.Patch
 		{
 			if (__instance.def.defName == "RimRound_Weight")
 			{
-				__result = $"{Functions.RoundedDisplayValueAsString(HediffDef.Named("RimRound_Weight").GetModExtension<HediffDef_Weight>().baseWeight + Functions.SeverityToKilos(__instance.Severity), 1)}Kgs";
+				__result = $"{Functions.RoundedDisplayValueAsString(Functions.SeverityToKilosWithBaseWeight(__instance.Severity), 1)}Kgs";
 			}
 		}
 	}

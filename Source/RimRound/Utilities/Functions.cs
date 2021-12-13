@@ -28,9 +28,14 @@ namespace RimRound.Utilities
             return (nutrition / Values.nutritionPerKilo) * Values.severityPerKilo;
         }
 
-        public static float SeverityToKilos(float severity)
+        public static float SeverityToKilosWithoutBaseWeight(float severity)
         {
             return severity / Values.severityPerKilo;
+        }
+
+        public static float SeverityToKilosWithBaseWeight(float severity)
+        {
+            return (severity / Values.severityPerKilo) + Hediff_Weight.ModExtension.baseWeight;
         }
 
         public static float KilosToSeverity(float weightIncludingBaseWeight) 
@@ -183,9 +188,20 @@ namespace RimRound.Utilities
             if (h.def == Defs.HediffDefOf.RimRound_Weight)
             {
                 if (amount > 0)
-                    h.Severity += GlobalSettings.weightGainMultiplier.threshold * amount;
+                {
+                    float additionalSeverity = GlobalSettings.weightGainMultiplier.threshold * amount;
+                    if (Functions.SeverityToKilosWithBaseWeight(h.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
+                        h.Severity = Functions.KilosToSeverity(GlobalSettings.maxWeight.threshold);
+                    else
+                        h.Severity += additionalSeverity;
+                }
                 else
+                {
                     h.Severity += GlobalSettings.weightLossMultiplier.threshold * amount;
+                }
+
+
+
 
                 ThrowValueText(pawn, amount, 1, 0.5f);
 
@@ -199,6 +215,7 @@ namespace RimRound.Utilities
             }
         }
 
+        //This will bypass checks normally made in AddHediffSeverity for weight. Use wisely.
         public static void SetHediffSeverity(HediffDef def, Pawn pawn, float amount)
         {
             Hediff h = GetHediffOfDefFrom(def, pawn);
@@ -299,7 +316,7 @@ namespace RimRound.Utilities
         {
             if (Functions.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, pawn) is Hediff weight)
             {
-                return (float)Functions.SeverityToKilos(weight.Severity) + Hediffs.Hediff_Weight.ModExtension.baseWeight;
+                return (float)Functions.SeverityToKilosWithoutBaseWeight(weight.Severity) + Hediffs.Hediff_Weight.ModExtension.baseWeight;
             }
             else
             {

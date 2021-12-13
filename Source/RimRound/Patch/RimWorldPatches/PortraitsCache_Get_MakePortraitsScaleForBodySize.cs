@@ -20,18 +20,28 @@ namespace RimRound.Patch
             //3 moves the portrait around
             //1 is the resolution?
             //4 is the zoom of everything
-            //if (Values.portraitOffsetByBodyType.ContainsKey(__0.story.bodyType))
-                __3.z += Values.debugFloat;
+            BodyTypeDef pawnBodytype = __0?.story?.bodyType;
+            if (pawnBodytype is null)
+                return true;
 
-            //if (Values.portraitZoomByBodyType.ContainsKey(__0.story.bodyType)) 
-            //{
-                __4 *= Comps.Debug_ThingComp.paramFloat1;
-           // }
-
-            Log.Message($"__3 {__3.ToString("F3")}, __4 = {__4}");
-
+            if (!GlobalSettings.useZoomPortraitStyle || pawnBodytype.defName == Defs.BodyTypeDefOf.F_100_Gelatinous.defName)
+            {
+                if (Values.portraitOffsetByBodyTypeZoomMethod.ContainsKey(pawnBodytype) && Values.portraitZoomByBodyType.ContainsKey(pawnBodytype))
+                {
+                    __3.z = Values.portraitOffsetByBodyTypeZoomMethod[pawnBodytype];
+                    __4 = Values.portraitZoomByBodyType[pawnBodytype];
+                    return true;
+                }
+            }
+            else 
+            {
+                if (Values.portraitOffsetByBodyTypeOffsetMethod.ContainsKey(pawnBodytype)) 
+                {
+                    __3.z = Values.portraitOffsetByBodyTypeOffsetMethod[pawnBodytype];
+                    return true;
+                }
+            }
             
-
             return true;
         }
     }

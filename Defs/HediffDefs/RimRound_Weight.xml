@@ -24,7 +24,7 @@
 		<minSeverity>0.001</minSeverity>
 		<stages>
 			<li>
-				<label>90</label>
+				<label>Emaciated</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>0.9</hungerRateFactor>
 				<restFallFactor>1.0</restFallFactor>
@@ -41,8 +41,8 @@
 			</li>			
 
 			<li>
-				<minSeverity>0.007</minSeverity>
-				<label>110</label>
+				<minSeverity>0.005</minSeverity>
+				<label>Very Thin</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>0.95</hungerRateFactor>
 				<restFallFactor>1.0</restFallFactor>
@@ -53,14 +53,12 @@
 						<offset>0.05</offset>
 					</li>							
 				</capMods>
-			
-			
 			</li>
 			
 			<!--Standard-->
 			<li>
-				<minSeverity>0.014</minSeverity>
-				<label>130</label>
+				<minSeverity>0.015</minSeverity>
+				<label>Thin</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.0</hungerRateFactor>
 				<restFallFactor>1.0</restFallFactor>
@@ -68,8 +66,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.024</minSeverity>
-				<label>160</label>
+				<minSeverity>0.035</minSeverity>
+				<label>Thick</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.0</hungerRateFactor>
 				<restFallFactor>1.0</restFallFactor>
@@ -86,8 +84,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.034</minSeverity>
-				<label>190</label>
+				<minSeverity>0.050</minSeverity>
+				<label>Chunky</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.10</hungerRateFactor>
 				<restFallFactor>1.05</restFallFactor>
@@ -104,8 +102,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.048</minSeverity>
-				<label>230</label>
+				<minSeverity>0.065</minSeverity>
+				<label>Chubby</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.2</hungerRateFactor>
 				<restFallFactor>1.10</restFallFactor>
@@ -122,8 +120,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.065</minSeverity>
-				<label>280</label>
+				<minSeverity>0.090</minSeverity>
+				<label>Corpulent</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.30</hungerRateFactor>
 				<restFallFactor>1.15</restFallFactor>
@@ -140,8 +138,8 @@
 			
 			<!--Manipuation Starts to fall here down-->
 			<li>
-				<minSeverity>0.086</minSeverity>
-				<label>340</label>
+				<minSeverity>0.120</minSeverity>
+				<label>Fat</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.45</hungerRateFactor>
 				<restFallFactor>1.20</restFallFactor>
@@ -162,8 +160,8 @@
 			
 			<!---->			
 			<li>
-				<minSeverity>0.110</minSeverity>
-				<label>410</label>
+				<minSeverity>0.155</minSeverity>
+				<label>Obese</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.55</hungerRateFactor>
 				<restFallFactor>1.30</restFallFactor>
@@ -184,8 +182,8 @@
 			
 			<!---->		
 			<li>
-				<minSeverity>0.137</minSeverity>
-				<label>490</label>
+				<minSeverity>0.200</minSeverity>
+				<label>Morbidly Obese</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>1.75</hungerRateFactor>
 				<restFallFactor>1.45</restFallFactor>
@@ -206,8 +204,8 @@
 			
 			<!---->		
 			<li>
-				<minSeverity>0.172</minSeverity>
-				<label>590</label>
+				<minSeverity>0.230</minSeverity>
+				<label>Morbidly Obese II</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>2.00</hungerRateFactor>
 				<restFallFactor>1.60</restFallFactor>
@@ -228,8 +226,8 @@
 			
 			<!---->		
 			<li>
-				<minSeverity>0.210</minSeverity>
-				<label>700</label>
+				<minSeverity>0.280</minSeverity>
+				<label>Lardy</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>2.20</hungerRateFactor>
 				<restFallFactor>1.75</restFallFactor>
@@ -250,8 +248,8 @@
 			
 			<!--Immobility starts from here-->		
 			<li>
-				<minSeverity>0.258</minSeverity>
-				<label>840</label>
+				<minSeverity>0.350</minSeverity>
+				<label>Lardy II</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>2.50</hungerRateFactor>
 				<restFallFactor>1.90</restFallFactor>
@@ -272,8 +270,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.313</minSeverity>
-				<label>1000</label>
+				<minSeverity>0.430</minSeverity>
+				<label>Enormous</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>2.75</hungerRateFactor>
 				<restFallFactor>2.10</restFallFactor>
@@ -294,8 +292,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.381</minSeverity>
-				<label>1200</label>
+				<minSeverity>0.535</minSeverity>
+				<label>Enormous II</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>3.15</hungerRateFactor>
 				<restFallFactor>2.30</restFallFactor>
@@ -316,8 +314,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.467</minSeverity>
-				<label>1450</label>
+				<minSeverity>0.660</minSeverity>
+				<label>Gigantic</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>3.65</hungerRateFactor>
 				<restFallFactor>2.50</restFallFactor>
@@ -338,8 +336,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.570</minSeverity>
-				<label>1750</label>
+				<minSeverity>0.800</minSeverity>
+				<label>Gigantic II</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>4.25</hungerRateFactor>
 				<restFallFactor>2.80</restFallFactor>
@@ -360,8 +358,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.691</minSeverity>
-				<label>2100</label>
+				<minSeverity>0.965</minSeverity>
+				<label>Titanic</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>5.00</hungerRateFactor>
 				<restFallFactor>3.10</restFallFactor>
@@ -382,8 +380,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.845</minSeverity>
-				<label>2550</label>
+				<minSeverity>1.160</minSeverity>
+				<label>Titanic II</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>5.85</hungerRateFactor>
 				<restFallFactor>3.50</restFallFactor>
@@ -404,8 +402,8 @@
 			
 			<!---->
 			<li>
-				<minSeverity>0.95</minSeverity>
-				<label>3000</label>
+				<minSeverity>1.410</minSeverity>
+				<label>Gelatinous</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>6.75</hungerRateFactor>
 				<restFallFactor>4.0</restFallFactor>

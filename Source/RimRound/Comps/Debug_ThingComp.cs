@@ -12,7 +12,7 @@ namespace RimRound.Comps
     public class Debug_ThingComp : ThingComp
     {
         static public int paramNumber = 0;
-        static public float paramFloat1 = 1f;
+        static public float zoom = 1f;
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
@@ -24,8 +24,8 @@ namespace RimRound.Comps
                     icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                     action = delegate ()
                     {
-                        Values.debugFloat += positivity * (offsetAmounts[offsetAmountsIndex]);
-                        Log.Message($"Debug Float is now: {Values.debugFloat}");
+                        Values.debugPos += positivity * (offsetAmounts[offsetAmountsIndex]);
+                        Log.Message($"Debug Float is now: {Values.debugPos}");
                         Functions.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
                     }
                 };
@@ -36,7 +36,7 @@ namespace RimRound.Comps
                     icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                     action = delegate ()
                     {
-                        paramFloat1 += positivity * (offsetAmounts[offsetAmountsIndex]);
+                        zoom += positivity * (offsetAmounts[offsetAmountsIndex]);
                     }
                 };
 
@@ -46,10 +46,10 @@ namespace RimRound.Comps
                     icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                     action = delegate ()
                     {
-                        Log.Message($"ParamFloat: {paramFloat1}");
-                        Log.Message($"Values.DebugFloat: {Values.debugFloat}");
-                        paramFloat1 = 0;
-                        Values.debugFloat = 0;
+                        Log.Message($"zoom: {zoom}");
+                        Log.Message($"position: {Values.debugPos}");
+                        zoom = 1.28205f;
+                        Values.debugPos = 0.300f;
                         
                     }
                 };
