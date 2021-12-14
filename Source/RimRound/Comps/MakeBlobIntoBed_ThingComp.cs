@@ -22,9 +22,9 @@ namespace RimRound.Comps
         {
             if (Find.TickManager.TicksGame % ticksBetweenChecks == 0)
             {
-                if (Functions.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, (Pawn)parent) is Hediff h &&
+                if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, (Pawn)parent) is Hediff h &&
                     h?.Severity is float s &&
-                    s >= Functions.KilosToSeverity(GlobalSettings.weightToBeBed.threshold))
+                    s >= Utilities.HediffUtility.KilosToSeverity(GlobalSettings.weightToBeBed.threshold))
                 {
                     canBeBed = true;
                 }

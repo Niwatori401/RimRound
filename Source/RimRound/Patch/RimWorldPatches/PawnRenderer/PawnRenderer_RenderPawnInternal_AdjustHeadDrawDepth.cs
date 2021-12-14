@@ -69,7 +69,7 @@ namespace RimRound.Patch
 			{
                 Pawn pawn = pawnRendererPawnFI.GetValue(instance).AsPawn();
 
-                Vector3 extraOffset = new Vector3(0, (Functions.HasCustomBody(pawn) && GlobalSettings.alternateNorthHeadPositionForRRBodytypes) ? -headYOffset : 0 , 0);
+                Vector3 extraOffset = new Vector3(0, (BodyTypeUtility.HasCustomBody(pawn) && GlobalSettings.alternateNorthHeadPositionForRRBodytypes) ? -headYOffset : 0 , 0);
 
                 GenDraw.DrawMeshNowOrLater(mesh, vector3 + extraOffset, quaternion, material, drawNow);
 			}

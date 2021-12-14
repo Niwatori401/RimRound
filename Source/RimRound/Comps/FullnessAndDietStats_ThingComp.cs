@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-using RimRound.Enums;
 using RimRound.Utilities;
 using RimRound.Defs;
 using RimWorld;
 using Verse.AI;
 using RimRound.UI;
+using UnityEngine;
 
 namespace RimRound.Comps
 {
@@ -36,10 +36,10 @@ namespace RimRound.Comps
 
             Scribe_Values.Look<DietMode>(ref dietMode,                     "dietMode",                        DietMode.Disabled);
             Scribe_Values.Look<float>(ref currentFullness,                 "currentFullness",                 0);
-            Scribe_Values.Look<float>(ref softLimitPersonal,               "softLimit",                       Values.defaultSoftLimit);
-            Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", Values.defaultFullnessToNutritionRatio);
-            Scribe_Values.Look<float>(ref hardLimitAdditionalPercentage,   "hardLimitAdditionalPercentage",   Values.defaultHardLimitAdditionalPercentage);
-            Scribe_Values.Look<float>(ref personalStomachElasticity,       "personalStomachElasticity",       Values.defaultPersonalStomachElasticity);
+            Scribe_Values.Look<float>(ref softLimitPersonal,               "softLimit",                       defaultSoftLimit);
+            Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", defaultFullnessToNutritionRatio);
+            Scribe_Values.Look<float>(ref hardLimitAdditionalPercentage,   "hardLimitAdditionalPercentage",   defaultHardLimitAdditionalPercentage);
+            Scribe_Values.Look<float>(ref personalStomachElasticity,       "personalStomachElasticity",       defaultPersonalStomachElasticity);
             Scribe_Values.Look<float>(ref digestionRateBonusMult,          "digestionRateBonusMult",          1f);
             Scribe_Values.Look<float>(ref digestionRateBonusFlat,          "digestionRateBonusFlat",          0f);
             Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
@@ -79,11 +79,11 @@ namespace RimRound.Comps
 
             if (((Pawn)parent)?.RaceProps.Humanlike ?? false)
             {
-                if (Functions.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn()) is null)
-                    Functions.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn());
+                if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn()) is null)
+                    Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn());
 
-                if (Functions.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn()) is null)
-                    Functions.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn());
+                if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn()) is null)
+                    Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn());
 
 
                 if (nutritionbar == null)
@@ -122,25 +122,25 @@ namespace RimRound.Comps
 
         public void PassiveWeightLossTick() 
         {
-            Functions.AddHediffSeverity(
+            Utilities.HediffUtility.AddHediffSeverity(
                 Defs.HediffDefOf.RimRound_Weight, 
-                ((Pawn)parent), 
-                Functions.NutritionToSeverity(-1 * ((Pawn)parent).needs.food.FoodFallPerTick) * GlobalSettings.ticksPerHungerCheck.threshold);
+                ((Pawn)parent),
+                Utilities.HediffUtility.NutritionToSeverity(-1 * ((Pawn)parent).needs.food.FoodFallPerTick) * GlobalSettings.ticksPerHungerCheck.threshold);
         }
 
         public void ActiveWeightGainTick(float nutrition) 
         {
-            Functions.AddHediffSeverity(
+            Utilities.HediffUtility.AddHediffSeverity(
                 Defs.HediffDefOf.RimRound_Weight,
                 ((Pawn)parent),
-                Functions.NutritionToSeverity(nutrition));
+                Utilities.HediffUtility.NutritionToSeverity(nutrition));
         }
 
         public void FullnessCheckTick() 
         {
 
             float severity = (CurrentFullness > 0 ? CurrentFullness / HardLimit : 0.01f);
-            Functions.SetHediffSeverity(Defs.HediffDefOf.RimRound_Fullness, (Pawn)parent, severity);
+            Utilities.HediffUtility.SetHediffSeverity(Defs.HediffDefOf.RimRound_Fullness, (Pawn)parent, severity);
 
             return;
         }
@@ -170,7 +170,7 @@ namespace RimRound.Comps
         {
             if (CurrentFullness > SoftLimit)
             {
-                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * personalStomachElasticity * Values.baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
+                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
                 return;
             }
             return;
@@ -225,7 +225,7 @@ namespace RimRound.Comps
             }
         }
 
-        private float currentFullnessToNutritionRatio = Values.defaultFullnessToNutritionRatio;
+        private float currentFullnessToNutritionRatio = defaultFullnessToNutritionRatio;
 
         public float CurrentFullnessToNutritionRatio 
         {
@@ -239,7 +239,7 @@ namespace RimRound.Comps
             }
         }
 
-        public void UpdateRatio(float nutrition, float ratio = Values.defaultFullnessToNutritionRatio) 
+        public void UpdateRatio(float nutrition, float ratio = defaultFullnessToNutritionRatio) 
         {
             //Weighted average of current values and incoming values
             CurrentFullnessToNutritionRatio = 
@@ -260,7 +260,7 @@ namespace RimRound.Comps
                     GlobalSettings.digestionRateMultiplier.threshold *
                     personalDigestionRateMult * 
                     digestionRateBonusMult * 
-                    Values.baseDigestionRate) + 
+                    baseDigestionRate) + 
                     personalDigestionRateFlat + 
                     digestionRateBonusFlat ?? 999f;
             }
@@ -323,7 +323,7 @@ namespace RimRound.Comps
         //-------------------
 
         //In liters. represents threshold of stoach capacity. 
-        private float softLimitPersonal = Values.defaultSoftLimit + Values.RandomFloat(Values.softLimitVariation.x, Values.softLimitVariation.y);
+        private float softLimitPersonal = defaultSoftLimit + Values.RandomFloat(softLimitVariation.x, softLimitVariation.y);
         public float SoftLimit 
         {
             get 
@@ -345,7 +345,7 @@ namespace RimRound.Comps
         }
 
         //How much more than the soft limit the Hard Limit is.
-        public float hardLimitAdditionalPercentage = Values.defaultHardLimitAdditionalPercentage;
+        public float hardLimitAdditionalPercentage = defaultHardLimitAdditionalPercentage;
         public float HardLimit
         {
             get
@@ -365,7 +365,7 @@ namespace RimRound.Comps
 
 
         //Multiplier for how quickly the stomach grows when over the soft limit.
-        public float personalStomachElasticity = Values.defaultPersonalStomachElasticity;
+        public float personalStomachElasticity = defaultPersonalStomachElasticity;
 
 
         bool ShouldShowWeightGizmo()
@@ -449,5 +449,22 @@ namespace RimRound.Comps
 
         float cachedSliderPos1 = 0.30f;
         float cachedSliderPos2 = 0.90f;
+
+        public const float defaultSoftLimit = 0.9f;
+        public static Vector2 softLimitVariation = new Vector2(-0.10f, 0.50f);
+        public const float defaultHardLimitAdditionalPercentage = 0.3f;
+        public const float defaultPersonalStomachElasticity = 1f;
+        //How much (in liters) the stomach grows when over the softlimit per tick.
+        public const float baseStomachElasticity = 0.00001f;
+        public const float baseDigestionRate = 3.0f;
+        public const float defaultFullnessToNutritionRatio = 1f; //i.e. 0.5 Fullness for 1 nutrition is 0.5f
+    }
+
+    public enum DietMode
+    {
+        Nutrition,
+        Hybrid,
+        Fullness,
+        Disabled
     }
 }

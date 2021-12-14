@@ -73,7 +73,7 @@ namespace RimRound
 
         public override void CompTick()
         {
-            if (Functions.IsHashIntervalTick(tickInterval) && CanBeOn)
+            if (GeneralUtility.IsHashIntervalTick(tickInterval) && CanBeOn)
             {
                 IsOn = true;
             }

@@ -34,7 +34,7 @@ namespace RimRound.UI
                 comp.blobBed = GenSpawn.Spawn(RimRound.Defs.ThingDefOf.BlobBed, parentPos, comp.parent.Map);
                 
                 comp.blobBed.SetFaction(Faction.OfPlayer, null);
-                Functions.AddHediffSeverity(Defs.HediffDefOf.RimRound_BlobBed, comp.parent.AsPawn(), 1.0f, true);
+                Utilities.HediffUtility.AddHediffSeverity(Defs.HediffDefOf.RimRound_BlobBed, comp.parent.AsPawn(), 1.0f, true);
             }
             else 
             {
@@ -46,8 +46,8 @@ namespace RimRound.UI
         public void Reset() 
         {
             comp.IsBed = false;
-            Functions.RemoveHediffOfDefFrom(Defs.HediffDefOf.RimRound_BlobBed, comp.parent.AsPawn());
-            if (Functions.IsNotNull(comp.blobBed))
+            Utilities.HediffUtility.RemoveHediffOfDefFrom(Defs.HediffDefOf.RimRound_BlobBed, comp.parent.AsPawn());
+            if (GeneralUtility.IsNotNull(comp.blobBed))
             {
                 comp.blobBed.DeSpawn();
                 comp.blobBed = null;

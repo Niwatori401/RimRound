@@ -35,9 +35,6 @@
 								<li>
 									<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
 								</li>				
-								<li>
-									<compClass>RimRound.Comps.WeightGizmo_ThingComp</compClass>
-								</li>
 							</comps>
 						</value>
 					</nomatch>
@@ -65,9 +62,6 @@
 							<li>
 								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
 							</li>			
-							<li>
-								<compClass>RimRound.Comps.WeightGizmo_ThingComp</compClass>
-							</li>
 						</value>
 					</match>
 				</li>

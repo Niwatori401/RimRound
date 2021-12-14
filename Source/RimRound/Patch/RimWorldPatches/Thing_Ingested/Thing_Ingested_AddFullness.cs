@@ -25,14 +25,14 @@ namespace RimRound.Patch
 		{
 			if (__0.RaceProps.Humanlike && __result > 0)
 			{
-				if (comp.DietMode != Enums.DietMode.Disabled)
+				if (comp.DietMode != DietMode.Disabled)
 				{
 					if (comp == null)
 						return;
 
 					ThingComp_FoodItems_NutritionDensity nDThingComp = __instance.TryGetComp<ThingComp_FoodItems_NutritionDensity>();
 
-					comp.UpdateRatio(__result, nDThingComp is null ? Values.defaultFullnessToNutritionRatio : nDThingComp.Props.fullnessToNutritionRatio);
+					comp.UpdateRatio(__result, nDThingComp is null ? FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio : nDThingComp.Props.fullnessToNutritionRatio);
 
 					comp.CurrentFullness += __result * comp.CurrentFullnessToNutritionRatio * GlobalSettings.fullnessMultiplier.threshold;
 

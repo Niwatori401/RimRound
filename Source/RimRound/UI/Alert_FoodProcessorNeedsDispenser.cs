@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace RimRound.AI
+namespace RimRound.UI
 {
     class Alert_FoodProcessorNeedsDispenser : Alert
     {

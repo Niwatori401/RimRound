@@ -9,7 +9,6 @@ using Verse;
 using HarmonyLib;
 using RimRound.UI;
 using RimRound.Comps;
-using RimRound.Enums;
 using RimRound.Utilities;
 
 namespace RimRound.Patch

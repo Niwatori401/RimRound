@@ -19,7 +19,7 @@ namespace RimRound.Patch
                 return;
 
             if (__0 == Faction.OfPlayer)
-                Functions.AssignBodyTypeCategoricalExemptions(true);
+                BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true);
 
             return;
         }

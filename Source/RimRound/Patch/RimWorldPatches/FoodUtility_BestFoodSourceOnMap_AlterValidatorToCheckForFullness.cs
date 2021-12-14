@@ -58,11 +58,10 @@ namespace RimRound.Patch
             {
                 if (eater is null || t is null || !(eater.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp))
                 {
-                    Functions.DebugLogMessage("");
                     return ogPredicate(t);
                 }
 
-                float ftnRatio = Values.defaultFullnessToNutritionRatio;
+                float ftnRatio = FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio;
 
                 if (t.TryGetComp<ThingComp_FoodItems_NutritionDensity>() is ThingComp_FoodItems_NutritionDensity nutDensityComp)
                 {
@@ -71,7 +70,7 @@ namespace RimRound.Patch
                 int stackCount = 0;
                 float nutritionValueOfMeal = t.GetStatValue(StatDefOf.Nutrition, true) * ftnRatio;
 
-                float wantedNutrition = fullnessComp.DietMode == Enums.DietMode.Fullness || fullnessComp.DietMode == Enums.DietMode.Hybrid ? fullnessComp.RemainingFullnessUntil(fullnessComp.GetRanges().Second) * ftnRatio : fullnessComp.RemainingFullnessUntil(fullnessComp.GetRanges().Second);
+                float wantedNutrition = fullnessComp.DietMode == DietMode.Fullness || fullnessComp.DietMode == DietMode.Hybrid ? fullnessComp.RemainingFullnessUntil(fullnessComp.GetRanges().Second) * ftnRatio : fullnessComp.RemainingFullnessUntil(fullnessComp.GetRanges().Second);
 
 
 

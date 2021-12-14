@@ -8,7 +8,6 @@ using RimWorld;
 using Verse;
 using UnityEngine;
 using Verse.Sound;
-using RimRound.Enums;
 using RimRound.Comps;
 
 namespace RimRound.UI

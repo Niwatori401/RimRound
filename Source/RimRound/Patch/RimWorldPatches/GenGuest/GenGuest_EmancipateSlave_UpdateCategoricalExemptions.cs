@@ -16,7 +16,7 @@ namespace RimRound.Patch
     {
         public static void Postfix()
         {
-            Functions.AssignBodyTypeCategoricalExemptions(true);
+            BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true);
         }
 
     }

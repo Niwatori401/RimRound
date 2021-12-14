@@ -25,16 +25,16 @@ namespace RimRound.Patch
             if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp comp)
             {
                 comp.defaultBodyType = pawn.story.bodyType;
-                Functions.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, pawn);
-                Functions.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, pawn);
+                Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, pawn);
+                Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, pawn);
             }
         }
 
         public static void AddWeightOpinion(Pawn pawn)
         {
-            if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<ThingComp_PawnAttitude>() is ThingComp_PawnAttitude comp && comp.weightOpinion != Enums.WeightOpinion.None)
+            if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<ThingComp_PawnAttitude>() is ThingComp_PawnAttitude comp && comp.weightOpinion != WeightOpinion.None)
             {
-                comp.weightOpinion = Functions.TraitDefToWeightOpinion(Functions.AssignInitialWeightOpinionTraits(pawn));
+                comp.weightOpinion = WeightOpinionUtility.TraitDefToWeightOpinion(WeightOpinionUtility.AssignInitialWeightOpinionTraits(pawn));
             }
         }
     }

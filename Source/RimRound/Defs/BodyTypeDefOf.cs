@@ -31,7 +31,6 @@ namespace RimRound.Defs
         public static BodyTypeDef F_100_Gelatinous;
 
         //Ratkin support
-        public static BodyTypeDef RatkinBase;
         public static BodyTypeDef F_005_Thick_Ratkin;
         public static BodyTypeDef F_006_Chonky_Ratkin;
         public static BodyTypeDef F_010_Chubby_Ratkin;

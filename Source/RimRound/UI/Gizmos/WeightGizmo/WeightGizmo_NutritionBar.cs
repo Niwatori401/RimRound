@@ -12,7 +12,7 @@ using UnityEngine;
 using HarmonyLib;
 using System.Reflection;
 
-using RimRound.Enums;
+using RimRound.Comps;
 
 namespace RimRound.UI
 {

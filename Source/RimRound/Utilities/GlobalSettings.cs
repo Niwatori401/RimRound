@@ -13,7 +13,7 @@ namespace RimRound.Utilities
     {
         static GlobalSettings()
         {
-            Functions.AssignBodyTypeCategoricalExemptions(true);
+            BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true);
         }
 
         #region Gizmo Display Settings
@@ -88,5 +88,19 @@ namespace RimRound.Utilities
         public readonly float max;
         public readonly float min;
         public string stringBuffer;
+    }
+
+    public struct NutritionTable
+    {
+        public float Undefined;
+        public float NeverForNutrition;
+        public float DesperateOnly;
+        public float DesperateOnlyForHumanlikes;
+        public float RawBad;
+        public float RawTasty;
+        public float MealAwful;
+        public float MealSimple;
+        public float MealFine;
+        public float MealLavish;
     }
 }

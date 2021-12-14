@@ -30,7 +30,7 @@ namespace RimRound.Patch.RimWorldPatches
                     if (fmo.Label.Contains(garbageFMO.Label))
                     {
                         if (__1.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp FnDStatsComp && 
-                            t.def.ingestible.CachedNutrition * Values.defaultFullnessToNutritionRatio >= FnDStatsComp.RemainingFullnessUntil(FnDStatsComp.HardLimit)) 
+                            t.def.ingestible.CachedNutrition * FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio >= FnDStatsComp.RemainingFullnessUntil(FnDStatsComp.HardLimit)) 
                         {
                             if (!FnDStatsComp.fullnessbar.peaceForeverHeld) 
                             {

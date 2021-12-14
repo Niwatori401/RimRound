@@ -1,13 +1,15 @@
-﻿using RimRound.Enums;
+﻿using HarmonyLib;
 using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
 namespace RimRound.UI
 {
@@ -93,7 +95,7 @@ namespace RimRound.UI
             //Map Nutrition Section
             Text.Font = GameFont.Tiny;
             Rect rectMapNutContent = new Rect(0, mapNutritionTitleRect.yMax, nutritionSettingsGroup.width, 6 * Text.LineHeight);
-            NutritionTable nutTable = Find.CurrentMap.resourceCounter.TotalHumanEdibleNutritionOfType();
+            NutritionTable nutTable = TotalHumanEdibleNutritionOfType(Find.CurrentMap.resourceCounter);
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.AppendLine("RR_Mtw_NutritionOverview_TotalNutrition".Translate() + ": " + mapNutrition.ToString("F1"));
             stringBuilder.AppendLine("RR_Mtw_NutritionOverview_SimpleMealNutrition".Translate() + ": " + nutTable.MealSimple.ToString("F1"));
@@ -168,54 +170,54 @@ namespace RimRound.UI
 
             Rect exemptionSettingsCheckBoxesRect = new Rect(0, exemptionSettingsTitleRect.yMax, exemptionSettingsGroup.width, numberOfExemptionSettingsCheckboxes * spaceBetweenCheckBoxes);
 
-            Functions.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = exemptionSettingsCheckBoxesRect.y,
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Male".Translate(), ref GlobalSettings.bodyChangeMale, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
-            Functions.CheckboxLabeled(new Rect
+                "RR_Mtw_BodyChangeExemptionSettings_Male".Translate(), ref GlobalSettings.bodyChangeMale, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = exemptionSettingsCheckBoxesRect.y + 1 * spaceBetweenCheckBoxes,
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Female".Translate(), ref GlobalSettings.bodyChangeFemale, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
-            Functions.CheckboxLabeled(new Rect
+                "RR_Mtw_BodyChangeExemptionSettings_Female".Translate(), ref GlobalSettings.bodyChangeFemale, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = exemptionSettingsCheckBoxesRect.y + 2 * spaceBetweenCheckBoxes,
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_HostileNPC".Translate(), ref GlobalSettings.bodyChangeHostileNPC, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
-            Functions.CheckboxLabeled(new Rect
+                "RR_Mtw_BodyChangeExemptionSettings_HostileNPC".Translate(), ref GlobalSettings.bodyChangeHostileNPC, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = exemptionSettingsCheckBoxesRect.y + 3 * spaceBetweenCheckBoxes,
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC".Translate(), ref GlobalSettings.bodyChangeFriendlyNPC, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
-            Functions.CheckboxLabeled(new Rect
+                "RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC".Translate(), ref GlobalSettings.bodyChangeFriendlyNPC, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = exemptionSettingsCheckBoxesRect.y + 4 * spaceBetweenCheckBoxes,
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Prisoner".Translate(), ref GlobalSettings.bodyChangePrisoners, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
-            Functions.CheckboxLabeled(new Rect
+                "RR_Mtw_BodyChangeExemptionSettings_Prisoner".Translate(), ref GlobalSettings.bodyChangePrisoners, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = exemptionSettingsCheckBoxesRect.y + 5 * spaceBetweenCheckBoxes,
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Slave".Translate(), ref GlobalSettings.bodyChangeSlaves, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+                "RR_Mtw_BodyChangeExemptionSettings_Slave".Translate(), ref GlobalSettings.bodyChangeSlaves, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
             GUI.EndGroup();
 
@@ -234,7 +236,7 @@ namespace RimRound.UI
 
             Rect generalSettingsCheckboxesRect = new Rect(0, generalSettingsTitleRect.yMax, generalSettingsRect.width, 200);
 
-            Functions.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = generalSettingsTitleRect.yMax,
@@ -243,41 +245,41 @@ namespace RimRound.UI
             },
             "RR_Mtw_GeneralSettings_BurstingEnabled".Translate(), ref GlobalSettings.burstingEnabled);
 
-            Functions.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 1,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies".Translate(), ref GlobalSettings.showBodyTatoosForCustomSprites, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies".Translate(), ref GlobalSettings.showBodyTatoosForCustomSprites, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
-            Functions.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 2,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_PreferDefaultOverNaked".Translate(), ref GlobalSettings.preferDefaultOutfitOverNaked, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_PreferDefaultOverNaked".Translate(), ref GlobalSettings.preferDefaultOutfitOverNaked, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
-            Functions.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 3,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-           "RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies".Translate(), ref GlobalSettings.alternateNorthHeadPositionForRRBodytypes, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+           "RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies".Translate(), ref GlobalSettings.alternateNorthHeadPositionForRRBodytypes, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
-            Functions.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = 0,
                 y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 4,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_UseZoomPortraitStyle".Translate(), ref GlobalSettings.useZoomPortraitStyle, false, null, null, false, () => { Functions.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_UseZoomPortraitStyle".Translate(), ref GlobalSettings.useZoomPortraitStyle, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
 
             GUI.EndGroup();
@@ -343,7 +345,94 @@ namespace RimRound.UI
             #endregion
         }
 
-        public static void NumberFieldLabeledWithRect<T>(
+        internal static NutritionTable TotalHumanEdibleNutritionOfType(ResourceCounter rc)
+        {
+            NutritionTable nutritionTable = new NutritionTable();
+
+            float num;
+
+            Dictionary<ThingDef, int> dict = (Dictionary<ThingDef, int>)Traverse.Create(rc).Field("countedAmounts").GetValue();
+
+            foreach (KeyValuePair<ThingDef, int> keyValuePair in dict)
+            {
+                if (keyValuePair.Key.IsNutritionGivingIngestible && keyValuePair.Key.ingestible.HumanEdible)
+                {
+                    num = keyValuePair.Key.GetStatValueAbstract(StatDefOf.Nutrition, null) * (float)keyValuePair.Value;
+
+                    switch (keyValuePair.Key.ingestible.preferability)
+                    {
+                        case (FoodPreferability.Undefined):
+                            nutritionTable.Undefined += num;
+                            break;
+                        case FoodPreferability.NeverForNutrition:
+                            nutritionTable.NeverForNutrition += num;
+                            break;
+                        case FoodPreferability.DesperateOnly:
+                            nutritionTable.DesperateOnly += num;
+                            break;
+                        case FoodPreferability.DesperateOnlyForHumanlikes:
+                            nutritionTable.DesperateOnlyForHumanlikes += num;
+                            break;
+                        case FoodPreferability.RawBad:
+                            nutritionTable.RawBad += num;
+                            break;
+                        case FoodPreferability.RawTasty:
+                            nutritionTable.RawTasty += num;
+                            break;
+                        case FoodPreferability.MealAwful:
+                            nutritionTable.MealAwful += num;
+                            break;
+                        case FoodPreferability.MealSimple:
+                            nutritionTable.MealSimple += num;
+                            break;
+                        case FoodPreferability.MealFine:
+                            nutritionTable.MealFine += num;
+                            break;
+                        case FoodPreferability.MealLavish:
+                            nutritionTable.MealLavish += num;
+                            break;
+                        default:
+                            Log.Warning($"{keyValuePair.Key.label} had unexpected food preferability!");
+                            nutritionTable.Undefined += num;
+                            break;
+                    }
+                }
+            }
+
+            return nutritionTable;
+        }
+
+        static MethodInfo checkboxDrawMI = typeof(Widgets).GetMethod("CheckboxDraw", BindingFlags.NonPublic | BindingFlags.Static);
+        delegate void SwitchActionCallback();
+        static void CheckboxLabeled(Rect rect, string label, ref bool checkOn, bool disabled = false, Texture2D texChecked = null, Texture2D texUnchecked = null, bool placeCheckboxNearText = false, SwitchActionCallback action = null)
+        {
+            TextAnchor anchor = Text.Anchor;
+            Text.Anchor = TextAnchor.MiddleLeft;
+            if (placeCheckboxNearText)
+            {
+                rect.width = Mathf.Min(rect.width, Text.CalcSize(label).x + 24f + 10f);
+            }
+            Widgets.Label(rect, label);
+            if (!disabled && Widgets.ButtonInvisible(rect, true))
+            {
+                checkOn = !checkOn;
+                if (checkOn)
+                {
+                    SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera(null);
+                }
+                else
+                {
+                    SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera(null);
+                }
+                if (GeneralUtility.IsNotNull(action))
+                    action();
+            }
+            checkboxDrawMI.Invoke(null, new object[] { rect.x + rect.width - 24f, rect.y, checkOn, disabled, 24f, null, null });
+            Text.Anchor = anchor;
+        }
+
+
+        static void NumberFieldLabeledWithRect<T>(
             Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small) where T : struct
         {
             Text.Font = font;

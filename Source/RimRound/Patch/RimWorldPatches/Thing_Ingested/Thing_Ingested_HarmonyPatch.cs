@@ -19,7 +19,7 @@ namespace RimRound.Patch
             ref float __result)
         {
             FullnessAndDietStats_ThingComp comp = __0?.TryGetComp<FullnessAndDietStats_ThingComp>();
-            if (Functions.IsNotNull(comp)) 
+            if (GeneralUtility.IsNotNull(comp)) 
             {
                 Thing_Ingested_AddFullness.Postfix(__instance, __0, ref __result, comp);
                 Thing_Ingested_StomachBurstCheck.Postfix(comp);

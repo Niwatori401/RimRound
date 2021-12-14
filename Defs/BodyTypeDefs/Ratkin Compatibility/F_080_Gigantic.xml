@@ -2,8 +2,8 @@
 <Defs>
 	<BodyTypeDef>
 		<defName>F_080_Gigantic_Ratkin</defName>
-		<headOffset>(0.00, 0.00)</headOffset>
-		<bodyNakedGraphicPath>Things/Ratkin/Bodies/F_080_Gigantic</bodyNakedGraphicPath>
+		<headOffset>(0.120, 0.840)</headOffset>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/F_080_Gigantic</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

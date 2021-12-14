@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RimRound.Comps;
-using RimRound.Enums;
 using RimRound.Utilities;
 using RimWorld;
 using RimWorld.Planet;

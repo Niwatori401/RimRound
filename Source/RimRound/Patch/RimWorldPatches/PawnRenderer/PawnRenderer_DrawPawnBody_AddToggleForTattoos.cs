@@ -18,7 +18,7 @@ namespace RimRound.Patch
     {
         static bool Bigma(Pawn p) 
         {
-            return (GlobalSettings.showBodyTatoosForCustomSprites || !Functions.HasCustomBody(p));
+            return (GlobalSettings.showBodyTatoosForCustomSprites || !BodyTypeUtility.HasCustomBody(p));
         }
 
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il) 

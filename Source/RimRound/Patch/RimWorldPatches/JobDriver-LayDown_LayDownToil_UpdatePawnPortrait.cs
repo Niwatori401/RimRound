@@ -17,7 +17,7 @@ namespace RimRound.Patch
         public static void Postfix(JobDriver_LayDown __instance) 
         {
             if (Scribe.mode != LoadSaveMode.PostLoadInit)
-                Functions.UpdatePawnSprite(__instance.pawn, false, false, true, false);
+                BodyTypeUtility.UpdatePawnSprite(__instance.pawn, false, false, true, false);
         }
     }
 }

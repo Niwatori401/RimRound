@@ -26,7 +26,7 @@ namespace RimRound.Comps
                     {
                         Values.debugPos += positivity * (offsetAmounts[offsetAmountsIndex]);
                         Log.Message($"Debug Float is now: {Values.debugPos}");
-                        Functions.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
+                        BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
                     }
                 };
 
@@ -125,8 +125,8 @@ namespace RimRound.Comps
                         if (comp is null)
                             return;
 
-                        Functions.AddHediffSeverity(Defs.HediffDefOf.RimRound_Weight, (Pawn)parent, positivity * (offsetAmounts[offsetAmountsIndex] / 1000f), false);
-                        Functions.UpdatePawnSprite((Pawn)parent, comp.PersonallyExempt, comp.CategoricallyExempt, false, true);
+                        Utilities.HediffUtility.AddHediffSeverity(Defs.HediffDefOf.RimRound_Weight, (Pawn)parent, positivity * (offsetAmounts[offsetAmountsIndex] / 1000f), false);
+                        BodyTypeUtility.UpdatePawnSprite((Pawn)parent, comp.PersonallyExempt, comp.CategoricallyExempt, false, true);
                     }
                 };
 
@@ -195,7 +195,7 @@ namespace RimRound.Comps
 
                                 }
                                 PawnBodyType_ThingComp PBTcomp = ((Pawn)parent).TryGetComp<PawnBodyType_ThingComp>();
-                                Functions.UpdatePawnSprite(((Pawn)parent), PBTcomp.PersonallyExempt, PBTcomp.CategoricallyExempt, true, false);
+                                BodyTypeUtility.UpdatePawnSprite(((Pawn)parent), PBTcomp.PersonallyExempt, PBTcomp.CategoricallyExempt, true, false);
                             }
                         }
                     }
@@ -229,7 +229,7 @@ namespace RimRound.Comps
                             UnityEngine.Vector2 drawSize = gp.customDrawSize;
                             gp.customDrawSize = new UnityEngine.Vector2(Values.validBodyMeshSizes[currentBodySizeMeshIndex], Values.validBodyMeshSizes[currentBodySizeMeshIndex]);
                             Log.Message($"{((Pawn)parent).story.bodyType}: {gp.customDrawSize.ToString("F3")}");
-                            Functions.UpdatePawnSprite(((Pawn)parent), PBTcomp.PersonallyExempt, PBTcomp.CategoricallyExempt, true, false);
+                            BodyTypeUtility.UpdatePawnSprite(((Pawn)parent), PBTcomp.PersonallyExempt, PBTcomp.CategoricallyExempt, true, false);
                         }
                         
                     }

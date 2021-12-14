@@ -1,5 +1,4 @@
-﻿using RimRound.Enums;
-using RimRound.Utilities;
+﻿using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -77,10 +76,10 @@ namespace RimRound.Comps
             if (Prefs.DevMode)
                 Log.Message($"Current opinion is now: {weightOpinion}");
 
-            if (!((Pawn)parent).story.traits.HasTrait(Functions.GetTraitByWeightOpinion(this.weightOpinion)))
+            if (!((Pawn)parent).story.traits.HasTrait(WeightOpinionUtility.GetTraitByWeightOpinion(this.weightOpinion)))
             {
-                Functions.RemoveWeightOpinionTraits((Pawn)parent);
-                ((Pawn)parent).story.traits.GainTrait(new Trait(Functions.GetTraitByWeightOpinion(this.weightOpinion)));
+                WeightOpinionUtility.RemoveWeightOpinionTraits((Pawn)parent);
+                ((Pawn)parent).story.traits.GainTrait(new Trait(WeightOpinionUtility.GetTraitByWeightOpinion(this.weightOpinion)));
             }
 
 
@@ -116,10 +115,10 @@ namespace RimRound.Comps
             if (Prefs.DevMode)
                 Log.Message($"Current opinion is now: {weightOpinion}");
 
-            if (!((Pawn)parent).story.traits.HasTrait(Functions.GetTraitByWeightOpinion(this.weightOpinion)))
+            if (!((Pawn)parent).story.traits.HasTrait(WeightOpinionUtility.GetTraitByWeightOpinion(this.weightOpinion)))
             {
-                Functions.RemoveWeightOpinionTraits((Pawn)parent);
-                ((Pawn)parent).story.traits.GainTrait(new Trait(Functions.GetTraitByWeightOpinion(this.weightOpinion)));
+                WeightOpinionUtility.RemoveWeightOpinionTraits((Pawn)parent);
+                ((Pawn)parent).story.traits.GainTrait(new Trait(WeightOpinionUtility.GetTraitByWeightOpinion(this.weightOpinion)));
             }
 
             return weightOpinion;

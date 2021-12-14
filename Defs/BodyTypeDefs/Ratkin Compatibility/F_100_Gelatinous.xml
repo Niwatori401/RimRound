@@ -2,8 +2,8 @@
 <Defs>
 	<BodyTypeDef>
 		<defName>F_100_Gelatinous_Ratkin</defName>
-		<headOffset>(0.25, 0.00)</headOffset>
-		<bodyNakedGraphicPath>Things/Ratkin/Bodies/F_100_Gelatinous</bodyNakedGraphicPath>
+		<headOffset>(0.250, 1.200)</headOffset>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/F_100_Gelatinous</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

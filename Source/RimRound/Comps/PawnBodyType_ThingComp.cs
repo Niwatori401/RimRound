@@ -34,7 +34,7 @@ namespace RimRound.Comps
             {
                 //AlienRace. AlienPartGenerator.AlienComp alienComp = ((Pawn)parent).GetComp<AlienPartGenerator.AlienComp>();
                
-                if (Functions.GetBodyTypeBasedOnWeightSeverity(((Pawn)parent), personallyExempt, categoricallyExempt) is BodyTypeDef b && b != ((Pawn)parent).story.bodyType)
+                if (BodyTypeUtility.GetBodyTypeBasedOnWeightSeverity(((Pawn)parent), personallyExempt, categoricallyExempt) is BodyTypeDef b && b != ((Pawn)parent).story.bodyType)
                 {
                     ((Pawn)parent).story.bodyType = b;
                 }
@@ -50,7 +50,7 @@ namespace RimRound.Comps
                 ticksSinceLastBodyChange += 250;
                 if (ticksSinceLastBodyChange >= numberOfTicksCooldownPerChange)
                 {
-                    Functions.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, false, true);
+                    BodyTypeUtility.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, false, true);
                     ticksSinceLastBodyChange = 0;
                 }
             }
@@ -66,7 +66,7 @@ namespace RimRound.Comps
             set
             {
                 categoricallyExempt = value;
-                Functions.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, true, true);
+                BodyTypeUtility.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, true, true);
             }
         }
 
@@ -79,7 +79,7 @@ namespace RimRound.Comps
             set 
             {
                 personallyExempt = value;
-                Functions.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, true, true);
+                BodyTypeUtility.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, true, true);
             } 
         }
 

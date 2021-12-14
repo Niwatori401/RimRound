@@ -24,7 +24,7 @@ namespace RimRound.Patch
 
             if (PBTComp != null)
                 if (!PBTComp.usingCustomBodyMeshSize)
-                    Functions.UpdatePawnDrawSize(__0.pawn, PBTComp.PersonallyExempt, PBTComp.CategoricallyExempt);
+                    BodyTypeUtility.UpdatePawnDrawSize(__0.pawn, PBTComp.PersonallyExempt, PBTComp.CategoricallyExempt);
 
             return true;
         }

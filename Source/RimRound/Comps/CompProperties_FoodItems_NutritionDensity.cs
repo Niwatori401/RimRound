@@ -10,6 +10,6 @@ namespace RimRound.Comps
 {
     public class CompProperties_FoodItems_NutritionDensity : CompProperties
     {
-        public float fullnessToNutritionRatio = Values.defaultFullnessToNutritionRatio;
+        public float fullnessToNutritionRatio = FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio;
     }
 }

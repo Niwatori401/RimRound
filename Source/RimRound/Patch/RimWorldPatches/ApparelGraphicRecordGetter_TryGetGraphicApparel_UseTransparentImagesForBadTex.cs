@@ -111,7 +111,7 @@ namespace RimRound.Patch
 			} 
 			else if (GlobalSettings.preferDefaultOutfitOverNaked && (dictionaryContainsEntry || graphicPathResultIsNull[str]))//) 
 			{
-				str = Values.defaultClothingSetGraphicPath + "_" + bodyType.defName;
+				str = Values.defaultClothingSetGraphicPath + "_" + RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName;
 			}
 
 			return GraphicDatabase.Get<Graphic_Multi>(str, shader, vector, color);

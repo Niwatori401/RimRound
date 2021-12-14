@@ -21,7 +21,11 @@ namespace RimRound.Patch
 			if (!(___pawn?.RaceProps?.Humanlike ?? true) || !___pawn.Downed || !___pawn.Spawned || ___pawn.InBed())
 				return true;
 
-			float wiggleSpeedFactor = Values.bodyTypeWiggleSpeed[___pawn.story.bodyType];
+			BodyTypeInfo? bodyTypeInfo = RacialBodyTypeInfoUtility.GetRacialBodyTypeInfo(___pawn);
+			if (bodyTypeInfo is null)
+				return true;
+
+			float wiggleSpeedFactor = bodyTypeInfo.AsNonNullable().wiggleSpeed;
 
 			__instance.ticksToIncapIcon--;
 			if (__instance.ticksToIncapIcon <= 0)

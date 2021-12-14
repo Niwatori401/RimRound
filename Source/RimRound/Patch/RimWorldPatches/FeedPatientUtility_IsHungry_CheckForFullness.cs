@@ -1,6 +1,5 @@
 ﻿using HarmonyLib;
 using RimRound.Comps;
-using RimRound.Enums;
 using RimWorld;
 using System;
 using System.Collections.Generic;

@@ -35,7 +35,7 @@ namespace RimRound.UI
 			Widgets.Label(rect2, "Dietary Management");
 
 
-			if (WGThingComp.DietMode != Enums.DietMode.Disabled) 
+			if (WGThingComp.DietMode != DietMode.Disabled) 
 			{
 				Text.Font = GameFont.Tiny;
 				Text.Anchor = TextAnchor.UpperLeft;

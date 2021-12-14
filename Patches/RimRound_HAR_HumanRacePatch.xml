@@ -43,6 +43,11 @@
 						<skinShader>CutoutSkin</skinShader>
 					</li>
 					<li>
+						<customDrawSize>(0.90, 0.90)</customDrawSize>
+						<customPortraitDrawSize>(0.90, 0.90)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>					
+					<li>
 						<customDrawSize>(0.9375, 0.9375)</customDrawSize>
 						<customPortraitDrawSize>(0.9375, 0.9375)</customPortraitDrawSize>
 						<skinShader>CutoutSkin</skinShader>

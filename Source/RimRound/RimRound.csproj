@@ -74,7 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\Alert_FoodProcessorNeedsDispenser.cs" />
+    <Compile Include="UI\Alert_FoodProcessorNeedsDispenser.cs" />
     <Compile Include="AI\JobGivers\JobGiver_EatAtTube.cs" />
     <Compile Include="AI\ThinkNodes\ThinkNode_EatAtTubeConditional.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Dislike.cs" />
@@ -86,6 +86,9 @@
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
     <Compile Include="AI\WorkGivers\WorkGiver_EatAtFoodDispenser.cs" />
+    <Compile Include="Utilities\BodyTypeUtility.cs" />
+    <Compile Include="Utilities\HediffUtility.cs" />
+    <Compile Include="Utilities\WeightOpinionUtility.cs" />
     <None Include="Garbage\Building_FeedingTube.cs" />
     <Compile Include="AI\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />
     <Compile Include="Comps\CompProperties_FoodItems_NutritionDensity.cs" />
@@ -99,7 +102,6 @@
     <Compile Include="Defs\PrisonerInteractionDefOf.cs" />
     <Compile Include="Defs\ThoughtDefOf.cs" />
     <Compile Include="Defs\TraitDefOf.cs" />
-    <Compile Include="Enums\WeightOpinion.cs" />
     <Compile Include="FeedingTube V2\Building_FoodFaucet.cs" />
     <Compile Include="FeedingTube V2\Building_FoodVatSmall.cs" />
     <Compile Include="FeedingTube V2\Building_FoodProcessor.cs" />
@@ -124,8 +126,6 @@
     <Compile Include="Defs\HediffDefOf.cs" />
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="Defs\ThingDefOf.cs" />
-    <Compile Include="Enums\DietMode.cs" />
-    <Compile Include="Enums\NutritionTable.cs" />
     <Compile Include="FeedingTube V2\FoodTransmitter_NetManager.cs" />
     <Compile Include="FeedingTube V2\FoodTransmitter_ThingComp.cs" />
     <Compile Include="FeedingTube V2\FoodTransmitter_PlaceWorker.cs" />
@@ -190,11 +190,11 @@
     <None Include="Garbage\WeightGizmo_FeatureToggleButton.cs" />
     <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo_FullnessBar.cs" />
     <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo_ModeButton.cs" />
-    <Compile Include="Comps\WeightGizmo_ThingComp.cs" />
     <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo_NutritionBar.cs" />
     <Compile Include="Patch\HarmonyPatchMain.cs" />
-    <Compile Include="Utilities\Functions.cs" />
+    <Compile Include="Utilities\GeneralUtility.cs" />
     <Compile Include="Utilities\GlobalSettings.cs" />
+    <Compile Include="Utilities\RacialBodyTypeInfoUtility.cs" />
     <Compile Include="Utilities\Resources.cs" />
     <Compile Include="Utilities\Values.cs" />
     <Compile Include="Hediffs\Weight\Hediff_Weight.cs" />

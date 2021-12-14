@@ -19,7 +19,7 @@ namespace RimRound.Patch
         {
             if (__0 is null)
             {
-                Functions.DebugLogMessage("Pawn was null in FoodUtility_FoodOptimality_AdjustOptimality");
+                Log.Error("Pawn was null in FoodUtility_FoodOptimality_AdjustOptimality");
             }    
 
             FullnessAndDietStats_ThingComp comp1 = __0.TryGetComp<FullnessAndDietStats_ThingComp>();
@@ -28,7 +28,7 @@ namespace RimRound.Patch
                 return;
 
             //If it would kill them
-            if (__1.GetStatValue(StatDefOf.Nutrition) * Values.defaultFullnessToNutritionRatio >= comp1.RemainingFullnessUntil(comp1.HardLimit))
+            if (__1.GetStatValue(StatDefOf.Nutrition) * FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio >= comp1.RemainingFullnessUntil(comp1.HardLimit))
                 __result -= 9999999f;
 
         }

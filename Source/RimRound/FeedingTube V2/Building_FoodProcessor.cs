@@ -63,7 +63,7 @@ namespace RimRound
 
         public void ProcessFood() 
         {
-            if (Functions.IsHashIntervalTick((int)processingFrequency) && ShouldProcessFood) 
+            if (GeneralUtility.IsHashIntervalTick((int)processingFrequency) && ShouldProcessFood) 
             {
                 //Not use right now, but can be used with CompIngredients.RegisterIngredient();
                 List<ThingDef> listOfIngredients = new List<ThingDef>();
