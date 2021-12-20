@@ -10,7 +10,7 @@ namespace TestingRange
     {
         static void Main(string[] args)
         {
-            string commaDelimetedKeyvaluePairsPath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Source\Stats.csv";
+            string commaDelimetedKeyvaluePairsPath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Source\Beer.txt";
             string[] stringParts = File.ReadAllText(commaDelimetedKeyvaluePairsPath).Split(new string[] { ",", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
             List<string> defNames = new List<string>();

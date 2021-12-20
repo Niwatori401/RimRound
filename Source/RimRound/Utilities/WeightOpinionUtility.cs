@@ -11,7 +11,7 @@ namespace RimRound.Utilities
 {
     public static class WeightOpinionUtility
     {
-        public static bool HasAnyWeightOpinion(Pawn pawn)
+        public static bool HasAnyWeightOpinionTrait(Pawn pawn)
         {
             foreach (var x in traitAndCommonalityPair)
             {
@@ -48,7 +48,7 @@ namespace RimRound.Utilities
 
         public static TraitDef AssignInitialWeightOpinionTraits(Pawn p)
         {
-            if (HasAnyWeightOpinion(p))
+            if (HasAnyWeightOpinionTrait(p))
                 return null;
 
             TraitDef t = GetWeightedRandWeightOpinionTrait(traitAndCommonalityPair);

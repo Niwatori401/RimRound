@@ -29,10 +29,10 @@ namespace RimRound.Utilities
 
         #region Body Change Exemption Settings
 
-        public static bool bodyChangeMale = true;
+        public static bool bodyChangeMale = false;
         public static bool bodyChangeFemale = true;
         public static bool bodyChangeHostileNPC = false;
-        public static bool bodyChangeFriendlyNPC = false;
+        public static bool bodyChangeFriendlyNPC = true;
         public static bool bodyChangePrisoners = true;
         public static bool bodyChangeSlaves = true;
 
