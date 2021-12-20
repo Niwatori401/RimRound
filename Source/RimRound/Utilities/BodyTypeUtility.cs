@@ -65,7 +65,6 @@ namespace RimRound.Utilities
 
         public static void UpdatePawnSprite(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false, bool forceUpdate = false, bool BodyCheck = true)
         {
-
             if (BodyCheck && BodyTypeUtility.GetBodyTypeBasedOnWeightSeverity(pawn, personallyExempt, categoricallyExempt) is BodyTypeDef b && b != pawn.story.bodyType)
             {
                 pawn.story.bodyType = b;
@@ -81,7 +80,7 @@ namespace RimRound.Utilities
 
         }
 
-        public static void RedrawPawn(Pawn pawn)
+        private static void RedrawPawn(Pawn pawn)
         {
             PortraitsCache.SetDirty(pawn);
             GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);
@@ -108,6 +107,24 @@ namespace RimRound.Utilities
             }
         }
 
+        internal static bool CheckExemptions(Pawn p) 
+        {
+            if ((GlobalSettings.bodyChangeFemale is false && p.gender is Gender.Female) ||
+            (GlobalSettings.bodyChangeMale is false && p.gender is Gender.Male) ||
+            (GlobalSettings.bodyChangeFriendlyNPC is false && p.Faction != Faction.OfPlayer && p.Faction.AllyOrNeutralTo(Faction.OfPlayer)) ||
+            (GlobalSettings.bodyChangeHostileNPC is false && p.Faction.HostileTo(Faction.OfPlayer) && !p.IsPrisoner) ||
+            (GlobalSettings.bodyChangePrisoners is false && p.IsPrisoner) ||
+            (GlobalSettings.bodyChangeSlaves is false && p.IsSlaveOfColony)
+        )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         internal static void AssignBodyTypeCategoricalExemptions(bool updatePawnSprite = false)
         {
             foreach (Map m in Find.Maps)
@@ -122,20 +139,7 @@ namespace RimRound.Utilities
                     if (comp is null)
                         continue;
 
-                    if ((GlobalSettings.bodyChangeFemale is false && p.gender is Gender.Female) ||
-                        (GlobalSettings.bodyChangeMale is false && p.gender is Gender.Male) ||
-                        (GlobalSettings.bodyChangeFriendlyNPC is false && p.Faction != Faction.OfPlayer && p.Faction.AllyOrNeutralTo(Faction.OfPlayer)) ||
-                        (GlobalSettings.bodyChangeHostileNPC is false && p.Faction.HostileTo(Faction.OfPlayer) && !p.IsPrisoner) ||
-                        (GlobalSettings.bodyChangePrisoners is false && p.IsPrisoner) ||
-                        (GlobalSettings.bodyChangeSlaves is false && p.IsSlaveOfColony)
-                        )
-                    {
-                        comp.CategoricallyExempt = true;
-                    }
-                    else
-                    {
-                        comp.CategoricallyExempt = false;
-                    }
+                    comp.CategoricallyExempt = CheckExemptions(p);
 
                     if (updatePawnSprite)
                         UpdatePawnSprite(p, comp.PersonallyExempt, comp.CategoricallyExempt, true, true);
