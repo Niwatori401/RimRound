@@ -47,12 +47,12 @@
 			<Steel>3</Steel>
 		</costList>
 		<comps>
-			<li Class="RimRound.FoodTransmitter_CompProperties">
-				<compClass>RimRound.FoodTransmitter_ThingComp</compClass>
+			<li Class="RimRound.FeedingTube.Comps.FoodTransmitter_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodTransmitter_ThingComp</compClass>
 			</li>
 		</comps>
 		<placeWorkers>
-			<li>RimRound.FoodTransmitter_PlaceWorker</li>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
 		</placeWorkers>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<rotatable>false</rotatable>
@@ -107,13 +107,13 @@
 		<Steel>5</Steel>
     </costList>
     <comps>
-		<li Class="RimRound.FoodTransmitter_CompProperties">
-			<compClass>RimRound.FoodValve_ThingComp</compClass>
+		<li Class="RimRound.FeedingTube.Comps.FoodTransmitter_CompProperties">
+			<compClass>RimRound.FeedingTube.Comps.FoodValve_ThingComp</compClass>
 		</li>
 		<li Class="CompProperties_Flickable"/>
     </comps>
     <placeWorkers>
-		<li>RimRound.FoodTransmitter_PlaceWorker</li>
+		<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
     </placeWorkers>
 	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <rotatable>false</rotatable>
@@ -135,7 +135,7 @@
 		<defName>RR_TD_FoodStorageVat_Large</defName>
 		<label>feeding tube storage</label>
 		<description>Stores excess food.</description>
-		<thingClass>RimRound.Building_FoodVatLarge</thingClass>
+		<thingClass>RimRound.FeedingTube.Building_FoodVatLarge</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodStorageVatLarge</texPath>
@@ -175,13 +175,13 @@
 			<Steel>70</Steel>
 		</costList>
 		<comps>
-			<li Class="RimRound.FoodNetStorage_CompProperties">
-				<compClass>RimRound.FoodNetStorage_ThingComp</compClass>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetStorage_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
 				<capacity>100</capacity>
 			</li>
 		</comps>
 		<placeWorkers>
-			<li>RimRound.FoodTransmitter_PlaceWorker</li>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
 		</placeWorkers>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<rotatable>true</rotatable>
@@ -202,7 +202,7 @@
 		<defName>RR_TD_FoodStorageVat_Small</defName>
 		<label>small food storage vat</label>
 		<description>Stores excess food.</description>
-		<thingClass>RimRound.Building_FoodVatSmall</thingClass>
+		<thingClass>RimRound.FeedingTube.Building_FoodVatSmall</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodStorageVatSmall</texPath>
@@ -242,13 +242,13 @@
 			<Steel>35</Steel>
 		</costList>
 		<comps>
-			<li Class="RimRound.FoodNetStorage_CompProperties">
-				<compClass>RimRound.FoodNetStorage_ThingComp</compClass>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetStorage_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
 				<capacity>50</capacity>
 			</li>
 		</comps>
 		<placeWorkers>
-			<li>RimRound.FoodTransmitter_PlaceWorker</li>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
 		</placeWorkers>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<rotatable>true</rotatable>
@@ -271,7 +271,7 @@
 		<defName>RR_TD_FeedingTubeFoodProcessor</defName>
 		<label>food processor</label>
 		<description>Creates feeding fluid from solid edibles.</description>
-		<thingClass>RimRound.Building_FoodProcessor</thingClass>
+		<thingClass>RimRound.FeedingTube.Building_FoodProcessor</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodRefiner</texPath>
@@ -327,14 +327,14 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Breakdownable"/>
-			<li Class="RimRound.FoodNetTrader_CompProperties">
-				<compClass>RimRound.FoodNetTrader_ThingComp</compClass>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
 				<flowDelta>0</flowDelta>
 				<idleFlowDelta>0</idleFlowDelta>
 			</li>
 		</comps>
 		<placeWorkers>
-			<li>RimRound.FoodTransmitter_PlaceWorker</li>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
 		</placeWorkers>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<rotatable>true</rotatable>
@@ -356,7 +356,7 @@
 		<defName>RR_TD_FoodFaucet</defName>
 		<label>food dispenser</label>
 		<description>dispenses food.</description>
-		<thingClass>RimRound.Building_FoodFaucet</thingClass>
+		<thingClass>RimRound.FeedingTube.Building_FoodFaucet</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodDispenser</texPath>
@@ -411,12 +411,12 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Breakdownable"/>
-			<li Class="RimRound.FoodNetTrader_CompProperties">
-				<compClass>RimRound.FoodNetTrader_ThingComp</compClass>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
 			</li>
 		</comps>
 		<placeWorkers>
-			<li>RimRound.FoodTransmitter_PlaceWorker</li>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
 			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
 		</placeWorkers>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>

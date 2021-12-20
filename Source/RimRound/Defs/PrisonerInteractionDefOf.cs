@@ -10,7 +10,7 @@ namespace RimRound.Defs
     [DefOf]
     public static class PrisonerInteractionModeDefOf
     {
-        public static PrisonerInteractionModeDef RR_Fatten;
-        public static PrisonerInteractionModeDef RR_FattenForced;
+        //public static PrisonerInteractionModeDef RR_Fatten;
+        //public static PrisonerInteractionModeDef RR_FattenForced;
     }
 }

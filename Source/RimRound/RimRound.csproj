@@ -74,9 +74,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\Alert_FoodProcessorNeedsDispenser.cs" />
-    <Compile Include="AI\JobGivers\JobGiver_EatAtTube.cs" />
-    <Compile Include="AI\ThinkNodes\ThinkNode_EatAtTubeConditional.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Dislike.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Fanatical.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Love.cs" />
@@ -85,7 +82,6 @@
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Neutral.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
-    <Compile Include="AI\WorkGivers\WorkGiver_EatAtFoodDispenser.cs" />
     <Compile Include="Utilities\BodyTypeUtility.cs" />
     <Compile Include="Utilities\HediffUtility.cs" />
     <Compile Include="Utilities\WeightOpinionUtility.cs" />
@@ -98,22 +94,9 @@
     <Compile Include="Comps\ThingComp_PawnAttitude.cs" />
     <Compile Include="Comps\WorldComp_SaveValues.cs" />
     <Compile Include="Defs\ExpansionDefOf.cs" />
-    <Compile Include="Defs\PrisonerInteractionDef.cs" />
     <Compile Include="Defs\PrisonerInteractionDefOf.cs" />
     <Compile Include="Defs\ThoughtDefOf.cs" />
     <Compile Include="Defs\TraitDefOf.cs" />
-    <Compile Include="FeedingTube V2\Building_FoodFaucet.cs" />
-    <Compile Include="FeedingTube V2\Building_FoodVatSmall.cs" />
-    <Compile Include="FeedingTube V2\Building_FoodProcessor.cs" />
-    <Compile Include="FeedingTube V2\Building_FoodVatLarge.cs" />
-    <Compile Include="FeedingTube V2\Patches\Designator-Install_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
-    <Compile Include="FeedingTube V2\Patches\Designator-Build_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
-    <Compile Include="FeedingTube V2\FoodNet.cs" />
-    <Compile Include="FeedingTube V2\FoodNetStorage_CompProperties.cs" />
-    <Compile Include="FeedingTube V2\FoodNetStorage_ThingComp.cs" />
-    <Compile Include="FeedingTube V2\FoodNetTrader_CompProperties.cs" />
-    <Compile Include="FeedingTube V2\FoodNetTrader_ThingComp.cs" />
-    <Compile Include="FeedingTube V2\FoodTransmitter_CompProperties.cs" />
     <Compile Include="Comps\FullnessAndDietStats_ThingComp.cs" />
     <Compile Include="Comps\HideCovers_ThingComp.cs" />
     <Compile Include="Comps\MakeBlobIntoBed_ThingComp.cs" />
@@ -126,13 +109,6 @@
     <Compile Include="Defs\HediffDefOf.cs" />
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="Defs\ThingDefOf.cs" />
-    <Compile Include="FeedingTube V2\FoodTransmitter_NetManager.cs" />
-    <Compile Include="FeedingTube V2\FoodTransmitter_ThingComp.cs" />
-    <Compile Include="FeedingTube V2\FoodTransmitter_PlaceWorker.cs" />
-    <Compile Include="FeedingTube V2\FoodValve_ThingComp.cs" />
-    <Compile Include="FeedingTube V2\Graphic_LinkedFoodOverlay.cs" />
-    <Compile Include="FeedingTube V2\SectionLayer_ThingsFoodGrid.cs" />
-    <Compile Include="FeedingTube V2\Graphic_LinkedFood.cs" />
     <None Include="Garbage\GarbagePatch.cs" />
     <Compile Include="Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_StuffPrisoner.cs" />
@@ -144,9 +120,6 @@
     <Compile Include="Patch\RimWorldPatches\FloatMenuMakerMap_AddHumanlikeOrders_AlterTextForFoodAboveHardLimit.cs" />
     <Compile Include="Patch\RimWorldPatches\FoodUtility_FoodOptimality_AdjustOptimality.cs" />
     <None Include="Garbage\PawnDownedWiggler_RandomDownedAngle_AdjustByWeight.cs" />
-    <Compile Include="FeedingTube V2\Patches\FoodUtility_GetFinalIngestibleDef_AddFoodFaucetSupport.cs" />
-    <Compile Include="FeedingTube V2\Patches\FoodUtility_GetFinalIngestibleDef_FeedingTubeSupport.cs" />
-    <Compile Include="FeedingTube V2\Patches\FoodUtility_SpawnedFoodSearchInnerScan_ChangeValidatorToAccountForFoodFaucet.cs" />
     <Compile Include="Patch\RimWorldPatches\FoodUtility_StackCountForNutrition_MaxChangedToMin.cs" />
     <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_EmancipateSlave_UpdateCategoricalExemptions.cs" />
     <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_EnslavePrisoner_UpdateCategoricalExemptions.cs" />
@@ -154,9 +127,6 @@
     <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_SlaveRelease_UpdateCategoricalExemptions.cs" />
     <Compile Include="Patch\RimWorldPatches\Graphic-Multi_Init_DontLogErrorsForRimRound.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_ResolveAllGraphicsPrefix_UpdatePawnBodySize.cs" />
-    <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_MakeNewToils_AddExceptionForFaucet.cs" />
-    <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_PrepareToIngestToils_AddFaucetSupport.cs" />
-    <Compile Include="FeedingTube V2\Patches\JobDriver-Ingest_TryMakePreToilReservations_AddExceptionForFaucet.cs" />
     <Compile Include="Patch\RimWorldPatches\ModLister_AllExpansions_IncludeRimRound.cs" />
     <Compile Include="Patch\RimWorldPatches\ModsConfig_LastInstalledExpansion_DefaultToRimRoundBG.cs" />
     <Compile Include="Patch\RimWorldPatches\Pawn-HealthTracker_MakeDowned_SetCustomWiggleAngleInitial.cs" />
@@ -178,7 +148,6 @@
     <None Include="Garbage\Pawn_Tick_PassiveWeightLoss.cs" />
     <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_HarmonyPatch.cs" />
     <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_StomachBurstCheck.cs" />
-    <Compile Include="FeedingTube V2\Patches\ThingListGroupHelper_Includes_AddSupportForFaucet.cs" />
     <Compile Include="Patch\RimWorldPatches\JobDriver-LayDown_LayDownToil_UpdatePawnPortrait.cs" />
     <Compile Include="UI\Gizmos\HideCoversGizmo.cs" />
     <Compile Include="UI\MainTabWindow_RRGlobalSettings.cs" />
@@ -195,7 +164,6 @@
     <Compile Include="Utilities\GeneralUtility.cs" />
     <Compile Include="Utilities\GlobalSettings.cs" />
     <Compile Include="Utilities\RacialBodyTypeInfoUtility.cs" />
-    <Compile Include="Utilities\Resources.cs" />
     <Compile Include="Utilities\Values.cs" />
     <Compile Include="Hediffs\Weight\Hediff_Weight.cs" />
     <Compile Include="Hediffs\Weight\HediffDef_Weight.cs" />

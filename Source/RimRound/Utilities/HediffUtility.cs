@@ -109,6 +109,7 @@ namespace RimRound.Utilities
                 if (amount > 0)
                 {
                     float additionalSeverity = GlobalSettings.weightGainMultiplier.threshold * amount;
+
                     if (SeverityToKilosWithBaseWeight(h.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
                         h.Severity = KilosToSeverity(GlobalSettings.maxWeight.threshold);
                     else
@@ -116,10 +117,13 @@ namespace RimRound.Utilities
                 }
                 else
                 {
-                    h.Severity += GlobalSettings.weightLossMultiplier.threshold * amount;
+                    float additionalSeverity = GlobalSettings.weightLossMultiplier.threshold * amount;
+
+                    if (SeverityToKilosWithBaseWeight(h.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
+                        h.Severity = KilosToSeverity(GlobalSettings.minWeight.threshold);
+                    else
+                        h.Severity += additionalSeverity;
                 }
-
-
 
 
                 ThrowValueText(pawn, amount, 1, 0.5f);

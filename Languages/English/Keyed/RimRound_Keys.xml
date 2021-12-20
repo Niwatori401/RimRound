@@ -10,7 +10,7 @@
 	<DietaryTarget>Dietary Target</DietaryTarget>
 	<DietaryTargetDesired>Dietary Target Desired</DietaryTargetDesired>
 	
-	
+	<Nutrition_Density>Nutrition density</Nutrition_Density>
 	
 	<!--WeightGizmo-->
 	<DietMode_Nutrition>Nutrition Mode</DietMode_Nutrition>
@@ -55,6 +55,7 @@
 	<RR_Mtw_GlobalBlobIntoBedThreshold>Min weight for blob bed</RR_Mtw_GlobalBlobIntoBedThreshold>
 	<RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>Min weight for alt wiggle angle</RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>
 	<RR_Mtw_MaxWeight>Maximum weight</RR_Mtw_MaxWeight>
+	<RR_Mtw_MinWeight>Minimum weight</RR_Mtw_MinWeight>
 	
 	
 	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>

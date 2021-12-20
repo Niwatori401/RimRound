@@ -16,10 +16,10 @@ namespace RimRound.AI
     {
         public override Job JobOnThing(Pawn feeder, Thing t, bool forced = false)
         {
-			if (t?.AsPawn()?.guest?.interactionMode is null || (t.AsPawn().guest.interactionMode != Defs.PrisonerInteractionModeDefOf.RR_Fatten && t.AsPawn().guest.interactionMode != Defs.PrisonerInteractionModeDefOf.RR_FattenForced))
-			{
-				return null;
-			}
+			//if (t?.AsPawn()?.guest?.interactionMode is null || (t.AsPawn().guest.interactionMode != Defs.PrisonerInteractionModeDefOf.RR_Fatten && t.AsPawn().guest.interactionMode != Defs.PrisonerInteractionModeDefOf.RR_FattenForced))
+			//{
+			//	return null;
+			//}
 
 			Pawn feedee = t.AsPawn();
 

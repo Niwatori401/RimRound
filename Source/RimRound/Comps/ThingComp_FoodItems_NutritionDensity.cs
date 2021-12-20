@@ -16,5 +16,10 @@ namespace RimRound.Comps
                 return this.props as CompProperties_FoodItems_NutritionDensity;
             }
         }
+
+        public override string CompInspectStringExtra()
+        {
+            return $"{"Nutrition_Density".Translate()}: {1 / Props.fullnessToNutritionRatio:F2}";
+        }
     }
 }

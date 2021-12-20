@@ -7,9 +7,9 @@
 		<insertPriority>69</insertPriority>
 		<thinkRoot Class="ThinkNode_Priority">
 			<subNodes>
-				<li Class="RimRound.AI.ThinkNode_EatAtTubeConditional">
+				<li Class="RimRound.FeedingTube.AI.ThinkNode_EatAtTubeConditional">
 					<subNodes>
-						<li Class="RimRound.AI.JobGiver_EatAtTube" />
+						<li Class="RimRound.FeedingTube.AI.JobGiver_EatAtTube" />
 					</subNodes>
 				</li>
 			</subNodes>

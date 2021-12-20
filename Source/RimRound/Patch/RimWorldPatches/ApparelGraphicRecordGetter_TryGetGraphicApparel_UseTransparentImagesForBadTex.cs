@@ -119,7 +119,7 @@ namespace RimRound.Patch
 
 		public static bool AddGraphicPathToIsNullDictionary(Apparel apparel, BodyTypeDef bodyType)
 		{
-			string path = apparel.WornGraphicPath + "_" + bodyType.defName;
+			string path = apparel.WornGraphicPath + "_" + RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName;
 
 			if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath)
 			{
@@ -144,7 +144,7 @@ namespace RimRound.Patch
 				{
 					if (GlobalSettings.preferDefaultOutfitOverNaked && graphicPathResultIsNull[path])
 					{
-						path = Values.defaultClothingSetGraphicPath + "_" + bodyType.defName;
+						path = Values.defaultClothingSetGraphicPath + "_" + RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName;
 					}
 
 					dustSettled = graphicPathResultIsNull.ContainsKey(path) ? true : false;

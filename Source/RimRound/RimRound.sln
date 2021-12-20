@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingRange", "..\TestingRange\TestingRange.csproj", "{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingRange", "..\TestingRange\TestingRange.csproj", "{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimRound Feeding Tube", "..\RimRound Feeding Tube\RimRound Feeding Tube.csproj", "{A37716C6-2A5D-41B8-88E6-CBFAC75BB9F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A37716C6-2A5D-41B8-88E6-CBFAC75BB9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37716C6-2A5D-41B8-88E6-CBFAC75BB9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37716C6-2A5D-41B8-88E6-CBFAC75BB9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37716C6-2A5D-41B8-88E6-CBFAC75BB9F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

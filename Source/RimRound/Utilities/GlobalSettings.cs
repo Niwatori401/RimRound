@@ -9,6 +9,7 @@ using Verse;
 
 namespace RimRound.Utilities
 {
+    //All fields in this class are saved in WorldComp_SaveValues.cs. Do not add reference type fields without adding exceptions to saving code
     public static class GlobalSettings
     {
         static GlobalSettings()
@@ -46,7 +47,7 @@ namespace RimRound.Utilities
         public static bool haveWeightHediffMale = true;
         public static bool haveWeightHediffFemale = true;
         public static bool preferDefaultOutfitOverNaked = true;
-        public static bool alternateNorthHeadPositionForRRBodytypes = true;
+        public static bool alternateNorthHeadPositionForRRBodytypes = false;
 
         public static bool useZoomPortraitStyle = false;
 
@@ -69,7 +70,8 @@ namespace RimRound.Utilities
         public static NumericFieldData<float> weightGainMultiplier = new NumericFieldData<float>(1, 0, 100);
         public static NumericFieldData<float> digestionRateMultiplier = new NumericFieldData<float>(1, 0, 100);
         public static NumericFieldData<float> hypertension = new NumericFieldData<float>(1, 0, 1);
-        public static NumericFieldData<int> maxWeight = new NumericFieldData<int>(100000, Hediff_Weight.ModExtension.baseWeight, int.MaxValue);
+        public static NumericFieldData<int> maxWeight = new NumericFieldData<int>(100000, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);
+        public static NumericFieldData<int> minWeight = new NumericFieldData<int>((int)Hediff_Weight.ModExtension.baseWeight, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);
 
         #endregion
     }

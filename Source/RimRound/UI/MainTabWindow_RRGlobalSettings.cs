@@ -145,10 +145,11 @@ namespace RimRound.UI
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksPerBodyChangeCheck, numericFieldCount++, "RR_Mtw_TicksPerBodyChangeCheckTitle");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.softLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalSoftLimitMultiplier");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.hardLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalHardLimitMultiplier");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxWeight, numericFieldCount++, "RR_Mtw_MaxWeight");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minWeight, numericFieldCount++, "RR_Mtw_MinWeight", GameFont.Small, () => { CheckMaxMinThresholds(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxWeight, numericFieldCount++, "RR_Mtw_MaxWeight", GameFont.Small, () => { CheckMaxMinThresholds(); });
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToBeBed, numericFieldCount++, "RR_Mtw_GlobalBlobIntoBedThreshold");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToAdjustWiggleAngle, numericFieldCount++, "RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold");
-            
+
             
             /**/
             globalMultipliersSettingsFieldRect.height = numericFieldCount * spaceBetweenNumberFields;
@@ -431,9 +432,19 @@ namespace RimRound.UI
             Text.Anchor = anchor;
         }
 
+        static void CheckMaxMinThresholds() 
+        {
+            if (GlobalSettings.minWeight.threshold >= GlobalSettings.maxWeight.threshold)
+            {
+                GlobalSettings.minWeight.threshold = (int)GlobalSettings.minWeight.min;
+                GlobalSettings.minWeight.stringBuffer = null;
+                GlobalSettings.maxWeight.threshold = (int)99999;
+                GlobalSettings.maxWeight.stringBuffer = null;
+            }
+        }
 
         static void NumberFieldLabeledWithRect<T>(
-            Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small) where T : struct
+            Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small, SwitchActionCallback action = null) where T : struct
         {
             Text.Font = font;
             Rect boundingRect = new Rect(0, categoryRect.y + positionNumberInList * spaceBetweenNumberFields, categoryRect.width - numberFieldRightOffset, Text.LineHeight);
@@ -444,6 +455,9 @@ namespace RimRound.UI
                 ref numericFieldData.stringBuffer,
                 numericFieldData.min,
                 numericFieldData.max);
+
+            if (action != null)
+                action();
         }
     }
 }
