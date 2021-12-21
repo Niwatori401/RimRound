@@ -56,14 +56,14 @@ namespace RimRound.Patch
         {
             Predicate<Thing> dogma = delegate (Thing t)
             {
-                if (eater is null || t is null || !(eater.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp))
+                if (eater is null || t is null || !(eater.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp) || fullnessComp is null)
                 {
                     return ogPredicate(t);
                 }
 
                 float ftnRatio = FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio;
 
-                if (t.TryGetComp<ThingComp_FoodItems_NutritionDensity>() is ThingComp_FoodItems_NutritionDensity nutDensityComp)
+                if (t.TryGetComp<ThingComp_FoodItems_NutritionDensity>() is ThingComp_FoodItems_NutritionDensity nutDensityComp && nutDensityComp != null)
                 {
                     ftnRatio = nutDensityComp.Props.fullnessToNutritionRatio;
                 }

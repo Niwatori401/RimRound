@@ -82,6 +82,7 @@
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Neutral.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
+    <Compile Include="Patch\RimWorldPatches\Dialog-Options_DoWindowContents_ShowDropdownToChangeBGAlways.cs" />
     <Compile Include="Patch\RimWorldPatches\Page-ConfigureStartingPawns_DrawPortraitArea_UpdateSprite.cs" />
     <Compile Include="Utilities\BodyTypeUtility.cs" />
     <Compile Include="Utilities\HediffUtility.cs" />

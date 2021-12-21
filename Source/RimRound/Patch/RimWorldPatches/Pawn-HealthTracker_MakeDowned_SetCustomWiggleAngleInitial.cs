@@ -13,11 +13,9 @@ namespace RimRound.Patch
     [HarmonyPatch("MakeDowned")]
     public class Pawn_HealthTracker_MakeDowned_SetCustomWiggleAngleInitial
     {
-        static float minSeverityToBeNotWiggle = 0.3f;
-
         public static void Postfix(Pawn ___pawn) 
         {
-            if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, ___pawn)?.Severity is float s && s >= minSeverityToBeNotWiggle)
+            if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, ___pawn)?.Severity is float s && s >= (Utilities.HediffUtility.KilosToSeverity(GlobalSettings.weightToAdjustWiggleAngle.threshold)))
                 ___pawn.Drawer.renderer.wiggler.SetToCustomRotation(Rot4.North.AsAngle);
 
         }

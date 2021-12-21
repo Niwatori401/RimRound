@@ -100,8 +100,8 @@
 	
 	
 	<!--Feeding Tube Text-->
-	<RR_FT_RemainingFoodStored>Food Stored</RR_FT_RemainingFoodStored>
-	<RR_FT_NetInfo>Remaining food: {0}L / {1}L</RR_FT_NetInfo>
+	<RR_FT_RemainingFoodStored>Food stored in this container</RR_FT_RemainingFoodStored>
+	<RR_FT_NetInfo>Food in system: {0}L / {1}L</RR_FT_NetInfo>
 	<RR_FT_BrokenDown>Broken down</RR_FT_BrokenDown>
 	<RR_FT_TraderUsing>Using {CONSUMPTIONRATE}L/s</RR_FT_TraderUsing>
 	

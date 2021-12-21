@@ -91,14 +91,7 @@ namespace RimRound.FeedingTube.Comps
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.CompInspectStringExtra());
-            sb.AppendLine("RR_FT_TraderUsing".Translate());
-
-            if (breakdownComp?.BrokenDown ?? false) 
-            {
-                sb.AppendLine();
-                sb.AppendLine("RR_FT_BrokenDown".Translate(ChangePerSecond.ToString("F1").Named("CONSUMPTIONRATE")));
-            }
-
+            sb.AppendLine("RR_FT_TraderUsing".Translate(ChangePerSecond.ToString("F1").Named("CONSUMPTIONRATE")));
 
             return sb.ToString().Trim();
         }

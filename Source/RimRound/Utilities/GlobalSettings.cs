@@ -58,7 +58,7 @@ namespace RimRound.Utilities
         public static NumericFieldData<float> diabetes = new NumericFieldData<float>(1, 0, 1);
         public static NumericFieldData<float> aFLD = new NumericFieldData<float>(1, 0, 1);
         public static NumericFieldData<float> FLD = new NumericFieldData<float>(1, 0, 1);
-        public static NumericFieldData<int> weightToAdjustWiggleAngle = new NumericFieldData<int>(700, 0, int.MaxValue);
+        public static NumericFieldData<int> weightToAdjustWiggleAngle = new NumericFieldData<int>(130, 0, int.MaxValue);
         public static NumericFieldData<int> weightToBeBed = new NumericFieldData<int>(700, 0, int.MaxValue);
         public static NumericFieldData<int> ticksPerHungerCheck = new NumericFieldData<int>(150, 30, 1000);
         public static NumericFieldData<int> ticksPerBodyChangeCheck = new NumericFieldData<int>(150, 30, 1000);
@@ -66,8 +66,8 @@ namespace RimRound.Utilities
         public static NumericFieldData<float> softLimitMuliplier = new NumericFieldData<float>(1, 0.5f, 10);
         public static NumericFieldData<int> stomachElasticityMultiplier = new NumericFieldData<int>(1, 0, 10);
         public static NumericFieldData<float> fullnessMultiplier = new NumericFieldData<float>(1, 0, 10);
-        public static NumericFieldData<float> weightLossMultiplier = new NumericFieldData<float>(1, 0, 100);
-        public static NumericFieldData<float> weightGainMultiplier = new NumericFieldData<float>(1, 0, 100);
+        public static NumericFieldData<float> weightLossMultiplier = new NumericFieldData<float>(1, 0, 1000);
+        public static NumericFieldData<float> weightGainMultiplier = new NumericFieldData<float>(1, 0, 1000);
         public static NumericFieldData<float> digestionRateMultiplier = new NumericFieldData<float>(1, 0, 100);
         public static NumericFieldData<float> hypertension = new NumericFieldData<float>(1, 0, 1);
         public static NumericFieldData<int> maxWeight = new NumericFieldData<int>(100000, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);

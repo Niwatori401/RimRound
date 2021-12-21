@@ -20,26 +20,13 @@ namespace RimRound.Patch
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 
-            AdjustHeadPositionInPortrait(codeInstructions);
-
-            AdjustHairPositionInPortrait(codeInstructions);
+            AdjustHeadPosition(codeInstructions);
 
             return codeInstructions;
         }
 
-        private static void AdjustHairPositionInPortrait(List<CodeInstruction> codeInstructions)
-        {
-            for (int i = 0; i < codeInstructions.Count; ++i)
-            {
-                if (codeInstructions[i].Calls(drawHeadHairMI))
-                {
-                    codeInstructions[i].operand = drawHeadHairAdjustedMI;
-                    codeInstructions[i].opcode = OpCodes.Call;
-                }
-            }
-        }
 
-        private static void AdjustHeadPositionInPortrait(List<CodeInstruction> codeInstructions)
+        private static void AdjustHeadPosition(List<CodeInstruction> codeInstructions)
         {
 
 
@@ -69,23 +56,11 @@ namespace RimRound.Patch
 			{
                 Pawn pawn = pawnRendererPawnFI.GetValue(instance).AsPawn();
 
-                Vector3 extraOffset = new Vector3(0, (BodyTypeUtility.HasCustomBody(pawn) && GlobalSettings.alternateNorthHeadPositionForRRBodytypes) ? -headYOffset : 0 , 0);
+                Vector3 extraOffset = new Vector3(0, (GlobalSettings.alternateNorthHeadPositionForRRBodytypes && BodyTypeUtility.HasCustomBody(pawn)) ? -headYOffset : 0 , 0);
 
                 GenDraw.DrawMeshNowOrLater(mesh, vector3 + extraOffset, quaternion, material, drawNow);
 			}
 		}
-
-        private static void DrawHeadHairAdjusted(PawnRenderer instance, Vector3 rootloc, Vector3 position, float angle, Rot4 bodyfacing, Rot4 headfacing, RotDrawMode rotDrawMode, PawnRenderFlags renderFlags) 
-        {
-            if (renderFlags.FlagSet(PawnRenderFlags.Portrait))
-            {
-                drawHeadHairMI.Invoke(instance, new object[] { rootloc, position, angle, bodyfacing, headfacing, rotDrawMode, renderFlags });
-            }
-            else
-            {
-                drawHeadHairMI.Invoke(instance, new object[] { rootloc, position, angle, bodyfacing, headfacing, rotDrawMode, renderFlags });
-            }
-        }
 
         static MethodInfo drawMeshNowOrLaterMI = typeof(GenDraw).GetMethod(
             nameof(GenDraw.DrawMeshNowOrLater),
@@ -100,8 +75,6 @@ namespace RimRound.Patch
 
 
         static MethodInfo drawHeadHairMI = typeof(PawnRenderer).GetMethod("DrawHeadHair", BindingFlags.NonPublic | BindingFlags.Instance);
-
-        static MethodInfo drawHeadHairAdjustedMI = typeof(PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth).GetMethod(nameof(DrawHeadHairAdjusted), BindingFlags.Static | BindingFlags.NonPublic);
 
         static FieldInfo pawnRendererPawnFI = typeof(PawnRenderer).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
 

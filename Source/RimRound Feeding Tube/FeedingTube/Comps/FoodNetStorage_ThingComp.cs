@@ -41,7 +41,7 @@ namespace RimRound.FeedingTube.Comps
             sb.AppendLine(base.CompInspectStringExtra());
 
             sb.Append("RR_FT_RemainingFoodStored".Translate() + ": ");
-            sb.Append(Stored.ToString("F1") + " / " + Capacity.ToString("F1") + " Liters");
+            sb.Append(Stored.ToString("F1") + "L" + " / " + Capacity.ToString("F1") + "L");
 
             return sb.ToString().Trim();
         }

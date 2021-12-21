@@ -75,7 +75,7 @@ namespace RimRound.FeedingTube
         {
             get 
             {
-                return "RR_FT_NetInfo".Translate(Stored, StorageCapacity);
+                return "RR_FT_NetInfo".Translate(Stored.ToString("F1"), StorageCapacity.ToString("F1"));
             }
         }
 
