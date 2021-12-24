@@ -27,3 +27,6 @@ RimRound is a mod for RimWorld aimed at adding weight gain and FA content to the
 
 In the coming weeks and months content will continue to be added. Now that the core of the mod is becoming more stable I can focus on content. Either way, thank you for checking out the mod! If you have any problems or would like to discuss features, feel free to join the RimRound discord:
 https://discord.com/invite/WJfcpF3Feu
+
+If you are unfamiliar with installing manual mods please follow the instructions here:
+https://rimworldwiki.com/wiki/Installing_mods
