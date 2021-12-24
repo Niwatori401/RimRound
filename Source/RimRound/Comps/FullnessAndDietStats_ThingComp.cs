@@ -11,6 +11,7 @@ using RimWorld;
 using Verse.AI;
 using RimRound.UI;
 using UnityEngine;
+using System.Reflection;
 
 namespace RimRound.Comps
 {
@@ -120,12 +121,14 @@ namespace RimRound.Comps
             }
         }
 
+        static MethodInfo HungerRateIgnoringMalnutritionMI = typeof(Need_Food).GetProperty("HungerRateIgnoringMalnutrition", BindingFlags.NonPublic | BindingFlags.Instance).GetGetMethod(true);
+
         public void PassiveWeightLossTick() 
         {
             Utilities.HediffUtility.AddHediffSeverity(
                 Defs.HediffDefOf.RimRound_Weight, 
                 ((Pawn)parent),
-                Utilities.HediffUtility.NutritionToSeverity(-1 * ((Pawn)parent).needs.food.FoodFallPerTick) * GlobalSettings.ticksPerHungerCheck.threshold);
+                Utilities.HediffUtility.NutritionToSeverity(-1 * 2.6666667E-05f * (float)(HungerRateIgnoringMalnutritionMI.Invoke(parent.AsPawn().needs.food, null)) * GlobalSettings.ticksPerHungerCheck.threshold));
         }
 
         public void ActiveWeightGainTick(float nutrition) 
@@ -284,6 +287,7 @@ namespace RimRound.Comps
 
         private DietMode dietMode = DietMode.Nutrition;
 
+        public DietMode preCaravanDietMode;
 
         public BodyTypeDef defaultBodyType;
 

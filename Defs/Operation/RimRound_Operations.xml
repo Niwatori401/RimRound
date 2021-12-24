@@ -1,49 +1,61 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  <RecipeDef Name="SurgeryInstallImplantBase" ParentName="SurgeryFlesh" Abstract="True">
-    <workerClass>Recipe_InstallImplant</workerClass>
-    <workAmount>2500</workAmount>
-    <skillRequirements>
-      <Medicine>5</Medicine>
-    </skillRequirements>
+  <RecipeDef Name="RR_LiposuctionBase" ParentName="SurgeryFlesh" Abstract="True">
     <recipeUsers>
       <li>Human</li>
     </recipeUsers>
-    <ingredients>
-      <li>
-        <filter><categories><li>Medicine</li></categories></filter>
-        <count>2</count>
-      </li>
-    </ingredients>
     <fixedIngredientFilter>
       <categories>
         <li>Medicine</li>
       </categories>
     </fixedIngredientFilter>
+	<targetsBodyPart>False</targetsBodyPart>
   </RecipeDef>
   
+  <!-- Liposuction -->
   
-  <RecipeDef Name="SurgeryRemoveImplantBase" ParentName="SurgeryFlesh" Abstract="True">
-    <workerClass>Recipe_RemoveImplant</workerClass>
-    <workAmount>2500</workAmount>
-    <isViolation>true</isViolation>
+  <RecipeDef ParentName="RR_LiposuctionBase">
+    <defName>RR_LightLiposuction</defName>
+    <label>Liposuction (light)</label>
+    <description>Perform fat reduction surgery on this pawn. Removes approximately 20% of the patients fat.</description>
+	<workAmount>2500</workAmount>
+	<workerClass>RimRound.AI.Recipe_RemoveFatLight</workerClass>
+    <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+	
     <skillRequirements>
-      <Medicine>5</Medicine>
+      <Medicine>7</Medicine>
     </skillRequirements>
-    <recipeUsers>
-      <li>Human</li>
-    </recipeUsers>
+	
+    <jobString>Removing fat.</jobString>
     <ingredients>
       <li>
         <filter><categories><li>Medicine</li></categories></filter>
-        <count>1</count>
+        <count>4</count>
       </li>
     </ingredients>
-    <fixedIngredientFilter>
-      <categories>
-        <li>Medicine</li>
-      </categories>
-    </fixedIngredientFilter>
   </RecipeDef>
+  
+  <RecipeDef ParentName="RR_LiposuctionBase">
+    <defName>RR_HeavyLiposuction</defName>
+    <label>Liposuction (heavy)</label>
+    <description>Perform a significant fat reduction surgery on this pawn. Removes approximately 40% of the patients fat.</description>
+	<workAmount>3000</workAmount>
+	<workerClass>RimRound.AI.Recipe_RemoveFatHeavy</workerClass>
+    <surgerySuccessChanceFactor>0.7</surgerySuccessChanceFactor>
+
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+
+
+    <jobString>Removing fat.</jobString>
+    <ingredients>
+      <li>
+        <filter><categories><li>Medicine</li></categories></filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
 </Defs>

@@ -33,7 +33,7 @@ namespace RimRound.Utilities
         }
 
 
-        public static float? Weight(this Pawn pawn)
+        public static float Weight(this Pawn pawn)
         {
             if (GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, pawn) is Hediff weight)
             {
@@ -41,7 +41,7 @@ namespace RimRound.Utilities
             }
             else
             {
-                return null;
+                return 0;
             }
         }
 
@@ -79,7 +79,7 @@ namespace RimRound.Utilities
             if (pawn is null || def is null)
                 return null;
 
-            return pawn?.health?.hediffSet?.hediffs?.Find(x => x.def == def) ?? null;
+            return pawn?.health?.hediffSet?.hediffs?.Find(x => x.def.defName == def.defName) ?? null;
         }
 
         public static void AddHediffSeverity(HediffDef def, Pawn pawn, float amount, bool addIfHediffNull = false)
@@ -104,7 +104,7 @@ namespace RimRound.Utilities
 
 
 
-            if (h.def == Defs.HediffDefOf.RimRound_Weight)
+            if (h.def.defName == Defs.HediffDefOf.RimRound_Weight.defName)
             {
                 if (amount > 0)
                 {

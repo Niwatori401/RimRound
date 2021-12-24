@@ -16,7 +16,25 @@ namespace RimRound.Comps
         {
         }
 
-        public void SaveAllSettings() 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            SaveAllSettings();
+            //SaveCaravanPatchUtility();
+        }
+
+        public void SaveCaravanPatchUtility() 
+        {
+            List<int> list1 = new List<int>();
+            List<List<Pawn>> list2 = new List<List<Pawn>>();
+
+            Scribe_Collections.Look(ref CaravanPatchUtility.activeCaravans, "activeCaravans", LookMode.Value, LookMode.Reference, ref list1, ref list2);
+
+            if (CaravanPatchUtility.activeCaravans is null)
+                CaravanPatchUtility.activeCaravans = new Dictionary<int, List<Pawn>>();
+        }
+
+        public void SaveAllSettings()
         {
             IEnumerable<FieldInfo> fieldInfos = typeof(GlobalSettings).GetRuntimeFields();
 
@@ -26,10 +44,10 @@ namespace RimRound.Comps
                 {
                     ExposeField<bool>(f);
                 }
-                else if (f.FieldType == typeof(NumericFieldData<float>)) 
+                else if (f.FieldType == typeof(NumericFieldData<float>))
                 {
                     ExposeNumericFieldData<float>(f);
-                } 
+                }
                 else if (f.FieldType == typeof(NumericFieldData<int>))
                 {
                     ExposeNumericFieldData<int>(f);
@@ -37,7 +55,7 @@ namespace RimRound.Comps
             }
         }
 
-        private static void ExposeNumericFieldData<T>(FieldInfo f) 
+        private static void ExposeNumericFieldData<T>(FieldInfo f)
         {
             if (Scribe.mode == LoadSaveMode.Saving)
             {
@@ -83,10 +101,5 @@ namespace RimRound.Comps
             }
         }
 
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            SaveAllSettings();
-        }
     }
 }
