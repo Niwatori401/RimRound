@@ -92,8 +92,10 @@
     <Compile Include="Patch\RimWorldPatches\Dialog-Options_DoWindowContents_ShowDropdownToChangeBGAlways.cs" />
     <Compile Include="Patch\RimWorldPatches\Need-Food_MalnutritionSeverityPerInterval_AdjustByPawnWeight.cs" />
     <Compile Include="Patch\RimWorldPatches\Page-ConfigureStartingPawns_DrawPortraitArea_UpdateSprite.cs" />
+    <Compile Include="Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
     <Compile Include="Utilities\BodyTypeUtility.cs" />
     <Compile Include="Utilities\HediffUtility.cs" />
+    <Compile Include="Utilities\ModCompatibilityUtility.cs" />
     <Compile Include="Utilities\WeightOpinionUtility.cs" />
     <None Include="Garbage\Building_FeedingTube.cs" />
     <Compile Include="AI\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />

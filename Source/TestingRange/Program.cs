@@ -12,39 +12,21 @@ namespace TestingRange
 
         static void Main(string[] args)
         {
-
-            Console.WriteLine();
-            Console.WriteLine((1 / (0.050 + 1)));
-            Console.WriteLine((1 / (0.100 + 1)));
-            Console.WriteLine((1 / (0.500 + 1)));
-            Console.WriteLine((1 / (1.400 + 1)));
-
-
-
+            string[] patchTemplates = new string[] 
+            {
+                "RimRound_AdjustAlignWithHeadTag.xml",
+                "RimRound_AddComps.xml",
+                "RimRound_AlignBodyPart.xml",
+                "RimRound_RemoveBodySpecificOffsets.xml"
+            };
 
 
+            string templateFilePath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\RimRound_RemoveBodySpecificOffsets.xml~";
+            string destinationFilePath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\RimRound_RemoveBodySpecificOffsets.xml";
+            string csvFilePath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Source\Stats4.csv";
+            int flairArgs = 2;
 
-            //string commaDelimetedKeyvaluePairsPath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Source\Beer.txt";
-            //string[] stringParts = File.ReadAllText(commaDelimetedKeyvaluePairsPath).Split(new string[] { ",", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
-
-            //List<string> defNames = new List<string>();
-            //List<string> defValues = new List<string>();
-
-            //for (int i = 0; i < stringParts.Length; ++i) 
-            //{
-            //    if (i % 2 == 0)
-            //        defNames.Add(stringParts[i]);
-            //    else
-            //        defValues.Add(stringParts[i]);
-            //}
-
-            //for (int j = 0; j < defNames.Count; ++j) 
-            //{
-            //    string[] replacements = new string[] { defNames[j], defValues[j] };
-            //    string TemplateFilepath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Source\Test.xml";
-            //    string DestinationFilepath = $@"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Source\{defNames[j]}_NutritionDensityPatch.xml";
-            //    PatchMaker.MakeSpecificPatch(TemplateFilepath, DestinationFilepath, new string[] { "DEF_REPLACE", "VALUE_REPLACE" }, replacements);
-            //}
+            PatchMaker.MakePatchWithCSV(templateFilePath, destinationFilePath, csvFilePath, flairArgs);
         }
     }
 }

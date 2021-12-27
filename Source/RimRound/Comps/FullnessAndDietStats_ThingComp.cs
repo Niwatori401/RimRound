@@ -257,18 +257,15 @@ namespace RimRound.Comps
             get
             {
                 return (
-                    (((Pawn)parent)?.needs?.food.CurCategory == RimWorld.HungerCategory.Starving ? 
-                    ((Pawn)parent)?.needs?.food.FoodFallPerTickAssumingCategory(RimWorld.HungerCategory.Hungry, false) : 
-                    ((Pawn)parent)?.needs?.food?.FoodFallPerTick) * 
+                    (2.6666667E-05f * (float)(HungerRateIgnoringMalnutritionMI.Invoke(parent.AsPawn().needs.food, null))) * 
                     GlobalSettings.digestionRateMultiplier.threshold *
                     personalDigestionRateMult * 
                     digestionRateBonusMult * 
                     baseDigestionRate) + 
                     personalDigestionRateFlat + 
-                    digestionRateBonusFlat ?? 999f;
+                    digestionRateBonusFlat;
             }
         }
-
 
 
         public DietMode DietMode

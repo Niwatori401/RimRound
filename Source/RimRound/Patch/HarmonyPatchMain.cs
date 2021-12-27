@@ -10,7 +10,8 @@ using RimWorld;
 using HarmonyLib;
 
 using UnityEngine;
-
+using System.Reflection;
+using RimRound.Utilities;
 
 namespace RimRound.Patch
 {
@@ -22,10 +23,41 @@ namespace RimRound.Patch
 			var harmony = new Harmony("RRHarmony");
 			harmony.PatchAll();
 
+			if (Utilities.ModCompatibilityUtility.GetMethodInfo("NotReal", "a", "AlsoNotReal") is MethodInfo methodInfo) 
+			{
+				harmony.Patch(methodInfo);
+			}
+
+			ModCompatibilityUtility.TryPatch(
+				harmony, 
+				new ModPatchInfo 
+				(
+					"RimJobWorld - Milkable Colonists",
+					"CompMilkableHuman",
+					"ResourceAmount", 
+					MethodType.Getter
+				), 
+				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
+
+			ModCompatibilityUtility.TryPatch(
+				harmony,
+				new ModPatchInfo
+				(
+					"RimJobWorld - Milkable Colonists",
+					"CompHyperMilkableHuman",
+					"ResourceAmount",
+					MethodType.Getter
+				),
+				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
+
+
 			int patchedMethodsCount = 0;
 			int postfixesCount = 0;
 			int prefixesCount = 0;
 			int transpilersCount = 0;
+
+			
+
 
 			foreach (var x in harmony.GetPatchedMethods())
 			{

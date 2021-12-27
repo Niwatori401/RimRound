@@ -126,7 +126,7 @@ namespace RimRound.Utilities
                 }
 
 
-                ThrowValueText(pawn, amount, 1, 0.5f);
+                ThrowValueText(pawn, amount, 1, 0.0005f);
 
 
                 if (GetWeightChangedMessage(pawn, cachedSeverity, h.Severity) is Message m)
@@ -149,7 +149,7 @@ namespace RimRound.Utilities
             h.Severity = amount;
         }
 
-        public static void ThrowValueText(Pawn pawn, float value, int precision = 1, float minimumDisplayMagnitude = 0.1f)
+        public static void ThrowValueText(Pawn pawn, float value, int precision = 1, float minimumDisplayMagnitude = 0.01f)
         {
             Vector3 position = pawn.Position.ToVector3();
             Map map = pawn.MapHeld;
@@ -157,7 +157,7 @@ namespace RimRound.Utilities
             if (Mathf.Abs(value) < minimumDisplayMagnitude)
                 return;
 
-            MoteMaker.ThrowText(position, map, value.ToString($"F{(precision <= 9 && precision >= 0 ? precision : 0)}"));
+            MoteMaker.ThrowText(position, map, (value < 0 ? "-" : "+") + SeverityToKilosWithoutBaseWeight(value).ToString($"F{(precision <= 9 && precision >= 0 ? precision : 0)}" + "Kgs"));
         }
 
         private static Message GetWeightChangedMessage(Pawn pawn, float cachedSeverity, float currentSeverity)

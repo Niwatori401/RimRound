@@ -103,9 +103,13 @@ namespace RimRound.Utilities
 
         static Dictionary<string, Dictionary<BodyTypeDef, BodyTypeInfo>> raceToProperDictDictionary = new Dictionary<string, Dictionary<BodyTypeDef, BodyTypeInfo>>()
         {
-            { "Alien_Drow_Otto", defaultSet },
-            { "Human",           defaultSet },
-            { "Ratkin",          ratkinSet  }
+            { "Alien_Drow_Otto",    defaultSet }, //100%
+            { "Anthro",             defaultSet }, //100%
+            { "ESCP_AltmerRace",    defaultSet },
+            { "ESCP_AshlanderRace", defaultSet },
+            { "ESCP_DunmerRace",    defaultSet },
+            { "Human",              defaultSet }, //100%
+            { "Ratkin",             ratkinSet  }  //Partial
 
         };
 

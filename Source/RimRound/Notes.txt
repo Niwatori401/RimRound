@@ -72,3 +72,21 @@
 
 		DaysWorthOfFood
 		Caravan_NeedsTracker
+
+
+if (Utilities.ModCompatibilityUtility.GetPropertyInfo("RimJobWorld - Milkable Colonists", "CompMilkableHuman", "ResourceAmount") is PropertyInfo propInfo)
+{
+	new PatchCollection
+	 propInfo.GetGetMethod(true); 
+}
+
+ModPatchInfo
+{
+	ModName
+	TypeName
+	MethodName
+	MethodType
+}
+
+TryPatch(Harmony harmonyinstance, ModPatchInfo, PatchCollection);
+

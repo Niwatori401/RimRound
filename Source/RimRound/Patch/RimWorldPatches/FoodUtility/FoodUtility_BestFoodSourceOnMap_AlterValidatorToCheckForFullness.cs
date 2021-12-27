@@ -51,14 +51,32 @@ namespace RimRound.Patch
 
             return codeInstructions.AsEnumerable();
         }
+        
+        static bool FeedingTubeModInstalled() 
+        {
+            try
+            {
+                Activator.CreateInstance("RimRound Feeding Tube", "Building_FoodFaucet");
+                return true;
+            }
+            catch (Exception) 
+            {
+                return false;
+            }
+        }
 
         public static Predicate<Thing> Zigma(Predicate<Thing> ogPredicate, Pawn eater)//, Pawn eater, ThingDef foodDef)
         {
             Predicate<Thing> dogma = delegate (Thing t)
             {
-                if (eater is null || t is null || !(eater.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp) || fullnessComp is null)
+                //Type a = typeof(t);
+                if (eater is null || !eater.RaceProps.Humanlike || t is null || !(eater.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp) || fullnessComp is null)
                 {
-                    return ogPredicate(t);
+                    if (!eater.RaceProps.Humanlike && t != null)
+                    {
+                        return ogPredicate(t) && !t.Label.Contains("FeedingTube");
+                    }
+                     return ogPredicate(t);
                 }
 
                 float ftnRatio = FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio;

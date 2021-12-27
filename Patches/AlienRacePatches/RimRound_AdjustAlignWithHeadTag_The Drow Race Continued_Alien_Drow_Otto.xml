@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Drow Race Continued</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>True</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+				<value>
+					<alignWithHead>True</alignWithHead>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+</Patch>
+				
