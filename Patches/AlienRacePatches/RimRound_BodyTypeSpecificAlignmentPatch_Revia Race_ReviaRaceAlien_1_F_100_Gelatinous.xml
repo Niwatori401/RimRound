@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Revia Race</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_100_Gelatinous</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_100_Gelatinous</xpath>
+							<value>
+								<F_100_Gelatinous>(-0.07,0.1)</F_100_Gelatinous>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<value>
+								<F_100_Gelatinous>(-0.07,0.1)</F_100_Gelatinous>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<value>
+							<bodyTypes>
+								<F_100_Gelatinous>(-0.07,0.1)</F_100_Gelatinous>
+							</bodyTypes>
+						</value>					
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_100_Gelatinous</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_100_Gelatinous</xpath>
+							<value>
+								<F_100_Gelatinous>(1.51,0.2)</F_100_Gelatinous>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+							<value>
+								<F_100_Gelatinous>(1.51,0.2)</F_100_Gelatinous>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+						<value>
+							<bodyTypes>
+								<F_100_Gelatinous>(1.51,0.2)</F_100_Gelatinous>
+							</bodyTypes>
+						</value>					
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_100_Gelatinous</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_100_Gelatinous</xpath>
+							<value>
+								<F_100_Gelatinous>(-0.05,-1.12)</F_100_Gelatinous>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+							<value>
+								<F_100_Gelatinous>(-0.05,-1.12)</F_100_Gelatinous>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+						<value>
+							<bodyTypes>
+								<F_100_Gelatinous>(-0.05,-1.12)</F_100_Gelatinous>
+							</bodyTypes>
+						</value>					
+					</nomatch>
+				</li>		
+			</operations>				
+		</match>
+	</Operation>
+</Patch>

@@ -29,8 +29,12 @@ namespace RimRound.Patch.RimWorldPatches
                     garbageFMO.Label = "ConsumeThing".Translate(t.LabelShort, t);
                     if (fmo.Label.Contains(garbageFMO.Label))
                     {
+                        float fullnessToNutritionRatio = 
+                            t.TryGetComp<ThingComp_FoodItems_NutritionDensity>()?.Props?.fullnessToNutritionRatio ?? 
+                            FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio;
+
                         if (__1.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp FnDStatsComp && 
-                            t.def.ingestible.CachedNutrition * FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio >= FnDStatsComp.RemainingFullnessUntil(FnDStatsComp.HardLimit)) 
+                            t.def.ingestible.CachedNutrition * fullnessToNutritionRatio >= FnDStatsComp.RemainingFullnessUntil(FnDStatsComp.HardLimit)) 
                         {
                             if (!FnDStatsComp.fullnessbar.peaceForeverHeld) 
                             {

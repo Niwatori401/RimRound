@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimRound.Comps;
 using RimRound.Utilities;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +28,13 @@ namespace RimRound.Patch
                 comp.defaultBodyType = pawn.story.bodyType;
                 Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, pawn);
                 Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, pawn);
-                Utilities.HediffUtility.SetHediffSeverity(Defs.HediffDefOf.RimRound_Weight, pawn, Utilities.HediffUtility.KilosToSeverity(GetRandomStartingWeight() * 1000));
-                //Utilities.BodyTypeUtility.UpdatePawnSprite(pawn);
+                Utilities.HediffUtility.SetHediffSeverity(
+                    Defs.HediffDefOf.RimRound_Weight, 
+                    pawn, 
+                    Utilities.HediffUtility.KilosToSeverity(
+                        GetRandomStartingWeight(GetWeightPercentileByFaction(pawn)) * 1000)
+                    );
+
             }
         }
 
@@ -40,7 +46,9 @@ namespace RimRound.Patch
             }
         }
 
-        static List<Pair<float, float>> weightDistributionRanges = new List<Pair<float, float>>()
+
+        //Percentiles/Weight
+        static List<Pair<float, float>> playerFactionWeightDistribution = new List<Pair<float, float>>()
         {
             new Pair<float, float>(0.19301f, 0.040f),
             new Pair<float, float>(0.45035f, 0.045f),
@@ -64,33 +72,110 @@ namespace RimRound.Patch
             new Pair<float, float>(1.00000f, 1.450f)
         };
 
-        static float GetRandomStartingWeight() 
+        static List<Pair<float, float>> hostileFactionWeightDistribution = new List<Pair<float, float>>()
+        {
+            new Pair<float, float>(0.19737f, 0.040f),
+            new Pair<float, float>(0.46053f, 0.045f),
+            new Pair<float, float>(0.72368f, 0.055f),
+            new Pair<float, float>(0.85526f, 0.075f),
+            new Pair<float, float>(0.92105f, 0.090f),
+            new Pair<float, float>(0.96053f, 0.105f),
+            new Pair<float, float>(0.98684f, 0.130f),
+            new Pair<float, float>(1.00000f, 0.160f),
+            new Pair<float, float>(1.00000f, 0.195f),
+            new Pair<float, float>(1.00000f, 0.240f),
+            new Pair<float, float>(1.00000f, 0.270f),
+            new Pair<float, float>(1.00000f, 0.320f),
+            new Pair<float, float>(1.00000f, 0.390f),
+            new Pair<float, float>(1.00000f, 0.470f),
+            new Pair<float, float>(1.00000f, 0.575f),
+            new Pair<float, float>(1.00000f, 0.700f),
+            new Pair<float, float>(1.00000f, 0.840f),
+            new Pair<float, float>(1.00000f, 1.005f),
+            new Pair<float, float>(1.00000f, 1.200f),
+            new Pair<float, float>(1.00000f, 1.450f)
+        };
+
+        static List<Pair<float, float>> friendlyFactionWeightPercentiles = new List<Pair<float, float>>()
+        {
+            new Pair<float, float>(0.20979f, 0.040f),
+            new Pair<float, float>(0.48951f, 0.045f),
+            new Pair<float, float>(0.76923f, 0.055f),
+            new Pair<float, float>(0.90909f, 0.075f),
+            new Pair<float, float>(0.97902f, 0.090f),
+            new Pair<float, float>(1.00000f, 0.105f),
+            new Pair<float, float>(1.00000f, 0.130f),
+            new Pair<float, float>(1.00000f, 0.160f),
+            new Pair<float, float>(1.00000f, 0.195f),
+            new Pair<float, float>(1.00000f, 0.240f),
+            new Pair<float, float>(1.00000f, 0.270f),
+            new Pair<float, float>(1.00000f, 0.320f),
+            new Pair<float, float>(1.00000f, 0.390f),
+            new Pair<float, float>(1.00000f, 0.470f),
+            new Pair<float, float>(1.00000f, 0.575f),
+            new Pair<float, float>(1.00000f, 0.700f),
+            new Pair<float, float>(1.00000f, 0.840f),
+            new Pair<float, float>(1.00000f, 1.005f),
+            new Pair<float, float>(1.00000f, 1.200f),
+            new Pair<float, float>(1.00000f, 1.450f)
+        };
+
+        static float GetRandomStartingWeight(List<Pair<float, float>> weightPercentiles) 
         {
             float random = Values.RandomFloat(0, 1);
 
-            for (int i = 0; i < weightDistributionRanges.Count; ++i)
+            for (int i = 0; i < weightPercentiles.Count; ++i)
             {
-                Pair<float, float> currentPair = weightDistributionRanges[i];
+                Pair<float, float> currentPair = weightPercentiles[i];
                 if (random <= currentPair.First)
                 {
                     if (i > 0)
                     {
-                        Pair<float, float> previousPair = weightDistributionRanges[i - 1];
+                        Pair<float, float> previousPair = weightPercentiles[i - 1];
                         return Values.RandomFloat(previousPair.Second, currentPair.Second);
                     }
                     else
                     {
-                        Pair<float, float> nextPair = weightDistributionRanges[i + 1];
+                        Pair<float, float> nextPair = weightPercentiles[i + 1];
                         return Values.RandomFloat(currentPair.Second, nextPair.Second);
                     }
                 }
 
             }
 
-            return weightDistributionRanges.First().First;
+            return weightPercentiles.First().First;
 
 
             
+        }
+
+
+        static List<Pair<float, float>> GetWeightPercentileByFaction(Pawn p) 
+        {
+            if (p?.Faction is null)
+            {
+                Log.Error($"Pawn or faction was null in weight percentile assignment!");
+                return playerFactionWeightDistribution;
+            }    
+
+            if (p.Faction.IsPlayer)
+            {
+                return playerFactionWeightDistribution;
+            }
+            else if (p.Faction.AllyOrNeutralTo(Find.FactionManager.OfPlayer))
+            {
+                return friendlyFactionWeightPercentiles;
+            }
+            else if (p.Faction.HostileTo(Find.FactionManager.OfPlayer))
+            {
+                return hostileFactionWeightDistribution;
+            }
+            else 
+            {
+                Log.Warning($"Failed to get faction specific weight percentiles for {p.Name} of Faction {p.Faction}!");
+                return playerFactionWeightDistribution;
+            }
+
         }
     }
 }

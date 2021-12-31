@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Verse;
 
 using strig = System.String;
 
@@ -12,21 +13,31 @@ namespace TestingRange
 
         static void Main(string[] args)
         {
-            string[] patchTemplates = new string[] 
+
+            // TemplateName, CSV Name, flair args
+            List<Pair<Pair<String, String>, int>> patchSets = new List<Pair<Pair<strig, String>, int>>()
             {
-                "RimRound_AdjustAlignWithHeadTag.xml",
-                "RimRound_AddComps.xml",
-                "RimRound_AlignBodyPart.xml",
-                "RimRound_RemoveBodySpecificOffsets.xml"
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AdjustAlignWithHeadTag",         "alignWithHeadPatches"),               3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AddComps",                       "compsPatches"        ),               2 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AlignBodyPart",                  "bodyPartAlignmentPatches"),           3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveBodySpecificOffsets",      "removeBodySpecificOffsetsPatches"),   3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_BodyTypeSpecificAlignmentPatch", "bodyTypeSpecificAlignmentPatch"),     4 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveGeneralOffset", "removeGeneralOffsetPatch"),                      3 )
+            
             };
 
+            foreach (var x in patchSets) 
+            {
+                string templateFilePath =    @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.First.First}.xml~";
+                string destinationFilePath = @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\{x.First.First}.xml";
+                string csvFilePath =         @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.First.Second}.csv";
+                int flairArgs = x.Second;
 
-            string templateFilePath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\RimRound_RemoveBodySpecificOffsets.xml~";
-            string destinationFilePath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\RimRound_RemoveBodySpecificOffsets.xml";
-            string csvFilePath = @"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Source\Stats4.csv";
-            int flairArgs = 2;
+                PatchMaker.MakePatchWithCSV(templateFilePath, destinationFilePath, csvFilePath, flairArgs);
+            }
 
-            PatchMaker.MakePatchWithCSV(templateFilePath, destinationFilePath, csvFilePath, flairArgs);
+
+            
         }
     }
 }

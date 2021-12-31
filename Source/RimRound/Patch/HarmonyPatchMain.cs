@@ -27,8 +27,8 @@ namespace RimRound.Patch
 			{
 				harmony.Patch(methodInfo);
 			}
-
-			ModCompatibilityUtility.TryPatch(
+            #region ignore this, its for something else
+            ModCompatibilityUtility.TryPatch(
 				harmony, 
 				new ModPatchInfo 
 				(
@@ -72,6 +72,8 @@ namespace RimRound.Patch
 				transpilersCount += transpilers.Count();
 			}
 			Log.Message($"RimRound successfully added {prefixesCount} prefixes, {postfixesCount} postfixes, and {transpilersCount} transpilers to {patchedMethodsCount} methods with Harmony!");
-		}
-	}
+            #endregion
+        }
+
+    }
 }

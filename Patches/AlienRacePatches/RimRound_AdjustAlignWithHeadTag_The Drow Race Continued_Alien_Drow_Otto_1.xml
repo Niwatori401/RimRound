@@ -10,13 +10,13 @@
 			<match Class="PatchOperationReplace">
 				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
 				<value>
-					<alignWithHead>True</alignWithHead>
+					<alignWithHead>TRUE</alignWithHead>
 				</value>
 			</match>
 			<nomatch Class="PatchOperationAdd">
 				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
 				<value>
-					<alignWithHead>True</alignWithHead>
+					<alignWithHead>TRUE</alignWithHead>
 				</value>
 			</nomatch>
 		</match>

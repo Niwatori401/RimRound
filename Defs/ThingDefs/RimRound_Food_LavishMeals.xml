@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--Lavish Meal Derivatives-->
+  <ThingDef Name="RR_LavishMealBase" ParentName="MealLavishBase" Abstract="True">
+    <defName>RR_LavishMealBase</defName>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RR_LavishMealBaseVEG" Abstract ="True" ParentName="MealLavishBase">
+    <defName>RR_LavishMealBaseVEG</defName>
+    <graphicData>
+      <texPath>Things/Item/Meal/FineVeg</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RR_LavishMealBaseMEAT" ParentName="MealLavishBase" Abstract="True">
+    <defName>RR_LavishMealBaseMEAT</defName>
+    <label>meat-based lavish meal</label>
+    <graphicData>
+      <texPath>Things/Item/Meal/LavishMeat</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!--**************************************-->
+  <!--**************************************-->
+  
+  <ThingDef ParentName="RR_LavishMealBase">
+    <defName>MealLavishLarge</defName>
+    <label>large lavish meal</label>
+	<statBases>
+      <MarketValue>50</MarketValue>
+      <WorkToMake>1000</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBase">
+    <defName>MealLavishHuge</defName>
+    <label>huge lavish meal</label>
+	<statBases>
+      <MarketValue>70</MarketValue>
+      <WorkToMake>1400</WorkToMake>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBase">
+    <defName>MealLavishEnormous</defName>
+    <label>enormous lavish meal</label>
+	<statBases>
+      <MarketValue>100</MarketValue>
+      <WorkToMake>2000</WorkToMake>
+      <Nutrition>4.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBase">
+    <defName>MealLavishMassive</defName>
+    <label>massive lavish meal</label>
+	<statBases>
+      <MarketValue>140</MarketValue>
+      <WorkToMake>2800</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <!--**************************************-->
+  <!--**************************************-->
+  
+  <ThingDef ParentName="RR_LavishMealBaseVEG">
+    <defName>MealLavishLargeNonMeat</defName>
+    <label>vegetarian large vegetarian lavish meal</label>
+	<statBases>
+      <MarketValue>50</MarketValue>
+      <WorkToMake>1000</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBaseVEG">
+    <defName>MealLavishHugeNonMeat</defName>
+    <label>vegetarian huge lavish meal</label>
+	<statBases>
+      <MarketValue>70</MarketValue>
+      <WorkToMake>1400</WorkToMake>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBaseVEG">
+    <defName>MealLavishEnormousNonMeat</defName>
+    <label>vegetarian enormous lavish meal</label>
+	<statBases>
+      <MarketValue>100</MarketValue>
+      <WorkToMake>2000</WorkToMake>
+      <Nutrition>4.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBaseVEG">
+    <defName>MealLavishMassiveNonMeat</defName>
+    <label>vegetarian massive lavish meal</label>
+	<statBases>
+      <MarketValue>140</MarketValue>
+      <WorkToMake>2800</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>
+
+  <!--**************************************-->
+  <!--**************************************-->
+  
+  <ThingDef ParentName="RR_LavishMealBaseMEAT">
+    <defName>MealLavishLargeMeat</defName>
+    <label>meat-based large lavish meal</label>
+	<statBases>
+      <MarketValue>50</MarketValue>
+      <WorkToMake>1000</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBaseMEAT">
+    <defName>MealLavishHugeMeat</defName>
+    <label>meat-based huge lavish meal</label>
+	<statBases>
+      <MarketValue>70</MarketValue>
+      <WorkToMake>1400</WorkToMake>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBaseMEAT">
+    <defName>MealLavishEnormousMeat</defName>
+    <label>meat-based enormous lavish meal</label>
+	<statBases>
+      <MarketValue>100</MarketValue>
+      <WorkToMake>2000</WorkToMake>
+      <Nutrition>4.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBaseMEAT">
+    <defName>MealLavishMassiveMeat</defName>
+    <label>meat-based massive lavish meal</label>
+	<statBases>
+      <MarketValue>140</MarketValue>
+      <WorkToMake>2800</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>
+ </Defs>

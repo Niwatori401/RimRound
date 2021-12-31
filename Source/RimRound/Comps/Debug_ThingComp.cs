@@ -18,41 +18,41 @@ namespace RimRound.Comps
         {
             if (Prefs.DevMode)
             {
-                yield return new Command_Action
-                {
-                    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT)",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
-                    action = delegate ()
-                    {
-                        Values.debugPos += positivity * (offsetAmounts[offsetAmountsIndex]);
-                        Log.Message($"Debug Float is now: {Values.debugPos}");
-                        BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
-                    }
-                };
+                //yield return new Command_Action
+                //{
+                //    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT)",
+                //    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                //    action = delegate ()
+                //    {
+                //        Values.debugPos += positivity * (offsetAmounts[offsetAmountsIndex]);
+                //        Log.Message($"Debug Float is now: {Values.debugPos}");
+                //        BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
+                //    }
+                //};
 
-                yield return new Command_Action
-                {
-                    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to paramFloat)",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
-                    action = delegate ()
-                    {
-                        zoom += positivity * (offsetAmounts[offsetAmountsIndex]);
-                    }
-                };
+                //yield return new Command_Action
+                //{
+                //    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to paramFloat)",
+                //    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                //    action = delegate ()
+                //    {
+                //        zoom += positivity * (offsetAmounts[offsetAmountsIndex]);
+                //    }
+                //};
 
-                yield return new Command_Action
-                {
-                    defaultLabel = "Reset vals",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
-                    action = delegate ()
-                    {
-                        Log.Message($"zoom: {zoom}");
-                        Log.Message($"position: {Values.debugPos}");
-                        zoom = 1.28205f;
-                        Values.debugPos = 0.300f;
+                //yield return new Command_Action
+                //{
+                //    defaultLabel = "Reset vals",
+                //    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                //    action = delegate ()
+                //    {
+                //        Log.Message($"zoom: {zoom}");
+                //        Log.Message($"position: {Values.debugPos}");
+                //        zoom = 1.28205f;
+                //        Values.debugPos = 0.300f;
                         
-                    }
-                };
+                //    }
+                //};
 
                 yield return new Command_Action
                 {

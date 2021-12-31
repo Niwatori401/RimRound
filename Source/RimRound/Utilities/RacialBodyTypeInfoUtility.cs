@@ -109,7 +109,8 @@ namespace RimRound.Utilities
             { "ESCP_AshlanderRace", defaultSet },
             { "ESCP_DunmerRace",    defaultSet },
             { "Human",              defaultSet }, //100%
-            { "Ratkin",             ratkinSet  }  //Partial
+            { "Ratkin",             ratkinSet  }, //Partial
+            { "ReviaRaceAlien",     defaultSet }  //100%
 
         };
 

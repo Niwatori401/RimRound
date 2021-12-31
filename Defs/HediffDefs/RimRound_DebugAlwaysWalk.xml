@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--Stuffing Hediff-->
+<Defs>
+	<HediffDef>
+		<defName>RimRound_AlwaysMobile</defName>
+		<label>BlobBed</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>h</labelNoun>
+		<description>tee hee</description>	
+	
+	
+	
+	
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<comps>
+		</comps>
+		
+		<isBad>false</isBad>
+	
+	
+		<stages>
+			<!--Stage 1-->
+			<li>
+				<minSeverity>1.0</minSeverity>
+				<label>good beds MOVE AAAAAAAAA</label>
+				<lifeThreatening>false</lifeThreatening>
+				<becomeVisible>false</becomeVisible>
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<offset>100000</offset>
+					</li>							
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
