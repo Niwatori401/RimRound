@@ -84,6 +84,9 @@
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Neutral.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
+    <Compile Include="Defs\ExtraProductPlantYield.cs" />
+    <Compile Include="Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
+    <Compile Include="Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
     <Compile Include="Patch\RimWorldPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawns.cs" />
     <Compile Include="Patch\RimWorldPatches\Caravan\CaravanPatchUtility.cs" />
     <Compile Include="Patch\RimWorldPatches\Caravan\CaravanMaker_MakeCaravan_ChangeDietMode.cs" />

@@ -16,7 +16,7 @@
 		<comps>
 		<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
             <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-            <fullnessToNutritionRatio>.05</fullnessToNutritionRatio>
+            <fullnessToNutritionRatio>.03</fullnessToNutritionRatio>
           </li>
 		</comps>
 	</ThingDef>

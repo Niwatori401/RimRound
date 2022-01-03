@@ -2,3 +2,9 @@ MOD_NAME,DEF_NAME,ITEM_INDEX,OFFSET_SOUTH_X,OFFSET_SOUTH_Y,OFFSET_EAST_X,OFFSET_
 The Drow Race Continued,Alien_Drow_Otto,1,0,0.02,0,0.02,0,0.02
 Revia Race,ReviaRaceAlien,2,-0.055,0,0.14,0,0.01,0
 Revia Race,ReviaRaceAlien,3,0.045,0,0.14,0,-0.01,0
+NewRatkinPlus,Ratkin,2,-0.04,0.16,0.06,0.27,0.04,0.16
+NewRatkinPlus,Ratkin,3,0.04,0.16,0.06,0.27,-0.03,0.16
+Orassans,Alien_OrassanHumanHybrid,2,-0.057,-0.305,0.0295,-0.215,0.05,-0.125
+Orassans,Alien_OrassanHumanHybrid,3,0.0495,-0.305,0.0358,-0.216,-0.0445,-0.145
+Orassans,Alien_Orassan,2,-0.0385,-0.335,0.08,-0.25,0.045,-0.155
+Orassans,Alien_Orassan,3,0.0365,-0.325,0.08,-0.25,-0.055,-0.155

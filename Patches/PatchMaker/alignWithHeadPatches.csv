@@ -2,3 +2,5 @@ MOD_NAME,DEF_NAME,ITEM_INDEX,TRUTH_VALUE
 The Drow Race Continued,Alien_Drow_Otto,1,TRUE
 Revia Race,ReviaRaceAlien,2,TRUE
 Revia Race,ReviaRaceAlien,3,TRUE
+NewRatkinPlus,Ratkin,2,TRUE
+NewRatkinPlus,Ratkin,3,TRUE

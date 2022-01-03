@@ -79,6 +79,51 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    new BodyTypeInfo(100f  , 7.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) }
             };
 
+
+        static Dictionary<BodyTypeDef, BodyTypeInfo> set090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+            {
+                { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Male,                            new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Female,                          new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+
+                { RimWorld.BodyTypeDefOf.Thin,                            new BodyTypeInfo(0.015f, 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_005_Thick_090,            new BodyTypeInfo(0.050f, 0.6875f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_006_Chonky_090,           new BodyTypeInfo(0.065f, 0.9375f, 0.90f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_010_Chubby_090,           new BodyTypeInfo(0.090f, 0.9375f, 0.80f, 1.28205f, 0.30f, 0.35f) },
+                { RimRound.Defs.BodyTypeDefOf.F_020_Corpulent_090,        new BodyTypeInfo(0.120f, 0.9375f, 0.65f, 0.98205f, 0.40f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_030_Fat_090,              new BodyTypeInfo(0.155f, 1.000f, 0.50f, 0.88205f, 0.44f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_040_Obese_090,            new BodyTypeInfo(0.200f, 1.125f, 0.40f, 0.77205f, 0.50f, 0.40f) },
+                { RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese_090,    new BodyTypeInfo(0.280f, 1.125f, 0.30f, 0.65205f, 0.70f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_060_Lardy_090,            new BodyTypeInfo(0.430f, 2.125f, 0.20f, 0.58205f, 1.00f, 0.70f) },
+                { RimRound.Defs.BodyTypeDefOf.F_070_Enormous_090,         new BodyTypeInfo(0.660f, 2.000f, 0.10f, 0.48205f, 0.93f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_080_Gigantic_090,         new BodyTypeInfo(0.965f, 3.875f, 0.10f, 0.38205f, 1.10f, 0.65f) },
+                { RimRound.Defs.BodyTypeDefOf.F_090_Titanic_090,          new BodyTypeInfo(1.410f, 3.875f, 0.10f, 0.37205f, 1.10f, 0.79f) },
+                { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous_090,       new BodyTypeInfo(100f  , 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f) }
+            };
+
+        static Dictionary<BodyTypeDef, BodyTypeInfo> set070 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+            {
+                { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Male,                            new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Female,                          new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+
+                { RimWorld.BodyTypeDefOf.Thin,                            new BodyTypeInfo(0.015f, 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_005_Thick,                new BodyTypeInfo(0.050f, 0.6875f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_006_Chonky,               new BodyTypeInfo(0.065f, 0.9375f, 0.90f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_010_Chubby,               new BodyTypeInfo(0.090f, 0.9375f, 0.80f, 1.28205f, 0.30f, 0.35f) },
+                { RimRound.Defs.BodyTypeDefOf.F_020_Corpulent,            new BodyTypeInfo(0.120f, 0.9375f, 0.65f, 0.98205f, 0.40f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_030_Fat,                  new BodyTypeInfo(0.155f, 1.000f, 0.50f, 0.88205f, 0.44f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_040_Obese,                new BodyTypeInfo(0.200f, 1.125f, 0.40f, 0.77205f, 0.50f, 0.40f) },
+                { RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese,        new BodyTypeInfo(0.280f, 1.125f, 0.30f, 0.65205f, 0.70f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_060_Lardy,                new BodyTypeInfo(0.430f, 2.125f, 0.20f, 0.58205f, 1.00f, 0.70f) },
+                { RimRound.Defs.BodyTypeDefOf.F_070_Enormous,             new BodyTypeInfo(0.660f, 2.000f, 0.10f, 0.48205f, 0.93f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,             new BodyTypeInfo(0.965f, 3.875f, 0.10f, 0.38205f, 1.10f, 0.65f) },
+                { RimRound.Defs.BodyTypeDefOf.F_090_Titanic,              new BodyTypeInfo(1.410f, 3.875f, 0.10f, 0.37205f, 1.10f, 0.79f) },
+                { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,           new BodyTypeInfo(100f  , 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f) }
+            };
+
         static Dictionary<BodyTypeDef, BodyTypeInfo> ratkinSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -95,7 +140,7 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_040_Obese_Ratkin,         new BodyTypeInfo(0.200f, 1.125f, 0.40f, 0.77205f, 0.50f, 0.40f) },
                 { RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese_Ratkin, new BodyTypeInfo(0.280f, 1.125f, 0.30f, 0.65205f, 0.70f, 0.50f) },
                 { RimRound.Defs.BodyTypeDefOf.F_060_Lardy_Ratkin,         new BodyTypeInfo(0.430f, 2.125f, 0.20f, 0.58205f, 1.00f, 0.70f) },
-                { RimRound.Defs.BodyTypeDefOf.F_070_Enormous_Ratkin,      new BodyTypeInfo(0.660f, 2.0f, 0.10f, 0.48205f, 0.93f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_070_Enormous_Ratkin,      new BodyTypeInfo(0.660f, 2.000f, 0.10f, 0.48205f, 0.93f, 0.50f) },
                 { RimRound.Defs.BodyTypeDefOf.F_080_Gigantic_Ratkin,      new BodyTypeInfo(0.965f, 3.875f, 0.10f, 0.38205f, 1.10f, 0.65f) },
                 { RimRound.Defs.BodyTypeDefOf.F_090_Titanic_Ratkin,       new BodyTypeInfo(1.410f, 3.875f, 0.10f, 0.37205f, 1.10f, 0.79f) },
                 { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous_Ratkin,    new BodyTypeInfo(100f  , 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f) }
@@ -103,14 +148,16 @@ namespace RimRound.Utilities
 
         static Dictionary<string, Dictionary<BodyTypeDef, BodyTypeInfo>> raceToProperDictDictionary = new Dictionary<string, Dictionary<BodyTypeDef, BodyTypeInfo>>()
         {
-            { "Alien_Drow_Otto",    defaultSet }, //100%
-            { "Anthro",             defaultSet }, //100%
-            { "ESCP_AltmerRace",    defaultSet },
-            { "ESCP_AshlanderRace", defaultSet },
-            { "ESCP_DunmerRace",    defaultSet },
-            { "Human",              defaultSet }, //100%
-            { "Ratkin",             ratkinSet  }, //Partial
-            { "ReviaRaceAlien",     defaultSet }  //100%
+            { "Alien_Drow_Otto",           defaultSet }, //100%
+            { "Anthro",                    defaultSet }, //100%
+            { "ESCP_AltmerRace",           defaultSet },
+            { "ESCP_AshlanderRace",        defaultSet },
+            { "ESCP_DunmerRace",           defaultSet },
+            { "Human",                     defaultSet }, //100%
+            { "Alien_Orassan",             set070     }, 
+            { "Alien_OrassanHumanHybrid",  set090     }, 
+            { "Ratkin",                    ratkinSet  }, //100%
+            { "ReviaRaceAlien",            defaultSet }  //100%
 
         };
 

@@ -81,7 +81,7 @@
 		<comps>
 			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
 				<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-				<fullnessToNutritionRatio>.01</fullnessToNutritionRatio>
+				<fullnessToNutritionRatio>.02</fullnessToNutritionRatio>
 			</li>
 			<li Class="CompProperties_Drug">
 				<chemical>cakeChem</chemical>

@@ -32,6 +32,15 @@ namespace RimRound.Utilities
             return (weightIncludingBaseWeight - Hediff_Weight.ModExtension.baseWeight) * Values.severityPerKilo;
         }
 
+        public static Hediff WeightHediff(this Pawn pawn) 
+        {
+            if (GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, pawn) is Hediff weight)
+            {
+                return weight;
+            }
+
+            return null;
+        }
 
         public static float Weight(this Pawn pawn)
         {
@@ -215,6 +224,27 @@ namespace RimRound.Utilities
 
             return null;
         }
+
+
+        public class SeverityFloatPair
+        {
+            SeverityFloatPair(List<float> floats) 
+            {
+                
+            }
+
+            List<float> severityStages = new List<float>() 
+            {
+            
+            
+            };
+
+
+
+        }
+
+
+
 
     }
 }
