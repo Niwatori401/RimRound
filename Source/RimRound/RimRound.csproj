@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="AI\Recipe_RemoveFatLight.cs" />
     <Compile Include="AI\Recipe_RemoveFatHeavy.cs" />
+    <Compile Include="AI\StatPart_MeatYieldBodyFat.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Dislike.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Fanatical.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Love.cs" />

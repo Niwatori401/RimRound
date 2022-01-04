@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LanguageData>
+	<StatPart_MeatYieldBodyFatExplanation>Multiplier for body weight: {0}</StatPart_MeatYieldBodyFatExplanation>
+
+
 	<!--Alerts-->
 	<NeedFoodHopperProcessorDesc>You have a food processor with no hopper next to it.\n\nTo work, food processors must draw from an adjacent hopper filled with raw food.\n\nBuild a hopper adjacent to the processor.</NeedFoodHopperProcessorDesc>
 
