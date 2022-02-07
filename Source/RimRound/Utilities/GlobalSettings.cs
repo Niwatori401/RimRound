@@ -12,11 +12,6 @@ namespace RimRound.Utilities
     //All fields in this class are saved in WorldComp_SaveValues.cs. Do not add reference type fields without adding exceptions to saving code
     public static class GlobalSettings
     {
-        static GlobalSettings()
-        {
-            BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true);
-        }
-
         #region Gizmo Display Settings
         public static bool showPawnDietManagementGizmo = true;
         public static bool showSleepPostureManagementGizmo = true;

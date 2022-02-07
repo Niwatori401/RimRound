@@ -13,9 +13,18 @@ namespace RimRound.Defs
     [DefOf]
     public static class BodyTypeDefOf
     {  
-
-
         public static BodyTypeDef M_005_Thick;
+        public static BodyTypeDef M_006_Chonky;
+        public static BodyTypeDef M_010_Chubby;
+        public static BodyTypeDef M_020_Corpulent;
+        public static BodyTypeDef M_030_Fat;
+        public static BodyTypeDef M_040_Obese;
+        public static BodyTypeDef M_050_MorbidlyObese;
+        public static BodyTypeDef M_060_Lardy;
+        public static BodyTypeDef M_070_Enormous;
+        public static BodyTypeDef M_080_Gigantic;
+        public static BodyTypeDef M_090_Titanic;
+        public static BodyTypeDef M_100_Gelatinous;
 
         public static BodyTypeDef F_005_Thick;
         public static BodyTypeDef F_006_Chonky;

@@ -32,8 +32,8 @@ namespace RimRound.Comps
 
             if (((Pawn)parent).RaceProps.Humanlike)
             {
-                //AlienRace. AlienPartGenerator.AlienComp alienComp = ((Pawn)parent).GetComp<AlienPartGenerator.AlienComp>();
-               
+                BodyTypeUtility.AssignPersonalCategoricalExemptions(this);
+
                 if (BodyTypeUtility.GetBodyTypeBasedOnWeightSeverity(((Pawn)parent), personallyExempt, categoricallyExempt) is BodyTypeDef b && b != ((Pawn)parent).story.bodyType)
                 {
                     ((Pawn)parent).story.bodyType = b;
@@ -66,7 +66,6 @@ namespace RimRound.Comps
             set
             {
                 categoricallyExempt = value;
-                BodyTypeUtility.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, true, true);
             }
         }
 

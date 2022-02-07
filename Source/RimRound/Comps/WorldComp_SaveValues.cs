@@ -21,6 +21,7 @@ namespace RimRound.Comps
             base.ExposeData();
             SaveAllSettings();
             //SaveCaravanPatchUtility();
+
         }
 
         public void SaveCaravanPatchUtility() 

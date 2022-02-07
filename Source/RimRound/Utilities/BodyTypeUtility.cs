@@ -125,21 +125,47 @@ namespace RimRound.Utilities
             }
         }
 
+
+        internal static void AssignPersonalCategoricalExemptions(PawnBodyType_ThingComp comp) 
+        {
+            if (comp is null)
+                return;
+
+            if (!comp.parent?.AsPawn().RaceProps.Humanlike ?? false)
+                return;
+
+            comp.CategoricallyExempt = CheckExemptions(comp.parent.AsPawn());
+        }
+
+        internal static void UpdateAllPawnSprites() 
+        {
+            foreach (Map m in Find.Maps)
+            {
+                foreach (Pawn p in m.mapPawns.AllPawns)
+                {
+                    PawnBodyType_ThingComp comp = p.TryGetComp<PawnBodyType_ThingComp>();
+
+                    if (comp is null)
+                        continue;
+
+                    UpdatePawnSprite(p, comp.PersonallyExempt, comp.CategoricallyExempt, true, true);
+                }
+            }
+        }
+
+
         internal static void AssignBodyTypeCategoricalExemptions(bool updatePawnSprite = false)
         {
             foreach (Map m in Find.Maps)
             {
                 foreach (Pawn p in m.mapPawns.AllPawns)
                 {
-                    if (p is null || (!p?.RaceProps.Humanlike ?? false))
-                        continue;
-
                     PawnBodyType_ThingComp comp = p.TryGetComp<PawnBodyType_ThingComp>();
 
                     if (comp is null)
                         continue;
 
-                    comp.CategoricallyExempt = CheckExemptions(p);
+                    AssignPersonalCategoricalExemptions(comp);
 
                     if (updatePawnSprite)
                         UpdatePawnSprite(p, comp.PersonallyExempt, comp.CategoricallyExempt, true, true);

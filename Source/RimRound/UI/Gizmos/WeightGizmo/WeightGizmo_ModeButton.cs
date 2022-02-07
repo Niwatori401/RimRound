@@ -13,7 +13,6 @@ using RimRound.Comps;
 
 namespace RimRound.UI
 {
-
     [StaticConstructorOnStartup]
     public static class WeightGizmo_ModeButton
     {
@@ -31,23 +30,6 @@ namespace RimRound.UI
                     return DisabledModeIcon;
                 default:
                     return BaseContent.BadTex;
-            }
-        }
-
-        public static DietMode GetNextResponse(Pawn pawn)
-        {
-            switch (pawn.TryGetComp<FullnessAndDietStats_ThingComp>().DietMode)
-            {
-                case DietMode.Nutrition:
-                    return DietMode.Hybrid;
-                case DietMode.Hybrid:
-                    return DietMode.Fullness;
-                case DietMode.Fullness:
-                    return DietMode.Disabled;
-                case DietMode.Disabled:
-                    return DietMode.Nutrition;
-                default:
-                    return DietMode.Nutrition;
             }
         }
 
