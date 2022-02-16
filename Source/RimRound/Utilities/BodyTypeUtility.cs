@@ -80,7 +80,7 @@ namespace RimRound.Utilities
 
         }
 
-        private static void RedrawPawn(Pawn pawn)
+        internal static void RedrawPawn(Pawn pawn)
         {
             PortraitsCache.SetDirty(pawn);
             GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);

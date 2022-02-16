@@ -435,6 +435,40 @@ namespace RimRound.Comps
             }
         }
 
+
+        //100% for fullness is hardlimit
+        public void SetRangesPercent(float first, float second) 
+        {
+            if (first > 1 || second > 1)
+            {
+                Log.Error("Inputs for SetRangesPercent must be less than or equal to 1!");
+                return;
+            }
+                
+            float maxNutrition = parent.AsPawn().needs.food.MaxLevel;
+            float maxFullness = this.HardLimit;
+
+            switch (this.DietMode)
+            {
+                case DietMode.Nutrition:
+                    nutritionbar.SetRanges(first * maxNutrition, second * maxNutrition);
+                    return;
+                case DietMode.Hybrid:
+                    nutritionbar.SetRanges(first * maxNutrition, 0);
+                    fullnessbar.SetRanges(second * maxFullness, 0);
+                    return;
+                case DietMode.Fullness:
+                    fullnessbar.SetRanges(first * maxFullness, second * maxFullness);
+                    return;
+                case DietMode.Disabled:
+                    return;
+                default:
+                    Log.Error("WeightGizmo_ThingComp SetRanges() ran default case!");
+                    return;
+            }
+
+        }
+
         public void Update()
         {
             if (nutritionbar != null)

@@ -16,17 +16,19 @@ namespace TestingRange
 
             // TemplateName, CSV Name, flair args
             List<Pair<Pair<String, String>, int>> patchSets = new List<Pair<Pair<strig, String>, int>>()
-            {
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AdjustAlignWithHeadTag",           "alignWithHeadPatches"),                     3 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AddComps",                         "compsPatches"        ),                     2 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AlignBodyPart",                    "bodyPartAlignmentPatches"),                 3 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveBodySpecificOffsets",        "removeBodySpecificOffsetsPatches"),         3 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_BodyTypeSpecificAlignmentPatch",   "bodyTypeSpecificAlignmentPatch"),           4 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveGeneralOffset",              "removeGeneralOffsetPatch"),                 3 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_SetBodyAddonDrawsize",             "setBodyAddonDrawsize"),                     3 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveScaleWithBodyDrawsizeTag",   "removeScaleWithBodyDrawsizeTag"),           3 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveBodySpecificPortraitOffset", "removeBodySpecificPortraitOffsetsPatches"), 3 ),
-                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveGeneralHeadOffset",          "removeGeneralHeadOffset"),                  2 )
+            {                                                                                                              
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AdjustAlignWithHeadTag",               "alignWithHeadPatches"),                     3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AddComps",                             "compsPatches"        ),                     2 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_AlignBodyPart",                        "bodyPartAlignmentPatches"),                 3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveBodySpecificOffsets",            "removeBodySpecificOffsetsPatches"),         3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_BodyTypeSpecificAlignmentPatch",       "bodyTypeSpecificAlignmentPatch"),           4 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveGeneralOffset",                  "removeGeneralOffsetPatch"),                 3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_SetBodyAddonDrawsize",                 "setBodyAddonDrawsize"),                     3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveScaleWithBodyDrawsizeTag",       "removeScaleWithBodyDrawsizeTag"),           3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveBodySpecificPortraitOffset",     "removeBodySpecificPortraitOffsetsPatches"), 3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveGeneralHeadOffset",              "removeGeneralHeadOffset"),                  2 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveSpecificGraphicPathHeadOffset",  "removeSpecificGraphicPathHeadOffset"),  3 ),
+                new Pair<Pair<strig, string>, int>(new Pair<strig, strig>("RimRound_RemoveDefaultOffset",                  "removeDefaultOffset"),                      3 )
             
             };
 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BasePawn">
+		<defName>RR_HoverChair</defName>
+		<label>hoverchair</label>
+		<description>Chair for the mobility challenged.</description>
+		<thingClass>Pawn</thingClass>
+		<category>Pawn</category>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<hasTooltip>true</hasTooltip>
+		
+		<statBases>
+			<Mass>60</Mass>	
+			<MoveSpeed>5</MoveSpeed>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<Flammability>0</Flammability>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>250</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<ArmorRating_Heat>2.00</ArmorRating_Heat>
+			<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+		</statBases>
+		<inspectorTabs>
+			<li>ITab_Pawn_Health</li>
+			<li>ITab_Pawn_Log</li>
+		</inspectorTabs>
+		<comps>
+			<li>
+				<compClass>CompAttachBase</compClass>
+			</li>
+		</comps>
+		<drawGUIOverlay>true</drawGUIOverlay>	
+
+		<receivesSignals>true</receivesSignals>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>		
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>HoverchairThinktreeStandard</thinkTreeMain>
+			<thinkTreeConstant>HoverchairThinktreeConstant</thinkTreeConstant>			
+			<!--CHANGE-->
+			<body>MechanicalCentipede</body>
+			  <baseBodySize>1.8</baseBodySize>
+			  <baseHealthScale>4.32</baseHealthScale>
+			  <lifeStageAges>
+				<li>
+				  <def>MechanoidFullyFormed</def>
+				  <minAge>0</minAge>
+				</li>
+			  </lifeStageAges>
+			  <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			  <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			  <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			  <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>			
+			<!--CHANGE-->
+			<fleshType>Mechanoid</fleshType>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>None</foodType>
+			<lifeExpectancy>2500</lifeExpectancy>
+			<bloodDef>Filth_MachineBits</bloodDef>
+		</race>		
+	</ThingDef>
+	
+	<PawnKindDef>
+		<defName>RR_HoverChairPawnKind</defName>
+		<label>hoverchair</label>
+		<race>Hoverchair</race>
+		<combatPower>0</combatPower>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Autocleaner/Autocleaner</texPath>
+			  <graphicClass>Graphic_Multi</graphicClass>
+			  <drawSize>1</drawSize>
+			</bodyGraphicData>
+		  </li>
+		</lifeStages>		
+	</PawnKindDef>
+</Defs>

@@ -21,6 +21,7 @@ namespace RimRound.Comps
             base.PostExposeData();
 
             Scribe_Values.Look<WeightOpinion>(ref weightOpinion, "weightOpinion");
+            Scribe_Values.Look<float?>(ref gainingResistance, "gainingResistance");
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -125,5 +126,54 @@ namespace RimRound.Comps
         }
 
         public WeightOpinion weightOpinion = WeightOpinion.None;
+
+        //----------------
+
+        private float? gainingResistance = null;
+
+        public float GainingResistance 
+        {
+            get 
+            {
+                if (gainingResistance is null)
+                {
+                    gainingResistance = GetAlteredResistanceBasedOnWeightOpinion(this.parent.AsPawn()?.guest?.resistance ?? 999);
+                }
+
+                return gainingResistance.Value;
+            }
+            set 
+            {
+                gainingResistance = value;
+            }
+        }
+
+        private float GetAlteredResistanceBasedOnWeightOpinion(float gainingResistance) 
+        {
+            switch (weightOpinion) 
+            {
+                case WeightOpinion.None:
+                    return gainingResistance;
+                case WeightOpinion.Hate:
+                    return gainingResistance * 3.5f;
+                case WeightOpinion.Dislike:
+                    return gainingResistance * 2.25f;
+                case WeightOpinion.NeutralMinus:
+                    return gainingResistance * 1.5f;
+                case WeightOpinion.Neutral:
+                    return gainingResistance * 1.1f;
+                case WeightOpinion.NeutralPlus:
+                    return gainingResistance * 0.7f;
+                case WeightOpinion.Like:
+                    return gainingResistance * 0.4f;
+                case WeightOpinion.Love:
+                    return gainingResistance * 0.1f;
+                case WeightOpinion.Fanatical:
+                    return gainingResistance * 0.0f;
+                default:
+                    return gainingResistance;
+            }
+        }
+        
     }
 }

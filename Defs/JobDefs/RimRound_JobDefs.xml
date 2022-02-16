@@ -12,4 +12,11 @@
 		<playerInterruptible>true</playerInterruptible>
 		<casualInterruptible>false</casualInterruptible>
 	</JobDef>
+	
+  <JobDef>
+    <defName>RR_PrisonerAttemptReduceReluctance</defName>
+    <driverClass>RimRound.AI.JobDriver_ChatToReduceReluctance</driverClass>
+    <reportString>attempting to persuade TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>	
 </Defs>

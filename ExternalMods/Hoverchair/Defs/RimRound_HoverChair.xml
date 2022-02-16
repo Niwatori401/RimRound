@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BasePawn">
+		<defName>RR_HoverChair</defName>
+		<label>hoverchair</label>
+		<description>Chair for the mobility challenged.</description>
+		<thingClass>Pawn</thingClass>
+		<category>Pawn</category>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<hasTooltip>true</hasTooltip>
+		
+		<statBases>
+			<Mass>60</Mass>	
+			<MoveSpeed>5</MoveSpeed>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<Flammability>0</Flammability>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>250</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<ArmorRating_Heat>2.00</ArmorRating_Heat>
+			<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+		</statBases>
+		<inspectorTabs>
+			<li>ITab_Pawn_Health</li>
+			<li>ITab_Pawn_Log</li>
+		</inspectorTabs>
+		<comps>
+			<li>
+				<compClass>CompAttachBase</compClass>
+			</li>
+		</comps>
+		<drawGUIOverlay>true</drawGUIOverlay>	
+
+		<receivesSignals>true</receivesSignals>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>		
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>HoverchairThinktreeStandard</thinkTreeMain>
+			<thinkTreeConstant>HoverchairThinktreeConstant</thinkTreeConstant>			
+			<!--CHANGE-->
+			<body>HoverchairBody</body>
+			  <baseBodySize>1.8</baseBodySize>
+			  <baseHealthScale>4.32</baseHealthScale>
+			  <lifeStageAges>
+				<li>
+				  <def>MechanoidFullyFormed</def>
+				  <minAge>0</minAge>
+				</li>
+			  </lifeStageAges>
+			  <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			  <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			  <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			  <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>			
+			<!--CHANGE-->
+			<fleshType>Mechanoid</fleshType>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>None</foodType>
+			<lifeExpectancy>2500</lifeExpectancy>
+			<bloodDef>Filth_MachineBits</bloodDef>
+		</race>		
+	</ThingDef>
+	
+	<PawnKindDef>
+		<defName>RR_HoverChairPawnKind</defName>
+		<label>hoverchair</label>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<race>RR_HoverChair</race>
+		<combatPower>0</combatPower>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Hoverchair/hoverchair</texPath>
+			  <graphicClass>Graphic_Multi</graphicClass>
+			  <drawSize>2</drawSize>
+			</bodyGraphicData>
+		  </li>
+		</lifeStages>		
+	</PawnKindDef>
+	
+  <BodyDef>
+    <defName>HoverchairBody</defName>
+    <label>hoverchair</label>
+    <corePart>
+      <def>HoverchairStructuralFrame</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>HoverchairSteeringWheel</def>
+          <coverage>0.15</coverage>
+          <height>Top</height>
+          <groups>
+            <li>HeadAttackTool</li>
+          </groups>
+        </li>
+        <li>
+          <def>HoverchairCore</def>
+          <coverage>0.71</coverage>
+          <parts>
+            <li>
+              <def>HoverchairEngine</def>
+              <coverage>0.05</coverage>
+              <depth>Inside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>	
+  
+	<BodyPartDef Abstract="True" Name="HoverChairMechBase">
+		<labelShort>mech part</labelShort>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>ManipulationLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+  <BodyPartDef ParentName="HoverChairMechBase">
+    <defName>HoverchairStructuralFrame</defName>
+    <label>structural frame</label>
+    <hitPoints>45</hitPoints>
+  </BodyPartDef>
+  
+  <BodyPartDef ParentName="HoverChairMechBase">
+    <defName>HoverchairSteeringWheel</defName>
+    <label>steering handle</label>
+    <hitPoints>15</hitPoints>
+  </BodyPartDef>  
+  
+  <BodyPartDef ParentName="HoverChairMechBase">
+    <defName>HoverchairCore</defName>
+    <label>core housing</label>
+    <hitPoints>15</hitPoints>
+  </BodyPartDef>  
+  
+  <BodyPartDef ParentName="HoverChairMechBase">
+    <defName>HoverchairEngine</defName>
+    <label>engine</label>
+    <hitPoints>5</hitPoints>
+  </BodyPartDef>    
+</Defs>

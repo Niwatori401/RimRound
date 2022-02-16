@@ -65,6 +65,20 @@ namespace RimRound.Defs
         public static BodyTypeDef F_080_Gigantic_Ratkin;
         public static BodyTypeDef F_090_Titanic_Ratkin;
         public static BodyTypeDef F_100_Gelatinous_Ratkin;
+
+        //Anty Support
+        public static BodyTypeDef F_005_Thick_Anty;
+        public static BodyTypeDef F_006_Chonky_Anty;
+        public static BodyTypeDef F_010_Chubby_Anty;
+        public static BodyTypeDef F_020_Corpulent_Anty;
+        public static BodyTypeDef F_030_Fat_Anty;
+        public static BodyTypeDef F_040_Obese_Anty;
+        public static BodyTypeDef F_050_MorbidlyObese_Anty;
+        public static BodyTypeDef F_060_Lardy_Anty;
+        public static BodyTypeDef F_070_Enormous_Anty;
+        public static BodyTypeDef F_080_Gigantic_Anty;
+        public static BodyTypeDef F_090_Titanic_Anty;
+        public static BodyTypeDef F_100_Gelatinous_Anty;
     }
 
 }

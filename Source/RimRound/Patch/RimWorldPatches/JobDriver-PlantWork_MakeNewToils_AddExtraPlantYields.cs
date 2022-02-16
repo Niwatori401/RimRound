@@ -29,7 +29,7 @@ namespace RimRound.Patch
             toil.initAction = delegate ()
             {
                 Thing thing = toil.actor.jobs.curJob.GetTarget(TargetIndex.A).Thing;
-                ExtraProductPlantYield modExtension = thing.def.GetModExtension<ExtraProductPlantYield>();
+                ME_ExtraProductPlantYield modExtension = thing.def.GetModExtension<ME_ExtraProductPlantYield>();
                 if (modExtension != null) 
                 {
                     Pair<ThingDef, int>? pair = modExtension.GetThingDefQuantityPair();

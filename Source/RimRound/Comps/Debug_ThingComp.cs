@@ -12,7 +12,7 @@ namespace RimRound.Comps
     public class Debug_ThingComp : ThingComp
     {
         static public int paramNumber = 0;
-        static public float zoom = 1f;
+        static public float magnification = 1f;
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
@@ -32,27 +32,29 @@ namespace RimRound.Comps
 
                 //yield return new Command_Action
                 //{
-                //    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to paramFloat)",
+                //    defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to drawSize)",
                 //    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                 //    action = delegate ()
                 //    {
-                //        zoom += positivity * (offsetAmounts[offsetAmountsIndex]);
+                //        PawnKindDef myman = (from x in DefDatabase<PawnKindDef>.AllDefsListForReading
+                //                             where x.defName == "RR_HoverChairPawnKind"
+                //                             select x).First();
+                //        magnification += positivity * (offsetAmounts[offsetAmountsIndex]);
+                //        myman.lifeStages.First().bodyGraphicData.drawSize  *= magnification;
+
+                //        foreach (Map m in Find.Maps)
+                //        {
+                //            foreach (Pawn p in m.mapPawns.AllPawns)
+                //            {
+                //                if (p.def.defName.Contains("Hover"))
+                //                {
+                //                    BodyTypeUtility.RedrawPawn(p);
+                //                }
+                //            }
+                //        }
                 //    }
                 //};
 
-                //yield return new Command_Action
-                //{
-                //    defaultLabel = "Reset vals",
-                //    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
-                //    action = delegate ()
-                //    {
-                //        Log.Message($"zoom: {zoom}");
-                //        Log.Message($"position: {Values.debugPos}");
-                //        zoom = 1.28205f;
-                //        Values.debugPos = 0.300f;
-                        
-                //    }
-                //};
 
                 yield return new Command_Action
                 {

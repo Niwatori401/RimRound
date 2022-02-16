@@ -108,4 +108,8 @@
 	<RR_FT_BrokenDown>Broken down</RR_FT_BrokenDown>
 	<RR_FT_TraderUsing>Using {CONSUMPTIONRATE}L/s</RR_FT_TraderUsing>
 	
+	
+	<GainingResistance>Gaining Resistance</GainingResistance>
+	<GainingResistanceDesc>How much a pawn will resist the warden's effort to keep them fed. Lower values mean less reluctance to gain. When close to zero a prisoner is more likely to eat in excess when instructed to do so.</GainingResistanceDesc>
+	<TextMote_GainingResistanceChange>Reluctance\n{0} to {1}</TextMote_GainingResistanceChange>
 </LanguageData>

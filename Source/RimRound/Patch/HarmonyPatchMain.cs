@@ -23,32 +23,36 @@ namespace RimRound.Patch
 			var harmony = new Harmony("RRHarmony");
 			harmony.PatchAll();
 
-			if (Utilities.ModCompatibilityUtility.GetMethodInfo("NotReal", "a", "AlsoNotReal") is MethodInfo methodInfo) 
-			{
-				harmony.Patch(methodInfo);
-			}
             #region ignore this, its for something else
             ModCompatibilityUtility.TryPatch(
 				harmony, 
-				new ModPatchInfo 
-				(
-					"RimJobWorld - Milkable Colonists",
-					"CompMilkableHuman",
-					"ResourceAmount", 
-					MethodType.Getter
-				), 
+				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompMilkableHuman", "ResourceAmount", MethodType.Getter), 
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
 
 			ModCompatibilityUtility.TryPatch(
 				harmony,
-				new ModPatchInfo
-				(
-					"RimJobWorld - Milkable Colonists",
-					"CompHyperMilkableHuman",
-					"ResourceAmount",
-					MethodType.Getter
-				),
+				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompHyperMilkableHuman", "ResourceAmount", MethodType.Getter),
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
+
+			ModCompatibilityUtility.TryPatch(
+				harmony,
+				new ModPatchInfo("Giddy-up! Core", "DefUtility", "getAnimals", MethodType.Normal),
+				DefUtility_GetAnimals_IncludeMobilityChair.GetPatchCollection());
+
+			ModCompatibilityUtility.TryPatch(
+				harmony,
+				new ModPatchInfo("Giddy-up! Core", "IsMountableUtility", "isMountable", MethodType.Normal, new List<string>() { "Pawn", "Reason" }),
+				IsMountableUtility_IsMountable_IncludeMoblityChairs.GetPatchCollection());
+
+			ModCompatibilityUtility.TryPatch(
+				harmony,
+				new ModPatchInfo("Giddy-up! Core", "GUC_FloatMenuUtility", "AddMountingOptions", MethodType.Normal),
+				GUC_FloatMenuUtility_AddMountingOptions_AddExceptionForMobilityChair.GetPatchCollection());
+
+			ModCompatibilityUtility.TryPatch(
+				harmony,
+				new ModPatchInfo("Giddy-up! Ride and Roll", "FloatMenuMakerMap_ChoicesAtFor", "Postfix", MethodType.Normal),
+				FloatMenuMakerMap_ChoicesAtFor_Postfix_AddExceptionForMobilityScooter.GetPatchCollection());
 
 
 			int patchedMethodsCount = 0;

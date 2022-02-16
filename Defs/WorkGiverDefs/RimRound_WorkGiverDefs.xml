@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <!--WorkGiverDef>
+	
+    <defName>RR_WG_StuffPrisoner</defName>
+    <label>eat at feeding tube</label>
+    <giverClass>RimRound.AI.WorkGiver_StuffPrisoner</giverClass>
+    <workType>RR_WT_Feeder</workType>
+    <emergency>false</emergency>
+    <verb>feed</verb>
+    
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <priorityInType>110</priorityInType>
+    <prioritizeSustains>true</prioritizeSustains>
+	
+	<gerund>feeding</gerund>
+	<canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+	<directOrderable>true</directOrderable>
+	<feedHumanlikesOnly>true</feedHumanlikesOnly>
+	
+    <scanThings>true</scanThings>
+    <scanCells>false</scanCells>
+  </WorkGiverDef-->
+  
+  <WorkGiverDef>
+    <defName>RR_ChatWithPrisonerReduceReluctance</defName>
+    <label>convince prisoners to gain prisoners</label>
+    <giverClass>RimRound.AI.WorkGiver_Warden_ReduceReluctanceChat</giverClass>
+    <workType>Warden</workType>
+    <verb>chat about gainging weight with</verb>
+    <gerund>chatting with about gaining</gerund>
+    <priorityInType>60</priorityInType>
+    <requiredCapacities>
+      <li>Talking</li>
+    </requiredCapacities>
+  </WorkGiverDef>  
+  
+  
+</Defs>

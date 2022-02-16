@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anty the war ant race</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/south/bodyTypes/F_080_Gigantic_Anty</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/south/bodyTypes/F_080_Gigantic_Anty</xpath>
+							<value>
+								<F_080_Gigantic_Anty>(0,0)</F_080_Gigantic_Anty>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/south/bodyTypes</xpath>
+							<value>
+								<F_080_Gigantic_Anty>(0,0)</F_080_Gigantic_Anty>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/south</xpath>
+						<value>
+							<bodyTypes>
+								<F_080_Gigantic_Anty>(0,0)</F_080_Gigantic_Anty>
+							</bodyTypes>
+						</value>					
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/east/bodyTypes/F_080_Gigantic_Anty</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/east/bodyTypes/F_080_Gigantic_Anty</xpath>
+							<value>
+								<F_080_Gigantic_Anty>(-0.08,0.46)</F_080_Gigantic_Anty>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/east/bodyTypes</xpath>
+							<value>
+								<F_080_Gigantic_Anty>(-0.08,0.46)</F_080_Gigantic_Anty>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/east</xpath>
+						<value>
+							<bodyTypes>
+								<F_080_Gigantic_Anty>(-0.08,0.46)</F_080_Gigantic_Anty>
+							</bodyTypes>
+						</value>					
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/north/bodyTypes/F_080_Gigantic_Anty</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/north/bodyTypes/F_080_Gigantic_Anty</xpath>
+							<value>
+								<F_080_Gigantic_Anty>(-0.01,0.34)</F_080_Gigantic_Anty>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/north/bodyTypes</xpath>
+							<value>
+								<F_080_Gigantic_Anty>(-0.01,0.34)</F_080_Gigantic_Anty>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/north</xpath>
+						<value>
+							<bodyTypes>
+								<F_080_Gigantic_Anty>(-0.01,0.34)</F_080_Gigantic_Anty>
+							</bodyTypes>
+						</value>					
+					</nomatch>
+				</li>		
+			</operations>				
+		</match>
+	</Operation>
+</Patch>

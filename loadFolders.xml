@@ -3,5 +3,7 @@
 		<li>/</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">IdeologyDefs</li>
 		<li>ExternalMods/SuperSpacesFatteningFoods</li>
+		<li>ExternalMods/Hoverchair</li>
+		<li>ExternalMods/AntyRaceSupport</li>
 	</v1.3>
 </loadFolders>

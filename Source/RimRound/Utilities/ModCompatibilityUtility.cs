@@ -19,17 +19,19 @@ namespace RimRound.Utilities
 
     public struct ModPatchInfo 
     {
-        public ModPatchInfo(string modName, string typeName, string methodName, MethodType methodType) 
+        public ModPatchInfo(string modName, string typeName, string methodName, MethodType methodType, List<string> methodParams = null) 
         {
             ModName = modName;
             TypeName = typeName;
             MethodName = methodName;
             MethodType = methodType;
+            methodParameters = methodParams;
         }
         public string ModName;
         public string TypeName;
         public string MethodName;
         public MethodType MethodType;
+        public List<string> methodParameters;
     };
 
     [StaticConstructorOnStartup]
@@ -68,7 +70,7 @@ namespace RimRound.Utilities
             switch (modPatchInfo.MethodType)
             {
                 case MethodType.Normal:
-                    methodToPatchMI = GetMethodInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName);
+                    methodToPatchMI = GetMethodInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName, modPatchInfo.methodParameters);
                     break;
                 case MethodType.Getter:
                     methodToPatchMI = GetPropertyInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName)?.GetGetMethod(true);
@@ -102,15 +104,40 @@ namespace RimRound.Utilities
             return false;
         }
 
-        public static MethodInfo GetMethodInfo(string modname, string typeName, string methodName) 
+        public static MethodInfo GetMethodInfo(string modname, string typeName, string methodName, List<string> types = null) 
         {
             if (CheckModInstalled(modname))
             {
-                foreach (Type t in types) 
+                foreach (Type t in ModCompatibilityUtility.types) 
                 {
                     if (t.Name == typeName)
                     {
-                        MethodInfo m = t.GetMethod(methodName, majorFlags);
+                        MethodInfo m;
+                        if (types is null)
+                            m = t.GetMethod(methodName, majorFlags);
+                        else
+                        {
+                            List<Type> typeParameters = new List<Type>();
+                            foreach (string s in types)
+                            {
+                                foreach (Type type in ModCompatibilityUtility.types) 
+                                {
+                                    if (s == type.Name) 
+                                    {
+                                        typeParameters.Add(type);
+                                    }
+                                }
+                            }
+                            if (typeParameters.Count != types.Count)
+                                throw new Exception("Was unable to match types in ModCompatibilityUtility.GetMethodInfo!");
+                            
+                            //This was added for testing and needs altered later
+                            Type[] methodParams = typeParameters.ToArray();
+                            methodParams[1] = methodParams[1].MakeByRefType();
+                            //---------------------------------------------
+                            m = t.GetMethod(methodName, majorFlags, null, methodParams, null);
+                        }
+                            
 
                         if (m is null)
                         {

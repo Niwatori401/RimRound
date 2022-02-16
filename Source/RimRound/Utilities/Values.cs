@@ -78,7 +78,16 @@ namespace RimRound.Utilities
         };
 
 
+        public static bool RandomChanceAtOrBelow(float maxValue) 
+        {
+            if (maxValue >= 1)
+                Log.Warning("maxValue for RandomChanceAtOrBelow() was set to 1 or higher! This will always result in a pass.");
 
+            if (RandomFloat(0, 1) <= maxValue)
+                return true;
+
+            return false;
+        }
 
         public static int RandomInt(int lower, int upper) 
         {

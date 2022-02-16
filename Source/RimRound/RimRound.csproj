@@ -74,8 +74,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\PrisonerStuff\InteractionWorker_ReduceReluctance.cs" />
+    <Compile Include="AI\PrisonerStuff\JobDrivers\JobDriver_ChatToReduceReluctance.cs" />
+    <Compile Include="AI\PrisonerStuff\WorkGivers\WorkGiver_Warden_ReduceReluctanceChat.cs" />
     <Compile Include="AI\Recipe_RemoveFatLight.cs" />
     <Compile Include="AI\Recipe_RemoveFatHeavy.cs" />
+    <Compile Include="AI\StatPart_MassAdjustedByWeight.cs" />
     <Compile Include="AI\StatPart_MeatYieldBodyFat.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Dislike.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Fanatical.cs" />
@@ -85,8 +89,14 @@
     <Compile Include="AI\ThoughtWorker_WeightOpinion_Neutral.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
     <Compile Include="AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
-    <Compile Include="Defs\ExtraProductPlantYield.cs" />
+    <Compile Include="Defs\InteractionDefOf.cs" />
+    <Compile Include="Defs\ME_ExtraProductPlantYield.cs" />
+    <Compile Include="Patch\GiddyUpPatches\GiddyUpCore\GUC-FloatMenuUtility_AddMountingOptions_AddExceptionForMobilityChair.cs" />
+    <Compile Include="Patch\GiddyUpPatches\GiddyUpCore\IsMountableUtility_IsMountable_IncludeMoblityChairs.cs" />
+    <Compile Include="Patch\GiddyUpPatches\GiddyUpRideAndRoll\FloatMenuMakerMap_ChoicesAtFor_Postfix_AddExceptionForMobilityScooter.cs" />
     <Compile Include="Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
+    <Compile Include="Patch\GiddyUpPatches\GiddyUpCore\DefUtility_GetAnimals_IncludeMobilityChair.cs" />
+    <Compile Include="Patch\RimWorldPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
     <Compile Include="Patch\RimWorldPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawns.cs" />
     <Compile Include="Patch\RimWorldPatches\Caravan\CaravanPatchUtility.cs" />
@@ -96,13 +106,15 @@
     <Compile Include="Patch\RimWorldPatches\Dialog-Options_DoWindowContents_ShowDropdownToChangeBGAlways.cs" />
     <Compile Include="Patch\RimWorldPatches\Need-Food_MalnutritionSeverityPerInterval_AdjustByPawnWeight.cs" />
     <Compile Include="Patch\RimWorldPatches\Page-ConfigureStartingPawns_DrawPortraitArea_UpdateSprite.cs" />
+    <Compile Include="Patch\RimWorldPatches\WorkGiver-Warden-DeliverFood_JobOnThing_AddExceptionForFattenInteraction.cs" />
     <Compile Include="Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
     <Compile Include="Utilities\BodyTypeUtility.cs" />
     <Compile Include="Utilities\HediffUtility.cs" />
     <Compile Include="Utilities\ModCompatibilityUtility.cs" />
+    <Compile Include="Utilities\PrisonerUtility.cs" />
     <Compile Include="Utilities\WeightOpinionUtility.cs" />
     <None Include="Garbage\Building_FeedingTube.cs" />
-    <Compile Include="AI\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />
+    <Compile Include="AI\PrisonerStuff\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />
     <Compile Include="Comps\CompProperties_FoodItems_NutritionDensity.cs" />
     <Compile Include="Comps\Debug_ThingComp.cs" />
     <Compile Include="Comps\ThingComp_FoodItems_NutritionDensity.cs" />
@@ -127,7 +139,7 @@
     <Compile Include="Defs\ThingDefOf.cs" />
     <None Include="Garbage\GarbagePatch.cs" />
     <Compile Include="Hediffs\Fullness\Hediff_Fullness.cs" />
-    <Compile Include="AI\JobDrivers\JobDriver_StuffPrisoner.cs" />
+    <Compile Include="AI\PrisonerStuff\JobDrivers\JobDriver_StuffPrisoner.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_GetPawnMesh_GetMeshForPortraitsToo.cs" />
     <Compile Include="Patch\RimWorldPatches\FeedPatientUtility_IsHungry_CheckForFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\FoodUtility\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
@@ -137,10 +149,7 @@
     <Compile Include="Patch\RimWorldPatches\FoodUtility\FoodUtility_FoodOptimality_AdjustOptimality.cs" />
     <None Include="Garbage\PawnDownedWiggler_RandomDownedAngle_AdjustByWeight.cs" />
     <Compile Include="Patch\RimWorldPatches\FoodUtility\FoodUtility_StackCountForNutrition_MaxChangedToMin.cs" />
-    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_EmancipateSlave_UpdateCategoricalExemptions.cs" />
-    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_EnslavePrisoner_UpdateCategoricalExemptions.cs" />
-    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_PrisonerRelease_UpdateCategoricalExemptions.cs" />
-    <Compile Include="Patch\RimWorldPatches\GenGuest\GenGuest_SlaveRelease_UpdateCategoricalExemptions.cs" />
+    <Compile Include="Patch\RimWorldPatches\Pawn-GuestTracker_SetGuestStatus_UpdateCategoricalExemptions.cs" />
     <Compile Include="Patch\RimWorldPatches\Graphic-Multi_Init_DontLogErrorsForRimRound.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_ResolveAllGraphicsPrefix_UpdatePawnBodySize.cs" />
     <Compile Include="Patch\RimWorldPatches\ModLister_AllExpansions_IncludeRimRound.cs" />
@@ -155,7 +164,6 @@
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth.cs" />
     <Compile Include="Patch\RimWorldPatches\PortraitsCache_Get_MakePortraitsScaleForBodySize.cs" />
     <Compile Include="Patch\RimWorldPatches\PortraitsCache_RenderPortrait_DisablePawnPortraitRotationForPawnsInBed.cs" />
-    <Compile Include="Patch\RimWorldPatches\StatWorker_GetValue_DynamicMassPatch.cs" />
     <Compile Include="Patch\RimWorldPatches\Hediff_SeverityLabel_DisplayWeightOnHover.cs" />
     <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_AddFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\JobGiver-GetFood_GetPriority_AdjustAIForDietMode.cs" />
@@ -186,7 +194,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Gizmos\WeightGizmo\WeightGizmo.cs" />
     <None Include=".editorconfig" />
-    <Compile Include="AI\WorkGivers\WorkGiver_StuffPrisoner.cs" />
+    <Compile Include="AI\PrisonerStuff\WorkGivers\WorkGiver_StuffPrisoner.cs" />
     <None Include="Garbage\WorkGiver_TubeFeed.cs" />
   </ItemGroup>
   <ItemGroup>
