@@ -27,6 +27,9 @@ namespace RimRound.UI
         const float bufferForNumberFields = 80;
         const float numberFieldRightOffset = 120;
 
+        const int numberOfRowsPerColumnAlienRaceSettings = 24;
+
+
         readonly int numberOfGizmoSettingCheckboxes = 5;
         readonly int numberOfExemptionSettingsCheckboxes = 6;
 
@@ -119,7 +122,7 @@ namespace RimRound.UI
         
         private static void MakeAllDropdownsForEachGenderForRace(string raceName, ref int positionIndex) 
         {
-            Widgets.Label(new Rect { x = (float)(20 + 200 * Math.Floor(positionIndex/28f)), y = 50 + 27 * (positionIndex % 28), width = 180, height = 25 }, raceName + "'s body settings");
+            Widgets.Label(new Rect { x = (float)(20 + 200 * Math.Floor(positionIndex/(float)numberOfRowsPerColumnAlienRaceSettings)), y = 50 + 27 * (positionIndex % numberOfRowsPerColumnAlienRaceSettings), width = 180, height = 25 }, raceName + "'s body settings");
             ++positionIndex;
             MakeDropdownsForGender(new GenderRaceCombo { race = raceName, gender = Gender.Male }, positionIndex++);
             MakeDropdownsForGender(new GenderRaceCombo { race = raceName, gender = Gender.Female }, positionIndex++);
@@ -131,8 +134,8 @@ namespace RimRound.UI
             string buttonLabel = genderRaceCombo.gender.ToString() + " bodytype";
             Rect dropdownMenuRect = new Rect()
             {
-                x = (float)(20 + 200 * Math.Floor(positionIndex / 28f)),
-                y = 50 + 27 * (positionIndex % 28),
+                x = (float)(20 + 200 * Math.Floor(positionIndex / (float)numberOfRowsPerColumnAlienRaceSettings)),
+                y = 50 + 27 * (positionIndex % numberOfRowsPerColumnAlienRaceSettings),
                 width = 180,
                 height = 25,
             };
