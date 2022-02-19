@@ -3,16 +3,16 @@
 <Patch>
   <Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Moonjelly Race</li>
+			<li>[O21] Outer Rim Galaxies</li>
 		</mods>
 		  <match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationConditional">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Moonjelly_Race"]/comps</xpath>
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_OR_Twilek"]/comps</xpath>
 					<nomatch Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Moonjelly_Race"]</xpath>
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_OR_Twilek"]</xpath>
 						<match Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Moonjelly_Race"]</xpath>
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_OR_Twilek"]</xpath>
 							<value>
 								<comps>
 									<li>
@@ -41,7 +41,7 @@
 						</match>
 					</nomatch>
 					<match Class="PatchOperationAdd">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Moonjelly_Race"]/comps</xpath>
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_OR_Twilek"]/comps</xpath>
 						<value>
 							<li>
 								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>

@@ -237,36 +237,79 @@ namespace RimRound.Utilities
 
 
         //--------------------Mutable Dicts-------------
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Drow_Otto_Set = new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Orassan_Set = new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_OrassanHumanHybrid_Set = new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set090);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> anthro_Set = new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Anty_Set =                     new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(antySet);
-        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Drow_Otto_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> anthro_Set           =         new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_AltmerRace_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_AshlanderRace_Set =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_DunmerRace_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Human_Set =                    new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Orassan_Set =            new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_OrassanHumanHybrid_Set = new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set090);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Moonjelly_Race_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Abednedo_Set     =      new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Aqualish_Set     =      new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Bith_Set     =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Cerean_Set     =        new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Devaronian_Set     =    new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Duros_Set     =         new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Iktotchi_Set     =      new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Iridonian_Set     =     new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Ithorian_Set     =      new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Mirialan_Set     =      new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Neimoidian_Set     =    new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Nikto_Set     =         new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Selkath_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Sith_Set     =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Togruta_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Trandoshan_Set     =    new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_OR_Twilek_Set     =        new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        
+        
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Ratkin_Set =                   new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(ratkinSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ReviaRaceAlien_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
 
 
         public static Dictionary<string, Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>> raceToProperDictDictionary = new Dictionary<string, Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
         {
-            { "Alien_Drow_Otto",           Alien_Drow_Otto_Set              }, //100%
-            { "Anthro",                    anthro_Set                       }, //100%
+            { "Alien_Drow_Otto",           Alien_Drow_Otto_Set              },
+            { "Alien_OrassanHumanHybrid",  Alien_OrassanHumanHybrid_Set     }, 
+            { "Anthro",                    anthro_Set                       }, 
             { "Anty",                      Anty_Set                          },
             //{ "ESCP_AltmerRace",           ESCP_AltmerRace_Set              },
             //{ "ESCP_AshlanderRace",        ESCP_AshlanderRace_Set           },
             //{ "ESCP_DunmerRace",           ESCP_DunmerRace_Set              },
-            { "Human",                     Human_Set                        }, //100%
+            { "Human",                     Human_Set                        }, 
             //{ "Alien_Orassan",             Alien_Orassan_Set                }, 
-            { "Alien_OrassanHumanHybrid",  Alien_OrassanHumanHybrid_Set     }, 
             { "Moonjelly_Race",            Moonjelly_Race_Set               }, 
-            { "Ratkin",                    Ratkin_Set                       }, //100%
-            { "ReviaRaceAlien",            ReviaRaceAlien_Set               }  //100%
+
+            { "O21_OR_Abednedo",           O21_OR_Abednedo_Set               }, 
+            { "O21_OR_Aqualish",           O21_OR_Aqualish_Set               }, 
+            { "O21_OR_Bith",               O21_OR_Bith_Set                   }, 
+            { "O21_OR_Cerean",             O21_OR_Cerean_Set                 }, 
+            { "O21_OR_Devaronian",         O21_OR_Devaronian_Set             }, 
+            { "O21_OR_Duros",              O21_OR_Duros_Set                  }, 
+            { "O21_OR_Iktotchi",           O21_OR_Iktotchi_Set               }, 
+            { "O21_OR_Iridonian",          O21_OR_Iridonian_Set              }, 
+            { "O21_OR_Ithorian",           O21_OR_Ithorian_Set               }, 
+            { "O21_OR_Mirialan",           O21_OR_Mirialan_Set               }, 
+            { "O21_OR_Neimoidian",         O21_OR_Neimoidian_Set             }, 
+            { "O21_OR_Nikto",              O21_OR_Nikto_Set                  }, 
+            { "O21_OR_Selkath",            O21_OR_Selkath_Set                }, 
+            { "O21_OR_Sith",               O21_OR_Sith_Set                   }, 
+            { "O21_OR_Togruta",            O21_OR_Togruta_Set                }, 
+            { "O21_OR_Trandoshan",         O21_OR_Trandoshan_Set             }, 
+            { "O21_OR_Twilek",             O21_OR_Twilek_Set                 }, 
+
+            { "Ratkin",                    Ratkin_Set                       }, 
+            { "ReviaRaceAlien",            ReviaRaceAlien_Set               }  
 
         };
+
+        
 
         public static List<BodyTypeDef> standardBodyTypeDefs = new List<BodyTypeDef>() 
         {
