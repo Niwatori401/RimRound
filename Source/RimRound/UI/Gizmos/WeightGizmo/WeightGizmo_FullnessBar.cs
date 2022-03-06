@@ -280,6 +280,11 @@ namespace RimRound.UI
 		}
 
 
+		public void ResetDietSettings() 
+		{
+			SetRanges(lowerDefaultValue, upperDefaultValue);
+		}
+
 		public void SetRanges(float first, float second)
 		{
 			first %= 1;
@@ -455,11 +460,11 @@ namespace RimRound.UI
         }
 
 
-        
+		private float lowerDefaultValue = 0.3f;
+		private float upperDefaultValue = 0.8f;
 
-
-		Slider thresholdSlider = new Slider(0.5f, false);
-		Slider maxSlider = new Slider(0.7f, false);
+		Slider thresholdSlider = new Slider(0.3f, false);
+		Slider maxSlider = new Slider(0.8f, false);
 		private float thresholdSliderLastValue;
 		private float maxSliderLastValue;
 

@@ -24,13 +24,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/south</xpath>
-						<value>
-							<bodyTypes>
-								<F_030_Fat_Anty>(0,0)</F_030_Fat_Anty>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/south</xpath>
+							<value>
+								<bodyTypes>
+									<F_030_Fat_Anty>(0,0)</F_030_Fat_Anty>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_030_Fat_Anty>(0,0)</F_030_Fat_Anty>
+									</bodyTypes>
+								</south>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>
 				
@@ -51,13 +65,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/east</xpath>
-						<value>
-							<bodyTypes>
-								<F_030_Fat_Anty>(-0.09,0.35)</F_030_Fat_Anty>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_030_Fat_Anty>(-0.09,0.35)</F_030_Fat_Anty>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets</xpath>
+							<value>
+								<east>
+									<bodyTypes>
+										<F_030_Fat_Anty>(-0.09,0.35)</F_030_Fat_Anty>
+									</bodyTypes>
+								</east>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>
 
@@ -78,13 +106,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/north</xpath>
-						<value>
-							<bodyTypes>
-								<F_030_Fat_Anty>(0,0.46)</F_030_Fat_Anty>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_030_Fat_Anty>(0,0.46)</F_030_Fat_Anty>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/offsets</xpath>
+							<value>
+								<north>
+									<bodyTypes>
+										<F_030_Fat_Anty>(0,0.46)</F_030_Fat_Anty>
+									</bodyTypes>
+								</north>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>		
 			</operations>				

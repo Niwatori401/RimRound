@@ -73,6 +73,20 @@ namespace RimRound.UI
 				false);
 
 
+			float resetButtonWidth = 15;
+			Rect resetButtonRect = new Rect
+			{
+				x = modeButtonContainer.x - resetButtonWidth,
+				y = modeButtonContainer.y,
+				width = resetButtonWidth,
+				height = resetButtonWidth
+			};
+
+			if (Widgets.ButtonImageFitted(resetButtonRect, resetButtonIcon))
+			{
+				WGThingComp.fullnessbar.ResetDietSettings();
+				WGThingComp.nutritionbar.ResetDietSettings();
+			}
 
 			return new GizmoResult(GizmoState.Clear);
 		}
@@ -99,6 +113,7 @@ namespace RimRound.UI
 		FullnessAndDietStats_ThingComp WGThingComp;
 
 		private static readonly Texture2D modeHighlight = SolidColorMaterials.NewSolidColorTexture(new Color(0.121f, 0.133f, 0.145f));
-		
+		private static readonly Texture2D resetButtonIcon = ContentFinder<Texture2D>.Get("UI/WeightGizmo/resetSymbol", true);
+
 	}
 }

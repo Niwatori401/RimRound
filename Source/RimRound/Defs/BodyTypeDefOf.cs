@@ -52,6 +52,33 @@ namespace RimRound.Defs
         public static BodyTypeDef F_090_Titanic_090;
         public static BodyTypeDef F_100_Gelatinous_090;
 
+
+        public static BodyTypeDef M_005_Thick_070;
+        public static BodyTypeDef M_006_Chonky_070;
+        public static BodyTypeDef M_010_Chubby_070;
+        public static BodyTypeDef M_020_Corpulent_070;
+        public static BodyTypeDef M_030_Fat_070;
+        public static BodyTypeDef M_040_Obese_070;
+        public static BodyTypeDef M_050_MorbidlyObese_070;
+        public static BodyTypeDef M_060_Lardy_070;
+        public static BodyTypeDef M_070_Enormous_070;
+        public static BodyTypeDef M_080_Gigantic_070;
+        public static BodyTypeDef M_090_Titanic_070;
+        public static BodyTypeDef M_100_Gelatinous_070;
+
+        public static BodyTypeDef F_005_Thick_070;
+        public static BodyTypeDef F_006_Chonky_070;
+        public static BodyTypeDef F_010_Chubby_070;
+        public static BodyTypeDef F_020_Corpulent_070;
+        public static BodyTypeDef F_030_Fat_070;
+        public static BodyTypeDef F_040_Obese_070;
+        public static BodyTypeDef F_050_MorbidlyObese_070;
+        public static BodyTypeDef F_060_Lardy_070;
+        public static BodyTypeDef F_070_Enormous_070;
+        public static BodyTypeDef F_080_Gigantic_070;
+        public static BodyTypeDef F_090_Titanic_070;
+        public static BodyTypeDef F_100_Gelatinous_070;
+
         //Ratkin support
         public static BodyTypeDef F_005_Thick_Ratkin;
         public static BodyTypeDef F_006_Chonky_Ratkin;

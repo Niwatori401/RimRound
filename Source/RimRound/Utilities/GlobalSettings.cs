@@ -38,7 +38,7 @@ namespace RimRound.Utilities
         #region General Settings 
 
         public static bool showBodyTatoosForCustomSprites = false;
-        public static bool burstingEnabled = true;
+        public static bool burstingEnabled = false;
         public static bool haveWeightHediffMale = true;
         public static bool haveWeightHediffFemale = true;
         public static bool preferDefaultOutfitOverNaked = true;

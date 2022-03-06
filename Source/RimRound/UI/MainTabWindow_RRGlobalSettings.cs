@@ -114,9 +114,13 @@ namespace RimRound.UI
 
             foreach (var raceEntry in RacialBodyTypeInfoUtility.raceToProperDictDictionary)
             {
-                string raceName = raceEntry.Key;
-                
-                MakeAllDropdownsForEachGenderForRace(raceName, ref positionIndex);
+                if (DefDatabase<AlienRace.ThingDef_AlienRace>.AllDefsListForReading.Any(x => x.defName == raceEntry.Key)) 
+                {
+                    string raceName = raceEntry.Key;
+
+                    MakeAllDropdownsForEachGenderForRace(raceName, ref positionIndex);
+                }
+
             }
         }
         

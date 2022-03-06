@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
@@ -18,13 +19,13 @@ namespace RimRound.Utilities
             if (p?.story?.bodyType is null)
                 return false;
 
-            foreach (BodyTypeDef bodyTypeDef in RacialBodyTypeInfoUtility.standardBodyTypeDefs)
-            {
-                if (RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(p.story.bodyType).defName == bodyTypeDef.defName)
-                {
-                    return true;
-                }
-            }
+            string pattern = @"[fmFM][_][0-9]+[_][^_]+";
+
+            Regex regex = new Regex(pattern);
+
+            if (regex.IsMatch(p.story.bodyType.defName))
+                return true;
+
             return false;
         }
 

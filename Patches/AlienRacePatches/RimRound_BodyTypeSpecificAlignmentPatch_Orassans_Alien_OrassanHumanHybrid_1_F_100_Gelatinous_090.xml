@@ -24,13 +24,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
-						<value>
-							<bodyTypes>
-								<F_100_Gelatinous_090>(0,0)</F_100_Gelatinous_090>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+							<value>
+								<bodyTypes>
+									<F_100_Gelatinous_090>(0,0)</F_100_Gelatinous_090>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_100_Gelatinous_090>(0,0)</F_100_Gelatinous_090>
+									</bodyTypes>
+								</south>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>
 				
@@ -51,13 +65,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
-						<value>
-							<bodyTypes>
-								<F_100_Gelatinous_090>(-0.08,0.21)</F_100_Gelatinous_090>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_100_Gelatinous_090>(-0.08,0.21)</F_100_Gelatinous_090>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<east>
+									<bodyTypes>
+										<F_100_Gelatinous_090>(-0.08,0.21)</F_100_Gelatinous_090>
+									</bodyTypes>
+								</east>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>
 
@@ -78,13 +106,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
-						<value>
-							<bodyTypes>
-								<F_100_Gelatinous_090>(0,-0.38)</F_100_Gelatinous_090>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_100_Gelatinous_090>(0,-0.38)</F_100_Gelatinous_090>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_OrassanHumanHybrid"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<north>
+									<bodyTypes>
+										<F_100_Gelatinous_090>(0,-0.38)</F_100_Gelatinous_090>
+									</bodyTypes>
+								</north>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>		
 			</operations>				

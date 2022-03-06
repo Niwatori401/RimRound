@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[O21] Forgotten Realms</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+						<value>
+							<offset>(0, -0.35)</offset>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<value>
+							<offset>(0, -0.35)</offset>
+						</value>			
+					</nomatch>				
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+						<value>
+							<offset>(0.09, -0.33)</offset>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+						<value>
+							<offset>(0.09, -0.33)</offset>
+						</value>			
+					</nomatch>				
+				</li>		
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+						<value>
+							<offset>(0, 0)</offset>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="O21_FR_Chitine"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+						<value>
+							<offset>(0, 0)</offset>
+						</value>			
+					</nomatch>				
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

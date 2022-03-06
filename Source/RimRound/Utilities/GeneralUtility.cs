@@ -44,5 +44,16 @@ namespace RimRound.Utilities
         {
             return Find.TickManager.TicksGame % interval == 0;
         }
+
+        public static string GetRaceName(Pawn p) 
+        {
+            if (p.def is AlienRace.ThingDef_AlienRace race)
+            {
+                return race.defName;
+            }
+
+            Log.Warning("GetRaceName failed to get race name!");
+            return "null race";
+        }
     }
 }

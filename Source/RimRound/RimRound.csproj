@@ -94,6 +94,7 @@
     <Compile Include="Patch\GiddyUpPatches\GiddyUpCore\GUC-FloatMenuUtility_AddMountingOptions_AddExceptionForMobilityChair.cs" />
     <Compile Include="Patch\GiddyUpPatches\GiddyUpCore\IsMountableUtility_IsMountable_IncludeMoblityChairs.cs" />
     <Compile Include="Patch\GiddyUpPatches\GiddyUpRideAndRoll\FloatMenuMakerMap_ChoicesAtFor_Postfix_AddExceptionForMobilityScooter.cs" />
+    <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
     <Compile Include="Patch\GiddyUpPatches\GiddyUpCore\DefUtility_GetAnimals_IncludeMobilityChair.cs" />
     <Compile Include="Patch\RimWorldPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />

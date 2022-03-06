@@ -106,7 +106,6 @@ namespace RimRound.UI
         }
 
 
-
         private static readonly Texture2D NutritionModeIcon = ContentFinder<Texture2D>.Get("UI/WeightGizmo/WeightGizmo_ModeButtons/WeightGizmo_Mode_Nutrition", true);
         private static readonly Texture2D FullnessModeIcon = ContentFinder<Texture2D>.Get("UI/WeightGizmo/WeightGizmo_ModeButtons/WeightGizmo_Mode_Fullness", true);
         private static readonly Texture2D HybridModeIcon = ContentFinder<Texture2D>.Get("UI/WeightGizmo/WeightGizmo_ModeButtons/WeightGizmo_Mode_Hybrid", true);

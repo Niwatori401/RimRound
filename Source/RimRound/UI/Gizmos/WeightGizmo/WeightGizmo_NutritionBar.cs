@@ -218,6 +218,14 @@ namespace RimRound.UI
 			GUI.color = Color.white;
 		}
 
+		public void ResetDietSettings()
+		{
+			SetRanges(lowerDefaultValue, upperDefaultValue);
+		}
+
+		private float lowerDefaultValue = 0.3f;
+		private float upperDefaultValue = 0.8f;
+
 		//First and second are percents
 		public void SetRanges(float first, float second) 
 		{

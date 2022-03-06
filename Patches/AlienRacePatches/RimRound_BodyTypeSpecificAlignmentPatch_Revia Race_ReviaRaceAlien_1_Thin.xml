@@ -24,13 +24,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
-						<value>
-							<bodyTypes>
-								<Thin>(-0.06,0.12)</Thin>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+							<value>
+								<bodyTypes>
+									<Thin>(-0.06,0.12)</Thin>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<Thin>(-0.06,0.12)</Thin>
+									</bodyTypes>
+								</south>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>
 				
@@ -51,13 +65,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
-						<value>
-							<bodyTypes>
-								<Thin>(0.38,-0.64)</Thin>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<Thin>(0.38,-0.64)</Thin>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<east>
+									<bodyTypes>
+										<Thin>(0.38,-0.64)</Thin>
+									</bodyTypes>
+								</east>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>
 
@@ -78,13 +106,27 @@
 							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
-						<value>
-							<bodyTypes>
-								<Thin>(-0.078,-0.42)</Thin>
-							</bodyTypes>
-						</value>					
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<Thin>(-0.078,-0.42)</Thin>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<north>
+									<bodyTypes>
+										<Thin>(-0.078,-0.42)</Thin>
+									</bodyTypes>
+								</north>
+							</value>						
+						</nomatch>
 					</nomatch>
 				</li>		
 			</operations>				
