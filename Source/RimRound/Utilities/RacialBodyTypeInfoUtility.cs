@@ -323,6 +323,10 @@ namespace RimRound.Utilities
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_FR_DarkElf_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set090);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_FR_Chitine_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> SlitherRace_Set =              new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> IkquanRace_Set     =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Klikmala_Set     =             new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        
 
         
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Ratkin_Set =                   new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(ratkinSet);
@@ -391,7 +395,11 @@ namespace RimRound.Utilities
 
             { "Ratkin",                    Ratkin_Set                        }, 
             { "Ratkin_Su",                 Ratkin_Set                        }, 
-            { "ReviaRaceAlien",            ReviaRaceAlien_Set                }  
+            { "ReviaRaceAlien",            ReviaRaceAlien_Set                },  
+            
+            { "SlitherRace",               SlitherRace_Set                   },
+            { "IkquanRace",                IkquanRace_Set                    },  
+            { "KlickmalaRace",             Klikmala_Set                      }, 
 
         };
 

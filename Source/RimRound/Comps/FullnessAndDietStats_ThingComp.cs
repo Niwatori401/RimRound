@@ -107,6 +107,8 @@ namespace RimRound.Comps
             if (!parent.Spawned)
                 return;
 
+            ProcessWeightGainRequests(30);
+
             if (parent?.IsHashIntervalTick(GlobalSettings.ticksPerHungerCheck.threshold) ?? false) 
             {
                 float digestedAmt = DigestionTick() / CurrentFullnessToNutritionRatio;
@@ -122,6 +124,42 @@ namespace RimRound.Comps
         }
 
         static MethodInfo HungerRateIgnoringMalnutritionMI = typeof(Need_Food).GetProperty("HungerRateIgnoringMalnutrition", BindingFlags.NonPublic | BindingFlags.Instance).GetGetMethod(true);
+
+        public void ProcessWeightGainRequests(int ticksBetweenChecks) 
+        {
+            if (!GeneralUtility.IsHashIntervalTick(ticksBetweenChecks))
+                return;
+
+            if (weightGainRequestDelayTracker > 0)
+            {
+                weightGainRequestDelayTracker -= ticksBetweenChecks;
+                return;
+            }
+
+            weightGainRequestDelayTracker = 0;
+
+            if (this.activeWeightGainRequests.Count > 0) 
+            {
+                WeightGainRequest gainRequest = this.activeWeightGainRequests.Dequeue();
+
+                weightGainRequestDelayTracker += gainRequest.delayAmount;
+
+                Utilities.HediffUtility.AddHediffSeverity(
+                    Defs.HediffDefOf.RimRound_Weight, 
+                    this.parent.AsPawn(), 
+                    Utilities.HediffUtility.KilosToSeverity(gainRequest.amountToGain));
+
+                var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
+                if (pbtThingComp is null)
+                    return;
+
+                BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
+            }
+
+            return;
+        }
+
+        float weightGainRequestDelayTracker = 0;
 
         public void PassiveWeightLossTick() 
         {
@@ -477,6 +515,7 @@ namespace RimRound.Comps
                 fullnessbar.UpdateBar(this.DietMode);
         }
 
+        public Queue<WeightGainRequest> activeWeightGainRequests = new Queue<WeightGainRequest>();
 
         public WeightGizmo weightGizmo;
         public WeightGizmo_FullnessBar fullnessbar;
@@ -494,6 +533,19 @@ namespace RimRound.Comps
         public const float baseDigestionRate = 3.0f;
         public const float defaultFullnessToNutritionRatio = 1f; //i.e. 0.5 Fullness for 1 nutrition is 0.5f
     }
+
+
+    public struct WeightGainRequest
+    {
+        public WeightGainRequest(float amountToGain, float delayAmount) 
+        {
+            this.amountToGain = amountToGain;
+            this.delayAmount = delayAmount;
+        }
+        public float amountToGain;
+        public float delayAmount;
+    }
+
 
     public enum DietMode
     {

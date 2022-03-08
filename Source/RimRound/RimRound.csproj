@@ -106,9 +106,11 @@
     <Compile Include="Patch\RimWorldPatches\Caravan\Caravan_RemovePawn_ChangeDietMode.cs" />
     <Compile Include="Patch\RimWorldPatches\Dialog-Options_DoWindowContents_ShowDropdownToChangeBGAlways.cs" />
     <Compile Include="Patch\RimWorldPatches\Need-Food_MalnutritionSeverityPerInterval_AdjustByPawnWeight.cs" />
-    <Compile Include="Patch\RimWorldPatches\Page-ConfigureStartingPawns_DrawPortraitArea_UpdateSprite.cs" />
+    <Compile Include="Patch\RimWorldPatches\Page-ConfigureStartingPawns_DoWindowContents_UpdateSprite.cs" />
     <Compile Include="Patch\RimWorldPatches\WorkGiver-Warden-DeliverFood_JobOnThing_AddExceptionForFattenInteraction.cs" />
     <Compile Include="Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
+    <Compile Include="Things\FatteningBullet.cs" />
+    <Compile Include="Things\ME_FatteningBullet.cs" />
     <Compile Include="Utilities\BodyTypeUtility.cs" />
     <Compile Include="Utilities\HediffUtility.cs" />
     <Compile Include="Utilities\ModCompatibilityUtility.cs" />
@@ -169,7 +171,6 @@
     <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_AddFullness.cs" />
     <Compile Include="Patch\RimWorldPatches\JobGiver-GetFood_GetPriority_AdjustAIForDietMode.cs" />
     <Compile Include="Patch\RimWorldPatches\Need-Food_NutritionWanted_AdjustAIForDietMode.cs" />
-    <Compile Include="Patch\RimWorldPatches\Pawn_RareTick_CryptoSleepSicknessRemoval.cs" />
     <None Include="Garbage\Pawn_Tick_PassiveWeightLoss.cs" />
     <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_HarmonyPatch.cs" />
     <Compile Include="Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_StomachBurstCheck.cs" />

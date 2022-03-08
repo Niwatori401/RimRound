@@ -13,15 +13,12 @@ namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(Page_ConfigureStartingPawns))]
     [HarmonyPatch(nameof(Page_ConfigureStartingPawns.DoWindowContents))]
-    class Page_ConfigureStartingPawns_DrawPortraitArea_UpdateSprite
+    class Page_ConfigureStartingPawns_DoWindowContents_UpdateSprite
     {
-        public static bool Prefix(Pawn ___curPawn) 
+        public static void Postfix(Pawn ___curPawn) 
         {
-            if (___curPawn != null) 
-            {
-                AssignBodyTypeCategoricalExemptionsForStarterPage();
-            }
-            return true;
+            AssignBodyTypeCategoricalExemptionsForStarterPage();
+           
         }
 
         static void AssignBodyTypeCategoricalExemptionsForStarterPage() 
@@ -37,6 +34,8 @@ namespace RimRound.Patch
                     continue;
 
                 comp.CategoricallyExempt = BodyTypeUtility.CheckExemptions(p);
+
+                BodyTypeUtility.UpdatePawnSprite(p, false, false);
             }
         }
 

@@ -91,6 +91,44 @@ namespace RimRound.Utilities
             return pawn?.health?.hediffSet?.hediffs?.Find(x => x.def.defName == def.defName) ?? null;
         }
 
+        public static void AddHediffSeverity(Hediff hediff, Pawn pawn, float amount) 
+        {
+            float cachedSeverity = hediff.Severity;
+
+            if (hediff.def.defName == Defs.HediffDefOf.RimRound_Weight.defName)
+            {
+                if (amount > 0)
+                {
+                    float additionalSeverity = GlobalSettings.weightGainMultiplier.threshold * amount;
+
+                    if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
+                        hediff.Severity = KilosToSeverity(GlobalSettings.maxWeight.threshold);
+                    else
+                        hediff.Severity += additionalSeverity;
+                }
+                else
+                {
+                    float additionalSeverity = GlobalSettings.weightLossMultiplier.threshold * amount;
+
+                    if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
+                        hediff.Severity = KilosToSeverity(GlobalSettings.minWeight.threshold);
+                    else
+                        hediff.Severity += additionalSeverity;
+                }
+
+
+                ThrowValueText(pawn, amount, 1, 0.0005f);
+
+
+                if (GetWeightChangedMessage(pawn, cachedSeverity, hediff.Severity) is Message m)
+                    Messages.Message(m);
+            }
+            else
+            {
+                hediff.Severity += amount;
+            }
+        }
+
         public static void AddHediffSeverity(HediffDef def, Pawn pawn, float amount, bool addIfHediffNull = false)
         {
             Hediff h = GetHediffOfDefFrom(def, pawn);
@@ -108,43 +146,7 @@ namespace RimRound.Utilities
                 }
             }
 
-
-            float cachedSeverity = h.Severity;
-
-
-
-            if (h.def.defName == Defs.HediffDefOf.RimRound_Weight.defName)
-            {
-                if (amount > 0)
-                {
-                    float additionalSeverity = GlobalSettings.weightGainMultiplier.threshold * amount;
-
-                    if (SeverityToKilosWithBaseWeight(h.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
-                        h.Severity = KilosToSeverity(GlobalSettings.maxWeight.threshold);
-                    else
-                        h.Severity += additionalSeverity;
-                }
-                else
-                {
-                    float additionalSeverity = GlobalSettings.weightLossMultiplier.threshold * amount;
-
-                    if (SeverityToKilosWithBaseWeight(h.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
-                        h.Severity = KilosToSeverity(GlobalSettings.minWeight.threshold);
-                    else
-                        h.Severity += additionalSeverity;
-                }
-
-
-                ThrowValueText(pawn, amount, 1, 0.0005f);
-
-
-                if (GetWeightChangedMessage(pawn, cachedSeverity, h.Severity) is Message m)
-                    Messages.Message(m);
-            }
-            else
-            {
-                h.Severity += amount;
-            }
+            AddHediffSeverity(h, pawn, amount);
         }
 
         //This will bypass checks normally made in AddHediffSeverity for weight. Use wisely.
