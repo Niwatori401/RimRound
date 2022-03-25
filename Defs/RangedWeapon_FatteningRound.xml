@@ -45,6 +45,7 @@
       <AccuracyLong>0.45</AccuracyLong>
       <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
     </statBases>
+	<generateCommonality>0</generateCommonality>
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
