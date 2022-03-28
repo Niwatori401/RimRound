@@ -86,6 +86,7 @@
   <BodyDef>
     <defName>HoverchairBody</defName>
     <label>hoverchair</label>
+	<ignoreConfigErrors>True</ignoreConfigErrors>
     <corePart>
       <def>HoverchairStructuralFrame</def>
       <height>Middle</height>

@@ -80,32 +80,55 @@ namespace RimRound.Defs
         public static BodyTypeDef F_100_Gelatinous_070;
 
         //Ratkin support
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_005_Thick_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_006_Chonky_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_010_Chubby_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_020_Corpulent_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_030_Fat_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_040_Obese_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_050_MorbidlyObese_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_060_Lardy_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_070_Enormous_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_080_Gigantic_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_090_Titanic_Ratkin;
+        [MayRequire("Solaris.RatkinRaceMod")]
         public static BodyTypeDef F_100_Gelatinous_Ratkin;
 
         //Anty Support
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_005_Thick_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_006_Chonky_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_010_Chubby_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_020_Corpulent_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_030_Fat_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_040_Obese_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_050_MorbidlyObese_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_060_Lardy_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_070_Enormous_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_080_Gigantic_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_090_Titanic_Anty;
+        [MayRequire("Roo.AntyRaceMod")]
         public static BodyTypeDef F_100_Gelatinous_Anty;
     }
-
 }

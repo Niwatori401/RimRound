@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Xenohumans - Anthromorphs</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_030_Fat</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_030_Fat</xpath>
+							<value>
+								<M_030_Fat>(0,0)</M_030_Fat>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<value>
+								<M_030_Fat>(0,0)</M_030_Fat>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+							<value>
+								<bodyTypes>
+									<M_030_Fat>(0,0)</M_030_Fat>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_030_Fat>(0,0)</M_030_Fat>
+									</bodyTypes>
+								</south>
+							</value>						
+						</nomatch>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_030_Fat</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_030_Fat</xpath>
+							<value>
+								<M_030_Fat>(0.24,0.25)</M_030_Fat>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+							<value>
+								<M_030_Fat>(0.24,0.25)</M_030_Fat>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_030_Fat>(0.24,0.25)</M_030_Fat>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<east>
+									<bodyTypes>
+										<M_030_Fat>(0.24,0.25)</M_030_Fat>
+									</bodyTypes>
+								</east>
+							</value>						
+						</nomatch>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_030_Fat</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_030_Fat</xpath>
+							<value>
+								<M_030_Fat>(0.02,0.17)</M_030_Fat>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+							<value>
+								<M_030_Fat>(0.02,0.17)</M_030_Fat>
+							</value>						
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_030_Fat>(0.02,0.17)</M_030_Fat>
+								</bodyTypes>
+							</value>							
+						</match>
+
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<north>
+									<bodyTypes>
+										<M_030_Fat>(0.02,0.17)</M_030_Fat>
+									</bodyTypes>
+								</north>
+							</value>						
+						</nomatch>
+					</nomatch>
+				</li>		
+			</operations>				
+		</match>
+	</Operation>
+</Patch>

@@ -67,17 +67,18 @@ namespace RimRound.Utilities
         public static NumericFieldData<float> hypertension = new NumericFieldData<float>(1, 0, 1);
         public static NumericFieldData<int> maxWeight = new NumericFieldData<int>(100000, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);
         public static NumericFieldData<int> minWeight = new NumericFieldData<int>((int)Hediff_Weight.ModExtension.baseWeight, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);
+        public static NumericFieldData<int> ticksBetweenWeightGainRequestProcess = new NumericFieldData<int>(15, 5, 600);
 
         #endregion
     }
 
     public struct NumericFieldData<T> 
     {
-        public NumericFieldData(T t, float t1, float t2) 
+        public NumericFieldData(T initialValue, float min, float max) 
         {
-            threshold = t;
-            min = t1;
-            max = t2;
+            threshold = initialValue;
+            this.min = min;
+            this.max = max;
             stringBuffer = null;
         }
 

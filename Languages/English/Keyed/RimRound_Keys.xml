@@ -59,7 +59,7 @@
 	<RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>Min weight for alt wiggle angle</RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>
 	<RR_Mtw_MaxWeight>Maximum weight</RR_Mtw_MaxWeight>
 	<RR_Mtw_MinWeight>Minimum weight</RR_Mtw_MinWeight>
-	
+	<RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>Ticks between WG requests</RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>
 	
 	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
 	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>
@@ -112,4 +112,5 @@
 	<GainingResistance>Gaining Resistance</GainingResistance>
 	<GainingResistanceDesc>How much a pawn will resist the warden's effort to keep them fed. Lower values mean less reluctance to gain. When close to zero a prisoner is more likely to eat in excess when instructed to do so.</GainingResistanceDesc>
 	<TextMote_GainingResistanceChange>Reluctance\n{0} to {1}</TextMote_GainingResistanceChange>
+	
 </LanguageData>

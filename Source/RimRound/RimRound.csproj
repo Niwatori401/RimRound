@@ -99,6 +99,7 @@
     <Compile Include="Patch\GiddyUpPatches\GiddyUpCore\DefUtility_GetAnimals_IncludeMobilityChair.cs" />
     <Compile Include="Patch\RimWorldPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
+    <Compile Include="Patch\RimWorldPatches\MechClusterGenerator_MechKindSuitableForCluster_ExcludeHoverchair.cs" />
     <Compile Include="Patch\RimWorldPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawns.cs" />
     <Compile Include="Patch\RimWorldPatches\Caravan\CaravanPatchUtility.cs" />
     <Compile Include="Patch\RimWorldPatches\Caravan\CaravanMaker_MakeCaravan_ChangeDietMode.cs" />

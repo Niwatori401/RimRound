@@ -1,14 +1,17 @@
 <loadFolders>
 	<v1.3>
 		<li>/</li>
-		<li IfModActive="Ludeon.RimWorld.Ideology">IdeologyDefs</li>
-		<li>ExternalMods/AnthroRaceSupport</li>
-		<li>ExternalMods/AntyRaceSupport</li>
-		<li>ExternalMods/DogboldRaceSupport</li>	
-		<li>ExternalMods/FoxboldRaceSupport</li>	
-		<li>ExternalMods/HorseRaceSupport</li>		
 		<li>ExternalMods/Hoverchair</li>		
-		<li>ExternalMods/RatkinRaceSupport</li>		
-		<li>ExternalMods/SuperSpacesFatteningFoods</li>
+		<li>ExternalMods/SuperSpacesFatteningFoods</li>				
+		<li IfModActive="Ludeon.RimWorld.Ideology">IdeologyDefs</li>
+		<li IfModActive="rmk.anthrorace">ExternalMods/AnthroRaceSupport</li>
+		<li IfModActive="Roo.AntyRaceMod">ExternalMods/AntyRaceSupport</li>
+		<li IfModActive="ArmoredAmpharos.Dogbolds">ExternalMods/DogboldRaceSupport</li>	
+		<li IfModActive="ArmoredAmpharos.Foxbolds">ExternalMods/FoxboldRaceSupport</li>	
+		<li IfModActive="Hauvega.EquiumsSeries.Equiums">ExternalMods/HorseRaceSupport</li>		
+		<li IfModActive="Solaris.RatkinRaceMod">ExternalMods/RatkinRaceSupport</li>		
+		<li IfModActive="AveryTheKitty.XenohumansAnthromorphs">ExternalMods/XenohumanlikeRaceSupport</li>
+		<li IfModActive="Eaveslabet.SylveonRace">ExternalMods/SylveonRaceSupport</li>
+		<li IfModActive="snowcraft.MinoRace">ExternalMods/MinotaurRaceSupport</li>
 	</v1.3>
 </loadFolders>

@@ -173,6 +173,7 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.M_100_Gelatinous_070,           new BodyTypeInfo(100f  , 3.6250f, 0.05f, 0.22205f, 2.52f, 0.00f) }
             };
 
+        [MayRequire("Roo.AntyRaceMod")]
         static Dictionary<BodyTypeDef, BodyTypeInfo> antyFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -196,6 +197,7 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous_Anty,    new BodyTypeInfo(100f  , 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f)  }
             };
 
+        [MayRequire("Solaris.RatkinRaceMod")]
         static Dictionary<BodyTypeDef, BodyTypeInfo> ratkinFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -275,14 +277,28 @@ namespace RimRound.Utilities
 
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Orassan_Set =            new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set070);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_OrassanHumanHybrid_Set = new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set090);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Protogen_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> anthro_Set =                   new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
 
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Anty_Set =                     new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(antySet);
+
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Avianmorph_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Bovinemorph_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Caninemorph_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Cervinemorph_Set =         new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Dragomorph_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Felinemorph_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Gnollmorph_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Lagomorph_Set =            new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ATK_Vulpinemorph_Set =         new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_AltmerRace_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_AshlanderRace_Set =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_DunmerRace_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Equium_Set =             new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> EA_SylveonRace_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Human_Set =                    new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> MinotaurRace_Set =             new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Moonjelly_Race_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> MQT_Miqote_Set =               new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
 
@@ -345,12 +361,29 @@ namespace RimRound.Utilities
             { "Alien_SMaleEquium",         Alien_Equium_Set                  },
 
             { "Alien_Orassan",             Alien_Orassan_Set                 },
-            { "Alien_OrassanHumanHybrid",  Alien_OrassanHumanHybrid_Set      }, 
+            { "Alien_OrassanHumanHybrid",  Alien_OrassanHumanHybrid_Set      },
+
+            { "Alien_Protogen",            Alien_Protogen_Set                },
+            { "Alien_ProtogenNME",         Alien_Protogen_Set                },
+
             { "Anthro",                    anthro_Set                        }, 
             { "Anty",                      Anty_Set                          },
-                                                              
-            { "Human",                     Human_Set                         }, 
-                                                                            
+
+            { "ATK_Avianmorph",            ATK_Avianmorph_Set                },
+            { "ATK_Bovinemorph",           ATK_Bovinemorph_Set               },
+            { "ATK_Caninemorph",           ATK_Caninemorph_Set               },
+            { "ATK_Cervinemorph",          ATK_Cervinemorph_Set              },
+            { "ATK_Dragomorph",            ATK_Dragomorph_Set                },
+            { "ATK_Felinemorph",           ATK_Felinemorph_Set               },
+            { "ATK_Gnollmorph",            ATK_Gnollmorph_Set                },
+            { "ATK_Lagomorph",             ATK_Lagomorph_Set                 },
+            { "ATK_Vulpinemorph",          ATK_Vulpinemorph_Set              },
+
+            { "EA_SylveonRace",            EA_SylveonRace_Set                },
+
+            { "Human",                     Human_Set                         },
+
+            { "MinotaurRace",              MinotaurRace_Set                  },
 
             { "Moonjelly_Race",            Moonjelly_Race_Set                }, 
             { "MQT_Miqote",                MQT_Miqote_Set                    }, 

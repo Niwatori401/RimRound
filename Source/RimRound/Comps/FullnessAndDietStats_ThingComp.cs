@@ -107,7 +107,7 @@ namespace RimRound.Comps
             if (!parent.Spawned)
                 return;
 
-            ProcessWeightGainRequests(30);
+            ProcessWeightGainRequests(GlobalSettings.ticksBetweenWeightGainRequestProcess.threshold);
 
             if (parent?.IsHashIntervalTick(GlobalSettings.ticksPerHungerCheck.threshold) ?? false) 
             {
