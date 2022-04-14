@@ -31,10 +31,11 @@ namespace RimRound.Patch
 						return;
 
 					ThingComp_FoodItems_NutritionDensity nDThingComp = __instance.TryGetComp<ThingComp_FoodItems_NutritionDensity>();
+					float fullnessNutritionRatio = nDThingComp is null ? FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio : nDThingComp.Props.fullnessToNutritionRatio;
 
-					comp.UpdateRatio(__result, nDThingComp is null ? FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio : nDThingComp.Props.fullnessToNutritionRatio);
+					comp.UpdateRatio(__result, fullnessNutritionRatio);
 
-					comp.CurrentFullness += __result * comp.CurrentFullnessToNutritionRatio * GlobalSettings.fullnessMultiplier.threshold;
+					comp.CurrentFullness += __result * fullnessNutritionRatio * GlobalSettings.fullnessMultiplier.threshold;
 
 
 

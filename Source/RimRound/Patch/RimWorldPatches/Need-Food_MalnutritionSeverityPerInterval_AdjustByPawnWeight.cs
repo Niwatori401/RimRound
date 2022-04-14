@@ -16,6 +16,8 @@ namespace RimRound.Patch
     {
         public static void Postfix(ref float __result, Pawn ___pawn) 
         {
+            if (!___pawn.RaceProps.Humanlike)
+                return;
             __result *= GetMalnutritionMultByWeight(___pawn);
             return;
         }

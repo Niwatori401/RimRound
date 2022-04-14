@@ -7,34 +7,36 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<li Class="PatchOperationConditional">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes</xpath>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
 					<match Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes/F_020_Corpulent_Anty</xpath>
-						<match Class="PatchOperationReplace">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes/F_020_Corpulent_Anty</xpath>
-							<value>
-								<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
-							</value>
-						</match>
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes</xpath>
-							<value>
-								<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
-							</value>						
-						</nomatch>
-					</match>
-					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south</xpath>
-						<match Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south</xpath>
-							<value>
-								<bodyTypes>
-									<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
-								</bodyTypes>
-							</value>							
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes/F_020_Corpulent_Anty</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes/F_020_Corpulent_Anty</xpath>
+									<value>
+										<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
+									</bodyTypes>
+								</value>							
+							</nomatch>
 						</match>
-
 						<nomatch Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
 							<value>
@@ -43,90 +45,101 @@
 										<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
 									</bodyTypes>
 								</south>
-							</value>						
+							</value>							
 						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_020_Corpulent_Anty>(0,0)</F_020_Corpulent_Anty>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
 					</nomatch>
 				</li>
 				
+
 				<li Class="PatchOperationConditional">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/bodyTypes</xpath>
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east</xpath>
 					<match Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/bodyTypes/F_020_Corpulent_Anty</xpath>
-						<match Class="PatchOperationReplace">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/bodyTypes/F_020_Corpulent_Anty</xpath>
-							<value>
-								<F_020_Corpulent_Anty>(-0.16,0.32)</F_020_Corpulent_Anty>
-							</value>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/bodyTypes/F_020_Corpulent_Anty</xpath>
+								<value>
+									<F_020_Corpulent_Anty>(-0.16,0.32)</F_020_Corpulent_Anty>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_020_Corpulent_Anty>(-0.16,0.32)</F_020_Corpulent_Anty>
+								</value>						
+							</nomatch>
 						</match>
 						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/bodyTypes</xpath>
-							<value>
-								<F_020_Corpulent_Anty>(-0.16,0.32)</F_020_Corpulent_Anty>
-							</value>						
-						</nomatch>
-					</match>
-					<nomatch Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east</xpath>
-						<match Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
 									<F_020_Corpulent_Anty>(-0.16,0.32)</F_020_Corpulent_Anty>
 								</bodyTypes>
 							</value>							
-						</match>
-
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
-							<value>
-								<east>
-									<bodyTypes>
-										<F_020_Corpulent_Anty>(-0.16,0.32)</F_020_Corpulent_Anty>
-									</bodyTypes>
-								</east>
-							</value>						
-						</nomatch>
-					</nomatch>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes</xpath>
-					<match Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes/F_020_Corpulent_Anty</xpath>
-						<match Class="PatchOperationReplace">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes/F_020_Corpulent_Anty</xpath>
-							<value>
-								<F_020_Corpulent_Anty>(-0.01,0.44)</F_020_Corpulent_Anty>
-							</value>
-						</match>
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes</xpath>
-							<value>
-								<F_020_Corpulent_Anty>(-0.01,0.44)</F_020_Corpulent_Anty>
-							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north</xpath>
-						<match Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_020_Corpulent_Anty>(-0.16,0.32)</F_020_Corpulent_Anty>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes/F_020_Corpulent_Anty</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes/F_020_Corpulent_Anty</xpath>
+								<value>
+									<F_020_Corpulent_Anty>(-0.01,0.44)</F_020_Corpulent_Anty>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_020_Corpulent_Anty>(-0.01,0.44)</F_020_Corpulent_Anty>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
 									<F_020_Corpulent_Anty>(-0.01,0.44)</F_020_Corpulent_Anty>
 								</bodyTypes>
 							</value>							
-						</match>
-
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
-							<value>
-								<north>
-									<bodyTypes>
-										<F_020_Corpulent_Anty>(-0.01,0.44)</F_020_Corpulent_Anty>
-									</bodyTypes>
-								</north>
-							</value>						
 						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_020_Corpulent_Anty>(-0.01,0.44)</F_020_Corpulent_Anty>
+								</bodyTypes>
+							</north>
+						</value>							
 					</nomatch>
 				</li>		
 			</operations>				

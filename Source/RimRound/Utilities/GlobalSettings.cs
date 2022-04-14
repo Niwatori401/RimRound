@@ -62,7 +62,11 @@ namespace RimRound.Utilities
         public static NumericFieldData<int> stomachElasticityMultiplier = new NumericFieldData<int>(1, 0, 10);
         public static NumericFieldData<float> fullnessMultiplier = new NumericFieldData<float>(1, 0, 10);
         public static NumericFieldData<float> weightLossMultiplier = new NumericFieldData<float>(1, 0, 1000);
+        public static NumericFieldData<float> weightLossMultiplierMale = new NumericFieldData<float>(1, 0, 1000);
+        public static NumericFieldData<float> weightLossMultiplierFemale = new NumericFieldData<float>(1, 0, 1000);
         public static NumericFieldData<float> weightGainMultiplier = new NumericFieldData<float>(1, 0, 1000);
+        public static NumericFieldData<float> weightGainMultiplierMale = new NumericFieldData<float>(1, 0, 1000);
+        public static NumericFieldData<float> weightGainMultiplierFemale = new NumericFieldData<float>(1, 0, 1000);
         public static NumericFieldData<float> digestionRateMultiplier = new NumericFieldData<float>(1, 0, 100);
         public static NumericFieldData<float> hypertension = new NumericFieldData<float>(1, 0, 1);
         public static NumericFieldData<int> maxWeight = new NumericFieldData<int>(100000, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);

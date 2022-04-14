@@ -7,15 +7,24 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<li Class="PatchOperationRemove">
+				<li Class="PatchOperationConditional">
 					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south/bodyTypes</xpath>
+					</match>
 				</li>
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north/bodyTypes</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
+				<li Class="PatchOperationConditional">
 					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east/bodyTypes</xpath>
+					</match>
 				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north/bodyTypes</xpath>
+					</match>
+				</li>				
 			</operations>
 		</match>
 	</Operation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Half dragons</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="HalfDragon_colonist"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/scaleWithPawnDrawsize</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="HalfDragon_colonist"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[8]/scaleWithPawnDrawsize</xpath>
+			</match>			
+		</match>
+	</Operation>
+</Patch>

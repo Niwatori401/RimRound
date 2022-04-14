@@ -34,27 +34,6 @@ namespace RimRound.Patch
 				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompHyperMilkableHuman", "ResourceAmount", MethodType.Getter),
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
 
-			ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Giddy-up! Core", "DefUtility", "getAnimals", MethodType.Normal),
-				DefUtility_GetAnimals_IncludeMobilityChair.GetPatchCollection());
-
-			ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Giddy-up! Core", "IsMountableUtility", "isMountable", MethodType.Normal, new List<string>() { "Pawn", "Reason" }),
-				IsMountableUtility_IsMountable_IncludeMoblityChairs.GetPatchCollection());
-
-			ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Giddy-up! Core", "GUC_FloatMenuUtility", "AddMountingOptions", MethodType.Normal),
-				GUC_FloatMenuUtility_AddMountingOptions_AddExceptionForMobilityChair.GetPatchCollection());
-
-			ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Giddy-up! Ride and Roll", "FloatMenuMakerMap_ChoicesAtFor", "Postfix", MethodType.Normal),
-				FloatMenuMakerMap_ChoicesAtFor_Postfix_AddExceptionForMobilityScooter.GetPatchCollection());
-
-
 			int patchedMethodsCount = 0;
 			int postfixesCount = 0;
 			int prefixesCount = 0;

@@ -46,8 +46,15 @@
 	<RR_Mtw_NutritionPerPawnLabel>Nutrition per colonist (including prisoners and slaves)</RR_Mtw_NutritionPerPawnLabel>
 	
 	<RR_Mtw_GlobalMultipliersSettingsTitle>Global Values</RR_Mtw_GlobalMultipliersSettingsTitle>
+	
 	<RR_Mtw_GlobalWeightGainMultiplierTitle>Weight gain multiplier</RR_Mtw_GlobalWeightGainMultiplierTitle>
+	<RR_Mtw_GlobalWeightGainMultiplierTitleMale>Weight gain multiplier (Male)</RR_Mtw_GlobalWeightGainMultiplierTitleMale>
+	<RR_Mtw_GlobalWeightGainMultiplierTitleFemale>Weight gain multiplier (Female)</RR_Mtw_GlobalWeightGainMultiplierTitleFemale>
+	
 	<RR_Mtw_GlobalWeightLossMultiplierTitle>Weight loss multiplier</RR_Mtw_GlobalWeightLossMultiplierTitle>
+	<RR_Mtw_GlobalWeightLossMultiplierTitleMale>Weight loss multiplier (Male)</RR_Mtw_GlobalWeightLossMultiplierTitleMale>
+	<RR_Mtw_GlobalWeightLossMultiplierTitleFemale>Weight loss multiplier (Female)</RR_Mtw_GlobalWeightLossMultiplierTitleFemale>
+	
 	<RR_Mtw_GlobalDigestionRateMultiplierTitle>Digestion rate multiplier</RR_Mtw_GlobalDigestionRateMultiplierTitle>
 	<RR_Mtw_GlobalFullnessMultiplierTitle>Fullness gained multiplier</RR_Mtw_GlobalFullnessMultiplierTitle>
 	<RR_Mtw_GlobalStomachElasticityMultiplierTitle>Stomach elasticity multiplier</RR_Mtw_GlobalStomachElasticityMultiplierTitle>

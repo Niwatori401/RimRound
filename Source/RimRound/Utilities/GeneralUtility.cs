@@ -40,6 +40,36 @@ namespace RimRound.Utilities
             return (T)nullableType;
         }
 
+        public static List<Pawn> GetAllLivingHumanlikesOnMap(Map map) 
+        {
+            List<Pawn> humanlikePawns = GetAllHumanlikesOnMap(map);
+            List<Pawn> livingPawns = new List<Pawn>();
+            for (int i = 0; i < humanlikePawns.Count; i++)
+            {
+                if (!humanlikePawns[i].Dead) 
+                {
+                    livingPawns.Add(humanlikePawns[i]);
+                }
+            }
+
+            return livingPawns;
+        }
+
+        public static List<Pawn> GetAllHumanlikesOnMap(Map map) 
+        {
+            List<Pawn> allPawns = map.mapPawns.AllPawns;
+            List<Pawn> humanlikePawns = new List<Pawn>();
+            foreach (Pawn pawn in allPawns) 
+            {
+                if (pawn.RaceProps.Humanlike) 
+                {
+                    humanlikePawns.Add(pawn);   
+                }
+            }
+
+            return humanlikePawns;
+        }
+
         public static bool IsHashIntervalTick(int interval) 
         {
             return Find.TickManager.TicksGame % interval == 0;

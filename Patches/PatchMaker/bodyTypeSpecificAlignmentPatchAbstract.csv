@@ -1,0 +1,25 @@
+MOD_NAME,DEF_NAME,ITEM_INDEX,BODYTYPE_DEF,SOUTH_X,SOUTH_Y,EAST_X,EAST_Y,NORTH_X,NORTH_Y
+Half dragons,BaseDragon,8,F_005_Thick,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_006_Chonky,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_010_Chubby,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_020_Corpulent,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_030_Fat,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_040_Obese,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_050_MorbidlyObese,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_060_Lardy,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_070_Enormous,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_080_Gigantic,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_090_Titanic,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,8,F_100_Gelatinous,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_005_Thick,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_006_Chonky,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_010_Chubby,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_020_Corpulent,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_030_Fat,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_040_Obese,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_050_MorbidlyObese,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_060_Lardy,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_070_Enormous,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_080_Gigantic,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_090_Titanic,1000,1000,1000,1000,1000,1000
+Half dragons,BaseDragon,9,M_100_Gelatinous,1000,1000,1000,1000,1000,1000

@@ -48,6 +48,23 @@ namespace TestingRange
                         filenameFlair += $"_{keyWordsToReplaceWith[i]}";
                     }
                 }
+
+                filenameFlair = PatchMaker.RemoveCharacterFromString(
+                    new char[] 
+                    { 
+                        ':', 
+                        '<', 
+                        '>', 
+                        '\"', 
+                        ',', 
+                        '\\',
+                        '/',
+                        '|',
+                        '?',
+                        '*'
+                    }, 
+                    filenameFlair);
+
                 string destinationFilepathWithIndividualName = destinationFilepath.Insert(destinationFilepath.LastIndexOf('.'), filenameFlair);
                 PatchMaker.MakeSpecificPatch(templateFilePath, destinationFilepathWithIndividualName, keywordsToReplace, keyWordsToReplaceWith);
             }
@@ -150,5 +167,16 @@ namespace TestingRange
             return strings;
         }
 
+        static string RemoveCharacterFromString(char[] c, string s) 
+        {
+            foreach (char character in c) 
+            {
+                while (s.IndexOf(character) is int index && index != -1)
+                {
+                    s = s.Remove(index, 1);
+                }
+            }
+            return s;
+        }
     }
 }

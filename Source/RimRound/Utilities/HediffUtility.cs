@@ -99,7 +99,10 @@ namespace RimRound.Utilities
             {
                 if (amount > 0)
                 {
-                    float additionalSeverity = GlobalSettings.weightGainMultiplier.threshold * amount;
+                    float additionalSeverity = 
+                        GlobalSettings.weightGainMultiplier.threshold * 
+                        amount * 
+                        (pawn.gender == Gender.Male ? GlobalSettings.weightGainMultiplierMale.threshold : GlobalSettings.weightGainMultiplierFemale.threshold);
 
                     if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
                         hediff.Severity = KilosToSeverity(GlobalSettings.maxWeight.threshold);
@@ -108,7 +111,10 @@ namespace RimRound.Utilities
                 }
                 else
                 {
-                    float additionalSeverity = GlobalSettings.weightLossMultiplier.threshold * amount;
+                    float additionalSeverity = 
+                        GlobalSettings.weightLossMultiplier.threshold * 
+                        amount *
+                        (pawn.gender == Gender.Male ? GlobalSettings.weightLossMultiplierMale.threshold : GlobalSettings.weightLossMultiplierFemale.threshold);
 
                     if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
                         hediff.Severity = KilosToSeverity(GlobalSettings.minWeight.threshold);

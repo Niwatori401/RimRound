@@ -16,9 +16,17 @@ namespace RimRound.Patch
     {
         public static void Postfix(HungerCategory __0, Pawn ___pawn, ref float __result) 
         {
+            if (!___pawn.RaceProps.Humanlike)
+                return;
             __result *= BaseFoodFallMultiplierByWeightAndHungerCategory(___pawn, __0);
+            __result *= AlterNutritionFallRateForHungerDrain(___pawn);
         }
 
+
+        static float AlterNutritionFallRateForHungerDrain(Pawn p) 
+        {
+            return HungerDroneUtility.GetCurrentNutritionFallMultiplierFromDrone(p);
+        }
 
         static float BaseFoodFallMultiplierByWeightAndHungerCategory(Pawn p, HungerCategory hungerCategory) 
         {

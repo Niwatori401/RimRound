@@ -399,7 +399,11 @@ namespace RimRound.UI
 
 
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplier, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitle");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplierFemale, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitleFemale");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplierMale, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitleMale");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplier, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitle");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplierFemale, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitleFemale");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplierMale, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitleMale");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessMultiplier, numericFieldCount++, "RR_Mtw_GlobalFullnessMultiplierTitle");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.digestionRateMultiplier, numericFieldCount++, "RR_Mtw_GlobalDigestionRateMultiplierTitle");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.stomachElasticityMultiplier, numericFieldCount++, "RR_Mtw_GlobalStomachElasticityMultiplierTitle");

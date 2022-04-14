@@ -131,9 +131,10 @@ namespace RimRound.Utilities
                             if (typeParameters.Count != types.Count)
                                 throw new Exception("Was unable to match types in ModCompatibilityUtility.GetMethodInfo!");
                             
-                            //This was added for testing and needs altered later
+                            
                             Type[] methodParams = typeParameters.ToArray();
-                            methodParams[1] = methodParams[1].MakeByRefType();
+                            //This was added for testing and needs altered later
+                            //methodParams[1] = methodParams[1].MakeByRefType();
                             //---------------------------------------------
                             m = t.GetMethod(methodName, majorFlags, null, methodParams, null);
                         }

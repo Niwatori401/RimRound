@@ -7,34 +7,36 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<li Class="PatchOperationConditional">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
 					<match Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_050_MorbidlyObese</xpath>
-						<match Class="PatchOperationReplace">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_050_MorbidlyObese</xpath>
-							<value>
-								<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
-							</value>
-						</match>
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
-							<value>
-								<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
-							</value>						
-						</nomatch>
-					</match>
-					<nomatch Class="PatchOperationConditional">
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
-						<match Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
-							<value>
-								<bodyTypes>
-									<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
-								</bodyTypes>
-							</value>							
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_050_MorbidlyObese</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_050_MorbidlyObese</xpath>
+									<value>
+										<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
+									</bodyTypes>
+								</value>							
+							</nomatch>
 						</match>
-
 						<nomatch Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
 							<value>
@@ -43,90 +45,101 @@
 										<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
 									</bodyTypes>
 								</south>
-							</value>						
+							</value>							
 						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_050_MorbidlyObese>(-0.35,0.13)</M_050_MorbidlyObese>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
 					</nomatch>
 				</li>
 				
+
 				<li Class="PatchOperationConditional">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 					<match Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_050_MorbidlyObese</xpath>
-						<match Class="PatchOperationReplace">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_050_MorbidlyObese</xpath>
-							<value>
-								<M_050_MorbidlyObese>(0.46,0.27)</M_050_MorbidlyObese>
-							</value>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_050_MorbidlyObese</xpath>
+								<value>
+									<M_050_MorbidlyObese>(0.46,0.27)</M_050_MorbidlyObese>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_050_MorbidlyObese>(0.46,0.27)</M_050_MorbidlyObese>
+								</value>						
+							</nomatch>
 						</match>
 						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
-							<value>
-								<M_050_MorbidlyObese>(0.46,0.27)</M_050_MorbidlyObese>
-							</value>						
-						</nomatch>
-					</match>
-					<nomatch Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
-						<match Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
 									<M_050_MorbidlyObese>(0.46,0.27)</M_050_MorbidlyObese>
 								</bodyTypes>
 							</value>							
-						</match>
-
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
-							<value>
-								<east>
-									<bodyTypes>
-										<M_050_MorbidlyObese>(0.46,0.27)</M_050_MorbidlyObese>
-									</bodyTypes>
-								</east>
-							</value>						
-						</nomatch>
-					</nomatch>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
-					<match Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_050_MorbidlyObese</xpath>
-						<match Class="PatchOperationReplace">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_050_MorbidlyObese</xpath>
-							<value>
-								<M_050_MorbidlyObese>(-0.02,0.39)</M_050_MorbidlyObese>
-							</value>
-						</match>
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
-							<value>
-								<M_050_MorbidlyObese>(-0.02,0.39)</M_050_MorbidlyObese>
-							</value>						
 						</nomatch>
 					</match>
-					<nomatch Class="PatchOperationConditional">
-						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
-						<match Class="PatchOperationAdd">
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_050_MorbidlyObese>(0.46,0.27)</M_050_MorbidlyObese>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_050_MorbidlyObese</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_050_MorbidlyObese</xpath>
+								<value>
+									<M_050_MorbidlyObese>(-0.02,0.39)</M_050_MorbidlyObese>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_050_MorbidlyObese>(-0.02,0.39)</M_050_MorbidlyObese>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
 									<M_050_MorbidlyObese>(-0.02,0.39)</M_050_MorbidlyObese>
 								</bodyTypes>
 							</value>							
-						</match>
-
-						<nomatch Class="PatchOperationAdd">
-							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
-							<value>
-								<north>
-									<bodyTypes>
-										<M_050_MorbidlyObese>(-0.02,0.39)</M_050_MorbidlyObese>
-									</bodyTypes>
-								</north>
-							</value>						
 						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_050_MorbidlyObese>(-0.02,0.39)</M_050_MorbidlyObese>
+								</bodyTypes>
+							</north>
+						</value>							
 					</nomatch>
 				</li>		
 			</operations>				
