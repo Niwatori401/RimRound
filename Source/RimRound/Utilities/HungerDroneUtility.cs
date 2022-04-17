@@ -1,4 +1,5 @@
 ﻿using RimRound.AI;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,11 +51,18 @@ namespace RimRound.Utilities
 
         static HungerDroneLevel GetHighestHungerDroneLevelFor(Pawn p) 
         {
+            if (p is null)
+                return HungerDroneLevel.None;
+
             HungerDroneLevel hungerDroneLevel = HungerDroneLevel.None;
             if (!p.RaceProps.Humanlike)
                 return HungerDroneLevel.None;
 
-            var activeConditions = p.Map.gameConditionManager.ActiveConditions;
+            List<GameCondition> activeConditions = p?.Map?.gameConditionManager?.ActiveConditions;
+
+            if (activeConditions is null)
+                return HungerDroneLevel.None;
+
             for (int i = 0; i < activeConditions.Count; i++)
             {
                 if (activeConditions[i] is GameCondition_PsychicHungerIncrease gc)

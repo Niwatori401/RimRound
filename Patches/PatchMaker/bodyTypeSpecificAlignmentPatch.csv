@@ -565,3 +565,77 @@ Minotaur Race,MinotaurRace,1,M_070_Enormous,0,0,0.025,0.495,0.07,0.68
 Minotaur Race,MinotaurRace,1,M_080_Gigantic,0,0,0.025,0.495,0.04,0.44
 Minotaur Race,MinotaurRace,1,M_090_Titanic,0,0,0.025,0.495,-0.04,0.84
 Minotaur Race,MinotaurRace,1,M_100_Gelatinous,0,0,0.025,0.495,0.01,0.08
+Ferrex Race (Continued),Alien_Ferrex,1,F_005_Thick,0,0,0.8,-0.593333333,0.0125,-0.875
+Ferrex Race (Continued),Alien_Ferrex,1,F_006_Chonky,0,0,0.85,-0.583333333,0.0225,-0.875
+Ferrex Race (Continued),Alien_Ferrex,1,F_010_Chubby,0,0,0.92,-0.573333333,0.0025,-0.905
+Ferrex Race (Continued),Alien_Ferrex,1,F_020_Corpulent,0,0,1.04,-0.523333333,0.0025,-0.885
+Ferrex Race (Continued),Alien_Ferrex,1,F_030_Fat,0,0,1.1,-0.453333333,0.0225,-0.825
+Ferrex Race (Continued),Alien_Ferrex,1,F_040_Obese,0,0,1.14,-0.343333333,0.0225,-0.815
+Ferrex Race (Continued),Alien_Ferrex,1,F_050_MorbidlyObese,0,0,1.33,-0.333333333,-0.0075,-0.845
+Ferrex Race (Continued),Alien_Ferrex,1,F_060_Lardy,0,0,1.23,-0.243333333,-0.0075,-0.675
+Ferrex Race (Continued),Alien_Ferrex,1,F_070_Enormous,0,0,1.61,-0.443333333,0.0225,-0.825
+Ferrex Race (Continued),Alien_Ferrex,1,F_080_Gigantic,0,0,1.61,-0.383333333,-0.0175,-0.835
+Ferrex Race (Continued),Alien_Ferrex,1,F_090_Titanic,0,0,1.61,-0.383333333,-0.0175,-0.685
+Ferrex Race (Continued),Alien_Ferrex,1,F_100_Gelatinous,0,0,1.61,-0.383333333,0.0325,-1.355
+Ferrex Race (Continued),Alien_Ferrex,1,M_005_Thick,0,0,0.83,-0.61,0.015,-0.885
+Ferrex Race (Continued),Alien_Ferrex,1,M_006_Chonky,0,0,0.83,-0.65,0.035,-0.855
+Ferrex Race (Continued),Alien_Ferrex,1,M_010_Chubby,0,0,0.87,-0.65,0.015,-0.995
+Ferrex Race (Continued),Alien_Ferrex,1,M_020_Corpulent,0,0,1.03,-0.57,0.055,-0.925
+Ferrex Race (Continued),Alien_Ferrex,1,M_030_Fat,0,0,1.09,-0.52,0.035,-0.925
+Ferrex Race (Continued),Alien_Ferrex,1,M_040_Obese,0,0,1.22,-0.47,0.035,-0.845
+Ferrex Race (Continued),Alien_Ferrex,1,M_050_MorbidlyObese,0,0,1.22,-0.36,0.025,-0.715
+Ferrex Race (Continued),Alien_Ferrex,1,M_060_Lardy,0,0,1.29,-0.22,0.085,-0.605
+Ferrex Race (Continued),Alien_Ferrex,1,M_070_Enormous,0,0,1.29,-0.35,0.065,-0.805
+Ferrex Race (Continued),Alien_Ferrex,1,M_080_Gigantic,0,0,1.29,-0.35,0.035,-1.045
+Ferrex Race (Continued),Alien_Ferrex,1,M_090_Titanic,0,0,1.29,-0.35,-0.045,-0.645
+Ferrex Race (Continued),Alien_Ferrex,1,M_100_Gelatinous,0,0,1.29,-0.35,0.005,-1.405
+Ferrex Race (Continued),Alien_Ferrex,1,Female,0,0,0.85,-0.6,0,-0.91
+Ferrex Race (Continued),Alien_Ferrex,1,Male,0,0,0.78,-0.57,0,-0.91
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_005_Thick,0,0,0.29,-0.27,-0.005,-0.15
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_006_Chonky,0,0,0.34,-0.26,0.005,-0.15
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_010_Chubby,0,0,0.41,-0.25,-0.015,-0.18
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_020_Corpulent,0,0,0.53,-0.2,-0.015,-0.16
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_030_Fat,0,0,0.59,-0.13,0.005,-0.1
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_040_Obese,0,0,0.63,-0.02,0.005,-0.09
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_050_MorbidlyObese,0,0,0.82,-0.01,-0.025,-0.12
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_060_Lardy,0,0,0.72,0.08,-0.025,0.05
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_070_Enormous,0,0,1.1,-0.12,0.005,-0.1
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_080_Gigantic,0,0,1.1,-0.06,-0.035,-0.11
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_090_Titanic,0,0,1.1,-0.06,-0.035,0.04
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_100_Gelatinous,0,0,1.1,-0.06,0.015,-0.63
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_005_Thick,0,0,0.35,-0.335,-0.006666667,-0.193333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_006_Chonky,0,0,0.35,-0.375,0.013333333,-0.163333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_010_Chubby,0,0,0.39,-0.375,-0.006666667,-0.303333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_020_Corpulent,0,0,0.55,-0.295,0.033333333,-0.233333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_030_Fat,0,0,0.61,-0.245,0.013333333,-0.233333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_040_Obese,0,0,0.74,-0.195,0.013333333,-0.153333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_050_MorbidlyObese,0,0,0.74,-0.085,0.003333333,-0.023333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_060_Lardy,0,0,0.81,0.055,0.063333333,0.086666667
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_070_Enormous,0,0,0.81,-0.075,0.043333333,-0.113333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_080_Gigantic,0,0,0.81,-0.075,0.013333333,-0.353333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_090_Titanic,0,0,0.81,-0.075,-0.066666667,0.046666667
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_100_Gelatinous,0,0,0.81,-0.075,-0.016666667,-0.713333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_005_Thick,0,0,0.37,-0.36,0,-0.263333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_006_Chonky,0,0,0.42,-0.35,0.01,-0.263333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_010_Chubby,0,0,0.49,-0.34,-0.01,-0.293333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_020_Corpulent,0,0,0.61,-0.29,-0.01,-0.273333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_030_Fat,0,0,0.67,-0.22,0.01,-0.213333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_040_Obese,0,0,0.71,-0.11,0.01,-0.203333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_050_MorbidlyObese,0,0,0.9,-0.1,-0.02,-0.233333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_060_Lardy,0,0,0.8,-0.01,-0.02,-0.063333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_070_Enormous,0,0,1.18,-0.21,0.01,-0.213333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_080_Gigantic,0,0,1.18,-0.15,-0.03,-0.223333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_090_Titanic,0,0,1.18,-0.15,-0.03,-0.073333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_100_Gelatinous,0,0,1.18,-0.15,0.02,-0.743333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_005_Thick,0,0,0.44,-0.445,-0.006666667,-0.306666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_006_Chonky,0,0,0.44,-0.485,0.013333333,-0.276666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_010_Chubby,0,0,0.48,-0.485,-0.006666667,-0.416666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_020_Corpulent,0,0,0.64,-0.405,0.033333333,-0.346666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_030_Fat,0,0,0.7,-0.355,0.013333333,-0.346666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_040_Obese,0,0,0.83,-0.305,0.013333333,-0.266666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_050_MorbidlyObese,0,0,0.83,-0.195,0.003333333,-0.136666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_060_Lardy,0,0,0.9,-0.055,0.063333333,-0.026666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_070_Enormous,0,0,0.9,-0.185,0.043333333,-0.226666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_080_Gigantic,0,0,0.9,-0.185,0.013333333,-0.466666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_090_Titanic,0,0,0.9,-0.185,-0.066666667,-0.066666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_100_Gelatinous,0,0,0.9,-0.185,-0.016666667,-0.826666667

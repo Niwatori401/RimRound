@@ -16,7 +16,6 @@
 		<li IfModActive="TrahsPanda.UT.Dreemurr">ExternalMods/DreemurRaceSupport</li>
 		<li IfModActive="Monti.HalfDragons">ExternalMods/HalfDragonRaceSupport</li>
 		<li IfModActive="TrahsPanda.FurretRace">ExternalMods/FurretRaceSupport</li>
-		<!--Ferrex mod doesnt have a package ID so it must be loaded all the time-->
-		<li>ExternalMods/FerrexRaceSupport</li>
+		<li IfModActive="Mlie.FerrexRace">ExternalMods/FerrexRaceSupport</li>
 	</v1.3>
 </loadFolders>

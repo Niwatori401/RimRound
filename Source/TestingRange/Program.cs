@@ -25,6 +25,13 @@ namespace TestingRange
 
                 string response = Console.ReadLine();
 
+                if (response != null && response.Length < 1)
+                {
+                    Console.WriteLine("Please choose a valid patch mode.\n");
+                    continue;
+                }
+
+
                 if (response[0] == '1')
                 {
                     patchMode = PatchMode.WipeAndRefresh;
@@ -58,9 +65,16 @@ namespace TestingRange
                 new PatchData("RimRound_RemoveDefaultOffset",                       "removeDefaultOffset", 3),
                 new PatchData("RimRound_AlignBodyPartAbstractDef",                  "bodyPartAlignmentPatchesAbstract", 3),
                 new PatchData("RimRound_BodyTypeSpecificAlignmentPatchAbstractDef", "bodyTypeSpecificAlignmentPatchAbstract", 4),
+                new PatchData("RimRound_RemoveScaleWithBodyDrawsizeTagAbstractDef", "removeScaleWithBodyDrawsizeTagAbstract", 3),
             };
 
-            // TemplateName, CSV Name, flair args
+            
+            if ((patchMode & PatchMode.Wipe) > PatchMode.None)
+            {
+                string[] files = Directory.GetFiles(@$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\", "*.xml");
+                foreach (string file in files)
+                    File.Delete(file);
+            }
 
             foreach (var x in patchSets) 
             {
@@ -69,12 +83,6 @@ namespace TestingRange
                 string csvFilePath =         @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.csvName}.csv";
                 int flairArgs = x.flairArgNumber;
 
-                if ((patchMode & PatchMode.Wipe) > PatchMode.None)
-                {
-                    string[] files = Directory.GetFiles(@$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\", "*.xml");
-                    foreach (string file in files)
-                        File.Delete(file);
-                }
 
                 if ((patchMode & PatchMode.Refresh) > PatchMode.None)
                     PatchMaker.MakePatchWithCSV(templateFilePath, destinationFilePath, csvFilePath, flairArgs);

@@ -278,6 +278,9 @@ namespace RimRound.Utilities
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Orassan_Set =            new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set070);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_OrassanHumanHybrid_Set = new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set090);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Protogen_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Ferrex_Set =             new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Fennex_Set =             new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Frijjid_Set =            new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> anthro_Set =                   new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
 
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Anty_Set =                     new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(antySet);
@@ -295,6 +298,8 @@ namespace RimRound.Utilities
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_AltmerRace_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_AshlanderRace_Set =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ESCP_DunmerRace_Set =          new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> HalfDragon_Set =               new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Alien_Equium_Set =             new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> EA_SylveonRace_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Human_Set =                    new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
@@ -339,11 +344,16 @@ namespace RimRound.Utilities
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_FR_DarkElf_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(set090);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> O21_FR_Chitine_Set     =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> RE_Asari_Set =                 new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> SlitherRace_Set =              new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> IkquanRace_Set     =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Klikmala_Set     =             new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         
-
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Stick_Stickman_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> TRAHS_DreemurrRace_Set =       new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> TRAHS_FurretRace_Set =         new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
         
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> Ratkin_Set =                   new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(ratkinSet);
         static Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>> ReviaRaceAlien_Set =           new Dictionary<Gender, Dictionary<BodyTypeDef, BodyTypeInfo>>(defaultSet);
@@ -360,6 +370,9 @@ namespace RimRound.Utilities
             { "Alien_PEquium",             Alien_Equium_Set                  },
             { "Alien_SMaleEquium",         Alien_Equium_Set                  },
 
+            { "Alien_Ferrex",              Alien_Ferrex_Set                  },
+            { "Alien_Fennex",              Alien_Fennex_Set                  },
+            { "Alien_Frijjid",             Alien_Frijjid_Set                 },
             { "Alien_Orassan",             Alien_Orassan_Set                 },
             { "Alien_OrassanHumanHybrid",  Alien_OrassanHumanHybrid_Set      },
 
@@ -381,6 +394,8 @@ namespace RimRound.Utilities
 
             { "EA_SylveonRace",            EA_SylveonRace_Set                },
 
+            { "HalfDragon",                HalfDragon_Set                    },
+            { "HalfDragon_colonist",       HalfDragon_Set                    },
             { "Human",                     Human_Set                         },
 
             { "MinotaurRace",              MinotaurRace_Set                  },
@@ -428,11 +443,17 @@ namespace RimRound.Utilities
 
             { "Ratkin",                    Ratkin_Set                        }, 
             { "Ratkin_Su",                 Ratkin_Set                        }, 
-            { "ReviaRaceAlien",            ReviaRaceAlien_Set                },  
-            
+            { "ReviaRaceAlien",            ReviaRaceAlien_Set                },
+
+            { "RE_Asari",                  RE_Asari_Set                      },
+
+            { "Stick_Stickman",            Stick_Stickman_Set                },
             { "SlitherRace",               SlitherRace_Set                   },
             { "IkquanRace",                IkquanRace_Set                    },  
-            { "KlickmalaRace",             Klikmala_Set                      }, 
+            { "KlickmalaRace",             Klikmala_Set                      },
+
+            { "TRAHS_DreemurrRace",        TRAHS_DreemurrRace_Set            },
+            { "TRAHS_FurretRace",          TRAHS_FurretRace_Set              },
 
         };
 

@@ -19,6 +19,13 @@
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east/bodyTypes</xpath>
 					</match>
 				</li>
+				<!-- No one needs a west tag! -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/west</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/west</xpath>
+					</match>
+				</li>				
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north/bodyTypes</xpath>
 					<match Class="PatchOperationRemove">
