@@ -43,6 +43,7 @@ namespace RimRound.Utilities
         public static bool haveWeightHediffFemale = true;
         public static bool preferDefaultOutfitOverNaked = true;
         public static bool alternateNorthHeadPositionForRRBodytypes = false;
+        public static bool moodletsForWeightOpinions = true;
 
         public static bool useZoomPortraitStyle = false;
 

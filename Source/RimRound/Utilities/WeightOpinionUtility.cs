@@ -103,6 +103,9 @@ namespace RimRound.Utilities
 
         public static bool ShouldHaveThisKindOfThought(ThoughtWorker thoughtWorker, Pawn p, WeightOpinion opinion)
         {
+            if (!GlobalSettings.moodletsForWeightOpinions)
+                return false;
+            
             if (!p.RaceProps.Humanlike)
             {
                 return false;

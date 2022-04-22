@@ -24,7 +24,7 @@ namespace RimRound.Patch
 
         static float GetMalnutritionMultByWeight(Pawn p) 
         {
-            return 1 / (20 * Utilities.HediffUtility.KilosToSeverity(p.Weight()) + 1);
+            return 1 / (20 * Utilities.HediffUtility.KilosToSeverityWithBaseWeight(p.Weight()) + 1);
         }
     }
 }

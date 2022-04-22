@@ -35,9 +35,9 @@ namespace RimRound.Patch
                 case HungerCategory.Fed:
                     return 1;
                 case HungerCategory.Hungry:
-                    return 1 / (0.3f * Utilities.HediffUtility.KilosToSeverity(p.Weight()) + 1);
+                    return 1 / (0.3f * Utilities.HediffUtility.KilosToSeverityWithBaseWeight(p.Weight()) + 1);
                 case HungerCategory.UrgentlyHungry:
-                    return 1 / (Utilities.HediffUtility.KilosToSeverity(p.Weight()) + 1);
+                    return 1 / (Utilities.HediffUtility.KilosToSeverityWithBaseWeight(p.Weight()) + 1);
                 case HungerCategory.Starving:
                     return 0f;
                 default:

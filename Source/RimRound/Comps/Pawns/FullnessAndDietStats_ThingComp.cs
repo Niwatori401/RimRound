@@ -41,8 +41,8 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", defaultFullnessToNutritionRatio);
             Scribe_Values.Look<float>(ref hardLimitAdditionalPercentage,   "hardLimitAdditionalPercentage",   defaultHardLimitAdditionalPercentage);
             Scribe_Values.Look<float>(ref personalStomachElasticity,       "personalStomachElasticity",       defaultPersonalStomachElasticity);
-            Scribe_Values.Look<float>(ref digestionRateBonusMult,          "digestionRateBonusMult",          1f);
-            Scribe_Values.Look<float>(ref digestionRateBonusFlat,          "digestionRateBonusFlat",          0f);
+            Scribe_Values.Look<float>(ref globalDigestionRateBonusMult,    "digestionRateBonusMult",          1f);
+            Scribe_Values.Look<float>(ref globalDigestionRateBonusFlat,    "digestionRateBonusFlat",          0f);
             Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
             Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
         }
@@ -147,7 +147,7 @@ namespace RimRound.Comps
                 Utilities.HediffUtility.AddHediffSeverity(
                     Defs.HediffDefOf.RimRound_Weight, 
                     this.parent.AsPawn(), 
-                    Utilities.HediffUtility.KilosToSeverity(gainRequest.amountToGain));
+                    Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain));
 
                 var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
                 if (pbtThingComp is null)
@@ -297,11 +297,11 @@ namespace RimRound.Comps
                 return (
                     (2.6666667E-05f * (float)(HungerRateIgnoringMalnutritionMI.Invoke(parent.AsPawn().needs.food, null))) * 
                     GlobalSettings.digestionRateMultiplier.threshold *
-                    PersonalDigestionRateMult * 
-                    digestionRateBonusMult * 
-                    baseDigestionRate) + 
-                    personalDigestionRateFlat + 
-                    digestionRateBonusFlat;
+                    PersonalDigestionRateMult *
+                    GlobalDigestionRateBonusMult * 
+                    baseDigestionRate) +
+                    PersonalDigestionRateFlat +
+                    GlobalDigestionRateBonusFlat;
             }
         }
 
@@ -331,11 +331,31 @@ namespace RimRound.Comps
         public float PersonalDigestionRateMult 
         {
             get => personalDigestionRateMult * HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn());
+            set => personalDigestionRateMult = value;
         }
         private float personalDigestionRateMult = 1f;
+
+        public float PersonalDigestionRateFlat 
+        {
+            get => personalDigestionRateFlat;
+            set => personalDigestionRateFlat = value;
+        }
         private float personalDigestionRateFlat = 0f;
-        private float digestionRateBonusMult = 1f;
-        private float digestionRateBonusFlat = 0f;
+
+
+        public float GlobalDigestionRateBonusMult 
+        {
+            get => globalDigestionRateBonusMult;
+            set => globalDigestionRateBonusMult = value;
+        }
+        private static float globalDigestionRateBonusMult = 1f;
+
+        public float GlobalDigestionRateBonusFlat
+        {
+            get => globalDigestionRateBonusFlat;
+            set => globalDigestionRateBonusFlat = value;
+        }
+        private static float globalDigestionRateBonusFlat = 0f;
 
 
 

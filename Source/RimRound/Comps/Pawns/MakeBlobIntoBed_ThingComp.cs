@@ -24,7 +24,7 @@ namespace RimRound.Comps
             {
                 if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, (Pawn)parent) is Hediff h &&
                     h?.Severity is float s &&
-                    s >= Utilities.HediffUtility.KilosToSeverity(GlobalSettings.weightToBeBed.threshold))
+                    s >= Utilities.HediffUtility.KilosToSeverityWithBaseWeight(GlobalSettings.weightToBeBed.threshold))
                 {
                     canBeBed = true;
                 }

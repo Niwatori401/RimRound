@@ -114,6 +114,11 @@
     <Compile Include="Patch\RimWorldPatches\PawnUtility_GetPosture_AlterPostureIfWearingScooter.cs" />
     <Compile Include="Patch\RimWorldPatches\WorkGiver-Warden-DeliverFood_JobOnThing_AddExceptionForFattenInteraction.cs" />
     <Compile Include="Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Things\FatteningBullet.cs" />
     <Compile Include="Things\ME_FatteningBullet.cs" />
     <Compile Include="Utilities\BodyTypeUtility.cs" />
@@ -123,6 +128,7 @@
     <Compile Include="Utilities\ModCompatibilityUtility.cs" />
     <Compile Include="Utilities\PrisonerUtility.cs" />
     <Compile Include="Utilities\WeightOpinionUtility.cs" />
+    <None Include="app.config" />
     <None Include="Garbage\Building_FeedingTube.cs" />
     <Compile Include="AI\PrisonerStuff\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />
     <Compile Include="Comps\Food\CompProperties_FoodItems_NutritionDensity.cs" />
@@ -205,6 +211,10 @@
     <None Include=".editorconfig" />
     <Compile Include="AI\PrisonerStuff\WorkGivers\WorkGiver_StuffPrisoner.cs" />
     <None Include="Garbage\WorkGiver_TubeFeed.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

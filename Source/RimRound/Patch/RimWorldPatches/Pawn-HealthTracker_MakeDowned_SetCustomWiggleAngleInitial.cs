@@ -15,7 +15,7 @@ namespace RimRound.Patch
     {
         public static void Postfix(Pawn ___pawn) 
         {
-            if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, ___pawn)?.Severity is float s && s >= (Utilities.HediffUtility.KilosToSeverity(GlobalSettings.weightToAdjustWiggleAngle.threshold)))
+            if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, ___pawn)?.Severity is float s && s >= (Utilities.HediffUtility.KilosToSeverityWithBaseWeight(GlobalSettings.weightToAdjustWiggleAngle.threshold)))
                 ___pawn.Drawer.renderer.wiggler.SetToCustomRotation(Rot4.North.AsAngle);
 
         }

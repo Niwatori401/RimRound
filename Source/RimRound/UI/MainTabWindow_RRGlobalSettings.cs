@@ -314,6 +314,15 @@ namespace RimRound.UI
             },
             "RR_Mtw_GeneralSettings_UseZoomPortraitStyle".Translate(), ref GlobalSettings.useZoomPortraitStyle, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 5,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_MoodletsForWeightOpinions".Translate(), ref GlobalSettings.moodletsForWeightOpinions, false, null, null, false);
+
 
             GUI.EndGroup();
         }

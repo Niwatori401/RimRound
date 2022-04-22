@@ -25,13 +25,13 @@ namespace RimRound.Patch
         {
             if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp comp)
             {
-                comp.defaultBodyType = pawn.story.bodyType;
+                comp.defaultBodyType = pawn?.story?.adulthood is null ? pawn.story.childhood.BodyTypeFor(pawn.gender) : pawn.story.adulthood.BodyTypeFor(pawn.gender);
                 Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, pawn);
                 Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, pawn);
                 Utilities.HediffUtility.SetHediffSeverity(
                     Defs.HediffDefOf.RimRound_Weight, 
                     pawn, 
-                    Utilities.HediffUtility.KilosToSeverity(
+                    Utilities.HediffUtility.KilosToSeverityWithBaseWeight(
                         GetRandomStartingWeight(GetWeightPercentileByFaction(pawn)) * 1000)
                     );
 

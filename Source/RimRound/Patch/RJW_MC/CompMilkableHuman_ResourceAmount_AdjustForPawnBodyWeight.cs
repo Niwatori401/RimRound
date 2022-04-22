@@ -13,7 +13,7 @@ namespace RimRound.Patch
         public static void Postfix(ref float __result, ThingComp __instance) 
         {
 
-            float weightSeverity = Utilities.HediffUtility.KilosToSeverity(__instance.parent.AsPawn().Weight());
+            float weightSeverity = Utilities.HediffUtility.KilosToSeverityWithBaseWeight(__instance.parent.AsPawn().Weight());
 
             if (weightSeverity > milkMultiplier.Last().First)
             {

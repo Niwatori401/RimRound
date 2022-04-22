@@ -27,9 +27,14 @@ namespace RimRound.Utilities
             return (severity / Values.severityPerKilo) + Hediff_Weight.ModExtension.baseWeight;
         }
 
-        public static float KilosToSeverity(float weightIncludingBaseWeight)
+        public static float KilosToSeverityWithBaseWeight(float weightIncludingBaseWeight)
         {
             return (weightIncludingBaseWeight - Hediff_Weight.ModExtension.baseWeight) * Values.severityPerKilo;
+        }
+
+        public static float KilosToSeverityWithoutBaseWeight(float weightInKilograms)
+        {
+            return weightInKilograms * Values.severityPerKilo;
         }
 
         public static Hediff WeightHediff(this Pawn pawn) 
@@ -105,7 +110,7 @@ namespace RimRound.Utilities
                         (pawn.gender == Gender.Male ? GlobalSettings.weightGainMultiplierMale.threshold : GlobalSettings.weightGainMultiplierFemale.threshold);
 
                     if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
-                        hediff.Severity = KilosToSeverity(GlobalSettings.maxWeight.threshold);
+                        hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.maxWeight.threshold);
                     else
                         hediff.Severity += additionalSeverity;
                 }
@@ -117,7 +122,7 @@ namespace RimRound.Utilities
                         (pawn.gender == Gender.Male ? GlobalSettings.weightLossMultiplierMale.threshold : GlobalSettings.weightLossMultiplierFemale.threshold);
 
                     if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
-                        hediff.Severity = KilosToSeverity(GlobalSettings.minWeight.threshold);
+                        hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.minWeight.threshold);
                     else
                         hediff.Severity += additionalSeverity;
                 }
