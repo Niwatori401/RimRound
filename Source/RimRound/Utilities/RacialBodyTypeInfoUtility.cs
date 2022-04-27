@@ -61,6 +61,53 @@ namespace RimRound.Utilities
             return raceSpecificDef;
         }
 
+
+        public static float GetBodyTypeWeightRequirementMultiplier(Pawn p) 
+        {
+            if (p is null || !p.RaceProps.Humanlike)
+                return 1;
+
+            if (!GlobalSettings.varyMinWeightForBodyTypeByBodySize)
+                return 1;
+
+            return GetBodyTypeWeightRequirementMultiplierByDefName(p.story.bodyType.defName);
+        }
+
+        public static float GetBodyTypeWeightRequirementMultiplierByDefName(string defName)
+        {
+            foreach (var bodyTypeDef in RacialBodyTypeInfoUtility.standardBodyTypeDefs)
+                if (bodyTypeDef.defName == defName)
+                    return 1;
+
+
+            int endPos = defName.LastIndexOf('_');
+
+            if (endPos == -1)
+                return 1;
+
+            string cleanedDefName = defName.Substring(endPos + 1);
+
+            //Log.Message($"cleaned bodytype! {cleanedDefName}");
+
+            switch (cleanedDefName)
+            {
+                case "090":
+                    return 0.6f;
+                case "070":
+                    return 0.35f;
+                case "Ratkin":
+                    return 0.6f;
+                case "Anty":
+                    return 0.6f;
+                default:
+                    Log.Warning("Ran defualt case in GetBodyTypeWeightRequirementMultiplier!");
+                    break;
+            }
+
+            return 0;
+        }
+
+
         static Dictionary<BodyTypeDef, BodyTypeInfo> defaultFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },

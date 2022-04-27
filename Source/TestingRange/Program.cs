@@ -9,7 +9,10 @@ namespace TestingRange
 {
     class Program
     {
-
+        //static void Main(string[] args) 
+        //{
+        // Test area
+        //}
 
         static void Main(string[] args)
         {
@@ -17,7 +20,7 @@ namespace TestingRange
             PatchMode patchMode = PatchMode.None;
 
             while (patchMode == PatchMode.None)
-            { 
+            {
                 Console.WriteLine("Select patch mode: \n" +
                     "1: Wipe and regenerate\n" +
                     "2: Only regenerate\n" +
@@ -44,7 +47,7 @@ namespace TestingRange
                 {
                     patchMode = PatchMode.Wipe;
                 }
-                else 
+                else
                 {
                     Console.WriteLine("Please choose a valid patch mode.\n");
                 }
@@ -68,7 +71,7 @@ namespace TestingRange
                 new PatchData("RimRound_RemoveScaleWithBodyDrawsizeTagAbstractDef", "removeScaleWithBodyDrawsizeTagAbstract", 3),
             };
 
-            
+
             if ((patchMode & PatchMode.Wipe) > PatchMode.None)
             {
                 string[] files = Directory.GetFiles(@$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\", "*.xml");
@@ -76,11 +79,11 @@ namespace TestingRange
                     File.Delete(file);
             }
 
-            foreach (var x in patchSets) 
+            foreach (var x in patchSets)
             {
-                string templateFilePath =    @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.templateName}.xml~";
+                string templateFilePath = @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.templateName}.xml~";
                 string destinationFilePath = @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\{x.templateName}.xml";
-                string csvFilePath =         @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.csvName}.csv";
+                string csvFilePath = @$"O:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.csvName}.csv";
                 int flairArgs = x.flairArgNumber;
 
 
@@ -89,7 +92,7 @@ namespace TestingRange
             }
 
 
-            
+
         }
 
         public struct PatchData

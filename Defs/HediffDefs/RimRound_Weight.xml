@@ -15,10 +15,8 @@
 			</li>
 		</modExtensions>
 
-		<hediffClass>HediffWithComps</hediffClass>
+		<hediffClass>RimRound.Hediffs.Hediff_Weight</hediffClass>
 		
-		<comps>
-		</comps>
 		<isBad>false</isBad>
 		
 		<minSeverity>0.001</minSeverity>

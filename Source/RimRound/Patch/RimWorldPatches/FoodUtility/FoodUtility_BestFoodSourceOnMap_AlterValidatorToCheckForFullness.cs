@@ -74,7 +74,16 @@ namespace RimRound.Patch
                 {
                     if (!eater.RaceProps.Humanlike && t != null)
                     {
-                        return ogPredicate(t) && !t.def.defName.Contains("FeedingTube") && !t.def.defName.Contains("FoodFaucet");
+                        bool value = false;
+                        try
+                        {
+                            value = ogPredicate(t) && !t.def.defName.Contains("FeedingTube") && !t.def.defName.Contains("FoodFaucet");
+                        }
+                        catch
+                        {
+                            //💪꒰ ˘ω˘ 💪 ꒱
+                        }
+                        return value;
                     }
                      return ogPredicate(t);
                 }

@@ -267,7 +267,7 @@ namespace RimRound.UI
 
             Text.Font = GameFont.Small;
 
-            Rect generalSettingsCheckboxesRect = new Rect(0, generalSettingsTitleRect.yMax, generalSettingsRect.width, 200);
+            Rect generalSettingsCheckboxesRect = new Rect(0, generalSettingsTitleRect.yMax, generalSettingsRect.width, 250);
 
             CheckboxLabeled(new Rect
             {
@@ -322,6 +322,15 @@ namespace RimRound.UI
                 height = spaceBetweenCheckBoxes
             },
             "RR_Mtw_GeneralSettings_MoodletsForWeightOpinions".Translate(), ref GlobalSettings.moodletsForWeightOpinions, false, null, null, false);
+
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 6,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize".Translate(), ref GlobalSettings.varyMinWeightForBodyTypeByBodySize, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
 
             GUI.EndGroup();

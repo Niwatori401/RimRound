@@ -165,7 +165,7 @@ namespace RimRound.Utilities
         {
             Hediff h = GetHediffOfDefFrom(def, pawn);
 
-            if (h is null)
+            if (h is null || amount < 0)
                 return;
 
             h.Severity = amount;

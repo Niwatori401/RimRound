@@ -83,6 +83,8 @@
 	<RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies>Use alternate head placement</RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies>
 	<RR_Mtw_GeneralSettings_UseZoomPortraitStyle>Use vanilla portrait style</RR_Mtw_GeneralSettings_UseZoomPortraitStyle>
 	<RR_Mtw_GeneralSettings_MoodletsForWeightOpinions>Give moodlets for weight opinions</RR_Mtw_GeneralSettings_MoodletsForWeightOpinions>
+	<RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize>Vary weight requirements by bodysize</RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize>
+
 
 	<RR_Mtw_GizmoSettingsTitle>Gizmo Settings</RR_Mtw_GizmoSettingsTitle>
 	

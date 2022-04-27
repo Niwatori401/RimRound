@@ -96,7 +96,9 @@
     <Compile Include="Comps\PsychicShips\CompProperties_IncreaseHunger.cs" />
     <Compile Include="Defs\InteractionDefOf.cs" />
     <Compile Include="Defs\ME_ExtraProductPlantYield.cs" />
+    <Compile Include="Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
+    <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
     <Compile Include="Patch\RimWorldPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
@@ -110,8 +112,12 @@
     <Compile Include="Patch\RimWorldPatches\Need-Food_MalnutritionSeverityPerInterval_AdjustByPawnWeight.cs" />
     <Compile Include="Patch\RimWorldPatches\Page-ConfigureStartingPawns_DoWindowContents_UpdateSprite.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnCapacityUtility_CalculateCapacityLevel_AddExceptionForMobilityScooter.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnGenerator_GenerateInitialHediffs_AddWeightHediffAndSetBodyType.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnGenerator_GeneratePawn_SetDefaultBodyType.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnGenerator_GenerateTraits_AddWeightOpinions.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_BaseHeadOffsetAt_AdjustForOptionalNorthCustomSprites.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnUtility_GetPosture_AlterPostureIfWearingScooter.cs" />
+    <Compile Include="Patch\RimWorldPatches\Pawn_GetGizmos_AddRRGizmosForPrisoners.cs" />
     <Compile Include="Patch\RimWorldPatches\WorkGiver-Warden-DeliverFood_JobOnThing_AddExceptionForFattenInteraction.cs" />
     <Compile Include="Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -126,6 +132,7 @@
     <Compile Include="Utilities\HungerDroneUtility.cs" />
     <Compile Include="Utilities\MobilityChairUtility.cs" />
     <Compile Include="Utilities\ModCompatibilityUtility.cs" />
+    <Compile Include="Utilities\PawnGeneratorUtility.cs" />
     <Compile Include="Utilities\PrisonerUtility.cs" />
     <Compile Include="Utilities\WeightOpinionUtility.cs" />
     <None Include="app.config" />
@@ -172,7 +179,6 @@
     <Compile Include="Patch\RimWorldPatches\ModsConfig_LastInstalledExpansion_DefaultToRimRoundBG.cs" />
     <Compile Include="Patch\RimWorldPatches\Pawn-HealthTracker_MakeDowned_SetCustomWiggleAngleInitial.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnDownedWiggler_WigglerTick_DisableOrSlowForHighWeights.cs" />
-    <Compile Include="Patch\RimWorldPatches\PawnGenerator_GeneratePawn_HarmonyPatch.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_DrawPawnBody_AddToggleForTattoos.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_GetBodyPos_HideBlankets.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_LayingFacing_SetRotation.cs" />

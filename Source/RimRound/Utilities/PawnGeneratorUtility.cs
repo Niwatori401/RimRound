@@ -1,6 +1,4 @@
-﻿using HarmonyLib;
-using RimRound.Comps;
-using RimRound.Utilities;
+﻿using RimRound.Comps;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -9,32 +7,38 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace RimRound.Patch
+namespace RimRound.Utilities
 {
-    [HarmonyPatch(typeof(PawnGenerator))]
-    [HarmonyPatch("GeneratePawn", typeof(PawnGenerationRequest))]
-    public class PawnGenerator_GeneratePawn_HarmonyPatch
+    public static class PawnGeneratorUtility
     {
-        public static void Postfix(Pawn __result)
+        public static void AddHediffsToPawn(Pawn pawn)
         {
-            AddHediffsAndSetBodyType(__result);
-            AddWeightOpinion(__result);
+            if (pawn?.RaceProps.Humanlike ?? false)
+            {
+                Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, pawn);
+                Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, pawn);
+
+                string finalBodyTypeDefName = RacialBodyTypeInfoUtility.GetRacialDictionary(pawn).Last().Key.defName;
+                float weightMultiplier = 1;
+                if (finalBodyTypeDefName != null)
+                    weightMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplierByDefName(finalBodyTypeDefName);
+
+
+                Utilities.HediffUtility.SetHediffSeverity(
+                    Defs.HediffDefOf.RimRound_Weight,
+                    pawn,
+                    Utilities.HediffUtility.KilosToSeverityWithBaseWeight(
+                        GetRandomStartingWeight(GetWeightPercentileByFaction(pawn)) * 1000 * weightMultiplier)
+                    );
+
+            }
         }
 
-        public static void AddHediffsAndSetBodyType(Pawn pawn)
+        public static void SetDefaultBodyType(Pawn pawn)
         {
             if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp comp)
             {
-                comp.defaultBodyType = pawn?.story?.adulthood is null ? pawn.story.childhood.BodyTypeFor(pawn.gender) : pawn.story.adulthood.BodyTypeFor(pawn.gender);
-                Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, pawn);
-                Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, pawn);
-                Utilities.HediffUtility.SetHediffSeverity(
-                    Defs.HediffDefOf.RimRound_Weight, 
-                    pawn, 
-                    Utilities.HediffUtility.KilosToSeverityWithBaseWeight(
-                        GetRandomStartingWeight(GetWeightPercentileByFaction(pawn)) * 1000)
-                    );
-
+                comp.defaultBodyType = pawn?.story?.adulthood is null ? BodyTypeDefOf.Thin : pawn.story.adulthood.BodyTypeFor(pawn.gender);
             }
         }
 
@@ -120,7 +124,7 @@ namespace RimRound.Patch
             new Pair<float, float>(1.00000f, 1.450f)
         };
 
-        static float GetRandomStartingWeight(List<Pair<float, float>> weightPercentiles) 
+        static float GetRandomStartingWeight(List<Pair<float, float>> weightPercentiles)
         {
             float random = Values.RandomFloat(0, 1);
 
@@ -146,17 +150,17 @@ namespace RimRound.Patch
             return weightPercentiles.First().First;
 
 
-            
+
         }
 
 
-        static List<Pair<float, float>> GetWeightPercentileByFaction(Pawn p) 
+        static List<Pair<float, float>> GetWeightPercentileByFaction(Pawn p)
         {
             if (p?.Faction is null)
             {
                 Log.Error($"Pawn or faction was null in weight percentile assignment!");
                 return playerFactionWeightDistribution;
-            }    
+            }
 
             if (p.Faction.IsPlayer)
             {
@@ -170,7 +174,7 @@ namespace RimRound.Patch
             {
                 return hostileFactionWeightDistribution;
             }
-            else 
+            else
             {
                 Log.Warning($"Failed to get faction specific weight percentiles for {p.Name} of Faction {p.Faction}!");
                 return playerFactionWeightDistribution;

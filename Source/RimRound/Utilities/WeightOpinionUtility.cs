@@ -133,16 +133,18 @@ namespace RimRound.Utilities
 
             float weightSeverity = Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, p).Severity;
 
+            float weightRequirementMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p);
+
             foreach (var x in WeightOpinionUtility.severityToThoughtIndex)
             {
-                if (weightSeverity <= x.Key)
+                if (weightSeverity <= x.Key * weightRequirementMultiplier)
                 {
                     index = x.Value;
                     break;
                 }
             }
 
-            if (weightSeverity >= WeightOpinionUtility.severityToThoughtIndex.Last().Key)
+            if (weightSeverity >= WeightOpinionUtility.severityToThoughtIndex.Last().Key * weightRequirementMultiplier)
                 index = WeightOpinionUtility.severityToThoughtIndex.Last().Value;
             return index;
         }

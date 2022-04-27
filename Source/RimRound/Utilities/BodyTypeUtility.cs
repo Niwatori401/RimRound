@@ -46,18 +46,19 @@ namespace RimRound.Utilities
             if (weightSeverity == -1)
                 return pawn.story.bodyType;
 
+            float weightRequirementMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);
 
             //Edge cases
             if (weightSeverity == 0)
                 return bodyTypeDictionary.First().Key;
 
-            if (weightSeverity >= bodyTypeDictionary.Last().Value.maxSeverity)
+            if (weightSeverity >= bodyTypeDictionary.Last().Value.maxSeverity * weightRequirementMultiplier)
                 return bodyTypeDictionary.Last().Key;
 
 
             foreach (var x in bodyTypeDictionary)
             {
-                if (weightSeverity <= x.Value.maxSeverity)
+                if (weightSeverity <= x.Value.maxSeverity * weightRequirementMultiplier)
                     return x.Key;
             }
 
