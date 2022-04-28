@@ -18,10 +18,15 @@ namespace RimRound.Utilities
                 Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Weight, pawn);
                 Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, pawn);
 
-                string finalBodyTypeDefName = RacialBodyTypeInfoUtility.GetRacialDictionary(pawn).Last().Key.defName;
+                var raceDict = RacialBodyTypeInfoUtility.GetRacialDictionary(pawn);
                 float weightMultiplier = 1;
-                if (finalBodyTypeDefName != null)
-                    weightMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplierByDefName(finalBodyTypeDefName);
+                if (raceDict != null)
+                {
+                    string finalBodyTypeDefName = raceDict?.Last().Key?.defName;
+                    if (finalBodyTypeDefName != null)
+                        weightMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplierByDefName(finalBodyTypeDefName);
+                }
+
 
 
                 Utilities.HediffUtility.SetHediffSeverity(

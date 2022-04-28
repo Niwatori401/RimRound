@@ -36,7 +36,7 @@ namespace RimRound.Hediffs
                 float weightRequirementMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(this.pawn);
                 for (int i = stages.Count - 1; i >= 0; i--)
                 {
-                    if (severity >= stages[i].minSeverity * weightRequirementMultiplier)
+                    if (severity >= (stages[i].minSeverity * weightRequirementMultiplier))
                     {
                         return i;
                     }
