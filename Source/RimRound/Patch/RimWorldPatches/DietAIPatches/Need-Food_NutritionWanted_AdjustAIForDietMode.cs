@@ -19,13 +19,7 @@ namespace RimRound.Patch
     {
         public static void Postfix(Need_Food __instance , ref float __result, Pawn ___pawn) 
         {
-			if (!GlobalSettings.showPawnDietManagementGizmo)
-				return;
-
 			FullnessAndDietStats_ThingComp fullnessComp = ___pawn?.TryGetComp<FullnessAndDietStats_ThingComp>();
-			//FullnessAndDietStats_ThingComp fullnessComp = ((Pawn)Traverse.Create(__instance)?.Field("pawn")?.GetValue())?.TryGetComp<FullnessAndDietStats_ThingComp>();
-			//WeightGizmo_ThingComp gizmoComp = ((Pawn)Traverse.Create(__instance)?.Field("pawn")?.GetValue())?.TryGetComp<WeightGizmo_ThingComp>();
-
 
 			if (fullnessComp == null)
 				return;

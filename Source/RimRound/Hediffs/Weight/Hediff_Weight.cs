@@ -23,6 +23,13 @@ namespace RimRound.Hediffs
             }
         }
 
+        public override string SeverityLabel 
+        {
+            get 
+            {
+                return $"{Utilities.HediffUtility.SeverityToKilosWithBaseWeight(this.Severity):F1}Kgs";
+            }
+        } 
         public override int CurStageIndex
         {
             get 
@@ -33,7 +40,7 @@ namespace RimRound.Hediffs
                 }
                 List<HediffStage> stages = this.def.stages;
                 float severity = this.Severity;
-                float weightRequirementMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(this.pawn);
+                float weightRequirementMultiplier = GlobalSettings.varyMinWeightForBodyTypeByBodySize ? RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(this.pawn) : 1;
                 for (int i = stages.Count - 1; i >= 0; i--)
                 {
                     if (severity >= (stages[i].minSeverity * weightRequirementMultiplier))
@@ -44,6 +51,8 @@ namespace RimRound.Hediffs
                 return 0;
             }
         }
+
+        public override HediffStage CurStage => base.CurStage;
     }
 }
 

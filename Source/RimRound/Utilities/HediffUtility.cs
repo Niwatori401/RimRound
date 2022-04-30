@@ -238,26 +238,28 @@ namespace RimRound.Utilities
             return null;
         }
 
-
-        public class SeverityFloatPair
+        public static float ProgressToNextWeightStage(Pawn pawn) 
         {
-            SeverityFloatPair(List<float> floats) 
+            Hediff weight = GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, pawn);
+            if (weight == null) 
             {
-                
+                return 0;
             }
 
-            List<float> severityStages = new List<float>() 
+            int currentStageIndex = weight.CurStageIndex;
+            if (currentStageIndex < weight.def.stages.Count - 1)
             {
-            
-            
-            };
+                float minimumSeverityForCurrentStage  = weight.CurStage.minSeverity * (GlobalSettings.varyMinWeightForBodyTypeByBodySize? RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) : 1) ;
+                float nextStageMinimumSeverity = weight.def.stages[currentStageIndex + 1].minSeverity * (GlobalSettings.varyMinWeightForBodyTypeByBodySize ? RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) : 1);
+                float currentSeverity = weight.Severity;
 
-
-
+                return (currentSeverity - minimumSeverityForCurrentStage) / (nextStageMinimumSeverity - minimumSeverityForCurrentStage);
+            }
+            else 
+            {
+                return 1;
+            }
         }
-
-
-
-
+    
     }
 }
