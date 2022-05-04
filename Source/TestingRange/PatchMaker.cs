@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace TestingRange
 {
     public class PatchMaker
     {
-        public static void MakeSpecificPatch(string filepathForTemplate, string filepathToWriteTo, string[] wordsToReplace, string[] wordsToReplaceWith) 
+        public static void MakeSpecificPatch(List<string> linifiedTemplate, string filepathToWriteTo, string[] wordsToReplace, string[] wordsToReplaceWith) 
         {
-            List<string> linifiedtemplate = ReadFileIntoLines(filepathForTemplate);
-
             if (wordsToReplace.Length != wordsToReplaceWith.Length)
             {
                 throw new Exception($"{wordsToReplace}'s length must be the same as {wordsToReplaceWith}'s");
@@ -18,16 +17,15 @@ namespace TestingRange
 
             for (int i = 0; i < wordsToReplace.Length; ++i) 
             {
-                Replace(linifiedtemplate, wordsToReplace[i], wordsToReplaceWith[i]);
+                Replace(linifiedTemplate, wordsToReplace[i], wordsToReplaceWith[i]);
             }
-
-            File.WriteAllLines(filepathToWriteTo, linifiedtemplate);
+            
+            File.WriteAllLines(filepathToWriteTo, linifiedTemplate);
         }
 
         public static void MakePatchWithCSV(string templateFilePath, string destinationFilepath, string pathToCSV, int columnsForNaming = 1)
         {
             string stringParts = File.ReadAllText(pathToCSV);
-
             int numberOfArgs = GetNumberOfArgumentsPerLine(stringParts);
 
             List<List<string>> replacementValues = ParseIntoListOfLinesOfArgs(stringParts, numberOfArgs);
@@ -66,8 +64,80 @@ namespace TestingRange
                     filenameFlair);
 
                 string destinationFilepathWithIndividualName = destinationFilepath.Insert(destinationFilepath.LastIndexOf('.'), filenameFlair);
-                PatchMaker.MakeSpecificPatch(templateFilePath, destinationFilepathWithIndividualName, keywordsToReplace, keyWordsToReplaceWith);
+
+                List<string> linifiedTemaplate = ReadFileIntoLines(templateFilePath);
+                PatchMaker.MakeSpecificPatch(linifiedTemaplate, destinationFilepathWithIndividualName, keywordsToReplace, keyWordsToReplaceWith);
+                
             }
+        }
+
+        async public static Task MakePatchWithCSVAsync(string templateFilePath, string destinationFilepath, string pathToCSV, int columnsForNaming = 1) 
+        {
+            string stringParts = await File.ReadAllTextAsync(pathToCSV);
+            int numberOfArgs = GetNumberOfArgumentsPerLine(stringParts);
+
+            List<List<string>> replacementValues = ParseIntoListOfLinesOfArgs(stringParts, numberOfArgs);
+
+            int totalNumberOfRows = replacementValues[0].Count;
+
+            string[] keywordsToReplace = GetKeywordsToReplace(replacementValues);
+
+
+            List<Task> patchTasks = new List<Task>();
+
+            for (int lineNumber = 1; lineNumber < totalNumberOfRows; ++lineNumber)
+            {
+                string[] keyWordsToReplaceWith = GetSpecificReplacementKeywords(numberOfArgs, replacementValues, lineNumber);
+
+                string filenameFlair = "";
+                for (int i = 0; i < columnsForNaming; ++i)
+                {
+                    if (i < keyWordsToReplaceWith.Length)
+                    {
+                        filenameFlair += $"_{keyWordsToReplaceWith[i]}";
+                    }
+                }
+
+                filenameFlair = PatchMaker.RemoveCharacterFromString(
+                    new char[]
+                    {
+                        ':',
+                        '<',
+                        '>',
+                        '\"',
+                        ',',
+                        '\\',
+                        '/',
+                        '|',
+                        '?',
+                        '*'
+                    },
+                    filenameFlair);
+
+                string destinationFilepathWithIndividualName = destinationFilepath.Insert(destinationFilepath.LastIndexOf('.'), filenameFlair);
+                patchTasks.Add(Task.Run(() => PatchMaker.MakeSpecificPatchAsync(templateFilePath, destinationFilepathWithIndividualName, keywordsToReplace, keyWordsToReplaceWith)));
+
+            }
+
+            await Task.WhenAll(patchTasks);
+            return;
+        }
+
+        async public static Task MakeSpecificPatchAsync(string filepathForTemplate, string filepathToWriteTo, string[] wordsToReplace, string[] wordsToReplaceWith)
+        {
+            List<string> linifiedtemplate = ReadFileIntoLines(filepathForTemplate);
+
+            if (wordsToReplace.Length != wordsToReplaceWith.Length)
+            {
+                throw new Exception($"{wordsToReplace}'s length must be the same as {wordsToReplaceWith}'s");
+            }
+
+            for (int i = 0; i < wordsToReplace.Length; ++i)
+            {
+                Replace(linifiedtemplate, wordsToReplace[i], wordsToReplaceWith[i]);
+            }
+
+            await File.WriteAllLinesAsync(filepathToWriteTo, linifiedtemplate);
         }
 
         private static string[] GetKeywordsToReplace(List<List<string>> replacementValues)

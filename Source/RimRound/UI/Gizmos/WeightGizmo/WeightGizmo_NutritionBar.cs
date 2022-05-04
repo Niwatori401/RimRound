@@ -150,11 +150,11 @@ namespace RimRound.UI
 			switch (dietMode)
 			{
 				case DietMode.Nutrition:
-					thresholdSlider = new Slider(thresholdSliderLastValue, false);
-					maxSlider = new Slider(maxSliderLastValue, false);
+					thresholdSlider = new Slider(thresholdSliderLastValue, false, needFood.MaxLevel);
+					maxSlider = new Slider(maxSliderLastValue, false, needFood.MaxLevel);
 					return;
 				case DietMode.Hybrid:
-					thresholdSlider = new Slider(thresholdSliderLastValue, true);
+					thresholdSlider = new Slider(thresholdSliderLastValue, true, needFood.MaxLevel);
 					return;
 				case DietMode.Fullness:
 					return;
@@ -229,8 +229,6 @@ namespace RimRound.UI
 		//First and second are percents
 		public void SetRanges(float first, float second) 
 		{
-			first %= 1;
-			second %= 1;
 
 			//If either slider is disabled
 			if (thresholdSlider == null || maxSlider == null)
@@ -338,8 +336,8 @@ namespace RimRound.UI
 		private static readonly Texture2D SliderTex = SolidColorMaterials.NewSolidColorTexture(ColorLibrary.BlueGreen);
 		private static readonly Texture2D DisabledTex = SolidColorMaterials.NewSolidColorTexture(ColorLibrary.Grey);
 
-		Slider thresholdSlider = new Slider(0.5f, false);
-		Slider maxSlider = new Slider(0.7f, false);
+		Slider thresholdSlider;
+		Slider maxSlider;
 
 
 

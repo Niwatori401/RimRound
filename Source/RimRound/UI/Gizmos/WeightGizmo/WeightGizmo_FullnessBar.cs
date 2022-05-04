@@ -83,11 +83,11 @@ namespace RimRound.UI
 				case DietMode.Nutrition:
 					return;
 				case DietMode.Hybrid:
-					maxSlider = new Slider(maxSliderLastValue, true);
+					maxSlider = new Slider(maxSliderLastValue, true, DisplayLimit);
 					return;
 				case DietMode.Fullness:
-					thresholdSlider = new Slider(thresholdSliderLastValue, false);
-					maxSlider = new Slider(maxSliderLastValue, false);
+					thresholdSlider = new Slider(thresholdSliderLastValue, false, DisplayLimit);
+					maxSlider = new Slider(maxSliderLastValue, false, DisplayLimit);
 					return;
 				case DietMode.Disabled:
 					return;
@@ -98,6 +98,10 @@ namespace RimRound.UI
 
 		void CheckForDeathDialog() 
 		{
+			if ((maxSlider?.draggingBar ?? false) || (thresholdSlider?.draggingBar ?? false))
+				if (GetRanges().First < fullnessAndDietStats.HardLimit && GetRanges().Second < fullnessAndDietStats.HardLimit)
+					peaceForeverHeld = false;
+
 			if (!deathDialogOpen && !peaceForeverHeld)
 			{
 				switch (fullnessAndDietStats.DietMode)
@@ -139,94 +143,108 @@ namespace RimRound.UI
 
 		//Used in Gizmo on GUI only. Draws sliders, dividers and dashes
 		void DrawMeter(Rect inRect, float yPos, float margin = -1f)
-		{
-			marginSize = margin > 0f ? margin : 1f;
+        {
+            marginSize = margin > 0f ? margin : 1f;
 
-			yPosition = yPos;
+            yPosition = yPos;
 
-			Rect rect1 = new Rect
-			{
-				width = inRect.width - 2 * marginSize,
-				height = barHeight,
-				x = inRect.x + marginSize,
-				y = yPosition
-			};
+            Rect fullnessBarRect = new Rect
+            {
+                width = inRect.width - 2 * marginSize,
+                height = barHeight,
+                x = inRect.x + marginSize,
+                y = yPosition
+            };
 
+            DrawFullnessIndicatorBar(fullnessBarRect);
 
+            DrawTickMarks(fullnessBarRect);
 
-			bool flag = Mouse.IsOver(rect1);
+            DrawSoftLimitAndHardLimitDividers(fullnessBarRect);
 
-			//Makes the Main bars (the main indicator plus the black background)
-			if (enabled)
-				Widgets.FillableBar(rect1, CurrentFullnessAsPercentOfWhole, flag ? StrengthHighlightTex : StrengthTex, EmptyBarTex, true);
-			else
-				Widgets.FillableBar(rect1, CurrentFullnessAsPercentOfWhole, DisabledTex, EmptyBarTex, true);
+            DrawSlidersInRect(fullnessBarRect);
 
+            CheckForDeathDialog();
 
-			//Draws the little ticks at the bottom
+            AddFullnessPercentageOnFullnessBar(fullnessBarRect);
+        }
 
-			//This is the amount in liters each dash represents
-			float dashInterval = 0.20f;
+        private void AddFullnessPercentageOnFullnessBar(Rect fullnessBarRect)
+        {
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(fullnessBarRect, CurrentFullnessAsPercentOfSoftLimit.ToStringPercent());
+            Text.Anchor = TextAnchor.UpperLeft;
+            GUI.color = Color.white;
+        }
 
-			//Add in clause to stop dashes after hard limit?
-			int numberOfDashes = (int)(DisplayLimit / dashInterval);
-			int currentDashNumber = 0;
+        private void DrawSlidersInRect(Rect fullnessBarRect)
+        {
+            if (maxSlider != null)
+            {
+                maxSlider.DrawSlider(fullnessBarRect, SliderTex, DisplayLimit);
+            }
+            if (thresholdSlider != null)
+            {
+                thresholdSlider.DrawSlider(fullnessBarRect, SliderTex, DisplayLimit);
+            }
+        }
 
-			float dashPercentInterval = dashInterval / DisplayLimit;
+        private void DrawFullnessIndicatorBar(Rect fullnessBarRect)
+        {
+            bool flag = Mouse.IsOver(fullnessBarRect);
 
-			for (int i = numberOfDashes; i > 0; --i)
-			{
-				++currentDashNumber;
-				DrawDash(rect1, currentDashNumber * dashPercentInterval, CurrentFullnessAsPercentOfWhole);
-			}
+            //Makes the Main bars (the main indicator plus the black background)
+            if (enabled)
+                Widgets.FillableBar(fullnessBarRect, CurrentFullnessAsPercentOfDisplayLimit, flag ? StrengthHighlightTex : StrengthTex, EmptyBarTex, true);
+            else
+                Widgets.FillableBar(fullnessBarRect, CurrentFullnessAsPercentOfDisplayLimit, DisabledTex, EmptyBarTex, true);
+        }
 
-			
-			//Soft Limit Dash
-			DrawDivider(
-				rect1,
-				SoftLimitAsPercentage,
-				CurrentFullnessAsPercentOfWhole,
-				DividerTexSoft,
-				DividerTexSoft
-				);
+        private void DrawTickMarks(Rect rect1)
+        {
 
-			//Hard Limit Dash
-			DrawDivider(
-				rect1,
-				HardLimitAsPercentage,
-				CurrentFullnessAsPercentOfWhole,
-				DividerTexHard,
-				DividerTexHard
-				);
+            //Draws the little ticks at the bottom
 
-			if ((maxSlider?.draggingBar ?? false) || (thresholdSlider?.draggingBar ?? false))
-				if (GetRanges().First < fullnessAndDietStats.HardLimit && GetRanges().Second < fullnessAndDietStats.HardLimit)
-					peaceForeverHeld = false;
+            //This is the amount in liters each dash represents
+            float dashInterval = 0.20f;
 
-			if (maxSlider != null)
-			{
-				maxSlider.DrawSlider(rect1, SliderTex, DisplayLimit);
-			}
-			if (thresholdSlider != null)
-			{
-				thresholdSlider.DrawSlider(rect1, SliderTex, DisplayLimit);
-			}
+            //Add in clause to stop dashes after hard limit?
+            int numberOfDashes = (int)(DisplayLimit / dashInterval);
+            int currentDashNumber = 0;
 
+            float dashPercentInterval = dashInterval / DisplayLimit;
 
+            for (int i = numberOfDashes; i > 0; --i)
+            {
+                ++currentDashNumber;
+                DrawDash(rect1, currentDashNumber * dashPercentInterval, CurrentFullnessAsPercentOfDisplayLimit);
+            }
+        }
 
-			CheckForDeathDialog();
+        private void DrawSoftLimitAndHardLimitDividers(Rect rect1)
+        {
+            //Soft Limit Dash
+            DrawDivider(
+                rect1,
+                SoftLimitAsPercentage,
+                CurrentFullnessAsPercentOfDisplayLimit,
+                DividerTexSoft,
+                DividerTexSoft
+                );
 
+            //Hard Limit Dash
+            DrawDivider(
+                rect1,
+                HardLimitAsPercentage,
+                CurrentFullnessAsPercentOfDisplayLimit,
+                DividerTexHard,
+                DividerTexHard
+                );
+        }
 
-			//This adds the percentage text in the middle.
-			Text.Font = GameFont.Small;
-			Text.Anchor = TextAnchor.MiddleCenter;
-			Widgets.Label(rect1, CurrentFullnessAsPercentOfSoftLimit.ToStringPercent());
-			Text.Anchor = TextAnchor.UpperLeft;
-			GUI.color = Color.white;
-		}
-
-		//Used only in DrawBar(). Draws the little rectangles (dashes) on the meter.
-		void DrawDivider(Rect rect, float percent, float curValue, Texture2D underTex, Texture2D exceedTex)
+        //Used only in DrawBar(). Draws the little rectangles (dashes) on the meter.
+        void DrawDivider(Rect rect, float percent, float curValue, Texture2D underTex, Texture2D exceedTex)
 		{
 			Rect divider = new Rect
 			{
@@ -287,9 +305,6 @@ namespace RimRound.UI
 
 		public void SetRanges(float first, float second)
 		{
-			first %= 1;
-			second %= 1;
-
 			//If either slider is disabled
 			if (thresholdSlider == null || maxSlider == null)
 			{
@@ -326,22 +341,16 @@ namespace RimRound.UI
 		//returns a pair of floats for the actual values (not percents) of the sliders in least to greatest order. If there is one, it returns (value, -1) if neither exist (-1, -1)
 		public Pair<float, float> GetRanges()
 		{
-			//If either slider is disabled
 			if (thresholdSlider == null || maxSlider == null)
 			{
-				//If the bar is disabled
 				if (thresholdSlider == null && maxSlider == null)
 				{
 					return new Pair<float, float>(-1, -1);
 				}
-
-				//If the max slider is null
 				else if (maxSlider == null)
 				{
 					return new Pair<float, float>(thresholdSlider.barValue, -1);
 				}
-
-				//If the max isn't null but the threshold is
 				else if (thresholdSlider == null)
 				{
 					return new Pair<float, float>(maxSlider.barValue, -1);
@@ -351,7 +360,6 @@ namespace RimRound.UI
 					return new Pair<float, float>(-1 ,-1);
 				}
 			}
-			//If neither are disabled
 			else 
 			{
 				return thresholdSlider.barValue <= maxSlider.barValue ?
@@ -422,7 +430,7 @@ namespace RimRound.UI
 			}
 		}
 
-		public float CurrentFullnessAsPercentOfWhole
+		public float CurrentFullnessAsPercentOfDisplayLimit
 		{
 			get
 			{
@@ -463,8 +471,8 @@ namespace RimRound.UI
 		private float lowerDefaultValue = 0.3f;
 		private float upperDefaultValue = 0.8f;
 
-		Slider thresholdSlider = new Slider(0.3f, false);
-		Slider maxSlider = new Slider(0.8f, false);
+		Slider thresholdSlider;
+		Slider maxSlider;
 		private float thresholdSliderLastValue;
 		private float maxSliderLastValue;
 

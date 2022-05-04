@@ -28,12 +28,12 @@ namespace RimRound.Comps
             if (Scribe.mode == LoadSaveMode.Saving)
             {
                 Pair<float, float> ranges = GetRanges();
-                cachedSliderPos1 = ranges.First;
-                cachedSliderPos2 = ranges.Second;
+                cachedSliderVal1 = ranges.First;
+                cachedSliderVal2 = ranges.Second;
             }
 
-            Scribe_Values.Look<float>(ref cachedSliderPos1, "cachedSliderPos1", -1);
-            Scribe_Values.Look<float>(ref cachedSliderPos2, "cachedSliderPos2", -1);
+            Scribe_Values.Look<float>(ref cachedSliderVal1, "cachedSliderPos1", -1);
+            Scribe_Values.Look<float>(ref cachedSliderVal2, "cachedSliderPos2", -1);
 
             Scribe_Values.Look<DietMode>(ref dietMode,                     "dietMode",                        DietMode.Disabled);
             Scribe_Values.Look<float>(ref currentFullness,                 "currentFullness",                 0);
@@ -97,7 +97,7 @@ namespace RimRound.Comps
                     this.weightGizmo = new WeightGizmo(this);
 
                 Update();
-                SetRanges(cachedSliderPos1, cachedSliderPos2);
+                SetRangesByValue(cachedSliderVal1, cachedSliderVal2);
             }
         }
 
@@ -474,7 +474,32 @@ namespace RimRound.Comps
             }
         }
 
-        public void SetRanges(float first, float second)
+
+        public void SetRangesByValue(float first, float second) 
+        {
+            float maxNutrition = nutritionbar.needFood.MaxLevel;
+            float maxDisplayFullness = fullnessbar.DisplayLimit;
+            switch (this.DietMode)
+            {
+                case DietMode.Nutrition:
+                    nutritionbar.SetRanges(first / maxNutrition, second / maxNutrition);
+                    return;
+                case DietMode.Hybrid:
+                    nutritionbar.SetRanges(first / maxNutrition, 0);
+                    fullnessbar.SetRanges(second / maxDisplayFullness, 0);
+                    return;
+                case DietMode.Fullness:
+                    fullnessbar.SetRanges(first / maxDisplayFullness, second / maxDisplayFullness);
+                    return;
+                case DietMode.Disabled:
+                    return;
+                default:
+                    Log.Error("WeightGizmo_ThingComp SetRanges() ran default case!");
+                    return;
+            }
+
+        }
+        public void SetRangesByPercent(float first, float second)
         {
             switch (this.DietMode)
             {
@@ -544,8 +569,8 @@ namespace RimRound.Comps
         public WeightGizmo_FullnessBar fullnessbar;
         public WeightGizmo_NutritionBar nutritionbar;
 
-        float cachedSliderPos1 = 0.30f;
-        float cachedSliderPos2 = 0.90f;
+        float cachedSliderVal1 = 0.30f;
+        float cachedSliderVal2 = 0.90f;
 
         public const float defaultSoftLimit = 0.9f;
         public static Vector2 softLimitVariation = new Vector2(-0.10f, 0.50f);

@@ -41,8 +41,8 @@ namespace RimRound.AI
 			FullnessAndDietStats_ThingComp feedeeFnDComp = feedee.TryGetComp<FullnessAndDietStats_ThingComp>();
 
 			feedeeFnDComp.DietMode = DietMode.Fullness;
-			feedeeFnDComp.SetRanges(
-				feedeeFnDComp.fullnessbar.CurrentFullnessAsPercentOfWhole + 0.01f, (prisonerShouldBeFedMaxPercent * feedeeFnDComp.fullnessbar.HardLimitAsPercentage)
+			feedeeFnDComp.SetRangesByPercent(
+				feedeeFnDComp.fullnessbar.CurrentFullnessAsPercentOfDisplayLimit + 0.01f, (prisonerShouldBeFedMaxPercent * feedeeFnDComp.fullnessbar.HardLimitAsPercentage)
 				); 
 			float nutrition = FoodUtility.GetNutrition(thing, thingDef);
 			Job job = JobMaker.MakeJob(Defs.JobDefOf.RR_JD_StuffPrisoner, thing, feedee);
