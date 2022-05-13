@@ -19,11 +19,16 @@ namespace RimRound.Utilities
             if (p?.story?.bodyType is null)
                 return false;
 
+            return IsCustomBody(p.story.bodyType);
+        }
+
+        public static bool IsCustomBody(BodyTypeDef bodyTypeDef) 
+        {
             string pattern = @"[fmFM][_][0-9]+[_][^_]+";
 
             Regex regex = new Regex(pattern);
 
-            if (regex.IsMatch(p.story.bodyType.defName))
+            if (regex.IsMatch(bodyTypeDef.defName))
                 return true;
 
             return false;
@@ -34,7 +39,7 @@ namespace RimRound.Utilities
             //Dictionary<BodyTypeDef, float> bTD
             if (personallyExempt || categoricallyExempt)
             {
-                return pawn.TryGetComp<FullnessAndDietStats_ThingComp>().defaultBodyType ??
+                return pawn.TryGetComp<FullnessAndDietStats_ThingComp>().DefaultBodyType ??
                     RimWorld.BodyTypeDefOf.Thin;
             }
 

@@ -1,3 +1,13 @@
+commit 4c9f4d89f1da921c2facc181e47ab7e9a7c7e53d
+Author: Niwatori401
+Date:   Tue May 3 18:04:02 2022 -0700
+
+    Add patches to allow eating more than one meal/dessert from food items from Vanilla Cooking Expanded
+    Reformat old patches/introduce patch maker template for nutrition density patches
+    Refactor old code in fullness bar and slider code to be more readable
+    Fix bug where fullness sliders would not load into the correct postion from save
+
+
 commit fd477c2e728e02f1682ce44cde4db378fae0f0be
 Author: Niwatori401 
 Date:   Sat Apr 30 11:31:30 2022 -0700

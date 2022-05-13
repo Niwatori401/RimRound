@@ -13,7 +13,7 @@
 	
 	
 	
-		<hediffClass>HediffWithComps</hediffClass>
+		<hediffClass>RimRound.Hediffs.Hediff_Fullness</hediffClass>
 		
 		<comps>
 		</comps>

@@ -40,6 +40,19 @@ namespace RimRound.Utilities
             return (T)nullableType;
         }
 
+        public static List<Pawn> GetAllGlobalHumanlikePawns() 
+        {
+            List<Pawn> list = new List<Pawn>();
+
+            foreach (Map map in Find.Maps) 
+            {
+                if (GetAllLivingHumanlikesOnMap(map) is List<Pawn> listp)
+                    list.AddRange(listp);
+            }
+
+            return list;
+        }
+
         public static List<Pawn> GetAllLivingHumanlikesOnMap(Map map) 
         {
             List<Pawn> humanlikePawns = GetAllHumanlikesOnMap(map);

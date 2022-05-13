@@ -260,6 +260,30 @@ namespace RimRound.Utilities
                 return 1;
             }
         }
-    
+
+        public static void AlterCapacityAccordingToSettings(List<PawnCapacityModifier> pcmList, PawnCapacityDef defToAlter, NumericFieldData<float> appropriateSetting)
+        {
+            if (appropriateSetting.threshold == 1)
+                return;
+
+            int pcmIndex = pcmList.FindIndex(x => x.capacity == defToAlter);
+            if (pcmIndex != -1)
+            {
+                pcmList[pcmIndex].offset *= appropriateSetting.threshold;
+            }
+        }
+
+        public static PawnCapacityModifier Clone(this PawnCapacityModifier pawnCapacityModifier) 
+        {
+            return new PawnCapacityModifier 
+            {
+                capacity = pawnCapacityModifier.capacity,
+                offset = pawnCapacityModifier.offset,
+                setMax = pawnCapacityModifier.setMax,
+                postFactor = pawnCapacityModifier.postFactor,
+                setMaxCurveOverride = pawnCapacityModifier.setMaxCurveOverride,
+                setMaxCurveEvaluateStat = pawnCapacityModifier.setMaxCurveEvaluateStat,
+            };
+        }
     }
 }

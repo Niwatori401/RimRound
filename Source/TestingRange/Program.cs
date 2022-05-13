@@ -1,21 +1,135 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 using Verse;
+using RimRound;
 
 using strig = System.String;
+using RimRound.Utilities;
 
 namespace TestingRange
 {
     class Program
     {
-        //static void Main(string[] args)
-        //{
-        //    Test area
-        //}
+        public enum CardQuality
+        {
+            BadlyDamaged,
+            Poor,
+            Good,
+            Excellent,
+            Mint
+        }
 
-        async static Task Main(string[] args)
+        public class Card
+        {
+            public Card(CardQuality cardQuality) 
+            {
+                this.cardQuality = cardQuality;
+            }
+
+            public float ticketCost = 0;
+
+            public CardQuality cardQuality;
+
+            public bool TryUpgrade()
+            {
+                float priceOfMint = (1f / 6f) + 0.5f;
+                float priceOfExcellent = (1f / 12f) + 0.25f;
+                float priceOfGood = (1f / 100f) + (2f / 40f);
+                float priceOfPoor = (1f / 100f) + (1f / 40f);
+
+                float percentChance = Values.RandomFloat(0, 1);
+                switch (cardQuality)
+                {
+                    case CardQuality.BadlyDamaged:
+                        ticketCost += (priceOfPoor * 5);
+                        if (percentChance < 0.80f)
+                        {
+                            cardQuality = CardQuality.Poor;
+                            return true;
+                        }  
+                        break;
+                    case CardQuality.Poor:
+                        ticketCost += (priceOfGood * 5);
+                        if (percentChance < 0.70f)
+                        {
+                            cardQuality = CardQuality.Good;
+                            return true;
+                        }  
+                        break;
+                    case CardQuality.Good:
+                        ticketCost += (priceOfExcellent * 5);
+                        if (percentChance < 0.60f)
+                        {
+                            cardQuality = CardQuality.Excellent;
+                            return true;
+                        } 
+                        break;
+                    case CardQuality.Excellent:
+                        ticketCost += (priceOfMint * 5);
+                        if (percentChance < 0.50f)
+                        {
+                            cardQuality = CardQuality.Mint;
+                            return true;
+                        } 
+                        break;
+                    case CardQuality.Mint:
+                        break;
+                    default:
+                        break;
+
+
+                }
+
+                return false;
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+            float runs = 10000;
+            Console.WriteLine("\n -----------------------------");
+
+            CalculateAvgCostToUpgradeToMint(CardQuality.BadlyDamaged, CardQuality.Mint, runs);
+            CalculateAvgCostToUpgradeToMint(CardQuality.Poor, CardQuality.Mint, runs);
+            CalculateAvgCostToUpgradeToMint(CardQuality.Good, CardQuality.Mint, runs);
+            CalculateAvgCostToUpgradeToMint(CardQuality.Excellent, CardQuality.Mint, runs);
+
+            Console.WriteLine("\n -----------------------------");
+
+            CalculateAvgCostToUpgradeToMint(CardQuality.BadlyDamaged, CardQuality.Excellent, runs);
+            CalculateAvgCostToUpgradeToMint(CardQuality.Poor, CardQuality.Excellent, runs);
+            CalculateAvgCostToUpgradeToMint(CardQuality.Good, CardQuality.Excellent, runs);
+
+            Console.WriteLine("\n -----------------------------");
+
+        }
+
+        private static void CalculateAvgCostToUpgradeToMint(CardQuality startingQuality, CardQuality endQuality, float runs)
+        {
+            List<Card> goodCards = new List<Card>();
+            float totalCostOfUpgrades = 0;
+            for (int i = 0; i < runs; i++)
+            {
+                goodCards.Add(new Card(startingQuality));
+            }
+
+            for (int i = 0; i < runs; i++)
+            {
+                while (goodCards[i].cardQuality != endQuality)
+                    goodCards[i].TryUpgrade();
+
+                totalCostOfUpgrades += goodCards[i].ticketCost;
+            }
+
+            Console.WriteLine($"This is the cost of upgrading from {startingQuality} to {endQuality} on avg {totalCostOfUpgrades / runs:F1}");
+        }
+
+
+        async static Task Ma1in(string[] args)
         {
 
             PatchMode patchMode;

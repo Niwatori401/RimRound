@@ -12,6 +12,24 @@ namespace RimRound.Utilities
     //All fields in this class are saved in WorldComp_SaveValues.cs. Do not add reference type fields without adding exceptions to saving code
     public static class GlobalSettings
     {
+        #region Hediff Settings
+
+        public static NumericFieldData<float> weightHediffManipulationPenaltyMult = new NumericFieldData<float>(1, 0, 100);
+        public static NumericFieldData<float> weightHediffMovementPenaltyMult = new NumericFieldData<float>(1, 0, 100);
+        public static NumericFieldData<float> weightHediffHungerRateMult = new NumericFieldData<float>(1, 0, 100);
+
+        public static NumericFieldData<float> weightHediffRestRateMult = new NumericFieldData<float>(1, 0, 100);
+
+        public static NumericFieldData<float> fullnessHediffPainMult = new NumericFieldData<float>(1, 0, 100);
+        public static NumericFieldData<float> fullnessHediffMovementPenaltyMult = new NumericFieldData<float>(1, 0, 100);
+        public static NumericFieldData<float> fullnessHediffEatingPenaltyMult = new NumericFieldData<float>(1, 0, 100);
+
+
+
+        #endregion
+
+
+
         #region Gizmo Display Settings
         public static bool showPawnDietManagementGizmo = true;
         public static bool showSleepPostureManagementGizmo = true;

@@ -100,6 +100,9 @@
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
+    <Compile Include="Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
+    <Compile Include="Patch\RimWorldPatches\HediffSet_GetRestFallFactor_AlterAccordingToSettings.cs" />
+    <Compile Include="Patch\RimWorldPatches\Hediff_CapMods_DisableCapModsForRRHediffsOptionally.cs" />
     <Compile Include="Patch\RimWorldPatches\MenuPatches\HealthCardUtility_DrawHediffRow_AddProgressBarToNextWeightStage.cs" />
     <Compile Include="Patch\RimWorldPatches\MenuPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="Patch\RimWorldPatches\MenuPatches\Dialog-Options_DoWindowContents_ShowDropdownToChangeBGAlways.cs" />
     <Compile Include="Patch\RimWorldPatches\DietAIPatches\Need-Food_MalnutritionSeverityPerInterval_AdjustByPawnWeight.cs" />
     <Compile Include="Patch\RimWorldPatches\GraphicalPatches\Page-ConfigureStartingPawns_DoWindowContents_UpdateSprite.cs" />
+    <Compile Include="Patch\RimWorldPatches\Pawn-HealthTracker_MakeDowned_DropHoverChair.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnCapacityUtility_CalculateCapacityLevel_AddExceptionForMobilityScooter.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GenerateInitialHediffs_AddWeightHediffAndSetBodyType.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GeneratePawn_SetDefaultBodyType.cs" />

@@ -51,8 +51,6 @@ namespace RimRound.Hediffs
                 return 0;
             }
         }
-
-        public override HediffStage CurStage => base.CurStage;
     }
 }
 

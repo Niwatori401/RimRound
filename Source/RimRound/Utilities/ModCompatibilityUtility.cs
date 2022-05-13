@@ -48,7 +48,7 @@ namespace RimRound.Utilities
                 if (a == mscorlib)
                     continue;
 
-                types.AddRange(a.GetTypes());
+                loadedTypes.AddRange(a.GetTypes());
             }
         }
 
@@ -57,7 +57,7 @@ namespace RimRound.Utilities
             BindingFlags.Static | BindingFlags.Instance |
             BindingFlags.FlattenHierarchy;
 
-        static List<Type> types = new List<Type>();
+        public static List<Type> loadedTypes = new List<Type>();
 
         public static void TryPatch(Harmony harmonyinstance, ModPatchInfo modPatchInfo, PatchCollection patchCollection)
         {
@@ -108,7 +108,7 @@ namespace RimRound.Utilities
         {
             if (CheckModInstalled(modname))
             {
-                foreach (Type t in ModCompatibilityUtility.types) 
+                foreach (Type t in ModCompatibilityUtility.loadedTypes) 
                 {
                     if (t.Name == typeName)
                     {
@@ -120,7 +120,7 @@ namespace RimRound.Utilities
                             List<Type> typeParameters = new List<Type>();
                             foreach (string s in types)
                             {
-                                foreach (Type type in ModCompatibilityUtility.types) 
+                                foreach (Type type in ModCompatibilityUtility.loadedTypes) 
                                 {
                                     if (s == type.Name) 
                                     {
@@ -153,11 +153,26 @@ namespace RimRound.Utilities
             return null;
         }
 
+        public static Type GetTypeFromMod(string modname, string typeName)
+        {
+            if (CheckModInstalled(modname))
+            {
+                foreach (Type t in ModCompatibilityUtility.loadedTypes)
+                {
+                    if (t.Name == typeName)
+                    {
+                        return t;
+                    }
+                }
+            }
+            return null;
+        }
+
         public static PropertyInfo GetPropertyInfo(string modname, string typeName, string propertyName) 
         {
             if (CheckModInstalled(modname))
             {
-                foreach (Type t in types)
+                foreach (Type t in loadedTypes)
                 {
                     if (t.Name == typeName)
                     {
@@ -175,7 +190,29 @@ namespace RimRound.Utilities
 
             return null;
         }
-   
-        
+
+        public static FieldInfo GetFieldInfo(string modname, string typeName, string propertyName)
+        {
+            if (CheckModInstalled(modname))
+            {
+                foreach (Type t in loadedTypes)
+                {
+                    if (t.Name == typeName)
+                    {
+                        FieldInfo fieldInfo = t.GetField(propertyName, majorFlags);
+
+                        if (fieldInfo is null)
+                        {
+                            Log.Error($"Could not get field {propertyName} from {t.Name}");
+                        }
+
+                        return fieldInfo;
+                    }
+                }
+            }
+
+            return null;
+        }
+
     }
 }

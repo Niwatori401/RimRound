@@ -14,7 +14,13 @@ namespace RimRound.Patch
     [HarmonyPatch(nameof(PawnCapacityUtility.CalculateCapacityLevel))]
     class PawnCapacityUtility_CalculateCapacityLevel_AddExceptionForMobilityScooter
     {
-        static bool Prefix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors) 
+        static bool Prefix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
+        {
+            bool shouldSkipParentFunc = AlterMovementIfWearingScooter(ref __result, diffSet, capacity, impactors);
+            return shouldSkipParentFunc;
+        }
+
+        private static bool AlterMovementIfWearingScooter(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
         {
             float scooterSpeed = 0.5f;
 
@@ -22,7 +28,18 @@ namespace RimRound.Patch
             {
                 Pawn pawn = diffSet.pawn;
 
-                if (IsAHumanlikePawn(pawn) && MobilityChairUtility.IsWearingAMobilityScooter(pawn)) 
+                if (PawnCapacityUtility.CalculateCapacityLevel(diffSet, PawnCapacityDefOf.Manipulation, impactors) < .10)
+                {
+                    __result = 0;
+                    return false;
+                }
+
+                if (capacity.zeroIfCannotBeAwake && !diffSet.pawn.health.capacities.CanBeAwake)
+                {
+                    return true;
+                }
+
+                if (IsAHumanlikePawn(pawn) && MobilityChairUtility.IsWearingAMobilityScooter(pawn))
                 {
                     __result = scooterSpeed;
                     return false;
@@ -36,6 +53,5 @@ namespace RimRound.Patch
         {
             return p != null && p.RaceProps.Humanlike;
         }
-
     }
 }

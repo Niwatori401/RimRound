@@ -324,8 +324,20 @@ namespace RimRound.Comps
 
         public DietMode preCaravanDietMode;
 
-        public BodyTypeDef defaultBodyType;
+        private BodyTypeDef defaultBodyType;
 
+        public BodyTypeDef DefaultBodyType 
+        {
+            get 
+            {
+                if (defaultBodyType is null || BodyTypeUtility.IsCustomBody(defaultBodyType))
+                {
+                    defaultBodyType = RimWorld.BodyTypeDefOf.Thin;
+                }
+                return defaultBodyType;
+            } 
+            set => defaultBodyType = value; 
+        }
 
 
         public float PersonalDigestionRateMult 
@@ -424,6 +436,7 @@ namespace RimRound.Comps
                 hardLimitAdditionalPercentage = (value / SoftLimit) - 1f;
             }
         }
+
 
 
         //Multiplier for how quickly the stomach grows when over the soft limit.

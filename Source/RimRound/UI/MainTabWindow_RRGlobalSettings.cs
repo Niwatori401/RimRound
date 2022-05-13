@@ -46,6 +46,7 @@ namespace RimRound.UI
         {
             mainSettings,
             alienBodySettings,
+            hediffSettings,
         };
 
         TabKind curTab = TabKind.mainSettings;
@@ -63,6 +64,11 @@ namespace RimRound.UI
                 "Alien Body Settings",
                 delegate () { this.curTab = TabKind.alienBodySettings; },
                 () => this.curTab == TabKind.alienBodySettings));
+
+            this.tabs.Add(new TabRecord(
+                "Hediff Settings",
+                delegate () { this.curTab = TabKind.hediffSettings; },
+                () => this.curTab == TabKind.hediffSettings));
 
         }
 
@@ -91,6 +97,9 @@ namespace RimRound.UI
                 case TabKind.alienBodySettings:
                     DoAlienBodySettingsWindow(inRect);
                     return;
+                case TabKind.hediffSettings:
+                    DoHediffSettingsWindow(inRect);
+                    return;
                 default:
                     return;
             }
@@ -101,6 +110,41 @@ namespace RimRound.UI
             public Gender gender;
             public String race;
         };
+
+        private void DoHediffSettingsWindow(Rect inRect) 
+        {
+            DoNumericHediffSettings(inRect);
+        }
+
+        private void DoNumericHediffSettings(Rect inRect) 
+        {
+            GUI.BeginGroup(inRect);
+
+            //Category Title
+            Text.Font = GameFont.Medium;
+            Rect globalMultipliersSettingsTitleRect = new Rect(0, 50, 600, Text.LineHeight);
+            Widgets.Label(globalMultipliersSettingsTitleRect, "RR_Hsw_HediffNumericSettings_SettingsTitle".Translate());
+
+            Rect globalMultipliersSettingsFieldRect = new Rect(0, globalMultipliersSettingsTitleRect.yMax, globalMultipliersSettingsTitleRect.width, 200);
+
+            Text.Font = GameFont.Small;
+
+            int numericFieldCount = 0;
+
+
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffHungerRateMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffHungerRateMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffManipulationPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffManipulationPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffMovementPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffMovementPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffRestRateMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffRestRateMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffEatingPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffEatingPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffMovementPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffMovementPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffPainMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffPainMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
+
+
+            globalMultipliersSettingsFieldRect.height = numericFieldCount * spaceBetweenNumberFields;
+
+            GUI.EndGroup();
+        }
 
         private void DoAlienBodySettingsWindow(Rect inRect)
         {
@@ -600,6 +644,8 @@ namespace RimRound.UI
         static void NumberFieldLabeledWithRect<T>(
             Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small, SwitchActionCallback action = null) where T : struct
         {
+            T cachedVal = numericFieldData.threshold;
+
             Text.Font = font;
             Rect boundingRect = new Rect(0, categoryRect.y + positionNumberInList * spaceBetweenNumberFields, categoryRect.width - numberFieldRightOffset, Text.LineHeight);
             Widgets.Label(boundingRect, translationLabel.Translate() + ": ");
@@ -610,8 +656,22 @@ namespace RimRound.UI
                 numericFieldData.min,
                 numericFieldData.max);
 
-            if (action != null)
+            T newVal = numericFieldData.threshold;
+
+            if (action != null && !object.Equals(newVal, cachedVal))
                 action();
+        }
+
+        static void DirtyAllHediffSetCaches() 
+        {
+            List<Pawn> pawns = GeneralUtility. GetAllGlobalHumanlikePawns();
+            foreach (Pawn pawn in pawns)
+            {
+                if (pawn?.health?.hediffSet is HediffSet h)
+                {
+                    h.DirtyCache();
+                }
+            }
         }
     }
 }

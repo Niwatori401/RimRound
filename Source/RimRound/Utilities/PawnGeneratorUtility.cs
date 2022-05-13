@@ -43,7 +43,7 @@ namespace RimRound.Utilities
         {
             if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp comp)
             {
-                comp.defaultBodyType = pawn?.story?.adulthood is null ? BodyTypeDefOf.Thin : pawn.story.adulthood.BodyTypeFor(pawn.gender);
+                comp.DefaultBodyType = pawn?.story?.adulthood is null ? BodyTypeDefOf.Thin : pawn.story.adulthood.BodyTypeFor(pawn.gender);
             }
         }
 

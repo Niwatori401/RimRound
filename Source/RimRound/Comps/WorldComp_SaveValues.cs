@@ -24,6 +24,32 @@ namespace RimRound.Comps
 
         }
 
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+            if (ModCompatibilityUtility.CheckModInstalled("Vanilla Expanded Framework"))
+            { 
+                Log.Message("[RimRound] Disabling texure caching...");
+
+
+                FieldInfo disableCachingField = ModCompatibilityUtility.GetFieldInfo("Vanilla Expanded Framework", "VFEGlobalSettings", "disableCaching");
+                FieldInfo vfeGlobalSettingsFI = ModCompatibilityUtility.GetFieldInfo("Vanilla Expanded Framework", "VFEGlobal", "settings");
+
+                if (disableCachingField != null && vfeGlobalSettingsFI != null)
+                {
+                    disableCachingField.SetValue(vfeGlobalSettingsFI.GetValue(null), true);
+                }
+                else 
+                {
+                    Log.Error("[RimRound] Vanilla Expanded Framework was installed but RimRound failed to change settings!");
+                }
+            }
+            else 
+            {
+                Log.Warning("[RimRound] Failed to find Vanilla Expanded Framework. Please make sure it is installed or sprites will not render correctly!");
+            }
+        }
+
         public void SaveCaravanPatchUtility() 
         {
             List<int> list1 = new List<int>();
