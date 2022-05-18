@@ -100,6 +100,7 @@
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
+    <Compile Include="Patch\RimWorldPatches\GraphicalPatches\PawnGraphicSet_ResolveApparelGraphics_DontIncludeHoverChairIfLayingDown.cs" />
     <Compile Include="Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
     <Compile Include="Patch\RimWorldPatches\HediffSet_GetRestFallFactor_AlterAccordingToSettings.cs" />
     <Compile Include="Patch\RimWorldPatches\Hediff_CapMods_DisableCapModsForRRHediffsOptionally.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Patch\RimWorldPatches\GraphicalPatches\PawnUtility_GetPosture_AlterPostureIfWearingScooter.cs" />
     <Compile Include="Patch\RimWorldPatches\MenuPatches\Pawn_GetGizmos_AddRRGizmosForPrisoners.cs" />
     <Compile Include="Patch\RimWorldPatches\DietAIPatches\WorkGiver-Warden-DeliverFood_JobOnThing_AddExceptionForFattenInteraction.cs" />
+    <Compile Include="Patch\RimWorldPatches\Toils-LayDown_LayDown_AddRefreshToClothingWhenLayDownToil.cs" />
     <Compile Include="Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

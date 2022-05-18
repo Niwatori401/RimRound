@@ -21,5 +21,8 @@ namespace RimRound.Defs
 
         //The default RimWorld one. There's not an entry in his defOf's for these
         public static ThingDef DoubleSleepingSpot;
+
+        public static ThingDef RR_HoverChairArm;
+        public static ThingDef RR_HoverChair;
     }
 }

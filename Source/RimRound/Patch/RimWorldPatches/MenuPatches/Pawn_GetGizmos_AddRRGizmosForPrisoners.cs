@@ -16,7 +16,6 @@ namespace RimRound.Patch
         {
             if (__instance.IsPrisonerOfColony) 
             {
-                Log.Message("tan bit :[");
                 List<Gizmo> gizmos = __result.ToList();
 
                 var compSleepingPosition = __instance.TryGetComp<RimRound.Comps.SleepingPosition_ThingComp>();
