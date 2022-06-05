@@ -25,7 +25,7 @@ namespace RimRound.Patch
                 return true;
 
 
-            if (!GlobalSettings.useZoomPortraitStyle || RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(__0.story.bodyType).defName == Defs.BodyTypeDefOf.F_100_Gelatinous.defName)
+            if (!GlobalSettings.useZoomPortraitStyle || RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(__0.story.bodyType).defName == Defs.BodyTypeDefOf.F_100_Gelatinous.defName || RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(__0.story.bodyType).defName == Defs.BodyTypeDefOf.F_100a_Gelatinous.defName) 
             {
                 __3.z = bodyTypeInfo.AsNonNullable().portraitOffsetZoomMethod;
                 __4 = bodyTypeInfo.AsNonNullable().portraitZoom;

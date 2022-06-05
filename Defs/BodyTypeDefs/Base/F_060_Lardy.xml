@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>F_060_Lardy</defName>
 		<headOffset>(0.120, 0.93)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/F_060_Lardy</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Naked_Bodies/F_060_Lardy</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

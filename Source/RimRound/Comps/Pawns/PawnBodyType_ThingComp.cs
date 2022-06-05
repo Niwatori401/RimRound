@@ -18,6 +18,12 @@ namespace RimRound.Comps
             gizmo = new PersonalDynamicBodyGizmo(this);
         }
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look<BodyArchetype>(ref _bodyarchetype, "_bodyarchetype", BodyArchetype.none, false);
+        }
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (GlobalSettings.showExemptionGizmo)
@@ -85,5 +91,33 @@ namespace RimRound.Comps
         readonly PersonalDynamicBodyGizmo gizmo;
 
         public bool usingCustomBodyMeshSize = false;
+
+        BodyArchetype _bodyarchetype = BodyArchetype.none;
+        public BodyArchetype BodyArchetype 
+        {
+            get 
+            {
+                if (_bodyarchetype == BodyArchetype.none)
+                {
+                    if (Values.RandomChanceAtOrBelow(0.5f))
+                    {
+                        _bodyarchetype = BodyArchetype.standard;
+                    }
+                    else
+                    {
+                        _bodyarchetype = BodyArchetype.apple;
+                    }
+                }
+
+                return _bodyarchetype;
+            }
+        }
+    }
+
+    public enum BodyArchetype 
+    {
+        none,
+        standard,
+        apple,
     }
 }

@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>M_010_Chubby_070</defName>
 		<headOffset>(0.070, 0.33)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/M_010_Chubby</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_010_Chubby</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

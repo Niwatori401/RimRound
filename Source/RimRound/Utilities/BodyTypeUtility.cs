@@ -24,7 +24,7 @@ namespace RimRound.Utilities
 
         public static bool IsCustomBody(BodyTypeDef bodyTypeDef) 
         {
-            string pattern = @"[fmFM][_][0-9]+[_][^_]+";
+            string pattern = @"[fmFM]{1}_+[0-9]{3,}?a*_+[A-Za-z]+";
 
             Regex regex = new Regex(pattern);
 
@@ -32,6 +32,22 @@ namespace RimRound.Utilities
                 return true;
 
             return false;
+        }
+
+        public static string ConvertBodyTypeDefDefnameAccordingToSettings(string bodytypeCleaned)
+        {
+            if (GlobalSettings.onlyUseStandardBodyType && Regex.IsMatch(bodytypeCleaned, "[0-9]{3}a"))
+            {
+                bodytypeCleaned = Regex.Replace(bodytypeCleaned, "a_", "_");
+            }
+
+
+            if (bodytypeCleaned == Defs.BodyTypeDefOf.F_060_Lardy.defName && !GlobalSettings.useOldLardySprite)
+            {
+                bodytypeCleaned += "Alt";
+            }
+
+            return bodytypeCleaned;
         }
 
         public static BodyTypeDef GetBodyTypeBasedOnWeightSeverity(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)

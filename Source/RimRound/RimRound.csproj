@@ -33,19 +33,15 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\DevDependencies\Harmony.2.1.1.0\net472\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\..\DevDependencies\2009463077_harmony\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AlienRace">
-      <HintPath>..\..\..\..\DevDependencies\AlienRaces-master\1.3\Assemblies\AlienRace.dll</HintPath>
+      <HintPath>..\..\..\..\DevDependencies\839005762_humanoid_alien_races\1.3\Assemblies\AlienRace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="HugsLib">
-      <HintPath>..\..\..\..\DevDependencies\HugsLib_9.0.0\HugsLib\v1.3\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -96,6 +92,7 @@
     <Compile Include="Comps\PsychicShips\CompProperties_IncreaseHunger.cs" />
     <Compile Include="Defs\InteractionDefOf.cs" />
     <Compile Include="Defs\ME_ExtraProductPlantYield.cs" />
+    <Compile Include="Patch\HumanoidAlienRacesPatches\AlienPartGenerator_GetNakedPath_MakeAllRRBodyTexRequestsUseDefaultPath.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
@@ -126,6 +123,7 @@
     <Compile Include="Patch\RimWorldPatches\DietAIPatches\WorkGiver-Warden-DeliverFood_JobOnThing_AddExceptionForFattenInteraction.cs" />
     <Compile Include="Patch\RimWorldPatches\Toils-LayDown_LayDown_AddRefreshToClothingWhenLayDownToil.cs" />
     <Compile Include="Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
+    <Compile Include="Patch\StatueOfColonist\StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

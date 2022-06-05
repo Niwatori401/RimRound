@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>M_090_Titanic</defName>
 		<headOffset>(0.100, 0.900)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/M_090_Titanic</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_090_Titanic</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

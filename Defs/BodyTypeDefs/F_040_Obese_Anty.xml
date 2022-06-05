@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>F_040_Obese_Anty</defName>
 		<headOffset>(0.040, 0.53)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/F_040_Obese</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_F_040_Obese</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

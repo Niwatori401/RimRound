@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>F_020_Corpulent</defName>
 		<headOffset>(0.040, 0.570)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/F_020_Corpulent</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_F_020_Corpulent</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

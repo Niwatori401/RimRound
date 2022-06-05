@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>M_100_Gelatinous</defName>
 		<headOffset>(0.250, 1.200)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/M_100_Gelatinous</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_100_Gelatinous</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

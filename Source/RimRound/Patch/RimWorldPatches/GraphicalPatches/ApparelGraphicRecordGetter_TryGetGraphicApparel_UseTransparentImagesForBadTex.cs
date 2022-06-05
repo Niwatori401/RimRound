@@ -91,19 +91,19 @@ namespace RimRound.Patch
 
         public static Graphic GetApparelGraphic(string graphicPath, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType) 
 		{
-            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath)
+            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || apparel.def.apparel.LastLayer.defName == "OnHead" || apparel.def.apparel.LastLayer.defName == "StrappedHead")
             {
                 graphicPath = apparel.WornGraphicPath;
             } 
             else 
             {
-                graphicPath = apparel.WornGraphicPath + "_" + RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName;
+                graphicPath = apparel.WornGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
             } 
 
 
 			if (GlobalSettings.preferDefaultOutfitOverNaked && graphicPathResultIsNull.ContainsKey(graphicPath) && graphicPathResultIsNull[graphicPath]) 
 			{
-				graphicPath = Values.defaultClothingSetGraphicPath + "_" + RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName;
+				graphicPath = Values.defaultClothingSetGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
 			} 
 
 			return GraphicDatabase.Get<Graphic_Multi>(graphicPath, shader, vector, color);
@@ -111,7 +111,7 @@ namespace RimRound.Patch
 
 		public static bool IsGraphicPathResultNullForApparel(Apparel apparel, BodyTypeDef bodyType)
         {
-            string apparelGraphicPath = apparel.WornGraphicPath + "_" + RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName;
+            string apparelGraphicPath = apparel.WornGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
 
             apparelGraphicPath = AlterGraphicPathIfLastLayerIsOuter(apparel, apparelGraphicPath);
             AddGraphicPathToDictionaryIfNecessary(apparelGraphicPath);
@@ -122,7 +122,7 @@ namespace RimRound.Patch
 
         private static string AlterGraphicPathIfLastLayerIsOuter(Apparel apparel, string apparelGraphicPath)
         {
-            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath)
+            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || apparel.def.apparel.LastLayer.defName == "OnHead" || apparel.def.apparel.LastLayer.defName == "StrappedHead")
             {
                 apparelGraphicPath = apparel.WornGraphicPath;
             }
@@ -148,7 +148,7 @@ namespace RimRound.Patch
         {
             if (GlobalSettings.preferDefaultOutfitOverNaked && graphicPathResultIsNull[apparelGraphicPath])
             {
-                apparelGraphicPath = Values.defaultClothingSetGraphicPath + "_" + RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName;
+                apparelGraphicPath = Values.defaultClothingSetGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
                 AddGraphicPathToDictionaryIfNecessary(apparelGraphicPath);
             }
 

@@ -23,12 +23,12 @@ namespace TestingRange
             File.WriteAllLines(filepathToWriteTo, linifiedTemplate);
         }
 
-        public static void MakePatchWithCSV(string templateFilePath, string destinationFilepath, string pathToCSV, int columnsForNaming = 1)
+        public static void MakePatchWithCSV(string templateFilePath, string destinationFilepath, string pathToCSV, int columnsForNaming = 1, NewlineMode newlineMode = NewlineMode.rn)
         {
             string stringParts = File.ReadAllText(pathToCSV);
             int numberOfArgs = GetNumberOfArgumentsPerLine(stringParts);
 
-            List<List<string>> replacementValues = ParseIntoListOfLinesOfArgs(stringParts, numberOfArgs);
+            List<List<string>> replacementValues = ParseIntoListOfLinesOfArgs(stringParts, numberOfArgs, newlineMode);
 
             int totalNumberOfRows = replacementValues[0].Count;
 
@@ -163,9 +163,22 @@ namespace TestingRange
             return keyWordsToReplaceWith;
         }
 
-        private static List<List<string>> ParseIntoListOfLinesOfArgs(string stringParts, int argumentsNumber)
+
+        public enum NewlineMode 
         {
-            string[] arrayOfArgs = stringParts.Split(new string[] { ",", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            n,
+            rn,
+        };
+
+        private static List<List<string>> ParseIntoListOfLinesOfArgs(string stringParts, int argumentsNumber, NewlineMode newlineMode = NewlineMode.rn)
+        {
+            string newlineChars;
+            if (newlineMode == NewlineMode.rn)
+                newlineChars = "\r\n";
+            else
+                newlineChars = "\n";
+
+            string[] arrayOfArgs = stringParts.Split(new string[] { ",", newlineChars }, StringSplitOptions.RemoveEmptyEntries);
 
             List<List<string>> replacementValues = new List<List<string>>();
 

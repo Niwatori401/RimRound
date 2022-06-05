@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>F_006_Chonky_Ratkin</defName>
 		<headOffset>(0.060, 0.410)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/F_006_Chonky</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_F_006_Chonky</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

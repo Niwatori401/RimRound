@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimRound.Comps;
 using RimRound.Utilities;
 using RimWorld;
 using System;
@@ -190,13 +191,13 @@ namespace RimRound.UI
 
             Widgets.Dropdown<
                 GenderRaceCombo,
-                Dictionary<BodyTypeDef, BodyTypeInfo>>
+                Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>
                 (
-                    dropdownMenuRect, genderRaceCombo, null, new Func<GenderRaceCombo, IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyTypeDef, BodyTypeInfo>>>>(BodyTypeSetDropdownMenuGenerator), buttonLabel
+                    dropdownMenuRect, genderRaceCombo, null, new Func<GenderRaceCombo, IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>>>(BodyTypeSetDropdownMenuGenerator), buttonLabel
                 );
         }
 
-        private static IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyTypeDef, BodyTypeInfo>>> BodyTypeSetDropdownMenuGenerator(GenderRaceCombo genderRaceCombo)
+        private static IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>> BodyTypeSetDropdownMenuGenerator(GenderRaceCombo genderRaceCombo)
         {
             using (var enumerator = RacialBodyTypeInfoUtility.genderedSets.GetEnumerator())
             {
@@ -207,7 +208,7 @@ namespace RimRound.UI
                     string label = currentEntry.Key;
                     var dicitonaryPayload = currentEntry.Value;
 
-                    yield return new Widgets.DropdownMenuElement<Dictionary<BodyTypeDef, BodyTypeInfo>>
+                    yield return new Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>
                     {
                         option = new FloatMenuOption(label, delegate ()
                         {
@@ -227,8 +228,8 @@ namespace RimRound.UI
             Rect titleRect = new Rect(inRect.x, inRect.y + 45f, inRect.width, 2 * Text.LineHeight);
             DoMainSettingsTitleGroup(titleRect);
 
-            Rect nutritionSettingsGroup = new Rect(inRect.x, titleRect.yMax, windowWidth / 3, 200);
-            DoNutritionSettingsGroup(nutritionSettingsGroup);
+            Rect nutritionSettingsGroup = new Rect(inRect.x, titleRect.yMax, windowWidth / 3, 0);
+            //DoNutritionSettingsGroup(nutritionSettingsGroup);
 
             Rect globalMultipliersSettingsGroup = new Rect(nutritionSettingsGroup.x, nutritionSettingsGroup.yMax, nutritionSettingsGroup.width, windowHeight);
             DoGlobalMultpliersSettingsGroup(globalMultipliersSettingsGroup);
@@ -236,7 +237,7 @@ namespace RimRound.UI
             Rect exemptionSettingsGroup = new Rect(0.33333f * inRect.width, titleRect.yMax, 0.33333f * inRect.width, 200);
             DoExemptionSettingsGroup(exemptionSettingsGroup);
 
-            Rect generalSettingsRect = new Rect(exemptionSettingsGroup.x, exemptionSettingsGroup.yMax, exemptionSettingsGroup.width, exemptionSettingsGroup.height);
+            Rect generalSettingsRect = new Rect(exemptionSettingsGroup.x, exemptionSettingsGroup.yMax, exemptionSettingsGroup.width, exemptionSettingsGroup.height + 100);
             DoGeneralSettingsGroup(generalSettingsRect);
 
             Rect gizmoSettingsGroupRect = new Rect(0.66666f * inRect.width, titleRect.yMax, 0.33333f * inRect.width, inRect.height - titleRect.height);
@@ -311,7 +312,7 @@ namespace RimRound.UI
 
             Text.Font = GameFont.Small;
 
-            Rect generalSettingsCheckboxesRect = new Rect(0, generalSettingsTitleRect.yMax, generalSettingsRect.width, 250);
+            Rect generalSettingsCheckboxesRect = new Rect(0, generalSettingsTitleRect.yMax, generalSettingsRect.width, 300);
 
             CheckboxLabeled(new Rect
             {
@@ -376,6 +377,32 @@ namespace RimRound.UI
             },
             "RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize".Translate(), ref GlobalSettings.varyMinWeightForBodyTypeByBodySize, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 7,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_ShowSpecialDebugSettings".Translate(), ref GlobalSettings.showSpecialDebugSettings, false, null, null, false);
+
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 8,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_UseLegacyLardySprite".Translate(), ref GlobalSettings.useOldLardySprite, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 9,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_OnlyUseStandardSprites".Translate(), ref GlobalSettings.onlyUseStandardBodyType, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
             GUI.EndGroup();
         }
