@@ -31,6 +31,7 @@ namespace RimRound.Utilities
 
 
         #region Gizmo Display Settings
+        public static bool showSpecialDebugSettings = false;
         public static bool showPawnDietManagementGizmo = true;
         public static bool showSleepPostureManagementGizmo = true;
         public static bool showBlanketManagementGizmo = true;
@@ -62,9 +63,9 @@ namespace RimRound.Utilities
         public static bool alternateNorthHeadPositionForRRBodytypes = false;
         public static bool moodletsForWeightOpinions = true;
         public static bool varyMinWeightForBodyTypeByBodySize = true;
-
+        public static bool useOldLardySprite = false;
         public static bool useZoomPortraitStyle = false;
-
+        public static bool onlyUseStandardBodyType = false;
         #endregion
 
         #region Value Settings

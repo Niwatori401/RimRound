@@ -34,6 +34,11 @@ namespace RimRound.Patch
 				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompHyperMilkableHuman", "ResourceAmount", MethodType.Getter),
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
 
+			ModCompatibilityUtility.TryPatch(
+				harmony,
+				new ModPatchInfo("Statue of Colonist", "StatueOfColonistRenderer", "Render", MethodType.Normal),
+				StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.GetPatchCollection());
+
 			int patchedMethodsCount = 0;
 			int postfixesCount = 0;
 			int prefixesCount = 0;

@@ -32,6 +32,7 @@ namespace RimRound.Comps
                 cachedSliderVal2 = ranges.Second;
             }
 
+            Scribe_Values.Look<bool>(ref defaultBodyTypeForced, "defaultBodyTypeForced", false);
             Scribe_Values.Look<float>(ref cachedSliderVal1, "cachedSliderPos1", -1);
             Scribe_Values.Look<float>(ref cachedSliderVal2, "cachedSliderPos2", -1);
 
@@ -52,7 +53,7 @@ namespace RimRound.Comps
             if (GlobalSettings.showPawnDietManagementGizmo && ShouldShowWeightGizmo())
                 yield return this.weightGizmo;
 
-            if (Prefs.DevMode) 
+            if (Prefs.DevMode && GlobalSettings.showSpecialDebugSettings) 
             {
                 yield return new Command_Action
                 {
@@ -324,6 +325,8 @@ namespace RimRound.Comps
 
         public DietMode preCaravanDietMode;
 
+        public bool defaultBodyTypeForced = false;
+
         private BodyTypeDef defaultBodyType;
 
         public BodyTypeDef DefaultBodyType 
@@ -517,14 +520,18 @@ namespace RimRound.Comps
             switch (this.DietMode)
             {
                 case DietMode.Nutrition:
-                    nutritionbar.SetRanges(first, second);
+                    if (nutritionbar != null)
+                        nutritionbar.SetRanges(first, second);
                     return;
                 case DietMode.Hybrid:
-                    nutritionbar.SetRanges(first, 0);
-                    fullnessbar.SetRanges(second, 0);
+                    if (nutritionbar != null)
+                        nutritionbar.SetRanges(first, 0);
+                    if (fullnessbar != null)
+                        fullnessbar.SetRanges(second, 0);
                     return;
                 case DietMode.Fullness:
-                    fullnessbar.SetRanges(first, second);
+                    if (fullnessbar != null)
+                        fullnessbar.SetRanges(first, second);
                     return;
                 case DietMode.Disabled:
                     return;

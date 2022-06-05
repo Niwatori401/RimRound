@@ -3,7 +3,7 @@
 	<BodyTypeDef>
 		<defName>F_080_Gigantic_Anty</defName>
 		<headOffset>(0.120, 0.65)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/F_080_Gigantic</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_F_080_Gigantic</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>

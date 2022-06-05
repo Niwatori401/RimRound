@@ -37,7 +37,7 @@ namespace RimRound.Patch
             { "Alien_KEquium",             new Vector2(0, -0.06f ) },
             { "Alien_PEquium",             new Vector2(0, -0.06f ) },
             { "Alien_SMaleEquium",         new Vector2(0, -0.06f ) },
-
+            { "Alien_Loompa",              new Vector2(0, -0.08f ) },
             { "Alien_Orassan",    new Vector2(0, -0.06f )},
             { "AFoxbold",         new Vector2(0, -0.1f )},
             { "Alien_Dogbold",    new Vector2(0, -0.1f )},
