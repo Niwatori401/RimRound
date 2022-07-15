@@ -20,12 +20,17 @@ namespace RimRound.Patch
 
                 var compSleepingPosition = __instance.TryGetComp<RimRound.Comps.SleepingPosition_ThingComp>();
                 var compHideCovers = __instance.TryGetComp<RimRound.Comps.HideCovers_ThingComp>();
+                var compDietSlider = __instance.TryGetComp<RimRound.Comps.FullnessAndDietStats_ThingComp>();
+
+                if (compDietSlider != null)
+                    gizmos.AddRange(compDietSlider.CompGetGizmosExtra().ToList());
 
                 if (compSleepingPosition != null)
                     gizmos.AddRange(compSleepingPosition.CompGetGizmosExtra().ToList());
 
                 if (compHideCovers != null)
                     gizmos.AddRange(compHideCovers.CompGetGizmosExtra().ToList());
+
 
 
                 __result = gizmos.AsEnumerable<Gizmo>();
