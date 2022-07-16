@@ -32,7 +32,11 @@
 					<li>
 						<capacity>Moving</capacity>
 						<offset>100000</offset>
-					</li>							
+					</li>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>100000</offset>
+					</li>						
 				</capMods>
 			</li>
 		</stages>

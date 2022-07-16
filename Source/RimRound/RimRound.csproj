@@ -115,7 +115,7 @@
     <Compile Include="Patch\RimWorldPatches\Pawn-HealthTracker_MakeDowned_DropHoverChair.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnCapacityUtility_CalculateCapacityLevel_AddExceptionForMobilityScooter.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GenerateInitialHediffs_AddWeightHediffAndSetBodyType.cs" />
-    <Compile Include="Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GeneratePawn_SetDefaultBodyType.cs" />
+    <Compile Include="Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GenerateBodyType_SetDefaultBodyType.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GenerateTraits_AddWeightOpinions.cs" />
     <Compile Include="Patch\RimWorldPatches\PawnRenderer\PawnRenderer_BaseHeadOffsetAt_AdjustForOptionalNorthCustomSprites.cs" />
     <Compile Include="Patch\RimWorldPatches\GraphicalPatches\PawnUtility_GetPosture_AlterPostureIfWearingScooter.cs" />

@@ -128,7 +128,7 @@ namespace TestingRange
                     throw new Exception($"Invalid directory at {patch.saveToDirectory}");
             }
         }
-
+         
         private static PatchMode DoInputLoop(PatchMode patchMode)
         {
             while (patchMode == PatchMode.None)

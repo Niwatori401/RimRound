@@ -4,13 +4,13 @@
 		<li>ExternalMods/Hoverchair</li>		
 		<li>ExternalMods/SuperSpacesFatteningFoods</li>				
 		<li IfModActive="Ludeon.RimWorld.Ideology">IdeologyDefs</li>
-		<!--li IfModActive="Roo.AntyRaceMod">ExternalMods/AntyRaceSupport</li-->
 		<li IfModActive="ArmoredAmpharos.Dogbolds">ExternalMods/DogboldRaceSupport</li>	
 		<li IfModActive="ArmoredAmpharos.Foxbolds">ExternalMods/FoxboldRaceSupport</li>	
 		<li IfModActive="Hauvega.EquiumsSeries.Equiums">ExternalMods/HorseRaceSupport</li>		
-		<!--li IfModActive="Solaris.RatkinRaceMod">ExternalMods/RatkinRaceSupport</li-->		
 		<li IfModActive="AveryTheKitty.XenohumansAnthromorphs">ExternalMods/XenohumanlikeRaceSupport</li>
 		<li IfModActive="Eaveslabet.SylveonRace">ExternalMods/SylveonRaceSupport</li>
 		<li IfModActive="Monti.HalfDragons">ExternalMods/HalfDragonRaceSupport</li>
+		<li IfModActive="TrahsPanda.Lucario">ExternalMods/LucarioRaceSupport</li>
+		<li IfModActive="Barsimmon.OriginalByVagabond.FantasyGoblins">ExternalMods/GoblinRaceSupport</li>
 	</v1.3>
 </loadFolders>
