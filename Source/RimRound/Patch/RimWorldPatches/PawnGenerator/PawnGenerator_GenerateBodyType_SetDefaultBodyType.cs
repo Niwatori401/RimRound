@@ -17,7 +17,8 @@ namespace RimRound.Patch
         public static void Postfix(Pawn pawn)
         {
             var comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-            comp.DefaultBodyType = pawn.story.bodyType;
+            if (comp != null)
+                comp.DefaultBodyType = pawn.story.bodyType;
         }
     }
 }
