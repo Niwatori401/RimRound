@@ -281,12 +281,12 @@ namespace RimRound.Comps
             }
         }
 
-        public void UpdateRatio(float nutrition, float ratio = defaultFullnessToNutritionRatio) 
+        public void UpdateRatio(float incomingNutrition, float incomingRatio = defaultFullnessToNutritionRatio) 
         {
-            //Weighted average of current values and incoming values
-            CurrentFullnessToNutritionRatio = 
-                ((nutrition * ratio) * ratio + CurrentFullness * CurrentFullnessToNutritionRatio) /
-                ((nutrition * ratio) + CurrentFullness);
+            //Weighted average of current values and incoming values  
+            CurrentFullnessToNutritionRatio =
+                (CurrentFullness + incomingRatio * incomingNutrition) /
+                ((CurrentFullness / CurrentFullnessToNutritionRatio) + incomingNutrition);
         }
 
 
