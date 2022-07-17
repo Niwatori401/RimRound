@@ -3,7 +3,7 @@
 <Patch>
   <Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>[O21] Outer Rim Galaxies</li>
+			<li>Outer Rim Galaxies</li>
 		</mods>
 		  <match Class="PatchOperationSequence">
 			<operations>
