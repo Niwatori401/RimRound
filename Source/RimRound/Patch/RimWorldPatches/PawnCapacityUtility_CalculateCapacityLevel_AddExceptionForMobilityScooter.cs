@@ -28,6 +28,9 @@ namespace RimRound.Patch
             {
                 Pawn pawn = diffSet.pawn;
 
+                if (!pawn.RaceProps.Humanlike || !PawnCapacityUtility.BodyCanEverDoCapacity(pawn.RaceProps.body, PawnCapacityDefOf.Manipulation))
+                    return true;
+
                 if (PawnCapacityUtility.CalculateCapacityLevel(diffSet, PawnCapacityDefOf.Manipulation, impactors) < .10)
                 {
                     __result = 0;
