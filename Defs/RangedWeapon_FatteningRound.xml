@@ -21,6 +21,7 @@
 			<ticksBetweenApplication>20</ticksBetweenApplication>
 			<numberOfApplications>3</numberOfApplications>
 			<chanceToInflictIllness>1.00</chanceToInflictIllness>
+		    <effectDuration>600</effectDuration>
 		</li>
 	</modExtensions>
   </ThingDef>

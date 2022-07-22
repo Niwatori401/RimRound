@@ -13,5 +13,6 @@ namespace RimRound.Things
         public int   ticksBetweenApplication;
         public int   numberOfApplications;
         public float chanceToInflictIllness;
+        public int   effectDuration;
     }
 }

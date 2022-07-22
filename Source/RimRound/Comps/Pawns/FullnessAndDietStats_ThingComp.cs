@@ -109,6 +109,7 @@ namespace RimRound.Comps
                 return;
 
             ProcessWeightGainRequests(GlobalSettings.ticksBetweenWeightGainRequestProcess.threshold);
+            ProcessWeightLossRequests(GlobalSettings.ticksBetweenWeightGainRequestProcess.threshold);
 
             if (parent?.IsHashIntervalTick(GlobalSettings.ticksPerHungerCheck.threshold) ?? false) 
             {
@@ -126,24 +127,53 @@ namespace RimRound.Comps
 
         static MethodInfo HungerRateIgnoringMalnutritionMI = typeof(Need_Food).GetProperty("HungerRateIgnoringMalnutrition", BindingFlags.NonPublic | BindingFlags.Instance).GetGetMethod(true);
 
+        public void ProcessWeightLossRequests(int ticksBetweenChecks) 
+        {
+            if (!GeneralUtility.IsHashIntervalTick(ticksBetweenChecks))
+                return;
+
+            if (this.activeWeightLossRequests.Count > 0)
+            {
+                int currentTick = Find.TickManager.TicksGame;
+                if (this.activeWeightLossRequests.Peek().tickToApplyOn < currentTick)
+                    return;
+
+                WeightGainRequest gainRequest = this.activeWeightLossRequests.Dequeue();
+
+                Utilities.HediffUtility.AddHediffSeverity(
+                    Defs.HediffDefOf.RimRound_Weight,
+                    this.parent.AsPawn(),
+                    Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain));
+
+                var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
+                if (pbtThingComp is null)
+                    return;
+
+                BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
+
+            }
+
+
+        }
+
         public void ProcessWeightGainRequests(int ticksBetweenChecks) 
         {
             if (!GeneralUtility.IsHashIntervalTick(ticksBetweenChecks))
                 return;
 
-            if (weightGainRequestDelayTracker > 0)
-            {
-                weightGainRequestDelayTracker -= ticksBetweenChecks;
-                return;
-            }
-
-            weightGainRequestDelayTracker = 0;
-
             if (this.activeWeightGainRequests.Count > 0) 
             {
+                int currentTick = Find.TickManager.TicksGame;
+                if (this.activeWeightGainRequests.Peek().tickToApplyOn < currentTick)
+                    return;
+
                 WeightGainRequest gainRequest = this.activeWeightGainRequests.Dequeue();
 
-                weightGainRequestDelayTracker += gainRequest.delayAmount;
+
+                if (gainRequest.duration > 0)
+                {
+                    this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration));
+                }
 
                 Utilities.HediffUtility.AddHediffSeverity(
                     Defs.HediffDefOf.RimRound_Weight, 
@@ -160,7 +190,6 @@ namespace RimRound.Comps
             return;
         }
 
-        float weightGainRequestDelayTracker = 0;
 
         public void PassiveWeightLossTick() 
         {
@@ -585,6 +614,8 @@ namespace RimRound.Comps
         }
 
         public Queue<WeightGainRequest> activeWeightGainRequests = new Queue<WeightGainRequest>();
+        public Queue<WeightGainRequest> activeWeightLossRequests = new Queue<WeightGainRequest>();
+        
 
         public WeightGizmo weightGizmo;
         public WeightGizmo_FullnessBar fullnessbar;
@@ -606,13 +637,15 @@ namespace RimRound.Comps
 
     public struct WeightGainRequest
     {
-        public WeightGainRequest(float amountToGain, float delayAmount) 
+        public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0) 
         {
             this.amountToGain = amountToGain;
-            this.delayAmount = delayAmount;
+            this.tickToApplyOn = tickToApplyOn;
+            this.duration = duration;
         }
         public float amountToGain;
-        public float delayAmount;
+        public int tickToApplyOn;
+        public int duration;
     }
 
 

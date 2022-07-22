@@ -32,9 +32,11 @@ namespace RimRound.Things
 
                         float kilosPerApplication = Props.kilosToAdd / Props.numberOfApplications;
 
+                        int currentTick = Find.TickManager.TicksGame;
+
                         for (int i = 0; i < Props.numberOfApplications; ++i) 
                         {
-                            comp.activeWeightGainRequests.Enqueue(new WeightGainRequest(kilosPerApplication, Props.ticksBetweenApplication));
+                            comp.activeWeightGainRequests.Enqueue(new WeightGainRequest(kilosPerApplication, currentTick + i * Props.ticksBetweenApplication, Props.effectDuration));
                         }
                     }
                 }
