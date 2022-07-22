@@ -140,17 +140,7 @@ namespace RimRound.Comps
 
                 WeightGainRequest gainRequest = this.activeWeightLossRequests.Dequeue();
 
-                Utilities.HediffUtility.AddHediffSeverity(
-                    Defs.HediffDefOf.RimRound_Weight,
-                    this.parent.AsPawn(),
-                    Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain));
-
-                var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
-                if (pbtThingComp is null)
-                    return;
-
-                BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
-
+                ChangeWeightAndUpdateSprite(gainRequest);
             }
 
 
@@ -161,7 +151,7 @@ namespace RimRound.Comps
             if (!GeneralUtility.IsHashIntervalTick(ticksBetweenChecks))
                 return;
 
-            if (this.activeWeightGainRequests.Count > 0) 
+            if (this.activeWeightGainRequests.Count > 0)
             {
                 int currentTick = Find.TickManager.TicksGame;
                 if (this.activeWeightGainRequests.Peek().tickToApplyOn < currentTick)
@@ -169,27 +159,36 @@ namespace RimRound.Comps
 
                 WeightGainRequest gainRequest = this.activeWeightGainRequests.Dequeue();
 
+                CreateWLRequestIfNonZeroDuration(currentTick, gainRequest);
 
-                if (gainRequest.duration > 0)
-                {
-                    this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration));
-                }
-
-                Utilities.HediffUtility.AddHediffSeverity(
-                    Defs.HediffDefOf.RimRound_Weight, 
-                    this.parent.AsPawn(), 
-                    Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain));
-
-                var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
-                if (pbtThingComp is null)
-                    return;
-
-                BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
+                ChangeWeightAndUpdateSprite(gainRequest);
             }
 
             return;
         }
 
+        private void ChangeWeightAndUpdateSprite(WeightGainRequest gainRequest) 
+        {
+            Utilities.HediffUtility.AddHediffSeverity(
+                 Defs.HediffDefOf.RimRound_Weight,
+                 this.parent.AsPawn(),
+                 Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain));
+
+            var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
+            if (pbtThingComp is null)
+                return;
+
+            BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
+        }
+
+
+        private void CreateWLRequestIfNonZeroDuration(int currentTick, WeightGainRequest gainRequest)
+        {
+            if (gainRequest.duration > 0)
+            {
+                this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration));
+            }
+        }
 
         public void PassiveWeightLossTick() 
         {
@@ -247,7 +246,6 @@ namespace RimRound.Comps
             return;
         }
 
-        //Used in a CompTick(). Returns the amount of fullness lost.
         public float DigestionTick()
         {
             float amountToSubtract = DigestionRate * GlobalSettings.ticksPerHungerCheck.threshold;
@@ -318,8 +316,6 @@ namespace RimRound.Comps
                 ((CurrentFullness / CurrentFullnessToNutritionRatio) + incomingNutrition);
         }
 
-
-        //Digestion rate per tick
         public float DigestionRate
         {
             get
