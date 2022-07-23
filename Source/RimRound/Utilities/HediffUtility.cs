@@ -96,7 +96,7 @@ namespace RimRound.Utilities
             return pawn?.health?.hediffSet?.hediffs?.Find(x => x.def.defName == def.defName) ?? null;
         }
 
-        public static void AddHediffSeverity(Hediff hediff, Pawn pawn, float amount) 
+        public static void AddHediffSeverity(Hediff hediff, Pawn pawn, float amount, bool triggerMessages = true) 
         {
             float cachedSeverity = hediff.Severity;
 
@@ -131,7 +131,7 @@ namespace RimRound.Utilities
                 ThrowValueText(pawn, amount, 1, 0.0005f);
 
 
-                if (GetWeightChangedMessage(pawn, cachedSeverity, hediff.Severity) is Message m)
+                if (triggerMessages && GetWeightChangedMessage(pawn, cachedSeverity, hediff.Severity) is Message m)
                     Messages.Message(m);
             }
             else
@@ -140,7 +140,7 @@ namespace RimRound.Utilities
             }
         }
 
-        public static void AddHediffSeverity(HediffDef def, Pawn pawn, float amount, bool addIfHediffNull = false)
+        public static void AddHediffSeverity(HediffDef def, Pawn pawn, float amount, bool addIfHediffNull = false, bool triggerMessages = true)
         {
             Hediff h = GetHediffOfDefFrom(def, pawn);
 
@@ -157,7 +157,7 @@ namespace RimRound.Utilities
                 }
             }
 
-            AddHediffSeverity(h, pawn, amount);
+            AddHediffSeverity(h, pawn, amount, triggerMessages);
         }
 
         //This will bypass checks normally made in AddHediffSeverity for weight. Use wisely.

@@ -135,7 +135,7 @@ namespace RimRound.Comps
             if (this.activeWeightLossRequests.Count > 0)
             {
                 int currentTick = Find.TickManager.TicksGame;
-                if (this.activeWeightLossRequests.Peek().tickToApplyOn < currentTick)
+                if (this.activeWeightLossRequests.Peek().tickToApplyOn > currentTick)
                     return;
 
                 WeightGainRequest gainRequest = this.activeWeightLossRequests.Dequeue();
@@ -154,7 +154,7 @@ namespace RimRound.Comps
             if (this.activeWeightGainRequests.Count > 0)
             {
                 int currentTick = Find.TickManager.TicksGame;
-                if (this.activeWeightGainRequests.Peek().tickToApplyOn < currentTick)
+                if (this.activeWeightGainRequests.Peek().tickToApplyOn > currentTick)
                     return;
 
                 WeightGainRequest gainRequest = this.activeWeightGainRequests.Dequeue();
@@ -172,7 +172,9 @@ namespace RimRound.Comps
             Utilities.HediffUtility.AddHediffSeverity(
                  Defs.HediffDefOf.RimRound_Weight,
                  this.parent.AsPawn(),
-                 Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain));
+                 Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain),
+                 false,
+                 false);
 
             var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
             if (pbtThingComp is null)
@@ -186,7 +188,7 @@ namespace RimRound.Comps
         {
             if (gainRequest.duration > 0)
             {
-                this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration));
+                this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
             }
         }
 
@@ -633,15 +635,17 @@ namespace RimRound.Comps
 
     public struct WeightGainRequest
     {
-        public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0) 
+        public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0, bool triggerMessages = false) 
         {
             this.amountToGain = amountToGain;
             this.tickToApplyOn = tickToApplyOn;
             this.duration = duration;
+            this.triggerMessages = triggerMessages;
         }
         public float amountToGain;
         public int tickToApplyOn;
         public int duration;
+        public bool triggerMessages;
     }
 
 

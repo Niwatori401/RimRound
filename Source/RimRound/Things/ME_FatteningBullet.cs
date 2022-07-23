@@ -14,5 +14,6 @@ namespace RimRound.Things
         public int   numberOfApplications;
         public float chanceToInflictIllness;
         public int   effectDuration;
+        public bool  triggerMessages;
     }
 }

@@ -18,10 +18,11 @@
 	<modExtensions>
 		<li Class="RimRound.Things.ME_FatteningBullet">
 			<kilosToAdd>300</kilosToAdd>
-			<ticksBetweenApplication>20</ticksBetweenApplication>
+			<ticksBetweenApplication>120</ticksBetweenApplication>
 			<numberOfApplications>3</numberOfApplications>
 			<chanceToInflictIllness>1.00</chanceToInflictIllness>
 		    <effectDuration>600</effectDuration>
+			<triggerMessages>false</triggerMessages>
 		</li>
 	</modExtensions>
   </ThingDef>

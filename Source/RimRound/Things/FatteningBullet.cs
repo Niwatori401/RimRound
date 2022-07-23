@@ -36,7 +36,7 @@ namespace RimRound.Things
 
                         for (int i = 0; i < Props.numberOfApplications; ++i) 
                         {
-                            comp.activeWeightGainRequests.Enqueue(new WeightGainRequest(kilosPerApplication, currentTick + i * Props.ticksBetweenApplication, Props.effectDuration));
+                            comp.activeWeightGainRequests.Enqueue(new WeightGainRequest(kilosPerApplication, currentTick + i * Props.ticksBetweenApplication, Props.effectDuration, Props.triggerMessages));
                         }
                     }
                 }
