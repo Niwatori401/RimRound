@@ -14,10 +14,37 @@ namespace RimRound.Comps
         static public int paramNumber = 0;
         static public float magnification = 1f;
 
+        PawnBodyType_ThingComp cachedPBTComp = null;
+
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            cachedPBTComp = parent.TryGetComp<PawnBodyType_ThingComp>();
+        }
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (Prefs.DevMode)
             {
+                yield return new Command_Action
+                {
+                    defaultLabel = $"Switch pawn body type to {(cachedPBTComp is null ? "other type" : (cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple.ToString() : BodyArchetype.standard.ToString()))}",
+                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Fire),
+                    action = delegate ()
+                    {
+                        if (cachedPBTComp is null)
+                        {
+                            Log.Error("cachedPBTComp was null in debug action!");
+                            return;
+                        }
+
+                        cachedPBTComp.BodyArchetype = cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple : BodyArchetype.standard;
+                        BodyTypeUtility.UpdatePawnSprite((Pawn)parent, cachedPBTComp.PersonallyExempt, cachedPBTComp.CategoricallyExempt, true, true);
+
+                    }
+                };
+
                 yield return new Command_Action
                 {
                     defaultLabel = $"Force default body type to current",

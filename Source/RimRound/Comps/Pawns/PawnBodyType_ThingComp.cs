@@ -111,6 +111,10 @@ namespace RimRound.Comps
 
                 return _bodyarchetype;
             }
+            set 
+            {
+                _bodyarchetype= value;
+            }
         }
     }
 
