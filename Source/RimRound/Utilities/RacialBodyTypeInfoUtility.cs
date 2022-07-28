@@ -136,14 +136,14 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    new BodyTypeInfo(1.860f, 7.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
                 
                 { RimRound.Defs.BodyTypeDefOf.F_150_Gelatinous,    new BodyTypeInfo(2.460f, 8.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_200_Gelatinous,    new BodyTypeInfo(2.960f, 9.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_250_Gelatinous,    new BodyTypeInfo(3.960f, 10.500f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_300_Gelatinous,    new BodyTypeInfo(4.960f, 12.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_350_Gelatinous,    new BodyTypeInfo(6.460f, 13.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_400_Gelatinous,    new BodyTypeInfo(7.960f, 15.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_450_Gelatinous,    new BodyTypeInfo(9.960f, 17.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_500_Gelatinous,    new BodyTypeInfo(14.46f, 20.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous,    new BodyTypeInfo(100f  , 25.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_200_Gelatinous,    new BodyTypeInfo(2.960f, 9.5000f, 0.05f, 0.20205f, 2.60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_250_Gelatinous,    new BodyTypeInfo(3.960f, 10.500f, 0.05f, 0.17000f, 2.80f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_300_Gelatinous,    new BodyTypeInfo(4.960f, 12.000f, 0.05f, 0.14000f, 3.60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_350_Gelatinous,    new BodyTypeInfo(6.460f, 13.000f, 0.05f, 0.13000f, 3.90f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_400_Gelatinous,    new BodyTypeInfo(7.960f, 15.000f, 0.05f, 0.11000f, 4.70f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_450_Gelatinous,    new BodyTypeInfo(9.960f, 17.000f, 0.05f, 0.10000f, 5.40f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_500_Gelatinous,    new BodyTypeInfo(14.46f, 20.000f, 0.05f, 0.09000f, 6.31f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous,    new BodyTypeInfo(100f  , 25.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
             };
 
         public static Dictionary<BodyTypeDef, BodyTypeInfo> appleFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()

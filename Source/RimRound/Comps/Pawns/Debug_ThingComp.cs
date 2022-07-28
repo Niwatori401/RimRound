@@ -141,6 +141,17 @@ namespace RimRound.Comps
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
                         }
                     };
+                    yield return new Command_Action
+                    {
+                        defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT2)",
+                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                        action = delegate ()
+                        {
+                            Values.debugPos2 += positivity * (offsetAmounts[offsetAmountsIndex]);
+                            Log.Message($"Debug Float is now: {Values.debugPos2}");
+                            BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
+                        }
+                    };
 
                 }
                

@@ -29,6 +29,10 @@ namespace RimRound.Patch
             {
                 __3.z = bodyTypeInfo.AsNonNullable().portraitOffsetZoomMethod;
                 __4 = bodyTypeInfo.AsNonNullable().portraitZoom;
+                //__3.z = Values.debugPos2;
+                //__4 = Values.debugPos;
+
+
                 return true;
             }
             else 

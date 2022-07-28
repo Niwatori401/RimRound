@@ -13,6 +13,7 @@ namespace RimRound.Utilities
     public static class Values
     {
         public static float debugPos = 0;
+        public static float debugPos2 = 0;
 
 
         
