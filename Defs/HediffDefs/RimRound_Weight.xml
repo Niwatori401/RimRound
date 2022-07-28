@@ -401,7 +401,7 @@
 			<!---->
 			<li>
 				<minSeverity>1.410</minSeverity>
-				<label>Gelatinous</label>
+				<label>Gelatinous I</label>
 				<lifeThreatening>false</lifeThreatening>
 				<hungerRateFactor>6.75</hungerRateFactor>
 				<restFallFactor>4.0</restFallFactor>
@@ -418,7 +418,170 @@
 				</capMods>
 			
 			
+			</li>
+			<!--Post Blob-->
+			<li>
+				<minSeverity>1.860</minSeverity>
+				<label>Gelatinous II</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-2.50</offset>
+					</li>							
+				</capMods>	
 			</li>	
+			<li>
+				<minSeverity>2.460</minSeverity>
+				<label>Gelatinous III</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-3.50</offset>
+					</li>							
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>2.960</minSeverity>
+				<label>Gelatinous IV</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-4.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>3.960</minSeverity>
+				<label>Gelatinous V</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-5.50</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>4.960</minSeverity>
+				<label>Gelatinous VI</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-7.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>6.460</minSeverity>
+				<label>Gelatinous VII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-9.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>7.960</minSeverity>
+				<label>Gelatinous VIII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-11.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>9.960</minSeverity>
+				<label>Gelatinous IX</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-13.50</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>14.460</minSeverity>
+				<label>Gelatinous X</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-20.00</offset>
+					</li>							
+				</capMods>	
+			</li>				
 		</stages>
 	
 		

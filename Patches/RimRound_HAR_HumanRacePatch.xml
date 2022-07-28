@@ -253,7 +253,67 @@
 						<customDrawSize>(8.0, 8.0)</customDrawSize>
 						<customPortraitDrawSize>(8.0, 8.0)</customPortraitDrawSize>
 						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(8.5, 8.5)</customDrawSize>
+						<customPortraitDrawSize>(8.5, 8.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>			
+					<li>
+						<customDrawSize>(9.0, 9.0)</customDrawSize>
+						<customPortraitDrawSize>(9.0, 9.0)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
 					</li>	
+					<li>
+						<customDrawSize>(9.5, 9.5)</customDrawSize>
+						<customPortraitDrawSize>(9.5, 9.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>						
+					<li>
+						<customDrawSize>(10,10)</customDrawSize>
+						<customPortraitDrawSize>(10,10)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(10.5,10.5)</customDrawSize>
+						<customPortraitDrawSize>(10.5,10.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>					
+					<li>
+						<customDrawSize>(11,11)</customDrawSize>
+						<customPortraitDrawSize>(11,11)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(12,12)</customDrawSize>
+						<customPortraitDrawSize>(12,12)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(13,13)</customDrawSize>
+						<customPortraitDrawSize>(13,13)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(15,15)</customDrawSize>
+						<customPortraitDrawSize>(15,15)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(17,17)</customDrawSize>
+						<customPortraitDrawSize>(17,17)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(20,20)</customDrawSize>
+						<customPortraitDrawSize>(20,20)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(25,25)</customDrawSize>
+						<customPortraitDrawSize>(25,25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
 				</value>
 			</li>
 		</operations>

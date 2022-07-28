@@ -39,6 +39,17 @@ namespace RimRound.Defs
         public static BodyTypeDef F_090_Titanic;
         public static BodyTypeDef F_100_Gelatinous;
 
+        public static BodyTypeDef F_150_Gelatinous;
+        public static BodyTypeDef F_200_Gelatinous;
+        public static BodyTypeDef F_250_Gelatinous;
+        public static BodyTypeDef F_300_Gelatinous;
+        public static BodyTypeDef F_350_Gelatinous;
+        public static BodyTypeDef F_400_Gelatinous;
+        public static BodyTypeDef F_450_Gelatinous;
+        public static BodyTypeDef F_500_Gelatinous;
+        public static BodyTypeDef F_900_Gelatinous;
+
+
         public static BodyTypeDef F_005a_Thick;
         public static BodyTypeDef F_006a_Chonky;
         public static BodyTypeDef F_010a_Chubby;

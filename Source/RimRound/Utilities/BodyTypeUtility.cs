@@ -47,6 +47,11 @@ namespace RimRound.Utilities
                 bodytypeCleaned += "Alt";
             }
 
+            if (Regex.IsMatch(bodytypeCleaned, "Gelatinous"))
+            {
+                bodytypeCleaned = Regex.Replace(bodytypeCleaned, "[0-9]{3}", "100");
+            }
+
             return bodytypeCleaned;
         }
 

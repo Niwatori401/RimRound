@@ -133,7 +133,17 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_070_Enormous,      new BodyTypeInfo(0.660f, 2.5000f, 0.10f, 0.48205f, 0.93f, 0.50f) },
                 { RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,      new BodyTypeInfo(0.965f, 5.5000f, 0.10f, 0.38205f, 1.10f, 0.65f) },
                 { RimRound.Defs.BodyTypeDefOf.F_090_Titanic,       new BodyTypeInfo(1.410f, 5.2500f, 0.10f, 0.37205f, 1.10f, 0.79f) },
-                { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    new BodyTypeInfo(100f  , 7.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) }
+                { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,    new BodyTypeInfo(1.860f, 7.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                
+                { RimRound.Defs.BodyTypeDefOf.F_150_Gelatinous,    new BodyTypeInfo(2.460f, 8.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_200_Gelatinous,    new BodyTypeInfo(2.960f, 9.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_250_Gelatinous,    new BodyTypeInfo(3.960f, 10.500f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_300_Gelatinous,    new BodyTypeInfo(4.960f, 12.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_350_Gelatinous,    new BodyTypeInfo(6.460f, 13.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_400_Gelatinous,    new BodyTypeInfo(7.960f, 15.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_450_Gelatinous,    new BodyTypeInfo(9.960f, 17.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_500_Gelatinous,    new BodyTypeInfo(14.46f, 20.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous,    new BodyTypeInfo(100f  , 25.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
             };
 
         public static Dictionary<BodyTypeDef, BodyTypeInfo> appleFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
@@ -627,6 +637,16 @@ namespace RimRound.Utilities
             RimRound.Defs.BodyTypeDefOf.F_080_Gigantic,
             RimRound.Defs.BodyTypeDefOf.F_090_Titanic,
             RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous,
+
+            RimRound.Defs.BodyTypeDefOf.F_150_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_200_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_250_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_300_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_350_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_400_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_450_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_500_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous,
 
             RimRound.Defs.BodyTypeDefOf.F_005a_Thick,
             RimRound.Defs.BodyTypeDefOf.F_006a_Chonky,
