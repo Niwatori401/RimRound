@@ -298,7 +298,7 @@
 						<customDrawSize>(15,15)</customDrawSize>
 						<customPortraitDrawSize>(15,15)</customPortraitDrawSize>
 						<skinShader>CutoutSkin</skinShader>
-					</li>
+					</li>				
 					<li>
 						<customDrawSize>(17,17)</customDrawSize>
 						<customPortraitDrawSize>(17,17)</customPortraitDrawSize>

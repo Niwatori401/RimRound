@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimRound.Comps;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,9 @@ namespace RimRound.Patch
     {
         public static void Postfix(Pawn pawn)
         {
+            if (pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is null)
+                return;
+
             Utilities.PawnGeneratorUtility.AddWeightOpinion(pawn);
         }
 

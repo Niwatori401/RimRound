@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<BodyTypeDef>
-		<defName>M_080_Gigantic_090</defName>
-		<headOffset>(0.120, 0.840)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/M_080_Gigantic</bodyNakedGraphicPath>
+		<defName>M_450_Gelatinous</defName>
+		<headOffset>(0.250, 2.500)</headOffset>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_100_Gelatinous</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>
