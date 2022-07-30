@@ -20,6 +20,9 @@ namespace RimRound.Patch
 	{
 		static HarmonyPatchMain()
 		{
+			Log.Message($"This is executing assembly name:{Assembly.GetExecutingAssembly().FullName}");
+
+
 			var harmony = new Harmony("RRHarmony");
 			harmony.PatchAll();
 

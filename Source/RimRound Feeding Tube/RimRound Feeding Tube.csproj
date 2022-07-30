@@ -39,10 +39,6 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RimRound, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Assemblies\RimRound.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FeedingTube\AI\ThinkNode_EatAtTubeConditional.cs" />
+    <Compile Include="FeedingTube\Defs\ThingDefOf.cs" />
     <Compile Include="FeedingTube\Patches\HarmonyPatchMain.cs" />
     <Compile Include="FeedingTube\UI\Alert_FoodProcessorNeedsDispenser.cs" />
     <Compile Include="FeedingTube\Building_FoodFaucet.cs" />
@@ -89,6 +86,8 @@
     <Compile Include="FeedingTube\SectionLayer_ThingsFoodGrid.cs" />
     <Compile Include="FeedingTube\AI\WorkGiver_EatAtFoodDispenser.cs" />
     <Compile Include="FeedingTube\AI\JobGiver_EatAtTube.cs" />
+    <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
+    <Compile Include="FeedingTube\Utilities\RimRoundUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

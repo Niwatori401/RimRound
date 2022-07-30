@@ -10,7 +10,7 @@ using Verse;
 namespace RimRound.FeedingTube.Patches
 {
 
-	[StaticConstructorOnStartup]
+	//[StaticConstructorOnStartup]
 	static class HarmonyPatchMain
 	{
 		static HarmonyPatchMain()
