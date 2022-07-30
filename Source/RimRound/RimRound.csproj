@@ -70,9 +70,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeedingTube\AI\JobGiver_EatAtTube.cs" />
-    <Compile Include="FeedingTube\AI\ThinkNode_EatAtTubeConditional.cs" />
-    <Compile Include="FeedingTube\AI\WorkGiver_EatAtFoodDispenser.cs" />
+    <Compile Include="FeedingTube\AI\Verb_FeedFromFeeder.cs" />
+    <Compile Include="FeedingTube\Building_AutoFeeder.cs" />
     <Compile Include="FeedingTube\Building_FoodFaucet.cs" />
     <Compile Include="FeedingTube\Building_FoodProcessor.cs" />
     <Compile Include="FeedingTube\Building_FoodVatLarge.cs" />
@@ -104,7 +103,6 @@
     <Compile Include="FeedingTube\SectionLayer_ThingsFoodGrid.cs" />
     <Compile Include="FeedingTube\UI\Alert_FoodProcessorNeedsDispenser.cs" />
     <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
-    <Compile Include="FeedingTube\Utilities\RimRoundUtility.cs" />
     <Compile Include="RimRoundCore\AI\GameCondition_PsychicHungerIncrease.cs" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\InteractionWorker_ReduceReluctance.cs" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\JobDrivers\JobDriver_ChatToReduceReluctance.cs" />

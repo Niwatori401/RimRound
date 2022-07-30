@@ -432,4 +432,90 @@
 		</researchPrerequisites>
 	</ThingDef>	
 	
+	<ThingDef ParentName="BuildingBase">
+		<defName>RR_AutoFeeder</defName>
+		<label>Automatic food dispenser</label>
+		<description>dispenses food.</description>
+		<thingClass>RimRound.FeedingTube.Building_AutoFeeder</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodDispenser</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<rotatable>false</rotatable>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedThing</minifiedDef>	
+		<thingCategories>
+		  <li>BuildingsProduction</li>
+		</thingCategories>
+		
+		<statBases>
+			<Mass>35</Mass>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>35</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<comps>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>80</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<verbs>
+			<li>
+				<verbClass>RimRound.FeedingTube.AI.Verb_FeedFromFeeder</verbClass>
+			</li>
+		</verbs>
+	</ThingDef>	
+	
 </Defs>

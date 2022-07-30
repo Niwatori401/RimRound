@@ -20,13 +20,10 @@ namespace RimRound.Patch
 	{
 		static HarmonyPatchMain()
 		{
-			Log.Message($"This is executing assembly name:{Assembly.GetExecutingAssembly().FullName}");
-
-
 			var harmony = new Harmony("RRHarmony");
 			harmony.PatchAll();
 
-            #region ignore this, its for something else
+            #region External Mod Patching
             ModCompatibilityUtility.TryPatch(
 				harmony, 
 				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompMilkableHuman", "ResourceAmount", MethodType.Getter), 
