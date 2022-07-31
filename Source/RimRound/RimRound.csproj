@@ -70,7 +70,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeedingTube\AI\Verb_FeedFromFeeder.cs" />
     <Compile Include="FeedingTube\Building_AutoFeeder.cs" />
     <Compile Include="FeedingTube\Building_FoodFaucet.cs" />
     <Compile Include="FeedingTube\Building_FoodProcessor.cs" />
@@ -83,6 +82,7 @@
     <Compile Include="FeedingTube\Comps\FoodTransmitter_CompProperties.cs" />
     <Compile Include="FeedingTube\Comps\FoodTransmitter_ThingComp.cs" />
     <Compile Include="FeedingTube\Comps\FoodValve_ThingComp.cs" />
+    <Compile Include="FeedingTube\Defs\HediffDefOf.cs" />
     <Compile Include="FeedingTube\Defs\ThingDefOf.cs" />
     <Compile Include="FeedingTube\FoodNet.cs" />
     <Compile Include="FeedingTube\FoodTransmitter_NetManager.cs" />
@@ -265,6 +265,8 @@
   <ItemGroup>
     <Content Include="Notes.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="FeedingTube\AI\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

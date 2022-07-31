@@ -478,12 +478,7 @@
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<socialPropernessMatters>true</socialPropernessMatters>
-		<hasInteractionCell>true</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<comps>
-			<li>
-				<compClass>CompEquippable</compClass>
-			</li>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>80</basePowerConsumption>
@@ -511,11 +506,6 @@
 		<researchPrerequisites>
 			<li>Electricity</li>
 		</researchPrerequisites>
-		<verbs>
-			<li>
-				<verbClass>RimRound.FeedingTube.AI.Verb_FeedFromFeeder</verbClass>
-			</li>
-		</verbs>
 	</ThingDef>	
 	
 </Defs>

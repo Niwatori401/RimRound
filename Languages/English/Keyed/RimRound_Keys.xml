@@ -129,6 +129,24 @@
 	<RR_FT_BrokenDown>Broken down</RR_FT_BrokenDown>
 	<RR_FT_TraderUsing>Using {CONSUMPTIONRATE}L/s</RR_FT_TraderUsing>
 	
+	<!--Auto Feeder-->
+	<FeedingTubeModeLabel_lose>Lose Weight</FeedingTubeModeLabel_lose>
+	<FeedingTubeModeLabel_loseDesc>The autofeeder will keep connected pawns from becoming malnourished but only barely.</FeedingTubeModeLabel_loseDesc>
+	<FeedingTubeModeLabel_maintain>Maintain Weight</FeedingTubeModeLabel_maintain>
+	<FeedingTubeModeLabel_maintainDesc>The autofeeder will attempt to keep the pawn at their current weight.</FeedingTubeModeLabel_maintainDesc>
+	<FeedingTubeModeLabel_gain>Gain Weight</FeedingTubeModeLabel_gain>
+	<FeedingTubeModeLabel_gainDesc>The autofeeder will cause the pawn to gain weight, but will not stuff them beyond normal fullness.</FeedingTubeModeLabel_gainDesc>
+	<FeedingTubeModeLabel_maxgain>Force Gain Weight</FeedingTubeModeLabel_maxgain>
+	<FeedingTubeModeLabel_maxgainDesc>The autofeeder will cause the pawn to gain weight and WILL stuff them beyond normal fullness. This may cause their stomach to stretch out massively over time.</FeedingTubeModeLabel_maxgainDesc>
+	<FeedingTubeModeLabel_off>Standby</FeedingTubeModeLabel_off>
+	<FeedingTubeModeLabel_offDesc>While in standby the autofeeder will not consume food nor will it feed any pawns. It will, however, still consume power.</FeedingTubeModeLabel_offDesc>
+	<FeedingTube_TargetPawn>Feed pawn</FeedingTube_TargetPawn>
+	<FeedingTube_TargetPawnDesc>Attaches a pawn to the autofeeder. Note that they must be in bed to use it.</FeedingTube_TargetPawnDesc>
+	<FeedingTube_StopFeedingLabel>Disconnect</FeedingTube_StopFeedingLabel>
+	<FeedingTube_StopFeedingDesc>Disconnects a pawn from the autofeeder.</FeedingTube_StopFeedingDesc>
+	
+	
+	
 	
 	<GainingResistance>Gaining Resistance</GainingResistance>
 	<GainingResistanceDesc>How much a pawn will resist the warden's effort to keep them fed. Lower values mean less reluctance to gain. When close to zero a prisoner is more likely to eat in excess when instructed to do so.</GainingResistanceDesc>
