@@ -505,6 +505,7 @@ namespace RimRound.UI
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToBeBed, numericFieldCount++, "RR_Mtw_GlobalBlobIntoBedThreshold");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToAdjustWiggleAngle, numericFieldCount++, "RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksBetweenWeightGainRequestProcess, numericFieldCount++, "RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.meatMultiplierForWeight, numericFieldCount++, "RR_Mtw_meatMultiplierForWeight");
 
 
             /**/

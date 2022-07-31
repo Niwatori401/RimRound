@@ -439,7 +439,7 @@
 		<thingClass>RimRound.FeedingTube.Building_AutoFeeder</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Building/Production/FoodDispenser</texPath>
+			<texPath>Things/Building/Production/AutoFeeder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1, 1)</drawSize>
 			<damageData>
@@ -474,8 +474,8 @@
 		<size>(1,1)</size>
 		<placingDraggableDimensions>1</placingDraggableDimensions>
 		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
+			<Steel>40</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<comps>

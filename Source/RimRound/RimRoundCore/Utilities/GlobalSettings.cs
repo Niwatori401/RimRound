@@ -92,7 +92,7 @@ namespace RimRound.Utilities
         public static NumericFieldData<int> maxWeight = new NumericFieldData<int>(100000, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);
         public static NumericFieldData<int> minWeight = new NumericFieldData<int>((int)Hediff_Weight.ModExtension.baseWeight, Hediff_Weight.ModExtension.baseWeight, int.MaxValue - 1);
         public static NumericFieldData<int> ticksBetweenWeightGainRequestProcess = new NumericFieldData<int>(15, 5, 600);
-        
+        public static NumericFieldData<float> meatMultiplierForWeight = new NumericFieldData<float>(1, 0, 10);
 
         #endregion
     }

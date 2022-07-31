@@ -29,7 +29,6 @@ namespace RimRound.FeedingTube.Comps
             base.ReceiveCompSignal(signal);
             if (signal == "breakdown") 
             {
-                //spawn fire?
                 this.Stored = 0;
             }
         }
@@ -41,8 +40,8 @@ namespace RimRound.FeedingTube.Comps
             sb.AppendLine(base.CompInspectStringExtra());
 
             sb.Append("RR_FT_RemainingFoodStored".Translate() + ": ");
-            sb.Append(Stored.ToString("F1") + "L" + " / " + Capacity.ToString("F1") + "L");
-
+            sb.Append(Stored.ToString("F1") + "L" + " / " + Capacity.ToString("F1") + "L\n");
+            sb.AppendLine("RR_NutritionDensity".Translate() + $": {(1/FoodNet.fullnessToNutritionRatio):F1}" );
             return sb.ToString().Trim();
         }
 
@@ -87,149 +86,6 @@ namespace RimRound.FeedingTube.Comps
                     }
                 };
 
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar Size x+",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarSize.x += 0.01f;
-                            Log.Message(b.BarSize.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s)
-                        {
-                            s.BarSize.x += 0.01f;
-                            Log.Message(s.BarSize.ToString());
-                        }
-                    }
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar Size x-",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarSize.x -= 0.01f;
-                            Log.Message(b.BarSize.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s)
-                        {
-                            s.BarSize.x -= 0.01f;
-                            Log.Message(s.BarSize.ToString());
-                        }
-                    }
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar Size y+",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarSize.y += 0.01f;
-                            Log.Message(b.BarSize.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s)
-                        {
-                            s.BarSize.y += 0.01f;
-                            Log.Message(s.BarSize.ToString());
-                        }
-                    }
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar Size y-",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarSize.y -= 0.01f;
-                            Log.Message(b.BarSize.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s)
-                        {
-                            s.BarSize.y -= 0.01f;
-                            Log.Message(s.BarSize.ToString());
-                        }
-                    }
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar YPOS (+)",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarYOFF += 0.01f;
-                            Log.Message(b.BarYOFF.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s) 
-                        {
-                            s.BarYOFF += 0.01f;
-                            Log.Message(s.BarYOFF.ToString());
-                        }
-                    }
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar YPOS (-)",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarYOFF -= 0.01f;
-                            Log.Message(b.BarYOFF.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s)
-                        {
-                            s.BarYOFF -= 0.01f;
-                            Log.Message(s.BarYOFF.ToString());
-                        }
-                    }
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar XPOS (+)",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarXOFF += 0.01f;
-                            Log.Message(b.BarXOFF.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s)
-                        {
-                            s.BarXOFF += 0.01f;
-                            Log.Message(s.BarXOFF.ToString());
-                        }
-                    }
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "Change Bar XPOS (-)",
-                    action = delegate ()
-                    {
-                        if (this.parent is Building_FoodVatLarge b)
-                        {
-                            b.BarXOFF -= 0.01f;
-                            Log.Message(b.BarXOFF.ToString());
-                        }
-                        if (this.parent is Building_FoodVatSmall s)
-                        {
-                            s.BarXOFF -= 0.01f;
-                            Log.Message(s.BarXOFF.ToString());
-                        }
-                    }
-                };
             }
             yield break;
         }

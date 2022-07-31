@@ -104,7 +104,7 @@
 			<li>
 				<minSeverity>0.90</minSeverity>
 				<label>About to Burst</label>
-				<lifeThreatening>true</lifeThreatening>
+				<lifeThreatening>false</lifeThreatening>
 				
 				<painOffset>0.40</painOffset>
 				<capMods>

@@ -67,6 +67,7 @@
 	<RR_Mtw_MaxWeight>Maximum weight</RR_Mtw_MaxWeight>
 	<RR_Mtw_MinWeight>Minimum weight</RR_Mtw_MinWeight>
 	<RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>Ticks between WG requests</RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>
+	<RR_Mtw_meatMultiplierForWeight>Meat multiplier for heavy pawns</RR_Mtw_meatMultiplierForWeight>
 	
 	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
 	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>
@@ -128,6 +129,7 @@
 	<RR_FT_NetInfo>Food in system: {0}L / {1}L</RR_FT_NetInfo>
 	<RR_FT_BrokenDown>Broken down</RR_FT_BrokenDown>
 	<RR_FT_TraderUsing>Using {CONSUMPTIONRATE}L/s</RR_FT_TraderUsing>
+	<RR_NutritionDensity>Nutrition density</RR_NutritionDensity>
 	
 	<!--Auto Feeder-->
 	<FeedingTubeModeLabel_lose>Lose Weight</FeedingTubeModeLabel_lose>
@@ -137,7 +139,7 @@
 	<FeedingTubeModeLabel_gain>Gain Weight</FeedingTubeModeLabel_gain>
 	<FeedingTubeModeLabel_gainDesc>The autofeeder will cause the pawn to gain weight, but will not stuff them beyond normal fullness.</FeedingTubeModeLabel_gainDesc>
 	<FeedingTubeModeLabel_maxgain>Force Gain Weight</FeedingTubeModeLabel_maxgain>
-	<FeedingTubeModeLabel_maxgainDesc>The autofeeder will cause the pawn to gain weight and WILL stuff them beyond normal fullness. This may cause their stomach to stretch out massively over time.</FeedingTubeModeLabel_maxgainDesc>
+	<FeedingTubeModeLabel_maxgainDesc>The autofeeder will cause the pawn to gain weight and will stuff them beyond normal fullness. This may cause their stomach to stretch out massively over time.</FeedingTubeModeLabel_maxgainDesc>
 	<FeedingTubeModeLabel_off>Standby</FeedingTubeModeLabel_off>
 	<FeedingTubeModeLabel_offDesc>While in standby the autofeeder will not consume food nor will it feed any pawns. It will, however, still consume power.</FeedingTubeModeLabel_offDesc>
 	<FeedingTube_TargetPawn>Feed pawn</FeedingTube_TargetPawn>

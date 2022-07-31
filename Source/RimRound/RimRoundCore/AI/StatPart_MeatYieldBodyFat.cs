@@ -15,7 +15,7 @@ namespace RimRound.AI
         {
             if (req.Thing is Pawn p && p.RaceProps.Humanlike) 
             {
-                float mult = GetMeatMultByWeight(req);
+                float mult = GetMeatMultByWeight(req) * GlobalSettings.meatMultiplierForWeight.threshold;
 
                 return "StatPart_MeatYieldBodyFatExplanation".Translate(mult.ToString("F2")) + ": x" + mult.ToStringPercent();
             }

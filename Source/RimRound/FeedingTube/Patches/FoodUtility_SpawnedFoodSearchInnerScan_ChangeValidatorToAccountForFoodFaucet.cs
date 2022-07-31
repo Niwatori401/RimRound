@@ -83,9 +83,6 @@ namespace RimRound.FeedingTube.Patches
         {
             if (t is Building_FoodFaucet building_FoodFaucet)
             {
-                //!eater.WillEat(ThingDefOf.MealNutrientPaste, getter, true) ||
-                //Defs.ThingDefOf.RR_FeedingTubeFluid.ingestible.preferability > FoodPreferability.MealLavish ||
-                //Defs.ThingDefOf.RR_FeedingTubeFluid.ingestible.preferability < FoodPreferability.MealAwful ||
                 if (
                 getter != eater ||
                 !(getter.RaceProps.ToolUser && getter.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation)) ||
@@ -98,7 +95,7 @@ namespace RimRound.FeedingTube.Patches
                     new TargetInfo(t.InteractionCell, t.Map, false),
                     PathEndMode.OnCell,
                     TraverseParms.For(getter, Danger.Some, TraverseMode.ByPawn, false, false, false)) ||
-                ((Building_FoodFaucet)t).foodNetTrader.FoodNet.Stored <= ((Building_FoodFaucet)t).litersPerDispense)
+                ((Building_FoodFaucet)t).foodNetTrader.FoodNet.Stored * ((Building_FoodFaucet)t).foodNetTrader.FoodNet.fullnessToNutritionRatio <= ((Building_FoodFaucet)t).nutritionPerDispense)
                 {
                     return false;
                 }

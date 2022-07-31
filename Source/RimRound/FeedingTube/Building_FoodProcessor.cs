@@ -1,4 +1,5 @@
-﻿using RimRound.FeedingTube.Comps;
+﻿using RimRound.Comps;
+using RimRound.FeedingTube.Comps;
 using RimRound.FeedingTube.Utilities;
 using RimWorld;
 using System;
@@ -39,7 +40,7 @@ namespace RimRound.FeedingTube
             ProcessFood();
         }
 
-        public bool CanProcessNow 
+        private bool CanProcessNow 
         {
             get 
             {
@@ -47,7 +48,7 @@ namespace RimRound.FeedingTube
             }
         }
 
-        public bool ShouldProcessFood 
+        private bool ShouldProcessFood 
         {
             get 
             {
@@ -62,55 +63,60 @@ namespace RimRound.FeedingTube
             }
         }
 
-        public void ProcessFood() 
+        private void ProcessFood() 
         {
             if (FeedingTubeUtility.IsHashIntervalTick((int)processingFrequency) && ShouldProcessFood) 
             {
-                //Not use right now, but can be used with CompIngredients.RegisterIngredient();
+                //Not used right now, but can be used with CompIngredients.RegisterIngredient();
                 List<ThingDef> listOfIngredients = new List<ThingDef>();
 
                 float remainingStorageSpace = trader.FoodNet.StorageCapacity - trader.FoodNet.Stored;
-                //Convert nutrition to liters here.
-
 
                 if (remainingStorageSpace > FeedingTubeUtility.MinRQ && CanProcessNow)
                 {
-                    Thing t = TryGetFoodInHopper();
-                    if (t is null) 
-                    {
+                    Thing foodInHopper = TryGetFoodInHopper();
+                    if (foodInHopper is null) 
                         return;
-                    }
 
-                    float nutritionForThing = t.GetStatValue(StatDefOf.Nutrition, true);
 
-                    int numberOfItemNeeded = Mathf.Min(
-                        t.stackCount, 
-                        Mathf.CeilToInt(remainingStorageSpace / nutritionForThing), 
-                        Mathf.CeilToInt(maxNutritionToProcessPerTick / nutritionForThing));
+                    float nutritionForOneUnitOfFoodInHopper = foodInHopper.GetStatValue(StatDefOf.Nutrition, true);
 
-                    remainingStorageSpace -= numberOfItemNeeded * nutritionForThing;
-                    t.SplitOff(numberOfItemNeeded);
+                    float ftnRatio = GetNutritionDensityOfFoodInHopper(foodInHopper);
+                   
 
-                    //trader.FoodNet.nutritionDensity
-                    float ftnRatio = 1;
-                    RimRound.Comps.ThingComp_FoodItems_NutritionDensity NDComp = t.TryGetComp<RimRound.Comps.ThingComp_FoodItems_NutritionDensity>();
-                    if (NDComp != null)
-                    {
-                        ftnRatio = NDComp.Props.fullnessToNutritionRatio;
-                    }
-                    //Weighted average of current values and incoming values
-                    trader.FoodNet.nutritionDensity =
-                        ((nutritionForThing * ftnRatio) * ftnRatio + trader.FoodNet.Stored * trader.FoodNet.nutritionDensity) /
-                        ((nutritionForThing * ftnRatio) + trader.FoodNet.Stored);
+                    int numberOfFoodItemsPerProcess = Mathf.Min(
+                        foodInHopper.stackCount, 
+                        Mathf.CeilToInt(remainingStorageSpace / (nutritionForOneUnitOfFoodInHopper * ftnRatio)), 
+                        Mathf.CeilToInt(maxNutritionToProcessPerTick / nutritionForOneUnitOfFoodInHopper));
 
-                    listOfIngredients.Add(t.def);
+                    float amountOfFoodVolumeToAdd = numberOfFoodItemsPerProcess * ftnRatio * nutritionForOneUnitOfFoodInHopper;
+                    
+                    foodInHopper.SplitOff(numberOfFoodItemsPerProcess);
+
+                    listOfIngredients.Add(foodInHopper.def);
+
+                    trader.FoodNet.UpdateRatio(numberOfFoodItemsPerProcess * nutritionForOneUnitOfFoodInHopper, ftnRatio);
+
+                    trader.FoodNet.Delta(amountOfFoodVolumeToAdd);
                 }
-
-                trader.FoodNet.Delta((trader.FoodNet.StorageCapacity - trader.FoodNet.Stored) - remainingStorageSpace);
             }
         }
 
-        public bool HasEnoughFeedstockInHoppers() 
+
+        private float GetNutritionDensityOfFoodInHopper(Thing foodInHopper) 
+        {
+            float ftnRatio = 1;
+            
+            ThingComp_FoodItems_NutritionDensity NDComp = foodInHopper.TryGetComp<ThingComp_FoodItems_NutritionDensity>();
+            if (NDComp != null)
+            {
+                ftnRatio = NDComp.Props.fullnessToNutritionRatio;
+            }
+
+            return ftnRatio;
+        }
+
+        private bool HasEnoughFeedstockInHoppers() 
         {
             float totalNutritionInHoppers = 0;
 
@@ -119,17 +125,17 @@ namespace RimRound.FeedingTube
                 Thing hopper = null;
                 Thing foodOnHopper = null;
 
-                List<Thing> thingList = c.GetThingList(base.Map);
-                foreach (var t in thingList) 
+                List<Thing> thingsInCell = c.GetThingList(base.Map);
+                foreach (Thing thing in thingsInCell) 
                 {
-                    if (this.IsAcceptableFeedstock(t.def)) 
+                    if (this.IsAcceptableFeedstock(thing.def)) 
                     {
-                        foodOnHopper = t;
+                        foodOnHopper = thing;
                     }
 
-                    if (t.def == ThingDefOf.Hopper) 
+                    if (thing.def == ThingDefOf.Hopper) 
                     {
-                        hopper = t;
+                        hopper = thing;
                     }
                 }
 
@@ -147,7 +153,7 @@ namespace RimRound.FeedingTube
             return false;
         }
 
-        public List<IntVec3> AdjCellsCardinalInBounds
+        private List<IntVec3> AdjCellsCardinalInBounds
         {
             get
             {
@@ -162,7 +168,7 @@ namespace RimRound.FeedingTube
             }
         }
 
-        public bool IsAcceptableFeedstock(ThingDef def) 
+        private bool IsAcceptableFeedstock(ThingDef def) 
         {
             return def.IsNutritionGivingIngestible && 
                 def.ingestible.preferability != FoodPreferability.Undefined && 
@@ -170,28 +176,28 @@ namespace RimRound.FeedingTube
                 (def.ingestible.foodType & FoodTypeFlags.Tree) != FoodTypeFlags.Tree;
         }
 
-        public Thing TryGetFoodInHopper() 
+        private Thing TryGetFoodInHopper() 
         {
             for (int i = 0; i < this.AdjCellsCardinalInBounds.Count; i++)
             {
-                Thing thing = null;
-                Thing thing2 = null;
+                Thing foodItem = null;
+                Thing hopper = null;
                 List<Thing> thingList = this.AdjCellsCardinalInBounds[i].GetThingList(base.Map);
                 for (int j = 0; j < thingList.Count; j++)
                 {
-                    Thing thing3 = thingList[j];
-                    if (this.IsAcceptableFeedstock(thing3.def))
+                    Thing thingInCell = thingList[j];
+                    if (this.IsAcceptableFeedstock(thingInCell.def))
                     {
-                        thing = thing3;
+                        foodItem = thingInCell;
                     }
-                    if (thing3.def == ThingDefOf.Hopper)
+                    if (thingInCell.def == ThingDefOf.Hopper)
                     {
-                        thing2 = thing3;
+                        hopper = thingInCell;
                     }
                 }
-                if (thing != null && thing2 != null)
+                if (foodItem != null && hopper != null)
                 {
-                    return thing;
+                    return foodItem;
                 }
             }
             return null;

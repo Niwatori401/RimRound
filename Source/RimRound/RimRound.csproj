@@ -174,7 +174,6 @@
     <Compile Include="RimRoundCore\Utilities\Resources.cs" />
     <Compile Include="RimRoundCore\Utilities\WeightOpinionUtility.cs" />
     <None Include="app.config" />
-    <None Include="RimRoundCore\Garbage\Building_FeedingTube.cs" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />
     <Compile Include="RimRoundCore\Comps\Food\CompProperties_FoodItems_NutritionDensity.cs" />
     <Compile Include="RimRoundCore\Comps\Pawns\Debug_ThingComp.cs" />
@@ -192,13 +191,10 @@
     <Compile Include="RimRoundCore\Comps\Pawns\PawnBodyType_ThingComp.cs" />
     <Compile Include="RimRoundCore\Comps\Pawns\SleepingPosition_ThingComp.cs" />
     <Compile Include="RimRoundCore\Defs\BodyTypeDefOf.cs" />
-    <None Include="RimRoundCore\Garbage\RimRound_CurLifeStageIndexPatch.cs" />
-    <None Include="RimRoundCore\Garbage\GenericDefOf.cs" />
     <Compile Include="RimRoundCore\Defs\DamageDefOf.cs" />
     <Compile Include="RimRoundCore\Defs\HediffDefOf.cs" />
     <Compile Include="RimRoundCore\Defs\JobDefOf.cs" />
     <Compile Include="RimRoundCore\Defs\ThingDefOf.cs" />
-    <None Include="RimRoundCore\Garbage\GarbagePatch.cs" />
     <Compile Include="RimRoundCore\Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\JobDrivers\JobDriver_StuffPrisoner.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_GetPawnMesh_GetMeshForPortraitsToo.cs" />
@@ -208,7 +204,6 @@
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Faction_SetRelationDirect_UpdateCategoricalExemption.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\MenuPatches\FloatMenuMakerMap_AddHumanlikeOrders_AlterTextForFoodAboveHardLimit.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\FoodUtility\FoodUtility_FoodOptimality_AdjustOptimality.cs" />
-    <None Include="RimRoundCore\Garbage\PawnDownedWiggler_RandomDownedAngle_AdjustByWeight.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\FoodUtility\FoodUtility_StackCountForNutrition_MaxChangedToMin.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Pawn-GuestTracker_SetGuestStatus_UpdateCategoricalExemptions.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Graphic-Multi_Init_DontLogErrorsForRimRound.cs" />
@@ -220,14 +215,12 @@
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_DrawPawnBody_AddToggleForTattoos.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_GetBodyPos_HideBlankets.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_LayingFacing_SetRotation.cs" />
-    <None Include="RimRoundCore\Garbage\Pawn_RareTick_UpdateBodyGraphic.cs" />
     <None Include="RimRoundCore\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\PortraitsCache_Get_MakePortraitsScaleForBodySize.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\PortraitsCache_RenderPortrait_DisablePawnPortraitRotationForPawnsInBed.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_AddFullness.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\DietAIPatches\JobGiver-GetFood_GetPriority_AdjustAIForDietMode.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\DietAIPatches\Need-Food_NutritionWanted_AdjustAIForDietMode.cs" />
-    <None Include="RimRoundCore\Garbage\Pawn_Tick_PassiveWeightLoss.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_HarmonyPatch.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Thing_Ingested\Thing_Ingested_StomachBurstCheck.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\JobDriver-LayDown_LayDownToil_UpdatePawnPortrait.cs" />
@@ -238,7 +231,6 @@
     <Compile Include="RimRoundCore\UI\Gizmos\SleepingPositionGizmo.cs" />
     <Compile Include="RimRoundCore\UI\Slider.cs" />
     <Compile Include="RimRoundCore\UI\Gizmos\WeightGizmo\WeightGizmo_DeathWarning.cs" />
-    <None Include="RimRoundCore\Garbage\WeightGizmo_FeatureToggleButton.cs" />
     <Compile Include="RimRoundCore\UI\Gizmos\WeightGizmo\WeightGizmo_FullnessBar.cs" />
     <Compile Include="RimRoundCore\UI\Gizmos\WeightGizmo\WeightGizmo_ModeButton.cs" />
     <Compile Include="RimRoundCore\UI\Gizmos\WeightGizmo\WeightGizmo_NutritionBar.cs" />
@@ -253,7 +245,6 @@
     <Compile Include="RimRoundCore\UI\Gizmos\WeightGizmo\WeightGizmo.cs" />
     <None Include=".editorconfig" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\WorkGivers\WorkGiver_StuffPrisoner.cs" />
-    <None Include="RimRoundCore\Garbage\WorkGiver_TubeFeed.cs" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

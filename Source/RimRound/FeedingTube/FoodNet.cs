@@ -243,6 +243,14 @@ namespace RimRound.FeedingTube
 
         public BoolGrid netGrid;
 
-        public float nutritionDensity = 1;
+        public float fullnessToNutritionRatio = 1;
+
+        public void UpdateRatio(float incomingNutrition, float incomingRatio = 1)
+        {
+            //Weighted average of current values and incoming values  
+            fullnessToNutritionRatio =
+                (Stored + incomingRatio * incomingNutrition) /
+                ((Stored / fullnessToNutritionRatio) + incomingNutrition);
+        }
     }
 }

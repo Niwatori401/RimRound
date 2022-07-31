@@ -1,4 +1,5 @@
-﻿using RimRound.FeedingTube.Comps;
+﻿using RimRound.Comps;
+using RimRound.FeedingTube.Comps;
 using RimRound.Utilities;
 using RimWorld;
 using System;
@@ -15,9 +16,10 @@ namespace RimRound.FeedingTube
     [StaticConstructorOnStartup]
     public class Building_AutoFeeder : Building
     {
-        int tickCheckInterval = 50;
+        int tickCheckInterval = 200;
         AutoFeederMode currentMode = AutoFeederMode.off;
         Pawn currentPawn;
+        FullnessAndDietStats_ThingComp cachedFNDComp = null;
         LocalTargetInfo forcedTarget = LocalTargetInfo.Invalid;
 
         FoodNetTrader_ThingComp _foodTraderComp = null;
@@ -37,23 +39,26 @@ namespace RimRound.FeedingTube
         public override void Tick()
         {
             base.Tick();
-            if (GeneralUtility.IsHashIntervalTick(tickCheckInterval))
+            if (GeneralUtility.IsHashIntervalTick(tickCheckInterval) && currentPawn != null)
             {
+                float currentNutritionPercent = currentPawn.needs.food.CurLevelPercentage;
                 switch (currentMode)
                 {
                     case AutoFeederMode.off:
                         break;
                     case AutoFeederMode.lose:
-
+                        if (currentNutritionPercent <= currentPawn.needs.food.PercentageThreshUrgentlyHungry)
+                            FillPawnNutritionTo(cachedFNDComp, currentPawn.needs.food.PercentageThreshHungry);
                         break;
                     case AutoFeederMode.maintain:
-
+                        if (currentNutritionPercent <= currentPawn.needs.food.PercentageThreshHungry)
+                            FillPawnNutritionTo(cachedFNDComp, 0.8f);
                         break;
                     case AutoFeederMode.gain:
-
+                        FillPawnStomachTo(cachedFNDComp, 0.9f);
                         break;
                     case AutoFeederMode.maxgain:
-
+                        FillPawnStomachToHardLimit(cachedFNDComp);
                         break;
                 }
             }
@@ -64,22 +69,42 @@ namespace RimRound.FeedingTube
             base.Draw();
             if (forcedTarget != LocalTargetInfo.Invalid)
             {
-                Vector3 targetLocation = forcedTarget.CenterVector3;
-
-                targetLocation = forcedTarget.Pawn.TrueCenter();
-
-                Vector3 autoFeederCenter = this.TrueCenter();
-                targetLocation.y = AltitudeLayer.MetaOverlays.AltitudeFor();
-                autoFeederCenter.y = targetLocation.y;
-
-
-
-                float headOffsetInBed = -0.2f;
-                targetLocation.z = targetLocation.z + headOffsetInBed;
-
-
-                GenDraw.DrawLineBetween(autoFeederCenter, targetLocation, feedingTubeMat, 0.2f);
+                DrawFeedingTubeFromDeviceToPawn();
             }
+        }
+
+        private void DrawFeedingTubeFromDeviceToPawn()
+        {
+            Vector3 autoFeederHoseAttachmentPoint = GetAutoFeederLocationVector();
+            Vector3 mouthPosition = GetInBedTargetMouthPosition();
+
+            GenDraw.DrawLineBetween(autoFeederHoseAttachmentPoint, mouthPosition, feedingTubeMat, 0.2f);
+        }
+
+        private Vector3 GetInBedTargetMouthPosition() 
+        {
+            Vector3 targetLocation = forcedTarget.CenterVector3;
+
+            targetLocation = forcedTarget.Pawn.TrueCenter();
+
+            targetLocation.y = AltitudeLayer.MetaOverlays.AltitudeFor();
+
+            float headOffsetInBed = -0.2f;
+            targetLocation.z = targetLocation.z + headOffsetInBed;
+
+            return targetLocation;
+        }
+
+        private Vector3 GetAutoFeederLocationVector() 
+        {
+            Vector3 autoFeederHoseAttachPoint = this.TrueCenter();
+
+            autoFeederHoseAttachPoint.y = AltitudeLayer.MetaOverlays.AltitudeFor();
+
+            autoFeederHoseAttachPoint.x = autoFeederHoseAttachPoint.x + -0.11f;
+            autoFeederHoseAttachPoint.z = autoFeederHoseAttachPoint.z + 0.36f;
+
+            return autoFeederHoseAttachPoint;
         }
 
         public override void DrawExtraSelectionOverlays()
@@ -116,6 +141,68 @@ namespace RimRound.FeedingTube
                 yield return GetStopActionGizmo();
 
             yield return GetModeSwitchGizmo();
+        }
+
+
+        private void FillPawnStomachTo(FullnessAndDietStats_ThingComp pawnFNDComp, float percentToFillTo) 
+        {
+            float currentFullness = pawnFNDComp.CurrentFullness;
+            float targetFullnessVolume = pawnFNDComp.SoftLimit * percentToFillTo;
+
+            if (pawnFNDComp.CurrentFullness >=  targetFullnessVolume)
+            {
+                return;
+            }
+
+            float fullnessToAdd = targetFullnessVolume - currentFullness;
+            float netNutritionDensity = FoodNetTrader.FoodNet.fullnessToNutritionRatio;
+
+            if (FoodNetTrader.FoodNet.Stored > fullnessToAdd)
+            {
+                pawnFNDComp.UpdateRatio(fullnessToAdd * (1 / netNutritionDensity), netNutritionDensity);
+                pawnFNDComp.CurrentFullness = targetFullnessVolume;
+
+                FoodNetTrader.FoodNet.Drain(fullnessToAdd);
+            }
+        }
+
+        private void FillPawnStomachToHardLimit(FullnessAndDietStats_ThingComp pawnFNDComp)
+        {
+            float hardlimit = pawnFNDComp.HardLimit;
+            float softlimit = pawnFNDComp.SoftLimit;
+
+            FillPawnStomachTo(pawnFNDComp, (hardlimit / softlimit) - Values.MinRQ);
+        }
+
+        private void FillPawnNutritionTo(FullnessAndDietStats_ThingComp pawnFNDComp, float percentToFillTo) 
+        {
+            Pawn pawn = pawnFNDComp.parent.AsPawn();
+            float nutritionCurrentPercentage = pawn.needs.food.CurLevelPercentage;
+
+            if (percentToFillTo <= nutritionCurrentPercentage)
+                return;
+
+            float currentNutritionBeingDigested = pawnFNDComp.CurrentFullness / pawnFNDComp.CurrentFullnessToNutritionRatio;
+            float currentNutritionBeingDigestedAsPercentOfNutrition = currentNutritionBeingDigested / pawn.needs.food.MaxLevel;
+
+
+            float percentageToAdd = percentToFillTo - (nutritionCurrentPercentage + currentNutritionBeingDigestedAsPercentOfNutrition);
+
+            if (percentageToAdd < 0)
+                return;
+
+            float rawNutritionToAdd = percentageToAdd * pawn.needs.food.MaxLevel;
+            float currentFoodNetDensity = FoodNetTrader.FoodNet.fullnessToNutritionRatio;
+
+            float fullnessToAdd = rawNutritionToAdd * currentFoodNetDensity;
+            float currentFullness = pawnFNDComp.CurrentFullness;
+
+            float fullnessPercent = (currentFullness + fullnessToAdd) / pawnFNDComp.SoftLimit;
+
+            if (fullnessPercent > 1)
+                fullnessPercent = 1;
+
+            FillPawnStomachTo(pawnFNDComp, fullnessPercent);
         }
 
 
@@ -187,8 +274,6 @@ namespace RimRound.FeedingTube
             return command_Action;
         }
 
-
-
         Command_Action GetStartActionGizmo() 
         {
             Command_Action command_Action = new Command_Action();
@@ -216,6 +301,7 @@ namespace RimRound.FeedingTube
             {
                 ResetForcedTarget();
                 currentMode = AutoFeederMode.off;
+                cachedFNDComp = null;
                 SoundDefOf.Tick_Low.PlayOneShotOnCamera(null);
             };
 
@@ -242,6 +328,7 @@ namespace RimRound.FeedingTube
                             return;
                         }
                         this.currentPawn = t.Pawn;
+                        this.cachedFNDComp = t.Pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
                         Log.Message($"Targeted Pawn! {this.currentPawn.Name}");
                         this.currentPawn.health.AddHediff(Defs.HediffDefOf.RimRound_UsingFeedingTube);
                         forcedTarget = t;
