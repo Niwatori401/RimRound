@@ -50,6 +50,8 @@ namespace RimRound.Patch
             { "O21_FR_WoodElf",   new Vector2(0, 0.05f )},
             { "O21_FR_MoonElf",   new Vector2(0, 0.05f )},
             { "O21_FR_SunElf",    new Vector2(0, 0.05f )},
+            { "Ratkin",    new Vector2(0, -0.09f )},
+            { "Ratkin_Su",    new Vector2(0, -0.09f )},
         };
 
     }

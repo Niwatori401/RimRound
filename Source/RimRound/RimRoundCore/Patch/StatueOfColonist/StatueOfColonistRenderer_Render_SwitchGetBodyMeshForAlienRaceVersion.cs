@@ -78,11 +78,20 @@ namespace RimRound.Patch
 			if (RacialBodyTypeInfoUtility.set070Female.ContainsKey(bodyTypeDef))
 				return RacialBodyTypeInfoUtility.set070Female[bodyTypeDef].meshSize;
 
-			if (RacialBodyTypeInfoUtility.antyFemaleSet.ContainsKey(bodyTypeDef))
-				return RacialBodyTypeInfoUtility.antyFemaleSet[bodyTypeDef].meshSize;
+			if (RacialBodyTypeInfoUtility.set090Female.ContainsKey(bodyTypeDef))
+				return RacialBodyTypeInfoUtility.set090Female[bodyTypeDef].meshSize;
 
-			if (RacialBodyTypeInfoUtility.ratkinFemaleSet.ContainsKey(bodyTypeDef))
-				return RacialBodyTypeInfoUtility.ratkinFemaleSet[bodyTypeDef].meshSize;
+			if (RacialBodyTypeInfoUtility.set090FemaleApple.ContainsKey(bodyTypeDef))
+				return RacialBodyTypeInfoUtility.set090FemaleApple[bodyTypeDef].meshSize;
+
+			if (RacialBodyTypeInfoUtility.set090FemaleAppleNoFemaleSprite.ContainsKey(bodyTypeDef))
+				return RacialBodyTypeInfoUtility.set090FemaleAppleNoFemaleSprite[bodyTypeDef].meshSize;
+
+			if (RacialBodyTypeInfoUtility.set090FemaleNoFemaleSprite.ContainsKey(bodyTypeDef))
+				return RacialBodyTypeInfoUtility.set090FemaleNoFemaleSprite[bodyTypeDef].meshSize;
+
+			if (RacialBodyTypeInfoUtility.set090Male.ContainsKey(bodyTypeDef))
+				return RacialBodyTypeInfoUtility.set090Male[bodyTypeDef].meshSize;
 
 			return 1f;
 		}

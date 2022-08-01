@@ -362,55 +362,75 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.M_100_Gelatinous_070,           new BodyTypeInfo(100f  , 3.6250f, 0.05f, 0.22205f, 2.52f, 0.00f) }
             };
 
-        [MayRequire("Roo.AntyRaceMod")]
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> antyFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        public static Dictionary<BodyTypeDef, BodyTypeInfo> set090FemaleNoFemaleSprite = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
-                { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimWorld.BodyTypeDefOf.Male,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimWorld.BodyTypeDefOf.Female,                   new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Male,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Female,                          new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                
+                { RimWorld.BodyTypeDefOf.Thin,                            new BodyTypeInfo(0.015f, 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_005_Thick_090,            new BodyTypeInfo(0.050f, 0.6875f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_006_Chonky_090,           new BodyTypeInfo(0.065f, 0.9375f, 0.90f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_010_Chubby_090,           new BodyTypeInfo(0.090f, 0.9375f, 0.80f, 1.28205f, 0.30f, 0.35f) },
+                { RimRound.Defs.BodyTypeDefOf.F_020_Corpulent_090,        new BodyTypeInfo(0.120f, 0.9375f, 0.65f, 0.98205f, 0.40f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_030_Fat_090,              new BodyTypeInfo(0.155f, 1.000f, 0.50f, 0.88205f, 0.44f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_040_Obese_090,            new BodyTypeInfo(0.200f, 1.125f, 0.40f, 0.77205f, 0.50f, 0.40f) },
+                { RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese_090,    new BodyTypeInfo(0.280f, 1.125f, 0.30f, 0.65205f, 0.70f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_060_Lardy_090,            new BodyTypeInfo(0.430f, 2.125f, 0.20f, 0.58205f, 1.00f, 0.70f) },
+                { RimRound.Defs.BodyTypeDefOf.F_070_Enormous_090,         new BodyTypeInfo(0.660f, 2.000f, 0.10f, 0.48205f, 0.93f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_080_Gigantic_090,         new BodyTypeInfo(0.965f, 3.875f, 0.10f, 0.38205f, 1.10f, 0.65f) },
+                { RimRound.Defs.BodyTypeDefOf.F_090_Titanic_090,          new BodyTypeInfo(1.410f, 3.875f, 0.10f, 0.37205f, 1.10f, 0.79f) },
+                { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous_090,       new BodyTypeInfo(1.860f, 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
 
 
-                { RimWorld.BodyTypeDefOf.Thin,                          new BodyTypeInfo(0.015f, 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimRound.Defs.BodyTypeDefOf.F_005_Thick_Anty,         new BodyTypeInfo(0.050f, 0.6875f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimRound.Defs.BodyTypeDefOf.F_006_Chonky_Anty,        new BodyTypeInfo(0.065f, 0.9375f, 0.90f, 1.28205f, 0.30f, 0.30f) },
-                { RimRound.Defs.BodyTypeDefOf.F_010_Chubby_Anty,        new BodyTypeInfo(0.090f, 0.9375f, 0.80f, 1.28205f, 0.30f, 0.35f) },
-                { RimRound.Defs.BodyTypeDefOf.F_020_Corpulent_Anty,     new BodyTypeInfo(0.120f, 0.9375f, 0.65f, 0.98205f, 0.40f, 0.45f) },
-                { RimRound.Defs.BodyTypeDefOf.F_030_Fat_Anty,           new BodyTypeInfo(0.155f, 1.000f, 0.50f, 0.88205f, 0.44f, 0.45f)  },
-                { RimRound.Defs.BodyTypeDefOf.F_040_Obese_Anty,         new BodyTypeInfo(0.200f, 1.125f, 0.40f, 0.77205f, 0.50f, 0.40f)  },
-                { RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese_Anty, new BodyTypeInfo(0.280f, 1.125f, 0.30f, 0.65205f, 0.70f, 0.50f)  },
-                { RimRound.Defs.BodyTypeDefOf.F_060_Lardy_Anty,         new BodyTypeInfo(0.430f, 2.125f, 0.20f, 0.58205f, 1.00f, 0.70f)  },
-                { RimRound.Defs.BodyTypeDefOf.F_070_Enormous_Anty,      new BodyTypeInfo(0.660f, 2.000f, 0.10f, 0.48205f, 0.93f, 0.50f)  },
-                { RimRound.Defs.BodyTypeDefOf.F_080_Gigantic_Anty,      new BodyTypeInfo(0.965f, 3.875f, 0.10f, 0.38205f, 1.10f, 0.65f)  },
-                { RimRound.Defs.BodyTypeDefOf.F_090_Titanic_Anty,       new BodyTypeInfo(1.410f, 3.875f, 0.10f, 0.37205f, 1.10f, 0.79f)  },
-                { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous_Anty,    new BodyTypeInfo(100f  , 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f)  },
-            };
+                { RimRound.Defs.BodyTypeDefOf.F_150_Gelatinous_090,    new BodyTypeInfo(2.460f, 5.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_200_Gelatinous_090,    new BodyTypeInfo(2.960f, 6.2500f, 0.05f, 0.20205f, 2.60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_250_Gelatinous_090,    new BodyTypeInfo(3.960f, 7.0000f, 0.05f, 0.17000f, 2.80f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_300_Gelatinous_090,    new BodyTypeInfo(4.960f, 7.7500f, 0.05f, 0.14000f, 3.60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_350_Gelatinous_090,    new BodyTypeInfo(6.460f, 8.5000f, 0.05f, 0.13000f, 3.90f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_400_Gelatinous_090,    new BodyTypeInfo(7.960f, 9.5000f, 0.05f, 0.11000f, 4.70f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_450_Gelatinous_090,    new BodyTypeInfo(9.960f, 11.000f, 0.05f, 0.10000f, 5.40f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_500_Gelatinous_090,    new BodyTypeInfo(14.46f, 13.000f, 0.05f, 0.09000f, 6.31f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous_090,    new BodyTypeInfo(100f  , 17.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
 
-        [MayRequire("Solaris.RatkinRaceMod")]
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> ratkinFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        };
+
+        public static Dictionary<BodyTypeDef, BodyTypeInfo> set090FemaleAppleNoFemaleSprite = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
-                { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimWorld.BodyTypeDefOf.Male,                            new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimWorld.BodyTypeDefOf.Female,                          new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Male,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimWorld.BodyTypeDefOf.Female,                          new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
 
                 { RimWorld.BodyTypeDefOf.Thin,                            new BodyTypeInfo(0.015f, 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimRound.Defs.BodyTypeDefOf.F_005_Thick_Ratkin,         new BodyTypeInfo(0.050f, 0.6875f, 1.00f, 1.28205f, 0.30f, 0.30f) },
-                { RimRound.Defs.BodyTypeDefOf.F_006_Chonky_Ratkin,        new BodyTypeInfo(0.065f, 0.9375f, 0.90f, 1.28205f, 0.30f, 0.30f) },
-                { RimRound.Defs.BodyTypeDefOf.F_010_Chubby_Ratkin,        new BodyTypeInfo(0.090f, 0.9375f, 0.80f, 1.28205f, 0.30f, 0.35f) },
-                { RimRound.Defs.BodyTypeDefOf.F_020_Corpulent_Ratkin,     new BodyTypeInfo(0.120f, 0.9375f, 0.65f, 0.98205f, 0.40f, 0.45f) },
-                { RimRound.Defs.BodyTypeDefOf.F_030_Fat_Ratkin,           new BodyTypeInfo(0.155f, 1.000f, 0.50f, 0.88205f, 0.44f, 0.45f) },
-                { RimRound.Defs.BodyTypeDefOf.F_040_Obese_Ratkin,         new BodyTypeInfo(0.200f, 1.125f, 0.40f, 0.77205f, 0.50f, 0.40f) },
-                { RimRound.Defs.BodyTypeDefOf.F_050_MorbidlyObese_Ratkin, new BodyTypeInfo(0.280f, 1.125f, 0.30f, 0.65205f, 0.70f, 0.50f) },
-                { RimRound.Defs.BodyTypeDefOf.F_060_Lardy_Ratkin,         new BodyTypeInfo(0.430f, 2.125f, 0.20f, 0.58205f, 1.00f, 0.70f) },
-                { RimRound.Defs.BodyTypeDefOf.F_070_Enormous_Ratkin,      new BodyTypeInfo(0.660f, 2.000f, 0.10f, 0.48205f, 0.93f, 0.50f) },
-                { RimRound.Defs.BodyTypeDefOf.F_080_Gigantic_Ratkin,      new BodyTypeInfo(0.965f, 3.875f, 0.10f, 0.38205f, 1.10f, 0.65f) },
-                { RimRound.Defs.BodyTypeDefOf.F_090_Titanic_Ratkin,       new BodyTypeInfo(1.410f, 3.875f, 0.10f, 0.37205f, 1.10f, 0.79f) },
-                { RimRound.Defs.BodyTypeDefOf.F_100_Gelatinous_Ratkin,    new BodyTypeInfo(100f  , 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f) }
-            };
+                
+
+                { RimRound.Defs.BodyTypeDefOf.F_005_Thick_090,            new BodyTypeInfo(0.050f, 0.6875f, 1.00f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_006_Chonky_090,           new BodyTypeInfo(0.065f, 0.9375f, 0.90f, 1.28205f, 0.30f, 0.30f) },
+                { RimRound.Defs.BodyTypeDefOf.F_010a_Chubby_090,           new BodyTypeInfo(0.090f, 0.9375f, 0.80f, 1.28205f, 0.30f, 0.35f) },
+                { RimRound.Defs.BodyTypeDefOf.F_020a_Corpulent_090,        new BodyTypeInfo(0.120f, 0.9375f, 0.65f, 0.98205f, 0.40f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_030a_Fat_090,              new BodyTypeInfo(0.155f, 1.000f, 0.50f, 0.88205f, 0.44f, 0.45f) },
+                { RimRound.Defs.BodyTypeDefOf.F_040a_Obese_090,            new BodyTypeInfo(0.200f, 1.125f, 0.40f, 0.77205f, 0.50f, 0.40f) },
+                { RimRound.Defs.BodyTypeDefOf.F_050a_MorbidlyObese_090,    new BodyTypeInfo(0.280f, 1.125f, 0.30f, 0.65205f, 0.70f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_060a_Lardy_090,            new BodyTypeInfo(0.430f, 2.125f, 0.20f, 0.58205f, 1.00f, 0.70f) },
+                { RimRound.Defs.BodyTypeDefOf.F_070a_Enormous_090,         new BodyTypeInfo(0.660f, 2.000f, 0.10f, 0.48205f, 0.93f, 0.50f) },
+                { RimRound.Defs.BodyTypeDefOf.F_080a_Gigantic_090,         new BodyTypeInfo(0.965f, 3.875f, 0.10f, 0.38205f, 1.10f, 0.65f) },
+                { RimRound.Defs.BodyTypeDefOf.F_090a_Titanic_090,          new BodyTypeInfo(1.410f, 3.875f, 0.10f, 0.37205f, 1.10f, 0.79f) },
+                { RimRound.Defs.BodyTypeDefOf.F_100a_Gelatinous_090,       new BodyTypeInfo(1.860f, 5.000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
 
 
+                { RimRound.Defs.BodyTypeDefOf.F_150a_Gelatinous_090,    new BodyTypeInfo(2.460f, 5.5000f, 0.05f, 0.22205f, 2.52f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_200a_Gelatinous_090,    new BodyTypeInfo(2.960f, 6.2500f, 0.05f, 0.20205f, 2.60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_250a_Gelatinous_090,    new BodyTypeInfo(3.960f, 7.0000f, 0.05f, 0.17000f, 2.80f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_300a_Gelatinous_090,    new BodyTypeInfo(4.960f, 7.7500f, 0.05f, 0.14000f, 3.60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_350a_Gelatinous_090,    new BodyTypeInfo(6.460f, 8.5000f, 0.05f, 0.13000f, 3.90f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_400a_Gelatinous_090,    new BodyTypeInfo(7.960f, 9.5000f, 0.05f, 0.11000f, 4.70f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_450a_Gelatinous_090,    new BodyTypeInfo(9.960f, 11.000f, 0.05f, 0.10000f, 5.40f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_500a_Gelatinous_090,    new BodyTypeInfo(14.46f, 13.000f, 0.05f, 0.09000f, 6.31f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_900a_Gelatinous_090,    new BodyTypeInfo(100f  , 17.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
 
+        };
 
 
 
@@ -452,14 +472,14 @@ namespace RimRound.Utilities
 
         static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> antyFemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
         {
-            { BodyArchetype.standard, antyFemaleSet },
-            { BodyArchetype.apple,    antyFemaleSet },
+            { BodyArchetype.standard, set090FemaleNoFemaleSprite },
+            { BodyArchetype.apple,    set090FemaleAppleNoFemaleSprite },
         };
 
         static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> ratkinFemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
         {
-            { BodyArchetype.standard, ratkinFemaleSet },
-            { BodyArchetype.apple,    ratkinFemaleSet },
+            { BodyArchetype.standard, set090FemaleNoFemaleSprite },
+            { BodyArchetype.apple,    set090FemaleAppleNoFemaleSprite },
         };
 
 
