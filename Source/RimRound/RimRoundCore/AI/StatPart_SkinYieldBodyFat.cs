@@ -9,13 +9,13 @@ using Verse;
 
 namespace RimRound.AI
 {
-    public class StatPart_MeatYieldBodyFat : StatPart
+    public class StatPart_SkinYieldBodyFat : StatPart
     {
         public override string ExplanationPart(StatRequest req)
         {
-            if (req.Thing is Pawn p && p.RaceProps.Humanlike) 
+            if (req.Thing is Pawn p && p.RaceProps.Humanlike)
             {
-                float mult = 1 + ((GetMeatMultByWeight(req) - 1) * GlobalSettings.meatMultiplierForWeight.threshold);
+                float mult = 1 + ((GetSkinMultByWeight(req) - 1) * GlobalSettings.meatMultiplierForWeight.threshold);
 
                 return "StatPart_MeatYieldBodyFatExplanation".Translate(mult.ToString("F2")) + ": x" + mult.ToStringPercent();
             }
@@ -29,14 +29,14 @@ namespace RimRound.AI
             {
                 if (req.Thing is Pawn pawn && pawn.RaceProps.Humanlike)
                 {
-                    val *= 1 + ((GetMeatMultByWeight(req) - 1) * GlobalSettings.meatMultiplierForWeight.threshold);
+                    val *= 1 + ((GetSkinMultByWeight(req) - 1) * GlobalSettings.meatMultiplierForWeight.threshold);
                     return;
                 }
             }
             return;
         }
 
-        float GetMeatMultByWeight(StatRequest req) 
+        float GetSkinMultByWeight(StatRequest req)
         {
             if (req.HasThing)
             {
@@ -44,7 +44,8 @@ namespace RimRound.AI
                 {
                     if (pawn.WeightHediff() is Hediff weightHediff)
                     {
-                        return ((Utilities.HediffUtility.SeverityToKilosWithBaseWeight(weightHediff.Severity) + 225) * 0.5f) / 140;
+                        float weight = Utilities.HediffUtility.SeverityToKilosWithBaseWeight(weightHediff.Severity);
+                        return (0.000603739195255981f * weight + 0.975850432189761f);
                     }
                 }
             }

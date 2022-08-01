@@ -67,7 +67,7 @@
 	<RR_Mtw_MaxWeight>Maximum weight</RR_Mtw_MaxWeight>
 	<RR_Mtw_MinWeight>Minimum weight</RR_Mtw_MinWeight>
 	<RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>Ticks between WG requests</RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>
-	<RR_Mtw_meatMultiplierForWeight>Meat multiplier for heavy pawns</RR_Mtw_meatMultiplierForWeight>
+	<RR_Mtw_meatMultiplierForWeight>Meat/skin yield multiplier</RR_Mtw_meatMultiplierForWeight>
 	
 	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
 	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>

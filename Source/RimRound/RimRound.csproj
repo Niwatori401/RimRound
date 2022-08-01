@@ -103,6 +103,7 @@
     <Compile Include="FeedingTube\SectionLayer_ThingsFoodGrid.cs" />
     <Compile Include="FeedingTube\UI\Alert_FoodProcessorNeedsDispenser.cs" />
     <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
+    <Compile Include="RimRoundCore\AI\StatPart_SkinYieldBodyFat.cs" />
     <Compile Include="RimRoundCore\AI\GameCondition_PsychicHungerIncrease.cs" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\InteractionWorker_ReduceReluctance.cs" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\JobDrivers\JobDriver_ChatToReduceReluctance.cs" />
