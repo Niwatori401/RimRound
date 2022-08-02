@@ -44,7 +44,7 @@ namespace RimRound.FeedingTube.Patches
                     return;
                 }
                 actor.carryTracker.TryStartCarry(thing);
-                actor.CurJob.SetTarget(ind, actor.carryTracker.CarriedThing);
+                actor.CurJob.SetTarget(TargetIndex.B, actor.carryTracker.CarriedThing);
             };
             
             toil.FailOnCannotTouch(ind, PathEndMode.Touch);
