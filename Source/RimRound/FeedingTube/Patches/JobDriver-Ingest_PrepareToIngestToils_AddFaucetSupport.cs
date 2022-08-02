@@ -49,8 +49,8 @@ namespace RimRound.FeedingTube.Patches
             
             toil.FailOnCannotTouch(ind, PathEndMode.Touch);
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
-            //Change this value.
-            toil.defaultDuration = 10;//Building_NutrientPasteDispenser.CollectDuration;
+
+            toil.defaultDuration = 10;
             return toil;
         }
     }

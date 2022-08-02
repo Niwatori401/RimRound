@@ -92,9 +92,7 @@
     <Compile Include="FeedingTube\Patches\Designator-Build_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
     <Compile Include="FeedingTube\Patches\Designator-Install_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
     <Compile Include="FeedingTube\Patches\FoodUtility_GetFinalIngestibleDef_AddFoodFaucetSupport.cs" />
-    <Compile Include="FeedingTube\Patches\FoodUtility_GetFinalIngestibleDef_FeedingTubeSupport.cs" />
     <Compile Include="FeedingTube\Patches\FoodUtility_SpawnedFoodSearchInnerScan_ChangeValidatorToAccountForFoodFaucet.cs" />
-    <Compile Include="FeedingTube\Patches\HarmonyPatchMain.cs" />
     <Compile Include="FeedingTube\Patches\JobDriver-Ingest_MakeNewToils_AddExceptionForFaucet.cs" />
     <Compile Include="FeedingTube\Patches\JobDriver-Ingest_PrepareToIngestToils_AddFaucetSupport.cs" />
     <Compile Include="FeedingTube\Patches\JobDriver-Ingest_TryMakePreToilReservations_AddExceptionForFaucet.cs" />
