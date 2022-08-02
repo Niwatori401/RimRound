@@ -16,6 +16,7 @@ namespace RimRound.FeedingTube.Comps
             base.PostSpawnSetup(respawningAfterLoad);
             flickComp = this.parent.TryGetComp<CompFlickable>();
             breakdownComp = this.parent.TryGetComp<CompBreakdownable>();
+            compPowerTrader = this.parent.TryGetComp<CompPowerTrader>();
         }
 
         public new FoodNetTrader_CompProperties Props 
@@ -67,7 +68,9 @@ namespace RimRound.FeedingTube.Comps
                 return (flickComp != null ? 
                         flickComp.SwitchIsOn : true) &&
                        (breakdownComp != null ? 
-                       !breakdownComp.BrokenDown : true);
+                       !breakdownComp.BrokenDown : true) &&
+                       (compPowerTrader != null ?
+                        compPowerTrader.PowerOn : true);
             }
         }
 
@@ -103,7 +106,7 @@ namespace RimRound.FeedingTube.Comps
         }
 
         CompBreakdownable breakdownComp;
-
+        CompPowerTrader compPowerTrader;
         CompFlickable flickComp;
 
         private bool isOn = true;
