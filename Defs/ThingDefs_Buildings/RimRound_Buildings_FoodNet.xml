@@ -9,7 +9,6 @@
 		<thingClass>Building</thingClass>
 		<category>Building</category>
 		<graphicData>
-			<!--Give it a new texture-->
 			<texPath>Things/Building/Production/FoodPipe_Atlas</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<linkType>Basic</linkType>
@@ -20,7 +19,6 @@
 				<rect>(0,0.35,1,0.3)</rect>
 			</damageData>
 		</graphicData>
-		<!--Give it a new icon-->
 		<uiIconPath>Things/Building/Production/FoodPipe_MenuIcon</uiIconPath>
 		<uiIconScale>0.7</uiIconScale>
 		<building>
@@ -28,7 +26,6 @@
 			<isInert>true</isInert>
 			<isEdifice>false</isEdifice>
 			<blueprintGraphicData>
-				<!--Give it a new blueprint atlas-->
 				<texPath>Things/Building/Production/FoodPipe_Blueprint_Atlas</texPath>
 			</blueprintGraphicData>
 		</building>
@@ -43,7 +40,6 @@
 		</statBases>
 		<placingDraggableDimensions>1</placingDraggableDimensions>
 		<costList>
-			<!--Adjust cost?-->
 			<Steel>3</Steel>
 		</costList>
 		<comps>
@@ -60,14 +56,12 @@
 		<neverMultiSelect>false</neverMultiSelect>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<!--Find an appropriate category-->
 		<designationCategory>Production</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<clearBuildingArea>false</clearBuildingArea>
 		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
-			<!--Add custom research-->
-			<li>Electricity</li>
+			<li>RR_Research_FoodStorage</li>
 		</researchPrerequisites>
 	  </ThingDef>
 	  
@@ -126,7 +120,7 @@
     <clearBuildingArea>false</clearBuildingArea>
     <designationHotKey>Misc1</designationHotKey>
     <researchPrerequisites>
-		<li>Electricity</li>
+		<li>RR_Research_FoodStorage</li>
     </researchPrerequisites>
   </ThingDef>
   
@@ -194,7 +188,7 @@
 		<clearBuildingArea>false</clearBuildingArea>
 		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
-			<li>Electricity</li>
+			<li>RR_Research_FoodStorage</li>
 		</researchPrerequisites>
 	</ThingDef>	
 	
@@ -261,7 +255,7 @@
 		<clearBuildingArea>false</clearBuildingArea>
 		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
-			<li>Electricity</li>
+			<li>RR_Research_FoodStorage</li>
 		</researchPrerequisites>
 	</ThingDef>	
 	
@@ -347,7 +341,7 @@
 		<clearBuildingArea>false</clearBuildingArea>
 		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
-			<li>Electricity</li>
+			<li>RR_Research_FoodProcessing</li>
 		</researchPrerequisites>
 	</ThingDef>	
 	
@@ -428,7 +422,7 @@
 		<constructEffect>ConstructMetal</constructEffect>
 		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
-			<li>Electricity</li>
+			<li>RR_Research_FoodFaucet</li>
 		</researchPrerequisites>
 	</ThingDef>	
 	
@@ -504,7 +498,7 @@
 		<constructEffect>ConstructMetal</constructEffect>
 		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
-			<li>Electricity</li>
+			<li>RR_Research_AutoFeeder</li>
 		</researchPrerequisites>
 	</ThingDef>	
 	

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchTabDef>
+		<defName>RimRoundTech</defName>
+		<label>RimRound</label>
+	</ResearchTabDef>
+	<ResearchProjectDef>
+		<defName>RR_Research_FoodProcessing</defName>
+		<label>food processor</label>
+		<tab>RimRoundTech</tab>
+		<description>Learn the methods to reduce edible material into a paste that's ready for storage and consumption.</description>
+		<baseCost>1600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_FoodStorage</defName>
+		<label>liquid food storage</label>
+		<tab>RimRoundTech</tab>
+		<description>Preserve liquified food indefinitely by storing it in specialized deoxygenated, pressurized containers via pipes.</description>
+		<baseCost>600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_FoodProcessing</li>
+		</prerequisites>		
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>RR_Research_FoodFaucet</defName>
+		<label>food dispenser</label>
+		<tab>RimRoundTech</tab>
+		<description>Allow for use of liquid food stored in pressurized storage containers in a sanitary and efficient way.</description>
+		<baseCost>400</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_FoodProcessing</li>
+		</prerequisites>		
+		<researchViewX>1</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>RR_Research_AutoFeeder</defName>
+		<label>auto feeder</label>
+		<tab>RimRoundTech</tab>
+		<description>Allow for automated distribution of nutrients to an immobile pawn complete with smart dietary control.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_FoodFaucet</li>
+		</prerequisites>		
+		<researchViewX>2</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+</Defs>
