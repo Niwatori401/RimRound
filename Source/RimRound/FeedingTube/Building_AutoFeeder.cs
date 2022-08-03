@@ -18,8 +18,38 @@ namespace RimRound.FeedingTube
     {
         int tickCheckInterval = 200;
         AutoFeederMode currentMode = AutoFeederMode.off;
-        Pawn currentPawn;
-        FullnessAndDietStats_ThingComp cachedFNDComp = null;
+        Pawn _currentPawn;
+        Pawn CurrentPawn 
+        {
+            get 
+            {
+                if (_currentPawn is null)
+                    _currentPawn = forcedTarget.Pawn;
+
+                return _currentPawn;
+            }
+            set 
+            {
+                _currentPawn = value;
+            }
+        }
+        
+        FullnessAndDietStats_ThingComp _cachedFNDComp = null;
+        FullnessAndDietStats_ThingComp CachedFNDComp 
+        {
+            get 
+            {
+                if (_cachedFNDComp is null)
+                    _cachedFNDComp = forcedTarget.Pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+
+                return _cachedFNDComp;
+            }
+            set 
+            { 
+                _cachedFNDComp = value; 
+            }
+        }
+        
         LocalTargetInfo forcedTarget = LocalTargetInfo.Invalid;
 
         FoodNetTrader_ThingComp _foodTraderComp = null;
@@ -36,29 +66,42 @@ namespace RimRound.FeedingTube
             }
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_TargetInfo.Look(ref forcedTarget, "autofeederForcedTarget");
+            Scribe_Values.Look<AutoFeederMode>(ref currentMode, "CurrentAutoFeederMode", AutoFeederMode.off);
+        }
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+
+        }
+
         public override void Tick()
         {
             base.Tick();
-            if (GeneralUtility.IsHashIntervalTick(tickCheckInterval) && currentPawn != null)
+            if (GeneralUtility.IsHashIntervalTick(tickCheckInterval) && CurrentPawn != null)
             {
-                float currentNutritionPercent = currentPawn.needs.food.CurLevelPercentage;
+                float currentNutritionPercent = CurrentPawn.needs.food.CurLevelPercentage;
                 switch (currentMode)
                 {
                     case AutoFeederMode.off:
                         break;
                     case AutoFeederMode.lose:
-                        if (currentNutritionPercent <= currentPawn.needs.food.PercentageThreshUrgentlyHungry)
-                            FillPawnNutritionTo(cachedFNDComp, currentPawn.needs.food.PercentageThreshHungry);
+                        if (currentNutritionPercent <= CurrentPawn.needs.food.PercentageThreshUrgentlyHungry)
+                            FillPawnNutritionTo(CachedFNDComp, CurrentPawn.needs.food.PercentageThreshHungry);
                         break;
                     case AutoFeederMode.maintain:
-                        if (currentNutritionPercent <= currentPawn.needs.food.PercentageThreshHungry)
-                            FillPawnNutritionTo(cachedFNDComp, 0.8f);
+                        if (currentNutritionPercent <= CurrentPawn.needs.food.PercentageThreshHungry)
+                            FillPawnNutritionTo(CachedFNDComp, 0.8f);
                         break;
                     case AutoFeederMode.gain:
-                        FillPawnStomachTo(cachedFNDComp, 0.9f);
+                        FillPawnStomachTo(CachedFNDComp, 0.9f);
                         break;
                     case AutoFeederMode.maxgain:
-                        FillPawnStomachToHardLimit(cachedFNDComp);
+                        FillPawnStomachToHardLimit(CachedFNDComp);
                         break;
                 }
             }
@@ -73,39 +116,6 @@ namespace RimRound.FeedingTube
             }
         }
 
-        private void DrawFeedingTubeFromDeviceToPawn()
-        {
-            Vector3 autoFeederHoseAttachmentPoint = GetAutoFeederLocationVector();
-            Vector3 mouthPosition = GetInBedTargetMouthPosition();
-
-            GenDraw.DrawLineBetween(autoFeederHoseAttachmentPoint, mouthPosition, feedingTubeMat, 0.2f);
-        }
-
-        private Vector3 GetInBedTargetMouthPosition() 
-        {
-            Vector3 targetLocation = forcedTarget.CenterVector3;
-
-            targetLocation = forcedTarget.Pawn.TrueCenter();
-
-            targetLocation.y = AltitudeLayer.MetaOverlays.AltitudeFor();
-
-            float headOffsetInBed = -0.2f;
-            targetLocation.z = targetLocation.z + headOffsetInBed;
-
-            return targetLocation;
-        }
-
-        private Vector3 GetAutoFeederLocationVector() 
-        {
-            Vector3 autoFeederHoseAttachPoint = this.TrueCenter();
-
-            autoFeederHoseAttachPoint.y = AltitudeLayer.MetaOverlays.AltitudeFor();
-
-            autoFeederHoseAttachPoint.x = autoFeederHoseAttachPoint.x + -0.11f;
-            autoFeederHoseAttachPoint.z = autoFeederHoseAttachPoint.z + 0.36f;
-
-            return autoFeederHoseAttachPoint;
-        }
 
         public override void DrawExtraSelectionOverlays()
         {
@@ -141,6 +151,40 @@ namespace RimRound.FeedingTube
                 yield return GetStopActionGizmo();
 
             yield return GetModeSwitchGizmo();
+        }
+
+        private void DrawFeedingTubeFromDeviceToPawn()
+        {
+            Vector3 autoFeederHoseAttachmentPoint = GetAutoFeederLocationVector();
+            Vector3 mouthPosition = GetInBedTargetMouthPosition();
+
+            GenDraw.DrawLineBetween(autoFeederHoseAttachmentPoint, mouthPosition, feedingTubeMat, 0.2f);
+        }
+
+        private Vector3 GetInBedTargetMouthPosition()
+        {
+            Vector3 targetLocation = forcedTarget.CenterVector3;
+
+            targetLocation = forcedTarget.Pawn.TrueCenter();
+
+            targetLocation.y = AltitudeLayer.MetaOverlays.AltitudeFor();
+
+            float headOffsetInBed = -0.2f;
+            targetLocation.z = targetLocation.z + headOffsetInBed;
+
+            return targetLocation;
+        }
+
+        private Vector3 GetAutoFeederLocationVector()
+        {
+            Vector3 autoFeederHoseAttachPoint = this.TrueCenter();
+
+            autoFeederHoseAttachPoint.y = AltitudeLayer.MetaOverlays.AltitudeFor();
+
+            autoFeederHoseAttachPoint.x = autoFeederHoseAttachPoint.x + -0.11f;
+            autoFeederHoseAttachPoint.z = autoFeederHoseAttachPoint.z + 0.36f;
+
+            return autoFeederHoseAttachPoint;
         }
 
 
@@ -301,7 +345,7 @@ namespace RimRound.FeedingTube
             {
                 ResetForcedTarget();
                 currentMode = AutoFeederMode.off;
-                cachedFNDComp = null;
+                CachedFNDComp = null;
                 SoundDefOf.Tick_Low.PlayOneShotOnCamera(null);
             };
 
@@ -327,10 +371,10 @@ namespace RimRound.FeedingTube
                             this.BeginTargeting();
                             return;
                         }
-                        this.currentPawn = t.Pawn;
-                        this.cachedFNDComp = t.Pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-                        Log.Message($"Targeted Pawn! {this.currentPawn.Name}");
-                        this.currentPawn.health.AddHediff(Defs.HediffDefOf.RimRound_UsingFeedingTube);
+                        this.CurrentPawn = t.Pawn;
+                        this.CachedFNDComp = t.Pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+                        Log.Message($"Targeted Pawn! {this.CurrentPawn.Name}");
+                        this.CurrentPawn.health.AddHediff(Defs.HediffDefOf.RimRound_UsingFeedingTube);
                         forcedTarget = t;
                         SoundDefOf.Tick_High.PlayOneShotOnCamera(null);
 
@@ -372,13 +416,13 @@ namespace RimRound.FeedingTube
         private void ResetForcedTarget()
         {
             this.forcedTarget = LocalTargetInfo.Invalid;
-            this.currentPawn.health.RemoveHediff(
+            this.CurrentPawn.health.RemoveHediff(
                 (from h
-                in this.currentPawn.health.hediffSet.hediffs
+                in this.CurrentPawn.health.hediffSet.hediffs
                 where h.def.defName == Defs.HediffDefOf.RimRound_UsingFeedingTube.defName
                 select h).FirstOrDefault()
                 );
-            this.currentPawn = null;
+            this.CurrentPawn = null;
         }
 
 
