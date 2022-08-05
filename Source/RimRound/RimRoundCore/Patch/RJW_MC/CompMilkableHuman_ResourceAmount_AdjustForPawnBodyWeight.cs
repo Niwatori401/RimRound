@@ -63,7 +63,17 @@ namespace RimRound.Patch
             new Pair<float, float>( 0.800f, 2.40f  ),
             new Pair<float, float>( 0.965f, 2.70f  ),
             new Pair<float, float>( 1.160f, 3.05f  ),
-            new Pair<float, float>( 1.410f, 3.50f )
+            new Pair<float, float>( 1.410f, 3.50f  ),
+
+            new Pair<float, float>( 1.860f, 4.00f  ),
+            new Pair<float, float>( 2.460f, 4.50f  ),
+            new Pair<float, float>( 2.960f, 5.00f  ),
+            new Pair<float, float>( 3.960f, 5.50f  ),
+            new Pair<float, float>( 4.960f, 6.00f  ),
+            new Pair<float, float>( 6.460f, 6.75f  ),
+            new Pair<float, float>( 7.960f, 7.50f  ),
+            new Pair<float, float>( 9.960f, 8.50f  ),
+            new Pair<float, float>( 14.46f, 10.0f  ),
         };
     }
 }
