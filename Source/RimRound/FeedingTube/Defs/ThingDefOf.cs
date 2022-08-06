@@ -13,7 +13,7 @@ namespace RimRound.FeedingTube.Defs
     {
         //Food
         public static ThingDef RR_FeedingTubeFluid;
-
+        public static ThingDef RR_Hopper;
         public static ThingDef RR_TD_FoodFaucet;
     }
 }

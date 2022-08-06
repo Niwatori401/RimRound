@@ -1,5 +1,6 @@
 <Defs>
-	<!--Author: rngsusd#9608-->
+	<!--Author for lower weights: rngsusd#9608-->
+	<!--Author for weights above Gelatinous I: Ultranova-->
 	<!--Thoughts for hate opinions-->
 	<ThoughtDef>
 		<defName>RR_WeightOpinion_Hate</defName>
@@ -134,6 +135,24 @@
 			<label>Gigantic</label>
 			<description>I'm more fat than person now, and confined to my own personal hell.</description>
 			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I am tormented every waking moment of my life by the unthinkable burden that is my body, and I can't stop it from happening. And to make it all worse, I know it's all downhill from here.</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I can't stop eating, even though it goes against every fiber of my being. I'm not even human anymore, and my existence is torture. </description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>It's never going to stop. The only solace I can take is that I am smaller right now than I will ever be, but I know that my unyielding misery will only continue to persist no matter what...</description>
+			<baseMoodEffect>-60</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
@@ -274,6 +293,24 @@
 			<description>I'm more fat than person. I don't think I'll ever be slim again.</description>
 			<baseMoodEffect>-30</baseMoodEffect>
 		  </li>
+                  <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I've become such a burden on everyone else. I hate my body, and I hate how I can feel every part of me from so far away.</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>This is awful. I can't trust myself. I'm trapped in my own body, and I know that I can't prevent it from getting bigger.</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I don't think I'm even human anymore. I wish all of this would just stop, but knowing that it only gets worse is like torture. </description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -411,6 +448,24 @@
 			<label>Gigantic</label>
 			<description>I'm more fat than person. This is horrible.</description>
 			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I just keep getting bigger. I can't believe how big my body has become. I can't cope with being such a problem.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I'm trapped in my own fatty prison, and I won't be released any time soon. This is a nightmare.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I'm a mountain of fat. I hate what I've become. I can't stop, I can't stop...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
@@ -550,6 +605,24 @@
 			<description>I'm as fat as anyone will ever get...</description>
 			<baseMoodEffect>-15</baseMoodEffect>
 		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I thought I could stop myself, I was wrong...do I really deserve this?</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I've become huge beyond words. I'm so embarrassed to be such a massive blob. I hate this.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I've got to have more, but I don't want to get any bigger...I brought this on myself, but surely nobody deserves this...</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -687,6 +760,24 @@
 			<label>Gigantic</label>
 			<description>I'm as fat as anyone will ever get...</description>
 			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I can't see in front of me anymore. I can't stop myself from growing. This isn't what I wanted.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I'll never be able to move again, and I hate myself for allowing this. I shouldn't be allowed.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I really wish this would stop, but I know it won't. I brought this ordeal on myself, but that doesn't mean I'm okay with it.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
@@ -826,6 +917,24 @@
 			<description>I'm lost in a sea of my own fat. It's a bit much.</description>
 			<baseMoodEffect>0</baseMoodEffect>
 		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I can't see in front of me anymore. This isn't quite what I wanted.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>This is definitely too far. I've got to try to stop, but I don't think I can.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I'm worried that I've become unstoppable. I hope I don't cause too much trouble. This isn't what I wanted to happen.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -964,6 +1073,24 @@
 			<description>I'm surrounded by my own opulent fat. It's beautiful.</description>
 			<baseMoodEffect>25</baseMoodEffect>
 		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I've become so big that I can't see in front of me. I love it!</description>
+			<baseMoodEffect>30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I can feel myself growing, and I won't let myself stop. It just keeps getting better.</description>
+			<baseMoodEffect>40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I'm so happy.I'm such a greedy pig that I've abandoned my humanity. I am in heaven.</description>
+			<baseMoodEffect>50</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -1101,6 +1228,24 @@
 			<label>Gigantic</label>
 			<description>This hedonism... I think I may be in heaven.</description>
 			<baseMoodEffect>40</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I'm huge even by my standards, but I know I can keep going, and that's fine by me.</description>
+			<baseMoodEffect>45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I've found my purpose. I couldn't live anymore if I couldn't keep growing. I can feel myself from so far away, and I've never felt so complete.</description>
+			<baseMoodEffect>50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I deserve all of this and more, I'm so happy I could cry. I'd be perfect if I didn't already know I could still get even more massive, and knowing that makes me even happier.</description>
+			<baseMoodEffect>60</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>

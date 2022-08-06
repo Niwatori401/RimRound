@@ -507,12 +507,22 @@ namespace RimRound.UI
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksBetweenWeightGainRequestProcess, numericFieldCount++, "RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.meatMultiplierForWeight, numericFieldCount++, "RR_Mtw_meatMultiplierForWeight");
 
+            if (cachedMilkableColonistsActive is null)
+            {
+                cachedMilkableColonistsActive = cachedMilkableColonistsActive = (from mod in ModsConfig.ActiveModsInLoadOrder where mod.Name == "RimJobWorld - Milkable Colonists" select mod).Any();
+            }
+
+            if ((bool)cachedMilkableColonistsActive)
+                NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.milkMultiplierForWeight, numericFieldCount++, "RR_Mtw_milkMultiplierForWeight");
+
 
             /**/
             globalMultipliersSettingsFieldRect.height = numericFieldCount * spaceBetweenNumberFields;
 
             GUI.EndGroup();
         }
+
+        bool? cachedMilkableColonistsActive = null;
 
         private void DoMainSettingsTitleGroup(Rect titleRect)
         {

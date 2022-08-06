@@ -24,12 +24,12 @@ namespace RimRound.FeedingTube
         {
             yield return new Command_Action
             {
-                disabled = GenConstruct.CanPlaceBlueprintAt(RimWorld.ThingDefOf.Hopper, Position + new IntVec3(2, 0, 0), Rot4.West, this.Map) ? false : true,
+                disabled = GenConstruct.CanPlaceBlueprintAt(Defs.ThingDefOf.RR_Hopper, Position + new IntVec3(2, 0, 0), Rot4.West, this.Map) ? false : true,
                 defaultLabel = "Build Hopper",
-                icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Hopper),
+                icon = Widgets.GetIconFor(Defs.ThingDefOf.RR_Hopper),
                 action = delegate ()
                 {
-                    GenConstruct.PlaceBlueprintForBuild_NewTemp(RimWorld.ThingDefOf.Hopper, Position + new IntVec3(2, 0, 0), this.Map, Rot4.West, Faction, null);
+                    GenConstruct.PlaceBlueprintForBuild_NewTemp(Defs.ThingDefOf.RR_Hopper, Position + new IntVec3(2, 0, 0), this.Map, Rot4.West, Faction, null);
                 }
             };
         }
@@ -133,7 +133,7 @@ namespace RimRound.FeedingTube
                         foodOnHopper = thing;
                     }
 
-                    if (thing.def == ThingDefOf.Hopper) 
+                    if (thing.def == ThingDefOf.Hopper || thing.def == Defs.ThingDefOf.RR_Hopper) 
                     {
                         hopper = thing;
                     }
@@ -190,7 +190,7 @@ namespace RimRound.FeedingTube
                     {
                         foodItem = thingInCell;
                     }
-                    if (thingInCell.def == ThingDefOf.Hopper)
+                    if (thingInCell.def == ThingDefOf.Hopper || thingInCell.def == Defs.ThingDefOf.RR_Hopper)
                     {
                         hopper = thingInCell;
                     }

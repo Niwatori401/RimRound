@@ -17,7 +17,7 @@ namespace RimRound.Patch
 
             if (weightSeverity > milkMultiplier.Last().First)
             {
-                __result *= milkMultiplier.Last().Second;
+                __result *= 1 + ((milkMultiplier.Last().Second - 1) * GlobalSettings.milkMultiplierForWeight.threshold);
                 return;
             } 
 
@@ -25,7 +25,7 @@ namespace RimRound.Patch
             {
                 if (weightSeverity < milkMultiplier[i].First)
                 {
-                    __result *= milkMultiplier[i - 1].Second;
+                    __result *= 1 + ((milkMultiplier[i - 1].Second - 1) * GlobalSettings.milkMultiplierForWeight.threshold);                  
                     return;
                 }    
             }

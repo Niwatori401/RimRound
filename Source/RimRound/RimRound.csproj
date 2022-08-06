@@ -163,6 +163,7 @@
     </Compile>
     <Compile Include="RimRoundCore\Things\FatteningBullet.cs" />
     <Compile Include="RimRoundCore\Things\ME_FatteningBullet.cs" />
+    <Compile Include="RimRoundCore\UI\ITab_CharacterDesc.cs" />
     <Compile Include="RimRoundCore\Utilities\BodyTypeUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\HediffUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\HungerDroneUtility.cs" />

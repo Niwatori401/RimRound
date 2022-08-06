@@ -1,3 +1,285 @@
+commit d303e16cff9eb7c692209e1b6ab3d0ddd9f2fd63
+Author: Niwatori401 
+Date:   Sat Aug 6 10:16:28 2022 +0900
+
+    Add three new thoughts for Gelatinous II and above for all weight opinions. Courtesy of Ultranova.
+    Add new hopper 'XL hopper'. For use with food processor to accept a greater variety of food items.
+    Add new inspect tab 'Desc.' for pawns. Descriptions courtesy of Ultranova.
+    Update patch for RJW - Milkable colonists. Weights above Gelatinous II now have specific multipliers.
+    Add multiplier setting for RJW - MC milk yield in RR settings.
+    Fix weight opinions not applying to correct weights.
+
+commit 5577dc0e88e2593d1a506bc42383e3e9462f2f5f
+Author: Niwatori401 
+Date:   Fri Aug 5 15:08:14 2022 +0900
+
+    Update RJW - Milkable colonists patch to include additional yield for pawns above Gelatinous I.
+
+commit d94f820d6b0b2aa6f8e9f30cb5576026713ca500
+Author: Niwatori401 
+Date:   Wed Aug 3 09:02:15 2022 +0900
+
+    Fix: autofeeder now saves the mode it was on and the pawn it was attached to on save.
+
+commit 3c19cee6817958c7a161bdbbb1a1e889129c5a0a
+Author: Niwatori401 
+Date:   Tue Aug 2 19:06:05 2022 +0900
+
+    Add research tab for RimRound
+    Add research defs for feeding tube items
+    Edit feeding tube items to require research
+
+commit 93654ecf4035ae5d2e5adb804fbf1b8a91df35a6
+Author: Niwatori401 
+Date:   Tue Aug 2 15:45:51 2022 +0900
+
+    Fix: Food faucet and food processor no longer function if not powered.
+
+commit 8abf475c569178a67d99841730d6e519450d85b0
+Author: Niwatori401 
+Date:   Tue Aug 2 15:18:14 2022 +0900
+
+    Finish altering feeding toils for food faucet.
+
+commit 19d7d84c211545c64bb08d54e58001a6668ca6e7
+Author: Niwatori401 
+Date:   Tue Aug 2 13:30:56 2022 +0900
+
+    Remove one unused patch and one redundant one.
+    Begin feature fix for food faucet.
+
+commit 2ce4a43d0a3cbe9477a4e70f3ee10fd65f730161
+Author: Niwatori401 
+Date:   Mon Aug 1 20:43:24 2022 +0900
+
+    This commit is not compaitble with previous saves containing Ratkin and/or Anties!
+    
+    Remove extra unused WIP race patch files.
+    Refactor how Anties and Ratkin use sprites.
+    Remove Ratkin's and Anties' race specific BodyTypeDefs.
+    Add Anty and Ratkin support for Gelatinous II - X.
+
+commit 6cc40cc578cdd0283bad6bc99f3ed954971c7df1
+Author: Niwatori401 
+Date:   Mon Aug 1 10:22:25 2022 +0900
+
+    Update localization.
+    Add feature: skin drops now scale with pawn weight.
+    Add feature: Meat drop multiplier setting now affects skin drops as well.
+
+commit cfe1f7967bfc8de17c6b0ef301671e1a928c5af5
+Author: Niwatori401 
+Date:   Sun Jul 31 21:34:09 2022 +0900
+
+    Remove unused legacy patches.
+    Add option to modify bonus meat yield.
+    Add autofeeder sprite.
+    Refactor food network and food faucet.
+    Fix fullnessToNutrition ratio not working correctly for food network.
+    Change fullness hediff to no longer show the 'Medical Emergency' tag unless stomach has burst.
+
+commit 3253f7b733d1f6cb0ad850c3d4f7146fe6bd6762
+Author: Niwatori401 
+Date:   Sun Jul 31 13:29:19 2022 +0900
+
+    Remove verb method for autofeeder.
+    Add hediff for using autofeeder to immobilize users.
+    Add pipe texture for feeding tube. It now attaches to pawn's mouths if they are laying down.
+    Add mode switch for autofeeder with accompanying icons.
+    Update localization file.
+
+commit bb9663bb80b73f0d4d8f7dd2c245d1d7ed2c323e
+Author: Niwatori401 
+Date:   Sun Jul 31 07:59:21 2022 +0900
+
+    Work on autofeeder with Verb method
+
+commit 8f37db7fca83e66e6afeabc4b75fcbd9621928a1
+Author: Niwatori401 
+Date:   Sat Jul 30 09:04:43 2022 +0900
+
+    Begin substantial refactor for feeding tube.
+
+commit e2d576f65fe70989290e4bd60bf804bf09b394c4
+Author: Niwatori401 
+Date:   Fri Jul 29 19:31:50 2022 +0900
+
+    Add male sprite sizes for standard set for Gelatinous II - Gelatinous X.
+    Add male sprite support for 0.9 size sprite sets.
+    Add female sprite sizes (both normal and apple) for 0.9 sprite sizes for Gelatinous II - Gelatinous X.
+    Add female sprite sizes (apple) for standard set for Gelatinous II - Gelatinous X.
+    Fix bug where pawns without support would spawn with the weight hediff.
+    Fix bug where pawns without support would spawn with weight opinions.
+    Organize Anty specific defs.
+
+commit 9420d06e1a26667f2438d11a55500396d7022a18
+Author: Niwatori401 
+Date:   Thu Jul 28 23:16:02 2022 +0900
+
+    Add appropriate portrait scales and positions for new sprite sizes.
+
+commit eb0b5779e256c0dfea9d82100cf687465ae605d9
+Author: Niwatori401 
+Date:   Thu Jul 28 22:26:57 2022 +0900
+
+    mend
+
+commit bbf223adfba9da87d6d05b0409f50412ba6966b1
+Author: Niwatori401 
+Date:   Thu Jul 28 22:26:47 2022 +0900
+
+    Add 9 new weight stages beyond Gelatinous. Gelatinous has been renamed Gelatinous I.
+
+commit 396ceb4864b1220f5b6e79f15aa6e7daedaa4703
+Author: Niwatori401 
+Date:   Thu Jul 28 09:12:47 2022 +0900
+
+    Add debug option to change any individual pawn's body archetype
+
+commit f64915aa8efcd219dc2b53bbe9c41f526fa3ece3
+Author: Niwatori401 
+Date:   Sat Jul 23 11:13:00 2022 +0900
+
+    Finalize temp WG feature. WG status messages now can be disabled optionally for WG requests.
+
+commit c004bfce5ddae3fefcc3a1b3900197d11ac7a248
+Author: Niwatori 
+Date:   Fri Jul 22 11:30:14 2022 +0900
+
+    Clean up WG/WL reqest code
+
+commit 98b8824c9cf33b6f63bb38063e57e0bc6c749066
+Author: Niwatori 
+Date:   Fri Jul 22 11:23:30 2022 +0900
+
+    Add weight loss request processing. Add temp weight gain. Update embiggener to use this system with temporary values for duration.
+
+commit b8f630fed325081fa23ae9e8afd5173960127f27
+Author: Niwatori401 
+Date:   Tue Jul 19 19:02:13 2022 +0900
+
+    Fix bug regarding animals being paralyzed if they were incapable of manipulation.
+
+commit e0d6f552ab70482cc47124df93bc4b2415bb4483
+Author: Niwatori401 
+Date:   Sun Jul 17 13:02:12 2022 +0900
+
+    Fix patches for Outer Rim Galaxies.
+    Remove partial support for buggy races.
+
+commit 619410f3130e829ee861ccbd6baf397f8a8cf880
+Author: Niwatori401 
+Date:   Sun Jul 17 12:02:57 2022 +0900
+
+    Fix how current nutrition to fullness ratio is calculated.
+
+commit 8f54e7d8e6f38fa652165da33b6135429992d3b8
+Author: Niwatori401 
+Date:   Sun Jul 17 10:07:01 2022 +0900
+
+    Fix NRE bug in pawn gen
+
+commit cc7eac834a6dff992deaeaff7894303e51e2c5f0
+Author: Niwatori401 
+Date:   Sat Jul 16 19:35:50 2022 +0900
+
+    Add 'Unlicense' license.
+
+commit dbd184494efcd6e11c53cb97b3d26a32f5cf7f1b
+Author: Niwatori401 
+Date:   Sat Jul 16 19:06:00 2022 +0900
+
+    Alter how default body type was assigned. Should now correctly show the pawn's default bodytype.
+    Further implement support for partially supported races.
+
+commit 2fe21f39a7168908b102ff64832f1f7c0fd30069
+Author: Niwatori401 
+Date:   Sat Jul 16 14:10:17 2022 +0900
+
+    Reconstruct tailalignment file and add it to repo
+
+commit 83a0e1ec870fff66f10a285cb1665796f525ae38
+Author: Niwatori401 
+Date:   Sat Jul 16 10:57:13 2022 +0900
+
+    Add two new texture sets for clothing for male bodies. Courtesy Lidopain!
+    Add racial support for 4 races from Xenohuamns - Gen-spliced Xenos
+    Add racial support for 6 races from Xenohuamns Expanded
+    Begin racial support for Fantasy Goblins
+    Begin racial support for ChjAndroids
+    Begin racial support for Lucario
+    Begin racial support for Kilhn
+    Begin racial support for Avali
+
+commit df6f5c8777f04d62cd3da32c252d8e3db94f06e9
+Author: Niwatori401 
+Date:   Fri Jul 15 19:33:52 2022 +0900
+
+    Reveal diet management gizmo for prisoners
+
+commit 6ca2e29642dd27f58b33f7375f028973f30f334a
+Merge: 47d0ca5 15a6de9
+Author: Niwatori401 
+Date:   Sun Jun 5 19:49:46 2022 +0900
+
+    Merge pull request #1 from Niwatori401/master
+    
+    Master
+
+commit 15a6de95722d29a956cdee8062605d6909922f45
+Author: Niwatori401 
+Date:   Sun Jun 5 19:35:30 2022 +0900
+
+    Re-add Male sprite for CanineMorph
+
+commit e2cf8f118a8ca52a978a5de79893ba88a5c5eea4
+Author: Niwatori401 
+Date:   Sun Jun 5 19:06:32 2022 +0900
+
+    Add apple body type (Courtesy Bamboo) and accompnying defs
+    Add toggle to revert all pawns to old body type
+    Add new hidden body type variable (currently standard and apple) to pawns
+    Add hoverchair for new lardy sprite
+    Add option to use old lardy sprite
+    Add setting to hide the less useful debug gizmos (e.g. positioning gizmos)
+    Add Loompa race support
+    Add support for "Statue of Colonist"
+    Update body assignment tables to allow for body types per gender
+    Update Bamboo's Lardy sprite
+    Update bodytypedefs to use correct image path
+    Remove unused assets
+    Remove need for duplicate assets
+    Hide map nutrition section of RR tab
+    Fix: Certain Combat Extended clothing items should display properly now
+    Fix: flesh blocks no longer spawn on map gen
+    Fix: Anties/Ratkin now can wear hoverchairs
+    Fix: Prisoners should starve less. Their diets are now reset upon becoming prisoners.
+    
+    WIP: Hoverchairs disappear if in bed for extended period. Ideally this will trigger on sleep and reappear when they wake up
+
+commit c3a6f668ffb7da20d10d24989ff5aef6e61d685a
+Author: Niwatori401
+Date:   Wed May 18 05:00:24 2022 -0700
+
+    Progress save
+
+commit 47d0ca560dd0e2e2267eb6e03a91ee0961c9b98d
+Author: Niwatori401
+Date:   Thu May 12 20:48:56 2022 -0700
+
+    Fix pawns in hoverchairs not laying in beds properly
+    Add feature pawns drop hoverchair on pawn downing. This should help prevent bugs wherein doctors will not tend or cannot rescue colonists in hoverchairs. Reminder that the "Dress Patients" mod can be used to redress them while they are in bed.
+    Add option tab in RR menu to alter hediff effect severity including pain, eat speed reduction and move speed reduction from the fullness hediff as well as moving, manipulation, rest fall rate and increased hunger rate from the weight hediff
+    Add auto disable texture caching on load
+    Fix pawns spawning with custom bodies as their default bodies. DefaultBody is now a property and reverts susceptible pawns to the thin bodytype.
+    Update fullness hediff to use custom class
+    Reduce hoverchair weight from 110 to 0 so as not to overencumber pawns
+    Optimize RR menu so that number fields with custom behavior now only trigger when the value is changed.
+    Update changelog
+    
+    Add test material for flesh atlas
+
+
 commit 4c9f4d89f1da921c2facc181e47ab7e9a7c7e53d
 Author: Niwatori401
 Date:   Tue May 3 18:04:02 2022 -0700
