@@ -32,11 +32,10 @@ namespace RimRound.FeedingTube.UI
 						if (thing is Building_FoodProcessor)
 						{
 							bool hasHopper = false;
-							ThingDef hopper = ThingDefOf.Hopper;
 							foreach (IntVec3 c in GenAdj.CellsAdjacentCardinal(thing))
 							{
 								Thing edifice = c.GetEdifice(thing.Map);
-								if (edifice != null && edifice.def == hopper)
+								if (edifice != null && (edifice.def == ThingDefOf.Hopper || edifice.def == Defs.ThingDefOf.RR_Hopper))
 								{
 									hasHopper = true;
 									break;
