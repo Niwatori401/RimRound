@@ -48,9 +48,23 @@ namespace RimRound.Utilities
                 if (a == mscorlib)
                     continue;
 
-                loadedTypes.AddRange(a.GetTypes());
+                loadedTypes.AddRange(GetLoadableTypes(a));
             }
         }
+
+        public static IEnumerable<Type> GetLoadableTypes(this Assembly assembly)
+        {
+            try
+            {
+                return assembly.GetTypes();
+            }
+            catch (ReflectionTypeLoadException e)
+            {
+                Log.Warning($"RimRound threw an exception loading a module from {assembly.FullName}! This is likely NOT due to RimRound. The full exception is as follows:\n{e.ToString()}");
+                return e.Types.Where(t => t != null);
+            }
+        }
+
 
         public static BindingFlags majorFlags =
             BindingFlags.Public | BindingFlags.NonPublic |
