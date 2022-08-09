@@ -1,4 +1,5 @@
-﻿using RimRound.Hediffs;
+﻿using RimRound.Comps;
+using RimRound.Hediffs;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -104,8 +105,11 @@ namespace RimRound.Utilities
             {
                 if (amount > 0)
                 {
+                    float personalWeightGainModifier = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.PersonalWeightGainModifier is float p ? p : 1f;
+
                     float additionalSeverity = 
-                        GlobalSettings.weightGainMultiplier.threshold * 
+                        GlobalSettings.weightGainMultiplier.threshold *
+                        personalWeightGainModifier *
                         amount * 
                         (pawn.gender == Gender.Male ? GlobalSettings.weightGainMultiplierMale.threshold : GlobalSettings.weightGainMultiplierFemale.threshold);
 
@@ -261,7 +265,7 @@ namespace RimRound.Utilities
             }
         }
 
-        public static void AlterCapacityAccordingToSettings(List<PawnCapacityModifier> pcmList, PawnCapacityDef defToAlter, NumericFieldData<float> appropriateSetting)
+        public static void AlterCapacityAccordingToSettings(List<PawnCapacityModifier> pcmList, PawnCapacityDef defToAlter, NumericFieldData<float> appropriateSetting, float personalMultiplier = 1f)
         {
             if (appropriateSetting.threshold == 1)
                 return;
@@ -270,6 +274,7 @@ namespace RimRound.Utilities
             if (pcmIndex != -1)
             {
                 pcmList[pcmIndex].offset *= appropriateSetting.threshold;
+                pcmList[pcmIndex].offset *= personalMultiplier;
             }
         }
 

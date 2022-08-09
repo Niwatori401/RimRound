@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimRound.Hediffs;
 using RimRound.Utilities;
 using RimWorld;
 using System;
@@ -38,8 +39,11 @@ namespace RimRound.Patch
                 {
                     newList.Add(__result[i].Clone());
                 }
-                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.fullnessHediffMovementPenaltyMult);
-                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Eating, GlobalSettings.fullnessHediffEatingPenaltyMult);
+
+                Hediff_Fullness fullnessHediff = __instance as Hediff_Fullness;
+
+                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.fullnessHediffMovementPenaltyMult, fullnessHediff.PersonalFullnessMovementMult);
+                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Eating, GlobalSettings.fullnessHediffEatingPenaltyMult, fullnessHediff.PersonalFullnessEatingSpeedMult);
 
                 __result = newList;
             }

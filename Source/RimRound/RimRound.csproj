@@ -124,6 +124,10 @@
     <Compile Include="RimRoundCore\Comps\PsychicShips\CompProperties_IncreaseHunger.cs" />
     <Compile Include="RimRoundCore\Defs\InteractionDefOf.cs" />
     <Compile Include="RimRoundCore\Defs\ME_ExtraProductPlantYield.cs" />
+    <Compile Include="RimRoundCore\Hediffs\Hediff_AIEncouragementChip.cs" />
+    <Compile Include="RimRoundCore\Hediffs\Hediff_BionicMetabolizer.cs" />
+    <Compile Include="RimRoundCore\Hediffs\Hediff_ArchotechMetabolizer.cs" />
+    <Compile Include="RimRoundCore\Hediffs\Hediff_FullnessImplant.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\AlienPartGenerator_GetNakedPath_MakeAllRRBodyTexRequestsUseDefaultPath.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />

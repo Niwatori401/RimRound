@@ -401,7 +401,16 @@ namespace RimRound.Comps
         private static float globalDigestionRateBonusFlat = 0f;
 
 
+        public float PersonalWeightGainModifier 
+        {
+            get => _personalWeightGainModifier;
+            set 
+            {
+                _personalWeightGainModifier = value;
+            }
+        }
 
+        float _personalWeightGainModifier = 1f;
 
         public float RemainingFullnessUntil(float limit) 
         {

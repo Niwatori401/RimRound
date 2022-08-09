@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>RR_FlabGrenade</defName>
+    <label>flab grenades</label>
+    <description>Old-school flabmentation grenades. They can be thrown a short distance, where they'll explode, fattening anyone nearby.</description>
+    <recipeMaker>
+      <researchPrerequisite>Machining</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/flab_grenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.3</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+      <Chemfuel>80</Chemfuel>
+    </costList>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+      <li>EmpireGrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <label>throw frag grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>12.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_GrenadeFrag</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+<ThingDef Name="BaseFragGrenadeProjectile" ParentName="BaseGrenadeProjectile" Abstract="True">
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Grenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>1.9</explosionRadius >
+      <damageDef>Bomb</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionDelay>100</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFragGrenadeProjectile">
+    <defName>Proj_GrenadeFrag</defName>
+    <label>frag grenade</label>
+  </ThingDef>
+</Defs>

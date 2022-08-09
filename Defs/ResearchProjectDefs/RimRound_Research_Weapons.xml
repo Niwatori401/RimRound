@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>RR_Research_ExperimentalWeapons</defName>
+		<label>experimental weapons</label>
+		<tab>RimRoundTech</tab>
+		<description>Research the crafting of mutagenic weapons that rapidly transform the target's cellular structure - albeit temporarily.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BlowbackOperation</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_ExperimentalGrenades</defName>
+		<label>experimental grenades</label>
+		<tab>RimRoundTech</tab>
+		<description>Learn to immobilize your enemies and prank your friends with high-yield mutagenic grenades that swiftly transform their victims.</description>
+		<baseCost>600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_ExperimentalWeapons</li>
+		</prerequisites>		
+		<researchViewX>1</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_AdvancedExperimentalWeapons</defName>
+		<label>advanced experimental weapons</label>
+		<tab>RimRoundTech</tab>
+		<description>Research the crafting of mutagenic weapons that rapidly transform the target's cellular structure - permanently.</description>
+		<baseCost>2000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_ExperimentalWeapons</li>
+		</prerequisites>		
+		<researchViewX>1</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>	
+</Defs>

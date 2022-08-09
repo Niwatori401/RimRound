@@ -52,9 +52,38 @@ namespace RimRound.UI
 
 		protected override void FillTab()
         {
-			Rect rect = new Rect(17, 17, basePawnCardSize.x, basePawnCardSize.y);
-			DrawCharacterDescription(rect);
-        }
+			Rect titleRect = new Rect(0, 0, basePawnCardSize.x, basePawnCardSize.y).ContractedBy(10f);
+			Rect descriptionRect = new Rect(titleRect);
+
+			descriptionRect.yMin += 35f;
+
+
+			Text.Font = GameFont.Medium;
+			Widgets.Label(titleRect, GetTitleForTab(PawnToShowInfoAbout).Translate().Truncate(titleRect.width, null));
+
+			Text.Font = GameFont.Small;
+			DrawCharacterDescription(descriptionRect);
+
+		}
+
+
+		string GetTitleForTab(Pawn pawn) 
+		{
+			float weightReqMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);
+			float weightSeverity = pawn.WeightHediff().Severity;
+
+			if (weightSeverity >= descriptionTitles.Last().Key * weightReqMultiplier)
+				return descriptionTitles.Last().Value.Translate(pawn.Name.ToStringShort);
+
+			foreach (KeyValuePair<float, string> keyValuePair in descriptionTitles)
+			{
+				if (weightSeverity < keyValuePair.Key * weightReqMultiplier)
+					return keyValuePair.Value.Translate(pawn.Name.ToStringShort);
+			}
+
+			return "ERR: Could not find body type desc.";
+
+		}
 
 		void DrawCharacterDescription(Rect rect) 
 		{
@@ -78,14 +107,6 @@ namespace RimRound.UI
 
         private string GetWeightDescriptionFor(Pawn pawn)
         {
-
-			BodyTypeDef pawnBodyTypeDef = pawn.story.bodyType;
-
-			string bodytypeCleaned = RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(pawnBodyTypeDef).ToString();
-			bodytypeCleaned = BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(bodytypeCleaned);
-
-			BodyTypeDef cleanedBodyTypeDef = DefDatabase<BodyTypeDef>.GetNamed(bodytypeCleaned, false);
-
 			float weightReqMultiplier = RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);
 			float weightSeverity = pawn.WeightHediff().Severity;
 			if (pawn.gender == Gender.Female || pawn.gender == Gender.None)
@@ -180,14 +201,43 @@ namespace RimRound.UI
 				{  1.410f, "RR_Desc_M_Titanic"       },
 				{  1.860f, "RR_Desc_M_G1"            },
 				{  2.460f, "RR_Desc_M_G2"            },
-				{  2.960f, "RR_Desc_M_G3"            },
-				{  3.960f, "RR_Desc_M_G4"            },
+				{  2.960f, "RR_Desc_M_G2"            },
+				{  3.960f, "RR_Desc_M_G2"            },
 				{  4.960f, "RR_Desc_M_G5"            },
-				{  6.460f, "RR_Desc_M_G6"            },
-				{  7.960f, "RR_Desc_M_G7"            },
-				{  9.960f, "RR_Desc_M_G8"            },
+				{  6.460f, "RR_Desc_M_G5"            },
+				{  7.960f, "RR_Desc_M_G5"            },
+				{  9.960f, "RR_Desc_M_G5"            },
 				{  14.46f, "RR_Desc_M_G9"            },
-				{  100f  , "RR_Desc_M_G10"           },
+				{  100f  , "RR_Desc_M_G9"            },
+		};
+
+		static Dictionary<float, string> descriptionTitles = new Dictionary<float, string>()
+		{
+				{  0.005f, "RR_DescTitle_Emaciated"     },
+				{  0.015f, "RR_DescTitle_Thin"          },
+				{  0.035f, "RR_DescTitle_Female_Male"   },
+				{  0.050f, "RR_DescTitle_Thick"         },
+				{  0.065f, "RR_DescTitle_Chonky"        },
+				{  0.090f, "RR_DescTitle_Chubby"        },
+				{  0.120f, "RR_DescTitle_Corpulent"     },
+				{  0.155f, "RR_DescTitle_Fat"           },
+				{  0.200f, "RR_DescTitle_Obese"         },
+				{  0.280f, "RR_DescTitle_MorbidlyObese" },
+				{  0.350f, "RR_DescTitle_Lardy"         },
+				{  0.430f, "RR_DescTitle_Lardy2"        },
+				{  0.660f, "RR_DescTitle_Enormous"      },
+				{  0.965f, "RR_DescTitle_Gigantic"      },
+				{  1.410f, "RR_DescTitle_Titanic"       },
+				{  1.860f, "RR_DescTitle_G1"            },
+				{  2.460f, "RR_DescTitle_G2"            },
+				{  2.960f, "RR_DescTitle_G2"            },
+				{  3.960f, "RR_DescTitle_G2"            },
+				{  4.960f, "RR_DescTitle_G5"            },
+				{  6.460f, "RR_DescTitle_G5"            },
+				{  7.960f, "RR_DescTitle_G5"            },
+				{  9.960f, "RR_DescTitle_G5"            },
+				{  14.46f, "RR_DescTitle_G9"            },
+				{  100f  , "RR_DescTitle_G9"            },
 		};
 
 		static Dictionary<float, string> ratkinExtraDescriptions = new Dictionary<float, string>()
