@@ -12,7 +12,7 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>true</Private>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 

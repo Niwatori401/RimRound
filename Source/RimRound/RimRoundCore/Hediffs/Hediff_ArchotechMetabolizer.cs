@@ -23,9 +23,12 @@ namespace RimRound.Hediffs
             }
             Hediff_Fullness fullnessHediff = Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, this.pawn) as Hediff_Fullness;
 
-            fullnessHediff.PersonalFullnessPainMult = fullnessHediff.PersonalFullnessPainMult - 0.50f;
-            fullnessHediff.PersonalFullnessEatingSpeedMult = fullnessHediff.PersonalFullnessEatingSpeedMult - 0.40f;
-            fullnessHediff.PersonalFullnessMovementMult = fullnessHediff.PersonalFullnessMovementMult - 0.40f;
+            if (fullnessHediff != null)
+            {
+                fullnessHediff.PersonalFullnessPainMult = fullnessHediff.PersonalFullnessPainMult - 0.50f;
+                fullnessHediff.PersonalFullnessEatingSpeedMult = fullnessHediff.PersonalFullnessEatingSpeedMult - 0.40f;
+                fullnessHediff.PersonalFullnessMovementMult = fullnessHediff.PersonalFullnessMovementMult - 0.40f;
+            }
         }
 
         public override void PostRemoved()
@@ -40,10 +43,13 @@ namespace RimRound.Hediffs
             }
 
             Hediff_Fullness fullnessHediff = Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, this.pawn) as Hediff_Fullness;
-
-            fullnessHediff.PersonalFullnessPainMult = fullnessHediff.PersonalFullnessPainMult + 0.50f;
-            fullnessHediff.PersonalFullnessEatingSpeedMult = fullnessHediff.PersonalFullnessEatingSpeedMult + 0.40f;
-            fullnessHediff.PersonalFullnessMovementMult = fullnessHediff.PersonalFullnessMovementMult + 0.40f;
+            
+            if (fullnessHediff != null)
+            {
+                fullnessHediff.PersonalFullnessPainMult = fullnessHediff.PersonalFullnessPainMult + 0.50f;
+                fullnessHediff.PersonalFullnessEatingSpeedMult = fullnessHediff.PersonalFullnessEatingSpeedMult + 0.40f;
+                fullnessHediff.PersonalFullnessMovementMult = fullnessHediff.PersonalFullnessMovementMult + 0.40f;
+            }
         }
 
         public override string TipStringExtra

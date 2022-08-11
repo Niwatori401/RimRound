@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Threading.Tasks;
-using Verse;
-using RimRound;
+
 
 using strig = System.String;
-using RimRound.Utilities;
-using System.Text.RegularExpressions;
+
 
 namespace TestingRange
 {
@@ -20,44 +17,45 @@ namespace TestingRange
         }
         async static Task Main(string[] args)
         {
-
+            string pathToRR = "";
+            pathToRR = DoPathInputLoop();
             PatchMode patchMode;
             do
             {
                 patchMode = PatchMode.None;
-                patchMode = DoInputLoop(patchMode);
+                patchMode = DoPatchModeInputLoop(patchMode);
 
                 string[] directoriesToWipe = new string[] {
-                    @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\",
-                    @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\Food\VCE\",
+                    @$"{pathToRR}Patches\AlienRacePatches\",
+                    @$"{pathToRR}Patches\Food\VCE\",
                 };
 
                 CheckIfPathsValid(directoriesToWipe);
 
                 List<PatchData> patchSets = new List<PatchData>()
                 {
-                    new PatchData("RimRound_AdjustAlignWithHeadTag",                    "alignWithHeadPatches",                     3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_AddComps",                                  "compsPatches",                             2, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_AlignBodyPart",                             "bodyPartAlignmentPatches",                 3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveBodySpecificOffsets",                 "removeBodySpecificOffsetsPatches",         3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_BodyTypeSpecificAlignmentPatch",            "bodyTypeSpecificAlignmentPatch",           4, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveGeneralOffset",                       "removeGeneralOffsetPatch",                 3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_SetBodyAddonDrawsize",                      "setBodyAddonDrawsize",                     3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveScaleWithBodyDrawsizeTag",            "removeScaleWithBodyDrawsizeTag",           3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveBodySpecificPortraitOffset",          "removeBodySpecificPortraitOffsetsPatches", 3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveGeneralHeadOffset",                   "removeGeneralHeadOffset",                  2, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveSpecificGraphicPathHeadOffset",       "removeSpecificGraphicPathHeadOffset",      3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveDefaultOffset",                       "removeDefaultOffset",                      3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_AlignBodyPartAbstractDef",                  "bodyPartAlignmentPatchesAbstract",         3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_BodyTypeSpecificAlignmentPatchAbstractDef", "bodyTypeSpecificAlignmentPatchAbstract",   4, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_RemoveScaleWithBodyDrawsizeTagAbstractDef", "removeScaleWithBodyDrawsizeTagAbstract",   3, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\AlienRacePatches\"),
-                    new PatchData("RimRound_AddNutritionDensity",                       "setNutritionDensity",                      2, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\Food\VCE\"),
-                    new PatchData("RimRound_AlterMaxToIngestAtOnceTag",                 "alterMaxToIngestTag",                      2, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\Food\VCE\"),
+                    new PatchData("RimRound_AdjustAlignWithHeadTag",                    "alignWithHeadPatches",                     3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_AddComps",                                  "compsPatches",                             2, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_AlignBodyPart",                             "bodyPartAlignmentPatches",                 3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveBodySpecificOffsets",                 "removeBodySpecificOffsetsPatches",         3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_BodyTypeSpecificAlignmentPatch",            "bodyTypeSpecificAlignmentPatch",           4, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveGeneralOffset",                       "removeGeneralOffsetPatch",                 3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_SetBodyAddonDrawsize",                      "setBodyAddonDrawsize",                     3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveScaleWithBodyDrawsizeTag",            "removeScaleWithBodyDrawsizeTag",           3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveBodySpecificPortraitOffset",          "removeBodySpecificPortraitOffsetsPatches", 3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveGeneralHeadOffset",                   "removeGeneralHeadOffset",                  2, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveSpecificGraphicPathHeadOffset",       "removeSpecificGraphicPathHeadOffset",      3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveDefaultOffset",                       "removeDefaultOffset",                      3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_AlignBodyPartAbstractDef",                  "bodyPartAlignmentPatchesAbstract",         3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_BodyTypeSpecificAlignmentPatchAbstractDef", "bodyTypeSpecificAlignmentPatchAbstract",   4, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_RemoveScaleWithBodyDrawsizeTagAbstractDef", "removeScaleWithBodyDrawsizeTagAbstract",   3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_AddNutritionDensity",                       "setNutritionDensity",                      2, @$"{pathToRR}Patches\Food\VCE\"),
+                    new PatchData("RimRound_AlterMaxToIngestAtOnceTag",                 "alterMaxToIngestTag",                      2, @$"{pathToRR}Patches\Food\VCE\"),
                 };
 
                 CheckIfPathsValid(patchSets);
-                CheckIfCSVFilePathsValid(patchSets, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\");
-                CheckIfTemplateFilePathsValid(patchSets, @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\");
+                CheckIfCSVFilePathsValid(patchSets, @$"{pathToRR}Patches\PatchMaker\");
+                CheckIfTemplateFilePathsValid(patchSets, @$"{pathToRR}Patches\PatchMaker\");
                 
                 DeleteFiles(patchMode, directoriesToWipe);
 
@@ -67,9 +65,9 @@ namespace TestingRange
 
                 foreach (var x in patchSets)
                 {
-                    string templateFilePath = @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.templateName}.xml~";
+                    string templateFilePath = @$"{pathToRR}Patches\PatchMaker\{x.templateName}.xml~";
                     string destinationFilePath = @$"{x.saveToDirectory}{x.templateName}.xml";
-                    string csvFilePath = @$"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimRound---Alpha\Patches\PatchMaker\{x.csvName}.csv";
+                    string csvFilePath = @$"{pathToRR}Patches\PatchMaker\{x.csvName}.csv";
                     int flairArgs = x.flairArgNumber;
 
                     if ((patchMode & PatchMode.Refresh) > PatchMode.None)
@@ -89,6 +87,24 @@ namespace TestingRange
             } while (((patchMode & PatchMode.GoAgain) > PatchMode.None));
 
             
+        }
+
+        private static string DoPathInputLoop() 
+        {
+            do
+            {
+                Console.WriteLine("Please input the RimRound install directory. For example: \nC:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RimRound---Alpha\\\n\nMake sure to use BACKSLASH and include the last backslash at the end.");
+                string userInput = Console.ReadLine();
+                Console.WriteLine($"Got: {userInput}\nChecking if valid...");
+                if (!Directory.Exists(userInput))
+                    Console.WriteLine($"Could not find directory at {userInput}. Please try again.");
+                else
+                {
+                    Console.WriteLine("Directory valid!");
+                    return userInput;
+                }
+                    
+            } while (true);
         }
 
         private static void CheckIfPathsValid(string[] directoriesToWipe)
@@ -129,7 +145,7 @@ namespace TestingRange
             }
         }
          
-        private static PatchMode DoInputLoop(PatchMode patchMode)
+        private static PatchMode DoPatchModeInputLoop(PatchMode patchMode)
         {
             while (patchMode == PatchMode.None)
             {
