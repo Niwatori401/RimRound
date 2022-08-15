@@ -17,6 +17,9 @@ namespace RimRound.Patch
     {
         public static void Postfix(Hediff __instance, ref List<PawnCapacityModifier> __result) 
         {
+            if (__instance is null || __result is null)
+                return;
+
             if (__instance.def.defName == Defs.HediffDefOf.RimRound_Weight.defName) 
             {
                 List<PawnCapacityModifier> newList = new List<PawnCapacityModifier>();

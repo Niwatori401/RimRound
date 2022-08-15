@@ -73,6 +73,7 @@
     <Compile Include="FeedingTube\Building_AutoFeeder.cs" />
     <Compile Include="FeedingTube\Building_FoodFaucet.cs" />
     <Compile Include="FeedingTube\Building_FoodProcessor.cs" />
+    <Compile Include="FeedingTube\Building_FoodVatMassive.cs" />
     <Compile Include="FeedingTube\Building_FoodVatLarge.cs" />
     <Compile Include="FeedingTube\Building_FoodVatSmall.cs" />
     <Compile Include="FeedingTube\Comps\FoodNetStorage_CompProperties.cs" />

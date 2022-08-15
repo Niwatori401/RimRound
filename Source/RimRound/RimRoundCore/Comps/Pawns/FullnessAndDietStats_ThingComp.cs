@@ -159,16 +159,25 @@ namespace RimRound.Comps
 
                 WeightGainRequest gainRequest = this.activeWeightGainRequests.Dequeue();
 
-                CreateWLRequestIfNonZeroDuration(currentTick, gainRequest);
 
-                ChangeWeightAndUpdateSprite(gainRequest);
+                float gainedSeverity = ChangeWeightAndUpdateSprite(gainRequest);
+                CreateWLRequestIfNonZeroDuration(currentTick, gainRequest, gainedSeverity);
+
             }
 
             return;
         }
 
-        private void ChangeWeightAndUpdateSprite(WeightGainRequest gainRequest) 
+
+        /// <summary>
+        /// Actually applies weight gain request to pawn and updates sprite.
+        /// </summary>
+        /// <param name="gainRequest">Weight gain request to process</param>
+        /// <returns>Change in severity</returns>
+        private float ChangeWeightAndUpdateSprite(WeightGainRequest gainRequest) 
         {
+            float cachedSeverity = this.parent.AsPawn().WeightHediff().Severity;
+
             Utilities.HediffUtility.AddHediffSeverity(
                  Defs.HediffDefOf.RimRound_Weight,
                  this.parent.AsPawn(),
@@ -176,19 +185,26 @@ namespace RimRound.Comps
                  false,
                  false);
 
-            var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
-            if (pbtThingComp is null)
-                return;
+            float newSeverity = this.parent.AsPawn().WeightHediff().Severity;
 
-            BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
+            var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
+            if (pbtThingComp != null)
+                BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
+
+            return newSeverity - cachedSeverity;
         }
 
 
-        private void CreateWLRequestIfNonZeroDuration(int currentTick, WeightGainRequest gainRequest)
+        private void CreateWLRequestIfNonZeroDuration(int currentTick, WeightGainRequest gainRequest, float severityChangeFromPriorGain)
         {
             if (gainRequest.duration > 0)
             {
-                this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
+                if (gainRequest.amountToGain > 0)
+                    this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
+                else 
+                {
+                    this.activeWeightLossRequests.Enqueue(new WeightGainRequest(Utilities.HediffUtility.SeverityToKilosWithoutBaseWeight(severityChangeFromPriorGain), currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
+                }
             }
         }
 
