@@ -51,7 +51,7 @@ namespace RimRound.Patch
             if (curIndex > 19)
                 return 19;
 
-            return 19;
+            return curIndex;
         }
 
         static Dictionary<int, float> weightStageToHealthMult = new Dictionary<int, float>() 
