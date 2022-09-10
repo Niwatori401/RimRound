@@ -181,7 +181,11 @@ namespace RimRound.UI
 				{  7.960f, "RR_Desc_F_G5"            },
 				{  9.960f, "RR_Desc_F_G5"            },
 				{  14.46f, "RR_Desc_F_G9"            },
-				{  100f  , "RR_Desc_F_G9"           },
+				{  42.4f  , "RR_Desc_F_G11"          },
+				{  116.6f  , "RR_Desc_F_G12"         },
+				{  411f  , "RR_Desc_F_G14"           },
+				{  999.999f  , "RR_Desc_F_G17"       },
+				{  1000000f  , "RR_Desc_F_G20"       },
 		};
 
 		static Dictionary<float, string> maleBodyTypeDescriptions = new Dictionary<float, string>()
@@ -237,7 +241,11 @@ namespace RimRound.UI
 				{  7.960f, "RR_DescTitle_G5"            },
 				{  9.960f, "RR_DescTitle_G5"            },
 				{  14.46f, "RR_DescTitle_G9"            },
-				{  100f  , "RR_DescTitle_G9"            },
+				{  42.4f  , "RR_DescTitle_G11"          },
+				{  116.6f  , "RR_DescTitle_G12"         },
+				{  411f  , "RR_DescTitle_G14"           },
+				{  999.999f  , "RR_DescTitle_G17"       },
+				{  1000000f  , "RR_DescTitle_G20"       },
 		};
 
 		static Dictionary<float, string> ratkinExtraDescriptions = new Dictionary<float, string>()
