@@ -143,7 +143,18 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_400_Gelatinous,    new BodyTypeInfo(7.960f, 15.000f, 0.05f, 0.11000f, 4.70f, 0.00f) },
                 { RimRound.Defs.BodyTypeDefOf.F_450_Gelatinous,    new BodyTypeInfo(9.960f, 17.000f, 0.05f, 0.10000f, 5.40f, 0.00f) },
                 { RimRound.Defs.BodyTypeDefOf.F_500_Gelatinous,    new BodyTypeInfo(14.46f, 20.000f, 0.05f, 0.09000f, 6.31f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous,    new BodyTypeInfo(100f  , 25.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous,    new BodyTypeInfo(21.85f  , 25.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
+
+                { RimRound.Defs.BodyTypeDefOf.F_910_Gelatinous,    new BodyTypeInfo(42.40f  , 30.000f, 0.05f, 0.06000f, 8.5f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_920_Gelatinous,    new BodyTypeInfo(70.50f  , 40.000f, 0.05f, 0.05100f, 12f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_930_Gelatinous,    new BodyTypeInfo(116.6f  , 55.000f, 0.05f, 0.03400f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_940_Gelatinous,    new BodyTypeInfo(164.5f  , 70.000f, 0.05f, 0.02800f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_950_Gelatinous,    new BodyTypeInfo(286.2f  , 85.000f, 0.05f, 0.02200f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_960_Gelatinous,    new BodyTypeInfo(411.0f , 105.000f, 0.05f, 0.01800f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_970_Gelatinous,    new BodyTypeInfo(576.7f , 125.000f, 0.05f, 0.01500f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_980_Gelatinous,    new BodyTypeInfo(773.2f , 150.000f, 0.05f, 0.01200f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_990_Gelatinous,    new BodyTypeInfo(999.9f , 175.000f, 0.05f, 0.00700f, 60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_995_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
             };
 
         public static Dictionary<BodyTypeDef, BodyTypeInfo> appleFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
@@ -175,7 +186,18 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_400a_Gelatinous,    new BodyTypeInfo(7.960f, 15.000f, 0.05f, 0.11000f, 4.70f, 0.00f) },
                 { RimRound.Defs.BodyTypeDefOf.F_450a_Gelatinous,    new BodyTypeInfo(9.960f, 17.000f, 0.05f, 0.10000f, 5.40f, 0.00f) },
                 { RimRound.Defs.BodyTypeDefOf.F_500a_Gelatinous,    new BodyTypeInfo(14.46f, 20.000f, 0.05f, 0.09000f, 6.31f, 0.00f) },
-                { RimRound.Defs.BodyTypeDefOf.F_900a_Gelatinous,    new BodyTypeInfo(100f  , 25.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_900a_Gelatinous,    new BodyTypeInfo(21.85f  , 25.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
+
+                { RimRound.Defs.BodyTypeDefOf.F_910a_Gelatinous,    new BodyTypeInfo(42.40f  , 30.000f, 0.05f, 0.06000f, 8.5f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_920a_Gelatinous,    new BodyTypeInfo(70.50f  , 40.000f, 0.05f, 0.05100f, 12f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_930a_Gelatinous,    new BodyTypeInfo(116.6f  , 55.000f, 0.05f, 0.03400f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_940a_Gelatinous,    new BodyTypeInfo(164.5f  , 70.000f, 0.05f, 0.02800f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_950a_Gelatinous,    new BodyTypeInfo(286.2f  , 85.000f, 0.05f, 0.02200f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_960a_Gelatinous,    new BodyTypeInfo(411.0f , 105.000f, 0.05f, 0.01800f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_970a_Gelatinous,    new BodyTypeInfo(576.7f , 125.000f, 0.05f, 0.01500f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_980a_Gelatinous,    new BodyTypeInfo(773.2f , 150.000f, 0.05f, 0.01200f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_990a_Gelatinous,    new BodyTypeInfo(999.9f , 175.000f, 0.05f, 0.00700f, 60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_995a_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
             };
 
         public static Dictionary<BodyTypeDef, BodyTypeInfo> defaultMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
@@ -210,6 +232,16 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.M_500_Gelatinous,    new BodyTypeInfo(14.46f, 20.000f, 0.05f, 0.09000f, 6.31f, 0.00f) },
                 { RimRound.Defs.BodyTypeDefOf.M_900_Gelatinous,    new BodyTypeInfo(100f  , 25.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
 
+                { RimRound.Defs.BodyTypeDefOf.M_910_Gelatinous,    new BodyTypeInfo(42.40f  , 30.000f, 0.05f, 0.06000f, 8.5f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_920_Gelatinous,    new BodyTypeInfo(70.50f  , 40.000f, 0.05f, 0.05100f, 12f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_930_Gelatinous,    new BodyTypeInfo(116.6f  , 55.000f, 0.05f, 0.03400f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_940_Gelatinous,    new BodyTypeInfo(164.5f  , 70.000f, 0.05f, 0.02800f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_950_Gelatinous,    new BodyTypeInfo(286.2f  , 85.000f, 0.05f, 0.02200f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_960_Gelatinous,    new BodyTypeInfo(411.0f , 105.000f, 0.05f, 0.01800f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_970_Gelatinous,    new BodyTypeInfo(576.7f , 125.000f, 0.05f, 0.01500f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_980_Gelatinous,    new BodyTypeInfo(773.2f , 150.000f, 0.05f, 0.01200f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_990_Gelatinous,    new BodyTypeInfo(999.9f , 175.000f, 0.05f, 0.00700f, 60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.M_995_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
         };
 
 
@@ -275,6 +307,18 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_450a_Gelatinous,    new BodyTypeInfo(9.960f, 17.000f, 0.05f, 0.10000f, 5.40f, 0.00f) },
                 { RimRound.Defs.BodyTypeDefOf.F_500a_Gelatinous,    new BodyTypeInfo(14.46f, 20.000f, 0.05f, 0.09000f, 6.31f, 0.00f) },
                 { RimRound.Defs.BodyTypeDefOf.F_900a_Gelatinous,    new BodyTypeInfo(100f  , 25.000f, 0.05f, 0.07000f, 7.11f, 0.00f) },
+
+
+                { RimRound.Defs.BodyTypeDefOf.F_910a_Gelatinous,    new BodyTypeInfo(42.40f  , 30.000f, 0.05f, 0.06000f, 8.5f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_920a_Gelatinous,    new BodyTypeInfo(70.50f  , 40.000f, 0.05f, 0.05100f, 12f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_930a_Gelatinous,    new BodyTypeInfo(116.6f  , 55.000f, 0.05f, 0.03400f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_940a_Gelatinous,    new BodyTypeInfo(164.5f  , 70.000f, 0.05f, 0.02800f, 19f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_950a_Gelatinous,    new BodyTypeInfo(286.2f  , 85.000f, 0.05f, 0.02200f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_960a_Gelatinous,    new BodyTypeInfo(411.0f , 105.000f, 0.05f, 0.01800f, 29f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_970a_Gelatinous,    new BodyTypeInfo(576.7f , 125.000f, 0.05f, 0.01500f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_980a_Gelatinous,    new BodyTypeInfo(773.2f , 150.000f, 0.05f, 0.01200f, 41f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_990a_Gelatinous,    new BodyTypeInfo(999.9f , 175.000f, 0.05f, 0.00700f, 60f, 0.00f) },
+                { RimRound.Defs.BodyTypeDefOf.F_995a_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
             };
 
 
@@ -922,6 +966,29 @@ namespace RimRound.Utilities
             RimRound.Defs.BodyTypeDefOf.F_500_Gelatinous,
             RimRound.Defs.BodyTypeDefOf.F_900_Gelatinous,
 
+
+            RimRound.Defs.BodyTypeDefOf.F_910_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_920_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_930_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_940_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_950_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_960_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_970_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_980_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_990_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_995_Gelatinous,
+
+            RimRound.Defs.BodyTypeDefOf.F_910a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_920a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_930a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_940a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_950a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_960a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_970a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_980a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_990a_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.F_995a_Gelatinous,
+
             RimRound.Defs.BodyTypeDefOf.F_005a_Thick,
             RimRound.Defs.BodyTypeDefOf.F_006a_Chonky,
             RimRound.Defs.BodyTypeDefOf.F_010a_Chubby,
@@ -967,6 +1034,17 @@ namespace RimRound.Utilities
             RimRound.Defs.BodyTypeDefOf.M_450_Gelatinous,
             RimRound.Defs.BodyTypeDefOf.M_500_Gelatinous,
             RimRound.Defs.BodyTypeDefOf.M_900_Gelatinous,
+
+            RimRound.Defs.BodyTypeDefOf.M_910_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_920_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_930_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_940_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_950_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_960_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_970_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_980_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_990_Gelatinous,
+            RimRound.Defs.BodyTypeDefOf.M_995_Gelatinous,
 
         };
 

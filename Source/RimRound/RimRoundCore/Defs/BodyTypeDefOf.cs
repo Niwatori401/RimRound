@@ -38,6 +38,16 @@ namespace RimRound.Defs
         public static BodyTypeDef M_500_Gelatinous;
         public static BodyTypeDef M_900_Gelatinous;
 
+        public static BodyTypeDef M_910_Gelatinous;
+        public static BodyTypeDef M_920_Gelatinous;
+        public static BodyTypeDef M_930_Gelatinous;
+        public static BodyTypeDef M_940_Gelatinous;
+        public static BodyTypeDef M_950_Gelatinous;
+        public static BodyTypeDef M_960_Gelatinous;
+        public static BodyTypeDef M_970_Gelatinous;
+        public static BodyTypeDef M_980_Gelatinous;
+        public static BodyTypeDef M_990_Gelatinous;
+        public static BodyTypeDef M_995_Gelatinous;
 
         public static BodyTypeDef F_005_Thick;
         public static BodyTypeDef F_006_Chonky;
@@ -62,6 +72,18 @@ namespace RimRound.Defs
         public static BodyTypeDef F_500_Gelatinous;
         public static BodyTypeDef F_900_Gelatinous;
 
+        public static BodyTypeDef F_910_Gelatinous;
+        public static BodyTypeDef F_920_Gelatinous;
+        public static BodyTypeDef F_930_Gelatinous;
+        public static BodyTypeDef F_940_Gelatinous;
+        public static BodyTypeDef F_950_Gelatinous;
+        public static BodyTypeDef F_960_Gelatinous;
+        public static BodyTypeDef F_970_Gelatinous;
+        public static BodyTypeDef F_980_Gelatinous;
+        public static BodyTypeDef F_990_Gelatinous;
+        public static BodyTypeDef F_995_Gelatinous;
+
+
 
         public static BodyTypeDef F_005a_Thick;
         public static BodyTypeDef F_006a_Chonky;
@@ -85,6 +107,17 @@ namespace RimRound.Defs
         public static BodyTypeDef F_450a_Gelatinous;
         public static BodyTypeDef F_500a_Gelatinous;
         public static BodyTypeDef F_900a_Gelatinous;
+
+        public static BodyTypeDef F_910a_Gelatinous;
+        public static BodyTypeDef F_920a_Gelatinous;
+        public static BodyTypeDef F_930a_Gelatinous;
+        public static BodyTypeDef F_940a_Gelatinous;
+        public static BodyTypeDef F_950a_Gelatinous;
+        public static BodyTypeDef F_960a_Gelatinous;
+        public static BodyTypeDef F_970a_Gelatinous;
+        public static BodyTypeDef F_980a_Gelatinous;
+        public static BodyTypeDef F_990a_Gelatinous;
+        public static BodyTypeDef F_995a_Gelatinous;
 
         #endregion
 

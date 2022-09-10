@@ -148,7 +148,7 @@ namespace RimRound.Comps
                         action = delegate ()
                         {
                             Values.debugPos2 += positivity * (offsetAmounts[offsetAmountsIndex]);
-                            Log.Message($"Debug Float is now: {Values.debugPos2}");
+                            Log.Message($"Debug Float2 is now: {Values.debugPos2}");
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
                         }
                     };
@@ -333,7 +333,9 @@ namespace RimRound.Comps
             0.1f,
             1,
             10f,
-            100f
+            100f,
+            1000f,
+            10000f
         };
 
         int offsetAmountsIndex = 0;

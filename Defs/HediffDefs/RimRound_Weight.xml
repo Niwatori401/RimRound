@@ -581,7 +581,267 @@
 						<offset>-20.00</offset>
 					</li>							
 				</capMods>	
-			</li>				
+			</li>
+			<li>
+				<minSeverity>21.850</minSeverity>
+				<label>Gelatinous XI</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-25.00</offset>
+					</li>				
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>	
+			</li>			
+			<li>
+				<minSeverity>42.400</minSeverity>
+				<label>Gelatinous XII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-3.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.30</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-30.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.25</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>70.500</minSeverity>
+				<label>Gelatinous XIII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-3.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.50</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-35.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.40</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>116.600</minSeverity>
+				<label>Gelatinous XIV</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-4.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.75</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-42.50</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.60</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>164.500</minSeverity>
+				<label>Gelatinous XV</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-5.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.90</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-50.00</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>286.200</minSeverity>
+				<label>Gelatinous XVI</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-7.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.99</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-60.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1.50</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>411.000</minSeverity>
+				<label>Gelatinous XVII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-10.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-1.35</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-80.00</offset>
+					</li>		
+					<li>
+						<capacity>Eating</capacity>
+						<offset>2.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>576.700</minSeverity>
+				<label>Gelatinous XVIII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-15.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-1.50</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-100.00</offset>
+					</li>		
+					<li>
+						<capacity>Eating</capacity>
+						<offset>3.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>773.200</minSeverity>
+				<label>Gelatinous IX</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-20.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-2.00</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-130.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>4.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>999.999</minSeverity>
+				<label>Gelatinous Ω</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-30.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-3.00</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-150.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>5.0</offset>
+					</li>					
+				</capMods>	
+			</li>			
 		</stages>
 	
 		
