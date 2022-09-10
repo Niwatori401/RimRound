@@ -2,7 +2,7 @@
 <Defs>
 	<BodyTypeDef>
 		<defName>M_995_Gelatinous</defName>
-		<headOffset>(0.250, 3.600)</headOffset>
+		<headOffset>(0.250, 28.00)</headOffset>
 		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_100_Gelatinous</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		

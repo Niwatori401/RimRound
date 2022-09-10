@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<BodyTypeDef>
-		<defName>M_970_Gelatinous</defName>
-		<headOffset>(0.250, 17.600)</headOffset>
+		<defName>M_980_Gelatinous_090</defName>
+		<headOffset>(0.250, 14.800)</headOffset>
 		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_100_Gelatinous</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
