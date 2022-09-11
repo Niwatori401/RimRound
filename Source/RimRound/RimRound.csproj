@@ -169,12 +169,14 @@
     <Compile Include="RimRoundCore\Things\FatteningBullet.cs" />
     <Compile Include="RimRoundCore\Things\ME_FatteningBullet.cs" />
     <Compile Include="RimRoundCore\UI\ITab_CharacterDesc.cs" />
+    <Compile Include="RimRoundCore\UI\ITab_Perks.cs" />
     <Compile Include="RimRoundCore\Utilities\BodyTypeUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\HediffUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\HungerDroneUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\MobilityChairUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\ModCompatibilityUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\PawnGeneratorUtility.cs" />
+    <Compile Include="RimRoundCore\Utilities\Perks.cs" />
     <Compile Include="RimRoundCore\Utilities\PrisonerUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\Resources.cs" />
     <Compile Include="RimRoundCore\Utilities\WeightOpinionUtility.cs" />

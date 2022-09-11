@@ -7,6 +7,7 @@
 				<xpath>Defs/ThingDef[@Name="BasePawn"]/inspectorTabs</xpath>
 				<value>
 					<li>RimRound.UI.ITab_CharacterDesc</li>
+					<li>RimRound.UI.ITab_Perks</li>
 				</value>
 			</li>
 		</operations>
