@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimRound.Comps;
 using RimRound.Utilities;
 using RimWorld;
 using System;
@@ -22,11 +23,12 @@ namespace RimRound.Patch
 
         private static bool AlterMovementIfWearingScooter(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
         {
-            float scooterSpeed = 0.5f;
 
             if (capacity == PawnCapacityDefOf.Moving)
             {
                 Pawn pawn = diffSet.pawn;
+
+                float scooterSpeed = 0.5f + 0.25f * pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_PracticalProblems_Title"] is float f ? f : 1;
 
                 if (!pawn.RaceProps.Humanlike || !PawnCapacityUtility.BodyCanEverDoCapacity(pawn.RaceProps.body, PawnCapacityDefOf.Manipulation))
                     return true;
