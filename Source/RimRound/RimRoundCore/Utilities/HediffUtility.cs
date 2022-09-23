@@ -120,8 +120,11 @@ namespace RimRound.Utilities
                 }
                 else
                 {
+                    float personalWeightLossModifier = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.PersonalWeightLossModifier is float p ? p : 1f;
+
                     float additionalSeverity = 
-                        GlobalSettings.weightLossMultiplier.threshold * 
+                        GlobalSettings.weightLossMultiplier.threshold *
+                        personalWeightLossModifier *
                         amount *
                         (pawn.gender == Gender.Male ? GlobalSettings.weightLossMultiplierMale.threshold : GlobalSettings.weightLossMultiplierFemale.threshold);
 

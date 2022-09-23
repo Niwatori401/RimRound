@@ -217,29 +217,41 @@ namespace RimRound.UI
             Rect labelRect = new Rect(drawRect.x - (textLength - imageWidth) / 2, drawRect.y - textOffset, totalWidthForEntry, Text.CalcSize(textTitle).y);
             Widgets.Label(labelRect , textTitle);
 
-            if (!perk.eligibilityValidator(comp))
+            Perks.SuccessReport shouldBeAvailable = perk.eligibilityValidator(comp, perk);
+            if (!shouldBeAvailable)
             {
                 //To make it click first
                 if (Widgets.ButtonImage(drawRect, blockedTexture)) 
                 {
-                    Log.Message("Didn't click main message!");
+                    //Put anything that needs to happen on click of prohibited button here
                 }
             }
 
             TooltipHandler.TipRegion(drawRect, () => 
-            { 
-                return perk.description.Translate(PawnToShowInfoAbout) + "Current Level: " + perk.numberOfLevels; 
+            {
+                StringBuilder stringBuilder = new StringBuilder();
+                if (!shouldBeAvailable)
+                {
+                    stringBuilder.AppendLine(shouldBeAvailable.reason.ToUpper());
+                    stringBuilder.AppendLine();
+                }
+
+                stringBuilder.AppendLine(perk.description.Translate(PawnToShowInfoAbout));
+                stringBuilder.AppendLine();
+                stringBuilder.AppendLine("Current Level: " + comp.perkLevels.PerkToLevels[perk.perkName] + "/" + perk.numberOfLevels);
+
+                return  stringBuilder.ToString();
             }, 
             426911630 + entryIndex);
 
             if (Widgets.ButtonImage(drawRect, perk.perkIcon))
             {
-                perk.onClickEvent(comp);
+                perk.onClickEvent(comp, perk);
             }
 
-            if (!perk.eligibilityValidator(comp))
+            if (!shouldBeAvailable)
             {
-                //To make the visual overlay 
+                //Put no behavior here
                 Widgets.ButtonImage(drawRect, blockedTexture);
             }
         }

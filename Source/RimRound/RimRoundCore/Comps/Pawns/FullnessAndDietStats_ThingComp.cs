@@ -308,7 +308,7 @@ namespace RimRound.Comps
         {
             if (CurrentFullness > SoftLimit)
             {
-                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
+                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * (perkLevels.PerkToLevels["RR_Endless_Indulgence_Title"] + 1) * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
                 return;
             }
             return;
@@ -444,9 +444,15 @@ namespace RimRound.Comps
         }
         private float personalDigestionRateMult = 1f;
 
-        public float PersonalDigestionRateFlat 
+        public float PersonalDigestionRateFlat
         {
-            get => personalDigestionRateFlat;
+            get 
+            { 
+                float digestionBeyondQuestionMult = perkLevels.PerkToLevels["RR_Digestion_Beyond_Question_Title"] * 0.3f + 1; 
+                float gigaGurglingMult = perkLevels.PerkToLevels["RR_GigaGurgling_Title"] * 1f + 1;
+
+                return personalDigestionRateFlat * gigaGurglingMult * digestionBeyondQuestionMult;
+            }
             set => personalDigestionRateFlat = value;
         }
         private float personalDigestionRateFlat = 0f;
@@ -469,7 +475,14 @@ namespace RimRound.Comps
 
         public float PersonalWeightGainModifier 
         {
-            get => _personalWeightGainModifier;
+            get 
+            {
+                int apexAbsorbtionLevel = perkLevels.PerkToLevels["RR_Apex_Absorption_Title"];
+                int wg4000Level = perkLevels.PerkToLevels["RR_WeightGain4000_Title"];
+                return _personalWeightGainModifier + 
+                    0.1f * apexAbsorbtionLevel +
+                    0.2f * wg4000Level;
+            }
             set 
             {
                 _personalWeightGainModifier = value;
@@ -477,6 +490,28 @@ namespace RimRound.Comps
         }
 
         float _personalWeightGainModifier = 1f;
+
+
+
+
+        public float PersonalWeightLossModifier
+        {
+            get
+            {
+                int dietPlanLevel = perkLevels.PerkToLevels["RR_Diet_Plan_Title"];
+                return _personalWeightLossModifier +
+                    0.2f * dietPlanLevel;
+            }
+            set
+            {
+                _personalWeightLossModifier = value;
+            }
+        }
+
+        float _personalWeightLossModifier = 1f;
+
+
+
 
         public float RemainingFullnessUntil(float limit) 
         {
@@ -530,7 +565,8 @@ namespace RimRound.Comps
         {
             get
             {
-                return SoftLimit * (1f + hardLimitAdditionalPercentage) * GlobalSettings.hardLimitMuliplier.threshold;
+                float limitBreakMult = perkLevels.PerkToLevels["RR_LimitBreak_Title"] * 0.1f + 1;
+                return SoftLimit * (1f + hardLimitAdditionalPercentage) * GlobalSettings.hardLimitMuliplier.threshold * limitBreakMult;
             }
             set 
             {
@@ -710,6 +746,9 @@ namespace RimRound.Comps
 
     public class PerkLevels
     {
+        public int currentLevel = 0;
+        public int availablePoints = 0;
+
         public Dictionary<string, int> PerkToLevels;
     }
 

@@ -50,324 +50,643 @@ namespace RimRound.Utilities
         public static List<Perk> basicPerks = new List<Perk>
         {
             new Perk("RR_Ample_Appetite_Title", "RR_Ample_Appetite_Desc", 2, 3, ampleAppetiteIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                Log.Message("DID PRESS BUTTON");
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return false;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Apex_Absorption_Title", "RR_Apex_Absorption_Desc", 1, 10, apexAbsorptionIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                p.perkLevels.PerkToLevels["RR_Apex_Absorption_Title"] += 1;
-                Log.Message("CURRENT LEVEL: " + p.perkLevels.PerkToLevels["RR_Apex_Absorption_Title"]);
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Comfortable_Corpulence_Title", "RR_Comfortable_Corpulence_Desc", 1, 10, comfortableCorpulenceIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                Log.Message("DID PRESS BUTTON");
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return false;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Culinary_Connisseur_Title", "RR_Culinary_Connisseur_Desc", 2, 5, culinaryConnisseurIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Demonic_Devourment_Title", "RR_Demonic_Devourment_Desc", 1, 5, demonicDevourmentIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Diet_Plan_Title", "RR_Diet_Plan_Desc", 2, 5, dietPlanIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Digestion_Beyond_Question_Title", "RR_Digestion_Beyond_Question_Desc", 2, 10, digestionBeyondQuestionIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Endless_Indulgence_Title", "RR_Endless_Indulgence_Desc", 5, 4, endlessIndulgenceIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_LimitBreak_Title", "RR_LimitBreak_Desc", 3, 3, limitBreakIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_NoPainStillGain_Title", "RR_NoPainStillGain_Desc", 1, 7, noPainStillGainIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_PracticalProblems_Title", "RR_PracticalProblems_Desc", 10, 1, practicalProblemsIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_SquareOne_Title", "RR_SquareOne_Desc", 5, 1, squareOneIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    //p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
 
+                    p.parent.AsPawn().WeightHediff().Severity = 0;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
-            new Perk("RR_TitanicTank_Title", "RR_TitanicTank_Desc", 2, 5, titanicTankIcon,            
-            (FullnessAndDietStats_ThingComp p) =>
+            new Perk("RR_TitanicTank_Title", "RR_TitanicTank_Desc", 2, 5, titanicTankIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
-            new Perk("RR_WellInsulated_Title", "RR_WellInsulated_Desc", 3, 5, wellInsulatedIcon,            
-            (FullnessAndDietStats_ThingComp p) =>
+            new Perk("RR_WellInsulated_Title", "RR_WellInsulated_Desc", 3, 5, wellInsulatedIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
         };
 
         public static List<Perk> advancedPerks = new List<Perk> 
         {
             new Perk("RR_Voracious_Title", "RR_Voracious_Desc", 4, 4, voraciousIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_WeightGain4000_Title", "RR_WeightGain4000_Desc", 3, 5, weightGain4000Icon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels["RR_Apex_Absorption_Title"] < 10)
+                    return new SuccessReport("Requires " + "RR_Apex_Absorption_Title".Translate() + " level 10", false);
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
-            
+
             new Perk("RR_ItsComingThisWay_Title", "RR_ItsComingThisWay_Desc", 15, 1, itsComingThisWayIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
-            
+
             new Perk("RR_Bulletproof_Blob_Title", "RR_Bulletproof_Blob_Desc", 3, 5, bulletProofBlobIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
-            
-            new Perk("RR_GigaGurgling_Title", "RR_GigaGurgling_Desc", 5, 5, gigaGurglingIcon,
-            (FullnessAndDietStats_ThingComp p) =>
-            {
 
-            },
-            (FullnessAndDietStats_ThingComp p) =>
+            new Perk("RR_GigaGurgling_Title", "RR_GigaGurgling_Desc", 5, 5, gigaGurglingIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.PerkToLevels["RR_Digestion_Beyond_Question_Title"] < 10)
+                {
+                    return new SuccessReport("Requires " + "RR_Digestion_Beyond_Question_Title".Translate() + " level 10", false);
+                }
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Breakneck_Buffet_Title", "RR_Breakneck_Buffet_Desc", 2, 4, breakneckBuffetIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_FoldsOfHeaven_Title", "RR_FoldsOfHeaven_Desc", 5, 3, foldsOfHeavenIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
-            
-            new Perk("RR_Beautiful_Bulk_Title", "RR_Beautiful_Bulk_Desc", 3, 3, beautifulBulkIcon,
-            (FullnessAndDietStats_ThingComp p) =>
-            {
 
-            },
-            (FullnessAndDietStats_ThingComp p) =>
+            new Perk("RR_Beautiful_Bulk_Title", "RR_Beautiful_Bulk_Desc", 3, 3, beautifulBulkIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_Fat_Furnace_Title", "RR_Fat_Furnace_Desc", 10, 2, fatFurnaceIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_RotundRegeneration_Title", "RR_RotundRegeneration_Desc", 10, 2, rotundRegenerationIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_WeLikeToParty_Title", "RR_WeLikeToParty_Desc", 5, 1, weLikeToPartyIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
-            })
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
         };
 
         public static List<Perk> elitePerks = new List<Perk>
         {
             new Perk("RR_GluttonyIncarnate_Title", "RR_GluttonyIncarnate_Desc", 20, 1, gluttonyIncarnateIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_PaunchPower_Title", "RR_PaunchPower_Desc", 20, 2, paunchPowerIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_MakesAllTheRules_Title", "RR_MakesAllTheRules_Desc", 10, 1, makesAllTheRulesIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
             new Perk("RR_HeavyRevian_Title", "RR_HeavyRevian_Desc", 15, 1, heavyRevianIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
         };
 
         public static List<Perk> ultimatePerks = new List<Perk>
         {
             new Perk("RR_Even_Further_Beyond_Title", "RR_Even_Further_Beyond_Desc", 25, 1, evenFurtherBeyondIcon,
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
             },
-            (FullnessAndDietStats_ThingComp p) =>
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
             }),
 
-            new Perk("RR_Ascension_Icon_Title", "RR_Ascension_Icon_Desc", 1, 1, ascensionIcon, 
-            (FullnessAndDietStats_ThingComp p) =>
+            new Perk("RR_Ascension_Icon_Title", "RR_Ascension_Icon_Desc", 1, 1, ascensionIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                
-            }, 
-            (FullnessAndDietStats_ThingComp p) => 
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                return true;
-            })
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
 
         };
 
@@ -378,8 +697,8 @@ namespace RimRound.Utilities
 
 
 
-        public delegate bool EligibilityValidator(FullnessAndDietStats_ThingComp p);
-        public delegate void OnClickAction(FullnessAndDietStats_ThingComp p);
+        public delegate SuccessReport EligibilityValidator(FullnessAndDietStats_ThingComp p, Perks.Perk perk);
+        public delegate void OnClickAction(FullnessAndDietStats_ThingComp p, Perks.Perk perk);
 
         public struct Perk
         {
@@ -403,5 +722,20 @@ namespace RimRound.Utilities
             public readonly OnClickAction onClickEvent;
             public readonly EligibilityValidator eligibilityValidator;
         }
+
+
+        public class SuccessReport 
+        {
+            public static implicit operator bool(SuccessReport successReport) => successReport.successValue;
+
+            public SuccessReport(string reason, bool successValue) 
+            {
+                this.reason = reason;
+                this.successValue = successValue;
+            }
+            public string reason = "";
+            bool successValue = false;
+        }
+
     }
 }

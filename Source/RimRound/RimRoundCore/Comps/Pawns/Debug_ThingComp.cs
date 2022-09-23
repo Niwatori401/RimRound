@@ -64,6 +64,21 @@ namespace RimRound.Comps
                     }
                 };
 
+                yield return new Command_Action
+                {
+                    defaultLabel = $"Add 10 Perk Points",
+                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Chicken),
+                    action = delegate ()
+                    {
+                        FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
+
+                        if (comp is null)
+                        {
+                            return;
+                        }
+                        comp.perkLevels.availablePoints += 10;
+                    }
+                };
 
 
                 yield return new Command_Action
