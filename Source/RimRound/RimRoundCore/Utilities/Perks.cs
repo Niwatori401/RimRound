@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimRound.Comps;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace RimRound.Utilities
     [StaticConstructorOnStartup]
     public static class Perks
     {
+        public static readonly Texture2D blockedTexture =              ContentFinder<Texture2D>.Get("UI/PerkIcons/BLOCKED", true);
+
         public static readonly Texture2D ampleAppetiteIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/AMPLE_APPETITE", true);
         public static readonly Texture2D apexAbsorptionIcon =          ContentFinder<Texture2D>.Get("UI/PerkIcons/APEX_ABSORPTION", true);
         public static readonly Texture2D ascensionIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/ASCENSION", true);
@@ -46,175 +49,325 @@ namespace RimRound.Utilities
 
         public static List<Perk> basicPerks = new List<Perk>
         {
-            new Perk("RR_Ample_Appetite_Title", ampleAppetiteIcon, (Pawn p) =>
+            new Perk("RR_Ample_Appetite_Title", "RR_Ample_Appetite_Desc", 2, 3, ampleAppetiteIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Apex_Absorption_Title", apexAbsorptionIcon, (Pawn p) =>
+                Log.Message("DID PRESS BUTTON");
+            },
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Comfortable_Corpulence_Title", comfortableCorpulenceIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Culinary_Connisseur_Title", culinaryConnisseurIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Demonic_Devourment_Title", demonicDevourmentIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Diet_Plan_Title", dietPlanIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Digestion_Beyond_Question_Title", digestionBeyondQuestionIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Endless_Indulgence_Title", endlessIndulgenceIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_LimitBreak_Title", limitBreakIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_NoPainStillGain_Title", noPainStillGainIcon, (Pawn p) =>
-            {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                return false;
             }),
 
-            new Perk("RR_PracticalProblems_Title", practicalProblemsIcon, (Pawn p) =>
+            new Perk("RR_Apex_Absorption_Title", "RR_Apex_Absorption_Desc", 1, 10, apexAbsorptionIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                p.perkLevels.PerkToLevels["RR_Apex_Absorption_Title"] += 1;
+                Log.Message("CURRENT LEVEL: " + p.perkLevels.PerkToLevels["RR_Apex_Absorption_Title"]);
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
 
-            new Perk("RR_SquareOne_Title", squareOneIcon, (Pawn p) =>
+            new Perk("RR_Comfortable_Corpulence_Title", "RR_Comfortable_Corpulence_Desc", 1, 10, comfortableCorpulenceIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                Log.Message("DID PRESS BUTTON");
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return false;
             }),
-            new Perk("RR_TitanicTank_Title", titanicTankIcon, (Pawn p) =>
+
+            new Perk("RR_Culinary_Connisseur_Title", "RR_Culinary_Connisseur_Desc", 2, 5, culinaryConnisseurIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
-            new Perk("RR_WellInsulated_Title", wellInsulatedIcon, (Pawn p) =>
+
+            new Perk("RR_Demonic_Devourment_Title", "RR_Demonic_Devourment_Desc", 1, 5, demonicDevourmentIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_Diet_Plan_Title", "RR_Diet_Plan_Desc", 2, 5, dietPlanIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_Digestion_Beyond_Question_Title", "RR_Digestion_Beyond_Question_Desc", 2, 10, digestionBeyondQuestionIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_Endless_Indulgence_Title", "RR_Endless_Indulgence_Desc", 5, 4, endlessIndulgenceIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_LimitBreak_Title", "RR_LimitBreak_Desc", 3, 3, limitBreakIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_NoPainStillGain_Title", "RR_NoPainStillGain_Desc", 1, 7, noPainStillGainIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_PracticalProblems_Title", "RR_PracticalProblems_Desc", 10, 1, practicalProblemsIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_SquareOne_Title", "RR_SquareOne_Desc", 5, 1, squareOneIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_TitanicTank_Title", "RR_TitanicTank_Desc", 2, 5, titanicTankIcon,            
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_WellInsulated_Title", "RR_WellInsulated_Desc", 3, 5, wellInsulatedIcon,            
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
         };
 
         public static List<Perk> advancedPerks = new List<Perk> 
         {
-            new Perk("RR_Voracious_Title", voraciousIcon, (Pawn p) =>
+            new Perk("RR_Voracious_Title", "RR_Voracious_Desc", 4, 4, voraciousIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_WeightGain4000_Title", weightGain4000Icon, (Pawn p) =>
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                return true;
             }),
-            new Perk("RR_ItsComingThisWay_Title", itsComingThisWayIcon, (Pawn p) =>
+
+            new Perk("RR_WeightGain4000_Title", "RR_WeightGain4000_Desc", 3, 5, weightGain4000Icon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Bulletproof_Blob_Title", bulletProofBlobIcon, (Pawn p) =>
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                return true;
             }),
-            new Perk("RR_GigaGurgling_Title", gigaGurglingIcon, (Pawn p) =>
+            
+            new Perk("RR_ItsComingThisWay_Title", "RR_ItsComingThisWay_Desc", 15, 1, itsComingThisWayIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Breakneck_Buffet_Title", breakneckBuffetIcon, (Pawn p) =>
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                return true;
             }),
-            new Perk("RR_FoldsOfHeaven_Title", foldsOfHeavenIcon, (Pawn p) =>
+            
+            new Perk("RR_Bulletproof_Blob_Title", "RR_Bulletproof_Blob_Desc", 3, 5, bulletProofBlobIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Beautiful_Bulk_Title", beautifulBulkIcon, (Pawn p) =>
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                return true;
             }),
-            new Perk("RR_Fat_Furnace_Title", fatFurnaceIcon, (Pawn p) =>
+            
+            new Perk("RR_GigaGurgling_Title", "RR_GigaGurgling_Desc", 5, 5, gigaGurglingIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_RotundRegeneration_Title", rotundRegenerationIcon, (Pawn p) =>
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                return true;
             }),
-            new Perk("RR_WeLikeToParty_Title", weLikeToPartyIcon, (Pawn p) =>
+
+            new Perk("RR_Breakneck_Buffet_Title", "RR_Breakneck_Buffet_Desc", 2, 4, breakneckBuffetIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
+
+            new Perk("RR_FoldsOfHeaven_Title", "RR_FoldsOfHeaven_Desc", 5, 3, foldsOfHeavenIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+            
+            new Perk("RR_Beautiful_Bulk_Title", "RR_Beautiful_Bulk_Desc", 3, 3, beautifulBulkIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_Fat_Furnace_Title", "RR_Fat_Furnace_Desc", 10, 2, fatFurnaceIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_RotundRegeneration_Title", "RR_RotundRegeneration_Desc", 10, 2, rotundRegenerationIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            }),
+
+            new Perk("RR_WeLikeToParty_Title", "RR_WeLikeToParty_Desc", 5, 1, weLikeToPartyIcon,
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
+            })
         };
 
         public static List<Perk> elitePerks = new List<Perk>
         {
-            new Perk("RR_GluttonyIncarnate_Title", gluttonyIncarnateIcon, (Pawn p) =>
+            new Perk("RR_GluttonyIncarnate_Title", "RR_GluttonyIncarnate_Desc", 20, 1, gluttonyIncarnateIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
-            new Perk("RR_PaunchPower_Title", paunchPowerIcon, (Pawn p) =>
+
+            new Perk("RR_PaunchPower_Title", "RR_PaunchPower_Desc", 20, 2, paunchPowerIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
-            new Perk("RR_MakesAllTheRules_Title", makesAllTheRulesIcon, (Pawn p) =>
+
+            new Perk("RR_MakesAllTheRules_Title", "RR_MakesAllTheRules_Desc", 10, 1, makesAllTheRulesIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
-            new Perk("RR_HeavyRevian_Title", heavyRevianIcon, (Pawn p) =>
+
+            new Perk("RR_HeavyRevian_Title", "RR_HeavyRevian_Desc", 15, 1, heavyRevianIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                return true;
             }),
         };
 
         public static List<Perk> ultimatePerks = new List<Perk>
         {
-            new Perk("RR_Even_Further_Beyond_Title", evenFurtherBeyondIcon, (Pawn p) =>
+            new Perk("RR_Even_Further_Beyond_Title", "RR_Even_Further_Beyond_Desc", 25, 1, evenFurtherBeyondIcon,
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
-            }),
-            new Perk("RR_Ascension_Icon_Title", ascensionIcon, (Pawn p) =>
+
+            },
+            (FullnessAndDietStats_ThingComp p) =>
             {
-                Log.Message($"Clicked button on {p.Name.ToStringShort}!");
-                return 0;
+                return true;
             }),
+
+            new Perk("RR_Ascension_Icon_Title", "RR_Ascension_Icon_Desc", 1, 1, ascensionIcon, 
+            (FullnessAndDietStats_ThingComp p) =>
+            {
+                
+            }, 
+            (FullnessAndDietStats_ThingComp p) => 
+            {
+                return true;
+            })
 
         };
 
@@ -223,18 +376,32 @@ namespace RimRound.Utilities
 
         };
 
+
+
+        public delegate bool EligibilityValidator(FullnessAndDietStats_ThingComp p);
+        public delegate void OnClickAction(FullnessAndDietStats_ThingComp p);
+
         public struct Perk
         {
-            public Perk(String perkTranslateString, Texture2D perkIcon, Func<Pawn, int> onClick)
+            public Perk(String perkTranslateString, string description, int cost, int numberOfLevels, Texture2D perkIcon, OnClickAction onClick, EligibilityValidator eligibilityValidator)
             {
-                this.translationString = perkTranslateString;
+                this.perkName = perkTranslateString;
                 this.onClickEvent = onClick;
                 this.perkIcon = perkIcon;
+                this.cost = cost;
+                this.description = description;
+                this.numberOfLevels = numberOfLevels;
+                this.eligibilityValidator = eligibilityValidator;
             }
 
-            public readonly String translationString;
+
+            public readonly string description;
+            public readonly int cost;
+            public readonly int numberOfLevels;
+            public readonly String perkName;
             public readonly Texture2D perkIcon;
-            public readonly Func<Pawn, int> onClickEvent;
+            public readonly OnClickAction onClickEvent;
+            public readonly EligibilityValidator eligibilityValidator;
         }
     }
 }

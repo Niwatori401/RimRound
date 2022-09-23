@@ -132,23 +132,45 @@ namespace RimRound.Comps
 
                     yield return new Command_Action
                     {
-                        defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT)",
+                        defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 1)",
                         icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                         action = delegate ()
                         {
                             Values.debugPos += positivity * (offsetAmounts[offsetAmountsIndex]);
-                            Log.Message($"Debug Float is now: {Values.debugPos}");
+                            Log.Message($"Debug Float 1 is now: {Values.debugPos}");
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
                         }
                     };
                     yield return new Command_Action
                     {
-                        defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT2)",
+                        defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 2)",
                         icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
                         action = delegate ()
                         {
                             Values.debugPos2 += positivity * (offsetAmounts[offsetAmountsIndex]);
-                            Log.Message($"Debug Float2 is now: {Values.debugPos2}");
+                            Log.Message($"Debug Float 2 is now: {Values.debugPos2}");
+                            BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
+                        }
+                    };
+                    yield return new Command_Action
+                    {
+                        defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 3)",
+                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                        action = delegate ()
+                        {
+                            Values.debugPos3 += positivity * (offsetAmounts[offsetAmountsIndex]);
+                            Log.Message($"Debug Float 3 is now: {Values.debugPos3}");
+                            BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
+                        }
+                    };
+                    yield return new Command_Action
+                    {
+                        defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 4)",
+                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                        action = delegate ()
+                        {
+                            Values.debugPos4 += positivity * (offsetAmounts[offsetAmountsIndex]);
+                            Log.Message($"Debug Float 4 is now: {Values.debugPos4}");
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
                         }
                     };

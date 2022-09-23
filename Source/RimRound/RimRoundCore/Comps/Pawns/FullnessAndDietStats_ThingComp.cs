@@ -46,6 +46,8 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref globalDigestionRateBonusFlat,    "digestionRateBonusFlat",          0f);
             Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
             Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
+
+            ExposePerkLevels();
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -122,6 +124,54 @@ namespace RimRound.Comps
 
                 if (GlobalSettings.burstingEnabled)
                     RuptureStomachCheckTick();
+            }
+        }
+
+        private void ExposePerkLevels() 
+        {
+            if (Scribe.mode == LoadSaveMode.Saving)
+            {
+                foreach (var x in perkLevels.PerkToLevels)
+                {
+                    int dummyInt = x.Value;
+                    Scribe_Values.Look<int>(ref dummyInt, x.Key);
+                }
+            } 
+            else if (Scribe.mode == LoadSaveMode.LoadingVars) 
+            {
+                InitializePerks();
+
+                for (int i = 0; i < perkLevels.PerkToLevels.Count; ++i)
+                {
+                    int dummyInt = 0;
+                    Scribe_Values.Look<int>(ref dummyInt, perkLevels.PerkToLevels.ElementAt(i).Key);
+                    
+                    string perk = perkLevels.PerkToLevels.ElementAt(i).Key;
+                    perkLevels.PerkToLevels[perk] = dummyInt;
+                }
+            }
+
+        }
+
+        private void InitializePerks() 
+        {
+            perkLevels.PerkToLevels = new Dictionary<string, int>() { };
+
+            for (int i = 0; i < Perks.basicPerks.Count; ++i)
+            {
+                perkLevels.PerkToLevels.Add(Perks.basicPerks[i].perkName, 0);
+            }
+            for (int i = 0; i < Perks.advancedPerks.Count; ++i)
+            {
+                perkLevels.PerkToLevels.Add(Perks.advancedPerks[i].perkName, 0);
+            }
+            for (int i = 0; i < Perks.elitePerks.Count; ++i)
+            {
+                perkLevels.PerkToLevels.Add(Perks.elitePerks[i].perkName, 0);
+            }
+            for (int i = 0; i < Perks.ultimatePerks.Count; ++i)
+            {
+                perkLevels.PerkToLevels.Add(Perks.ultimatePerks[i].perkName, 0);
             }
         }
 
@@ -638,7 +688,8 @@ namespace RimRound.Comps
 
         public Queue<WeightGainRequest> activeWeightGainRequests = new Queue<WeightGainRequest>();
         public Queue<WeightGainRequest> activeWeightLossRequests = new Queue<WeightGainRequest>();
-        
+
+        public PerkLevels perkLevels = new PerkLevels();
 
         public WeightGizmo weightGizmo;
         public WeightGizmo_FullnessBar fullnessbar;
@@ -656,6 +707,14 @@ namespace RimRound.Comps
         public const float baseDigestionRate = 3.0f;
         public const float defaultFullnessToNutritionRatio = 1f; //i.e. 0.5 Fullness for 1 nutrition is 0.5f
     }
+
+    public class PerkLevels
+    {
+        public Dictionary<string, int> PerkToLevels;
+    }
+
+
+
 
 
     public struct WeightGainRequest

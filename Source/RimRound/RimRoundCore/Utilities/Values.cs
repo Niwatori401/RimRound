@@ -14,6 +14,8 @@ namespace RimRound.Utilities
     {
         public static float debugPos = 0;
         public static float debugPos2 = 0;
+        public static float debugPos3 = 0;
+        public static float debugPos4 = 0;
 
 
         
