@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 
 namespace RimRound.Patch
@@ -18,7 +19,112 @@ namespace RimRound.Patch
         static bool Prefix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
         {
             bool shouldSkipParentFunc = AlterMovementIfWearingScooter(ref __result, diffSet, capacity, impactors);
+            
             return shouldSkipParentFunc;
+        }
+
+        static void Postfix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors) 
+        {
+            AlterConciousnessForPerks(ref __result, diffSet, capacity, impactors);
+            AlterManipulationForPerks(ref __result, diffSet, capacity, impactors);
+            AlterMovementForPerks(ref __result, diffSet, capacity, impactors);
+
+            return;
+        }
+
+        private static void AlterManipulationForPerks(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors) 
+        {
+            if (capacity == PawnCapacityDefOf.Manipulation)
+            {
+                Pawn pawn = diffSet.pawn;
+
+                if (!pawn.RaceProps.Humanlike)
+                    return;
+
+                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_HeavyRevian_Title"] is int i ? i : 0;
+                int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_ItsComingThisWay_Title"] is int k ? k : 0;
+
+                if (heavyRevianLevel > 0)
+                {
+                    __result += 0.60f;
+                }
+
+                if (itsComingThisWayLevel > 0)
+                {
+                    float gelatinous11SeverityThreshold = 21.85f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);
+
+                    if (pawn.WeightHediff().Severity > gelatinous11SeverityThreshold)
+                        __result = 0;
+                    else
+                        __result = Mathf.Max(0.05f, __result);
+                }
+            }
+
+            return;
+        }
+
+
+        private static void AlterMovementForPerks(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
+        {
+            if (capacity == PawnCapacityDefOf.Moving)
+            {
+                Pawn pawn = diffSet.pawn;
+
+
+                if (!pawn.RaceProps.Humanlike)
+                    return;
+
+                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_HeavyRevian_Title"] is int i ? i : 0;
+                int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_ItsComingThisWay_Title"] is int k ? k : 0;
+                int comfortableCorpulenceLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_Comfortable_Corpulence_Title"] is int j ? j : 0;
+
+
+                if (heavyRevianLevel > 0)
+                {
+                    __result += 0.60f;
+                }
+
+                if (comfortableCorpulenceLevel > 0)
+                {
+                    var capMod = pawn.WeightHediff().CurStage.capMods.Find(x => x.capacity == PawnCapacityDefOf.Moving);
+                    
+                    if (capMod == null)
+                        return;
+
+                    capMod.offset = Mathf.Min(0, capMod.offset + comfortableCorpulenceLevel * 0.03f);
+                }
+
+                if (itsComingThisWayLevel > 0)
+                {
+                    float gelatinous11SeverityThreshold = 21.85f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);
+
+                    if (pawn.WeightHediff().Severity > gelatinous11SeverityThreshold)
+                        __result = 0;
+                    else
+                        __result = Mathf.Max(0.05f, __result);
+                }
+            }
+
+            return;
+
+        }
+
+        private static void AlterConciousnessForPerks(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
+        {
+            //Heavy revian
+            if (capacity == PawnCapacityDefOf.Consciousness)
+            {
+                Pawn pawn = diffSet.pawn;
+
+                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_HeavyRevian_Title"] is int i ? i : 0;
+
+                if (!pawn.RaceProps.Humanlike)
+                    return;
+
+                __result += heavyRevianLevel * 0.2f;
+            }
+
+            return;
         }
 
         private static bool AlterMovementIfWearingScooter(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
