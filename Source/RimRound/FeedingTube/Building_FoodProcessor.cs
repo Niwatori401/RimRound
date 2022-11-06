@@ -29,7 +29,7 @@ namespace RimRound.FeedingTube
                 icon = Widgets.GetIconFor(Defs.ThingDefOf.RR_Hopper),
                 action = delegate ()
                 {
-                    GenConstruct.PlaceBlueprintForBuild_NewTemp(Defs.ThingDefOf.RR_Hopper, Position + new IntVec3(2, 0, 0), this.Map, Rot4.West, Faction, null);
+                    GenConstruct.PlaceBlueprintForBuild(Defs.ThingDefOf.RR_Hopper, Position + new IntVec3(2, 0, 0), this.Map, Rot4.West, Faction, null);
                 }
             };
         }

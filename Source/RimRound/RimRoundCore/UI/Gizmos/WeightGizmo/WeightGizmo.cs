@@ -14,7 +14,7 @@ namespace RimRound.UI
 		public WeightGizmo(FullnessAndDietStats_ThingComp comp) 
 		{
 			WGThingComp = comp;
-			this.order = -69.0f;
+			Order = -69.0f;
 		}
 
 

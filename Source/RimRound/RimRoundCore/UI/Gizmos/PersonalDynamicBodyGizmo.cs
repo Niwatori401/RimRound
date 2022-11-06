@@ -20,7 +20,7 @@ namespace RimRound.UI
             icon = Widgets.GetIconFor(ThingDefOf.Fence);
             isActive = () => comp.PersonallyExempt;
             toggleAction = () => { ToggleAction(); };
-            order = 401;
+            Order = 401;
         }
 
 

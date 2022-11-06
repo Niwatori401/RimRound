@@ -14,14 +14,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingRange", "..\TestingR
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		1_3|Any CPU = 1_3|Any CPU
+		1_4|Any CPU = 1_4|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.1_3|Any CPU.ActiveCfg = 1_3|Any CPU
+		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.1_3|Any CPU.Build.0 = 1_3|Any CPU
+		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.1_4|Any CPU.ActiveCfg = 1_4|Any CPU
+		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.1_4|Any CPU.Build.0 = 1_4|Any CPU
 		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_3|Any CPU.ActiveCfg = 1_3|Any CPU
+		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_3|Any CPU.Build.0 = 1_3|Any CPU
+		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_4|Any CPU.ActiveCfg = 1_4|Any CPU
+		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_4|Any CPU.Build.0 = 1_4|Any CPU
 		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU

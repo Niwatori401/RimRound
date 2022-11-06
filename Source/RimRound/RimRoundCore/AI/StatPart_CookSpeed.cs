@@ -26,7 +26,7 @@ namespace RimRound.AI
                     if (comp is null)
                         return;
 
-                    int culinaryConniseurLevel = comp.perkLevels.PerkToLevels["RR_Culinary_Connisseur_Title"];
+                    int culinaryConniseurLevel = comp.perkLevels.PerkToLevels?["RR_Culinary_Connisseur_Title"] ?? 0;
 
                     val += culinaryConniseurLevel * 0.1f;
                 }

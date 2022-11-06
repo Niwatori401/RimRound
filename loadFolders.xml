@@ -1,6 +1,7 @@
 <loadFolders>
 	<v1.3>
 		<li>/</li>
+		<li>1.3</li>
 		<li>ExternalMods/Hoverchair</li>		
 		<li>ExternalMods/SuperSpacesFatteningFoods</li>				
 		<li IfModActive="Ludeon.RimWorld.Ideology">IdeologyDefs</li>
@@ -13,4 +14,19 @@
 		<li IfModActive="TrahsPanda.Lucario">ExternalMods/LucarioRaceSupport</li>
 		<li IfModActive="Barsimmon.OriginalByVagabond.FantasyGoblins">ExternalMods/GoblinRaceSupport</li>
 	</v1.3>
+	<v1.4>
+		<li>/</li>
+		<li>1.4</li>
+		<li>ExternalMods/Hoverchair</li>		
+		<li>ExternalMods/SuperSpacesFatteningFoods</li>				
+		<li IfModActive="Ludeon.RimWorld.Ideology">IdeologyDefs</li>
+		<li IfModActive="ArmoredAmpharos.Dogbolds">ExternalMods/DogboldRaceSupport</li>	
+		<li IfModActive="ArmoredAmpharos.Foxbolds">ExternalMods/FoxboldRaceSupport</li>	
+		<li IfModActive="Hauvega.EquiumsSeries.Equiums">ExternalMods/HorseRaceSupport</li>		
+		<li IfModActive="AveryTheKitty.XenohumansAnthromorphs">ExternalMods/XenohumanlikeRaceSupport</li>
+		<li IfModActive="Eaveslabet.SylveonRace">ExternalMods/SylveonRaceSupport</li>
+		<li IfModActive="Monti.HalfDragons">ExternalMods/HalfDragonRaceSupport</li>
+		<li IfModActive="TrahsPanda.Lucario">ExternalMods/LucarioRaceSupport</li>
+		<li IfModActive="Barsimmon.OriginalByVagabond.FantasyGoblins">ExternalMods/GoblinRaceSupport</li>
+	</v1.4>	
 </loadFolders>

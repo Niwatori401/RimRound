@@ -41,8 +41,8 @@ namespace RimRound.Patch
                 if (!pawn.RaceProps.Humanlike)
                     return;
 
-                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_HeavyRevian_Title"] is int i ? i : 0;
-                int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_ItsComingThisWay_Title"] is int k ? k : 0;
+                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
+                int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_ItsComingThisWay_Title"] ?? 0;
 
                 if (heavyRevianLevel > 0)
                 {
@@ -74,9 +74,9 @@ namespace RimRound.Patch
                 if (!pawn.RaceProps.Humanlike)
                     return;
 
-                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_HeavyRevian_Title"] is int i ? i : 0;
-                int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_ItsComingThisWay_Title"] is int k ? k : 0;
-                int comfortableCorpulenceLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_Comfortable_Corpulence_Title"] is int j ? j : 0;
+                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
+                int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_ItsComingThisWay_Title"] ?? 0;
+                int comfortableCorpulenceLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_Comfortable_Corpulence_Title"] ?? 0;
 
 
                 if (heavyRevianLevel > 0)
@@ -116,7 +116,10 @@ namespace RimRound.Patch
             {
                 Pawn pawn = diffSet.pawn;
 
-                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_HeavyRevian_Title"] is int i ? i : 0;
+                if (pawn is null)
+                    return;
+
+                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels?.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
 
                 if (!pawn.RaceProps.Humanlike)
                     return;
@@ -134,7 +137,7 @@ namespace RimRound.Patch
             {
                 Pawn pawn = diffSet.pawn;
 
-                float scooterSpeed = 0.5f + 0.25f * pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels["RR_PracticalProblems_Title"] is float f ? f : 1;
+                float scooterSpeed = 0.5f + 0.25f * pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_PracticalProblems_Title"] ?? 1;
 
                 if (!pawn.RaceProps.Humanlike || !PawnCapacityUtility.BodyCanEverDoCapacity(pawn.RaceProps.body, PawnCapacityDefOf.Manipulation))
                     return true;

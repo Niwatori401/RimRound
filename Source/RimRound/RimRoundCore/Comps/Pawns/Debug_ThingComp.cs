@@ -298,12 +298,11 @@ namespace RimRound.Comps
 
                                 PawnBodyType_ThingComp PBTcomp = ((Pawn)parent).TryGetComp<PawnBodyType_ThingComp>();
                                 PBTcomp.usingCustomBodyMeshSize = true;
-                                GraphicPaths gp = alienProps.alienRace.graphicPaths.GetCurrentGraphicPath(((Pawn)parent).ageTracker.CurLifeStage);
                                 //alienProps.alienRace.generalSettings.alienPartGenerator.bodyAddons.First().offsets.north.bodyTypes.First().
-
-                                UnityEngine.Vector2 drawSize = gp.customDrawSize;
-                                gp.customDrawSize = new UnityEngine.Vector2(Values.validBodyMeshSizes[currentBodySizeMeshIndex], Values.validBodyMeshSizes[currentBodySizeMeshIndex]);
-                                Log.Message($"{((Pawn)parent).story.bodyType}: {gp.customDrawSize.ToString("F3")}");
+                                
+                                UnityEngine.Vector2 drawSize = alienProps.alienRace.generalSettings.alienPartGenerator.customDrawSize;
+                                alienProps.alienRace.generalSettings.alienPartGenerator.customDrawSize = new UnityEngine.Vector2(Values.validBodyMeshSizes[currentBodySizeMeshIndex], Values.validBodyMeshSizes[currentBodySizeMeshIndex]);
+                                Log.Message($"{((Pawn)parent).story.bodyType}: {alienProps.alienRace.generalSettings.alienPartGenerator.customDrawSize.ToString("F3")}");
                                 BodyTypeUtility.UpdatePawnSprite(((Pawn)parent), PBTcomp.PersonallyExempt, PBTcomp.CategoricallyExempt, true, false);
                             }
 
@@ -327,7 +326,7 @@ namespace RimRound.Comps
 
                                 Log.Message($"{pawn.Name.ToStringShort}'s body stats:");
                                 Log.Message($"Bodytype: {pawn.story.bodyType}");
-                                Log.Message($"Draw size: {alienProps.alienRace.graphicPaths.GetCurrentGraphicPath(((Pawn)parent).ageTracker.CurLifeStage).customDrawSize.ToString("F3")}");
+                                Log.Message($"Draw size: {alienProps.alienRace.generalSettings.alienPartGenerator.customDrawSize.ToString("F3")}");
                                 currentBodySizeMeshIndex = (currentBodySizeMeshIndex + 1) % Values.validBodyMeshSizes.Length;
                                 Log.Message($"Head Offset: {pawn.story.bodyType.headOffset.ToString("F3")}");
 

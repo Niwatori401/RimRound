@@ -24,7 +24,7 @@ namespace RimRound.UI
 			icon = Widgets.GetIconFor(ThingDefOf.Chicken);
 			isActive = () => fakebool;
 			toggleAction = () => { ToggleAction(); };
-			order = 402;
+			Order = 402;
 		}
 
 		void ToggleAction() 

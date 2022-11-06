@@ -51,14 +51,14 @@ namespace RimRound.Patch
 		static Mesh NewGetBodyMesh(bool portrait, ThingDef raceDef, Rot4 bodyFacing, BodyTypeDef bodyTypeDef) 
 		{
 			FieldInfo meshPool = typeof(AlienPartGenerator).GetField("meshPools", BindingFlags.NonPublic | BindingFlags.Static);
-			Dictionary<Vector2, AlienPartGenerator.AlienGraphicMeshSet> meshPoolDict = (Dictionary<Vector2, AlienPartGenerator.AlienGraphicMeshSet>)meshPool.GetValue(null);
+			Dictionary<Vector2, int/*AlienPartGenerator.AlienGraphicMeshSet*/> meshPoolDict = null;//(Dictionary<Vector2, AlienPartGenerator.AlienGraphicMeshSet>)meshPool.GetValue(null);
 
 			if (meshPoolDict is null)
 				Log.Error("meshPoolDict was null!");
 
 			float meshSize = GetMeshSize(bodyTypeDef);
 
-			return meshPoolDict[new Vector2(meshSize, meshSize)].bodySet.MeshAt(bodyFacing);
+			return null;//meshPoolDict[new Vector2(meshSize, meshSize)].bodySet.MeshAt(bodyFacing);
 		}
 
 		static float GetMeshSize(BodyTypeDef bodyTypeDef) 

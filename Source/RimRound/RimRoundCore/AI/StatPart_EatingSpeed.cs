@@ -26,8 +26,8 @@ namespace RimRound.AI
                     if (comp is null)
                         return;
 
-                    int demonicDevourmentLevel = comp.perkLevels.PerkToLevels["RR_Demonic_Devourment_Title"];
-                    int breakneckbuffetLevel = comp.perkLevels.PerkToLevels["RR_Breakneck_Buffet_Title"];
+                    int demonicDevourmentLevel = comp.perkLevels.PerkToLevels?["RR_Demonic_Devourment_Title"] ?? 0;
+                    int breakneckbuffetLevel = comp.perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
 
                     val += demonicDevourmentLevel * 0.1f + breakneckbuffetLevel * 0.25f;
                 }

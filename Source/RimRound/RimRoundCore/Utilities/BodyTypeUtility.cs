@@ -120,7 +120,6 @@ namespace RimRound.Utilities
 
             if (pawn.def is ThingDef_AlienRace alienProps)
             {
-                GraphicPaths gp = alienProps.alienRace.graphicPaths.GetCurrentGraphicPath(pawn.ageTracker.CurLifeStage);
 
                 float drawSize;
 
@@ -131,7 +130,7 @@ namespace RimRound.Utilities
                     drawSize = bodyTypeInfo.AsNonNullable().meshSize;
 
 
-                gp.customDrawSize = new Vector2(drawSize, drawSize);
+                alienProps.alienRace.generalSettings.alienPartGenerator.customDrawSize = new Vector2(drawSize, drawSize);
             }
         }
 

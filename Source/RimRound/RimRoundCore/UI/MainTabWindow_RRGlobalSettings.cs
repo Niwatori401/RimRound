@@ -639,7 +639,7 @@ namespace RimRound.UI
             return nutritionTable;
         }
 
-        static MethodInfo checkboxDrawMI = typeof(Widgets).GetMethod("CheckboxDraw", BindingFlags.NonPublic | BindingFlags.Static);
+        static MethodInfo checkboxDrawMI = typeof(Widgets).GetMethod("CheckboxDraw", BindingFlags.Public | BindingFlags.Static);
         delegate void SwitchActionCallback();
         static void CheckboxLabeled(Rect rect, string label, ref bool checkOn, bool disabled = false, Texture2D texChecked = null, Texture2D texUnchecked = null, bool placeCheckboxNearText = false, SwitchActionCallback action = null)
         {

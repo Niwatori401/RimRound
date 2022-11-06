@@ -15,7 +15,7 @@ namespace RimRound.Things
         ME_FatteningBullet Props => def.GetModExtension<ME_FatteningBullet>();
 
 
-        protected override void Impact(Thing hitThing)
+        protected override void Impact(Thing hitThing, bool BlockedByShield = false)
         {
             base.Impact(hitThing);
 

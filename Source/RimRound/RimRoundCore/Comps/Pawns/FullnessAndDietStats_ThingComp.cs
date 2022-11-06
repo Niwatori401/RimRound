@@ -101,6 +101,7 @@ namespace RimRound.Comps
 
                 Update();
                 SetRangesByValue(cachedSliderVal1, cachedSliderVal2);
+                InitializePerks();
             }
         }
 
@@ -137,7 +138,7 @@ namespace RimRound.Comps
                     Scribe_Values.Look<int>(ref dummyInt, x.Key);
                 }
             } 
-            else if (Scribe.mode == LoadSaveMode.LoadingVars) 
+            else if (Scribe.mode == LoadSaveMode.PostLoadInit) 
             {
                 InitializePerks();
 
@@ -175,7 +176,7 @@ namespace RimRound.Comps
             }
         }
 
-        static MethodInfo HungerRateIgnoringMalnutritionMI = typeof(Need_Food).GetProperty("HungerRateIgnoringMalnutrition", BindingFlags.NonPublic | BindingFlags.Instance).GetGetMethod(true);
+        //static MethodInfo HungerRateIgnoringMalnutritionMI = typeof(Need_Food).GetProperty("HungerRateIgnoringMalnutrition", BindingFlags.NonPublic | BindingFlags.Instance).GetGetMethod(true);
 
         public void ProcessWeightLossRequests(int ticksBetweenChecks) 
         {
@@ -263,7 +264,7 @@ namespace RimRound.Comps
             Utilities.HediffUtility.AddHediffSeverity(
                 Defs.HediffDefOf.RimRound_Weight, 
                 ((Pawn)parent),
-                Utilities.HediffUtility.NutritionToSeverity(-1 * 2.6666667E-05f * (float)(HungerRateIgnoringMalnutritionMI.Invoke(parent.AsPawn().needs.food, null)) * GlobalSettings.ticksPerHungerCheck.threshold));
+                Utilities.HediffUtility.NutritionToSeverity(-1 * 2.6666667E-05f * (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true)) * GlobalSettings.ticksPerHungerCheck.threshold));
         }
 
         public void ActiveWeightGainTick(float nutrition) 
@@ -308,7 +309,7 @@ namespace RimRound.Comps
         {
             if (CurrentFullness > SoftLimit)
             {
-                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * (perkLevels.PerkToLevels["RR_Endless_Indulgence_Title"] + 1) * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
+                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * ((perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0) + 1) * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
                 return;
             }
             return;
@@ -389,13 +390,13 @@ namespace RimRound.Comps
             get
             {
                 return (
-                    (2.6666667E-05f * (float)(HungerRateIgnoringMalnutritionMI.Invoke(parent.AsPawn().needs.food, null))) * 
+                    2.6666667E-05f * (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true) * 
                     GlobalSettings.digestionRateMultiplier.threshold *
                     PersonalDigestionRateMult *
                     GlobalDigestionRateBonusMult * 
                     baseDigestionRate) +
                     PersonalDigestionRateFlat +
-                    GlobalDigestionRateBonusFlat;
+                    GlobalDigestionRateBonusFlat);
             }
         }
 
@@ -448,8 +449,8 @@ namespace RimRound.Comps
         {
             get 
             { 
-                float digestionBeyondQuestionMult = perkLevels.PerkToLevels["RR_Digestion_Beyond_Question_Title"] * 0.3f + 1; 
-                float gigaGurglingMult = perkLevels.PerkToLevels["RR_GigaGurgling_Title"] * 1f + 1;
+                float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.3f + 1; 
+                float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 1f + 1;
 
                 return personalDigestionRateFlat * gigaGurglingMult * digestionBeyondQuestionMult;
             }
@@ -477,8 +478,8 @@ namespace RimRound.Comps
         {
             get 
             {
-                int apexAbsorbtionLevel = perkLevels.PerkToLevels["RR_Apex_Absorption_Title"];
-                int wg4000Level = perkLevels.PerkToLevels["RR_WeightGain4000_Title"];
+                int apexAbsorbtionLevel = perkLevels.PerkToLevels?["RR_Apex_Absorption_Title"] ?? 0;
+                int wg4000Level = perkLevels.PerkToLevels?["RR_WeightGain4000_Title"] ?? 0;
                 return _personalWeightGainModifier + 
                     0.1f * apexAbsorbtionLevel +
                     0.2f * wg4000Level;
@@ -498,7 +499,7 @@ namespace RimRound.Comps
         {
             get
             {
-                int dietPlanLevel = perkLevels.PerkToLevels["RR_Diet_Plan_Title"];
+                int dietPlanLevel = perkLevels.PerkToLevels?["RR_Diet_Plan_Title"] ?? 0;
                 return _personalWeightLossModifier +
                     0.2f * dietPlanLevel;
             }
@@ -565,7 +566,7 @@ namespace RimRound.Comps
         {
             get
             {
-                float limitBreakMult = perkLevels.PerkToLevels["RR_LimitBreak_Title"] * 0.1f + 1;
+                float limitBreakMult = (perkLevels.PerkToLevels?["RR_LimitBreak_Title"] ?? 0) * 0.1f + 1;
                 return SoftLimit * (1f + hardLimitAdditionalPercentage) * GlobalSettings.hardLimitMuliplier.threshold * limitBreakMult;
             }
             set 

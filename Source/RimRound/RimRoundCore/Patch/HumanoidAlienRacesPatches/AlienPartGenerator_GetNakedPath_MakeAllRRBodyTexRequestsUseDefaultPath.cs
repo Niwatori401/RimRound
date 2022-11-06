@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace RimRound.Patch
 {
-    [HarmonyPatch(typeof(AlienPartGenerator))]
-    [HarmonyPatch(nameof(AlienPartGenerator.GetNakedPath))]
+    //[HarmonyPatch(typeof(AlienPartGenerator))]
+    //[HarmonyPatch(nameof(AlienPartGenerator.GetPath))]
     internal class AlienPartGenerator_GetNakedPath_MakeAllRRBodyTexRequestsUseDefaultPath
     {
         

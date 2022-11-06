@@ -64,7 +64,7 @@ namespace RimRound.AI
 
 				AdjustDietBarsBasedOnResistance(recipient);
 
-				recipient.guest.SetLastRecruiterData(initiator, resistanceReduce);
+				recipient.guest.SetRecruitmentData(initiator);
 				return;
 			}
 		}

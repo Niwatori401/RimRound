@@ -19,7 +19,7 @@ namespace RimRound.UI
             icon = Widgets.GetIconFor(ThingDefOf.Bed);
             isActive = () => comp.HideCovers;
             toggleAction = () => { ToggleAction(); };
-            order = 401;
+            Order = 401;
         }
 
         private void ToggleAction() 

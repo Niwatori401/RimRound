@@ -88,12 +88,12 @@ namespace RimRound.Patch
 		{
 			Thing thing;
 			ThingDef thingDef;
-			if (!FoodUtility.TryFindBestFoodSourceFor_NewTemp(warden, prisoner, prisoner.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, true, FoodPreferability.Undefined))
+			if (!FoodUtility.TryFindBestFoodSourceFor(warden, prisoner, prisoner.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, true, FoodPreferability.Undefined))
 			{
 				return null;
 			}
 
-			float nutrition = FoodUtility.GetNutrition(thing, thingDef);
+			float nutrition = FoodUtility.GetNutrition(prisoner, thing, thingDef);
 			Job job = JobMaker.MakeJob(JobDefOf.DeliverFood, thing, prisoner);
 			job.count = FoodUtility.WillIngestStackCountOf(prisoner, thingDef, nutrition);
 			job.targetC = RCellFinder.SpotToChewStandingNear(prisoner, thing, null);

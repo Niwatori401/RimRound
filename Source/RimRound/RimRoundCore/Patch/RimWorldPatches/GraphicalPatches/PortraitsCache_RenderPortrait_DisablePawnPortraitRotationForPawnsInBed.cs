@@ -11,8 +11,8 @@ using Verse;
 
 namespace RimRound.Patch
 {
-    [HarmonyPatch(typeof(PortraitsCache))]
-    [HarmonyPatch("RenderPortrait")]
+    //[HarmonyPatch(typeof(PortraitsCache))]
+    //[HarmonyPatch(nameof(PortraitsCache.))]
     public class PortraitsCache_RenderPortrait_DisablePawnPortraitRotationForPawnsInBed
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) 

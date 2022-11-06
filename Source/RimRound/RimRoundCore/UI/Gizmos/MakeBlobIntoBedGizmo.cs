@@ -21,7 +21,7 @@ namespace RimRound.UI
             icon = Widgets.GetIconFor(RimWorld.ThingDefOf.SleepingSpot);
             isActive = () => comp.IsBed;
             toggleAction = () => { ToggleAction(); };
-            order = 401;
+            Order = 401;
         }
 
         private void ToggleAction()

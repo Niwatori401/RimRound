@@ -31,7 +31,7 @@ namespace RimRound.AI
 			Thing thing;
 			ThingDef thingDef;
 			#pragma warning disable CS0612 // Type or member is obsolete
-            if (!FoodUtility.TryFindBestFoodSourceFor(feeder, feedee, feedee.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, FoodPreferability.Undefined))
+            if (!FoodUtility.TryFindBestFoodSourceFor(feeder, feedee, feedee.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, false, FoodPreferability.Undefined))
 			#pragma warning restore CS0612 // Type or member is obsolete
             {
 				JobFailReason.Is("NoFood".Translate(), null);
@@ -44,7 +44,7 @@ namespace RimRound.AI
 			feedeeFnDComp.SetRangesByPercent(
 				feedeeFnDComp.fullnessbar.CurrentFullnessAsPercentOfDisplayLimit + 0.01f, (prisonerShouldBeFedMaxPercent * feedeeFnDComp.fullnessbar.HardLimitAsPercentage)
 				); 
-			float nutrition = FoodUtility.GetNutrition(thing, thingDef);
+			float nutrition = FoodUtility.GetNutrition(feedee, thing, thingDef);
 			Job job = JobMaker.MakeJob(Defs.JobDefOf.RR_JD_StuffPrisoner, thing, feedee);
 			job.count = FoodUtility.WillIngestStackCountOf(feedee, thingDef, nutrition);
 

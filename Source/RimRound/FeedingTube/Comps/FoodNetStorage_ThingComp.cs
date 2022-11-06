@@ -62,7 +62,7 @@ namespace RimRound.FeedingTube.Comps
                 },
                 defaultDesc = "If the mixture becomes too tainted, you can purge the contents of this container to start over.",
                 icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Filth_Water),
-                order = 401
+                Order = 401
             };
 
             if (Prefs.DevMode)

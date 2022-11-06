@@ -13,7 +13,7 @@ using RimRound.Utilities;
 namespace RimRound.Patch
 {
 	[HarmonyPatch(typeof(PawnDownedWiggler))]
-	[HarmonyPatch("WigglerTick")]
+	[HarmonyPatch("ProcessPostTickVisuals")]
 	public class PawnDownedWiggler_WigglerTick_DisableOrSlowForHighWeights
     {
 		public static bool Prefix(PawnDownedWiggler __instance, Pawn ___pawn) 

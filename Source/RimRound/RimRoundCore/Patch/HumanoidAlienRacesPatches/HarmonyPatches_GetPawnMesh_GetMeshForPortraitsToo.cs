@@ -10,8 +10,8 @@ using Verse;
 
 namespace RimRound.Patch
 {
-    [HarmonyPatch(typeof(AlienRace.HarmonyPatches))]
-    [HarmonyPatch(nameof(AlienRace.HarmonyPatches.GetPawnMesh))]
+    //[HarmonyPatch(typeof(AlienRace.HarmonyPatches))]
+    //[HarmonyPatch(nameof(AlienRace.HarmonyPatches.GetPawnMesh))]
     public class HarmonyPatches_GetPawnMesh_GetMeshForPortraitsToo
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) 

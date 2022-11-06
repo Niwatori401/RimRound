@@ -389,6 +389,10 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (p.perkLevels.PerkToLevels["RR_Comfortable_Corpulence_Title"] < 10)
+                    return new SuccessReport("Requires " + "RR_Comfortable_Corpulence_Title".Translate() + " level 10", false);
+
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -503,6 +507,10 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                float lardyIISeverity = 0.350f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p.parent.AsPawn());
+                if (p.parent.AsPawn().WeightHediff().Severity < lardyIISeverity)
+                    return new SuccessReport("Must be at least Lardy II to purchase", false);
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
