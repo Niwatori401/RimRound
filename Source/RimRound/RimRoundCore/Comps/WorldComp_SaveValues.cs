@@ -1,4 +1,6 @@
-﻿using RimRound.Utilities;
+﻿using AlienRace;
+using RimRound.Utilities;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ namespace RimRound.Comps
     {
         public WorldComp_SaveValues(World world) : base(world) 
         {
+
         }
 
         public override void ExposeData()
@@ -27,6 +30,9 @@ namespace RimRound.Comps
         public override void FinalizeInit()
         {
             base.FinalizeInit();
+
+            BodyTypeUtility.RefreshBodyTypeGraphicLocations();
+
             if (ModCompatibilityUtility.CheckModInstalled("Vanilla Expanded Framework"))
             { 
                 Log.Message("[RimRound] Disabling texure caching...");

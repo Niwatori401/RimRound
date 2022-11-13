@@ -14,6 +14,57 @@ namespace RimRound.Utilities
 {
     public static class BodyTypeUtility
     {
+        public static void RefreshBodyTypeGraphicLocations() 
+        {
+            using (List<ThingDef_AlienRace>.Enumerator enumerator = DefDatabase<ThingDef_AlienRace>.AllDefsListForReading.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    ThingDef_AlienRace ar = enumerator.Current;
+                    AlienPartGenerator.ExtendedGraphicTop body = ar.alienRace.graphicPaths.body;
+
+                    for (int i = 0; i < body.bodytypeGraphics.Count; i++)
+                    {
+                        body.bodytypeGraphics[i].path = BodyTypeUtility.ConvertBodyPathStringsIfNecessary(body.bodytypeGraphics[i].path);
+                    }
+                }
+            }
+        }
+
+
+        public static string ConvertBodyPathStringsIfNecessary(string originalBodyPath)
+        {
+            int lastSlash = originalBodyPath.LastIndexOf('/');
+
+            string basePath = originalBodyPath.Substring(0, lastSlash + 1);
+            string bodyTypeName = originalBodyPath.Substring(lastSlash + 1);
+
+
+            Log.Message("Old path:  " + originalBodyPath);
+
+
+            if (!IsCustomBody(bodyTypeName))
+            {
+                return originalBodyPath;
+            }
+
+            if (bodyTypeName.Contains("Naked_"))
+                bodyTypeName = bodyTypeName.Substring(bodyTypeName.IndexOf("Naked_") + 6);
+
+            if (bodyTypeName == "F_060_LardyAlt")
+                bodyTypeName = "F_060_Lardy";
+
+
+            bodyTypeName = RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(DefDatabase<BodyTypeDef>.GetNamed(bodyTypeName)).ToString();
+            bodyTypeName = ConvertBodyTypeDefDefnameAccordingToSettings(bodyTypeName);
+
+            Log.Message("New path:  " + basePath + "Naked_" + bodyTypeName);
+
+
+            return basePath + "Naked_" + bodyTypeName;
+        }
+
+
         public static bool HasCustomBody(Pawn p)
         {
             if (p?.story?.bodyType is null)
@@ -24,15 +75,21 @@ namespace RimRound.Utilities
 
         public static bool IsCustomBody(BodyTypeDef bodyTypeDef) 
         {
+            return IsCustomBody(bodyTypeDef.defName);
+        }
+
+        public static bool IsCustomBody(string bodyTypeDefString)
+        {
             string pattern = @"[fmFM]{1}_+[0-9]{3,}?a*_+[A-Za-z]+";
 
             Regex regex = new Regex(pattern);
 
-            if (regex.IsMatch(bodyTypeDef.defName))
+            if (regex.IsMatch(bodyTypeDefString))
                 return true;
 
             return false;
         }
+
 
         public static string ConvertBodyTypeDefDefnameAccordingToSettings(string bodytypeCleaned)
         {
@@ -129,8 +186,17 @@ namespace RimRound.Utilities
                 else
                     drawSize = bodyTypeInfo.AsNonNullable().meshSize;
 
+                var alienComp = pawn.TryGetComp<AlienPartGenerator.AlienComp>();
+                if (alienComp is null)
+                {
+                    Debug.LogWarning("AlienComp was null in update pawn drawsize!");
+                }
 
-                alienProps.alienRace.generalSettings.alienPartGenerator.customDrawSize = new Vector2(drawSize, drawSize);
+                alienComp.customDrawSize =  new Vector2(drawSize, drawSize);
+
+
+                //LifeStageAge lifeStageAge = alienProps.race.lifeStageAges;
+                //LifeStageAgeAlien lifeStageAgeAlien = lifeStageAge as LifeStageAgeAlien;
             }
         }
 
