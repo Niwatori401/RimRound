@@ -14,6 +14,7 @@ namespace RimRound.Utilities
     {
         static Resources() 
         {
+            //BodyTypeUtility.RefreshBodyTypeGraphicLocations();
         }
 
 

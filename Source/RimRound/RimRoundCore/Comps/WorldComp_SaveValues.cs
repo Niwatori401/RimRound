@@ -31,7 +31,7 @@ namespace RimRound.Comps
         {
             base.FinalizeInit();
 
-            BodyTypeUtility.RefreshBodyTypeGraphicLocations();
+            //BodyTypeUtility.RefreshBodyTypeGraphicLocations();
 
             if (ModCompatibilityUtility.CheckModInstalled("Vanilla Expanded Framework"))
             { 

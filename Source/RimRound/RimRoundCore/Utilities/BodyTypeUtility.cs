@@ -1,4 +1,5 @@
 ﻿using AlienRace;
+using AlienRace.ExtendedGraphics;
 using RimRound.Comps;
 using RimWorld;
 using System;
@@ -18,6 +19,7 @@ namespace RimRound.Utilities
         {
             using (List<ThingDef_AlienRace>.Enumerator enumerator = DefDatabase<ThingDef_AlienRace>.AllDefsListForReading.GetEnumerator())
             {
+                IGraphicsLoader graphicsLoader = new DefaultGraphicsLoader();
                 while (enumerator.MoveNext())
                 {
                     ThingDef_AlienRace ar = enumerator.Current;
@@ -27,6 +29,16 @@ namespace RimRound.Utilities
                     {
                         body.bodytypeGraphics[i].path = BodyTypeUtility.ConvertBodyPathStringsIfNecessary(body.bodytypeGraphics[i].path);
                     }
+                    graphicsLoader.LoadAllGraphics(ar.alienRace.generalSettings.alienPartGenerator.alienProps.defName, new AlienPartGenerator.ExtendedGraphicTop[]
+                    {
+                        ar.alienRace.graphicPaths.head,
+                        ar.alienRace.graphicPaths.body,
+                        ar.alienRace.graphicPaths.skeleton,
+                        ar.alienRace.graphicPaths.skull,
+                        ar.alienRace.graphicPaths.stump,
+                        ar.alienRace.graphicPaths.bodyMasks,
+                        ar.alienRace.graphicPaths.headMasks
+                    });
                 }
             }
         }

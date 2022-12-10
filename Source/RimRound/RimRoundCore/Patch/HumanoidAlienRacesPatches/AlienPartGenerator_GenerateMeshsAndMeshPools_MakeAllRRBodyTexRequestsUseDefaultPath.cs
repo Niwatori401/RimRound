@@ -17,9 +17,9 @@ using Verse;
 
 namespace RimRound.Patch
 {
-    [HarmonyPatch(typeof(AlienPartGenerator))]
-    [HarmonyPatch(nameof(AlienPartGenerator.GenerateMeshsAndMeshPools))]
-    [HarmonyPatch(new Type[] { typeof(IGraphicsLoader) })]
+    //[HarmonyPatch(typeof(AlienPartGenerator))]
+    //[HarmonyPatch(nameof(AlienPartGenerator.GenerateMeshsAndMeshPools))]
+    //[HarmonyPatch(new Type[] { typeof(IGraphicsLoader) })]
     internal class AlienPartGenerator_GenerateMeshsAndMeshPools_MakeAllRRBodyTexRequestsUseDefaultPath
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
