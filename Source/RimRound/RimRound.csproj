@@ -150,8 +150,8 @@
     <Compile Include="RimRoundCore\Hediffs\Hediff_BionicMetabolizer.cs" />
     <Compile Include="RimRoundCore\Hediffs\Hediff_ArchotechMetabolizer.cs" />
     <Compile Include="RimRoundCore\Hediffs\Hediff_FullnessImplant.cs" />
-    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\AlienPartGenerator_GenerateMeshsAndMeshPools_MakeAllRRBodyTexRequestsUseDefaultPath.cs" />
-    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
+    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\Disabled\AlienPartGenerator_GenerateMeshsAndMeshPools_MakeAllRRBodyTexRequestsUseDefaultPath.cs" />
+    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\Disabled\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
@@ -226,7 +226,7 @@
     <Compile Include="RimRoundCore\Defs\ThingDefOf.cs" />
     <Compile Include="RimRoundCore\Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="RimRoundCore\AI\PrisonerStuff\JobDrivers\JobDriver_StuffPrisoner.cs" />
-    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_GetPawnMesh_GetMeshForPortraitsToo.cs" />
+    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\Disabled\HarmonyPatches_GetPawnMesh_GetMeshForPortraitsToo.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\DietAIPatches\FeedPatientUtility_IsHungry_CheckForFullness.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\FoodUtility\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.cs" />
@@ -236,7 +236,7 @@
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\FoodUtility\FoodUtility_StackCountForNutrition_MaxChangedToMin.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Pawn-GuestTracker_SetGuestStatus_UpdateCategoricalExemptions.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Graphic-Multi_Init_DontLogErrorsForRimRound.cs" />
-    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_ResolveAllGraphicsPrefix_UpdatePawnBodySize.cs" />
+    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\MenuPatches\ModLister_AllExpansions_IncludeRimRound.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\MenuPatches\ModsConfig_LastInstalledExpansion_DefaultToRimRoundBG.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\Pawn-HealthTracker_MakeDowned_SetCustomWiggleAngleInitial.cs" />

@@ -43,7 +43,10 @@ namespace RimRound.Utilities
             }
         }
 
-
+        public static string GetProperBodyGraphicPathFromPawn(Pawn pawn) 
+        {
+            return ConvertBodyPathStringsIfNecessary("Things/Pawn/Humanlike/Bodies/Naked_" + pawn.story.bodyType.defName);
+        }
         public static string ConvertBodyPathStringsIfNecessary(string originalBodyPath)
         {
             int lastSlash = originalBodyPath.LastIndexOf('/');

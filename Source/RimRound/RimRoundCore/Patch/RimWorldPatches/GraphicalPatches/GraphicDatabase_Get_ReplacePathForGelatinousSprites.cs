@@ -21,7 +21,7 @@ namespace RimRound.Patch
         }
     }
     */
-    [HarmonyPatch]
+    //[HarmonyPatch]
     public class GraphicDatabase_GetInner_ReplaceForGelatinousSprites 
     {
         public static MethodInfo TargetMethod() 

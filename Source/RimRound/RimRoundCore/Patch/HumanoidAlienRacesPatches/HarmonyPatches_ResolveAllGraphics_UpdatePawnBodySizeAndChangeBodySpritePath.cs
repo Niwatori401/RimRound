@@ -17,7 +17,7 @@ namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(AlienRace.HarmonyPatches))]
     [HarmonyPatch(nameof(AlienRace.HarmonyPatches.ResolveAllGraphicsPrefix))]
-    public class HarmonyPatches_ResolveAllGraphicsPrefix_UpdatePawnBodySize
+    public class HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath
     {
         public static bool Prefix(PawnGraphicSet __0) 
         {
@@ -37,30 +37,62 @@ namespace RimRound.Patch
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 
+            for (int i = 0; i < codeInstructions.Count; i++)
+            {
+                if (codeInstructions[i].opcode == OpCodes.Callvirt && codeInstructions[i-1].opcode == OpCodes.Ldnull && codeInstructions[i+1].opcode == OpCodes.Stloc_S)
+                {
+                    int indexOfStoreStr = i + 1;
+                    
+                    codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Call, ChangeSpritePathMethodInfo));
+                    codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Ldarg_0));
+                    break;
+                }
+            }
+
+            ChangeDrawSize(codeInstructions);
+
+            return codeInstructions;
+        }
+
+
+
+        private static string ChangeSpritePathIfNecessary(string path, PawnGraphicSet pawnGraphicSet) 
+        {
+            Log.Message($"I GOT CALLED ON {path} and PAWN {pawnGraphicSet.pawn.Name.ToStringShort}");
+            string newBodyPath = BodyTypeUtility.GetProperBodyGraphicPathFromPawn(pawnGraphicSet.pawn);
+            Log.Message($"NEW BODY PATH {newBodyPath}");
+            return newBodyPath;
+        }
+
+        static readonly MethodInfo ChangeSpritePathMethodInfo =
+            typeof(HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath)
+            .GetMethod(nameof(HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath.ChangeSpritePathIfNecessary), BindingFlags.NonPublic | BindingFlags.Static);
+
+
+        private static void ChangeDrawSize(List<CodeInstruction> codeInstructions)
+        {
             MethodInfo GetCurLifeStageMethodInfo = typeof(Pawn_AgeTracker).GetProperty("CurLifeStageRace", BindingFlags.Instance | BindingFlags.Public).GetGetMethod(true);
 
             for (int i = 0; i < codeInstructions.Count; i++)
             {
-                if (codeInstructions[i].Calls(GetCurLifeStageMethodInfo)) 
+                if (codeInstructions[i].Calls(GetCurLifeStageMethodInfo))
                 {
                     codeInstructions.Remove(codeInstructions[i+4]);
                     codeInstructions.Remove(codeInstructions[i+4]);
 
-                    
+
                     codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
                     codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Dup));
                     break;
                 }
             }
-
-            return codeInstructions;
         }
 
         static readonly MethodInfo ReplacementMethodInfo = 
-            typeof(HarmonyPatches_ResolveAllGraphicsPrefix_UpdatePawnBodySize)
-            .GetMethod(nameof(HarmonyPatches_ResolveAllGraphicsPrefix_UpdatePawnBodySize.ChangeDrawSize), BindingFlags.NonPublic | BindingFlags.Static);
+            typeof(HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath)
+            .GetMethod(nameof(HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath.GetDrawSize), BindingFlags.NonPublic | BindingFlags.Static);
 
-        static Vector2 ChangeDrawSize(AlienPartGenerator.AlienComp alienComp)
+        static Vector2 GetDrawSize(AlienPartGenerator.AlienComp alienComp)
         {
             Pawn pawn = alienComp.parent.AsPawn();
             float drawSize;
