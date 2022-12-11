@@ -11,8 +11,8 @@ using Verse;
 
 namespace RimRound.Patch
 {
-    //[HarmonyPatch(typeof(AlienRace.BackstoryDef))]
-    //[HarmonyPatch(nameof(AlienRace.BackstoryDef.ResolveReferences))]
+    [HarmonyPatch(typeof(AlienRace.AlienBackstoryDef))]
+    [HarmonyPatch(nameof(AlienRace.AlienBackstoryDef.ResolveReferences))]
     internal class BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin
     {
 		static MethodInfo getRandomMI = typeof(DefDatabase<BodyTypeDef>).GetMethod("GetRandom", BindingFlags.Static | BindingFlags.Public);

@@ -37,31 +37,31 @@ namespace RimRound.Patch
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 
-            for (int i = 0; i < codeInstructions.Count; i++)
-            {
-                if (codeInstructions[i].opcode == OpCodes.Callvirt && codeInstructions[i-1].opcode == OpCodes.Ldnull && codeInstructions[i+1].opcode == OpCodes.Stloc_S)
-                {
-                    int indexOfStoreStr = i + 1;
-                    
-                    codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Call, ChangeSpritePathMethodInfo));
-                    codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Ldarg_0));
-                    break;
-                }
-            }
+            ChangeBodyDrawPath(codeInstructions);
 
             ChangeDrawSize(codeInstructions);
 
             return codeInstructions;
         }
 
+        private static void ChangeBodyDrawPath(List<CodeInstruction> codeInstructions)
+        {
+            for (int i = 0; i < codeInstructions.Count; i++)
+            {
+                if (codeInstructions[i].opcode == OpCodes.Callvirt && codeInstructions[i-1].opcode == OpCodes.Ldnull && codeInstructions[i+1].opcode == OpCodes.Stloc_S)
+                {
+                    int indexOfStoreStr = i + 1;
 
+                    codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Call, ChangeSpritePathMethodInfo));
+                    codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Ldarg_0));
+                    break;
+                }
+            }
+        }
 
         private static string ChangeSpritePathIfNecessary(string path, PawnGraphicSet pawnGraphicSet) 
         {
-            Log.Message($"I GOT CALLED ON {path} and PAWN {pawnGraphicSet.pawn.Name.ToStringShort}");
-            string newBodyPath = BodyTypeUtility.GetProperBodyGraphicPathFromPawn(pawnGraphicSet.pawn);
-            Log.Message($"NEW BODY PATH {newBodyPath}");
-            return newBodyPath;
+            return BodyTypeUtility.GetProperBodyGraphicPathFromPawn(pawnGraphicSet.pawn);
         }
 
         static readonly MethodInfo ChangeSpritePathMethodInfo =
@@ -77,9 +77,17 @@ namespace RimRound.Patch
             {
                 if (codeInstructions[i].Calls(GetCurLifeStageMethodInfo))
                 {
-                    codeInstructions.Remove(codeInstructions[i+4]);
-                    codeInstructions.Remove(codeInstructions[i+4]);
+                    //Portrait draw size
+                    codeInstructions.Remove(codeInstructions[i+12]);
+                    codeInstructions.Remove(codeInstructions[i+12]);
 
+                    codeInstructions.Insert(i + 12, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
+                    codeInstructions.Insert(i + 12, new CodeInstruction(OpCodes.Dup));
+
+
+                    //Regular drawsize
+                    codeInstructions.Remove(codeInstructions[i+4]);
+                    codeInstructions.Remove(codeInstructions[i+4]);
 
                     codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
                     codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Dup));

@@ -47,6 +47,7 @@ namespace RimRound.Utilities
         {
             return ConvertBodyPathStringsIfNecessary("Things/Pawn/Humanlike/Bodies/Naked_" + pawn.story.bodyType.defName);
         }
+
         public static string ConvertBodyPathStringsIfNecessary(string originalBodyPath)
         {
             int lastSlash = originalBodyPath.LastIndexOf('/');

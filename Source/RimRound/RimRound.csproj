@@ -150,8 +150,7 @@
     <Compile Include="RimRoundCore\Hediffs\Hediff_BionicMetabolizer.cs" />
     <Compile Include="RimRoundCore\Hediffs\Hediff_ArchotechMetabolizer.cs" />
     <Compile Include="RimRoundCore\Hediffs\Hediff_FullnessImplant.cs" />
-    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\Disabled\AlienPartGenerator_GenerateMeshsAndMeshPools_MakeAllRRBodyTexRequestsUseDefaultPath.cs" />
-    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\Disabled\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
+    <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
