@@ -15,6 +15,7 @@ namespace RimRound.UI
     [StaticConstructorOnStartup]
     public class ITab_Perks : ITab
     {
+        
         public ITab_Perks() 
         {
             this.labelKey = "RR_PerkTabLabel";
