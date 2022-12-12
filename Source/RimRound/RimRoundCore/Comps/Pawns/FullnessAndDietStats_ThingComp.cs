@@ -390,7 +390,7 @@ namespace RimRound.Comps
             get
             {
                 return (
-                    2.6666667E-05f * (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true) * 
+                    (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true) * 
                     GlobalSettings.digestionRateMultiplier.threshold *
                     PersonalDigestionRateMult *
                     GlobalDigestionRateBonusMult * 
