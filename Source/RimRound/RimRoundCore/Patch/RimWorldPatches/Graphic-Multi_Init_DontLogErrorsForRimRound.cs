@@ -36,7 +36,6 @@ namespace RimRound.Patch
         /// </summary>
         static internal void Dugma(string string1) 
         {
-            Log.Message($"~~Testing LOG {string1}");
             return;
         }
 
