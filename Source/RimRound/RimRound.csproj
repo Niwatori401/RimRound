@@ -154,7 +154,6 @@
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="RimRoundCore\Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
-    <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\GraphicDatabase_Get_ReplacePathForGelatinousSprites.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\PawnGraphicSet_ResolveApparelGraphics_DontIncludeHoverChairIfLayingDown.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\HediffSet_GetRestFallFactor_AlterAccordingToSettings.cs" />

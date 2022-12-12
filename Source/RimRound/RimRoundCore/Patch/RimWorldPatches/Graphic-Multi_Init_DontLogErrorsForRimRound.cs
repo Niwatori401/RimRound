@@ -31,10 +31,12 @@ namespace RimRound.Patch
             return true;
         }
         
-
+        /// <summary>
+        /// Filler function to consume the string off of the stack in place of the error logger.
+        /// </summary>
         static internal void Dugma(string string1) 
         {
-            Log.Message("Oh, comma, I'm laffan");
+            Log.Message($"~~Testing LOG {string1}");
             return;
         }
 

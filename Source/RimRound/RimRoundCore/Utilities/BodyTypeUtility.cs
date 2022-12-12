@@ -55,10 +55,6 @@ namespace RimRound.Utilities
             string basePath = originalBodyPath.Substring(0, lastSlash + 1);
             string bodyTypeName = originalBodyPath.Substring(lastSlash + 1);
 
-
-            Log.Message("Old path:  " + originalBodyPath);
-
-
             if (!IsCustomBody(bodyTypeName))
             {
                 return originalBodyPath;
@@ -73,9 +69,6 @@ namespace RimRound.Utilities
 
             bodyTypeName = RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(DefDatabase<BodyTypeDef>.GetNamed(bodyTypeName)).ToString();
             bodyTypeName = ConvertBodyTypeDefDefnameAccordingToSettings(bodyTypeName);
-
-            Log.Message("New path:  " + basePath + "Naked_" + bodyTypeName);
-
 
             return basePath + "Naked_" + bodyTypeName;
         }
@@ -124,7 +117,6 @@ namespace RimRound.Utilities
             {
                 bodytypeCleaned = Regex.Replace(bodytypeCleaned, "[0-9]{3}", "100");
             }
-
             return bodytypeCleaned;
         }
 

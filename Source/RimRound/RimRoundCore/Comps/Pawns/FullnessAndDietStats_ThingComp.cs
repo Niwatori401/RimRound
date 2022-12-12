@@ -47,7 +47,7 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
             Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
 
-            ExposePerkLevels();
+            //ExposePerkLevels();
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()

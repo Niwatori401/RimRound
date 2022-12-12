@@ -70,21 +70,25 @@ namespace RimRound.Patch
 
         private static void ReplaceVanillaGraphicDatabaseGetMethodWithMine(List<CodeInstruction> codeInstructions)
         {
-            for (int jndex = 0; jndex < codeInstructions.Count; ++jndex)
+            for (int jndex = 1; jndex < codeInstructions.Count; jndex++)
             {
-                if (codeInstructions[jndex].Calls(graphicDatabaseGetMI))
+                int currentIndex = codeInstructions.Count - jndex;
+                if (codeInstructions[currentIndex].opcode == OpCodes.Call) // Replace the final Call (which should be the GrahpicDatabase.Get)
                 {
-                    codeInstructions[jndex].operand =
+                    codeInstructions[currentIndex].operand =
                         typeof(ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex).GetMethod(
                             nameof(GetApparelGraphic),
                             BindingFlags.Public | BindingFlags.Static);
 
-                    codeInstructions.InsertRange(jndex,
+                    /*
+                    codeInstructions.InsertRange(currentIndex,
                         new List<CodeInstruction>()
                         {
                             new CodeInstruction(OpCodes.Ldarg_0),
                             new CodeInstruction(OpCodes.Ldarg_1)
                         });
+                    */
+                    break;
                 }
             }
         }
@@ -98,15 +102,18 @@ namespace RimRound.Patch
             else 
             {
                 graphicPath = apparel.WornGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
-            } 
+            }
 
-
-			if (GlobalSettings.preferDefaultOutfitOverNaked && graphicPathResultIsNull.ContainsKey(graphicPath) && graphicPathResultIsNull[graphicPath]) 
+            if (!graphicPathResultIsNull.ContainsKey(graphicPath))
+            {
+                Log.Error($"Graphic path was not in null dict and should have been! Graphic path: {graphicPath}");
+            }
+			else if (GlobalSettings.preferDefaultOutfitOverNaked && graphicPathResultIsNull[graphicPath]) 
 			{
 				graphicPath = Values.defaultClothingSetGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
-			} 
+            }
 
-			return GraphicDatabase.Get<Graphic_Multi>(graphicPath, shader, vector, color);
+            return GraphicDatabase.Get<Graphic_Multi>(graphicPath, shader, vector, color);
 		}
 
 		public static bool IsGraphicPathResultNullForApparel(Apparel apparel, BodyTypeDef bodyType)
@@ -158,18 +165,6 @@ namespace RimRound.Patch
         //False means the graphic IS valid. 
         static Dictionary<string, bool> graphicPathResultIsNull = new Dictionary<string, bool>();
 
-		static MethodInfo graphicDatabaseGetMI = typeof(GraphicDatabase).GetMethod(
-			nameof(GraphicDatabase.Get),
-			BindingFlags.Public | BindingFlags.Static,
-			Type.DefaultBinder,
-			new Type[]
-			{
-							typeof(string),
-							typeof(Shader),
-							typeof(Vector2),
-							typeof(Color)
-			},
-			null).MakeGenericMethod(new Type[] { typeof(Graphic_Multi) });
 
 		static MethodInfo genTextNullOrEmptyMI = typeof(GenText).GetMethod(
 			nameof(GenText.NullOrEmpty),
