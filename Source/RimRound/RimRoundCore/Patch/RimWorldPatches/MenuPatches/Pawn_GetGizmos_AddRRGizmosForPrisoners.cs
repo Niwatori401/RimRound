@@ -22,21 +22,26 @@ namespace RimRound.Patch
                 var compHideCovers = __instance.TryGetComp<RimRound.Comps.HideCovers_ThingComp>();
                 var compDietSlider = __instance.TryGetComp<RimRound.Comps.FullnessAndDietStats_ThingComp>();
 
-                if (compDietSlider != null)
-                    gizmos.AddRange(compDietSlider.CompGetGizmosExtra().ToList());
-
-                if (compSleepingPosition != null)
-                    gizmos.AddRange(compSleepingPosition.CompGetGizmosExtra().ToList());
-
-                if (compHideCovers != null)
-                    gizmos.AddRange(compHideCovers.CompGetGizmosExtra().ToList());
-
-
+                gizmos.AddRange(AddGizmosIfNotVisible(compSleepingPosition));
+                gizmos.AddRange(AddGizmosIfNotVisible(compHideCovers));
+                gizmos.AddRange(AddGizmosIfNotVisible(compDietSlider));
 
                 __result = gizmos.AsEnumerable<Gizmo>();
             }
 
             return;
+        }
+
+        static List<Gizmo> AddGizmosIfNotVisible(ThingComp comp) 
+        {
+            List<Gizmo> gizmos = new List<Gizmo>();
+
+            if (comp != null)
+                foreach (var gizmo in comp.CompGetGizmosExtra())
+                    if (!gizmo.Visible)
+                        gizmos.Add(gizmo);
+
+            return gizmos;
         }
     }
 }
