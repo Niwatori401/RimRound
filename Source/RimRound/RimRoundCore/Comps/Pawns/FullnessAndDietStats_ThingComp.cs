@@ -264,7 +264,7 @@ namespace RimRound.Comps
             Utilities.HediffUtility.AddHediffSeverity(
                 Defs.HediffDefOf.RimRound_Weight, 
                 ((Pawn)parent),
-                Utilities.HediffUtility.NutritionToSeverity(-1 * 2.6666667E-05f * (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true)) * GlobalSettings.ticksPerHungerCheck.threshold));
+                Utilities.HediffUtility.NutritionToSeverity(-1 * (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true)) * GlobalSettings.ticksPerHungerCheck.threshold));
         }
 
         public void ActiveWeightGainTick(float nutrition) 
