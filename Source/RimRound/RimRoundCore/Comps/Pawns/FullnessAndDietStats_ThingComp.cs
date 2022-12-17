@@ -47,7 +47,7 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
             Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
 
-            //ExposePerkLevels();
+            ExposePerkLevels();
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -128,28 +128,33 @@ namespace RimRound.Comps
             }
         }
 
+
+        private List<string> _perkNamesForSaving = new List<string>();
+        private List<int> _perkLevelValuesForSaving = new List<int>();
         private void ExposePerkLevels() 
         {
             if (Scribe.mode == LoadSaveMode.Saving)
             {
+                if (perkLevels?.PerkToLevels == null)
+                    return;
+
+                _perkNamesForSaving.Clear();
+                _perkLevelValuesForSaving.Clear();
+
                 foreach (var x in perkLevels.PerkToLevels)
                 {
-                    int dummyInt = x.Value;
-                    Scribe_Values.Look<int>(ref dummyInt, x.Key);
+                    _perkNamesForSaving.Add(x.Key);
+                    _perkLevelValuesForSaving.Add(x.Value);
                 }
-            } 
-            else if (Scribe.mode == LoadSaveMode.PostLoadInit) 
-            {
-                InitializePerks();
 
-                for (int i = 0; i < perkLevels.PerkToLevels.Count; ++i)
-                {
-                    int dummyInt = 0;
-                    Scribe_Values.Look<int>(ref dummyInt, perkLevels.PerkToLevels.ElementAt(i).Key);
-                    
-                    string perk = perkLevels.PerkToLevels.ElementAt(i).Key;
-                    perkLevels.PerkToLevels[perk] = dummyInt;
-                }
+                Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
+                Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
+            } 
+            else if (Scribe.mode == LoadSaveMode.LoadingVars) 
+            {
+                Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
+                Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
+                // Initialize the perk levels dictionary somewhere else
             }
 
         }
@@ -173,6 +178,13 @@ namespace RimRound.Comps
             for (int i = 0; i < Perks.ultimatePerks.Count; ++i)
             {
                 perkLevels.PerkToLevels.Add(Perks.ultimatePerks[i].perkName, 0);
+            }
+
+            // Set values from save
+            for (int i = 0; i < _perkNamesForSaving.Count(); ++i)
+            {
+                if (perkLevels.PerkToLevels.ContainsKey(_perkNamesForSaving[i]))
+                    perkLevels.PerkToLevels[_perkNamesForSaving[i]] = _perkLevelValuesForSaving[i];
             }
         }
 
