@@ -715,7 +715,7 @@ namespace RimRound.Utilities
 
                 if (failureDescription.Length != 0)
                     if (failureDescription.Length > 10)
-                        return new SuccessReport("Requires every perk purchased ( Excluding racial perks / square one / diet plan )", false);
+                        return new SuccessReport("Requires every perk purchased (Excluding racial perks / square one / diet plan)", false);
                     else
                         return new SuccessReport(failureDescription.ToString(), false);
 

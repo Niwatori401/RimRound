@@ -452,7 +452,12 @@ namespace RimRound.Comps
 
         public float PersonalDigestionRateMult 
         {
-            get => personalDigestionRateMult * HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn());
+            get 
+            {
+                float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.3f + 1;
+                float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 1f + 1;
+                return gigaGurglingMult * digestionBeyondQuestionMult * HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn());
+            }
             set => personalDigestionRateMult = value;
         }
         private float personalDigestionRateMult = 1f;
@@ -460,11 +465,8 @@ namespace RimRound.Comps
         public float PersonalDigestionRateFlat
         {
             get 
-            { 
-                float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.3f + 1; 
-                float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 1f + 1;
-
-                return personalDigestionRateFlat * gigaGurglingMult * digestionBeyondQuestionMult;
+            {
+                return personalDigestionRateFlat;
             }
             set => personalDigestionRateFlat = value;
         }
