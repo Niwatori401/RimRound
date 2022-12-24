@@ -192,6 +192,7 @@
     <Compile Include="RimRoundCore\UI\ITab_CharacterDesc.cs" />
     <Compile Include="RimRoundCore\UI\ITab_Perks.cs" />
     <Compile Include="RimRoundCore\Utilities\BodyTypeUtility.cs" />
+    <Compile Include="RimRoundCore\Utilities\GameOverUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\HediffUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\HungerDroneUtility.cs" />
     <Compile Include="RimRoundCore\Utilities\MobilityChairUtility.cs" />

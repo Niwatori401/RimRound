@@ -682,11 +682,6 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
-                    return new SuccessReport("Max level", false);
-
-                if (perk.cost > p.perkLevels.availablePoints)
-                    return new SuccessReport("Not enough points", false);
 
                 // Perk requirements
                 StringBuilder failureDescription = new StringBuilder();
@@ -719,10 +714,19 @@ namespace RimRound.Utilities
                 }
 
                 if (failureDescription.Length != 0)
+                {
                     if (failureDescription.Length > 10)
                         return new SuccessReport("Requires every perk purchased (Excluding racial perks / square one / diet plan)", false);
                     else
                         return new SuccessReport(failureDescription.ToString(), false);
+                }
+
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
 
 
                 return new SuccessReport("", true);
@@ -739,6 +743,13 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
+                    return s;
+
+                float gel20Severity = 1000f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p.parent.AsPawn());
+                if (p.parent.AsPawn().WeightHediff().Severity < gel20Severity)
+                    return new SuccessReport("Must be Gelatinous 20 to purchase", false);
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
