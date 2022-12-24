@@ -66,7 +66,7 @@ namespace RimRound.Comps
 
                 yield return new Command_Action
                 {
-                    defaultLabel = $"Add 10 Perk Points",
+                    defaultLabel = "Add 10 Perk Points",
                     icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Chicken),
                     action = delegate ()
                     {
@@ -80,7 +80,26 @@ namespace RimRound.Comps
                     }
                 };
 
+                yield return new Command_Action
+                {
+                    defaultLabel = "Wipe perks",
+                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Chicken),
+                    action = delegate ()
+                    {
+                        FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
 
+                        if (comp is null)
+                        {
+                            return;
+                        }
+
+                        for (int i = 0; i < comp.perkLevels.PerkToLevels.Count; i++)
+                        {
+                            comp.perkLevels.PerkToLevels[comp.perkLevels.PerkToLevels.ElementAt(i).Key] = 0;
+                        }
+                       
+                    }
+                };
                 yield return new Command_Action
                 {
                     defaultLabel = "Change magnitude",

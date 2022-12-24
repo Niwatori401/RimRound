@@ -1,4 +1,5 @@
 ﻿using RimRound.Comps;
+using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,11 @@ namespace RimRound.AI
     {
         public override string ExplanationPart(StatRequest req)
         {
-            return "Culinary Connoisseur";
+            FullnessAndDietStats_ThingComp comp = req.Thing?.AsPawn()?.TryGetComp<FullnessAndDietStats_ThingComp>();
+
+            int culinaryConniseurLevel = comp?.perkLevels?.PerkToLevels?["RR_Culinary_Connisseur_Title"] ?? 0;
+            
+            return $"Culinary Connoisseur: +{culinaryConniseurLevel * 1}";
         }
 
         public override void TransformValue(StatRequest req, ref float val)
@@ -28,7 +33,7 @@ namespace RimRound.AI
 
                     int culinaryConniseurLevel = comp.perkLevels.PerkToLevels?["RR_Culinary_Connisseur_Title"] ?? 0;
 
-                    val += culinaryConniseurLevel * 0.1f;
+                    val += culinaryConniseurLevel * 1;
                 }
             }
         }

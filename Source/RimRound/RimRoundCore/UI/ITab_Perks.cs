@@ -81,6 +81,9 @@ namespace RimRound.UI
             Vector2 barSize = new Vector2(230, 20);
             Rect fillableBarRect = new Rect(titleRect.x + barOffset.x, titleRect.y + barOffset.y, barSize.x, barSize.y);
 
+            var fdsComp = PawnToShowInfoAbout.TryGetComp<FullnessAndDietStats_ThingComp>();
+            if (fdsComp is null)
+                return titleRect;
 
             float heightOffsets = 23;
 
@@ -88,16 +91,16 @@ namespace RimRound.UI
             Widgets.FillableBar(fillableBarRect, 0.5f);
             Rect barLabelRect = new Rect(fillableBarRect);
             barLabelRect.y += -heightOffsets;
-            Widgets.Label(barLabelRect, "LEVEL");
+            Widgets.Label(barLabelRect, $"Points Available: {fdsComp.perkLevels.availablePoints}");
             Widgets.DrawLineHorizontal(0f, titleRect.yMax - 8, titleRect.width);
 
             Rect currentLevelRect = new Rect(barLabelRect);
             currentLevelRect.x += 250;
-            Widgets.Label(currentLevelRect, "CURRENT LEVEL");
+            Widgets.Label(currentLevelRect, $"Current Level: {fdsComp.perkLevels.currentLevel}");
 
             Rect currentNutritionRect = new Rect(currentLevelRect);
             currentNutritionRect.y += heightOffsets;
-            Widgets.Label(currentNutritionRect, "NUTRITION");
+            Widgets.Label(currentNutritionRect, "Nutrition Consumed: {}");
 
 
             return titleRect;
@@ -238,6 +241,8 @@ namespace RimRound.UI
                 }
 
                 stringBuilder.AppendLine(perk.description.Translate(PawnToShowInfoAbout));
+                stringBuilder.AppendLine();
+                stringBuilder.AppendLine($"Point cost per level: {perk.cost}");
                 stringBuilder.AppendLine();
                 stringBuilder.AppendLine("Current Level: " + comp.perkLevels.PerkToLevels[perk.perkName] + "/" + perk.numberOfLevels);
 

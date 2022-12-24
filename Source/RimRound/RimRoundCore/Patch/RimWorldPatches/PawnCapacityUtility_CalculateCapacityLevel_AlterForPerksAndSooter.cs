@@ -14,7 +14,7 @@ namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(PawnCapacityUtility))]
     [HarmonyPatch(nameof(PawnCapacityUtility.CalculateCapacityLevel))]
-    class PawnCapacityUtility_CalculateCapacityLevel_AddExceptionForMobilityScooter
+    class PawnCapacityUtility_CalculateCapacityLevel_AlterForPerksAndSooter
     {
         static bool Prefix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
         {
@@ -76,24 +76,19 @@ namespace RimRound.Patch
 
                 int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_ItsComingThisWay_Title"] ?? 0;
-                int comfortableCorpulenceLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_Comfortable_Corpulence_Title"] ?? 0;
+                //int comfortableCorpulenceLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_Comfortable_Corpulence_Title"] ?? 0;
 
 
                 if (heavyRevianLevel > 0)
                 {
                     __result += 0.60f;
                 }
-
+                /*
                 if (comfortableCorpulenceLevel > 0)
                 {
-                    var capMod = pawn.WeightHediff().CurStage.capMods.Find(x => x.capacity == PawnCapacityDefOf.Moving);
-                    
-                    if (capMod == null)
-                        return;
-
-                    capMod.offset = Mathf.Min(0, capMod.offset + comfortableCorpulenceLevel * 0.03f);
+                    __result += comfortableCorpulenceLevel * 0.03f;                
                 }
-
+                */
                 if (itsComingThisWayLevel > 0)
                 {
                     float gelatinous11SeverityThreshold = 21.85f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);

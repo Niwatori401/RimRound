@@ -154,7 +154,7 @@ namespace RimRound.Comps
             {
                 Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
                 Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
-                // Initialize the perk levels dictionary somewhere else
+                // Initialize the perk levels dictionary somewhere else (like PostLoadInit())
             }
 
         }

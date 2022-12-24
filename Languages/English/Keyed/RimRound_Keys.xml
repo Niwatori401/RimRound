@@ -296,7 +296,7 @@
 	<RR_Ample_Appetite_Desc>+50% hunger rate multiplier per level\n\n"{0}'s body has grown accustomed to an increased food intake, and will now require even more to stay satiated."</RR_Ample_Appetite_Desc>
 	<RR_Apex_Absorption_Desc>+0.1x weight gain multiplier per level\n\n"{0}'s metabolism has gone into overdrive, allowing them to gain more weight from the same amount of food."</RR_Apex_Absorption_Desc>
 	<RR_Comfortable_Corpulence_Desc>-0.03x movement penalty multiplier per level\n\n"{0}'s body has gotten used to bearing the substantial strain on it, resulting in a small reduction to their movement penalty."</RR_Comfortable_Corpulence_Desc>
-	<RR_Culinary_Connisseur_Desc>+10% cooking speed\n\n"Eating obscene amounts of food sure does give you a taste for it. {0} has gotten better at cooking as a result and can now prepare meals faster."</RR_Culinary_Connisseur_Desc>
+	<RR_Culinary_Connisseur_Desc>+1 cooking skill (in effect)\n\n"Eating obscene amounts of food sure does give you a taste for it. {0} has gotten better at cooking as a result and can now prepare meals faster."</RR_Culinary_Connisseur_Desc>
 	<RR_Demonic_Devourment_Desc>+10% eating speed per level\n\n"After spending so much time eating, {0} has naturally gotten rather good at it."</RR_Demonic_Devourment_Desc>
 	<RR_Diet_Plan_Desc>+0.2 weight loss multiplier\n\n"{0} has learned how to more effectively managed their weight and can lose weight more efficiently if desired."</RR_Diet_Plan_Desc>
 	<RR_Digestion_Beyond_Question_Desc>+0.3x digestion multiplier per level\n\n"{0}'s digestive juices increase in acidity, improving the rate at which nutrition turns into weight."</RR_Digestion_Beyond_Question_Desc>

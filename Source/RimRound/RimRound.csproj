@@ -170,7 +170,7 @@
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\DietAIPatches\Need-Food_MalnutritionSeverityPerInterval_AdjustByPawnWeight.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\GraphicalPatches\Page-ConfigureStartingPawns_DoWindowContents_UpdateSprite.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Pawn-HealthTracker_MakeDowned_DropHoverChair.cs" />
-    <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnCapacityUtility_CalculateCapacityLevel_AddExceptionForMobilityScooter.cs" />
+    <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnCapacityUtility_CalculateCapacityLevel_AlterForPerksAndSooter.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GenerateInitialHediffs_AddWeightHediffAndSetBodyType.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GenerateBodyType_SetDefaultBodyType.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\PawnGenerator\PawnGenerator_GenerateTraits_AddWeightOpinions.cs" />
