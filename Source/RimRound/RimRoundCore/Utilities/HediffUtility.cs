@@ -48,6 +48,11 @@ namespace RimRound.Utilities
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns>Pawn weight including base weight in kilograms</returns>
         public static float Weight(this Pawn pawn)
         {
             if (GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, pawn) is Hediff weight)

@@ -88,7 +88,7 @@ namespace RimRound.UI
             float heightOffsets = 23;
 
             Text.Font = GameFont.Small;
-            Widgets.FillableBar(fillableBarRect, 0.5f);
+            Widgets.FillableBar(fillableBarRect, (fdsComp.ConsumedNutrition % fdsComp.perkLevels.nutritionPerLevel) / fdsComp.perkLevels.nutritionPerLevel);
             Rect barLabelRect = new Rect(fillableBarRect);
             barLabelRect.y += -heightOffsets;
             Widgets.Label(barLabelRect, $"Points Available: {fdsComp.perkLevels.availablePoints}");
@@ -100,7 +100,7 @@ namespace RimRound.UI
 
             Rect currentNutritionRect = new Rect(currentLevelRect);
             currentNutritionRect.y += heightOffsets;
-            Widgets.Label(currentNutritionRect, "Nutrition Consumed: {}");
+            Widgets.Label(currentNutritionRect, $"Nutrition Consumed: {fdsComp.ConsumedNutrition:f1}");
 
 
             return titleRect;

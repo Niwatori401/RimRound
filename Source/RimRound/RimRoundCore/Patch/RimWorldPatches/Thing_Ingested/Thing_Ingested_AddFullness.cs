@@ -23,6 +23,12 @@ namespace RimRound.Patch
 	{
 		public static void Postfix(Thing __instance, Pawn __0, ref float __result, FullnessAndDietStats_ThingComp comp) //,
 		{
+			AddFullness(__instance, __0, ref __result, comp);
+		}
+
+
+		private static void AddFullness(Thing __instance, Pawn __0, ref float __result, FullnessAndDietStats_ThingComp comp)
+		{
 			if (__0.RaceProps.Humanlike && __result > 0)
 			{
 				if (comp == null)

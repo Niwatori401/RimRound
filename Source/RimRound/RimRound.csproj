@@ -161,7 +161,7 @@
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\MenuPatches\HealthCardUtility_DrawHediffRow_AddProgressBarToNextWeightStage.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\MenuPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
-    <Compile Include="RimRoundCore\Patch\RimWorldPatches\DietAIPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawns.cs" />
+    <Compile Include="RimRoundCore\Patch\RimWorldPatches\DietAIPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawnsAndAdjustForPerks.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Caravan\CaravanPatchUtility.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Caravan\CaravanMaker_MakeCaravan_ChangeDietMode.cs" />
     <Compile Include="RimRoundCore\Patch\RimWorldPatches\Caravan\Caravan_RemoveAllPawns_ChangeDietMode.cs" />

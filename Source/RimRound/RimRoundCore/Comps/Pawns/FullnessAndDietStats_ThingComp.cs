@@ -46,6 +46,7 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref globalDigestionRateBonusFlat,    "digestionRateBonusFlat",          0f);
             Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
             Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
+            Scribe_Values.Look<float>(ref consumedNutrition,               "consumedNutrition",               0f);
 
             ExposePerkLevels();
         }
@@ -118,6 +119,7 @@ namespace RimRound.Comps
             {
                 float digestedAmt = DigestionTick() / CurrentFullnessToNutritionRatio;
                 ((Pawn)parent).needs.food.CurLevel += digestedAmt;
+                ConsumedNutrition += digestedAmt;
                 ActiveWeightGainTick(digestedAmt);
                 PassiveWeightLossTick();
                 FullnessCheckTick();
@@ -737,6 +739,24 @@ namespace RimRound.Comps
                 fullnessbar.UpdateBar(this.DietMode);
         }
 
+        public float ConsumedNutrition
+        {
+            get => consumedNutrition;
+            set 
+            {
+                consumedNutrition = value;
+                if (consumedNutrition >= perkLevels.nutritionPerLevel * perkLevels.currentLevel)
+                {
+                    int currentLevel = Mathf.FloorToInt(consumedNutrition / perkLevels.nutritionPerLevel) + 1;
+                    perkLevels.currentLevel = currentLevel;
+                    perkLevels.availablePoints += 1;
+                }
+            } 
+        }
+        private float consumedNutrition = 0;
+
+
+
         public Queue<WeightGainRequest> activeWeightGainRequests = new Queue<WeightGainRequest>();
         public Queue<WeightGainRequest> activeWeightLossRequests = new Queue<WeightGainRequest>();
 
@@ -761,9 +781,9 @@ namespace RimRound.Comps
 
     public class PerkLevels
     {
-        public int currentLevel = 0;
+        public int currentLevel = 1;
         public int availablePoints = 0;
-
+        public float nutritionPerLevel = 20;
         public Dictionary<string, int> PerkToLevels;
     }
 
