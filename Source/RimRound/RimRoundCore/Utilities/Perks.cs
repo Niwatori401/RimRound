@@ -275,7 +275,6 @@ namespace RimRound.Utilities
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
                 {
-                    //p.perkLevels.PerkToLevels[perk.perkName] += 1;
                     p.perkLevels.availablePoints -= perk.cost;
 
                     p.parent.AsPawn().WeightHediff().Severity = 0;
@@ -346,6 +345,9 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+               if (GetInsufficientPerkLevelSuccessReport("RR_Ample_Appetite_Title", 3, p) is SuccessReport s && !s)
+                    return s;
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -366,8 +368,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (p.perkLevels.PerkToLevels["RR_Apex_Absorption_Title"] < 10)
-                    return new SuccessReport("Requires " + "RR_Apex_Absorption_Title".Translate() + " level 10", false);
+               if (GetInsufficientPerkLevelSuccessReport("RR_Apex_Absorption_Title", 10, p) is SuccessReport s && !s)
+                    return s;
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
@@ -389,9 +391,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (p.perkLevels.PerkToLevels["RR_Comfortable_Corpulence_Title"] < 10)
-                    return new SuccessReport("Requires " + "RR_Comfortable_Corpulence_Title".Translate() + " level 10", false);
-
+               if (GetInsufficientPerkLevelSuccessReport("RR_Comfortable_Corpulence_Title", 10, p) is SuccessReport s && !s)
+                    return s;
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
@@ -433,10 +434,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (p.perkLevels.PerkToLevels["RR_Digestion_Beyond_Question_Title"] < 10)
-                {
-                    return new SuccessReport("Requires " + "RR_Digestion_Beyond_Question_Title".Translate() + " level 10", false);
-                }
+               if (GetInsufficientPerkLevelSuccessReport("RR_Digestion_Beyond_Question_Title", 10, p) is SuccessReport s && !s)
+                    return s;
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
@@ -458,9 +457,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (p.perkLevels.PerkToLevels["RR_Demonic_Devourment_Title"] < 5)
-                    return new SuccessReport("Requires " + "RR_Demonic_Devourment_Title".Translate() + " level 5", false);
-
+               if (GetInsufficientPerkLevelSuccessReport("RR_Demonic_Devourment_Title", 5, p) is SuccessReport s && !s)
+                    return s;
 
                 float lardyIISeverity = 0.350f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p.parent.AsPawn());
                 if (p.parent.AsPawn().WeightHediff().Severity < lardyIISeverity)
@@ -594,6 +592,9 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (GetInsufficientPerkLevelSuccessReport("RR_Voracious_Title", 4, p) is SuccessReport s && !s)
+                    return s;
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -750,7 +751,13 @@ namespace RimRound.Utilities
 
         };
 
-
+        private static SuccessReport GetInsufficientPerkLevelSuccessReport(string perkName, int neededLevel, FullnessAndDietStats_ThingComp comp)
+        {
+            if (comp.perkLevels.PerkToLevels[perkName] < neededLevel)
+                return new SuccessReport($"Requires {perkName.Translate()} level {neededLevel}", false);
+            else
+                return new SuccessReport("", true);
+        }
 
         public delegate SuccessReport EligibilityValidator(FullnessAndDietStats_ThingComp p, Perks.Perk perk);
         public delegate void OnClickAction(FullnessAndDietStats_ThingComp p, Perks.Perk perk);

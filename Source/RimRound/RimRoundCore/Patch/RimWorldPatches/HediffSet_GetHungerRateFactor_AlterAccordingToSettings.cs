@@ -45,21 +45,11 @@ namespace RimRound.Patch
 				__result /= normalHungerRateFactor;
 				__result *= 1 + ((normalHungerRateFactor - 1) * GlobalSettings.weightHediffHungerRateMult.threshold);
 				__result += additiveValue;
-			}
+            }
 
-			AlterHungerByAmpleAppetiteLevel(ref __result, __instance);
-
+			
         }
 
-		private static void AlterHungerByAmpleAppetiteLevel(ref float val, HediffSet h)
-		{
-			var fndComp = h.pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-			if (fndComp == null)
-				return;
 
-            float ampleAppetiteBonusMult = fndComp.perkLevels.PerkToLevels?["RR_Ample_Appetite_Title"] * 0.5f + 1 ?? 1;
-
-			val *= ampleAppetiteBonusMult;
-        }
     }
 }
