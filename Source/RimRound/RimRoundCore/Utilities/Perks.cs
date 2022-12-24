@@ -529,6 +529,10 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                float gel1Severity = 1.410f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p.parent.AsPawn());
+                if (p.parent.AsPawn().WeightHediff().Severity < gel1Severity)
+                    return new SuccessReport("Must be at least Gelatinous I to purchase", false);
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
