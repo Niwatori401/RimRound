@@ -683,6 +683,43 @@ namespace RimRound.Utilities
                 if (perk.cost > p.perkLevels.availablePoints)
                     return new SuccessReport("Not enough points", false);
 
+                // Perk requirements
+                StringBuilder failureDescription = new StringBuilder();
+
+                foreach (var bperk in Perks.basicPerks)
+                {
+                    if (bperk.perkName == "RR_SquareOne_Title" ||
+                        bperk.perkName == "RR_Diet_Plan_Title")
+                        continue;
+
+                    if (p.perkLevels.PerkToLevels[bperk.perkName] < bperk.numberOfLevels)
+                        failureDescription.AppendLine($"Requires {bperk.perkName.Translate()} level {bperk.numberOfLevels}");
+                }
+
+                foreach (var aperk in Perks.advancedPerks)
+                {
+                    if (p.perkLevels.PerkToLevels[aperk.perkName] < aperk.numberOfLevels)
+                        failureDescription.AppendLine($"Requires {aperk.perkName.Translate()} level {aperk.numberOfLevels}");
+                }
+
+                foreach (var eperk in Perks.elitePerks)
+                {
+                    if (eperk.perkName == "RR_HeavyRevian_Title" ||
+                        eperk.perkName == "RR_MakesAllTheRules_Title")
+                        continue;
+
+
+                    if (p.perkLevels.PerkToLevels[eperk.perkName] < eperk.numberOfLevels)
+                        failureDescription.AppendLine($"Requires {eperk.perkName.Translate()} level {eperk.numberOfLevels}");
+                }
+
+                if (failureDescription.Length != 0)
+                    if (failureDescription.Length > 10)
+                        return new SuccessReport("Requires every perk purchased ( Excluding racial perks / square one / diet plan )", false);
+                    else
+                        return new SuccessReport(failureDescription.ToString(), false);
+
+
                 return new SuccessReport("", true);
             }),
 

@@ -105,7 +105,9 @@ namespace RimRound.Utilities
             {
                 if (amount > 0)
                 {
-                    float personalWeightGainModifier = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.PersonalWeightGainModifier is float p ? p : 1f;
+                    var comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+
+                    float personalWeightGainModifier = comp?.PersonalWeightGainModifier is float p ? p : 1f;
 
                     float additionalSeverity = 
                         GlobalSettings.weightGainMultiplier.threshold *
@@ -115,6 +117,14 @@ namespace RimRound.Utilities
 
                     if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
                         hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.maxWeight.threshold);
+                    else if ((hediff.Severity + additionalSeverity) >= (Utilities.RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) * 21.85f))//gel 11
+                    {
+                        // don't add weight if missing perk!
+                        if (comp.perkLevels.PerkToLevels["RR_Even_Further_Beyond_Title"] >= 1)
+                        {
+                            hediff.Severity += additionalSeverity;
+                        }
+                    }
                     else
                         hediff.Severity += additionalSeverity;
                 }
