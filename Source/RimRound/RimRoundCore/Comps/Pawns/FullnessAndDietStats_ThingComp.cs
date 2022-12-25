@@ -163,6 +163,9 @@ namespace RimRound.Comps
 
         private void InitializePerks() 
         {
+            if (perkLevels is null)
+                perkLevels = new PerkLevels();
+
             perkLevels.PerkToLevels = new Dictionary<string, int>() { };
 
             for (int i = 0; i < Perks.basicPerks.Count; ++i)
