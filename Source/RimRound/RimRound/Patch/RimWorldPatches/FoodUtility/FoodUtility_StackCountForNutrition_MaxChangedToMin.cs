@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace RimRound.Patch.RimWorldPatches
+namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(FoodUtility))]
     [HarmonyPatch(nameof(FoodUtility.StackCountForNutrition))]

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace RimRound.Patch.RimWorldPatches
+namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(GenTemperature))]
     [HarmonyPatch(nameof(GenTemperature.PushHeat), new Type[] { typeof(Thing), typeof(float) })]

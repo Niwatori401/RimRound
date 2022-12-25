@@ -163,7 +163,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\DietAIPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawnsAndAdjustForPerks.cs" />
-    <Compile Include="RimRound\Patch\RimWorldPatches\Caravan\CaravanPatchUtility.cs" />
+    <Compile Include="RimRound\Utilities\CaravanPatchUtility.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Caravan\CaravanMaker_MakeCaravan_ChangeDietMode.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Caravan\Caravan_RemoveAllPawns_ChangeDietMode.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Caravan\Caravan_RemovePawn_ChangeDietMode.cs" />
@@ -226,7 +226,6 @@
     <Compile Include="RimRound\Defs\ThingDefOf.cs" />
     <Compile Include="RimRound\Hediffs\Fullness\Hediff_Fullness.cs" />
     <Compile Include="RimRound\AI\PrisonerStuff\JobDrivers\JobDriver_StuffPrisoner.cs" />
-    <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\Disabled\HarmonyPatches_GetPawnMesh_GetMeshForPortraitsToo.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\DietAIPatches\FeedPatientUtility_IsHungry_CheckForFullness.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\FoodUtility\FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.cs" />

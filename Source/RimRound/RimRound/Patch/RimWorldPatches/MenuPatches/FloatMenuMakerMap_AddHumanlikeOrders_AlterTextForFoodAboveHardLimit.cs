@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace RimRound.Patch.RimWorldPatches
+namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(FloatMenuMakerMap))]
     [HarmonyPatch("AddHumanlikeOrders")]

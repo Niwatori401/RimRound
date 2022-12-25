@@ -11,67 +11,54 @@ using Verse;
 
 namespace RimRound.Patch
 {
-    //[HarmonyPatch(typeof(PortraitsCache))]
-    //[HarmonyPatch(nameof(PortraitsCache.))]
+    [HarmonyPatch]
     public class PortraitsCache_RenderPortrait_DisablePawnPortraitRotationForPawnsInBed
     {
+       
+        static MethodBase TargetMethod() 
+        {
+            Type a =
+				(from type
+				in typeof(PortraitsCache).GetNestedTypes(BindingFlags.Instance | BindingFlags.NonPublic)
+				where type.Name == "PortraitParams"
+				select type).First();
+
+            return a.GetMethod("RenderPortrait");
+        }
+        
+
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) 
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
             List<CodeInstruction> newInstructions = new List<CodeInstruction>();
 
-            int startJndex = -1;
-            int endJndex = -1;
+            MethodInfo getAngleMI = typeof(PortraitsCache_RenderPortrait_DisablePawnPortraitRotationForPawnsInBed)
+                .GetMethod(nameof(GetAngle), BindingFlags.NonPublic | BindingFlags.Static);
 
-            MethodInfo pawnDeadMI = typeof(Pawn).GetProperty(nameof(Pawn.Dead)).GetGetMethod();
-            MethodInfo pawnDownedMI = typeof(Pawn).GetProperty(nameof(Pawn.Downed)).GetGetMethod();
-            MethodInfo shouldBeSidewaysMI = typeof(PortraitsCache_RenderPortrait_DisablePawnPortraitRotationForPawnsInBed)
-                .GetMethod(nameof(ShouldBeSideways), BindingFlags.NonPublic | BindingFlags.Static);
-
-
-            if (pawnDeadMI is null)
-                Log.Error("pawnDeadMI was null in PortraitsCache_RenderPortrait patch!");
-            if (pawnDownedMI is null)
-                Log.Error("pawnDownedMI was null in PortraitsCache_RenderPortrait patch!");
-            if (shouldBeSidewaysMI is null)
+            if (getAngleMI is null)
                 Log.Error("shouldBeSidewaysMI was null in PortraitsCache_RenderPortrait patch!");
 
 
 
             for (int i = 0; i < codeInstructions.Count; ++i) 
             {
-                if (codeInstructions[i].Calls(pawnDeadMI)) 
+                if (codeInstructions[i].opcode == OpCodes.Ldc_R4 && (float)codeInstructions[i].operand == 85) 
                 {
-                    startJndex = i;
-                }
-
-                if (codeInstructions[i].Calls(pawnDownedMI)) 
-                {
-                    endJndex = i;
-                }
-
-                if (endJndex != -1 && startJndex != -1)
+                    codeInstructions[i] = new CodeInstruction(OpCodes.Ldarg_1);
+                    codeInstructions.Insert(i + 1, new CodeInstruction(OpCodes.Call, getAngleMI));
                     break;
-            }
-
-            newInstructions.Add(new CodeInstruction(OpCodes.Call, shouldBeSidewaysMI));
-
-
-            if (startJndex != -1 && endJndex != -1)
-            {
-                codeInstructions.RemoveRange(startJndex, (endJndex - startJndex) + 1);
-                codeInstructions.InsertRange(startJndex, newInstructions);
+                }
             }
 
             return codeInstructions;
         }
 
-        static bool ShouldBeSideways(Pawn pawn) 
+        static float GetAngle(Pawn pawn) 
         {
             if (pawn.Dead || (pawn.Downed && !pawn.InBed()))
-                return true;
+                return 85f;
 
-            return false;
+            return 0f;
         }
     }
 }
