@@ -186,6 +186,10 @@ namespace RimRound.Comps
             }
 
             // Set values from save
+            if (_perkNamesForSaving is null || _perkLevelValuesForSaving is null || _perkNamesForSaving.Count() == 0 || _perkLevelValuesForSaving.Count() == 0)
+                return;
+
+
             for (int i = 0; i < _perkNamesForSaving.Count(); ++i)
             {
                 if (perkLevels.PerkToLevels.ContainsKey(_perkNamesForSaving[i]))
