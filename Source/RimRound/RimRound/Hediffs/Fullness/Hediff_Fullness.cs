@@ -22,8 +22,14 @@ namespace RimRound.Hediffs
         {
             get 
             {
-                var comp = this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-                int noPainStillGainLevel = comp.perkLevels.PerkToLevels["RR_NoPainStillGain_Title"];
+                var comp = this?.pawn?.TryGetComp<FullnessAndDietStats_ThingComp>();
+                if (comp is null)
+                {
+                    Log.Error("Failed to get comp in PersonalFullnessPainMult!");
+                    return 1f;
+                }
+
+                int noPainStillGainLevel = comp?.perkLevels?.PerkToLevels?["RR_NoPainStillGain_Title"] ?? 0;
                 return Mathf.Clamp(_personalFullnessPainMult - (0.1f * noPainStillGainLevel), 0f, 10f);
             }
             set 
