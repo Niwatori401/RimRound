@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<ThingDef ParentName="BuildingBase">
-		<defName>BlobBed</defName>
+	<ThingDef ParentName="BuildingBase" Name="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_z</defName>
 		<label>blob bed</label>
 		<description>A spot on a very obese pawn where people should sleep. Very comfortable.</description>
 		<thingClass>Building_Bed</thingClass>
@@ -43,4 +43,27 @@
 		  </li>
 		</comps>
 	</ThingDef>
+	
+	<ThingDef ParentName="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_I</defName>
+		<statBases>
+			<BedRestEffectiveness>1.20</BedRestEffectiveness>
+			<Comfort>2.0</Comfort>
+		</statBases>
+	</ThingDef>
+	<ThingDef ParentName="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_II</defName>
+		<statBases>
+			<BedRestEffectiveness>1.40</BedRestEffectiveness>
+			<Comfort>2.5</Comfort>
+		</statBases>
+	</ThingDef>
+	<ThingDef ParentName="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_III</defName>
+		<statBases>
+			<BedRestEffectiveness>1.60</BedRestEffectiveness>
+			<Comfort>3.0</Comfort>
+		</statBases>
+	</ThingDef>	
+	
 </Defs>

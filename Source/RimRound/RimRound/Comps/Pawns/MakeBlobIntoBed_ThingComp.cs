@@ -15,7 +15,7 @@ namespace RimRound.Comps
     {
         public MakeBlobIntoBed_ThingComp() 
         {
-            gizmo = new MakeBlobIntoBedGizmo(this);
+
         }
 
         bool CheckBlobBedElligibility() 
@@ -37,8 +37,24 @@ namespace RimRound.Comps
             return canBeBed;
         }
 
+        public override void PostPostMake()
+        {
+            base.PostPostMake();
+            var comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
+            if (comp is null)
+            {
+                Log.Error("Comp was null in MakeBlobIntoBed ctor");
+                return;
+            }
+            gizmo = new MakeBlobIntoBedGizmo(this, comp);
+
+        }
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
+            if (gizmo is null)
+                yield break;
+
             if (!parent.AsPawn().InBed())
                 gizmo.Disable($"They must be in a bed to be one!");
             else

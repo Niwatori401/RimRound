@@ -7,6 +7,9 @@
 			<value>
 				<comps>
 					<li>
+						<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+					</li>					
+					<li>
 						<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
 					</li>					
 					<li>
@@ -23,16 +26,16 @@
 					</li>					
 					<li>
 						<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
-					</li>					
-					<li>
-						<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
-					</li>				
+					</li>								
 				</comps>
 			</value>
 		</nomatch>
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="Human"]/comps</xpath>
 			<value>
+				<li>
+					<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+				</li>				
 				<li>
 					<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
 				</li>				
@@ -50,10 +53,7 @@
 				</li>				
 				<li>
 					<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
-				</li>				
-				<li>
-					<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
-				</li>			
+				</li>							
 			</value>
 		</match>
 	</Operation>

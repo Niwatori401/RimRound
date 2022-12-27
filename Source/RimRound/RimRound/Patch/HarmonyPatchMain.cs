@@ -29,10 +29,12 @@ namespace RimRound.Patch
 				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompMilkableHuman", "ResourceAmount", MethodType.Getter), 
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
 
+			/* Possibly deprecated
 			ModCompatibilityUtility.TryPatch(
 				harmony,
 				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompHyperMilkableHuman", "ResourceAmount", MethodType.Getter),
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
+			*/
 
 			ModCompatibilityUtility.TryPatch(
 				harmony,

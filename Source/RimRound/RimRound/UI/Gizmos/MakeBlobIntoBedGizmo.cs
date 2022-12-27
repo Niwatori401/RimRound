@@ -13,9 +13,10 @@ namespace RimRound.UI
 {
     public class MakeBlobIntoBedGizmo : Command_Toggle
     {
-        public MakeBlobIntoBedGizmo(MakeBlobIntoBed_ThingComp comp) 
+        public MakeBlobIntoBedGizmo(MakeBlobIntoBed_ThingComp comp, FullnessAndDietStats_ThingComp fndComp) 
         {
             this.comp = comp;
+            this.fndComp = fndComp;
             defaultLabel = "Blob bed";
             defaultDesc = "Whether this pawn will serve as a resting place for other colonists";
             icon = Widgets.GetIconFor(RimWorld.ThingDefOf.SleepingSpot);
@@ -31,7 +32,29 @@ namespace RimRound.UI
             {
                 IntVec3 parentPos = new IntVec3(comp.parent.Position.x, comp.parent.Position.y, comp.parent.Position.z);
                 parentPos.z -= 1;
-                comp.blobBed = GenSpawn.Spawn(RimRound.Defs.ThingDefOf.BlobBed, parentPos, comp.parent.Map);
+
+                ThingDef bedToSpawn = null;
+
+                switch (fndComp?.perkLevels?.PerkToLevels?["RR_FoldsOfHeaven_Title"] ?? 4)
+                {
+                    case 0:
+                        bedToSpawn = Defs.ThingDefOf.BlobBed_FoldsOfHeaven_z;
+                        break;
+                    case 1:
+                        bedToSpawn = Defs.ThingDefOf.BlobBed_FoldsOfHeaven_I;
+                        break;
+                    case 2:
+                        bedToSpawn = Defs.ThingDefOf.BlobBed_FoldsOfHeaven_II;
+                        break;
+                    case 3:
+                        bedToSpawn = Defs.ThingDefOf.BlobBed_FoldsOfHeaven_III;
+                        break;
+                    default:
+                        Log.Error("Folds of Heaven level in Blob Bed gizmo");
+                        break;
+                }
+
+                comp.blobBed = GenSpawn.Spawn(bedToSpawn, parentPos, comp.parent.Map);
                 
                 comp.blobBed.SetFaction(Faction.OfPlayer, null);
                 Utilities.HediffUtility.AddHediffSeverity(Defs.HediffDefOf.RimRound_BlobBed, comp.parent.AsPawn(), 1.0f, true);
@@ -56,5 +79,6 @@ namespace RimRound.UI
         }
 
         MakeBlobIntoBed_ThingComp comp;
+        FullnessAndDietStats_ThingComp fndComp;
     }
 }

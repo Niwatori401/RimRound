@@ -12,7 +12,10 @@ namespace RimRound.Defs
     public class ThingDefOf
     {
         //Furniture
-        public static ThingDef BlobBed;
+        public static ThingDef BlobBed_FoldsOfHeaven_z;
+        public static ThingDef BlobBed_FoldsOfHeaven_I;
+        public static ThingDef BlobBed_FoldsOfHeaven_II;
+        public static ThingDef BlobBed_FoldsOfHeaven_III;
 
         //The default RimWorld one. There's not an entry in his defOf's for these
         public static ThingDef DoubleSleepingSpot;

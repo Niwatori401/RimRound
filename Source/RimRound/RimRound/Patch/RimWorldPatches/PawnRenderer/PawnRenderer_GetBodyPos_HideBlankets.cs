@@ -20,7 +20,10 @@ namespace RimRound.Patch
             {
                 if (pawn.CurrentBed() is Building_Bed b) 
                 {
-                    if (b.def.defName == Defs.ThingDefOf.BlobBed.defName ||
+                    if (b.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_z.defName ||
+                        b.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_I.defName ||
+                        b.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_II.defName ||
+                        b.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_III.defName ||
                         b.def.defName == ThingDefOf.SleepingSpot.defName ||
                         b.def.defName == Defs.ThingDefOf.DoubleSleepingSpot.defName)
                     {
