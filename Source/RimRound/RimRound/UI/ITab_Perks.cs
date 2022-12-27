@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 using static RimRound.Utilities.Perks;
 
 namespace RimRound.UI
@@ -235,6 +236,7 @@ namespace RimRound.UI
                 //To make it click first
                 if (Widgets.ButtonImage(drawRect, blockedTexture)) 
                 {
+                    SoundDefOf.Designate_Failed.PlayOneShotOnCamera(null);
                     //Put anything that needs to happen on click of prohibited button here
                 }
             }
@@ -260,6 +262,7 @@ namespace RimRound.UI
 
             if (Widgets.ButtonImage(drawRect, perk.perkIcon))
             {
+                SoundDefOf.Click.PlayOneShotOnCamera(null);
                 perk.onClickEvent(comp, perk);
             }
 
