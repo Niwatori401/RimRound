@@ -125,6 +125,7 @@
     <Compile Include="RimRound\AI\StatPart_ComfyTemperatureMin.cs" />
     <Compile Include="RimRound\AI\StatPart_CookSpeed.cs" />
     <Compile Include="RimRound\AI\StatPart_IncomingDamageFactor.cs" />
+    <Compile Include="RimRound\AI\StatPart_InjuryHealingFactor.cs" />
     <Compile Include="RimRound\AI\StatPart_PawnBeauty.cs" />
     <Compile Include="RimRound\AI\StatPart_SkinYieldBodyFat.cs" />
     <Compile Include="RimRound\AI\GameCondition_PsychicHungerIncrease.cs" />

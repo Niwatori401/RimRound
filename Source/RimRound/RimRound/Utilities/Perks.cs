@@ -559,6 +559,9 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_080_Gigantic))
+                    return new SuccessReport("Must be at least Titanic I to purchase!", false);
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
