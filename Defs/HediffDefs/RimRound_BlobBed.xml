@@ -9,10 +9,7 @@
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<labelNoun>bed-ness</labelNoun>
 		<description>are you a bed? Yeah.</description>	
-	
-	
-	
-	
+
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<comps>
@@ -37,4 +34,36 @@
 			</li>
 		</stages>
 	</HediffDef>
+	
+	<HediffDef>
+		<defName>RimRound_BlobBed_II</defName>
+		<label>BlobBed</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>bed-ness</labelNoun>
+		<description>are you a bed? Yeah.</description>	
+
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<comps>
+		</comps>
+		
+		<isBad>false</isBad>
+	
+	
+		<stages>
+			<!--Stage 1-->
+			<li>
+				<minSeverity>1.0</minSeverity>
+				<label>good REC SPOTS don't move</label>
+				<lifeThreatening>false</lifeThreatening>
+				<becomeVisible>false</becomeVisible>
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0</setMax>
+					</li>							
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>	
 </Defs>

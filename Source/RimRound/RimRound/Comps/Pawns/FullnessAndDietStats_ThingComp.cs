@@ -202,8 +202,6 @@ namespace RimRound.Comps
             }
         }
 
-        //static MethodInfo HungerRateIgnoringMalnutritionMI = typeof(Need_Food).GetProperty("HungerRateIgnoringMalnutrition", BindingFlags.NonPublic | BindingFlags.Instance).GetGetMethod(true);
-
         public void ProcessWeightLossRequests(int ticksBetweenChecks) 
         {
             if (!GeneralUtility.IsHashIntervalTick(ticksBetweenChecks))

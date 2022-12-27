@@ -40,28 +40,41 @@ namespace RimRound.Comps
         public override void PostPostMake()
         {
             base.PostPostMake();
-            var comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
-            if (comp is null)
+            fndComp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
+            if (fndComp is null)
             {
                 Log.Error("Comp was null in MakeBlobIntoBed ctor");
                 return;
             }
-            gizmo = new MakeBlobIntoBedGizmo(this, comp);
+            gizmo = new MakeBlobIntoBedGizmo(this, fndComp);
+            gizmoRec = new MakeRecreationSpotGizmo(this);
 
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (gizmo is null)
+            if (gizmo is null || gizmoRec is null || fndComp is null)
                 yield break;
 
             if (!parent.AsPawn().InBed())
+            {
                 gizmo.Disable($"They must be in a bed to be one!");
+                gizmoRec.Disable("They must be in a bed to be a rec spot!");
+            }
             else
+            {
                 gizmo.disabled = false;
+                gizmoRec.disabled = false;
+            }
 
             if (GlobalSettings.showBlobIntobedGizmo && CheckBlobBedElligibility())
+            {
                 yield return gizmo;
+
+                if ((fndComp?.perkLevels?.PerkToLevels?["RR_WeLikeToParty_Title"] ?? 0) > 0)
+                    yield return gizmoRec;
+            }
+                
         }
 
 
@@ -69,6 +82,7 @@ namespace RimRound.Comps
         {
             base.PostExposeData();
             Scribe_Values.Look<bool>(ref isBed, "blobIsBed", false);
+            Scribe_Values.Look<bool>(ref _isRecSpot, "isRecSpot", false);
         }
 
         bool isBed = false;
@@ -85,12 +99,21 @@ namespace RimRound.Comps
             }
         }
 
+        bool _isRecSpot = false;
+        public bool IsRecSpot 
+        {
+            get { return _isRecSpot; }
+            set { _isRecSpot = value; }
+        }
+
 
 
         const int ticksBetweenChecks = 15;
 
         public MakeBlobIntoBedGizmo gizmo;
-
+        public MakeRecreationSpotGizmo gizmoRec;
+        private FullnessAndDietStats_ThingComp fndComp;
+        public Thing recSpot;
         public Thing blobBed;
     }
 }

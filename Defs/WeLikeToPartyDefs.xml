@@ -1,0 +1,100 @@
+<Defs>
+  <JoyGiverDef>
+    <defName>Play_WithBlob</defName>
+    <giverClass>RimRound.AI.JoyGiver_PlayWithBlob</giverClass>
+    <baseChance>100</baseChance>
+    <thingDefs>
+      <li>WLTP_Building</li>
+    </thingDefs>
+    <jobDef>Play_WithBlobJob</jobDef>
+    <joyKind>Gaming_Dexterity</joyKind>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+
+  <JobDef>
+    <defName>Play_WithBlobJob</defName>
+    <driverClass>RimRound.AI.JobDriver_PlayWithBlob</driverClass>
+    <reportString>playing with flab.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <joySkill>Social</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyKind>Gaming_Dexterity</joyKind>
+    <taleOnCompletion>PlayedBlob</taleOnCompletion>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <TaleDef>
+    <defName>PlayedBlob</defName>
+    <label>played with blob</label>
+    <taleClass>Tale_SinglePawnAndDef</taleClass>
+    <type>Volatile</type>
+    <defSymbol>OBJECT</defSymbol>
+    <baseInterest>0.5</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun->[PAWN_nameDef] relaxing at a [OBJECT_label]</li>
+        <li>tale_noun->[PAWN_nameDef] playing with [OBJECT_label]</li>
+        <li>tale_noun->[PAWN_nameDef] enjoying [PAWN_objective]self at [OBJECT_label]</li>
+        <li>image->[PAWN_nameFull] poised over [OBJECT_label], [circumstance_group]</li>
+        <li>image->[PAWN_nameFull] sitting next to [OBJECT_label], [circumstance_group]</li>
+        <li>circumstance_phrase->[PAWN_possessive] body loose and relaxed</li>
+        <li>circumstance_phrase->gently massaging [PAWN_possessive] wrists</li>
+        <li>circumstance_phrase->[angstyverb] with a [AdjectiveAngsty] expression</li>
+        <li>circumstance_phrase->wearing a [AdjectiveAngsty] look</li>
+        <li>circumstance_phrase->[angstyverb]</li>
+        <li>desc_sentence->In the distance, a [TerrainFeature] is visible.</li>
+        <li>desc_sentence->[Quantity_adjphrase] [PersonJob]s are playing as well.</li>
+        <li>desc_sentence->[Quantity_adjphrase] [Animal]s play nearby.</li>
+        <li>desc_sentence->[PAWN_nameDef] is glowing with a [Color] aura.</li>
+        <li>desc_sentence->[PAWN_nameDef]'s features are exaggerated.</li>
+        <li>desc_sentence->[PAWN_nameDef] towers above the scene.</li>
+        <li>desc_sentence->[Quantity_adjphrase] [PersonJob]s are slumped in defeat.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>WLTP_Building</defName>
+    <label>blob</label>
+    <description>A soft, squishy individual ready to be handled. Trains dexterity play.</description>
+    <graphicData>
+      <texPath>BlankTexture</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>False</castEdgeShadows>
+    <altitudeLayer>Building</altitudeLayer>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <fillPercent>0.40</fillPercent>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <joyKind>Gaming_Dexterity</joyKind>
+      <buildingSizeCategory>Small</buildingSizeCategory>
+      <paintable>false</paintable>
+    </building>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>0</WorkToBuild>
+      <Mass>0</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>0</Beauty>
+      <JoyGainFactor>1.3</JoyGainFactor>
+    </statBases>
+    <size>(1,1)</size>
+    <pathCost>0</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <canOverlapZones>true</canOverlapZones>
+  </ThingDef>
+</Defs>
