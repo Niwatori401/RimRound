@@ -13,7 +13,23 @@ namespace RimRound.AI
     {
         public override string ExplanationPart(StatRequest req)
         {
-            return "Demonic devourment / Breakneck buffet";
+            float val = 0;
+            if (req.Thing is Pawn pawn)
+            {
+                if (pawn.RaceProps.Humanlike)
+                {
+                    FullnessAndDietStats_ThingComp comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+                    if (comp is null)
+                        return "";
+
+                    int demonicDevourmentLevel = comp.perkLevels.PerkToLevels?["RR_Demonic_Devourment_Title"] ?? 0;
+                    int breakneckbuffetLevel = comp.perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
+
+                    val += demonicDevourmentLevel * 0.1f + breakneckbuffetLevel * 0.25f;
+                }
+            }
+
+            return $"Demonic devourment / Breakneck buffet +{val * 100:f1}%";
         }
 
         public override void TransformValue(StatRequest req, ref float val)

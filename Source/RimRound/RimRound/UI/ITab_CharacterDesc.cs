@@ -18,6 +18,14 @@ namespace RimRound.UI
 
 		}
 
+        public override bool IsVisible
+        {
+            get
+            {
+                return PawnToShowInfoAbout.Faction == Faction.OfPlayer && PawnToShowInfoAbout.RaceProps.Humanlike;
+            }
+        }
+
         protected override void UpdateSize()
         {
             base.UpdateSize();

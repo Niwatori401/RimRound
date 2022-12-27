@@ -70,6 +70,8 @@
 	<RR_Mtw_meatMultiplierForWeight>Meat/skin yield multiplier</RR_Mtw_meatMultiplierForWeight>
 	<RR_Mtw_milkMultiplierForWeight>Milk multiplier for weight</RR_Mtw_milkMultiplierForWeight>
 
+	<RR_Mtw_minForCapableMovement>Min. for capable (movement)</RR_Mtw_minForCapableMovement>
+
 	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
 	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>
 	<RR_Mtw_BodyChangeExemptionSettings_Female>Dynamic bodies for Females</RR_Mtw_BodyChangeExemptionSettings_Female>

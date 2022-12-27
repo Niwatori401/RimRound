@@ -21,6 +21,14 @@ namespace RimRound.UI
             this.labelKey = "RR_PerkTabLabel";
         }
 
+        public override bool IsVisible
+        {
+            get
+            {
+                return GlobalSettings.weightToAdjustWiggleAngle.threshold == 401 && PawnToShowInfoAbout.Faction == Faction.OfPlayer && PawnToShowInfoAbout.RaceProps.Humanlike;
+            }
+        }
+
         private Pawn PawnToShowInfoAbout
         {
             get

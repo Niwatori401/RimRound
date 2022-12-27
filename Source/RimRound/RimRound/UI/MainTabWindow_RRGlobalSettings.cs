@@ -506,6 +506,9 @@ namespace RimRound.UI
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToAdjustWiggleAngle, numericFieldCount++, "RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksBetweenWeightGainRequestProcess, numericFieldCount++, "RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.meatMultiplierForWeight, numericFieldCount++, "RR_Mtw_meatMultiplierForWeight");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minForCapableMovement, numericFieldCount++, "RR_Mtw_minForCapableMovement", GameFont.Small, () => { RefreshMovementAbility(); });
+
+
 
             if (cachedMilkableColonistsActive is null)
             {
@@ -702,12 +705,24 @@ namespace RimRound.UI
 
         static void DirtyAllHediffSetCaches() 
         {
-            List<Pawn> pawns = GeneralUtility. GetAllGlobalHumanlikePawns();
+            List<Pawn> pawns = GeneralUtility.GetAllGlobalHumanlikePawns();
             foreach (Pawn pawn in pawns)
             {
                 if (pawn?.health?.hediffSet is HediffSet h)
                 {
                     h.DirtyCache();
+                }
+            }
+        }
+
+        static void RefreshMovementAbility() 
+        {
+            List<Pawn> pawns = GeneralUtility.GetAllGlobalHumanlikePawns();
+            foreach (Pawn pawn in pawns)
+            {
+                if (Utilities.HediffUtility.GetHediffOfDefFrom(RimRound.Defs.HediffDefOf.RimRound_Weight, pawn) is Hediff h)
+                {
+                    pawn.health.Notify_HediffChanged(h);
                 }
             }
         }
