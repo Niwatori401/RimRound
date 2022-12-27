@@ -148,7 +148,9 @@ namespace RimRound.Comps
                     _perkNamesForSaving.Add(x.Key);
                     _perkLevelValuesForSaving.Add(x.Value);
                 }
+                _perkLevelsToSpendForSaving = perkLevels.availablePoints;
 
+                Scribe_Values.Look<int>(ref _perkLevelsToSpendForSaving, "perkLevelsToSpend", 0);
                 Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
                 Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
             } 
@@ -159,6 +161,7 @@ namespace RimRound.Comps
                 if (_perkNamesForSaving is null)
                     _perkNamesForSaving = new List<string>();
 
+                Scribe_Values.Look<int>(ref _perkLevelsToSpendForSaving, "perkLevelsToSpend", 0);
                 Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
                 Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
                 // Initialize the perk levels dictionary somewhere else (like PostLoadInit())
@@ -194,6 +197,8 @@ namespace RimRound.Comps
             if (_perkNamesForSaving is null || _perkLevelValuesForSaving is null || _perkNamesForSaving.Count() == 0 || _perkLevelValuesForSaving.Count() == 0)
                 return;
 
+
+            perkLevels.availablePoints = _perkLevelsToSpendForSaving;
 
             for (int i = 0; i < _perkNamesForSaving.Count(); ++i)
             {
@@ -785,7 +790,7 @@ namespace RimRound.Comps
             } 
         }
         private float consumedNutrition = 0;
-
+        private int _perkLevelsToSpendForSaving = 0;
 
 
         public Queue<WeightGainRequest> activeWeightGainRequests = new Queue<WeightGainRequest>();

@@ -31,40 +31,43 @@ namespace RimRound.Comps
                 else 
                 {
                     canBeBed = false;
-                    isBed = false;
+                    _isBed = false;
                 }
             }
             return canBeBed;
         }
 
-        public override void PostPostMake()
+        public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            base.PostPostMake();
+            base.PostSpawnSetup(respawningAfterLoad);
             fndComp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
             if (fndComp is null)
             {
                 Log.Error("Comp was null in MakeBlobIntoBed ctor");
                 return;
             }
+
             gizmo = new MakeBlobIntoBedGizmo(this, fndComp);
             gizmoRec = new MakeRecreationSpotGizmo(this);
-
+            generatorGizmo = new MakeGeneratorGizmo(this, fndComp);
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (gizmo is null || gizmoRec is null || fndComp is null)
+            if (gizmo is null || gizmoRec is null || generatorGizmo is null || fndComp is null)
                 yield break;
 
             if (!parent.AsPawn().InBed())
             {
                 gizmo.Disable($"They must be in a bed to be one!");
                 gizmoRec.Disable("They must be in a bed to be a rec spot!");
+                generatorGizmo.Disable("They must be in a bed to be a generator!");
             }
             else
             {
                 gizmo.disabled = false;
                 gizmoRec.disabled = false;
+                generatorGizmo.disabled = false;
             }
 
             if (GlobalSettings.showBlobIntobedGizmo && CheckBlobBedElligibility())
@@ -73,6 +76,9 @@ namespace RimRound.Comps
 
                 if ((fndComp?.perkLevels?.PerkToLevels?["RR_WeLikeToParty_Title"] ?? 0) > 0)
                     yield return gizmoRec;
+
+                if ((fndComp?.perkLevels?.PerkToLevels?["RR_PaunchPower_Title"] ?? 0) > 0)
+                    yield return generatorGizmo;
             }
                 
         }
@@ -81,21 +87,26 @@ namespace RimRound.Comps
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look<bool>(ref isBed, "blobIsBed", false);
+            Scribe_Values.Look<bool>(ref _isBed, "blobIsBed", false);
             Scribe_Values.Look<bool>(ref _isRecSpot, "isRecSpot", false);
+            Scribe_Values.Look<bool>(ref _isPowerSpot, "isPowerSpot", false);
+
+            Scribe_References.Look<Thing>(ref recSpot, "recSpot");
+            Scribe_References.Look<Thing>(ref generatorSpot, "generatorSpot");
+            Scribe_References.Look<Thing>(ref blobBed, "blobBed");
         }
 
-        bool isBed = false;
+        bool _isBed = false;
         bool canBeBed = false;
         public bool IsBed 
         {
             get 
             {
-                return isBed;
+                return _isBed;
             }
             set 
             {
-                isBed = value;
+                _isBed = value;
             }
         }
 
@@ -106,14 +117,24 @@ namespace RimRound.Comps
             set { _isRecSpot = value; }
         }
 
+        bool _isPowerSpot = false;
+        public bool IsPowerSpot
+        {
+            get { return _isPowerSpot; }
+            set { _isPowerSpot = value; }
+        }
 
 
         const int ticksBetweenChecks = 15;
 
         public MakeBlobIntoBedGizmo gizmo;
         public MakeRecreationSpotGizmo gizmoRec;
+        public MakeGeneratorGizmo generatorGizmo;
+
+
         private FullnessAndDietStats_ThingComp fndComp;
         public Thing recSpot;
+        public Thing generatorSpot;
         public Thing blobBed;
     }
 }

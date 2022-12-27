@@ -1,0 +1,55 @@
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="BaseFlabGenerator">
+    <defName>RR_PaunchGenerator_I</defName>
+    <label>flab generator</label>
+    <description>Produces electricity from metabolic processes using advanced technology.</description>
+    <thingClass>Building</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>BlankTexture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <rect>(0.3,0,5.4,6)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>false</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <canOverlapZones>true</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>0</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>-30</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(1,1)</size>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-1000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <uiOrder>2110</uiOrder>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <designationHotKey>Misc6</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseFlabGenerator">
+	<defName>RR_PaunchGenerator_II</defName>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-2000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>	
+  </ThingDef>
+</Defs>

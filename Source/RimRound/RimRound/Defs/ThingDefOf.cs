@@ -18,6 +18,8 @@ namespace RimRound.Defs
         public static ThingDef BlobBed_FoldsOfHeaven_III;
 
         public static ThingDef WLTP_Building;
+        public static ThingDef RR_PaunchGenerator_I;
+        public static ThingDef RR_PaunchGenerator_II;
 
         //The default RimWorld one. There's not an entry in his defOf's for these
         public static ThingDef DoubleSleepingSpot;

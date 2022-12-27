@@ -15,6 +15,7 @@ namespace RimRound.Defs
         public static HediffDef RimRound_Fullness;
         public static HediffDef RimRound_BlobBed;
         public static HediffDef RimRound_BlobBed_II;
+        public static HediffDef RimRound_BlobBed_III;
         public static HediffDef RimRound_Diabetes;
         public static HediffDef RimRound_FLD;
         public static HediffDef RimRound_AFLD;

@@ -34,9 +34,9 @@ namespace RimRound.UI
 
                 ThingDef recSpotToSpawn = Defs.ThingDefOf.WLTP_Building;
 
-                comp.blobBed = GenSpawn.Spawn(recSpotToSpawn, parentPos, comp.parent.Map);
+                comp.recSpot = GenSpawn.Spawn(recSpotToSpawn, parentPos, comp.parent.Map);
 
-                comp.blobBed.SetFaction(Faction.OfPlayer, null);
+                comp.recSpot.SetFaction(Faction.OfPlayer, null);
                 Utilities.HediffUtility.AddHediffSeverity(Defs.HediffDefOf.RimRound_BlobBed_II, comp.parent.AsPawn(), 1.0f, true);
             }
             else
