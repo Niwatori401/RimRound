@@ -8,6 +8,7 @@ using RimRound.Defs;
 using RimRound.Utilities;
 using RimWorld;
 using UnityEngine;
+using RimRound.Comps;
 
 namespace RimRound.Hediffs
 {
@@ -21,7 +22,9 @@ namespace RimRound.Hediffs
         {
             get 
             {
-                return Mathf.Clamp(_personalFullnessPainMult, 0f, 10f); ;
+                var comp = this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+                int noPainStillGainLevel = comp.perkLevels.PerkToLevels["RR_NoPainStillGain_Title"];
+                return Mathf.Clamp(_personalFullnessPainMult - (0.1f * noPainStillGainLevel), 0f, 10f);
             }
             set 
             {
@@ -33,7 +36,7 @@ namespace RimRound.Hediffs
         {
             get
             {
-                return Mathf.Clamp(_personalFullnessMovementMult, 0f, 10f); ;
+                return Mathf.Clamp(_personalFullnessMovementMult, 0f, 10f);
             }
             set
             {
@@ -45,7 +48,7 @@ namespace RimRound.Hediffs
         {
             get
             {
-                return Mathf.Clamp(_personalFullnessEatingMult, 0f, 10f); ;
+                return Mathf.Clamp(_personalFullnessEatingMult, 0f, 10f);
             }
             set
             {
@@ -58,7 +61,7 @@ namespace RimRound.Hediffs
         {
             get
             {
-                return (base.PainOffset * GlobalSettings.fullnessHediffPainMult.threshold * _personalFullnessPainMult);
+                return (base.PainOffset * GlobalSettings.fullnessHediffPainMult.threshold * PersonalFullnessPainMult);
             }
         }
     }

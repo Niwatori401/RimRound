@@ -122,6 +122,7 @@
     <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
     <Compile Include="RimRound\AI\StatPart_ArmorRating_Blunt.cs" />
     <Compile Include="RimRound\AI\StatPart_ArmorRating_Sharp.cs" />
+    <Compile Include="RimRound\AI\StatPart_ComfyTemperatureMin.cs" />
     <Compile Include="RimRound\AI\StatPart_CookSpeed.cs" />
     <Compile Include="RimRound\AI\StatPart_IncomingDamageFactor.cs" />
     <Compile Include="RimRound\AI\StatPart_PawnBeauty.cs" />
