@@ -136,6 +136,7 @@ namespace RimRound.Utilities
                 {
                     p.perkLevels.PerkToLevels[perk.perkName] += 1;
                     p.perkLevels.availablePoints -= perk.cost;
+                    p.parent.AsPawn().health.capacities.Notify_CapacityLevelsDirty();
                 }
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
@@ -414,6 +415,10 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
+                    return new SuccessReport("Must be at least Gelatinous I to purchase", false);
+
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -453,12 +458,14 @@ namespace RimRound.Utilities
                 {
                     p.perkLevels.PerkToLevels[perk.perkName] += 1;
                     p.perkLevels.availablePoints -= perk.cost;
+                    p.parent.AsPawn().health.capacities.Notify_CapacityLevelsDirty();
                 }
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                if (GetInsufficientPerkLevelSuccessReport("RR_Demonic_Devourment_Title", 5, p) is SuccessReport s && !s)
                     return s;
+
 
                 float lardyIISeverity = 0.350f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p.parent.AsPawn());
                 if (p.parent.AsPawn().WeightHediff().Severity < lardyIISeverity)
@@ -529,8 +536,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                float gel1Severity = 1.410f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p.parent.AsPawn());
-                if (p.parent.AsPawn().WeightHediff().Severity < gel1Severity)
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
                     return new SuccessReport("Must be at least Gelatinous I to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -639,6 +645,12 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "Ratkin_Su" || race.defName == "Ratkin"))
+                    return new SuccessReport("Only Ratkin can purchase", false);
+
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    return new SuccessReport("Must be Gelatinous X to purchase", false);
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -659,6 +671,12 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "ReviaRaceAlien"))
+                    return new SuccessReport("Only Revia can purchase", false);
+
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    return new SuccessReport("Must be Gelatinous X to purchase", false);
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -746,8 +764,7 @@ namespace RimRound.Utilities
                 if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
                     return s;
 
-                float gel20Severity = 1000f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(p.parent.AsPawn());
-                if (p.parent.AsPawn().WeightHediff().Severity < gel20Severity)
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990_Gelatinous))
                     return new SuccessReport("Must be Gelatinous 20 to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)

@@ -120,8 +120,10 @@
     <Compile Include="FeedingTube\SectionLayer_ThingsFoodGrid.cs" />
     <Compile Include="FeedingTube\UI\Alert_FoodProcessorNeedsDispenser.cs" />
     <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
+    <Compile Include="RimRound\AI\StatPart_ArmorRating_Blunt.cs" />
+    <Compile Include="RimRound\AI\StatPart_ArmorRating_Sharp.cs" />
     <Compile Include="RimRound\AI\StatPart_CookSpeed.cs" />
-    <Compile Include="RimRound\AI\StatPart_EatingSpeed.cs" />
+    <Compile Include="RimRound\AI\StatPart_IncomingDamageFactor.cs" />
     <Compile Include="RimRound\AI\StatPart_PawnBeauty.cs" />
     <Compile Include="RimRound\AI\StatPart_SkinYieldBodyFat.cs" />
     <Compile Include="RimRound\AI\GameCondition_PsychicHungerIncrease.cs" />

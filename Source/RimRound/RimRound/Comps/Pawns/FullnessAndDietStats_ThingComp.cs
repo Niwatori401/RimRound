@@ -503,9 +503,30 @@ namespace RimRound.Comps
             {
                 int apexAbsorbtionLevel = perkLevels.PerkToLevels?["RR_Apex_Absorption_Title"] ?? 0;
                 int wg4000Level = perkLevels.PerkToLevels?["RR_WeightGain4000_Title"] ?? 0;
+                int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
+                int heavyRevianLevel = perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
+
+                if (makesAllTheRulesLevel > 0)
+                {
+                    Map currentMap = this.parent.Map;
+                    if (currentMap != null)
+                    {
+                        Vector2 vector = Find.WorldGrid.LongLatOf(currentMap.Tile);
+
+                        if (!(GenDate.HourFloat(Find.TickManager.TicksAbs, vector.x) is float time &&
+                            (time >= 18.0 ||
+                            time <= 6.0)))
+                        {
+                            makesAllTheRulesLevel = 0;
+                        }
+                    }
+                }
+
                 return _personalWeightGainModifier + 
                     0.1f * apexAbsorbtionLevel +
-                    0.2f * wg4000Level;
+                    0.2f * wg4000Level +
+                    0.5f * heavyRevianLevel +
+                    4.0f * makesAllTheRulesLevel;
             }
             set 
             {

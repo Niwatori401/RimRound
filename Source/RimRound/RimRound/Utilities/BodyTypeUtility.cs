@@ -43,6 +43,23 @@ namespace RimRound.Utilities
             }
         }
 
+        public static bool PawnIsOverWeightThreshold(Pawn pawn, BodyTypeDef bodyType)
+        {
+            float maxValueForBodyType = 0;
+            if (RacialBodyTypeInfoUtility.defaultFemaleSet.ContainsKey(bodyType))
+                maxValueForBodyType = RacialBodyTypeInfoUtility.defaultFemaleSet[bodyType].maxSeverity;
+            else
+                Log.Error("Only use default female bodytypedefs in PawnIsOverWeightThreshold!");
+
+            if (Utilities.HediffUtility.WeightHediff(pawn).Severity > maxValueForBodyType * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
         public static string GetProperBodyGraphicPathFromPawn(Pawn pawn) 
         {
             return ConvertBodyPathStringsIfNecessary("Things/Pawn/Humanlike/Bodies/Naked_" + pawn.story.bodyType.defName);

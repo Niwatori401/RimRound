@@ -28,8 +28,48 @@ namespace RimRound.Patch
             AlterConciousnessForPerks(ref __result, diffSet, capacity, impactors);
             AlterManipulationForPerks(ref __result, diffSet, capacity, impactors);
             AlterMovementForPerks(ref __result, diffSet, capacity, impactors);
-
+            AlterEatingForPerks(ref __result, diffSet, capacity, impactors);
             return;
+        }
+
+        private static void AlterEatingForPerks(ref float result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
+        {
+            if (capacity != PawnCapacityDefOf.Eating)
+                return;
+
+            Pawn pawn = diffSet.pawn;
+            if (!pawn.RaceProps.Humanlike)
+                return;
+
+            var comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+
+            int demonicDevourmentLevel = comp.perkLevels.PerkToLevels?["RR_Demonic_Devourment_Title"] ?? 0;
+            int breakneckbuffetLevel = comp.perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
+            int makesAllTheRulesLevel = comp.perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
+            int heavyRevianLevel = comp.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
+
+            if (makesAllTheRulesLevel > 0)
+            {
+                Map currentMap = pawn.Map;
+                if (currentMap == null)
+                    return;
+
+                Vector2 vector = Find.WorldGrid.LongLatOf(currentMap.Tile);
+
+                if (!(GenDate.HourFloat(Find.TickManager.TicksAbs, vector.x) is float time && 
+                    (time >= 18.0 ||
+                    time <= 6.0)))
+                {
+                    makesAllTheRulesLevel = 0;
+                }
+            }
+            
+
+            result += 
+                demonicDevourmentLevel * 0.1f + 
+                breakneckbuffetLevel * 0.25f + 
+                makesAllTheRulesLevel * 1.5f + 
+                heavyRevianLevel + 0.5f;
         }
 
         private static void AlterManipulationForPerks(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors) 
@@ -76,19 +116,13 @@ namespace RimRound.Patch
 
                 int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_ItsComingThisWay_Title"] ?? 0;
-                //int comfortableCorpulenceLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_Comfortable_Corpulence_Title"] ?? 0;
 
 
                 if (heavyRevianLevel > 0)
                 {
                     __result += 0.60f;
                 }
-                /*
-                if (comfortableCorpulenceLevel > 0)
-                {
-                    __result += comfortableCorpulenceLevel * 0.03f;                
-                }
-                */
+
                 if (itsComingThisWayLevel > 0)
                 {
                     float gelatinous11SeverityThreshold = 21.85f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);

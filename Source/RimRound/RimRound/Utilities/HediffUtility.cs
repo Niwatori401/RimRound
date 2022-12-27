@@ -104,62 +104,82 @@ namespace RimRound.Utilities
 
         public static void AddHediffSeverity(Hediff hediff, Pawn pawn, float amount, bool triggerMessages = true) 
         {
-            float cachedSeverity = hediff.Severity;
-
             if (hediff.def.defName == Defs.HediffDefOf.RimRound_Weight.defName)
             {
-                if (amount > 0)
-                {
-                    var comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-
-                    float personalWeightGainModifier = comp?.PersonalWeightGainModifier is float p ? p : 1f;
-
-                    float additionalSeverity = 
-                        GlobalSettings.weightGainMultiplier.threshold *
-                        personalWeightGainModifier *
-                        amount * 
-                        (pawn.gender == Gender.Male ? GlobalSettings.weightGainMultiplierMale.threshold : GlobalSettings.weightGainMultiplierFemale.threshold);
-
-                    if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
-                        hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.maxWeight.threshold);
-                    else if ((hediff.Severity + additionalSeverity) >= (Utilities.RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) * 21.85f))//gel 11
-                    {
-                        // don't add weight if missing perk!
-                        if (comp.perkLevels.PerkToLevels["RR_Even_Further_Beyond_Title"] >= 1)
-                        {
-                            hediff.Severity += additionalSeverity;
-                        }
-                    }
-                    else
-                        hediff.Severity += additionalSeverity;
-                }
-                else
-                {
-                    float personalWeightLossModifier = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.PersonalWeightLossModifier is float p ? p : 1f;
-
-                    float additionalSeverity = 
-                        GlobalSettings.weightLossMultiplier.threshold *
-                        personalWeightLossModifier *
-                        amount *
-                        (pawn.gender == Gender.Male ? GlobalSettings.weightLossMultiplierMale.threshold : GlobalSettings.weightLossMultiplierFemale.threshold);
-
-                    if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
-                        hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.minWeight.threshold);
-                    else
-                        hediff.Severity += additionalSeverity;
-                }
-
-
-                ThrowValueText(pawn, amount, 1, 0.0005f);
-
-
-                if (triggerMessages && GetWeightChangedMessage(pawn, cachedSeverity, hediff.Severity) is Message m)
-                    Messages.Message(m);
+                _HandleWeightHediff(hediff, pawn, amount, triggerMessages);
             }
             else
             {
                 hediff.Severity += amount;
             }
+        }
+
+        private static void _HandleWeightHediff(Hediff hediff, Pawn pawn, float amount, bool triggerMessages)
+        {
+            float cachedSeverity = hediff.Severity;
+
+            if (amount > 0)
+            {
+                _AddWeight(hediff, pawn, amount);
+            }
+            else
+            {
+                _LoseWeight(hediff, pawn, amount);
+            }
+
+
+            ThrowValueText(pawn, amount, 1, 0.0005f);
+
+
+            if (triggerMessages && GetWeightChangedMessage(pawn, cachedSeverity, hediff.Severity) is Message m)
+                Messages.Message(m);
+        }
+
+        private static void _LoseWeight(Hediff hediff, Pawn pawn, float amount)
+        {
+            float personalWeightLossModifier = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.PersonalWeightLossModifier is float p ? p : 1f;
+
+            float additionalSeverity =
+                GlobalSettings.weightLossMultiplier.threshold *
+                personalWeightLossModifier *
+                amount *
+                (pawn.gender == Gender.Male ? GlobalSettings.weightLossMultiplierMale.threshold : GlobalSettings.weightLossMultiplierFemale.threshold);
+
+            if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
+                hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.minWeight.threshold);
+            else
+                hediff.Severity += additionalSeverity;
+        }
+
+        private static void _AddWeight(Hediff hediff, Pawn pawn, float amount)
+        {
+            var comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+
+            float personalWeightGainModifier = comp?.PersonalWeightGainModifier is float p ? p : 1f;
+
+            float additionalSeverity =
+                GlobalSettings.weightGainMultiplier.threshold *
+                personalWeightGainModifier *
+                amount *
+                (pawn.gender == Gender.Male ? GlobalSettings.weightGainMultiplierMale.threshold : GlobalSettings.weightGainMultiplierFemale.threshold);
+
+            _AddWeightIfNotAtLimit(hediff, pawn, comp, additionalSeverity);
+        }
+
+        private static void _AddWeightIfNotAtLimit(Hediff hediff, Pawn pawn, FullnessAndDietStats_ThingComp comp, float additionalSeverity)
+        {
+            if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) > GlobalSettings.maxWeight.threshold)
+                hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.maxWeight.threshold);
+            else if ((hediff.Severity + additionalSeverity) >= (Utilities.RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) * 21.85f))//gel 11
+            {
+                // don't add weight if missing perk!
+                if (comp.perkLevels.PerkToLevels["RR_Even_Further_Beyond_Title"] >= 1)
+                {
+                    hediff.Severity += additionalSeverity;
+                }
+            }
+            else
+                hediff.Severity += additionalSeverity;
         }
 
         public static void AddHediffSeverity(HediffDef def, Pawn pawn, float amount, bool addIfHediffNull = false, bool triggerMessages = true)

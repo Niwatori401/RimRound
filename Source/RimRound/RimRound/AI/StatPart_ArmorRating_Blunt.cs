@@ -1,4 +1,5 @@
 ﻿using RimRound.Comps;
+using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -9,27 +10,27 @@ using Verse;
 
 namespace RimRound.AI
 {
-    internal class StatPart_EatingSpeed : StatPart
+    public class StatPart_ArmorRating_Blunt : StatPart
     {
         public override string ExplanationPart(StatRequest req)
         {
-            float val = 0;
             if (req.Thing is Pawn pawn)
             {
                 if (pawn.RaceProps.Humanlike)
                 {
+                    float val = 0;
                     FullnessAndDietStats_ThingComp comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
                     if (comp is null)
                         return "";
 
-                    int demonicDevourmentLevel = comp.perkLevels.PerkToLevels?["RR_Demonic_Devourment_Title"] ?? 0;
-                    int breakneckbuffetLevel = comp.perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
+                    int titanicTankLevel = comp.perkLevels.PerkToLevels?["RR_TitanicTank_Title"] ?? 0;
 
-                    val += demonicDevourmentLevel * 0.1f + breakneckbuffetLevel * 0.25f;
+                    val += titanicTankLevel * 0.1f;
+
+                    return "RR_TitanicTank_Title".Translate() + $" {(val * 100):f1}%";
                 }
             }
-
-            return $"Demonic devourment / Breakneck buffet +{val * 100:f1}%";
+            return "";
         }
 
         public override void TransformValue(StatRequest req, ref float val)
@@ -42,10 +43,9 @@ namespace RimRound.AI
                     if (comp is null)
                         return;
 
-                    int demonicDevourmentLevel = comp.perkLevels.PerkToLevels?["RR_Demonic_Devourment_Title"] ?? 0;
-                    int breakneckbuffetLevel = comp.perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
+                    int titanicTankLevel = comp.perkLevels.PerkToLevels?["RR_TitanicTank_Title"] ?? 0;
 
-                    val += demonicDevourmentLevel * 0.1f + breakneckbuffetLevel * 0.25f;
+                    val += titanicTankLevel * 0.1f;
                 }
             }
         }
