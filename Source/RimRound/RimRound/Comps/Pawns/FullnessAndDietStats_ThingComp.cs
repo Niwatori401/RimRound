@@ -154,6 +154,11 @@ namespace RimRound.Comps
             } 
             else if (Scribe.mode == LoadSaveMode.LoadingVars) 
             {
+                if (_perkLevelValuesForSaving is null)
+                    _perkLevelValuesForSaving = new List<int>();
+                if (_perkNamesForSaving is null)
+                    _perkNamesForSaving = new List<string>();
+
                 Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
                 Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
                 // Initialize the perk levels dictionary somewhere else (like PostLoadInit())
