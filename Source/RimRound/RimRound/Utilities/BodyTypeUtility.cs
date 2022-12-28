@@ -139,7 +139,8 @@ namespace RimRound.Utilities
 
         public static BodyTypeDef GetBodyTypeBasedOnWeightSeverity(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)
         {
-            //Dictionary<BodyTypeDef, float> bTD
+            BodyTypeDef result = null;
+
             if (personallyExempt || categoricallyExempt)
             {
                 return pawn.TryGetComp<FullnessAndDietStats_ThingComp>().DefaultBodyType ??
@@ -158,19 +159,54 @@ namespace RimRound.Utilities
 
             //Edge cases
             if (weightSeverity == 0)
-                return bodyTypeDictionary.First().Key;
+                result = bodyTypeDictionary.First().Key;
 
             if (weightSeverity >= bodyTypeDictionary.Last().Value.maxSeverity * weightRequirementMultiplier)
-                return bodyTypeDictionary.Last().Key;
+                result = bodyTypeDictionary.Last().Key;
 
 
             foreach (var x in bodyTypeDictionary)
             {
                 if (weightSeverity <= x.Value.maxSeverity * weightRequirementMultiplier)
-                    return x.Key;
+                {
+                    result = x.Key;
+                    break;
+                }
             }
 
-            return bodyTypeDictionary.First().Key;
+            if (result is null)
+                result = bodyTypeDictionary.First().Key;
+
+            if (!BodyTypeUtility.IsCustomBody(result))
+                return result;
+
+            int chosenBodyTypeNumber;
+            if (!int.TryParse(Regex.Match(result.defName, "[FM]_[0-9]{3}").Value.Substring(2), out chosenBodyTypeNumber)) 
+            {
+                Log.Error("Failed to get body number from defName.");
+                chosenBodyTypeNumber = 0;
+            }
+
+            if (chosenBodyTypeNumber < 100 || GlobalSettings.maxVisualSizeGelLevel.threshold == 20)
+                return result;
+
+
+            int maxSizeNumber = RacialBodyTypeInfoUtility.gelatinousLevelToCode[GlobalSettings.maxVisualSizeGelLevel.threshold];
+
+            if (maxSizeNumber < chosenBodyTypeNumber)
+            {
+                string resultString = result.defName;
+
+                if (Regex.IsMatch(result.defName, "F_[0-9]{3}"))
+                    resultString = Regex.Replace(result.defName, "F_[0-9]{3}", $"F_{maxSizeNumber}");
+                else if (Regex.IsMatch(result.defName, "M_[0-9]{3}"))
+                    resultString = Regex.Replace(result.defName, "M_[0-9]{3}", $"M_{maxSizeNumber}");
+
+                result = DefDatabase<BodyTypeDef>.GetNamed(resultString);
+            }
+
+
+            return result;
         }
 
         public static void UpdatePawnSprite(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false, bool forceUpdate = false, bool BodyCheck = true)
