@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/east/bodyTypes/F_200_Gelatinous_090</xpath>
 								<value>
-									<F_200_Gelatinous_090>(-1.48,0.46)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(-0.44,0.35)</F_200_Gelatinous_090>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_200_Gelatinous_090>(-1.48,0.46)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(-0.44,0.35)</F_200_Gelatinous_090>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_200_Gelatinous_090>(-1.48,0.46)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(-0.44,0.35)</F_200_Gelatinous_090>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_200_Gelatinous_090>(-1.48,0.46)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(-0.44,0.35)</F_200_Gelatinous_090>
 								</bodyTypes>
 							</east>
 						</value>							
@@ -112,13 +112,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/north/bodyTypes/F_200_Gelatinous_090</xpath>
 								<value>
-									<F_200_Gelatinous_090>(-0.01,-0.1)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(0,-0.49)</F_200_Gelatinous_090>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/north/bodyTypes</xpath>
 								<value>
-									<F_200_Gelatinous_090>(-0.01,-0.1)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(0,-0.49)</F_200_Gelatinous_090>
 								</value>						
 							</nomatch>
 						</match>
@@ -126,7 +126,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
-									<F_200_Gelatinous_090>(-0.01,-0.1)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(0,-0.49)</F_200_Gelatinous_090>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -136,7 +136,7 @@
 						<value>
 							<north>
 								<bodyTypes>
-									<F_200_Gelatinous_090>(-0.01,-0.1)</F_200_Gelatinous_090>
+									<F_200_Gelatinous_090>(0,-0.49)</F_200_Gelatinous_090>
 								</bodyTypes>
 							</north>
 						</value>							

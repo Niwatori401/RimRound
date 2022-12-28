@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/east/bodyTypes/F_010_Chubby_090</xpath>
 								<value>
-									<F_010_Chubby_090>(-0.24,0.28)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0.04,0.04)</F_010_Chubby_090>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_010_Chubby_090>(-0.24,0.28)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0.04,0.04)</F_010_Chubby_090>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_010_Chubby_090>(-0.24,0.28)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0.04,0.04)</F_010_Chubby_090>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_010_Chubby_090>(-0.24,0.28)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0.04,0.04)</F_010_Chubby_090>
 								</bodyTypes>
 							</east>
 						</value>							
@@ -112,13 +112,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/north/bodyTypes/F_010_Chubby_090</xpath>
 								<value>
-									<F_010_Chubby_090>(-0.01,0.41)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0,0.0400000000000001)</F_010_Chubby_090>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/north/bodyTypes</xpath>
 								<value>
-									<F_010_Chubby_090>(-0.01,0.41)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0,0.0400000000000001)</F_010_Chubby_090>
 								</value>						
 							</nomatch>
 						</match>
@@ -126,7 +126,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
-									<F_010_Chubby_090>(-0.01,0.41)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0,0.0400000000000001)</F_010_Chubby_090>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -136,7 +136,7 @@
 						<value>
 							<north>
 								<bodyTypes>
-									<F_010_Chubby_090>(-0.01,0.41)</F_010_Chubby_090>
+									<F_010_Chubby_090>(0,0.0400000000000001)</F_010_Chubby_090>
 								</bodyTypes>
 							</north>
 						</value>							

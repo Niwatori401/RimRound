@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anty the war ant race</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/layerOffset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south/layerOffset</xpath>
+								<value>
+									<layerOffset>-1.4</layerOffset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/south</xpath>
+								<value>
+									<layerOffset>-1.4</layerOffset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
+							<value>
+								<south>
+									<layerOffset>-1.4</layerOffset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<layerOffset>-1.4</layerOffset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/layerOffset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east/layerOffset</xpath>
+							<value>
+								<layerOffset>-1.25</layerOffset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/east</xpath>
+							<value>
+								<layerOffset>-1.25</layerOffset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
+						<value>
+							<east>
+								<layerOffset>-1.25</layerOffset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/layerOffset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north/layerOffset</xpath>
+							<value>
+								<layerOffset>-1.4</layerOffset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets/north</xpath>
+							<value>
+								<layerOffset>-1.4</layerOffset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[7]/offsets</xpath>
+						<value>
+							<north>
+								<layerOffset>-1.4</layerOffset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
