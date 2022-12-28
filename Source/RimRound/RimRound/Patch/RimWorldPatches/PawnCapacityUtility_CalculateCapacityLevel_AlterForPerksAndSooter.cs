@@ -14,9 +14,9 @@ namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(PawnCapacityUtility))]
     [HarmonyPatch(nameof(PawnCapacityUtility.CalculateCapacityLevel))]
-    class PawnCapacityUtility_CalculateCapacityLevel_AlterForPerksAndSooter
+    public class PawnCapacityUtility_CalculateCapacityLevel_AlterForPerksAndSooter
     {
-        static bool Prefix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
+        public static bool Prefix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
         {
             bool shouldSkipParentFunc = AlterMovementIfWearingScooter(ref __result, diffSet, capacity, impactors);
             
@@ -34,14 +34,17 @@ namespace RimRound.Patch
 
         private static void AlterEatingForPerks(ref float result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
         {
-            if (capacity != PawnCapacityDefOf.Eating)
+            if (capacity is null || capacity != PawnCapacityDefOf.Eating)
                 return;
 
-            Pawn pawn = diffSet.pawn;
-            if (!pawn.RaceProps.Humanlike)
+            Pawn pawn = diffSet?.pawn;
+            if (pawn is null || !pawn.RaceProps.Humanlike)
                 return;
 
             var comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
+
+            if (comp is null)
+                return;
 
             int demonicDevourmentLevel = comp.perkLevels.PerkToLevels?["RR_Demonic_Devourment_Title"] ?? 0;
             int breakneckbuffetLevel = comp.perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
@@ -76,9 +79,9 @@ namespace RimRound.Patch
         {
             if (capacity == PawnCapacityDefOf.Manipulation)
             {
-                Pawn pawn = diffSet.pawn;
+                Pawn pawn = diffSet?.pawn;
 
-                if (!pawn.RaceProps.Humanlike)
+                if (pawn is null || !pawn.RaceProps.Humanlike)
                     return;
 
                 int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
@@ -108,10 +111,10 @@ namespace RimRound.Patch
         {
             if (capacity == PawnCapacityDefOf.Moving)
             {
-                Pawn pawn = diffSet.pawn;
+                Pawn pawn = diffSet?.pawn;
 
 
-                if (!pawn.RaceProps.Humanlike)
+                if (pawn is null || !pawn.RaceProps.Humanlike)
                     return;
 
                 int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
@@ -143,7 +146,7 @@ namespace RimRound.Patch
             //Heavy revian
             if (capacity == PawnCapacityDefOf.Consciousness)
             {
-                Pawn pawn = diffSet.pawn;
+                Pawn pawn = diffSet?.pawn;
 
                 if (pawn is null)
                     return;
@@ -164,7 +167,10 @@ namespace RimRound.Patch
 
             if (capacity == PawnCapacityDefOf.Moving)
             {
-                Pawn pawn = diffSet.pawn;
+                Pawn pawn = diffSet?.pawn;
+
+                if (pawn is null)
+                    return true;
 
                 float scooterSpeed = 0.5f + 0.25f * pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_PracticalProblems_Title"] ?? 1;
 
