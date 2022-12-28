@@ -173,7 +173,7 @@ namespace RimRound.Utilities
             else if ((hediff.Severity + additionalSeverity) >= (Utilities.RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) * 21.85f))//gel 11
             {
                 // don't add weight if missing perk!
-                if (comp.perkLevels.PerkToLevels["RR_Even_Further_Beyond_Title"] >= 1)
+                if (Prefs.DevMode || comp.perkLevels.PerkToLevels["RR_Even_Further_Beyond_Title"] >= 1)
                 {
                     hediff.Severity += additionalSeverity;
                 }

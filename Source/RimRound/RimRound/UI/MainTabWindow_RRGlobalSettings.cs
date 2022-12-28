@@ -237,7 +237,7 @@ namespace RimRound.UI
             Rect exemptionSettingsGroup = new Rect(0.33333f * inRect.width, titleRect.yMax, 0.33333f * inRect.width, 200);
             DoExemptionSettingsGroup(exemptionSettingsGroup);
 
-            Rect generalSettingsRect = new Rect(exemptionSettingsGroup.x, exemptionSettingsGroup.yMax, exemptionSettingsGroup.width, exemptionSettingsGroup.height + 100);
+            Rect generalSettingsRect = new Rect(exemptionSettingsGroup.x, exemptionSettingsGroup.yMax, exemptionSettingsGroup.width, exemptionSettingsGroup.height + 200);
             DoGeneralSettingsGroup(generalSettingsRect);
 
             Rect gizmoSettingsGroupRect = new Rect(0.66666f * inRect.width, titleRect.yMax, 0.33333f * inRect.width, inRect.height - titleRect.height);
@@ -313,11 +313,11 @@ namespace RimRound.UI
             Text.Font = GameFont.Small;
 
             Rect generalSettingsCheckboxesRect = new Rect(0, generalSettingsTitleRect.yMax, generalSettingsRect.width, 300);
-
+            int jndex = 0;
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -326,7 +326,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 1,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -335,7 +335,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 2,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -344,7 +344,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 3,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -353,7 +353,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 4,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -362,7 +362,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 5,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -371,7 +371,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 6,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -380,7 +380,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 7,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -389,7 +389,7 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 8,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -398,12 +398,24 @@ namespace RimRound.UI
             CheckboxLabeled(new Rect
             {
                 x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * 9,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
             "RR_Mtw_GeneralSettings_OnlyUseStandardSprites".Translate(), ref GlobalSettings.onlyUseStandardBodyType, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+           "RR_Mtw_GeneralSettings_hidePacksForCustomBodies".Translate(), ref GlobalSettings.hidePacksForCustomBodies, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
+
+
+            generalSettingsCheckboxesRect.height = 30 * jndex;
             GUI.EndGroup();
         }
 
@@ -507,6 +519,7 @@ namespace RimRound.UI
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksBetweenWeightGainRequestProcess, numericFieldCount++, "RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.meatMultiplierForWeight, numericFieldCount++, "RR_Mtw_meatMultiplierForWeight");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minForCapableMovement, numericFieldCount++, "RR_Mtw_minForCapableMovement", GameFont.Small, () => { RefreshMovementAbility(); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxVisualSizeGelLevel, numericFieldCount++, "RR_Mtw_maxVisualSizeGelLevel", GameFont.Small, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
 
 
 

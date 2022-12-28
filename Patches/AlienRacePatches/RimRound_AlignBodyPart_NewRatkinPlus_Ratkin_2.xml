@@ -16,13 +16,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south/offset</xpath>
 								<value>
-									<offset>(-0.04, 0.16)</offset>
+									<offset>(-0.04, -0.33)</offset>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south</xpath>
 								<value>
-									<offset>(-0.04, 0.16)</offset>
+									<offset>(-0.04, -0.33)</offset>
 								</value>			
 							</nomatch>		
 						</match>
@@ -30,7 +30,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets</xpath>
 							<value>
 								<south>
-									<offset>(-0.04, 0.16)</offset>
+									<offset>(-0.04, -0.33)</offset>
 								</south>
 							</value>			
 						</nomatch>						
@@ -40,7 +40,7 @@
 						<value>
 							<offsets>
 								<south>
-									<offset>(-0.04, 0.16)</offset>
+									<offset>(-0.04, -0.33)</offset>
 								</south>						
 							</offsets>
 						</value>
@@ -54,13 +54,13 @@
 						<match Class="PatchOperationReplace">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east/offset</xpath>
 							<value>
-								<offset>(0.06, 0.27)</offset>
+								<offset>(0.06, -0.25)</offset>
 							</value>
 						</match>
 						<nomatch Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east</xpath>
 							<value>
-								<offset>(0.06, 0.27)</offset>
+								<offset>(0.06, -0.25)</offset>
 							</value>			
 						</nomatch>		
 					</match>
@@ -68,7 +68,7 @@
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets</xpath>
 						<value>
 							<east>
-								<offset>(0.06, 0.27)</offset>
+								<offset>(0.06, -0.25)</offset>
 							</east>
 						</value>			
 					</nomatch>						
@@ -81,13 +81,13 @@
 						<match Class="PatchOperationReplace">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north/offset</xpath>
 							<value>
-								<offset>(0.04, 0.16)</offset>
+								<offset>(0.04, -0.23)</offset>
 							</value>
 						</match>
 						<nomatch Class="PatchOperationAdd">
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north</xpath>
 							<value>
-								<offset>(0.04, 0.16)</offset>
+								<offset>(0.04, -0.23)</offset>
 							</value>			
 						</nomatch>		
 					</match>
@@ -95,7 +95,7 @@
 						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets</xpath>
 						<value>
 							<north>
-								<offset>(0.04, 0.16)</offset>
+								<offset>(0.04, -0.23)</offset>
 							</north>
 						</value>			
 					</nomatch>						

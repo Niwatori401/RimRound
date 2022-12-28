@@ -112,13 +112,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_005_Thick_090</xpath>
 								<value>
-									<F_005_Thick_090>(-0.02,-0.49)</F_005_Thick_090>
+									<F_005_Thick_090>(-0.02,0.05)</F_005_Thick_090>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
 								<value>
-									<F_005_Thick_090>(-0.02,-0.49)</F_005_Thick_090>
+									<F_005_Thick_090>(-0.02,0.05)</F_005_Thick_090>
 								</value>						
 							</nomatch>
 						</match>
@@ -126,7 +126,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
-									<F_005_Thick_090>(-0.02,-0.49)</F_005_Thick_090>
+									<F_005_Thick_090>(-0.02,0.05)</F_005_Thick_090>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -136,7 +136,7 @@
 						<value>
 							<north>
 								<bodyTypes>
-									<F_005_Thick_090>(-0.02,-0.49)</F_005_Thick_090>
+									<F_005_Thick_090>(-0.02,0.05)</F_005_Thick_090>
 								</bodyTypes>
 							</north>
 						</value>							
