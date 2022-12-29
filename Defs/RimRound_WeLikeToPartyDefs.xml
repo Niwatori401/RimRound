@@ -93,7 +93,6 @@
     <size>(1,1)</size>
     <pathCost>0</pathCost>
     <passability>PassThroughOnly</passability>
-    <designationCategory>Joy</designationCategory>
     <designationHotKey>Misc3</designationHotKey>
     <canOverlapZones>true</canOverlapZones>
   </ThingDef>

@@ -52,6 +52,7 @@ namespace TestingRange
                     new PatchData("RimRound_AddNutritionDensity",                       "setNutritionDensity",                      2, @$"{pathToRR}Patches\Food\VCE\"),
                     new PatchData("RimRound_AlterMaxToIngestAtOnceTag",                 "alterMaxToIngestTag",                      2, @$"{pathToRR}Patches\Food\VCE\"),
                     new PatchData("RimRound_AddOrModifyLayerOffsetOnCardinals",         "addOrAlterLayerOffsetOnCardinals",         3, @$"{pathToRR}Patches\AlienRacePatches\"),
+                    new PatchData("RimRound_AddITabs",                                  "addITabs",                                 2, @$"{pathToRR}Patches\AlienRacePatches\"),
                 };
 
                 CheckIfPathsValid(patchSets);
