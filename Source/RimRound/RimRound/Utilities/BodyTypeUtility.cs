@@ -62,7 +62,17 @@ namespace RimRound.Utilities
 
         public static string GetProperBodyGraphicPathFromPawn(Pawn pawn) 
         {
-            return ConvertBodyPathStringsIfNecessary("Things/Pawn/Humanlike/Bodies/Naked_" + pawn.story.bodyType.defName);
+            string basePath = "Things/Pawn/Humanlike/Bodies/";
+
+            if (pawn.def is AlienRace.ThingDef_AlienRace alienRace && 
+                alienRace.alienRace.graphicPaths.body.path is String alienBodyPath && 
+                alienBodyPath != basePath)
+            {
+                if (!IsRRBody(pawn.story.bodyType))
+                    return alienBodyPath + "Naked_" + pawn.story.bodyType.defName;
+            }
+
+            return ConvertBodyPathStringsIfNecessary(basePath +"Naked_" + pawn.story.bodyType.defName);
         }
 
         public static string ConvertBodyPathStringsIfNecessary(string originalBodyPath)
@@ -72,7 +82,7 @@ namespace RimRound.Utilities
             string basePath = originalBodyPath.Substring(0, lastSlash + 1);
             string bodyTypeName = originalBodyPath.Substring(lastSlash + 1);
 
-            if (!IsCustomBody(bodyTypeName))
+            if (!IsRRBody(bodyTypeName))
             {
                 return originalBodyPath;
             }
@@ -96,15 +106,15 @@ namespace RimRound.Utilities
             if (p?.story?.bodyType is null)
                 return false;
 
-            return IsCustomBody(p.story.bodyType);
+            return IsRRBody(p.story.bodyType);
         }
 
-        public static bool IsCustomBody(BodyTypeDef bodyTypeDef) 
+        public static bool IsRRBody(BodyTypeDef bodyTypeDef) 
         {
-            return IsCustomBody(bodyTypeDef.defName);
+            return IsRRBody(bodyTypeDef.defName);
         }
 
-        public static bool IsCustomBody(string bodyTypeDefString)
+        public static bool IsRRBody(string bodyTypeDefString)
         {
             string pattern = @"[fmFM]{1}_+[0-9]{3,}?a*_+[A-Za-z]+";
 
@@ -177,7 +187,7 @@ namespace RimRound.Utilities
             if (result is null)
                 result = bodyTypeDictionary.First().Key;
 
-            if (!BodyTypeUtility.IsCustomBody(result))
+            if (!BodyTypeUtility.IsRRBody(result))
                 return result;
 
             int chosenBodyTypeNumber;

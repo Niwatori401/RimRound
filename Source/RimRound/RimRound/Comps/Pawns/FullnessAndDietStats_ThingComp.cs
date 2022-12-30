@@ -456,7 +456,7 @@ namespace RimRound.Comps
         {
             get 
             {
-                if (defaultBodyType is null || BodyTypeUtility.IsCustomBody(defaultBodyType))
+                if (defaultBodyType is null || BodyTypeUtility.IsRRBody(defaultBodyType))
                 {
 
                     defaultBodyType = RimWorld.BodyTypeDefOf.Thin;

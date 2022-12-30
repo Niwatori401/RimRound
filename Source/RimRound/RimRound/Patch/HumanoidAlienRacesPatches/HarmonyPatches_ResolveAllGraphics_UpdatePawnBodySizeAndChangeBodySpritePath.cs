@@ -37,14 +37,19 @@ namespace RimRound.Patch
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 
-            ChangeBodyDrawPath(codeInstructions);
+            bool patch1Success = ChangeBodyDrawPath(codeInstructions);
 
-            ChangeDrawSize(codeInstructions);
+            bool patch2Success = ChangeDrawSize(codeInstructions);
+
+            if (!patch1Success || !patch2Success)
+            {
+                throw new Exception("Failed to transpile ResolveAllGraphicsPrefix.");
+            }
 
             return codeInstructions;
         }
 
-        private static void ChangeBodyDrawPath(List<CodeInstruction> codeInstructions)
+        private static bool ChangeBodyDrawPath(List<CodeInstruction> codeInstructions)
         {
             for (int i = 0; i < codeInstructions.Count; i++)
             {
@@ -54,9 +59,10 @@ namespace RimRound.Patch
 
                     codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Call, ChangeSpritePathMethodInfo));
                     codeInstructions.Insert(indexOfStoreStr, new CodeInstruction(OpCodes.Ldarg_0));
-                    break;
+                    return true;
                 }
             }
+            return false;
         }
 
         private static string ChangeSpritePathIfNecessary(string path, PawnGraphicSet pawnGraphicSet) 
@@ -69,7 +75,7 @@ namespace RimRound.Patch
             .GetMethod(nameof(HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath.ChangeSpritePathIfNecessary), BindingFlags.NonPublic | BindingFlags.Static);
 
 
-        private static void ChangeDrawSize(List<CodeInstruction> codeInstructions)
+        private static bool ChangeDrawSize(List<CodeInstruction> codeInstructions)
         {
             MethodInfo GetCurLifeStageMethodInfo = typeof(Pawn_AgeTracker).GetProperty("CurLifeStageRace", BindingFlags.Instance | BindingFlags.Public).GetGetMethod(true);
 
@@ -91,9 +97,11 @@ namespace RimRound.Patch
 
                     codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
                     codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Dup));
-                    break;
+                    return true;
                 }
             }
+
+            return false;
         }
 
         static readonly MethodInfo ReplacementMethodInfo = 

@@ -25,7 +25,7 @@ namespace RimRound.Patch
             if (pawn is null)
                 return;
 
-            if (BodyTypeUtility.IsCustomBody(pawn.story.bodyType))
+            if (BodyTypeUtility.IsRRBody(pawn.story.bodyType))
             {
                 __result = false;
             }
