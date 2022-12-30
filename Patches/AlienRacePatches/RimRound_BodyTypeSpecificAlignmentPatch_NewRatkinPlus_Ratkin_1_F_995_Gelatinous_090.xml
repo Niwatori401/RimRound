@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_995_Gelatinous_090</xpath>
 								<value>
-									<F_995_Gelatinous_090>(0,0)</F_995_Gelatinous_090>
+									<F_995_Gelatinous_090>(-0.4,0.2)</F_995_Gelatinous_090>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_995_Gelatinous_090>(0,0)</F_995_Gelatinous_090>
+									<F_995_Gelatinous_090>(-0.4,0.2)</F_995_Gelatinous_090>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_995_Gelatinous_090>(0,0)</F_995_Gelatinous_090>
+									<F_995_Gelatinous_090>(-0.4,0.2)</F_995_Gelatinous_090>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_995_Gelatinous_090>(0,0)</F_995_Gelatinous_090>
+									<F_995_Gelatinous_090>(-0.4,0.2)</F_995_Gelatinous_090>
 								</bodyTypes>
 							</east>
 						</value>							

@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_090_Titanic_090</xpath>
 								<value>
-									<F_090_Titanic_090>(1.5,-0.1)</F_090_Titanic_090>
+									<F_090_Titanic_090>(1.1,0.1)</F_090_Titanic_090>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_090_Titanic_090>(1.5,-0.1)</F_090_Titanic_090>
+									<F_090_Titanic_090>(1.1,0.1)</F_090_Titanic_090>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_090_Titanic_090>(1.5,-0.1)</F_090_Titanic_090>
+									<F_090_Titanic_090>(1.1,0.1)</F_090_Titanic_090>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_090_Titanic_090>(1.5,-0.1)</F_090_Titanic_090>
+									<F_090_Titanic_090>(1.1,0.1)</F_090_Titanic_090>
 								</bodyTypes>
 							</east>
 						</value>							
