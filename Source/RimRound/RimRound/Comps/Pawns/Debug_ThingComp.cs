@@ -250,7 +250,6 @@ namespace RimRound.Comps
                     };
 
 
-
                     yield return new Command_Action
                     {
                         defaultLabel = $"Change Extra Body Part Offset {(xy ? "Y" : "X")}{(positivity == 1 ? "+" : "-")} for {(cardinality == 0 ? "north" : (cardinality == 1 ? "east" : (cardinality == 2 ? "south" : "west")))} at {offsetAmounts[offsetAmountsIndex]}",

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MOD_NAME</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/south/layerOffset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/south/layerOffset</xpath>
+								<value>
+									<layerOffset>SOUTH_VAL</layerOffset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/south</xpath>
+								<value>
+									<layerOffset>SOUTH_VAL</layerOffset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets</xpath>
+							<value>
+								<south>
+									<layerOffset>SOUTH_VAL</layerOffset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<layerOffset>SOUTH_VAL</layerOffset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/east/layerOffset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/east/layerOffset</xpath>
+							<value>
+								<layerOffset>EAST_VAL</layerOffset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/east</xpath>
+							<value>
+								<layerOffset>EAST_VAL</layerOffset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets</xpath>
+						<value>
+							<east>
+								<layerOffset>EAST_VAL</layerOffset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/north/layerOffset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/north/layerOffset</xpath>
+							<value>
+								<layerOffset>NORTH_VAL</layerOffset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/north</xpath>
+							<value>
+								<layerOffset>NORTH_VAL</layerOffset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets</xpath>
+						<value>
+							<north>
+								<layerOffset>NORTH_VAL</layerOffset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_020_Corpulent</xpath>
 								<value>
-									<F_020_Corpulent>(0.7,-0.48)</F_020_Corpulent>
+									<F_020_Corpulent>(0.715,-0.5175)</F_020_Corpulent>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_020_Corpulent>(0.7,-0.48)</F_020_Corpulent>
+									<F_020_Corpulent>(0.715,-0.5175)</F_020_Corpulent>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_020_Corpulent>(0.7,-0.48)</F_020_Corpulent>
+									<F_020_Corpulent>(0.715,-0.5175)</F_020_Corpulent>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_020_Corpulent>(0.7,-0.48)</F_020_Corpulent>
+									<F_020_Corpulent>(0.715,-0.5175)</F_020_Corpulent>
 								</bodyTypes>
 							</east>
 						</value>							
@@ -112,13 +112,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_020_Corpulent</xpath>
 								<value>
-									<F_020_Corpulent>(-0.09,-0.47)</F_020_Corpulent>
+									<F_020_Corpulent>(-0.0875,-0.4725)</F_020_Corpulent>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
 								<value>
-									<F_020_Corpulent>(-0.09,-0.47)</F_020_Corpulent>
+									<F_020_Corpulent>(-0.0875,-0.4725)</F_020_Corpulent>
 								</value>						
 							</nomatch>
 						</match>
@@ -126,7 +126,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
-									<F_020_Corpulent>(-0.09,-0.47)</F_020_Corpulent>
+									<F_020_Corpulent>(-0.0875,-0.4725)</F_020_Corpulent>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -136,7 +136,7 @@
 						<value>
 							<north>
 								<bodyTypes>
-									<F_020_Corpulent>(-0.09,-0.47)</F_020_Corpulent>
+									<F_020_Corpulent>(-0.0875,-0.4725)</F_020_Corpulent>
 								</bodyTypes>
 							</north>
 						</value>							

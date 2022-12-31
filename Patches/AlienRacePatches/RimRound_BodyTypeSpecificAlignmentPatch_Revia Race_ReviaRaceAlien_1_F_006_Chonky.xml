@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_006_Chonky</xpath>
 								<value>
-									<F_006_Chonky>(0.46,-0.56)</F_006_Chonky>
+									<F_006_Chonky>(0.465,-0.5375)</F_006_Chonky>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_006_Chonky>(0.46,-0.56)</F_006_Chonky>
+									<F_006_Chonky>(0.465,-0.5375)</F_006_Chonky>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_006_Chonky>(0.46,-0.56)</F_006_Chonky>
+									<F_006_Chonky>(0.465,-0.5375)</F_006_Chonky>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_006_Chonky>(0.46,-0.56)</F_006_Chonky>
+									<F_006_Chonky>(0.465,-0.5375)</F_006_Chonky>
 								</bodyTypes>
 							</east>
 						</value>							
@@ -112,13 +112,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_006_Chonky</xpath>
 								<value>
-									<F_006_Chonky>(-0.06,-0.44)</F_006_Chonky>
+									<F_006_Chonky>(-0.0775,-0.4525)</F_006_Chonky>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
 								<value>
-									<F_006_Chonky>(-0.06,-0.44)</F_006_Chonky>
+									<F_006_Chonky>(-0.0775,-0.4525)</F_006_Chonky>
 								</value>						
 							</nomatch>
 						</match>
@@ -126,7 +126,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
-									<F_006_Chonky>(-0.06,-0.44)</F_006_Chonky>
+									<F_006_Chonky>(-0.0775,-0.4525)</F_006_Chonky>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -136,7 +136,7 @@
 						<value>
 							<north>
 								<bodyTypes>
-									<F_006_Chonky>(-0.06,-0.44)</F_006_Chonky>
+									<F_006_Chonky>(-0.0775,-0.4525)</F_006_Chonky>
 								</bodyTypes>
 							</north>
 						</value>							

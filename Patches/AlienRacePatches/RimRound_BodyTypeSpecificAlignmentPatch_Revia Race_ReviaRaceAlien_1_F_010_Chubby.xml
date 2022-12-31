@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_010_Chubby</xpath>
 								<value>
-									<F_010_Chubby>(0.54,-0.53)</F_010_Chubby>
+									<F_010_Chubby>(0.545,-0.5375)</F_010_Chubby>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_010_Chubby>(0.54,-0.53)</F_010_Chubby>
+									<F_010_Chubby>(0.545,-0.5375)</F_010_Chubby>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_010_Chubby>(0.54,-0.53)</F_010_Chubby>
+									<F_010_Chubby>(0.545,-0.5375)</F_010_Chubby>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_010_Chubby>(0.54,-0.53)</F_010_Chubby>
+									<F_010_Chubby>(0.545,-0.5375)</F_010_Chubby>
 								</bodyTypes>
 							</east>
 						</value>							
@@ -112,13 +112,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_010_Chubby</xpath>
 								<value>
-									<F_010_Chubby>(-0.09,-0.47)</F_010_Chubby>
+									<F_010_Chubby>(-0.0775,-0.4825)</F_010_Chubby>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
 								<value>
-									<F_010_Chubby>(-0.09,-0.47)</F_010_Chubby>
+									<F_010_Chubby>(-0.0775,-0.4825)</F_010_Chubby>
 								</value>						
 							</nomatch>
 						</match>
@@ -126,7 +126,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
-									<F_010_Chubby>(-0.09,-0.47)</F_010_Chubby>
+									<F_010_Chubby>(-0.0775,-0.4825)</F_010_Chubby>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -136,7 +136,7 @@
 						<value>
 							<north>
 								<bodyTypes>
-									<F_010_Chubby>(-0.09,-0.47)</F_010_Chubby>
+									<F_010_Chubby>(-0.0775,-0.4825)</F_010_Chubby>
 								</bodyTypes>
 							</north>
 						</value>							

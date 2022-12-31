@@ -1,18 +1,4 @@
 MOD_NAME,DEF_NAME,ITEM_INDEX,BODYTYPE_DEF,SOUTH_X,SOUTH_Y,EAST_X,EAST_Y,NORTH_X,NORTH_Y
-Revia Race,ReviaRaceAlien,1,F_005_Thick,-0.07,0.1,0.41,-0.56,-0.08,-0.48
-Revia Race,ReviaRaceAlien,1,F_006_Chonky,-0.07,0.1,0.46,-0.56,-0.06,-0.44
-Revia Race,ReviaRaceAlien,1,F_010_Chubby,-0.07,0.1,0.54,-0.53,-0.09,-0.47
-Revia Race,ReviaRaceAlien,1,F_020_Corpulent,-0.07,0.1,0.7,-0.48,-0.09,-0.47
-Revia Race,ReviaRaceAlien,1,F_030_Fat,-0.07,0.1,0.75,-0.38,-0.06,-0.43
-Revia Race,ReviaRaceAlien,1,F_040_Obese,-0.07,0.1,0.89,-0.3,-0.07,-0.45
-Revia Race,ReviaRaceAlien,1,F_050_MorbidlyObese,-0.07,0.1,1.07,-0.3,-0.07,-0.45
-Revia Race,ReviaRaceAlien,1,F_060_Lardy,-0.07,0.1,1.01,-0.28,-0.09,-0.32
-Revia Race,ReviaRaceAlien,1,F_070_Enormous,-0.07,0.1,1.41,-0.5,-0.07,-0.47
-Revia Race,ReviaRaceAlien,1,F_080_Gigantic,-0.07,0.1,1.81,-0.45,-0.11,-0.62
-Revia Race,ReviaRaceAlien,1,F_090_Titanic,-0.07,0.1,1.51,-0.15,-0.09,-0.47
-Revia Race,ReviaRaceAlien,1,F_100_Gelatinous,-0.07,0.1,1.51,0.2,-0.05,-1.12
-Revia Race,ReviaRaceAlien,1,Female,-0.06,0.12,0.45,-0.59,-0.078,-0.42
-Revia Race,ReviaRaceAlien,1,Thin,-0.06,0.12,0.38,-0.64,-0.078,-0.42
 NewRatkinPlus,Ratkin,1,F_005_Thick_090,0,0,-0.01,-0.1,-0.02,0.05
 NewRatkinPlus,Ratkin,1,F_006_Chonky_090,0,0,0,-0.12,-0.02,0.05
 NewRatkinPlus,Ratkin,1,F_010_Chubby_090,0,0,0.08,-0.11,-0.02,0.0700000000000001
@@ -24,26 +10,907 @@ NewRatkinPlus,Ratkin,1,F_060_Lardy_090,0,0,0.48,-0.04,-0.03,0.2
 NewRatkinPlus,Ratkin,1,F_070_Enormous_090,0,0,0.9,-0.2,-0.02,0.1
 NewRatkinPlus,Ratkin,1,F_080_Gigantic_090,0,0,1,-0.2,-0.05,0
 NewRatkinPlus,Ratkin,1,F_090_Titanic_090,0,0,1.1,0.1,-0.03,0.13
-NewRatkinPlus,Ratkin,1,F_100_Gelatinous_090,0,0,-0.4,0.2,-0.03,-0.31
-NewRatkinPlus,Ratkin,1,F_150_Gelatinous_090,0,0,-0.4,0.2,-0.01,-0.38
-NewRatkinPlus,Ratkin,1,F_200_Gelatinous_090,0,0,-0.4,0.2,-0.02,-0.46
-NewRatkinPlus,Ratkin,1,F_250_Gelatinous_090,0,0,-0.4,0.2,-0.01,-0.55
-NewRatkinPlus,Ratkin,1,F_300_Gelatinous_090,0,0,-0.4,0.2,-0.01,-0.65
-NewRatkinPlus,Ratkin,1,F_350_Gelatinous_090,0,0,-0.4,0.2,0,-0.73
-NewRatkinPlus,Ratkin,1,F_400_Gelatinous_090,0,0,-0.4,0.2,0.01,-0.87
-NewRatkinPlus,Ratkin,1,F_450_Gelatinous_090,0,0,-0.4,0.2,0,-1.06
-NewRatkinPlus,Ratkin,1,F_500_Gelatinous_090,0,0,-0.4,0.2,0,-1.34
-NewRatkinPlus,Ratkin,1,F_900_Gelatinous_090,0,0,-0.4,0.2,0,-1.88
-NewRatkinPlus,Ratkin,1,F_910_Gelatinous_090,0,0,-0.4,0.2,0,-2.3
-NewRatkinPlus,Ratkin,1,F_920_Gelatinous_090,0,0,-0.4,0.2,0,-2.7
-NewRatkinPlus,Ratkin,1,F_930_Gelatinous_090,0,0,-0.4,0.2,0,-3.4
-NewRatkinPlus,Ratkin,1,F_940_Gelatinous_090,0,0,-0.4,0.2,0,-4.8
-NewRatkinPlus,Ratkin,1,F_950_Gelatinous_090,0,0,-0.4,0.2,0,-6.7
-NewRatkinPlus,Ratkin,1,F_960_Gelatinous_090,0,0,-0.4,0.2,0,-8.7
-NewRatkinPlus,Ratkin,1,F_970_Gelatinous_090,0,0,-0.4,0.2,0,-10.8
-NewRatkinPlus,Ratkin,1,F_980_Gelatinous_090,0,0,-0.4,0.2,0,-13.2
-NewRatkinPlus,Ratkin,1,F_990_Gelatinous_090,0,0,-0.4,0.2,0,-15.5
-NewRatkinPlus,Ratkin,1,F_995_Gelatinous_090,0,0,-0.4,0.2,0,-19
+NewRatkinPlus,Ratkin,1,F_100_Gelatinous_090,0,0,0,0,-0.03,-0.31
+NewRatkinPlus,Ratkin,1,F_150_Gelatinous_090,0,0,0,0,-0.01,-0.38
+NewRatkinPlus,Ratkin,1,F_200_Gelatinous_090,0,0,0,0,-0.02,-0.46
+NewRatkinPlus,Ratkin,1,F_250_Gelatinous_090,0,0,0,0,-0.01,-0.55
+NewRatkinPlus,Ratkin,1,F_300_Gelatinous_090,0,0,0,0,-0.01,-0.65
+NewRatkinPlus,Ratkin,1,F_350_Gelatinous_090,0,0,0,0,0,-0.73
+NewRatkinPlus,Ratkin,1,F_400_Gelatinous_090,0,0,0,0,0.01,-0.87
+NewRatkinPlus,Ratkin,1,F_450_Gelatinous_090,0,0,0,0,0,-1.06
+NewRatkinPlus,Ratkin,1,F_500_Gelatinous_090,0,0,0,0,0,-1.34
+NewRatkinPlus,Ratkin,1,F_900_Gelatinous_090,0,0,0,0,0,-1.88
+NewRatkinPlus,Ratkin,1,F_910_Gelatinous_090,0,0,0,0,0,-2.3
+NewRatkinPlus,Ratkin,1,F_920_Gelatinous_090,0,0,0,0,0,-2.7
+NewRatkinPlus,Ratkin,1,F_930_Gelatinous_090,0,0,0,0,0,-3.4
+NewRatkinPlus,Ratkin,1,F_940_Gelatinous_090,0,0,0,0,0,-4.8
+NewRatkinPlus,Ratkin,1,F_950_Gelatinous_090,0,0,0,0,0,-6.7
+NewRatkinPlus,Ratkin,1,F_960_Gelatinous_090,0,0,0,0,0,-8.7
+NewRatkinPlus,Ratkin,1,F_970_Gelatinous_090,0,0,0,0,0,-10.8
+NewRatkinPlus,Ratkin,1,F_980_Gelatinous_090,0,0,0,0,0,-13.2
+NewRatkinPlus,Ratkin,1,F_990_Gelatinous_090,0,0,0,0,0,-15.5
+NewRatkinPlus,Ratkin,1,F_995_Gelatinous_090,0,0,0,0,0,-19
+NewRatkinPlus,Ratkin,1,F_010a_Chubby_090,0,0,0.06,-0.09,0.01,0.06
+NewRatkinPlus,Ratkin,1,F_020a_Corpulent_090,0,0,0.14,-0.05,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_030a_Fat_090,0,0,0.23,0.04,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_040a_Obese_090,0,0,0.23,0.04,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_050a_MorbidlyObese_090,0,0,0.45,-0.07,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_060a_Lardy_090,0,0,0.45,-0.07,-0.01,0.27
+NewRatkinPlus,Ratkin,1,F_070a_Enormous_090,0,0,0.45,-0.07,-0.04,0.08
+NewRatkinPlus,Ratkin,1,F_080a_Gigantic_090,0,0,0.45,-0.07,-0.02,-0.02
+NewRatkinPlus,Ratkin,1,F_090a_Titanic_090,0,0,0.45,-0.07,-0.05,0.14
+NewRatkinPlus,Ratkin,1,F_100a_Gelatinous_090,0,0,0,0,-0.09,-0.59
+NewRatkinPlus,Ratkin,1,F_150a_Gelatinous_090,0,0,0,0,-0.1,-0.69
+NewRatkinPlus,Ratkin,1,F_200a_Gelatinous_090,0,0,0,0,-0.1,-0.81
+NewRatkinPlus,Ratkin,1,F_250a_Gelatinous_090,0,0,0,0,-0.12,-0.95
+NewRatkinPlus,Ratkin,1,F_300a_Gelatinous_090,0,0,0,0,-0.12,-1.07
+NewRatkinPlus,Ratkin,1,F_350a_Gelatinous_090,0,0,0,0,-0.14,-1.25
+NewRatkinPlus,Ratkin,1,F_400a_Gelatinous_090,0,0,0,0,-0.14,-1.43
+NewRatkinPlus,Ratkin,1,F_450a_Gelatinous_090,0,0,0,0,-0.17,-1.7
+NewRatkinPlus,Ratkin,1,F_500a_Gelatinous_090,0,0,0,0,-0.2,-2.06
+NewRatkinPlus,Ratkin,1,F_900a_Gelatinous_090,0,0,0,0,-0.24,-2.78
+NewRatkinPlus,Ratkin,1,F_910a_Gelatinous_090,0,0,0,0,-0.29,-3.34
+NewRatkinPlus,Ratkin,1,F_920a_Gelatinous_090,0,0,0,0,-0.35,-4.24
+NewRatkinPlus,Ratkin,1,F_930a_Gelatinous_090,0,0,0,0,-0.4,-5.12
+NewRatkinPlus,Ratkin,1,F_940a_Gelatinous_090,0,0,0,0,-0.58,-7.02
+NewRatkinPlus,Ratkin,1,F_950a_Gelatinous_090,0,0,0,0,-0.78,-9.72
+NewRatkinPlus,Ratkin,1,F_960a_Gelatinous_090,0,0,0,0,-0.98,-12.52
+NewRatkinPlus,Ratkin,1,F_970a_Gelatinous_090,0,0,0,0,-1.08,-15.32
+NewRatkinPlus,Ratkin,1,F_980a_Gelatinous_090,0,0,0,0,-1.38,-18.92
+NewRatkinPlus,Ratkin,1,F_990a_Gelatinous_090,0,0,0,0,-1.68,-22.62
+NewRatkinPlus,Ratkin,1,F_995a_Gelatinous_090,0,0,0,0,-2,-27.12
+NewRatkinPlus,Ratkin,1,F_005_Thick,0,0,0,-0.13,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_006_Chonky,0,0,0.08,-0.13,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_010_Chubby,0,0,0.16,-0.13,-0.02,0.01
+NewRatkinPlus,Ratkin,1,F_020_Corpulent,0,0,0.33,-0.11,-0.03,0.02
+NewRatkinPlus,Ratkin,1,F_030_Fat,0,0,0.37,-0.03,-0.02,0.07
+NewRatkinPlus,Ratkin,1,F_040_Obese,0,0,0.49,0.04,0.01,0.07
+NewRatkinPlus,Ratkin,1,F_050_MorbidlyObese,0,0,0.62,0.02,-0.03,0.02
+NewRatkinPlus,Ratkin,1,F_060_Lardy,0,0,0.61,0.02,-0.03,0.19
+NewRatkinPlus,Ratkin,1,F_070_Enormous,0,0,0.85,0.02,-0.01,0.07
+NewRatkinPlus,Ratkin,1,F_080_Gigantic,0,0,0.87,0.04,-0.05,-0.1
+NewRatkinPlus,Ratkin,1,F_090_Titanic,0,0,0,0,-0.03,0.11
+NewRatkinPlus,Ratkin,1,F_100_Gelatinous,0,0,0,0,-0.01,-0.61
+NewRatkinPlus,Ratkin,1,F_150_Gelatinous,0,0,0,0,-0.01,-0.71
+NewRatkinPlus,Ratkin,1,F_200_Gelatinous,0,0,0,0,0,-0.87
+NewRatkinPlus,Ratkin,1,F_250_Gelatinous,0,0,0,0,0,-0.98
+NewRatkinPlus,Ratkin,1,F_300_Gelatinous,0,0,0,0,0,-1.15
+NewRatkinPlus,Ratkin,1,F_350_Gelatinous,0,0,0,0,0,-1.28
+NewRatkinPlus,Ratkin,1,F_400_Gelatinous,0,0,0,0,0,-1.49
+NewRatkinPlus,Ratkin,1,F_450_Gelatinous,0,0,0,0,0.02,-1.76
+NewRatkinPlus,Ratkin,1,F_500_Gelatinous,0,0,0,0,0.02,-2.12
+NewRatkinPlus,Ratkin,1,F_900_Gelatinous,0,0,0,0,0.02,-2.72
+NewRatkinPlus,Ratkin,1,F_910_Gelatinous,0,0,0,0,0.02,-3.32
+NewRatkinPlus,Ratkin,1,F_920_Gelatinous,0,0,0,0,0.12,-4.52
+NewRatkinPlus,Ratkin,1,F_930_Gelatinous,0,0,0,0,0.12,-6.42
+NewRatkinPlus,Ratkin,1,F_940_Gelatinous,0,0,0,0,0.12,-8.22
+NewRatkinPlus,Ratkin,1,F_950_Gelatinous,0,0,0,0,0.12,-10.02
+NewRatkinPlus,Ratkin,1,F_960_Gelatinous,0,0,0,0,0.12,-12.52
+NewRatkinPlus,Ratkin,1,F_970_Gelatinous,0,0,0,0,0.12,-15.02
+NewRatkinPlus,Ratkin,1,F_980_Gelatinous,0,0,0,0,0.22,-18.12
+NewRatkinPlus,Ratkin,1,F_990_Gelatinous,0,0,0,0,0.22,-21.12
+NewRatkinPlus,Ratkin,1,F_995_Gelatinous,0,0,0,0,0.22,-24.12
+NewRatkinPlus,Ratkin,1,F_010a_Chubby,0,0,0.16,-0.19,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_020a_Corpulent,0,0,0.33,-0.11,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_030a_Fat,0,0,0.37,0.02,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_040a_Obese,0,0,0.45,-0.01,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_050a_MorbidlyObese,0,0,0.59,-0.04,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_060a_Lardy,0,0,0.61,0.02,-0.01,0.25
+NewRatkinPlus,Ratkin,1,F_070a_Enormous,0,0,0.77,-0.06,-0.05,0
+NewRatkinPlus,Ratkin,1,F_080a_Gigantic,0,0,0,0,-0.02,-0.2
+NewRatkinPlus,Ratkin,1,F_090a_Titanic,0,0,0,0,-0.06,0.01
+NewRatkinPlus,Ratkin,1,F_100a_Gelatinous,0,0,0,0,-0.13,-1.05
+NewRatkinPlus,Ratkin,1,F_150a_Gelatinous,0,0,0,0,-0.14,-1.25
+NewRatkinPlus,Ratkin,1,F_200a_Gelatinous,0,0,0,0,-0.14,-1.43
+NewRatkinPlus,Ratkin,1,F_250a_Gelatinous,0,0,0,0,-0.16,-1.6
+NewRatkinPlus,Ratkin,1,F_300a_Gelatinous,0,0,0,0,-0.18,-1.18
+NewRatkinPlus,Ratkin,1,F_350a_Gelatinous,0,0,0,0,-0.2,-2.06
+NewRatkinPlus,Ratkin,1,F_400a_Gelatinous,0,0,0,0,-0.22,-2.43
+NewRatkinPlus,Ratkin,1,F_450a_Gelatinous,0,0,0,0,-0.24,-2.78
+NewRatkinPlus,Ratkin,1,F_500a_Gelatinous,0,0,0,0,-0.29,-3.34
+NewRatkinPlus,Ratkin,1,F_900a_Gelatinous,0,0,0,0,-0.35,-4.24
+NewRatkinPlus,Ratkin,1,F_910a_Gelatinous,0,0,0,0,-0.4,-5.12
+NewRatkinPlus,Ratkin,1,F_920a_Gelatinous,0,0,0,0,-0.58,-7.02
+NewRatkinPlus,Ratkin,1,F_930a_Gelatinous,0,0,0,0,-0.78,-9.72
+NewRatkinPlus,Ratkin,1,F_940a_Gelatinous,0,0,0,0,-0.98,-12.52
+NewRatkinPlus,Ratkin,1,F_950a_Gelatinous,0,0,0,0,-1.08,-15.32
+NewRatkinPlus,Ratkin,1,F_960a_Gelatinous,0,0,0,0,-1.38,-18.92
+NewRatkinPlus,Ratkin,1,F_970a_Gelatinous,0,0,0,0,-1.68,-22.62
+NewRatkinPlus,Ratkin,1,F_980a_Gelatinous,0,0,0,0,-2,-27.12
+NewRatkinPlus,Ratkin,1,F_990a_Gelatinous,0,0,0,0,-2.28,-32.12
+NewRatkinPlus,Ratkin,1,F_995a_Gelatinous,0,0,0,0,-2.78,-37.12
+NewRatkinPlus,Ratkin,1,M_005_Thick_090,0,0,0,-0.13,-0.02,0.06
+NewRatkinPlus,Ratkin,1,M_006_Chonky_090,0,0,0,-0.13,0,0.06
+NewRatkinPlus,Ratkin,1,M_010_Chubby_090,0,0,0,-0.13,-0.02,-0.03
+NewRatkinPlus,Ratkin,1,M_020_Corpulent_090,0,0,0.12,-0.05,0.01,0.03
+NewRatkinPlus,Ratkin,1,M_030_Fat_090,0,0,0.12,-0.05,0,-0.01
+NewRatkinPlus,Ratkin,1,M_040_Obese_090,0,0,0.39,-0.05,0,0.05
+NewRatkinPlus,Ratkin,1,M_050_MorbidlyObese_090,0,0,0.39,-0.05,-0.01,0.14
+NewRatkinPlus,Ratkin,1,M_060_Lardy_090,0,0,0,0,0.04,0.22
+NewRatkinPlus,Ratkin,1,M_070_Enormous_090,0,0,0,0,0.02,0.08
+NewRatkinPlus,Ratkin,1,M_080_Gigantic_090,0,0,0,0,0,-0.06
+NewRatkinPlus,Ratkin,1,M_090_Titanic_090,0,0,0,0,-0.06,0.16
+NewRatkinPlus,Ratkin,1,M_100_Gelatinous_090,0,0,0,0,-0.02,-0.21
+NewRatkinPlus,Ratkin,1,M_150_Gelatinous_090,0,0,0,0,-0.02,-0.26
+NewRatkinPlus,Ratkin,1,M_200_Gelatinous_090,0,0,0,0,-0.02,-0.34
+NewRatkinPlus,Ratkin,1,M_250_Gelatinous_090,0,0,0,0,-0.01,-0.44
+NewRatkinPlus,Ratkin,1,M_300_Gelatinous_090,0,0,0,0,-0.01,-0.52
+NewRatkinPlus,Ratkin,1,M_350_Gelatinous_090,0,0,0,0,-0.01,-0.6
+NewRatkinPlus,Ratkin,1,M_400_Gelatinous_090,0,0,0,0,-0.01,-0.73
+NewRatkinPlus,Ratkin,1,M_450_Gelatinous_090,0,0,0,0,-0.01,-0.88
+NewRatkinPlus,Ratkin,1,M_500_Gelatinous_090,0,0,0,0,-0.01,-1.13
+NewRatkinPlus,Ratkin,1,M_900_Gelatinous_090,0,0,0,0,-0.01,-1.62
+NewRatkinPlus,Ratkin,1,M_910_Gelatinous_090,0,0,0,0,-0.01,-1.97
+NewRatkinPlus,Ratkin,1,M_920_Gelatinous_090,0,0,0,0,-0.01,-2.57
+NewRatkinPlus,Ratkin,1,M_930_Gelatinous_090,0,0,0,0,-0.01,-3.27
+NewRatkinPlus,Ratkin,1,M_940_Gelatinous_090,0,0,0,0,-0.01,-4.47
+NewRatkinPlus,Ratkin,1,M_950_Gelatinous_090,0,0,0,0,-0.01,-6.27
+NewRatkinPlus,Ratkin,1,M_960_Gelatinous_090,0,0,0,0,-0.01,-8.07
+NewRatkinPlus,Ratkin,1,M_970_Gelatinous_090,0,0,0,0,-0.01,-10.7
+NewRatkinPlus,Ratkin,1,M_980_Gelatinous_090,0,0,0,0,-0.01,-12.7
+NewRatkinPlus,Ratkin,1,M_990_Gelatinous_090,0,0,0,0,-0.01,-15.07
+NewRatkinPlus,Ratkin,1,M_995_Gelatinous_090,0,0,0,0,-0.01,-18.07
+NewRatkinPlus,Ratkin,1,M_005_Thick,0,0,0.09,-0.15,-0.01,-0.05
+NewRatkinPlus,Ratkin,1,M_006_Chonky,0,0,0.09,-0.21,0,-0.06
+NewRatkinPlus,Ratkin,1,M_010_Chubby,0,0,0.09,-0.21,-0.03,-0.16
+NewRatkinPlus,Ratkin,1,M_020_Corpulent,0,0,0.35,-0.21,0.03,-0.06
+NewRatkinPlus,Ratkin,1,M_030_Fat,0,0,0.35,-0.21,0,-0.06
+NewRatkinPlus,Ratkin,1,M_040_Obese,0,0,0.56,-0.14,0,0.02
+NewRatkinPlus,Ratkin,1,M_050_MorbidlyObese,0,0,0.56,-0.14,-0.01,0.12
+NewRatkinPlus,Ratkin,1,M_060_Lardy,0,0,0,0,0.05,0.15
+NewRatkinPlus,Ratkin,1,M_070_Enormous,0,0,0,0,0.02,-0.01
+NewRatkinPlus,Ratkin,1,M_080_Gigantic,0,0,0,0,0.02,-0.18
+NewRatkinPlus,Ratkin,1,M_090_Titanic,0,0,0,0,-0.08,0.13
+NewRatkinPlus,Ratkin,1,M_100_Gelatinous,0,0,0,0,-0.01,-0.47
+NewRatkinPlus,Ratkin,1,M_150_Gelatinous,0,0,0,0,-0.01,-0.6
+NewRatkinPlus,Ratkin,1,M_200_Gelatinous,0,0,0,0,-0.01,-0.73
+NewRatkinPlus,Ratkin,1,M_250_Gelatinous,0,0,0,0,-0.01,-0.81
+NewRatkinPlus,Ratkin,1,M_300_Gelatinous,0,0,0,0,-0.01,-0.95
+NewRatkinPlus,Ratkin,1,M_350_Gelatinous,0,0,0,0,-0.01,-1.13
+NewRatkinPlus,Ratkin,1,M_400_Gelatinous,0,0,0,0,-0.01,-1.35
+NewRatkinPlus,Ratkin,1,M_450_Gelatinous,0,0,0,0,-0.01,-1.62
+NewRatkinPlus,Ratkin,1,M_500_Gelatinous,0,0,0,0,-0.01,-1.97
+NewRatkinPlus,Ratkin,1,M_900_Gelatinous,0,0,0,0,-0.01,-2.57
+NewRatkinPlus,Ratkin,1,M_910_Gelatinous,0,0,0,0,-0.01,-3.27
+NewRatkinPlus,Ratkin,1,M_920_Gelatinous,0,0,0,0,-0.01,-4.47
+NewRatkinPlus,Ratkin,1,M_930_Gelatinous,0,0,0,0,-0.01,-6.27
+NewRatkinPlus,Ratkin,1,M_940_Gelatinous,0,0,0,0,-0.01,-8.07
+NewRatkinPlus,Ratkin,1,M_950_Gelatinous,0,0,0,0,-0.01,-10.7
+NewRatkinPlus,Ratkin,1,M_960_Gelatinous,0,0,0,0,-0.01,-12.7
+NewRatkinPlus,Ratkin,1,M_970_Gelatinous,0,0,0,0,-0.01,-15.07
+NewRatkinPlus,Ratkin,1,M_980_Gelatinous,0,0,0,0,-0.01,-18.07
+NewRatkinPlus,Ratkin,1,M_990_Gelatinous,0,0,0,0,-0.01,-21.07
+NewRatkinPlus,Ratkin,1,M_995_Gelatinous,0,0,0,0,-0.01,-24.07
+Anty the war ant race,Anty,5,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
+Anty the war ant race,Anty,5,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
+Anty the war ant race,Anty,5,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
+Anty the war ant race,Anty,5,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
+Anty the war ant race,Anty,5,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
+Anty the war ant race,Anty,5,F_040_Obese_090,0,0,0.39,0.11,0,0.06
+Anty the war ant race,Anty,5,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
+Anty the war ant race,Anty,5,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
+Anty the war ant race,Anty,5,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
+Anty the war ant race,Anty,5,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
+Anty the war ant race,Anty,5,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
+Anty the war ant race,Anty,5,F_100_Gelatinous_090,0,0,-0.04,0.15,-0.01,-0.34
+Anty the war ant race,Anty,5,F_150_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.41
+Anty the war ant race,Anty,5,F_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.49
+Anty the war ant race,Anty,5,F_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.58
+Anty the war ant race,Anty,5,F_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.68
+Anty the war ant race,Anty,5,F_350_Gelatinous_090,0,0,-0.04,0.15,0.02,-0.76
+Anty the war ant race,Anty,5,F_400_Gelatinous_090,0,0,-0.04,0.15,0.03,-0.9
+Anty the war ant race,Anty,5,F_450_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.09
+Anty the war ant race,Anty,5,F_500_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.37
+Anty the war ant race,Anty,5,F_900_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.91
+Anty the war ant race,Anty,5,F_910_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.33
+Anty the war ant race,Anty,5,F_920_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.73
+Anty the war ant race,Anty,5,F_930_Gelatinous_090,0,0,-0.04,0.15,0.02,-3.43
+Anty the war ant race,Anty,5,F_940_Gelatinous_090,0,0,-0.04,0.15,0.02,-4.83
+Anty the war ant race,Anty,5,F_950_Gelatinous_090,0,0,-0.04,0.15,0.02,-6.73
+Anty the war ant race,Anty,5,F_960_Gelatinous_090,0,0,-0.04,0.15,0.02,-8.73
+Anty the war ant race,Anty,5,F_970_Gelatinous_090,0,0,-0.04,0.15,0.02,-10.83
+Anty the war ant race,Anty,5,F_980_Gelatinous_090,0,0,-0.04,0.15,0.02,-13.23
+Anty the war ant race,Anty,5,F_990_Gelatinous_090,0,0,-0.04,0.15,0.02,-15.53
+Anty the war ant race,Anty,5,F_995_Gelatinous_090,0,0,-0.04,0.15,0.02,-19.03
+Anty the war ant race,Anty,5,F_010a_Chubby_090,0,0,0.02,0.06,0.03,0.03
+Anty the war ant race,Anty,5,F_020a_Corpulent_090,0,0,0.1,0.1,0,0.08
+Anty the war ant race,Anty,5,F_030a_Fat_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,5,F_040a_Obese_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,5,F_050a_MorbidlyObese_090,0,0,0.41,0.08,0,0.08
+Anty the war ant race,Anty,5,F_060a_Lardy_090,0,0,0.41,0.08,0.01,0.24
+Anty the war ant race,Anty,5,F_070a_Enormous_090,0,0,0.41,0.08,-0.02,0.05
+Anty the war ant race,Anty,5,F_080a_Gigantic_090,0,0,0.41,0.08,0,-0.05
+Anty the war ant race,Anty,5,F_090a_Titanic_090,0,0,0.41,0.08,-0.03,0.11
+Anty the war ant race,Anty,5,F_100a_Gelatinous_090,0,0,-0.04,0.15,-0.07,-0.62
+Anty the war ant race,Anty,5,F_150a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.72
+Anty the war ant race,Anty,5,F_200a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.84
+Anty the war ant race,Anty,5,F_250a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-0.98
+Anty the war ant race,Anty,5,F_300a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-1.1
+Anty the war ant race,Anty,5,F_350a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,5,F_400a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,5,F_450a_Gelatinous_090,0,0,-0.04,0.15,-0.15,-1.73
+Anty the war ant race,Anty,5,F_500a_Gelatinous_090,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,5,F_900a_Gelatinous_090,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,5,F_910a_Gelatinous_090,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,5,F_920a_Gelatinous_090,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,5,F_930a_Gelatinous_090,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,5,F_940a_Gelatinous_090,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,5,F_950a_Gelatinous_090,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,5,F_960a_Gelatinous_090,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,5,F_970a_Gelatinous_090,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,5,F_980a_Gelatinous_090,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,5,F_990a_Gelatinous_090,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,5,F_995a_Gelatinous_090,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,5,F_005_Thick,0,0,-0.04,0.02,0,0.01
+Anty the war ant race,Anty,5,F_006_Chonky,0,0,0.04,0.02,0,0.01
+Anty the war ant race,Anty,5,F_010_Chubby,0,0,0.12,0.02,0,-0.02
+Anty the war ant race,Anty,5,F_020_Corpulent,0,0,0.29,0.04,-0.01,-0.01
+Anty the war ant race,Anty,5,F_030_Fat,0,0,0.33,0.12,0,0.04
+Anty the war ant race,Anty,5,F_040_Obese,0,0,0.45,0.19,0.03,0.04
+Anty the war ant race,Anty,5,F_050_MorbidlyObese,0,0,0.58,0.17,-0.01,-0.01
+Anty the war ant race,Anty,5,F_060_Lardy,0,0,0.57,0.17,-0.01,0.16
+Anty the war ant race,Anty,5,F_070_Enormous,0,0,0.81,0.17,0.01,0.04
+Anty the war ant race,Anty,5,F_080_Gigantic,0,0,0.83,0.19,-0.03,-0.13
+Anty the war ant race,Anty,5,F_090_Titanic,0,0,-0.04,0.15,-0.01,0.08
+Anty the war ant race,Anty,5,F_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.64
+Anty the war ant race,Anty,5,F_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.74
+Anty the war ant race,Anty,5,F_200_Gelatinous,0,0,-0.04,0.15,0.02,-0.9
+Anty the war ant race,Anty,5,F_250_Gelatinous,0,0,-0.04,0.15,0.02,-1.01
+Anty the war ant race,Anty,5,F_300_Gelatinous,0,0,-0.04,0.15,0.02,-1.18
+Anty the war ant race,Anty,5,F_350_Gelatinous,0,0,-0.04,0.15,0.02,-1.31
+Anty the war ant race,Anty,5,F_400_Gelatinous,0,0,-0.04,0.15,0.02,-1.52
+Anty the war ant race,Anty,5,F_450_Gelatinous,0,0,-0.04,0.15,0.04,-1.79
+Anty the war ant race,Anty,5,F_500_Gelatinous,0,0,-0.04,0.15,0.04,-2.15
+Anty the war ant race,Anty,5,F_900_Gelatinous,0,0,-0.04,0.15,0.04,-2.75
+Anty the war ant race,Anty,5,F_910_Gelatinous,0,0,-0.04,0.15,0.04,-3.35
+Anty the war ant race,Anty,5,F_920_Gelatinous,0,0,-0.04,0.15,0.14,-4.55
+Anty the war ant race,Anty,5,F_930_Gelatinous,0,0,-0.04,0.15,0.14,-6.45
+Anty the war ant race,Anty,5,F_940_Gelatinous,0,0,-0.04,0.15,0.14,-8.25
+Anty the war ant race,Anty,5,F_950_Gelatinous,0,0,-0.04,0.15,0.14,-10.05
+Anty the war ant race,Anty,5,F_960_Gelatinous,0,0,-0.04,0.15,0.14,-12.55
+Anty the war ant race,Anty,5,F_970_Gelatinous,0,0,-0.04,0.15,0.14,-15.05
+Anty the war ant race,Anty,5,F_980_Gelatinous,0,0,-0.04,0.15,0.24,-18.15
+Anty the war ant race,Anty,5,F_990_Gelatinous,0,0,-0.04,0.15,0.24,-21.15
+Anty the war ant race,Anty,5,F_995_Gelatinous,0,0,-0.04,0.15,0.24,-24.15
+Anty the war ant race,Anty,5,F_010a_Chubby,0,0,0.12,-0.04,0,0.01
+Anty the war ant race,Anty,5,F_020a_Corpulent,0,0,0.29,0.04,0,0.01
+Anty the war ant race,Anty,5,F_030a_Fat,0,0,0.33,0.17,0,0.02
+Anty the war ant race,Anty,5,F_040a_Obese,0,0,0.41,0.14,0,0.02
+Anty the war ant race,Anty,5,F_050a_MorbidlyObese,0,0,0.55,0.11,0,0.02
+Anty the war ant race,Anty,5,F_060a_Lardy,0,0,0.57,0.17,0.01,0.22
+Anty the war ant race,Anty,5,F_070a_Enormous,0,0,0.73,0.09,-0.03,-0.03
+Anty the war ant race,Anty,5,F_080a_Gigantic,0,0,-0.04,0.15,0,-0.23
+Anty the war ant race,Anty,5,F_090a_Titanic,0,0,-0.04,0.15,-0.04,-0.02
+Anty the war ant race,Anty,5,F_100a_Gelatinous,0,0,-0.04,0.15,-0.11,-1.08
+Anty the war ant race,Anty,5,F_150a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,5,F_200a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,5,F_250a_Gelatinous,0,0,-0.04,0.15,-0.14,-1.63
+Anty the war ant race,Anty,5,F_300a_Gelatinous,0,0,-0.04,0.15,-0.16,-1.21
+Anty the war ant race,Anty,5,F_350a_Gelatinous,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,5,F_400a_Gelatinous,0,0,-0.04,0.15,-0.2,-2.46
+Anty the war ant race,Anty,5,F_450a_Gelatinous,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,5,F_500a_Gelatinous,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,5,F_900a_Gelatinous,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,5,F_910a_Gelatinous,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,5,F_920a_Gelatinous,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,5,F_930a_Gelatinous,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,5,F_940a_Gelatinous,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,5,F_950a_Gelatinous,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,5,F_960a_Gelatinous,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,5,F_970a_Gelatinous,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,5,F_980a_Gelatinous,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,5,F_990a_Gelatinous,0,0,-0.04,0.15,-2.26,-32.15
+Anty the war ant race,Anty,5,F_995a_Gelatinous,0,0,-0.04,0.15,-2.76,-37.15
+Anty the war ant race,Anty,5,M_005_Thick_090,0,0,-0.04,0.02,0,0.03
+Anty the war ant race,Anty,5,M_006_Chonky_090,0,0,-0.04,0.02,0.02,0.03
+Anty the war ant race,Anty,5,M_010_Chubby_090,0,0,-0.04,0.02,0,-0.06
+Anty the war ant race,Anty,5,M_020_Corpulent_090,0,0,0.08,0.1,0.03,0
+Anty the war ant race,Anty,5,M_030_Fat_090,0,0,0.08,0.1,0.02,-0.04
+Anty the war ant race,Anty,5,M_040_Obese_090,0,0,0.35,0.1,0.02,0.02
+Anty the war ant race,Anty,5,M_050_MorbidlyObese_090,0,0,0.35,0.1,0.01,0.11
+Anty the war ant race,Anty,5,M_060_Lardy_090,0,0,-0.04,0.15,0.06,0.19
+Anty the war ant race,Anty,5,M_070_Enormous_090,0,0,-0.04,0.15,0.04,0.05
+Anty the war ant race,Anty,5,M_080_Gigantic_090,0,0,-0.04,0.15,0.02,-0.09
+Anty the war ant race,Anty,5,M_090_Titanic_090,0,0,-0.04,0.15,-0.04,0.13
+Anty the war ant race,Anty,5,M_100_Gelatinous_090,0,0,-0.04,0.15,0,-0.24
+Anty the war ant race,Anty,5,M_150_Gelatinous_090,0,0,-0.04,0.15,0,-0.29
+Anty the war ant race,Anty,5,M_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.37
+Anty the war ant race,Anty,5,M_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.47
+Anty the war ant race,Anty,5,M_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.55
+Anty the war ant race,Anty,5,M_350_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,5,M_400_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,5,M_450_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.91
+Anty the war ant race,Anty,5,M_500_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,5,M_900_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,5,M_910_Gelatinous_090,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,5,M_920_Gelatinous_090,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,5,M_930_Gelatinous_090,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,5,M_940_Gelatinous_090,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,5,M_950_Gelatinous_090,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,5,M_960_Gelatinous_090,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,5,M_970_Gelatinous_090,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,5,M_980_Gelatinous_090,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,5,M_990_Gelatinous_090,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,5,M_995_Gelatinous_090,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,5,M_005_Thick,0,0,0.05,0,0.01,-0.08
+Anty the war ant race,Anty,5,M_006_Chonky,0,0,0.05,-0.06,0.02,-0.09
+Anty the war ant race,Anty,5,M_010_Chubby,0,0,0.05,-0.06,-0.01,-0.19
+Anty the war ant race,Anty,5,M_020_Corpulent,0,0,0.31,-0.06,0.05,-0.09
+Anty the war ant race,Anty,5,M_030_Fat,0,0,0.31,-0.06,0.02,-0.09
+Anty the war ant race,Anty,5,M_040_Obese,0,0,0.52,0.00999999999999998,0.02,-0.01
+Anty the war ant race,Anty,5,M_050_MorbidlyObese,0,0,0.52,0.00999999999999998,0.01,0.09
+Anty the war ant race,Anty,5,M_060_Lardy,0,0,-0.04,0.15,0.07,0.12
+Anty the war ant race,Anty,5,M_070_Enormous,0,0,-0.04,0.15,0.04,-0.04
+Anty the war ant race,Anty,5,M_080_Gigantic,0,0,-0.04,0.15,0.04,-0.21
+Anty the war ant race,Anty,5,M_090_Titanic,0,0,-0.04,0.15,-0.06,0.1
+Anty the war ant race,Anty,5,M_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.5
+Anty the war ant race,Anty,5,M_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,5,M_200_Gelatinous,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,5,M_250_Gelatinous,0,0,-0.04,0.15,0.01,-0.84
+Anty the war ant race,Anty,5,M_300_Gelatinous,0,0,-0.04,0.15,0.01,-0.98
+Anty the war ant race,Anty,5,M_350_Gelatinous,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,5,M_400_Gelatinous,0,0,-0.04,0.15,0.01,-1.38
+Anty the war ant race,Anty,5,M_450_Gelatinous,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,5,M_500_Gelatinous,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,5,M_900_Gelatinous,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,5,M_910_Gelatinous,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,5,M_920_Gelatinous,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,5,M_930_Gelatinous,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,5,M_940_Gelatinous,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,5,M_950_Gelatinous,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,5,M_960_Gelatinous,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,5,M_970_Gelatinous,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,5,M_980_Gelatinous,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,5,M_990_Gelatinous,0,0,-0.04,0.15,0.01,-21.1
+Anty the war ant race,Anty,5,M_995_Gelatinous,0,0,-0.04,0.15,0.01,-24.1
+Anty the war ant race,Anty,7,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
+Anty the war ant race,Anty,7,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
+Anty the war ant race,Anty,7,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
+Anty the war ant race,Anty,7,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
+Anty the war ant race,Anty,7,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
+Anty the war ant race,Anty,7,F_040_Obese_090,0,0,0.39,0.11,0,0.06
+Anty the war ant race,Anty,7,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
+Anty the war ant race,Anty,7,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
+Anty the war ant race,Anty,7,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
+Anty the war ant race,Anty,7,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
+Anty the war ant race,Anty,7,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
+Anty the war ant race,Anty,7,F_100_Gelatinous_090,0,0,-0.04,0.15,-0.01,-0.34
+Anty the war ant race,Anty,7,F_150_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.41
+Anty the war ant race,Anty,7,F_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.49
+Anty the war ant race,Anty,7,F_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.58
+Anty the war ant race,Anty,7,F_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.68
+Anty the war ant race,Anty,7,F_350_Gelatinous_090,0,0,-0.04,0.15,0.02,-0.76
+Anty the war ant race,Anty,7,F_400_Gelatinous_090,0,0,-0.04,0.15,0.03,-0.9
+Anty the war ant race,Anty,7,F_450_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.09
+Anty the war ant race,Anty,7,F_500_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.37
+Anty the war ant race,Anty,7,F_900_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.91
+Anty the war ant race,Anty,7,F_910_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.33
+Anty the war ant race,Anty,7,F_920_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.73
+Anty the war ant race,Anty,7,F_930_Gelatinous_090,0,0,-0.04,0.15,0.02,-3.43
+Anty the war ant race,Anty,7,F_940_Gelatinous_090,0,0,-0.04,0.15,0.02,-4.83
+Anty the war ant race,Anty,7,F_950_Gelatinous_090,0,0,-0.04,0.15,0.02,-6.73
+Anty the war ant race,Anty,7,F_960_Gelatinous_090,0,0,-0.04,0.15,0.02,-8.73
+Anty the war ant race,Anty,7,F_970_Gelatinous_090,0,0,-0.04,0.15,0.02,-10.83
+Anty the war ant race,Anty,7,F_980_Gelatinous_090,0,0,-0.04,0.15,0.02,-13.23
+Anty the war ant race,Anty,7,F_990_Gelatinous_090,0,0,-0.04,0.15,0.02,-15.53
+Anty the war ant race,Anty,7,F_995_Gelatinous_090,0,0,-0.04,0.15,0.02,-19.03
+Anty the war ant race,Anty,7,F_010a_Chubby_090,0,0,0.02,0.06,0.03,0.03
+Anty the war ant race,Anty,7,F_020a_Corpulent_090,0,0,0.1,0.1,0,0.08
+Anty the war ant race,Anty,7,F_030a_Fat_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,7,F_040a_Obese_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,7,F_050a_MorbidlyObese_090,0,0,0.41,0.08,0,0.08
+Anty the war ant race,Anty,7,F_060a_Lardy_090,0,0,0.41,0.08,0.01,0.24
+Anty the war ant race,Anty,7,F_070a_Enormous_090,0,0,0.41,0.08,-0.02,0.05
+Anty the war ant race,Anty,7,F_080a_Gigantic_090,0,0,0.41,0.08,0,-0.05
+Anty the war ant race,Anty,7,F_090a_Titanic_090,0,0,0.41,0.08,-0.03,0.11
+Anty the war ant race,Anty,7,F_100a_Gelatinous_090,0,0,-0.04,0.15,-0.07,-0.62
+Anty the war ant race,Anty,7,F_150a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.72
+Anty the war ant race,Anty,7,F_200a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.84
+Anty the war ant race,Anty,7,F_250a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-0.98
+Anty the war ant race,Anty,7,F_300a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-1.1
+Anty the war ant race,Anty,7,F_350a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,7,F_400a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,7,F_450a_Gelatinous_090,0,0,-0.04,0.15,-0.15,-1.73
+Anty the war ant race,Anty,7,F_500a_Gelatinous_090,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,7,F_900a_Gelatinous_090,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,7,F_910a_Gelatinous_090,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,7,F_920a_Gelatinous_090,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,7,F_930a_Gelatinous_090,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,7,F_940a_Gelatinous_090,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,7,F_950a_Gelatinous_090,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,7,F_960a_Gelatinous_090,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,7,F_970a_Gelatinous_090,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,7,F_980a_Gelatinous_090,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,7,F_990a_Gelatinous_090,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,7,F_995a_Gelatinous_090,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,7,F_005_Thick,0,0,-0.04,0.02,0,0.01
+Anty the war ant race,Anty,7,F_006_Chonky,0,0,0.04,0.02,0,0.01
+Anty the war ant race,Anty,7,F_010_Chubby,0,0,0.12,0.02,0,-0.02
+Anty the war ant race,Anty,7,F_020_Corpulent,0,0,0.29,0.04,-0.01,-0.01
+Anty the war ant race,Anty,7,F_030_Fat,0,0,0.33,0.12,0,0.04
+Anty the war ant race,Anty,7,F_040_Obese,0,0,0.45,0.19,0.03,0.04
+Anty the war ant race,Anty,7,F_050_MorbidlyObese,0,0,0.58,0.17,-0.01,-0.01
+Anty the war ant race,Anty,7,F_060_Lardy,0,0,0.57,0.17,-0.01,0.16
+Anty the war ant race,Anty,7,F_070_Enormous,0,0,0.81,0.17,0.01,0.04
+Anty the war ant race,Anty,7,F_080_Gigantic,0,0,0.83,0.19,-0.03,-0.13
+Anty the war ant race,Anty,7,F_090_Titanic,0,0,-0.04,0.15,-0.01,0.08
+Anty the war ant race,Anty,7,F_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.64
+Anty the war ant race,Anty,7,F_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.74
+Anty the war ant race,Anty,7,F_200_Gelatinous,0,0,-0.04,0.15,0.02,-0.9
+Anty the war ant race,Anty,7,F_250_Gelatinous,0,0,-0.04,0.15,0.02,-1.01
+Anty the war ant race,Anty,7,F_300_Gelatinous,0,0,-0.04,0.15,0.02,-1.18
+Anty the war ant race,Anty,7,F_350_Gelatinous,0,0,-0.04,0.15,0.02,-1.31
+Anty the war ant race,Anty,7,F_400_Gelatinous,0,0,-0.04,0.15,0.02,-1.52
+Anty the war ant race,Anty,7,F_450_Gelatinous,0,0,-0.04,0.15,0.04,-1.79
+Anty the war ant race,Anty,7,F_500_Gelatinous,0,0,-0.04,0.15,0.04,-2.15
+Anty the war ant race,Anty,7,F_900_Gelatinous,0,0,-0.04,0.15,0.04,-2.75
+Anty the war ant race,Anty,7,F_910_Gelatinous,0,0,-0.04,0.15,0.04,-3.35
+Anty the war ant race,Anty,7,F_920_Gelatinous,0,0,-0.04,0.15,0.14,-4.55
+Anty the war ant race,Anty,7,F_930_Gelatinous,0,0,-0.04,0.15,0.14,-6.45
+Anty the war ant race,Anty,7,F_940_Gelatinous,0,0,-0.04,0.15,0.14,-8.25
+Anty the war ant race,Anty,7,F_950_Gelatinous,0,0,-0.04,0.15,0.14,-10.05
+Anty the war ant race,Anty,7,F_960_Gelatinous,0,0,-0.04,0.15,0.14,-12.55
+Anty the war ant race,Anty,7,F_970_Gelatinous,0,0,-0.04,0.15,0.14,-15.05
+Anty the war ant race,Anty,7,F_980_Gelatinous,0,0,-0.04,0.15,0.24,-18.15
+Anty the war ant race,Anty,7,F_990_Gelatinous,0,0,-0.04,0.15,0.24,-21.15
+Anty the war ant race,Anty,7,F_995_Gelatinous,0,0,-0.04,0.15,0.24,-24.15
+Anty the war ant race,Anty,7,F_010a_Chubby,0,0,0.12,-0.04,0,0.01
+Anty the war ant race,Anty,7,F_020a_Corpulent,0,0,0.29,0.04,0,0.01
+Anty the war ant race,Anty,7,F_030a_Fat,0,0,0.33,0.17,0,0.02
+Anty the war ant race,Anty,7,F_040a_Obese,0,0,0.41,0.14,0,0.02
+Anty the war ant race,Anty,7,F_050a_MorbidlyObese,0,0,0.55,0.11,0,0.02
+Anty the war ant race,Anty,7,F_060a_Lardy,0,0,0.57,0.17,0.01,0.22
+Anty the war ant race,Anty,7,F_070a_Enormous,0,0,0.73,0.09,-0.03,-0.03
+Anty the war ant race,Anty,7,F_080a_Gigantic,0,0,-0.04,0.15,0,-0.23
+Anty the war ant race,Anty,7,F_090a_Titanic,0,0,-0.04,0.15,-0.04,-0.02
+Anty the war ant race,Anty,7,F_100a_Gelatinous,0,0,-0.04,0.15,-0.11,-1.08
+Anty the war ant race,Anty,7,F_150a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,7,F_200a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,7,F_250a_Gelatinous,0,0,-0.04,0.15,-0.14,-1.63
+Anty the war ant race,Anty,7,F_300a_Gelatinous,0,0,-0.04,0.15,-0.16,-1.21
+Anty the war ant race,Anty,7,F_350a_Gelatinous,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,7,F_400a_Gelatinous,0,0,-0.04,0.15,-0.2,-2.46
+Anty the war ant race,Anty,7,F_450a_Gelatinous,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,7,F_500a_Gelatinous,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,7,F_900a_Gelatinous,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,7,F_910a_Gelatinous,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,7,F_920a_Gelatinous,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,7,F_930a_Gelatinous,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,7,F_940a_Gelatinous,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,7,F_950a_Gelatinous,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,7,F_960a_Gelatinous,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,7,F_970a_Gelatinous,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,7,F_980a_Gelatinous,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,7,F_990a_Gelatinous,0,0,-0.04,0.15,-2.26,-32.15
+Anty the war ant race,Anty,7,F_995a_Gelatinous,0,0,-0.04,0.15,-2.76,-37.15
+Anty the war ant race,Anty,7,M_005_Thick_090,0,0,-0.04,0.02,0,0.03
+Anty the war ant race,Anty,7,M_006_Chonky_090,0,0,-0.04,0.02,0.02,0.03
+Anty the war ant race,Anty,7,M_010_Chubby_090,0,0,-0.04,0.02,0,-0.06
+Anty the war ant race,Anty,7,M_020_Corpulent_090,0,0,0.08,0.1,0.03,0
+Anty the war ant race,Anty,7,M_030_Fat_090,0,0,0.08,0.1,0.02,-0.04
+Anty the war ant race,Anty,7,M_040_Obese_090,0,0,0.35,0.1,0.02,0.02
+Anty the war ant race,Anty,7,M_050_MorbidlyObese_090,0,0,0.35,0.1,0.01,0.11
+Anty the war ant race,Anty,7,M_060_Lardy_090,0,0,-0.04,0.15,0.06,0.19
+Anty the war ant race,Anty,7,M_070_Enormous_090,0,0,-0.04,0.15,0.04,0.05
+Anty the war ant race,Anty,7,M_080_Gigantic_090,0,0,-0.04,0.15,0.02,-0.09
+Anty the war ant race,Anty,7,M_090_Titanic_090,0,0,-0.04,0.15,-0.04,0.13
+Anty the war ant race,Anty,7,M_100_Gelatinous_090,0,0,-0.04,0.15,0,-0.24
+Anty the war ant race,Anty,7,M_150_Gelatinous_090,0,0,-0.04,0.15,0,-0.29
+Anty the war ant race,Anty,7,M_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.37
+Anty the war ant race,Anty,7,M_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.47
+Anty the war ant race,Anty,7,M_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.55
+Anty the war ant race,Anty,7,M_350_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,7,M_400_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,7,M_450_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.91
+Anty the war ant race,Anty,7,M_500_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,7,M_900_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,7,M_910_Gelatinous_090,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,7,M_920_Gelatinous_090,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,7,M_930_Gelatinous_090,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,7,M_940_Gelatinous_090,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,7,M_950_Gelatinous_090,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,7,M_960_Gelatinous_090,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,7,M_970_Gelatinous_090,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,7,M_980_Gelatinous_090,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,7,M_990_Gelatinous_090,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,7,M_995_Gelatinous_090,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,7,M_005_Thick,0,0,0.05,0,0.01,-0.08
+Anty the war ant race,Anty,7,M_006_Chonky,0,0,0.05,-0.06,0.02,-0.09
+Anty the war ant race,Anty,7,M_010_Chubby,0,0,0.05,-0.06,-0.01,-0.19
+Anty the war ant race,Anty,7,M_020_Corpulent,0,0,0.31,-0.06,0.05,-0.09
+Anty the war ant race,Anty,7,M_030_Fat,0,0,0.31,-0.06,0.02,-0.09
+Anty the war ant race,Anty,7,M_040_Obese,0,0,0.52,0.00999999999999998,0.02,-0.01
+Anty the war ant race,Anty,7,M_050_MorbidlyObese,0,0,0.52,0.00999999999999998,0.01,0.09
+Anty the war ant race,Anty,7,M_060_Lardy,0,0,-0.04,0.15,0.07,0.12
+Anty the war ant race,Anty,7,M_070_Enormous,0,0,-0.04,0.15,0.04,-0.04
+Anty the war ant race,Anty,7,M_080_Gigantic,0,0,-0.04,0.15,0.04,-0.21
+Anty the war ant race,Anty,7,M_090_Titanic,0,0,-0.04,0.15,-0.06,0.1
+Anty the war ant race,Anty,7,M_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.5
+Anty the war ant race,Anty,7,M_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,7,M_200_Gelatinous,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,7,M_250_Gelatinous,0,0,-0.04,0.15,0.01,-0.84
+Anty the war ant race,Anty,7,M_300_Gelatinous,0,0,-0.04,0.15,0.01,-0.98
+Anty the war ant race,Anty,7,M_350_Gelatinous,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,7,M_400_Gelatinous,0,0,-0.04,0.15,0.01,-1.38
+Anty the war ant race,Anty,7,M_450_Gelatinous,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,7,M_500_Gelatinous,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,7,M_900_Gelatinous,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,7,M_910_Gelatinous,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,7,M_920_Gelatinous,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,7,M_930_Gelatinous,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,7,M_940_Gelatinous,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,7,M_950_Gelatinous,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,7,M_960_Gelatinous,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,7,M_970_Gelatinous,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,7,M_980_Gelatinous,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,7,M_990_Gelatinous,0,0,-0.04,0.15,0.01,-21.1
+Anty the war ant race,Anty,7,M_995_Gelatinous,0,0,-0.04,0.15,0.01,-24.1
+Anty the war ant race,Anty,8,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
+Anty the war ant race,Anty,8,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
+Anty the war ant race,Anty,8,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
+Anty the war ant race,Anty,8,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
+Anty the war ant race,Anty,8,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
+Anty the war ant race,Anty,8,F_040_Obese_090,0,0,0.39,0.11,0,0.06
+Anty the war ant race,Anty,8,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
+Anty the war ant race,Anty,8,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
+Anty the war ant race,Anty,8,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
+Anty the war ant race,Anty,8,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
+Anty the war ant race,Anty,8,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
+Anty the war ant race,Anty,8,F_100_Gelatinous_090,0,0,-0.04,0.15,-0.01,-0.34
+Anty the war ant race,Anty,8,F_150_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.41
+Anty the war ant race,Anty,8,F_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.49
+Anty the war ant race,Anty,8,F_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.58
+Anty the war ant race,Anty,8,F_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.68
+Anty the war ant race,Anty,8,F_350_Gelatinous_090,0,0,-0.04,0.15,0.02,-0.76
+Anty the war ant race,Anty,8,F_400_Gelatinous_090,0,0,-0.04,0.15,0.03,-0.9
+Anty the war ant race,Anty,8,F_450_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.09
+Anty the war ant race,Anty,8,F_500_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.37
+Anty the war ant race,Anty,8,F_900_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.91
+Anty the war ant race,Anty,8,F_910_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.33
+Anty the war ant race,Anty,8,F_920_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.73
+Anty the war ant race,Anty,8,F_930_Gelatinous_090,0,0,-0.04,0.15,0.02,-3.43
+Anty the war ant race,Anty,8,F_940_Gelatinous_090,0,0,-0.04,0.15,0.02,-4.83
+Anty the war ant race,Anty,8,F_950_Gelatinous_090,0,0,-0.04,0.15,0.02,-6.73
+Anty the war ant race,Anty,8,F_960_Gelatinous_090,0,0,-0.04,0.15,0.02,-8.73
+Anty the war ant race,Anty,8,F_970_Gelatinous_090,0,0,-0.04,0.15,0.02,-10.83
+Anty the war ant race,Anty,8,F_980_Gelatinous_090,0,0,-0.04,0.15,0.02,-13.23
+Anty the war ant race,Anty,8,F_990_Gelatinous_090,0,0,-0.04,0.15,0.02,-15.53
+Anty the war ant race,Anty,8,F_995_Gelatinous_090,0,0,-0.04,0.15,0.02,-19.03
+Anty the war ant race,Anty,8,F_010a_Chubby_090,0,0,0.02,0.06,0.03,0.03
+Anty the war ant race,Anty,8,F_020a_Corpulent_090,0,0,0.1,0.1,0,0.08
+Anty the war ant race,Anty,8,F_030a_Fat_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,8,F_040a_Obese_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,8,F_050a_MorbidlyObese_090,0,0,0.41,0.08,0,0.08
+Anty the war ant race,Anty,8,F_060a_Lardy_090,0,0,0.41,0.08,0.01,0.24
+Anty the war ant race,Anty,8,F_070a_Enormous_090,0,0,0.41,0.08,-0.02,0.05
+Anty the war ant race,Anty,8,F_080a_Gigantic_090,0,0,0.41,0.08,0,-0.05
+Anty the war ant race,Anty,8,F_090a_Titanic_090,0,0,0.41,0.08,-0.03,0.11
+Anty the war ant race,Anty,8,F_100a_Gelatinous_090,0,0,-0.04,0.15,-0.07,-0.62
+Anty the war ant race,Anty,8,F_150a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.72
+Anty the war ant race,Anty,8,F_200a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.84
+Anty the war ant race,Anty,8,F_250a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-0.98
+Anty the war ant race,Anty,8,F_300a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-1.1
+Anty the war ant race,Anty,8,F_350a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,8,F_400a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,8,F_450a_Gelatinous_090,0,0,-0.04,0.15,-0.15,-1.73
+Anty the war ant race,Anty,8,F_500a_Gelatinous_090,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,8,F_900a_Gelatinous_090,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,8,F_910a_Gelatinous_090,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,8,F_920a_Gelatinous_090,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,8,F_930a_Gelatinous_090,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,8,F_940a_Gelatinous_090,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,8,F_950a_Gelatinous_090,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,8,F_960a_Gelatinous_090,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,8,F_970a_Gelatinous_090,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,8,F_980a_Gelatinous_090,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,8,F_990a_Gelatinous_090,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,8,F_995a_Gelatinous_090,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,8,F_005_Thick,0,0,-0.04,0.02,0,0.01
+Anty the war ant race,Anty,8,F_006_Chonky,0,0,0.04,0.02,0,0.01
+Anty the war ant race,Anty,8,F_010_Chubby,0,0,0.12,0.02,0,-0.02
+Anty the war ant race,Anty,8,F_020_Corpulent,0,0,0.29,0.04,-0.01,-0.01
+Anty the war ant race,Anty,8,F_030_Fat,0,0,0.33,0.12,0,0.04
+Anty the war ant race,Anty,8,F_040_Obese,0,0,0.45,0.19,0.03,0.04
+Anty the war ant race,Anty,8,F_050_MorbidlyObese,0,0,0.58,0.17,-0.01,-0.01
+Anty the war ant race,Anty,8,F_060_Lardy,0,0,0.57,0.17,-0.01,0.16
+Anty the war ant race,Anty,8,F_070_Enormous,0,0,0.81,0.17,0.01,0.04
+Anty the war ant race,Anty,8,F_080_Gigantic,0,0,0.83,0.19,-0.03,-0.13
+Anty the war ant race,Anty,8,F_090_Titanic,0,0,-0.04,0.15,-0.01,0.08
+Anty the war ant race,Anty,8,F_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.64
+Anty the war ant race,Anty,8,F_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.74
+Anty the war ant race,Anty,8,F_200_Gelatinous,0,0,-0.04,0.15,0.02,-0.9
+Anty the war ant race,Anty,8,F_250_Gelatinous,0,0,-0.04,0.15,0.02,-1.01
+Anty the war ant race,Anty,8,F_300_Gelatinous,0,0,-0.04,0.15,0.02,-1.18
+Anty the war ant race,Anty,8,F_350_Gelatinous,0,0,-0.04,0.15,0.02,-1.31
+Anty the war ant race,Anty,8,F_400_Gelatinous,0,0,-0.04,0.15,0.02,-1.52
+Anty the war ant race,Anty,8,F_450_Gelatinous,0,0,-0.04,0.15,0.04,-1.79
+Anty the war ant race,Anty,8,F_500_Gelatinous,0,0,-0.04,0.15,0.04,-2.15
+Anty the war ant race,Anty,8,F_900_Gelatinous,0,0,-0.04,0.15,0.04,-2.75
+Anty the war ant race,Anty,8,F_910_Gelatinous,0,0,-0.04,0.15,0.04,-3.35
+Anty the war ant race,Anty,8,F_920_Gelatinous,0,0,-0.04,0.15,0.14,-4.55
+Anty the war ant race,Anty,8,F_930_Gelatinous,0,0,-0.04,0.15,0.14,-6.45
+Anty the war ant race,Anty,8,F_940_Gelatinous,0,0,-0.04,0.15,0.14,-8.25
+Anty the war ant race,Anty,8,F_950_Gelatinous,0,0,-0.04,0.15,0.14,-10.05
+Anty the war ant race,Anty,8,F_960_Gelatinous,0,0,-0.04,0.15,0.14,-12.55
+Anty the war ant race,Anty,8,F_970_Gelatinous,0,0,-0.04,0.15,0.14,-15.05
+Anty the war ant race,Anty,8,F_980_Gelatinous,0,0,-0.04,0.15,0.24,-18.15
+Anty the war ant race,Anty,8,F_990_Gelatinous,0,0,-0.04,0.15,0.24,-21.15
+Anty the war ant race,Anty,8,F_995_Gelatinous,0,0,-0.04,0.15,0.24,-24.15
+Anty the war ant race,Anty,8,F_010a_Chubby,0,0,0.12,-0.04,0,0.01
+Anty the war ant race,Anty,8,F_020a_Corpulent,0,0,0.29,0.04,0,0.01
+Anty the war ant race,Anty,8,F_030a_Fat,0,0,0.33,0.17,0,0.02
+Anty the war ant race,Anty,8,F_040a_Obese,0,0,0.41,0.14,0,0.02
+Anty the war ant race,Anty,8,F_050a_MorbidlyObese,0,0,0.55,0.11,0,0.02
+Anty the war ant race,Anty,8,F_060a_Lardy,0,0,0.57,0.17,0.01,0.22
+Anty the war ant race,Anty,8,F_070a_Enormous,0,0,0.73,0.09,-0.03,-0.03
+Anty the war ant race,Anty,8,F_080a_Gigantic,0,0,-0.04,0.15,0,-0.23
+Anty the war ant race,Anty,8,F_090a_Titanic,0,0,-0.04,0.15,-0.04,-0.02
+Anty the war ant race,Anty,8,F_100a_Gelatinous,0,0,-0.04,0.15,-0.11,-1.08
+Anty the war ant race,Anty,8,F_150a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,8,F_200a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,8,F_250a_Gelatinous,0,0,-0.04,0.15,-0.14,-1.63
+Anty the war ant race,Anty,8,F_300a_Gelatinous,0,0,-0.04,0.15,-0.16,-1.21
+Anty the war ant race,Anty,8,F_350a_Gelatinous,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,8,F_400a_Gelatinous,0,0,-0.04,0.15,-0.2,-2.46
+Anty the war ant race,Anty,8,F_450a_Gelatinous,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,8,F_500a_Gelatinous,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,8,F_900a_Gelatinous,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,8,F_910a_Gelatinous,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,8,F_920a_Gelatinous,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,8,F_930a_Gelatinous,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,8,F_940a_Gelatinous,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,8,F_950a_Gelatinous,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,8,F_960a_Gelatinous,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,8,F_970a_Gelatinous,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,8,F_980a_Gelatinous,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,8,F_990a_Gelatinous,0,0,-0.04,0.15,-2.26,-32.15
+Anty the war ant race,Anty,8,F_995a_Gelatinous,0,0,-0.04,0.15,-2.76,-37.15
+Anty the war ant race,Anty,8,M_005_Thick_090,0,0,-0.04,0.02,0,0.03
+Anty the war ant race,Anty,8,M_006_Chonky_090,0,0,-0.04,0.02,0.02,0.03
+Anty the war ant race,Anty,8,M_010_Chubby_090,0,0,-0.04,0.02,0,-0.06
+Anty the war ant race,Anty,8,M_020_Corpulent_090,0,0,0.08,0.1,0.03,0
+Anty the war ant race,Anty,8,M_030_Fat_090,0,0,0.08,0.1,0.02,-0.04
+Anty the war ant race,Anty,8,M_040_Obese_090,0,0,0.35,0.1,0.02,0.02
+Anty the war ant race,Anty,8,M_050_MorbidlyObese_090,0,0,0.35,0.1,0.01,0.11
+Anty the war ant race,Anty,8,M_060_Lardy_090,0,0,-0.04,0.15,0.06,0.19
+Anty the war ant race,Anty,8,M_070_Enormous_090,0,0,-0.04,0.15,0.04,0.05
+Anty the war ant race,Anty,8,M_080_Gigantic_090,0,0,-0.04,0.15,0.02,-0.09
+Anty the war ant race,Anty,8,M_090_Titanic_090,0,0,-0.04,0.15,-0.04,0.13
+Anty the war ant race,Anty,8,M_100_Gelatinous_090,0,0,-0.04,0.15,0,-0.24
+Anty the war ant race,Anty,8,M_150_Gelatinous_090,0,0,-0.04,0.15,0,-0.29
+Anty the war ant race,Anty,8,M_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.37
+Anty the war ant race,Anty,8,M_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.47
+Anty the war ant race,Anty,8,M_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.55
+Anty the war ant race,Anty,8,M_350_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,8,M_400_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,8,M_450_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.91
+Anty the war ant race,Anty,8,M_500_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,8,M_900_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,8,M_910_Gelatinous_090,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,8,M_920_Gelatinous_090,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,8,M_930_Gelatinous_090,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,8,M_940_Gelatinous_090,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,8,M_950_Gelatinous_090,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,8,M_960_Gelatinous_090,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,8,M_970_Gelatinous_090,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,8,M_980_Gelatinous_090,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,8,M_990_Gelatinous_090,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,8,M_995_Gelatinous_090,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,8,M_005_Thick,0,0,0.05,0,0.01,-0.08
+Anty the war ant race,Anty,8,M_006_Chonky,0,0,0.05,-0.06,0.02,-0.09
+Anty the war ant race,Anty,8,M_010_Chubby,0,0,0.05,-0.06,-0.01,-0.19
+Anty the war ant race,Anty,8,M_020_Corpulent,0,0,0.31,-0.06,0.05,-0.09
+Anty the war ant race,Anty,8,M_030_Fat,0,0,0.31,-0.06,0.02,-0.09
+Anty the war ant race,Anty,8,M_040_Obese,0,0,0.52,0.00999999999999998,0.02,-0.01
+Anty the war ant race,Anty,8,M_050_MorbidlyObese,0,0,0.52,0.00999999999999998,0.01,0.09
+Anty the war ant race,Anty,8,M_060_Lardy,0,0,-0.04,0.15,0.07,0.12
+Anty the war ant race,Anty,8,M_070_Enormous,0,0,-0.04,0.15,0.04,-0.04
+Anty the war ant race,Anty,8,M_080_Gigantic,0,0,-0.04,0.15,0.04,-0.21
+Anty the war ant race,Anty,8,M_090_Titanic,0,0,-0.04,0.15,-0.06,0.1
+Anty the war ant race,Anty,8,M_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.5
+Anty the war ant race,Anty,8,M_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,8,M_200_Gelatinous,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,8,M_250_Gelatinous,0,0,-0.04,0.15,0.01,-0.84
+Anty the war ant race,Anty,8,M_300_Gelatinous,0,0,-0.04,0.15,0.01,-0.98
+Anty the war ant race,Anty,8,M_350_Gelatinous,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,8,M_400_Gelatinous,0,0,-0.04,0.15,0.01,-1.38
+Anty the war ant race,Anty,8,M_450_Gelatinous,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,8,M_500_Gelatinous,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,8,M_900_Gelatinous,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,8,M_910_Gelatinous,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,8,M_920_Gelatinous,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,8,M_930_Gelatinous,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,8,M_940_Gelatinous,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,8,M_950_Gelatinous,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,8,M_960_Gelatinous,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,8,M_970_Gelatinous,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,8,M_980_Gelatinous,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,8,M_990_Gelatinous,0,0,-0.04,0.15,0.01,-21.1
+Anty the war ant race,Anty,8,M_995_Gelatinous,0,0,-0.04,0.15,0.01,-24.1
+Revia Race,ReviaRaceAlien,1,F_005_Thick,-0.07,0.1,0.385,-0.5375,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_006_Chonky,-0.07,0.1,0.465,-0.5375,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_010_Chubby,-0.07,0.1,0.545,-0.5375,-0.0775,-0.4825
+Revia Race,ReviaRaceAlien,1,F_020_Corpulent,-0.07,0.1,0.715,-0.5175,-0.0875,-0.4725
+Revia Race,ReviaRaceAlien,1,F_030_Fat,-0.07,0.1,0.755,-0.4375,-0.0775,-0.4225
+Revia Race,ReviaRaceAlien,1,F_040_Obese,-0.07,0.1,0.875,-0.3675,-0.0475,-0.4225
+Revia Race,ReviaRaceAlien,1,F_050_MorbidlyObese,-0.07,0.1,1.005,-0.3875,-0.0875,-0.4725
+Revia Race,ReviaRaceAlien,1,F_060_Lardy,-0.07,0.1,0.995,-0.3875,-0.0875,-0.3025
+Revia Race,ReviaRaceAlien,1,F_070_Enormous,-0.07,0.1,1.235,-0.3875,-0.0675,-0.4225
+Revia Race,ReviaRaceAlien,1,F_080_Gigantic,-0.07,0.1,1.255,-0.3675,-0.1075,-0.5925
+Revia Race,ReviaRaceAlien,1,F_090_Titanic,-0.07,0.1,0.385,-0.4075,-0.0875,-0.3825
+Revia Race,ReviaRaceAlien,1,F_100_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.1025
+Revia Race,ReviaRaceAlien,1,F_150_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.2025
+Revia Race,ReviaRaceAlien,1,F_200_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.3625
+Revia Race,ReviaRaceAlien,1,F_250_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.4725
+Revia Race,ReviaRaceAlien,1,F_300_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.6425
+Revia Race,ReviaRaceAlien,1,F_350_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.7725
+Revia Race,ReviaRaceAlien,1,F_400_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.9825
+Revia Race,ReviaRaceAlien,1,F_450_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-2.2525
+Revia Race,ReviaRaceAlien,1,F_500_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-2.6125
+Revia Race,ReviaRaceAlien,1,F_900_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-3.2125
+Revia Race,ReviaRaceAlien,1,F_910_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-3.8125
+Revia Race,ReviaRaceAlien,1,F_920_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-5.0125
+Revia Race,ReviaRaceAlien,1,F_930_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-6.9125
+Revia Race,ReviaRaceAlien,1,F_940_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-8.7125
+Revia Race,ReviaRaceAlien,1,F_950_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-10.5125
+Revia Race,ReviaRaceAlien,1,F_960_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-13.0125
+Revia Race,ReviaRaceAlien,1,F_970_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-15.5125
+Revia Race,ReviaRaceAlien,1,F_980_Gelatinous,-0.07,0.1,0.385,-0.4075,0.1625,-18.6125
+Revia Race,ReviaRaceAlien,1,F_990_Gelatinous,-0.07,0.1,0.385,-0.4075,0.1625,-21.6125
+Revia Race,ReviaRaceAlien,1,F_995_Gelatinous,-0.07,0.1,0.385,-0.4075,0.1625,-24.6125
+Revia Race,ReviaRaceAlien,1,F_010a_Chubby_090,-0.07,0.1,0.445,-0.4975,-0.0475,-0.4325
+Revia Race,ReviaRaceAlien,1,F_020a_Corpulent_090,-0.07,0.1,0.525,-0.4575,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_030a_Fat_090,-0.07,0.1,0.615,-0.3675,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_040a_Obese_090,-0.07,0.1,0.615,-0.3675,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_050a_MorbidlyObese_090,-0.07,0.1,0.835,-0.4775,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_060a_Lardy_090,-0.07,0.1,0.835,-0.4775,-0.0675,-0.2225
+Revia Race,ReviaRaceAlien,1,F_070a_Enormous_090,-0.07,0.1,0.835,-0.4775,-0.0975,-0.4125
+Revia Race,ReviaRaceAlien,1,F_080a_Gigantic_090,-0.07,0.1,0.835,-0.4775,-0.0775,-0.5125
+Revia Race,ReviaRaceAlien,1,F_090a_Titanic_090,-0.07,0.1,0.835,-0.4775,-0.1075,-0.3525
+Revia Race,ReviaRaceAlien,1,F_100a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1475,-1.0825
+Revia Race,ReviaRaceAlien,1,F_150a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1575,-1.1825
+Revia Race,ReviaRaceAlien,1,F_200a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1575,-1.3025
+Revia Race,ReviaRaceAlien,1,F_250a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1775,-1.4425
+Revia Race,ReviaRaceAlien,1,F_300a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1775,-1.5625
+Revia Race,ReviaRaceAlien,1,F_350a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1975,-1.7425
+Revia Race,ReviaRaceAlien,1,F_400a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1975,-1.9225
+Revia Race,ReviaRaceAlien,1,F_450a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.2275,-2.1925
+Revia Race,ReviaRaceAlien,1,F_500a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.2575,-2.5525
+Revia Race,ReviaRaceAlien,1,F_900a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.2975,-3.2725
+Revia Race,ReviaRaceAlien,1,F_910a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.3475,-3.8325
+Revia Race,ReviaRaceAlien,1,F_920a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.4075,-4.7325
+Revia Race,ReviaRaceAlien,1,F_930a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.4575,-5.6125
+Revia Race,ReviaRaceAlien,1,F_940a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.6375,-7.5125
+Revia Race,ReviaRaceAlien,1,F_950a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.8375,-10.2125
+Revia Race,ReviaRaceAlien,1,F_960a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.0375,-13.0125
+Revia Race,ReviaRaceAlien,1,F_970a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.1375,-15.8125
+Revia Race,ReviaRaceAlien,1,F_980a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.4375,-19.4125
+Revia Race,ReviaRaceAlien,1,F_990a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.7375,-23.1125
+Revia Race,ReviaRaceAlien,1,F_995a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-2.0575,-27.6125
+Revia Race,ReviaRaceAlien,1,F_005_Thick_090,-0.07,0.1,0.375,-0.5075,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_006_Chonky_090,-0.07,0.1,0.385,-0.5275,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_010_Chubby_090,-0.07,0.1,0.465,-0.5175,-0.0775,-0.4225
+Revia Race,ReviaRaceAlien,1,F_020_Corpulent_090,-0.07,0.1,0.535,-0.4775,-0.0875,-0.3925
+Revia Race,ReviaRaceAlien,1,F_030_Fat_090,-0.07,0.1,0.715,-0.4775,-0.0875,-0.3725
+Revia Race,ReviaRaceAlien,1,F_040_Obese_090,-0.07,0.1,0.815,-0.4475,-0.0775,-0.4025
+Revia Race,ReviaRaceAlien,1,F_050_MorbidlyObese_090,-0.07,0.1,0.935,-0.4675,-0.0875,-0.4525
+Revia Race,ReviaRaceAlien,1,F_060_Lardy_090,-0.07,0.1,0.865,-0.4475,-0.0875,-0.2925
+Revia Race,ReviaRaceAlien,1,F_070_Enormous_090,-0.07,0.1,1.285,-0.6075,-0.0775,-0.3925
+Revia Race,ReviaRaceAlien,1,F_080_Gigantic_090,-0.07,0.1,1.385,-0.6075,-0.1075,-0.4925
+Revia Race,ReviaRaceAlien,1,F_090_Titanic_090,-0.07,0.1,1.485,-0.3075,-0.0875,-0.3625
+Revia Race,ReviaRaceAlien,1,F_100_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0875,-0.8025
+Revia Race,ReviaRaceAlien,1,F_150_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-0.8725
+Revia Race,ReviaRaceAlien,1,F_200_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.9525
+Revia Race,ReviaRaceAlien,1,F_250_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0425
+Revia Race,ReviaRaceAlien,1,F_300_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.1425
+Revia Race,ReviaRaceAlien,1,F_350_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-1.2225
+Revia Race,ReviaRaceAlien,1,F_400_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0475,-1.3625
+Revia Race,ReviaRaceAlien,1,F_450_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-1.5525
+Revia Race,ReviaRaceAlien,1,F_500_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-1.8325
+Revia Race,ReviaRaceAlien,1,F_900_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-2.3725
+Revia Race,ReviaRaceAlien,1,F_910_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-2.7925
+Revia Race,ReviaRaceAlien,1,F_920_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-3.1925
+Revia Race,ReviaRaceAlien,1,F_930_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-3.8925
+Revia Race,ReviaRaceAlien,1,F_940_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-5.2925
+Revia Race,ReviaRaceAlien,1,F_950_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-7.1925
+Revia Race,ReviaRaceAlien,1,F_960_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-9.1925
+Revia Race,ReviaRaceAlien,1,F_970_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-11.2925
+Revia Race,ReviaRaceAlien,1,F_980_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-13.6925
+Revia Race,ReviaRaceAlien,1,F_990_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-15.9925
+Revia Race,ReviaRaceAlien,1,F_995_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-19.4925
+Revia Race,ReviaRaceAlien,1,F_010a_Chubby,-0.07,0.1,0.545,-0.5975,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_020a_Corpulent,-0.07,0.1,0.715,-0.5175,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_030a_Fat,-0.07,0.1,0.755,-0.3875,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_040a_Obese,-0.07,0.1,0.835,-0.4175,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_050a_MorbidlyObese,-0.07,0.1,0.975,-0.4475,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_060a_Lardy,-0.07,0.1,0.995,-0.3875,-0.0675,-0.2425
+Revia Race,ReviaRaceAlien,1,F_070a_Enormous,-0.07,0.1,1.155,-0.4675,-0.1075,-0.4925
+Revia Race,ReviaRaceAlien,1,F_080a_Gigantic,-0.07,0.1,0.385,-0.4075,-0.0775,-0.6925
+Revia Race,ReviaRaceAlien,1,F_090a_Titanic,-0.07,0.1,0.385,-0.4075,-0.1175,-0.4825
+Revia Race,ReviaRaceAlien,1,F_100a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.1875,-1.5425
+Revia Race,ReviaRaceAlien,1,F_150a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.1975,-1.7425
+Revia Race,ReviaRaceAlien,1,F_200a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.1975,-1.9225
+Revia Race,ReviaRaceAlien,1,F_250a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2175,-2.0925
+Revia Race,ReviaRaceAlien,1,F_300a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2375,-1.6725
+Revia Race,ReviaRaceAlien,1,F_350a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2575,-2.5525
+Revia Race,ReviaRaceAlien,1,F_400a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2775,-2.9225
+Revia Race,ReviaRaceAlien,1,F_450a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2975,-3.2725
+Revia Race,ReviaRaceAlien,1,F_500a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.3475,-3.8325
+Revia Race,ReviaRaceAlien,1,F_900a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.4075,-4.7325
+Revia Race,ReviaRaceAlien,1,F_910a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.4575,-5.6125
+Revia Race,ReviaRaceAlien,1,F_920a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.6375,-7.5125
+Revia Race,ReviaRaceAlien,1,F_930a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.8375,-10.2125
+Revia Race,ReviaRaceAlien,1,F_940a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.0375,-13.0125
+Revia Race,ReviaRaceAlien,1,F_950a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.1375,-15.8125
+Revia Race,ReviaRaceAlien,1,F_960a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.4375,-19.4125
+Revia Race,ReviaRaceAlien,1,F_970a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.7375,-23.1125
+Revia Race,ReviaRaceAlien,1,F_980a_Gelatinous,-0.07,0.1,0.385,-0.4075,-2.0575,-27.6125
+Revia Race,ReviaRaceAlien,1,F_990a_Gelatinous,-0.07,0.1,0.385,-0.4075,-2.3375,-32.6125
+Revia Race,ReviaRaceAlien,1,F_995a_Gelatinous,-0.07,0.1,0.385,-0.4075,-2.8375,-37.6125
+Revia Race,ReviaRaceAlien,1,M_005_Thick_090,-0.07,0.1,0.385,-0.5375,-0.0775,-0.4325
+Revia Race,ReviaRaceAlien,1,M_006_Chonky_090,-0.07,0.1,0.385,-0.5375,-0.0575,-0.4325
+Revia Race,ReviaRaceAlien,1,M_010_Chubby_090,-0.07,0.1,0.385,-0.5375,-0.0775,-0.5225
+Revia Race,ReviaRaceAlien,1,M_020_Corpulent_090,-0.07,0.1,0.505,-0.4575,-0.0475,-0.4625
+Revia Race,ReviaRaceAlien,1,M_030_Fat_090,-0.07,0.1,0.505,-0.4575,-0.0575,-0.5025
+Revia Race,ReviaRaceAlien,1,M_040_Obese_090,-0.07,0.1,0.775,-0.4575,-0.0575,-0.4425
+Revia Race,ReviaRaceAlien,1,M_050_MorbidlyObese_090,-0.07,0.1,0.775,-0.4575,-0.0675,-0.3525
+Revia Race,ReviaRaceAlien,1,M_060_Lardy_090,-0.07,0.1,0.385,-0.4075,-0.0175,-0.2725
+Revia Race,ReviaRaceAlien,1,M_070_Enormous_090,-0.07,0.1,0.385,-0.4075,-0.0375,-0.4125
+Revia Race,ReviaRaceAlien,1,M_080_Gigantic_090,-0.07,0.1,0.385,-0.4075,-0.0575,-0.5525
+Revia Race,ReviaRaceAlien,1,M_090_Titanic_090,-0.07,0.1,0.385,-0.4075,-0.1175,-0.3325
+Revia Race,ReviaRaceAlien,1,M_100_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.7025
+Revia Race,ReviaRaceAlien,1,M_150_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.7525
+Revia Race,ReviaRaceAlien,1,M_200_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.8325
+Revia Race,ReviaRaceAlien,1,M_250_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-0.9325
+Revia Race,ReviaRaceAlien,1,M_300_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0125
+Revia Race,ReviaRaceAlien,1,M_350_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0925
+Revia Race,ReviaRaceAlien,1,M_400_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.2225
+Revia Race,ReviaRaceAlien,1,M_450_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.3725
+Revia Race,ReviaRaceAlien,1,M_500_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.6225
+Revia Race,ReviaRaceAlien,1,M_900_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-2.1125
+Revia Race,ReviaRaceAlien,1,M_910_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-2.4625
+Revia Race,ReviaRaceAlien,1,M_920_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-3.0625
+Revia Race,ReviaRaceAlien,1,M_930_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-3.7625
+Revia Race,ReviaRaceAlien,1,M_940_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-4.9625
+Revia Race,ReviaRaceAlien,1,M_950_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-6.7625
+Revia Race,ReviaRaceAlien,1,M_960_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-8.5625
+Revia Race,ReviaRaceAlien,1,M_970_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-11.1925
+Revia Race,ReviaRaceAlien,1,M_980_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-13.1925
+Revia Race,ReviaRaceAlien,1,M_990_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-15.5625
+Revia Race,ReviaRaceAlien,1,M_995_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-18.5625
+Revia Race,ReviaRaceAlien,1,M_005_Thick,-0.07,0.1,0.475,-0.5575,-0.0675,-0.5425
+Revia Race,ReviaRaceAlien,1,M_006_Chonky,-0.07,0.1,0.475,-0.6175,-0.0575,-0.5525
+Revia Race,ReviaRaceAlien,1,M_010_Chubby,-0.07,0.1,0.475,-0.6175,-0.0875,-0.6525
+Revia Race,ReviaRaceAlien,1,M_020_Corpulent,-0.07,0.1,0.735,-0.6175,-0.0275,-0.5525
+Revia Race,ReviaRaceAlien,1,M_030_Fat,-0.07,0.1,0.735,-0.6175,-0.0575,-0.5525
+Revia Race,ReviaRaceAlien,1,M_040_Obese,-0.07,0.1,0.945,-0.5475,-0.0575,-0.4725
+Revia Race,ReviaRaceAlien,1,M_050_MorbidlyObese,-0.07,0.1,0.945,-0.5475,-0.0675,-0.3725
+Revia Race,ReviaRaceAlien,1,M_060_Lardy,-0.07,0.1,0.385,-0.4075,-0.00749999999999999,-0.3425
+Revia Race,ReviaRaceAlien,1,M_070_Enormous,-0.07,0.1,0.385,-0.4075,-0.0375,-0.5025
+Revia Race,ReviaRaceAlien,1,M_080_Gigantic,-0.07,0.1,0.385,-0.4075,-0.0375,-0.6725
+Revia Race,ReviaRaceAlien,1,M_090_Titanic,-0.07,0.1,0.385,-0.4075,-0.1375,-0.3625
+Revia Race,ReviaRaceAlien,1,M_100_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-0.9625
+Revia Race,ReviaRaceAlien,1,M_150_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0925
+Revia Race,ReviaRaceAlien,1,M_200_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.2225
+Revia Race,ReviaRaceAlien,1,M_250_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.3025
+Revia Race,ReviaRaceAlien,1,M_300_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.4425
+Revia Race,ReviaRaceAlien,1,M_350_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.6225
+Revia Race,ReviaRaceAlien,1,M_400_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.8425
+Revia Race,ReviaRaceAlien,1,M_450_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-2.1125
+Revia Race,ReviaRaceAlien,1,M_500_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-2.4625
+Revia Race,ReviaRaceAlien,1,M_900_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-3.0625
+Revia Race,ReviaRaceAlien,1,M_910_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-3.7625
+Revia Race,ReviaRaceAlien,1,M_920_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-4.9625
+Revia Race,ReviaRaceAlien,1,M_930_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-6.7625
+Revia Race,ReviaRaceAlien,1,M_940_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-8.5625
+Revia Race,ReviaRaceAlien,1,M_950_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-11.1925
+Revia Race,ReviaRaceAlien,1,M_960_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-13.1925
+Revia Race,ReviaRaceAlien,1,M_970_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-15.5625
+Revia Race,ReviaRaceAlien,1,M_980_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-18.5625
+Revia Race,ReviaRaceAlien,1,M_990_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-21.5625
+Revia Race,ReviaRaceAlien,1,M_995_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-24.5625
+Revia Race,ReviaRaceAlien,1,Female,-0.06,0.12,0.45,-0.59,-0.078,-0.42
+Revia Race,ReviaRaceAlien,1,Thin,-0.06,0.12,0.38,-0.64,-0.078,-0.42
 Orassans,Alien_OrassanHumanHybrid,1,F_005_Thick_090,0,0,0.12,-0.24,-0.03,-0.06
 Orassans,Alien_OrassanHumanHybrid,1,F_006_Chonky_090,0,0,0.17,-0.24,-0.03,-0.06
 Orassans,Alien_OrassanHumanHybrid,1,F_010_Chubby_090,0,0,0.24,-0.24,-0.03,-0.06
@@ -56,69 +923,6 @@ Orassans,Alien_OrassanHumanHybrid,1,F_070_Enormous_090,0,0,0.98,-0.27,-0.02,-0.0
 Orassans,Alien_OrassanHumanHybrid,1,F_080_Gigantic_090,0,0,1.09,-0.21,-0.06,-0.11
 Orassans,Alien_OrassanHumanHybrid,1,F_090_Titanic_090,0,0,-0.08,0.21,-0.04,0.03
 Orassans,Alien_OrassanHumanHybrid,1,F_100_Gelatinous_090,0,0,-0.08,0.21,0,-0.38
-Anty the war ant race,Anty,5,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
-Anty the war ant race,Anty,5,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
-Anty the war ant race,Anty,5,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
-Anty the war ant race,Anty,5,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
-Anty the war ant race,Anty,5,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
-Anty the war ant race,Anty,5,F_040_Obese_090,0,0,0.39,0.11,0,0.06
-Anty the war ant race,Anty,5,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
-Anty the war ant race,Anty,5,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
-Anty the war ant race,Anty,5,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
-Anty the war ant race,Anty,5,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
-Anty the war ant race,Anty,5,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
-Anty the war ant race,Anty,5,F_100_Gelatinous_090,0,0,-0.44,0.35,-0.01,-0.34
-Anty the war ant race,Anty,7,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
-Anty the war ant race,Anty,7,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
-Anty the war ant race,Anty,7,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
-Anty the war ant race,Anty,7,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
-Anty the war ant race,Anty,7,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
-Anty the war ant race,Anty,7,F_040_Obese_090,0,0,0.39,0.11,0,0.06
-Anty the war ant race,Anty,7,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
-Anty the war ant race,Anty,7,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
-Anty the war ant race,Anty,7,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
-Anty the war ant race,Anty,7,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
-Anty the war ant race,Anty,7,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
-Anty the war ant race,Anty,7,F_100_Gelatinous_090,0,0,-0.44,0.35,-0.01,-0.34
-Anty the war ant race,Anty,8,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
-Anty the war ant race,Anty,8,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
-Anty the war ant race,Anty,8,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
-Anty the war ant race,Anty,8,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
-Anty the war ant race,Anty,8,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
-Anty the war ant race,Anty,8,F_040_Obese_090,0,0,0.39,0.11,0,0.06
-Anty the war ant race,Anty,8,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
-Anty the war ant race,Anty,8,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
-Anty the war ant race,Anty,8,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
-Anty the war ant race,Anty,8,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
-Anty the war ant race,Anty,8,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
-Anty the war ant race,Anty,8,F_100_Gelatinous_090,0,0,-0.44,0.35,-0.01,-0.34
-Anty the war ant race,Anty,5,F_150_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.41
-Anty the war ant race,Anty,5,F_200_Gelatinous_090,0,0,-0.44,0.35,0,-0.49
-Anty the war ant race,Anty,5,F_250_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.58
-Anty the war ant race,Anty,5,F_300_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.68
-Anty the war ant race,Anty,5,F_350_Gelatinous_090,0,0,-0.44,0.35,0.02,-0.76
-Anty the war ant race,Anty,5,F_400_Gelatinous_090,0,0,-0.44,0.35,0.03,-0.9
-Anty the war ant race,Anty,5,F_450_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.09
-Anty the war ant race,Anty,5,F_500_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.37
-Anty the war ant race,Anty,5,F_900_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.91
-Anty the war ant race,Anty,7,F_150_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.41
-Anty the war ant race,Anty,7,F_200_Gelatinous_090,0,0,-0.44,0.35,0,-0.49
-Anty the war ant race,Anty,7,F_250_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.58
-Anty the war ant race,Anty,7,F_300_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.68
-Anty the war ant race,Anty,7,F_350_Gelatinous_090,0,0,-0.44,0.35,0.02,-0.76
-Anty the war ant race,Anty,7,F_400_Gelatinous_090,0,0,-0.44,0.35,0.03,-0.9
-Anty the war ant race,Anty,7,F_450_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.09
-Anty the war ant race,Anty,7,F_500_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.37
-Anty the war ant race,Anty,7,F_900_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.91
-Anty the war ant race,Anty,8,F_150_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.41
-Anty the war ant race,Anty,8,F_200_Gelatinous_090,0,0,-0.44,0.35,0,-0.49
-Anty the war ant race,Anty,8,F_250_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.58
-Anty the war ant race,Anty,8,F_300_Gelatinous_090,0,0,-0.44,0.35,0.01,-0.68
-Anty the war ant race,Anty,8,F_350_Gelatinous_090,0,0,-0.44,0.35,0.02,-0.76
-Anty the war ant race,Anty,8,F_400_Gelatinous_090,0,0,-0.44,0.35,0.03,-0.9
-Anty the war ant race,Anty,8,F_450_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.09
-Anty the war ant race,Anty,8,F_500_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.37
-Anty the war ant race,Anty,8,F_900_Gelatinous_090,0,0,-0.44,0.35,0.02,-1.91
 Orassans,Alien_Orassan,1,F_005_Thick_070,0,0,0.09,-0.2,-0.03,0.01
 Orassans,Alien_Orassan,1,F_006_Chonky_070,0,0,0.11,-0.2,-0.03,0.05
 Orassans,Alien_Orassan,1,F_010_Chubby_070,0,0,0.17,-0.2,-0.03,0.05
@@ -685,33 +1489,3 @@ Vulpine Race Pack (Continued),Alien_Frijjid,1,M_070_Enormous,0,0,0.9,-0.185,0.04
 Vulpine Race Pack (Continued),Alien_Frijjid,1,M_080_Gigantic,0,0,0.9,-0.185,0.013333333,-0.466666667
 Vulpine Race Pack (Continued),Alien_Frijjid,1,M_090_Titanic,0,0,0.9,-0.185,-0.066666667,-0.066666667
 Vulpine Race Pack (Continued),Alien_Frijjid,1,M_100_Gelatinous,0,0,0.9,-0.185,-0.016666667,-0.826666667
-Anty the war ant race,Anty,5,F_910_Gelatinous_090,0,0,-0.84,0.21,0.03,-2.33
-Anty the war ant race,Anty,5,F_920_Gelatinous_090,0,0,-0.84,0.21,0.03,-2.73
-Anty the war ant race,Anty,5,F_930_Gelatinous_090,0,0,-0.84,0.21,0.03,-3.43
-Anty the war ant race,Anty,5,F_940_Gelatinous_090,0,0,-0.84,0.21,0.03,-4.83
-Anty the war ant race,Anty,5,F_950_Gelatinous_090,0,0,-0.84,0.21,0.03,-6.73
-Anty the war ant race,Anty,5,F_960_Gelatinous_090,0,0,-0.84,0.21,0.03,-8.73
-Anty the war ant race,Anty,5,F_970_Gelatinous_090,0,0,-0.84,0.21,0.03,-10.83
-Anty the war ant race,Anty,5,F_980_Gelatinous_090,0,0,-0.84,0.21,0.03,-13.23
-Anty the war ant race,Anty,5,F_990_Gelatinous_090,0,0,-0.84,0.21,0.03,-15.53
-Anty the war ant race,Anty,5,F_995_Gelatinous_090,0,0,-0.84,0.21,0.03,-19.03
-Anty the war ant race,Anty,7,F_910_Gelatinous_090,0,0,-0.84,0.21,0.03,-2.33
-Anty the war ant race,Anty,7,F_920_Gelatinous_090,0,0,-0.84,0.21,0.03,-2.73
-Anty the war ant race,Anty,7,F_930_Gelatinous_090,0,0,-0.84,0.21,0.03,-3.43
-Anty the war ant race,Anty,7,F_940_Gelatinous_090,0,0,-0.84,0.21,0.03,-4.83
-Anty the war ant race,Anty,7,F_950_Gelatinous_090,0,0,-0.84,0.21,0.03,-6.73
-Anty the war ant race,Anty,7,F_960_Gelatinous_090,0,0,-0.84,0.21,0.03,-8.73
-Anty the war ant race,Anty,7,F_970_Gelatinous_090,0,0,-0.84,0.21,0.03,-10.83
-Anty the war ant race,Anty,7,F_980_Gelatinous_090,0,0,-0.84,0.21,0.03,-13.23
-Anty the war ant race,Anty,7,F_990_Gelatinous_090,0,0,-0.84,0.21,0.03,-15.53
-Anty the war ant race,Anty,7,F_995_Gelatinous_090,0,0,-0.84,0.21,0.03,-19.03
-Anty the war ant race,Anty,8,F_910_Gelatinous_090,0,0,-0.84,0.21,0.03,-2.33
-Anty the war ant race,Anty,8,F_920_Gelatinous_090,0,0,-0.84,0.21,0.03,-2.73
-Anty the war ant race,Anty,8,F_930_Gelatinous_090,0,0,-0.84,0.21,0.03,-3.43
-Anty the war ant race,Anty,8,F_940_Gelatinous_090,0,0,-0.84,0.21,0.03,-4.83
-Anty the war ant race,Anty,8,F_950_Gelatinous_090,0,0,-0.84,0.21,0.03,-6.73
-Anty the war ant race,Anty,8,F_960_Gelatinous_090,0,0,-0.84,0.21,0.03,-8.73
-Anty the war ant race,Anty,8,F_970_Gelatinous_090,0,0,-0.84,0.21,0.03,-10.83
-Anty the war ant race,Anty,8,F_980_Gelatinous_090,0,0,-0.84,0.21,0.03,-13.23
-Anty the war ant race,Anty,8,F_990_Gelatinous_090,0,0,-0.84,0.21,0.03,-15.53
-Anty the war ant race,Anty,8,F_995_Gelatinous_090,0,0,-0.84,0.21,0.03,-19.03

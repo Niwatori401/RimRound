@@ -72,13 +72,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_060_Lardy</xpath>
 								<value>
-									<F_060_Lardy>(1.01,-0.28)</F_060_Lardy>
+									<F_060_Lardy>(0.995,-0.3875)</F_060_Lardy>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
 								<value>
-									<F_060_Lardy>(1.01,-0.28)</F_060_Lardy>
+									<F_060_Lardy>(0.995,-0.3875)</F_060_Lardy>
 								</value>						
 							</nomatch>
 						</match>
@@ -86,7 +86,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
 							<value>
 								<bodyTypes>
-									<F_060_Lardy>(1.01,-0.28)</F_060_Lardy>
+									<F_060_Lardy>(0.995,-0.3875)</F_060_Lardy>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -96,7 +96,7 @@
 						<value>
 							<east>
 								<bodyTypes>
-									<F_060_Lardy>(1.01,-0.28)</F_060_Lardy>
+									<F_060_Lardy>(0.995,-0.3875)</F_060_Lardy>
 								</bodyTypes>
 							</east>
 						</value>							
@@ -112,13 +112,13 @@
 							<match Class="PatchOperationReplace">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_060_Lardy</xpath>
 								<value>
-									<F_060_Lardy>(-0.09,-0.32)</F_060_Lardy>
+									<F_060_Lardy>(-0.0875,-0.3025)</F_060_Lardy>
 								</value>
 							</match>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
 								<value>
-									<F_060_Lardy>(-0.09,-0.32)</F_060_Lardy>
+									<F_060_Lardy>(-0.0875,-0.3025)</F_060_Lardy>
 								</value>						
 							</nomatch>
 						</match>
@@ -126,7 +126,7 @@
 							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
 							<value>
 								<bodyTypes>
-									<F_060_Lardy>(-0.09,-0.32)</F_060_Lardy>
+									<F_060_Lardy>(-0.0875,-0.3025)</F_060_Lardy>
 								</bodyTypes>
 							</value>							
 						</nomatch>
@@ -136,7 +136,7 @@
 						<value>
 							<north>
 								<bodyTypes>
-									<F_060_Lardy>(-0.09,-0.32)</F_060_Lardy>
+									<F_060_Lardy>(-0.0875,-0.3025)</F_060_Lardy>
 								</bodyTypes>
 							</north>
 						</value>							
