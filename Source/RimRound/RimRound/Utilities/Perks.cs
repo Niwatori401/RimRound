@@ -766,6 +766,7 @@ namespace RimRound.Utilities
                 {
                     p.perkLevels.PerkToLevels[perk.perkName] += 1;
                     p.perkLevels.availablePoints -= perk.cost;
+                    GameOverUtility.InitiateCountdown();
                 }
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
