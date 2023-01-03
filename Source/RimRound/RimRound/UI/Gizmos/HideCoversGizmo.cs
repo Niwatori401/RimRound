@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using RimRound.Comps;
+using Mono.Cecil;
+using RimRound.Utilities;
 
 namespace RimRound.UI
 {
@@ -16,7 +18,7 @@ namespace RimRound.UI
             this.comp = comp;
             defaultLabel = "Hide Covers";
             defaultDesc = "Whether you want to see a pawn's body when they sleep in a bed";
-            icon = Widgets.GetIconFor(ThingDefOf.Bed);
+            icon = Resources.HIDE_COVERS_ICON;
             isActive = () => comp.HideCovers;
             toggleAction = () => { ToggleAction(); };
             Order = 401;

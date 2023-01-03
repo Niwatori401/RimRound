@@ -95,7 +95,7 @@ namespace RimRound.Utilities
                 return race.defName;
             }
 
-            Log.Warning("GetRaceName failed to get race name!");
+            Log.ErrorOnce($"GetRaceName failed to get race name for pawn {p.Name}!", p.thingIDNumber);
             return "null race";
         }
     }

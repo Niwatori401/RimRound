@@ -32,7 +32,7 @@ namespace RimRound.Comps
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-
+            Log.Message("Body Comp Pre");
 
             base.PostSpawnSetup(respawningAfterLoad);
 
@@ -45,6 +45,8 @@ namespace RimRound.Comps
                     ((Pawn)parent).story.bodyType = b;
                 }
             }
+
+            Log.Message("Body Comp Post");
         }
 
         public override void CompTickRare()

@@ -13,6 +13,7 @@ using HarmonyLib;
 using System.Reflection;
 
 using RimRound.Comps;
+using RimRound.Utilities;
 
 namespace RimRound.UI
 {
@@ -70,7 +71,7 @@ namespace RimRound.UI
 			Rect backgroundBar = new Rect
 			{
 				width = inRect.width - 2 * marginAmount,
-				height = barHeight,
+				height = BarHeight,
 				x = inRect.x + marginAmount,
 				y = yPos
 			};
@@ -318,14 +319,6 @@ namespace RimRound.UI
 			}
 		}
 
-		public float BarHeight 
-		{
-			get 
-			{
-				return barHeight;
-			}
-		}
-
 
 		float nutritionBarYPos;
 
@@ -346,7 +339,14 @@ namespace RimRound.UI
 		float thresholdSliderLastValue;
 		float maxSliderLastValue;
 
-
+		public static float BarHeight 
+		{
+			get 
+			{
+				return GlobalSettings.largeDietGizmo ? 20f : 12f + Values.debugPos2;			
+			}
+		
+		}
 		public static float barHeight = 20;
         private bool enabled;
     }

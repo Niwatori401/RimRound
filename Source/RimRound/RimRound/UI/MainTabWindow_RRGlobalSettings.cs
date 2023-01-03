@@ -31,7 +31,7 @@ namespace RimRound.UI
         const int numberOfRowsPerColumnAlienRaceSettings = 24;
 
 
-        readonly int numberOfGizmoSettingCheckboxes = 5;
+        readonly int numberOfGizmoSettingCheckboxes = 6;
         readonly int numberOfExemptionSettingsCheckboxes = 6;
 
         static float _metaFloat;
@@ -257,10 +257,11 @@ namespace RimRound.UI
 
             Text.Font = GameFont.Small;
 
+            int positionIndex = 0;
 
             Widgets.CheckboxLabeled(new Rect(
                 gizmoSettingsCheckBoxesRect.x,
-                gizmoSettingsCheckBoxesRect.y,
+                positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 spaceBetweenCheckBoxes),
                 "RR_Mtw_GizmoSettings_PawnDietManagementGizmo".Translate(), ref GlobalSettings.showPawnDietManagementGizmo);
@@ -268,7 +269,16 @@ namespace RimRound.UI
             Widgets.CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
-                y = 1 * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
+                y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
+                width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+                "RR_Mtw_GizmoSettings_LargeDietGizmo".Translate(), ref GlobalSettings.largeDietGizmo);
+
+            Widgets.CheckboxLabeled(new Rect
+            {
+                x = gizmoSettingsCheckBoxesRect.x,
+                y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -276,7 +286,7 @@ namespace RimRound.UI
             Widgets.CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
-                y = 2 * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
+                y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -284,7 +294,7 @@ namespace RimRound.UI
             Widgets.CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
-                y = 3 * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
+                y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
@@ -292,11 +302,12 @@ namespace RimRound.UI
             Widgets.CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
-                y = 4 * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
+                y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
                 "RR_Mtw_GizmoSettings_BlobIntoBedGizmo".Translate(), ref GlobalSettings.showBlobIntobedGizmo);
+            
 
 
             GUI.EndGroup();

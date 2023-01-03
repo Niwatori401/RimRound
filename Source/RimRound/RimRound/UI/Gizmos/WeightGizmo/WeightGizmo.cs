@@ -21,7 +21,7 @@ namespace RimRound.UI
 		public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
 			//Large Rectangle that contains the whole gizmo
-			Rect rect = new Rect(topLeft.x, topLeft.y - this.extraHeight, this.GetWidth(maxWidth), this.OverrideHeight);
+			Rect rect = new Rect(topLeft.x, topLeft.y - (GlobalSettings.largeDietGizmo ? this.extraHeight : 0), this.GetWidth(maxWidth), this.OverrideHeight);
 			Widgets.DrawWindowBackground(rect);
 
 			//The highlighted rectangle if you hover over the main gizmo.
@@ -35,7 +35,7 @@ namespace RimRound.UI
 			Widgets.Label(rect2, "Dietary Management");
 
 
-			if (WGThingComp.DietMode != DietMode.Disabled) 
+			if (WGThingComp.DietMode != DietMode.Disabled && GlobalSettings.largeDietGizmo) 
 			{
 				Text.Font = GameFont.Tiny;
 				Text.Anchor = TextAnchor.UpperLeft;
@@ -52,11 +52,12 @@ namespace RimRound.UI
 
 
 			float gapBetweenBars = 2f;
-			WGThingComp.fullnessbar.DrawOnGUI(rect2, rect2.yMax - WeightGizmo_FullnessBar.barHeight - gapBetweenBars);
+			WGThingComp.fullnessbar.DrawOnGUI(rect2, rect2.yMax - WeightGizmo_FullnessBar.BarHeight - gapBetweenBars, WGThingComp);
 
-			WGThingComp.nutritionbar.DrawOnGUI(rect2, WGThingComp.fullnessbar.yPosition - WeightGizmo_NutritionBar.barHeight - gapBetweenBars);
+			WGThingComp.nutritionbar.DrawOnGUI(rect2, WGThingComp.fullnessbar.yPosition - WeightGizmo_NutritionBar.BarHeight - gapBetweenBars);
 
-			float modeButtonSize = 30f;
+			float modeButtonSize = GlobalSettings.largeDietGizmo ? 30f : 20 + Values.debugPos3;
+
 			Rect modeButtonContainer = new Rect
 			{
 				x = rect2.x + rect2.width - modeButtonSize,
@@ -105,7 +106,7 @@ namespace RimRound.UI
 		{
 			get
 			{
-				return 75f + this.extraHeight;
+				return 75f + (GlobalSettings.largeDietGizmo ? this.extraHeight : 0);
 			}
 		}
 

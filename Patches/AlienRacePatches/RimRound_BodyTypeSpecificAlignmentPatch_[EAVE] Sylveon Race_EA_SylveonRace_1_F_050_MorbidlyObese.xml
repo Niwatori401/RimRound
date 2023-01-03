@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
-	<Operation Class="PatchOperationFindMod">
+	<Operation Class="RimRound.Utilities.PatchOperationFindModPlusUltra">
 		<mods>
 			<li>[EAVE] Sylveon Race</li>
 		</mods>

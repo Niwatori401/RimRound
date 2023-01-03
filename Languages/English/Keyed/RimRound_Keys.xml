@@ -105,11 +105,11 @@
 	<RR_Mtw_GizmoSettingsTitle>Gizmo Settings</RR_Mtw_GizmoSettingsTitle>
 	
 	<RR_Mtw_GizmoSettings_PawnDietManagementGizmo>Show diet management gizmo</RR_Mtw_GizmoSettings_PawnDietManagementGizmo>
+	<RR_Mtw_GizmoSettings_LargeDietGizmo>Large diet management gizmo</RR_Mtw_GizmoSettings_LargeDietGizmo>
 	<RR_Mtw_GizmoSettings_SleepPostureManagementGizmo>Show sleep posture gizmo</RR_Mtw_GizmoSettings_SleepPostureManagementGizmo>
 	<RR_Mtw_GizmoSettings_BlanketMangementGizmo>Show blanket management gizmo</RR_Mtw_GizmoSettings_BlanketMangementGizmo>
 	<RR_Mtw_GizmoSettings_ExemptionGizmo>Show dynamic body type exemption gizmo</RR_Mtw_GizmoSettings_ExemptionGizmo>
 	<RR_Mtw_GizmoSettings_BlobIntoBedGizmo>Show blob into bed gizmo</RR_Mtw_GizmoSettings_BlobIntoBedGizmo>
-	
 	<!--Other-->
 	<FloatMenuCantConsumeTooBig>Can't consume {1_labelShort}: Too big</FloatMenuCantConsumeTooBig>
 	

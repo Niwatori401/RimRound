@@ -10,6 +10,7 @@ using UnityEngine;
 using Verse;
 using RimRound.Comps;
 using RimRound.Utilities;
+using Resources = RimRound.Utilities.Resources;
 
 namespace RimRound.UI
 {
@@ -21,7 +22,7 @@ namespace RimRound.UI
 			this.comp = comp;
 			defaultLabel = "Sleeping Position";
 			defaultDesc = "Changes which direction you want this pawn to face when they sleep.";
-			icon = Widgets.GetIconFor(ThingDefOf.Chicken);
+			icon = Resources.SLEEPING_POSITION_ICON;
 			isActive = () => fakebool;
 			toggleAction = () => { ToggleAction(); };
 			Order = 402;

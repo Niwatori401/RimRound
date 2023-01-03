@@ -19,7 +19,7 @@ namespace RimRound.UI
             this.fndComp = fndComp;
             defaultLabel = "Blob bed";
             defaultDesc = "Whether this pawn will serve as a resting place for other colonists";
-            icon = Widgets.GetIconFor(RimWorld.ThingDefOf.SleepingSpot);
+            icon = Resources.BLOB_BED_ICON;
             isActive = () => comp.IsBed;
             toggleAction = () => { ToggleAction(); };
             Order = 401;

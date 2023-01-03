@@ -18,7 +18,7 @@ namespace RimRound.UI
             this.fndComp = fndComp;
             defaultLabel = "Make Generator";
             defaultDesc = "Whether this pawn will serve basic power generator";
-            icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Chicken);
+            icon = Resources.MAKE_GENERATOR_ICON;
             isActive = () => comp.IsPowerSpot;
             toggleAction = () => { ToggleAction(); };
             Order = 404;

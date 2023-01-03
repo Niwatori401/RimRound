@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using Resources = RimRound.Utilities.Resources;
 
 namespace RimRound.UI
 {
@@ -18,7 +19,7 @@ namespace RimRound.UI
             this.comp = comp;
             defaultLabel = "Recreation Spot";
             defaultDesc = "Whether this pawn will serve as a recreation spot";
-            icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Chicken);
+            icon = Resources.RECREATION_SPOT_ICON;
             isActive = () => comp.IsRecSpot;
             toggleAction = () => { ToggleAction(); };
             Order = 402;

@@ -31,6 +31,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Increase Weight Opinion",
+                    icon = Resources.INCREASE_WEIGHT_OPINION_ICON,
                     action = delegate ()
                     {
                         IncreaseOpinion();
@@ -39,6 +40,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Decrease Weight Opinion",
+                    icon = Resources.DECREASE_WEIGHT_OPINION_ICON,
                     action = delegate ()
                     {
                         LowerOpinion();

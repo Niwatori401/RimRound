@@ -19,8 +19,11 @@ namespace RimRound.Comps
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
+            Log.Message("Debug Comp Pre");
             base.PostSpawnSetup(respawningAfterLoad);
             cachedPBTComp = parent.TryGetComp<PawnBodyType_ThingComp>();
+            Log.Message("Debug Comp Post");
+
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -30,7 +33,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = $"Switch pawn body type to {(cachedPBTComp is null ? "other type" : (cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple.ToString() : BodyArchetype.standard.ToString()))}",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Fire),
+                    icon = (cachedPBTComp is null ? Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire) : (cachedPBTComp.BodyArchetype == BodyArchetype.standard ? Resources.SWITCH_PAWN_BODY_TYPE_APPLE_ICON : Resources.SWITCH_PAWN_BODY_TYPE_STANDARD_ICON)),
                     action = delegate ()
                     {
                         if (cachedPBTComp is null)
@@ -48,7 +51,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = $"Force default body type to current",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Muffalo),
+                    icon = Resources.FORCE_CURRENT_BODY_TYPE_ICON,
                     action = delegate ()
                     {
                         FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
@@ -67,7 +70,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Add 10 Perk Points",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Chicken),
+                    icon = Resources.TEN_PP_ICON,
                     action = delegate ()
                     {
                         FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
@@ -83,7 +86,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Wipe perks",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Chicken),
+                    icon = Resources.WIPE_PERKS_ICON,
                     action = delegate ()
                     {
                         FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
@@ -103,7 +106,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Change magnitude",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.DropPodIncoming),
+                    icon = Resources.CHANGE_MAGNITUDE_ICON,
                     action = delegate ()
                     {
                         offsetAmountsIndex = (offsetAmountsIndex + 1) % offsetAmounts.Length;
@@ -114,7 +117,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Change direction",
-                    icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Ship_Reactor),
+                    icon = Resources.CHANGE_DIRECTION_ICON,
                     action = delegate ()
                     {
                         if (positivity == 1)
@@ -129,7 +132,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = "Change cardinality",
-                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Cow),
+                        icon = Resources.CHANGE_CARDINALITY_ICON,
                         action = delegate ()
                         {
                             cardinality++;
@@ -156,7 +159,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = "Change X/Y",
-                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Door),
+                        icon = Resources.CHANGE_XY_ICON,
                         action = delegate ()
                         {
                             xy = !xy;
@@ -167,7 +170,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 1)",
-                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                        icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
                             Values.debugPos += positivity * (offsetAmounts[offsetAmountsIndex]);
@@ -178,7 +181,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 2)",
-                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                        icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
                             Values.debugPos2 += positivity * (offsetAmounts[offsetAmountsIndex]);
@@ -189,7 +192,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 3)",
-                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                        icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
                             Values.debugPos3 += positivity * (offsetAmounts[offsetAmountsIndex]);
@@ -200,7 +203,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} ({offsetAmounts[offsetAmountsIndex]} to DEBUGFLOAT 4)",
-                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire),
+                        icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
                             Values.debugPos4 += positivity * (offsetAmounts[offsetAmountsIndex]);
@@ -215,6 +218,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = $"{(positivity == 1 ? "Add" : "Subtract")} Severity ({offsetAmounts[offsetAmountsIndex]} kgs)",
+                    icon = (positivity == 1 ? Resources.ADD_SEVERITY_ICON : Resources.REDUCE_SEVERITY_ICON),
                     action = delegate ()
                     {
                         PawnBodyType_ThingComp comp = ((Pawn)parent).TryGetComp<PawnBodyType_ThingComp>();
@@ -232,7 +236,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = "Change Offset Item",
-                        icon = Widgets.GetIconFor(RimWorld.ThingDefOf.Mote_ThoughtGood),
+                        icon = Resources.CHANGE_OFFSET_ITEM_ICON,
                         action = delegate ()
                         {
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)
@@ -253,6 +257,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"Change Extra Body Part Offset {(xy ? "Y" : "X")}{(positivity == 1 ? "+" : "-")} for {(cardinality == 0 ? "north" : (cardinality == 1 ? "east" : (cardinality == 2 ? "south" : "west")))} at {offsetAmounts[offsetAmountsIndex]}",
+                        icon = Resources.EXTRA_BODY_PART_OFFSET_ICON,
                         action = delegate ()
                         {
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)
@@ -297,6 +302,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"Change Head Offset {(xy ? "Y" : "X")}{(positivity == 1 ? "+" : "-")} for {((Pawn)parent).story.bodyType} {(cardinality == 0 ? "north" : (cardinality == 1 ? "east" : (cardinality == 2 ? "south" : "west")))} at {offsetAmounts[offsetAmountsIndex]}",
+                        icon = Resources.CHANGE_OFFSET_ITEM_ICON,
                         action = delegate ()
                         {
                             UnityEngine.Vector2 oldOffset = ((Pawn)parent).story.bodyType.headOffset;
@@ -308,6 +314,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"Change Sprite size for {((Pawn)parent).story.bodyType}",
+                        icon = Resources.SPRITE_SIZE_ICON,
                         action = delegate ()
                         {
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)
@@ -330,6 +337,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"Dump body data",
+                        icon = Resources.DUMP_BODY_DATA_ICON,
                         action = delegate ()
                         {
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)

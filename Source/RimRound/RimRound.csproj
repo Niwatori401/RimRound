@@ -207,6 +207,7 @@
     <Compile Include="RimRound\Utilities\HungerDroneUtility.cs" />
     <Compile Include="RimRound\Utilities\MobilityChairUtility.cs" />
     <Compile Include="RimRound\Utilities\ModCompatibilityUtility.cs" />
+    <Compile Include="RimRound\Utilities\PatchOperationFindModPlusUltra.cs" />
     <Compile Include="RimRound\Utilities\PawnGeneratorUtility.cs" />
     <Compile Include="RimRound\Utilities\Perks.cs" />
     <Compile Include="RimRound\Utilities\PrisonerUtility.cs" />

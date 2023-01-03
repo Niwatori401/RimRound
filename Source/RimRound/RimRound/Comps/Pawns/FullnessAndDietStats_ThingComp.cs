@@ -12,6 +12,7 @@ using Verse.AI;
 using RimRound.UI;
 using UnityEngine;
 using System.Reflection;
+using Resources = RimRound.Utilities.Resources;
 
 namespace RimRound.Comps
 {
@@ -23,6 +24,7 @@ namespace RimRound.Comps
 
         public override void PostExposeData()
         {
+            //Log.Message("Started loading FNDCOMP.");
             base.PostExposeData();
 
             if (Scribe.mode == LoadSaveMode.Saving)
@@ -49,6 +51,8 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref consumedNutrition,               "consumedNutrition",               0f);
 
             ExposePerkLevels();
+
+            //Log.Message("Finished loading FNDCOMP.");
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -61,6 +65,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Fill stomach",
+                    icon = Resources.FILL_STOMACH_ICON,
                     action = delegate ()
                     {
                         this.CurrentFullness = this.HardLimit - Values.MinRQ;
@@ -70,6 +75,7 @@ namespace RimRound.Comps
                 yield return new Command_Action
                 {
                     defaultLabel = "Empty stomach",
+                    icon = Resources.EMPTY_STOMACH_ICON,
                     action = delegate ()
                     {
                         this.CurrentFullness = 0;
@@ -81,7 +87,6 @@ namespace RimRound.Comps
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-
             if (((Pawn)parent)?.RaceProps.Humanlike ?? false)
             {
                 if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn()) is null)
@@ -99,6 +104,7 @@ namespace RimRound.Comps
 
                 if (weightGizmo == null)
                     this.weightGizmo = new WeightGizmo(this);
+
 
                 Update();
                 SetRangesByValue(cachedSliderVal1, cachedSliderVal2);
@@ -133,6 +139,7 @@ namespace RimRound.Comps
 
         private List<string> _perkNamesForSaving = new List<string>();
         private List<int> _perkLevelValuesForSaving = new List<int>();
+
         private void ExposePerkLevels() 
         {
             if (Scribe.mode == LoadSaveMode.Saving)
@@ -140,8 +147,8 @@ namespace RimRound.Comps
                 if (perkLevels?.PerkToLevels == null)
                     return;
 
-                _perkNamesForSaving.Clear();
-                _perkLevelValuesForSaving.Clear();
+                _perkNamesForSaving = new List<string>();
+                _perkLevelValuesForSaving = new List<int>();
 
                 foreach (var x in perkLevels.PerkToLevels)
                 {

@@ -9,6 +9,7 @@ using Verse;
 using UnityEngine;
 using Verse.Sound;
 using RimRound.Comps;
+using RimRound.Utilities;
 
 namespace RimRound.UI
 {
@@ -22,7 +23,7 @@ namespace RimRound.UI
 
 
 		//call in the main gizmo's DrawOnGUI()
-        public void DrawOnGUI(Rect rect, float yPos) 
+        public void DrawOnGUI(Rect rect, float yPos, FullnessAndDietStats_ThingComp comp) 
         {
 			/*
 			float yMin = rect.yMin;
@@ -51,7 +52,7 @@ namespace RimRound.UI
             }
 			*/
 
-            this.DrawMeter(rect, yPos);
+            this.DrawMeter(rect, yPos, comp);
         }
 
 
@@ -142,16 +143,16 @@ namespace RimRound.UI
 		}
 
 		//Used in Gizmo on GUI only. Draws sliders, dividers and dashes
-		void DrawMeter(Rect inRect, float yPos, float margin = -1f)
+		void DrawMeter(Rect inRect, float yPos, FullnessAndDietStats_ThingComp comp)
         {
-            marginSize = margin > 0f ? margin : 1f;
+            marginSize = 1f;
 
             yPosition = yPos;
 
             Rect fullnessBarRect = new Rect
             {
                 width = inRect.width - 2 * marginSize,
-                height = barHeight,
+                height = BarHeight,
                 x = inRect.x + marginSize,
                 y = yPosition
             };
@@ -166,14 +167,17 @@ namespace RimRound.UI
 
             CheckForDeathDialog();
 
-            AddFullnessPercentageOnFullnessBar(fullnessBarRect);
+            AddFullnessPercentageOnFullnessBar(fullnessBarRect, comp);
         }
 
-        private void AddFullnessPercentageOnFullnessBar(Rect fullnessBarRect)
+        private void AddFullnessPercentageOnFullnessBar(Rect fullnessBarRect, FullnessAndDietStats_ThingComp comp)
         {
-            Text.Font = GameFont.Small;
+            Text.Font = GlobalSettings.largeDietGizmo ? GameFont.Small : GameFont.Tiny;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(fullnessBarRect, CurrentFullnessAsPercentOfSoftLimit.ToStringPercent());
+			if (GlobalSettings.largeDietGizmo)
+				Widgets.Label(fullnessBarRect, CurrentFullnessAsPercentOfSoftLimit.ToStringPercent());
+			else
+				DrawFullnessLabel(fullnessBarRect, comp);
             Text.Anchor = TextAnchor.UpperLeft;
             GUI.color = Color.white;
         }
@@ -189,6 +193,26 @@ namespace RimRound.UI
                 thresholdSlider.DrawSlider(fullnessBarRect, SliderTex, DisplayLimit);
             }
         }
+
+		private void DrawFullnessLabel(Rect rect, FullnessAndDietStats_ThingComp comp)
+		{
+            if (comp.DietMode != DietMode.Disabled)
+            {
+                Text.Font = GameFont.Tiny;
+                Text.Anchor = TextAnchor.UpperCenter;
+                Widgets.Label(
+                    new Rect
+                    {
+                        x = rect.x,
+                        y = rect.yMin + 3f,
+                        width = rect.width,
+                        height = rect.height
+                    },
+                    $"{(this.CurrentFullnessAsPercentOfSoftLimit * 100).ToString("F0")}% ({comp.CurrentFullness.ToString("F1")}/{comp.SoftLimit.ToString("F1")}L)");
+				Text.Anchor = TextAnchor.UpperLeft;
+			}
+        }
+
 
         private void DrawFullnessIndicatorBar(Rect fullnessBarRect)
         {
@@ -268,9 +292,9 @@ namespace RimRound.UI
 			Rect position = new Rect
 			{
 				x = rect.x + 3f + (rect.width - 8f) * placementPercent,
-				y = rect.y + rect.height - 9f,
+				y = rect.y + rect.height - 7f,
 				width = 2f,
-				height = 6f
+				height = 4f
 			};
 			if (curValue < placementPercent)
 			{
@@ -393,7 +417,14 @@ namespace RimRound.UI
 		}
 		private float yposition;
 
-		public static float barHeight = 30f;
+
+		public static float BarHeight 
+		{
+			get 
+			{
+				return GlobalSettings.largeDietGizmo ? 30f : 26f + Values.debugPos;
+			}
+		}
 
 		
 

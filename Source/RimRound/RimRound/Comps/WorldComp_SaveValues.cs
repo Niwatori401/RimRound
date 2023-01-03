@@ -54,6 +54,9 @@ namespace RimRound.Comps
             {
                 Log.Warning("[RimRound] Failed to find Vanilla Expanded Framework. Please make sure it is installed or sprites will not render correctly!");
             }
+
+
+            Log.Message("Finished changing mod setting.");
         }
 
         public void SaveCaravanPatchUtility() 
@@ -69,6 +72,8 @@ namespace RimRound.Comps
 
         public void SaveAllSettings()
         {
+            Log.Message("Started saving settings.");
+
             IEnumerable<FieldInfo> fieldInfos = typeof(GlobalSettings).GetRuntimeFields();
 
             foreach (FieldInfo f in fieldInfos)
@@ -86,6 +91,8 @@ namespace RimRound.Comps
                     ExposeNumericFieldData<int>(f);
                 }
             }
+
+            Log.Message("Finished saving settings.");
         }
 
         private static void ExposeNumericFieldData<T>(FieldInfo f)

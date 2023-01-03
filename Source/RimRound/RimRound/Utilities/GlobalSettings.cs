@@ -31,13 +31,14 @@ namespace RimRound.Utilities
 
 
         #region Gizmo Display Settings
+
         public static bool showSpecialDebugSettings = false;
         public static bool showPawnDietManagementGizmo = true;
         public static bool showSleepPostureManagementGizmo = true;
         public static bool showBlanketManagementGizmo = true;
         public static bool showExemptionGizmo = false;
         public static bool showBlobIntobedGizmo = true;
-
+        public static bool largeDietGizmo = true;
 
         #endregion
 
