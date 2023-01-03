@@ -72,8 +72,6 @@ namespace RimRound.Comps
 
         public void SaveAllSettings()
         {
-            Log.Message("Started saving settings.");
-
             IEnumerable<FieldInfo> fieldInfos = typeof(GlobalSettings).GetRuntimeFields();
 
             foreach (FieldInfo f in fieldInfos)
@@ -91,8 +89,6 @@ namespace RimRound.Comps
                     ExposeNumericFieldData<int>(f);
                 }
             }
-
-            Log.Message("Finished saving settings.");
         }
 
         private static void ExposeNumericFieldData<T>(FieldInfo f)

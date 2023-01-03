@@ -39,7 +39,6 @@ namespace RimRound.Comps
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            Log.Message("Blob Comp Pre");
             base.PostSpawnSetup(respawningAfterLoad);
             fndComp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
             if (fndComp is null)
@@ -51,7 +50,6 @@ namespace RimRound.Comps
             gizmo = new MakeBlobIntoBedGizmo(this, fndComp);
             gizmoRec = new MakeRecreationSpotGizmo(this);
             generatorGizmo = new MakeGeneratorGizmo(this, fndComp);
-            Log.Message("Blob Comp Post");
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()

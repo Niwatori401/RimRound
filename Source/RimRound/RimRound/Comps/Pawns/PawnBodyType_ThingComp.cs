@@ -32,8 +32,6 @@ namespace RimRound.Comps
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            Log.Message("Body Comp Pre");
-
             base.PostSpawnSetup(respawningAfterLoad);
 
             if (((Pawn)parent).RaceProps.Humanlike)
@@ -45,8 +43,6 @@ namespace RimRound.Comps
                     ((Pawn)parent).story.bodyType = b;
                 }
             }
-
-            Log.Message("Body Comp Post");
         }
 
         public override void CompTickRare()

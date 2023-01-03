@@ -19,11 +19,8 @@ namespace RimRound.Comps
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            Log.Message("Debug Comp Pre");
             base.PostSpawnSetup(respawningAfterLoad);
             cachedPBTComp = parent.TryGetComp<PawnBodyType_ThingComp>();
-            Log.Message("Debug Comp Post");
-
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()

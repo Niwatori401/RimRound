@@ -38,7 +38,7 @@ namespace RimRound.Utilities
         public static bool showBlanketManagementGizmo = true;
         public static bool showExemptionGizmo = false;
         public static bool showBlobIntobedGizmo = true;
-        public static bool largeDietGizmo = true;
+        public static bool largeDietGizmo = false;
 
         #endregion
 

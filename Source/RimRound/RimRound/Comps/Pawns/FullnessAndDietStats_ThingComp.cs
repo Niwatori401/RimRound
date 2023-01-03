@@ -24,7 +24,6 @@ namespace RimRound.Comps
 
         public override void PostExposeData()
         {
-            //Log.Message("Started loading FNDCOMP.");
             base.PostExposeData();
 
             if (Scribe.mode == LoadSaveMode.Saving)
@@ -51,8 +50,6 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref consumedNutrition,               "consumedNutrition",               0f);
 
             ExposePerkLevels();
-
-            //Log.Message("Finished loading FNDCOMP.");
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
