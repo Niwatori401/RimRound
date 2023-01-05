@@ -18,7 +18,6 @@ namespace RimRound.AI
             {
                 if (pawn.RaceProps.Humanlike)
                 {
-                    float val = 0;
                     FullnessAndDietStats_ThingComp comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
                     if (comp is null)
                         return "";
@@ -28,9 +27,13 @@ namespace RimRound.AI
                     if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090_Titanic))
                         bulletProofBlobLevel = 0;
 
-                    val += bulletProofBlobLevel * 0.1f;
+                    int thatLevel = comp.perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
 
-                    return "RR_Bulletproof_Blob_Title".Translate() + $" {val * 100:f1}%";
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500_Gelatinous))
+                        thatLevel = 0;
+
+
+                    return "RR_Bulletproof_Blob_Title".Translate() + $" {bulletProofBlobLevel * 0.1f * 100:f1}%" + "\n" + "RR_That_Title".Translate() + $" {thatLevel * 0.5f * 100:f1}%";
                 }
             }
             return "";
@@ -51,7 +54,12 @@ namespace RimRound.AI
                     if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090_Titanic))
                         bulletProofBlobLevel = 0;
 
-                    val += bulletProofBlobLevel * 0.1f;
+                    int thatLevel = comp.perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
+
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500_Gelatinous))
+                        thatLevel = 0;
+
+                    val += bulletProofBlobLevel * 0.1f + thatLevel * 0.5f;
                 }
             }
         }

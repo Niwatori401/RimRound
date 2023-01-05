@@ -736,6 +736,31 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
+            new Perk("RR_That_Title", "RR_That_Desc", 15, 1, thatIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || race.defName != "Anty")
+                    return new SuccessReport("Only Anty can purchase", false);
+
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    return new SuccessReport("Must be Gelatinous X to purchase", false);
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
 
             new Perk("RR_MakesAllTheRules_Title", "RR_MakesAllTheRules_Desc", 10, 1, makesAllTheRulesIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>

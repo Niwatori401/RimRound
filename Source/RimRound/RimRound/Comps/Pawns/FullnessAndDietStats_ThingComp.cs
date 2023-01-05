@@ -517,6 +517,7 @@ namespace RimRound.Comps
                 int wg4000Level = perkLevels.PerkToLevels?["RR_WeightGain4000_Title"] ?? 0;
                 int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
                 int heavyRevianLevel = perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
+                int thatLevel = perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
 
                 if (makesAllTheRulesLevel > 0)
                 {
@@ -538,7 +539,8 @@ namespace RimRound.Comps
                     0.1f * apexAbsorbtionLevel +
                     0.2f * wg4000Level +
                     0.5f * heavyRevianLevel +
-                    4.0f * makesAllTheRulesLevel;
+                    4.0f * makesAllTheRulesLevel +
+                    2.0f * thatLevel;
             }
             set 
             {

@@ -120,7 +120,6 @@
     <Compile Include="FeedingTube\SectionLayer_ThingsFoodGrid.cs" />
     <Compile Include="FeedingTube\UI\Alert_FoodProcessorNeedsDispenser.cs" />
     <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
-    <Compile Include="Patch\RimWorldPatches\HamronyPatchAttribute.cs" />
     <Compile Include="RimRound\AI\JobDriver_PlayWithBlob.cs" />
     <Compile Include="RimRound\AI\JoyGiver_PlayWithBlob.cs" />
     <Compile Include="RimRound\AI\StatPart_ArmorRating_Blunt.cs" />
@@ -128,6 +127,7 @@
     <Compile Include="RimRound\AI\StatPart_ButcheryFleshEfficiency.cs" />
     <Compile Include="RimRound\AI\StatPart_ComfyTemperatureMin.cs" />
     <Compile Include="RimRound\AI\StatPart_CookSpeed.cs" />
+    <Compile Include="RimRound\AI\StatPart_Flammability.cs" />
     <Compile Include="RimRound\AI\StatPart_HarvestYield.cs" />
     <Compile Include="RimRound\AI\StatPart_IncomingDamageFactor.cs" />
     <Compile Include="RimRound\AI\StatPart_InjuryHealingFactor.cs" />
@@ -141,6 +141,7 @@
     <Compile Include="RimRound\AI\Recipe_RemoveFatHeavy.cs" />
     <Compile Include="RimRound\AI\StatPart_MassAdjustedByWeight.cs" />
     <Compile Include="RimRound\AI\StatPart_MeatYieldBodyFat.cs" />
+    <Compile Include="RimRound\AI\StatPart_ToxicResistance.cs" />
     <Compile Include="RimRound\AI\ThoughtWorker_WeightOpinion_Dislike.cs" />
     <Compile Include="RimRound\AI\ThoughtWorker_WeightOpinion_Fanatical.cs" />
     <Compile Include="RimRound\AI\ThoughtWorker_WeightOpinion_Love.cs" />

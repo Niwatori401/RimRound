@@ -301,6 +301,7 @@
 	<RR_PackWhale_Title>Pack Whale</RR_PackWhale_Title>
 	<RR_CropNotch_Title>Crop Notch</RR_CropNotch_Title>
 	<RR_TheresTheBeef_Title>There's the Beef!</RR_TheresTheBeef_Title>
+	<RR_That_Title>That!</RR_That_Title>
 	
 	<RR_Ample_Appetite_Desc>+10% hunger rate multiplier per level\n\n"{0}'s body has grown accustomed to an increased food intake, and will now require even more to stay satiated."</RR_Ample_Appetite_Desc>
 	<RR_Apex_Absorption_Desc>+0.1x weight gain multiplier per level\n\n"{0}'s metabolism has gone into overdrive, allowing them to gain more weight from the same amount of food."</RR_Apex_Absorption_Desc>
@@ -338,4 +339,5 @@
 	<RR_PackWhale_Desc>Pawn can "carry" double the normal amount.\n\n"So many folds, so many places to store things! {0} makes an excellent travelling buddy, provided you don't mind the increased "snack breaks." They can carry much more on long-distance trips. Hopefully you can find it all again..."\n\nPrerequisite: Morbidly Obese or higher, must remain this weight or higher to keep bonus.</RR_PackWhale_Desc>
 	<RR_CropNotch_Desc>+10% farming/crop yield for the user.\n\n"The harvest sure is bountiful this season. And next season."</RR_CropNotch_Desc>
 	<RR_TheresTheBeef_Desc>Gain additional meat yields from butchered animals. +50% butchery efficiency for the user.\n\n"Why's everyone always so particular about what parts of the animal are edible? It's all good eating!"</RR_TheresTheBeef_Desc>
+	<RR_That_Desc>+2.0x weight gain multiplier, toxic sensitivity -100%, +50% blunt and sharp resistance, -20% heat resistance\n\n"Alright, who let {0} into the nuclear waste again?" \n\nPrerequisite: Must be Gelatinous X+ to purchase, Anty race only</RR_That_Desc>
 </LanguageData>
