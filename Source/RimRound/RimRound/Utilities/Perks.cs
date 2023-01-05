@@ -624,6 +624,45 @@ namespace RimRound.Utilities
 
                 return new SuccessReport("", true);
             }),
+            new Perk("RR_TheresTheBeef_Title", "RR_TheresTheBeef_Desc", 5, 1, theresTheBeefIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+            new Perk("RR_CropNotch_Title", "RR_CropNotch_Desc", 2, 5, theresTheBeefIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
         };
 
         public static List<Perk> elitePerks = new List<Perk>
