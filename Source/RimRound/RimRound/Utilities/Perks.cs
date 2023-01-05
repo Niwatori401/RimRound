@@ -644,7 +644,7 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_CropNotch_Title", "RR_CropNotch_Desc", 2, 5, theresTheBeefIcon,
+            new Perk("RR_CropNotch_Title", "RR_CropNotch_Desc", 2, 5, cropNotchIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)

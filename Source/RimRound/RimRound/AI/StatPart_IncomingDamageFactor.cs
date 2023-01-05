@@ -26,7 +26,7 @@ namespace RimRound.AI
 
                     val += titanicTankLevel * 0.2f;
 
-                    return "RR_HeavyRevian_Title".Translate() + $" -{val * 100: f1}%";
+                    return "RR_HeavyRevian_Title".Translate() + $" -{val * 100:f1}%";
                 }
             }
             return "";

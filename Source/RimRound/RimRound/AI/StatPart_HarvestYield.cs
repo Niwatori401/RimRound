@@ -26,7 +26,7 @@ namespace RimRound.AI
 
                     val += cropNotchLevel * 0.1f;
 
-                    return "RR_CropNotch_Title".Translate() + $" {val * 100: f1}%";
+                    return "RR_CropNotch_Title".Translate() + $" {val * 100:f1}%";
                 }
             }
 

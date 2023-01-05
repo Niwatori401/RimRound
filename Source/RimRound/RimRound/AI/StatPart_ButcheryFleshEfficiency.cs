@@ -26,7 +26,7 @@ namespace RimRound.AI
 
                     val += theresTheBeefLevel * 0.5f;
 
-                    return "RR_TheresTheBeef_Title".Translate() + $" {val * 100: f1}%";
+                    return "RR_TheresTheBeef_Title".Translate() + $" {val * 100:f1}%";
                 }
             }
 
