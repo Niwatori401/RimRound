@@ -266,7 +266,7 @@
 	
 	<RR_Ample_Appetite_Title>Ample Appetite</RR_Ample_Appetite_Title>
 	<RR_Apex_Absorption_Title>Apex Absorption</RR_Apex_Absorption_Title>
-	<RR_Ascension_Icon_Title>Ascension</RR_Ascension_Icon_Title>
+	<RR_Ascension_Title>Ascension</RR_Ascension_Title>
 	<RR_Beautiful_Bulk_Title>Beautiful Bulk</RR_Beautiful_Bulk_Title>
 	<RR_Breakneck_Buffet_Title>Breakneck Buffet</RR_Breakneck_Buffet_Title>
 	<RR_Bulletproof_Blob_Title>Bulletproof Blob</RR_Bulletproof_Blob_Title>
@@ -295,6 +295,11 @@
 	<RR_WeLikeToParty_Title>We Like To Party</RR_WeLikeToParty_Title>
 	<RR_WeightGain4000_Title>Weight Gain 4000</RR_WeightGain4000_Title>
 	<RR_WellInsulated_Title>Well Insulated</RR_WellInsulated_Title>
+	
+	<RR_SuddenExpansion_Title>Sudden Expansion</RR_SuddenExpansion_Title>
+	<RR_Atomic_Anomaly_Title>Atomic Anomaly</RR_Atomic_Anomaly_Title>
+	
+	
 	
 	<RR_Ample_Appetite_Desc>+10% hunger rate multiplier per level\n\n"{0}'s body has grown accustomed to an increased food intake, and will now require even more to stay satiated."</RR_Ample_Appetite_Desc>
 	<RR_Apex_Absorption_Desc>+0.1x weight gain multiplier per level\n\n"{0}'s metabolism has gone into overdrive, allowing them to gain more weight from the same amount of food."</RR_Apex_Absorption_Desc>
@@ -325,8 +330,8 @@
 	<RR_PaunchPower_Desc>Pawn permanently gives off energy and can be hooked up to power conduits. Each level provides 1000W of energy.\n\n"Biofuel is a useful tool, and {0} has become so intensely oversized that their body can be used as a living battery."\n\nPrerequisite: Gelatinous VII or larger</RR_PaunchPower_Desc>
 	<RR_MakesAllTheRules_Desc>+4.0x weight gain multiplier, +150% eating speed at night (18:00-06:00)\n\n"They prey at night, they eat at night, they're THE rat. {0} has truly become the Giant Rat."\n\nPrerequisite: Gelatinous X or higher, Ratkin</RR_MakesAllTheRules_Desc>
 	<RR_HeavyRevian_Desc>-0.2x incoming damage multiplier, +20% consciousness, +60% moving, +60% manipulation, +50% eating speed, +1.50x weight gain multiplier\n\n"Forget offerings to Skarne, they should bring them to ME!"\n\nPrerequisite: Gelatinous X or higher, Revian</RR_HeavyRevian_Desc>
-	<RR_Even_Further_Beyond_Desc>Unlocks Gelatinous 11-20\n\n"There was no reason to expect that {0} would ever stop growing. Not bound by small inconveniences like logic, they set their sights on the stars beyond this increasingly cramped rimworld. But since no ship in the universe could ever carry their inordinate mass, that only leaves one option..."\n\nPrerequisite: Every single other perk and ability, excluding race-specific perks, Diet Plan, and Square One</RR_Even_Further_Beyond_Desc>
-	<RR_Ascension_Icon_Desc>Wins game.\n\n"Ascend past your limits and face your destiny. Once you pick this perk, the game will end."\n\nPrerequisite: EVEN FURTHER BEYOND!, Gelatinous 20 (1,000,000KG)</RR_Ascension_Icon_Desc>
-	
-	
+	<RR_Even_Further_Beyond_Desc>Unlocks Gelatinous 11-20\n\n"There was no reason to expect that {0} would ever stop growing. Not bound by small inconveniences like logic, they set their sights on the stars beyond this increasingly cramped rimworld. But since no ship in the universe could ever carry their inordinate mass, that only leaves one option..."\n\nPrerequisite: Every single other perk and ability, excluding race-specific perks, Diet Plan, Sudden Expansion, Atomic Anomaly and Square One</RR_Even_Further_Beyond_Desc>
+	<RR_Ascension_Desc>Wins game.\n\n"Ascend past your limits and face your destiny. Once you pick this perk, the game will end."\n\nPrerequisite: EVEN FURTHER BEYOND!, Gelatinous 20 (1,000,000KG)</RR_Ascension_Desc>
+	<RR_SuddenExpansion_Desc>Can be purchased multiple times.\n\nPawn instantly gains 5 kilograms. This amount is affected by other weight gain multipliers.\n\n"{0}'s clothes just got a lot tighter. That's weird. Must've been the wind."</RR_SuddenExpansion_Desc>
+	<RR_Atomic_Anomaly_Desc>Can be purchased multiple times.\n\n+500KG to pawn. Stacks with other multipliers.\n\n"As a result of ingesting just about everything edible known to mankind, {0}'s stomach accidentally causes a chain chemical reaction that metabolizes into a colossal amount of fat almost immediately.\n{0} barely even noticed."\n\nPrerequisite: EVEN FURTHER BEYOND!, Must be at Gelatinous X+ to purchase.</RR_Atomic_Anomaly_Desc>
 </LanguageData>

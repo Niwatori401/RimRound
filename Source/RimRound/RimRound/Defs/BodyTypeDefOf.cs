@@ -60,7 +60,7 @@ namespace RimRound.Defs
         public static BodyTypeDef F_070_Enormous;
         public static BodyTypeDef F_080_Gigantic;
         public static BodyTypeDef F_090_Titanic;
-        public static BodyTypeDef F_100_Gelatinous;
+        public static BodyTypeDef F_100_Gelatinous; // Gel I
 
         public static BodyTypeDef F_150_Gelatinous;
         public static BodyTypeDef F_200_Gelatinous;
@@ -70,7 +70,7 @@ namespace RimRound.Defs
         public static BodyTypeDef F_400_Gelatinous;
         public static BodyTypeDef F_450_Gelatinous;
         public static BodyTypeDef F_500_Gelatinous;
-        public static BodyTypeDef F_900_Gelatinous;
+        public static BodyTypeDef F_900_Gelatinous; // Gel X
 
         public static BodyTypeDef F_910_Gelatinous;
         public static BodyTypeDef F_920_Gelatinous;
@@ -81,7 +81,7 @@ namespace RimRound.Defs
         public static BodyTypeDef F_970_Gelatinous;
         public static BodyTypeDef F_980_Gelatinous;
         public static BodyTypeDef F_990_Gelatinous;
-        public static BodyTypeDef F_995_Gelatinous;
+        public static BodyTypeDef F_995_Gelatinous; // Gel XX
 
 
 
