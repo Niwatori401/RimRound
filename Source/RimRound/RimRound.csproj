@@ -167,6 +167,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HediffSet_GetRestFallFactor_AlterAccordingToSettings.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Hediff_CapMods_DisableCapModsForRRHediffsOptionally.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\MassUtility_Capacity_AlterForPerks.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\HealthCardUtility_DrawHediffRow_AddProgressBarToNextWeightStage.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />

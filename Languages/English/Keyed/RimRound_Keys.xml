@@ -298,7 +298,7 @@
 	
 	<RR_SuddenExpansion_Title>Sudden Expansion</RR_SuddenExpansion_Title>
 	<RR_Atomic_Anomaly_Title>Atomic Anomaly</RR_Atomic_Anomaly_Title>
-	
+	<RR_PackWhale_Title>Pack Whale</RR_PackWhale_Title>
 	
 	
 	<RR_Ample_Appetite_Desc>+10% hunger rate multiplier per level\n\n"{0}'s body has grown accustomed to an increased food intake, and will now require even more to stay satiated."</RR_Ample_Appetite_Desc>
@@ -334,4 +334,5 @@
 	<RR_Ascension_Desc>Wins game.\n\n"Ascend past your limits and face your destiny. Once you pick this perk, the game will end."\n\nPrerequisite: EVEN FURTHER BEYOND!, Gelatinous 20 (1,000,000KG)</RR_Ascension_Desc>
 	<RR_SuddenExpansion_Desc>Can be purchased multiple times.\n\nPawn instantly gains 5 kilograms. This amount is affected by other weight gain multipliers.\n\n"{0}'s clothes just got a lot tighter. That's weird. Must've been the wind."</RR_SuddenExpansion_Desc>
 	<RR_Atomic_Anomaly_Desc>Can be purchased multiple times.\n\n+500KG to pawn. Stacks with other multipliers.\n\n"As a result of ingesting just about everything edible known to mankind, {0}'s stomach accidentally causes a chain chemical reaction that metabolizes into a colossal amount of fat almost immediately.\n{0} barely even noticed."\n\nPrerequisite: EVEN FURTHER BEYOND!, Must be at Gelatinous X+ to purchase.</RR_Atomic_Anomaly_Desc>
+	<RR_PackWhale_Desc>Pawn can "carry" double the normal amount.\n\n"So many folds, so many places to store things! {0} makes an excellent travelling buddy, provided you don't mind the increased "snack breaks." They can carry much more on long-distance trips. Hopefully you can find it all again..."\n\nPrerequisite: Morbidly Obese or higher, must remain this weight or higher to keep bonus.</RR_PackWhale_Desc>
 </LanguageData>

@@ -49,6 +49,7 @@ namespace RimRound.Utilities
 
         public static readonly Texture2D atomicAnomalyIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/ATOMIC_ANOMALY", true);
         public static readonly Texture2D cropNotchIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/CROP_NOTCH", true);
+        public static readonly Texture2D packWhaleIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/PACK_WHALE", true);
         public static readonly Texture2D suddenExpansionIcon =         ContentFinder<Texture2D>.Get("UI/PerkIcons/SUDDEN_EXPANSION", true);
         public static readonly Texture2D thatIcon =                    ContentFinder<Texture2D>.Get("UI/PerkIcons/THAT", true);
         public static readonly Texture2D theresTheBeefIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/THERES_THE_BEEF", true);
@@ -672,6 +673,30 @@ namespace RimRound.Utilities
 
                 return new SuccessReport("", true);
             }),
+
+            new Perk("RR_PackWhale_Title", "RR_PackWhale_Desc", 6, 1, packWhaleIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_040_Obese)))
+                    return new SuccessReport("Must be Morbidly Obese I to purchase", false);
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
 
             new Perk("RR_MakesAllTheRules_Title", "RR_MakesAllTheRules_Desc", 10, 1, makesAllTheRulesIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
