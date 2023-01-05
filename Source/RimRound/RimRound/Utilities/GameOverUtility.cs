@@ -36,7 +36,7 @@ namespace RimRound.Utilities
         static string AscensionEnding = "Their technologies and culinary preparations were far beyond comprehension, and the subject had little choice in this new undertaking. In due time, their current size was dwarfed, and their exponential growth continued unimpeded. The world beneath them shrank, until they took its place, becoming the land itself. With only the vast expanse of space to challenge their scale, their conquest did not end there, on the contrary, it was merely beginning.\n\nFattened beyond even mortal understanding, the subject became so immense that even many archotech societies took notice, and, eventually, cultivated a galactic empire using their eternally expanding form. Some say they are there to this very day, in a state of perpetual bliss, their inescapable fate quite literally written in the stars.\n\nYou have chosen your destiny.";
 
         static string RR_CreditsSectionTitle = "RimRound Credits";
-        static string RR_CreditsSection = "\n\nProgramming: Niwatori401\nArt - BambooAle";
+        static string RR_CreditsSection = "\n\nProgramming: Niwatori401\nArt: BambooAle";
 
         private static string MakeEndCredits(string intro, string ending, string escapees, string colonistsEscapeeTKey, IList<Pawn> escaped = null) 
         {

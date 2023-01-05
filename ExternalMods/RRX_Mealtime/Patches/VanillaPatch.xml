@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+				<!-- VCE Fried Foods Nutrition+ -->
+		<Operation Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="DoBillsCook"]/fixedBillGiverDefs</xpath>
+			<value>
+					<li>RRX_StoveLarge</li>
+			</value>
+		</Operation>
+</Patch>

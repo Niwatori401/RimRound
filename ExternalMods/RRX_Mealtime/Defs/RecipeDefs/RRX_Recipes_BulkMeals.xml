@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>RRX_CookMealSimpleBulkXL</defName>
+    <label>cook simple meal x10</label>
+    <description>Cook 10 straightforward meals from one ingredient. Cooking at this scale introduces a little waste.</description>
+    <jobString>Cooking 10 simple meals.</jobString>
+    <workAmount>2400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <recipeUsers>
+      <li>RRX_StoveLarge</li>
+    </recipeUsers>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>5.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSimple>10</MealSimple>
+    </products>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+  <RecipeDef Name="RRX_SimpleBulkRecipeBase" ParentName="CookMealBase" Abstract="True">
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+    <recipeUsers>
+      <li>RRX_StoveLarge</li>
+    </recipeUsers>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+  <RecipeDef ParentName="RRX_SimpleBulkRecipeBase">
+    <defName>CookMealSimpleLargeBulk</defName>
+    <label>cook large simple meal x4</label>
+    <description>Cook a bunch of large straightforward meals from one ingredient.</description>
+    <jobString>Cooking large simple meals.</jobString>
+    <workAmount>1350</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>2.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSimpleLarge>4</MealSimpleLarge>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_SimpleBulkRecipeBase">
+    <defName>CookMealSimpleHugeBulk</defName>
+    <label>cook huge simple meal x4</label>
+    <description>Cook a bunch of huge straightforward meals from one ingredient.</description>
+    <jobString>Cooking huge simple meals.</jobString>
+    <workAmount>1890</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSimpleHuge>4</MealSimpleHuge>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_SimpleBulkRecipeBase">
+    <defName>CookMealSimpleEnormousBulk</defName>
+    <label>cook enormous simple meal x4</label>
+    <description>Cook a bunch of enormous straightforward meals from one ingredient.</description>
+    <jobString>Cooking enormous simple meals.</jobString>
+    <workAmount>2700</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSimpleEnormous>4</MealSimpleEnormous>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_SimpleBulkRecipeBase">
+    <defName>CookMealSimpleMassiveBulk</defName>
+    <label>cook massive simple meal x4</label>
+    <description>Cook a bunch of massive straightforward meals from one ingredient.</description>
+    <jobString>Cooking massive simple meals.</jobString>
+    <workAmount>3780</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSimpleMassive>4</MealSimpleMassive>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef Name="RRX_VanillaFineBulkBase" ParentName="CookMealBase" Abstract="True">
+    <workAmount>3600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+      <li>RRX_StoveLarge</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_VanillaFineBulkBase">
+    <defName>RRX_CookMealFineBulkXL</defName>
+    <label>cook fine meal x10</label>
+    <description>Cook 10 somewhat complex meals from a combination of meat and plant ingredients. Some of the ingredients are wasted in order to create a good eating experience and in bulk.</description>
+    <jobString>Cooking 10 fine meals.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>3.0</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFine>10</MealFine>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_VanillaFineBulkBase">
+    <defName>RRX_CookMealFineBulkXL_Meat</defName>
+    <label>cook carnivore fine meal x10</label>
+    <description>Cook 10 somewhat complex meals from meat ingredients. Some of the ingredients are wasted in order to create a good eating experience and in bulk. Producing varied flavors with meat alone introduces extra inefficiencies.</description>
+    <jobString>Cooking 10 carnivore fine meals.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>7.0</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <disallowedCategories>
+        <li>PlantFoodRaw</li>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <products>
+      <MealFine_Meat>10</MealFine_Meat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_VanillaFineBulkBase">
+    <defName>RRX_CookMealFineBulkXL_Veg</defName>
+    <label>cook vegetarian fine meal x10</label>
+    <description>Cook 10 somewhat complex meals from plant ingredients. Some of the ingredients are wasted in order to create a good eating experience and in bulk. Producing varied flavors with plants alone introduces extra inefficiencies.</description>
+    <jobString>Cooking 10 vegetarian fine meals.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>7.0</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <disallowedCategories>
+        <li>MeatRaw</li>
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <products>
+      <MealFine_Veg>10</MealFine_Veg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef Name="RRX_FineBulkRecipeBase" ParentName="CookMealFineBase" Abstract="True">
+    <recipeUsers>
+      <li>RRX_StoveLarge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineLargeBulk</defName>
+    <label>cook large fine meal x4</label>
+    <description>Cook some large, somewhat complex meals from a combination of meat and plant ingredients.</description>
+    <jobString>Cooking large fine meals.</jobString>
+    <workAmount>1930</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1.25</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1.25</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineLarge>4</MealFineLarge>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineLargeVegBulk</defName>
+    <label>cook large fine meal x4</label>
+    <description>Cook some large, somewhat complex meals from plant ingredients.</description>
+    <jobString>Cooking large fine meals.</jobString>
+    <workAmount>3780</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>2.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineLargeVeg>4</MealFineLargeVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineLargeMeatBulk</defName>
+    <label>cook large fine meal</label>
+    <description>Cook some large, somewhat complex meals from meat ingredients.</description>
+    <jobString>Cooking large fine meals.</jobString>
+    <workAmount>3780</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>2.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineLargeNonVeg>4</MealFineLargeNonVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineHugeBulk</defName>
+    <label>cook huge fine meal x4</label>
+    <description>Cook some huge, somewhat complex meals from a combination of meat and plant ingredients.</description>
+    <jobString>Cooking huge fine meals.</jobString>
+    <workAmount>2705</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1.75</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1.75</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineLarge>4</MealFineLarge>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineHugeVegBulk</defName>
+    <label>cook huge fine meal x4</label>
+    <description>Cook some huge, somewhat complex meals from plant ingredients.</description>
+    <jobString>Cooking huge fine meals.</jobString>
+    <workAmount>2705</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeVeg>4</MealFineHugeVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineHugeMeatBulk</defName>
+    <label>cook huge fine meal x4</label>
+    <description>Cook some huge, somewhat complex meals from meat ingredients.</description>
+    <jobString>Cooking huge fine meals.</jobString>
+    <workAmount>2705</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeNonVeg>4</MealFineHugeNonVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineEnormousBulk</defName>
+    <label>cook enormous fine meal x4</label>
+    <description>Cook some enormous, somewhat complex meals from a combination of meat and plant ingredients.</description>
+    <jobString>Cooking enormous fine meals.</jobString>
+    <workAmount>3870</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>2.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>2.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineEnormous>4</MealFineEnormous>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineEnormousVegBulk</defName>
+    <label>cook enormous fine meal x4</label>
+    <description>Cook some enormous, somewhat complex meals from plant ingredients.</description>
+    <jobString>Cooking enormous fine meals.</jobString>
+    <workAmount>3870</workAmount>
+	  <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineEnormousVeg>4</MealFineEnormousVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineEnormousMeatBulk</defName>
+    <label>cook enormous fine meal x4</label>
+    <description>Cook some enormous, somewhat complex meals from meat ingredients.</description>
+    <jobString>Cooking enormous fine meals.</jobString>
+    <workAmount>3870</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineEnormousNonVeg>4</MealFineEnormousNonVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineMassiveBulk</defName>
+    <label>cook massive fine meals</label>
+    <description>Cook some massive, somewhat complex meals from a combination of meat and plant ingredients.</description>
+    <jobString>Cooking massive fine meals.</jobString>
+    <workAmount>5410</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineMassive>4</MealFineMassive>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineMassiveVegBulk</defName>
+    <label>cook massive fine meal x4</label>
+    <description>Cook some massive, somewhat complex meals from plant ingredients.</description>
+    <jobString>Cooking massive fine meals.</jobString>
+    <workAmount>5410</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineMassiveVeg>4</MealFineMassiveVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_FineBulkRecipeBase">
+    <defName>CookMealFineMassiveMeatBulk</defName>
+    <label>cook massive fine meal x4</label>
+    <description>Cook some massive, somewhat complex meals from meat ingredients.</description>
+    <jobString>Cooking massive fine meals.</jobString>
+    <workAmount>5410</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineMassiveNonVeg>4</MealFineMassiveNonVeg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef Name="RRX_VanillaLavishBulkBase" ParentName="CookMealBase" Abstract="True">
+    <workAmount>5900</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+      <li>RRX_StoveLarge</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>12</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_VanillaLavishBulkBase">
+    <defName>RRX_CookMealLavishBulkXL</defName>
+    <label>cook lavish meal x8</label>
+    <description>Cook 8 very complex meals from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience and at scale.</description>
+    <jobString>Cooking 8 lavish meals.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>5.0</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>5.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavish>8</MealLavish>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_VanillaLavishBulkBase">
+    <defName>RRX_CookMealLavishBulkXL_Veg</defName>
+    <label>cook vegetarian lavish meal x8</label>
+    <description>Cook 8 very complex meals from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience and at scale. Producing varied flavors with plants alone introduces extra inefficiencies.</description>
+    <jobString>Cooking 8 vegetarian lavish meals.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>23.0</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <disallowedCategories>
+        <li>MeatRaw</li>
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <products>
+      <MealLavish_Veg>4</MealLavish_Veg>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealLavishBulkBase">
+    <defName>RRX_CookMealLavishBulkXL_Meat</defName>
+    <label>cook carnivore lavish meal x8</label>
+    <description>Cook 8 very complex meals from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience and at scale. Producing varied flavors with meat alone introduces extra inefficiencies.</description>
+    <jobString>Cooking 8 carnivore lavish meals.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>23.0</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <disallowedCategories>
+        <li>PlantFoodRaw</li>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <products>
+      <MealLavish_Meat>8</MealLavish_Meat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef Name="RRX_LavishBulkRecipeBase" ParentName="CookMealLavishBase" Abstract="True">
+    <recipeUsers>
+      <li>RRX_StoveLarge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishLargeBulk</defName>
+    <label>cook large lavish meal x4</label>
+    <description>Cook some large, very complex meals from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking large lavish meals.</jobString>
+    <workAmount>3280</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>2.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>2.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishLarge>4</MealLavishLarge>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishLargeVegBulk</defName>
+    <label>cook large lavish meal x4</label>
+    <description>Cook some large, very complex meals from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking large lavish meals.</jobString>
+    <workAmount>3280</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishLargeNonMeat>4</MealLavishLargeNonMeat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishLargeMeatBulk</defName>
+    <label>cook large lavish meal x4</label>
+    <description>Cook some large, very complex meals from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking large lavish meals.</jobString>
+    <workAmount>3280</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishLargeMeat>4</MealLavishLargeMeat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishHugeBulk</defName>
+    <label>cook huge lavish meal x4</label>
+    <description>Cook some huge, very complex meals from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking huge lavish meals.</jobString>
+    <workAmount>4590</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishHuge>4</MealLavishHuge>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishHugeVegBulk</defName>
+    <label>cook huge lavish meal x4</label>
+    <description>Cook some huge, very complex meals from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking huge lavish meals.</jobString>
+    <workAmount>4590</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishHugeNonMeat>4</MealLavishHugeNonMeat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishHugeMeatBulk</defName>
+    <label>cook huge lavish meal x4</label>
+    <description>Cook some huge, very complex meals from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking huge lavish meals.</jobString>
+    <workAmount>4590</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishHugeMeat>4</MealLavishHugeMeat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishEnormousBulk</defName>
+    <label>cook enormous lavish meal x4</label>
+    <description>Cook some enormous, very complex meals from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking enormous lavish meals.</jobString>
+    <workAmount>6560</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishEnormous>4</MealLavishEnormous>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishEnormousVegBulk</defName>
+    <label>cook enormous lavish meal x4</label>
+    <description>Cook some enormous, very complex meals from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking enormous lavish meals.</jobString>
+    <workAmount>6560</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishEnormousNonMeat>4</MealLavishEnormousNonMeat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishEnormousMeatBulk</defName>
+    <label>cook enormous lavish meal x4</label>
+    <description>Cook some enormous, very complex meals from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking enormous lavish meals.</jobString>
+    <workAmount>6560</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishEnormousMeat>4</MealLavishEnormousMeat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishMassiveBulk</defName>
+    <label>cook massive lavish meal x4</label>
+    <description>Cook some massive, very complex meals from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking massive lavish meals.</jobString>
+    <workAmount>9180</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>7</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishMassive>4</MealLavishMassive>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishMassiveVegBulk</defName>
+    <label>cook massive lavish meal x4</label>
+    <description>Cook some massive, very complex meals from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking massive lavish meals.</jobString>
+    <workAmount>9180</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>14</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishMassiveNonMeat>4</MealLavishMassiveNonMeat>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RRX_LavishBulkRecipeBase">
+    <defName>CookMealLavishMassiveMeatBulk</defName>
+    <label>cook massive lavish meal x4</label>
+    <description>Cook some massive, very complex meals from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking massive lavish meals.</jobString>
+    <workAmount>9180</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>14</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishMassiveMeat>4</MealLavishMassiveMeat>
+    </products>
+  </RecipeDef>
+
+</Defs>
