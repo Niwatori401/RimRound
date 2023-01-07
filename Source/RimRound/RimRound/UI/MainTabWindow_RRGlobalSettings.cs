@@ -531,6 +531,8 @@ namespace RimRound.UI
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.meatMultiplierForWeight, numericFieldCount++, "RR_Mtw_meatMultiplierForWeight");
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minForCapableMovement, numericFieldCount++, "RR_Mtw_minForCapableMovement", GameFont.Small, () => { RefreshMovementAbility(); });
             NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxVisualSizeGelLevel, numericFieldCount++, "RR_Mtw_maxVisualSizeGelLevel", GameFont.Small, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.nutritionPerPerkLevel, numericFieldCount++, "RR_Mtw_nutritionPerLevel");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.levelsGainedPerLevel, numericFieldCount++, "RR_Mtw_levelsGainedPerLevel");
 
 
 

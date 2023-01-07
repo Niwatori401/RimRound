@@ -787,11 +787,11 @@ namespace RimRound.Comps
             set 
             {
                 consumedNutrition = value;
-                if (consumedNutrition >= perkLevels.nutritionPerLevel * perkLevels.currentLevel)
+                if (consumedNutrition >= GlobalSettings.nutritionPerPerkLevel.threshold * perkLevels.currentLevel)
                 {
-                    int currentLevel = Mathf.FloorToInt(consumedNutrition / perkLevels.nutritionPerLevel) + 1;
+                    int currentLevel = Mathf.FloorToInt(consumedNutrition / GlobalSettings.nutritionPerPerkLevel.threshold) + 1;
                     perkLevels.currentLevel = currentLevel;
-                    perkLevels.availablePoints += 1;
+                    perkLevels.availablePoints += GlobalSettings.levelsGainedPerLevel.threshold;
                 }
             } 
         }
@@ -825,7 +825,7 @@ namespace RimRound.Comps
     {
         public int currentLevel = 1;
         public int availablePoints = 0;
-        public float nutritionPerLevel = 20;
+        //public float nutritionPerLevel = 20;
         public Dictionary<string, int> PerkToLevels;
     }
 

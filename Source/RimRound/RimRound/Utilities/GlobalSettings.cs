@@ -97,6 +97,8 @@ namespace RimRound.Utilities
         public static NumericFieldData<int> ticksBetweenWeightGainRequestProcess = new NumericFieldData<int>(15, 5, 600);
         public static NumericFieldData<float> meatMultiplierForWeight = new NumericFieldData<float>(1, 0, 10);
         public static NumericFieldData<int> maxVisualSizeGelLevel = new NumericFieldData<int>(20, 1, 20);
+        public static NumericFieldData<int> nutritionPerPerkLevel = new NumericFieldData<int>(15, 5, 30);
+        public static NumericFieldData<int> levelsGainedPerLevel = new NumericFieldData<int>(1, 1, 10);
         
         
         
