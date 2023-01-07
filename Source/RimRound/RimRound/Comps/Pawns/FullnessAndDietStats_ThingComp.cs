@@ -475,8 +475,8 @@ namespace RimRound.Comps
         {
             get 
             {
-                float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.3f + 1;
-                float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 1f + 1;
+                float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.2f + 1;
+                float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 0.5f + 1;
                 return gigaGurglingMult * digestionBeyondQuestionMult * HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn());
             }
             set => personalDigestionRateMult = value;

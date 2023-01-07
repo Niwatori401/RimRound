@@ -31,8 +31,8 @@ namespace RimRound.Patch
                 return 1;
 
             float ampleAppetiteBonusMult = fndComp.perkLevels.PerkToLevels?["RR_Ample_Appetite_Title"] * 0.1f ?? 0;
-            float gluttonyIncarnateBonusMult = fndComp.perkLevels.PerkToLevels?["RR_GluttonyIncarnate_Title"] * 0.25f ?? 0;
-            float voraciousBonusMult = fndComp.perkLevels.PerkToLevels?["RR_Voracious_Title"] * 1.0f ?? 0;
+            float gluttonyIncarnateBonusMult = fndComp.perkLevels.PerkToLevels?["RR_Voracious_Title"] * 0.25f ?? 0; 
+            float voraciousBonusMult = fndComp.perkLevels.PerkToLevels?["RR_GluttonyIncarnate_Title"] * 1.0f ?? 0;
 
             float multiplier = ampleAppetiteBonusMult + gluttonyIncarnateBonusMult + voraciousBonusMult + 1;
 

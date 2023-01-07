@@ -179,7 +179,7 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_Digestion_Beyond_Question_Title", "RR_Digestion_Beyond_Question_Desc", 2, 10, digestionBeyondQuestionIcon,
+            new Perk("RR_Digestion_Beyond_Question_Title", "RR_Digestion_Beyond_Question_Desc", 2, 5, digestionBeyondQuestionIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
@@ -300,7 +300,7 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_TitanicTank_Title", "RR_TitanicTank_Desc", 2, 5, titanicTankIcon,
+            new Perk("RR_TitanicTank_Title", "RR_TitanicTank_Desc", 2, 3, titanicTankIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
@@ -366,7 +366,7 @@ namespace RimRound.Utilities
 
         public static List<Perk> advancedPerks = new List<Perk> 
         {
-            new Perk("RR_Voracious_Title", "RR_Voracious_Desc", 4, 4, voraciousIcon,
+            new Perk("RR_Voracious_Title", "RR_Voracious_Desc", 4, 3, voraciousIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
@@ -435,7 +435,7 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_Bulletproof_Blob_Title", "RR_Bulletproof_Blob_Desc", 3, 5, bulletProofBlobIcon,
+            new Perk("RR_Bulletproof_Blob_Title", "RR_Bulletproof_Blob_Desc", 3, 3, bulletProofBlobIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
@@ -459,7 +459,7 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_GigaGurgling_Title", "RR_GigaGurgling_Desc", 5, 5, gigaGurglingIcon,
+            new Perk("RR_GigaGurgling_Title", "RR_GigaGurgling_Desc", 5, 6, gigaGurglingIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
@@ -667,7 +667,7 @@ namespace RimRound.Utilities
 
         public static List<Perk> elitePerks = new List<Perk>
         {
-            new Perk("RR_GluttonyIncarnate_Title", "RR_GluttonyIncarnate_Desc", 20, 1, gluttonyIncarnateIcon,
+            new Perk("RR_GluttonyIncarnate_Title", "RR_GluttonyIncarnate_Desc", 25, 1, gluttonyIncarnateIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
