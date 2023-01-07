@@ -25,6 +25,6 @@ This module will focus on food production and interactions. In particular, this 
 *Vanilla Cooking Expanded*
 
 ### Note on Graphical Assets (as of v01.a)
-**The workbench art included in this version is not mine**, and **I do not intend to pass it off as my work**. It's the delightful work of Oskar Potocki and Trunken of the Vanilla Expanded team, repurposed from an older version of Vanilla Furniture's Production module. I will be making a new custom set of sprites for it before releasing the next version of this mod.
+<s>**The workbench art included in this version is not mine**, and **I do not intend to pass it off as my work**. It's the delightful work of Oskar Potocki and Trunken of the Vanilla Expanded team, repurposed from an older version of Vanilla Furniture's Production module. I will be making a new custom set of sprites for it before releasing the next version of this mod.</s> Removed for inclusion into main repo due to impermissive license on source. - Niwatori
 
 @acoolgai // 02.08.2022
