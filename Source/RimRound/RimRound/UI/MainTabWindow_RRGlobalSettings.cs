@@ -720,8 +720,8 @@ namespace RimRound.UI
                 new Rect(boundingRect.xMax - bufferForNumberFields, boundingRect.y, bufferForNumberFields, Text.LineHeight),
                 ref numericFieldData.threshold,
                 ref numericFieldData.stringBuffer,
-                numericFieldData.min,
-                numericFieldData.max);
+                Prefs.DevMode ? 0 : numericFieldData.min,
+                Prefs.DevMode ? int.MaxValue : numericFieldData.max);
 
             T newVal = numericFieldData.threshold;
 

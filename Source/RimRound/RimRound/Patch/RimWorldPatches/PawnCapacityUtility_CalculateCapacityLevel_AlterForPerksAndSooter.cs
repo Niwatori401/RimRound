@@ -128,6 +128,12 @@ namespace RimRound.Patch
 
                 if (itsComingThisWayLevel > 0)
                 {
+                    if ((Utilities.HediffUtility.GetHediffOfDefFrom(FeedingTube.Defs.HediffDefOf.RimRound_UsingFeedingTube, pawn) is Hediff) ||
+                        (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_BlobBed, pawn) is Hediff) ||
+                        (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_BlobBed_II, pawn) is Hediff) ||
+                        (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_BlobBed_III, pawn) is Hediff))
+                        return;
+
                     float gelatinous11SeverityThreshold = 21.85f * RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn);
 
                     if (pawn.WeightHediff().Severity > gelatinous11SeverityThreshold)
