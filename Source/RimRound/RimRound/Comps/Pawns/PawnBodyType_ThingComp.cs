@@ -15,7 +15,8 @@ namespace RimRound.Comps
     {
         public PawnBodyType_ThingComp() 
         {
-            gizmo = new PersonalDynamicBodyGizmo(this);
+            dynamicBodyExcemptionGizmo = new PersonalDynamicBodyGizmo(this);
+            customBodyTypeGizmo = new CustomBodyTypeGizmo(this);
         }
 
         public override void PostExposeData()
@@ -27,7 +28,9 @@ namespace RimRound.Comps
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (GlobalSettings.showExemptionGizmo)
-                yield return gizmo;
+                yield return dynamicBodyExcemptionGizmo;
+
+            yield return customBodyTypeGizmo;
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -60,6 +63,11 @@ namespace RimRound.Comps
             }
         }
 
+
+
+        public Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> CustomBodyTypeDict { get; set; }
+
+
         public int ticksSinceLastBodyChange = 0;
         private readonly int numberOfTicksCooldownPerChange = 250;
 
@@ -86,7 +94,9 @@ namespace RimRound.Comps
             } 
         }
 
-        readonly PersonalDynamicBodyGizmo gizmo;
+        readonly PersonalDynamicBodyGizmo dynamicBodyExcemptionGizmo;
+
+        readonly CustomBodyTypeGizmo customBodyTypeGizmo;
 
         public bool usingCustomBodyMeshSize = false;
 

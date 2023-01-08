@@ -178,6 +178,8 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnCapacitiesHandler_CapableOf_MakeMovementCapableOfSettingsDependent.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\RootPlay_Update_AddCountdownTick.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\StatWorker_FinalizeValue_AlterMaxValueForPerks.cs" />
+    <Compile Include="RimRound\UI\CustomBodySelectDropdown.cs" />
+    <Compile Include="RimRound\UI\Gizmos\CustomBodyTypeGizmo.cs" />
     <Compile Include="RimRound\UI\Gizmos\MakeGeneratorGizmo.cs" />
     <Compile Include="RimRound\UI\Gizmos\MakeRecreationSpotGizmo.cs" />
     <Compile Include="RimRound\Utilities\CaravanPatchUtility.cs" />

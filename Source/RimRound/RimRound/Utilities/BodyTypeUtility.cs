@@ -157,7 +157,10 @@ namespace RimRound.Utilities
                     RimWorld.BodyTypeDefOf.Thin;
             }
 
+
             Dictionary<BodyTypeDef, BodyTypeInfo> bodyTypeDictionary = RacialBodyTypeInfoUtility.GetRacialDictionary(pawn);
+
+
             if (bodyTypeDictionary is null)
                 return pawn.story.bodyType;
 
