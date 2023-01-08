@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 using Resources = RimRound.Utilities.Resources;
 
 namespace RimRound.UI
@@ -27,6 +28,7 @@ namespace RimRound.UI
 
         private void ToggleAction() 
         {
+            Resources.gizmoClick.PlayOneShotOnCamera(null);
             comp.IsRecSpot = !comp.IsRecSpot;
             if (comp.IsRecSpot)
             {

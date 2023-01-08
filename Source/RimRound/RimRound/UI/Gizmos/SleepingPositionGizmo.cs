@@ -11,6 +11,7 @@ using Verse;
 using RimRound.Comps;
 using RimRound.Utilities;
 using Resources = RimRound.Utilities.Resources;
+using Verse.Sound;
 
 namespace RimRound.UI
 {
@@ -30,7 +31,8 @@ namespace RimRound.UI
 
 		void ToggleAction() 
 		{
-			comp.sleepIndex++;
+            Resources.gizmoClick.PlayOneShotOnCamera(null);
+            comp.sleepIndex++;
 			comp.sleepIndex %= 4;
 			fakebool = !fakebool;
 			comp.parent.AsPawn().GetComp<MakeBlobIntoBed_ThingComp>().gizmo.Reset();

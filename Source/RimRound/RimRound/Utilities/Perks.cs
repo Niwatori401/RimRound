@@ -1,4 +1,5 @@
-﻿using RimRound.Comps;
+﻿using HarmonyLib;
+using RimRound.Comps;
 using RimRound.Defs;
 using System;
 using System.Collections.Generic;
@@ -470,7 +471,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-               if (GetInsufficientPerkLevelSuccessReport("RR_Digestion_Beyond_Question_Title", 10, p) is SuccessReport s && !s)
+               if (GetInsufficientPerkLevelSuccessReport("RR_Digestion_Beyond_Question_Title", 5, p) is SuccessReport s && !s)
                     return s;
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -678,7 +679,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (GetInsufficientPerkLevelSuccessReport("RR_Voracious_Title", 4, p) is SuccessReport s && !s)
+                if (GetInsufficientPerkLevelSuccessReport("RR_Voracious_Title", 3, p) is SuccessReport s && !s)
                     return s;
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -852,7 +853,8 @@ namespace RimRound.Utilities
                 foreach (var eperk in Perks.elitePerks)
                 {
                     if (eperk.perkName == "RR_HeavyRevian_Title" ||
-                        eperk.perkName == "RR_MakesAllTheRules_Title")
+                        eperk.perkName == "RR_MakesAllTheRules_Title" ||
+                        eperk.perkName == "RR_That_Title")
                         continue;
 
 
@@ -862,7 +864,8 @@ namespace RimRound.Utilities
 
                 if (failureDescription.Length != 0)
                 {
-                    if (failureDescription.Length > 10)
+                    int numberOfLines = failureDescription.ToString().Where((char c) => { return c == '\n' ? true : false; }).Count();
+                    if (numberOfLines > 10)
                         return new SuccessReport("Requires every perk purchased (Excluding racial perks / square one / diet plan)", false);
                     else
                         return new SuccessReport(failureDescription.ToString(), false);

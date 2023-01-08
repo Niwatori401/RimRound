@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
+using Verse.Sound;
 
 namespace RimRound.UI
 {
@@ -27,6 +28,7 @@ namespace RimRound.UI
 
         private void ToggleAction() 
         {
+            Resources.gizmoClick.PlayOneShotOnCamera(null);
             comp.IsPowerSpot = !comp.IsPowerSpot;
             if (comp.IsPowerSpot)
             {

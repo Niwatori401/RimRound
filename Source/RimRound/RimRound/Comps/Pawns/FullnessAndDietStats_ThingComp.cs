@@ -13,6 +13,7 @@ using RimRound.UI;
 using UnityEngine;
 using System.Reflection;
 using Resources = RimRound.Utilities.Resources;
+using Verse.Sound;
 
 namespace RimRound.Comps
 {
@@ -65,6 +66,7 @@ namespace RimRound.Comps
                     icon = Resources.FILL_STOMACH_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         this.CurrentFullness = this.HardLimit - Values.MinRQ;
                     }
                 };
@@ -75,6 +77,7 @@ namespace RimRound.Comps
                     icon = Resources.EMPTY_STOMACH_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         this.CurrentFullness = 0;
                     }
                 };

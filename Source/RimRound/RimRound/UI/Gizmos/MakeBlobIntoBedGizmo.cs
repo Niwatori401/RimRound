@@ -8,6 +8,7 @@ using Verse;
 using RimRound.Comps;
 using RimWorld;
 using RimRound.Utilities;
+using Verse.Sound;
 
 namespace RimRound.UI
 {
@@ -27,6 +28,7 @@ namespace RimRound.UI
 
         private void ToggleAction()
         {
+            Resources.gizmoClick.PlayOneShotOnCamera(null);
             comp.IsBed = !comp.IsBed;
             if (comp.IsBed)
             {

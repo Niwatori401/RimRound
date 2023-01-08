@@ -1,11 +1,13 @@
 ﻿using AlienRace;
 using RimRound.Utilities;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
+using Verse.Sound;
 
 namespace RimRound.Comps
 {
@@ -32,18 +34,19 @@ namespace RimRound.Comps
                     defaultLabel = $"Switch pawn body type to {(cachedPBTComp is null ? "other type" : (cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple.ToString() : BodyArchetype.standard.ToString()))}",
                     icon = (cachedPBTComp is null ? Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire) : (cachedPBTComp.BodyArchetype == BodyArchetype.standard ? Resources.SWITCH_PAWN_BODY_TYPE_APPLE_ICON : Resources.SWITCH_PAWN_BODY_TYPE_STANDARD_ICON)),
                     action = delegate ()
-                    {
-                        if (cachedPBTComp is null)
                         {
-                            Log.Error("cachedPBTComp was null in debug action!");
-                            return;
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
+                            if (cachedPBTComp is null)
+                            {
+                                Log.Error("cachedPBTComp was null in debug action!");
+                                return;
+                            }
+
+                            cachedPBTComp.BodyArchetype = cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple : BodyArchetype.standard;
+                            BodyTypeUtility.UpdatePawnSprite((Pawn)parent, cachedPBTComp.PersonallyExempt, cachedPBTComp.CategoricallyExempt, true, true);
+
                         }
-
-                        cachedPBTComp.BodyArchetype = cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple : BodyArchetype.standard;
-                        BodyTypeUtility.UpdatePawnSprite((Pawn)parent, cachedPBTComp.PersonallyExempt, cachedPBTComp.CategoricallyExempt, true, true);
-
-                    }
-                };
+                    };
 
                 yield return new Command_Action
                 {
@@ -51,6 +54,7 @@ namespace RimRound.Comps
                     icon = Resources.FORCE_CURRENT_BODY_TYPE_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
                         
                         if (comp is null) 
@@ -66,10 +70,12 @@ namespace RimRound.Comps
 
                 yield return new Command_Action
                 {
+
                     defaultLabel = "Add 10 Perk Points",
                     icon = Resources.TEN_PP_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
 
                         if (comp is null)
@@ -86,6 +92,7 @@ namespace RimRound.Comps
                     icon = Resources.WIPE_PERKS_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
 
                         if (comp is null)
@@ -106,6 +113,7 @@ namespace RimRound.Comps
                     icon = Resources.CHANGE_MAGNITUDE_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         offsetAmountsIndex = (offsetAmountsIndex + 1) % offsetAmounts.Length;
                         Log.Message($"Magnitude is now {offsetAmounts[offsetAmountsIndex]}");
                     }
@@ -117,6 +125,7 @@ namespace RimRound.Comps
                     icon = Resources.CHANGE_DIRECTION_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         if (positivity == 1)
                             positivity = -1;
                         else
@@ -132,6 +141,7 @@ namespace RimRound.Comps
                         icon = Resources.CHANGE_CARDINALITY_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             cardinality++;
                             cardinality %= 4;
 
@@ -159,6 +169,7 @@ namespace RimRound.Comps
                         icon = Resources.CHANGE_XY_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             xy = !xy;
                         }
                     };
@@ -170,6 +181,7 @@ namespace RimRound.Comps
                         icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             Values.debugPos += positivity * (offsetAmounts[offsetAmountsIndex]);
                             Log.Message($"Debug Float 1 is now: {Values.debugPos}");
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
@@ -181,6 +193,7 @@ namespace RimRound.Comps
                         icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             Values.debugPos2 += positivity * (offsetAmounts[offsetAmountsIndex]);
                             Log.Message($"Debug Float 2 is now: {Values.debugPos2}");
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
@@ -192,6 +205,7 @@ namespace RimRound.Comps
                         icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             Values.debugPos3 += positivity * (offsetAmounts[offsetAmountsIndex]);
                             Log.Message($"Debug Float 3 is now: {Values.debugPos3}");
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
@@ -203,6 +217,7 @@ namespace RimRound.Comps
                         icon = Resources.DEBUGFLOAT_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             Values.debugPos4 += positivity * (offsetAmounts[offsetAmountsIndex]);
                             Log.Message($"Debug Float 4 is now: {Values.debugPos4}");
                             BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), false, false, true, false);
@@ -218,6 +233,7 @@ namespace RimRound.Comps
                     icon = (positivity == 1 ? Resources.ADD_SEVERITY_ICON : Resources.REDUCE_SEVERITY_ICON),
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         PawnBodyType_ThingComp comp = ((Pawn)parent).TryGetComp<PawnBodyType_ThingComp>();
 
                         if (comp is null)
@@ -236,6 +252,7 @@ namespace RimRound.Comps
                         icon = Resources.CHANGE_OFFSET_ITEM_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)
                             {
                                 List<AlienPartGenerator.BodyAddon> bodyAddons = alienProps.alienRace.generalSettings.alienPartGenerator.bodyAddons;
@@ -257,6 +274,7 @@ namespace RimRound.Comps
                         icon = Resources.EXTRA_BODY_PART_OFFSET_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)
                             {
                                 List<AlienPartGenerator.BodyAddon> bodyAddons = alienProps.alienRace.generalSettings.alienPartGenerator.bodyAddons;
@@ -302,6 +320,7 @@ namespace RimRound.Comps
                         icon = Resources.CHANGE_OFFSET_ITEM_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             UnityEngine.Vector2 oldOffset = ((Pawn)parent).story.bodyType.headOffset;
                             ((Pawn)parent).story.bodyType.headOffset = new UnityEngine.Vector2(oldOffset.x + (xy ? 0 : positivity * offsetAmounts[offsetAmountsIndex]), oldOffset.y + (xy ? positivity * offsetAmounts[offsetAmountsIndex] : 0));
                             Log.Message($"{((Pawn)parent).story.bodyType}: {((Pawn)parent).story.bodyType.headOffset.ToString("F3")}");
@@ -314,6 +333,7 @@ namespace RimRound.Comps
                         icon = Resources.SPRITE_SIZE_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)
                             {
                                 currentBodySizeMeshIndex = (currentBodySizeMeshIndex + 1) % Values.validBodyMeshSizes.Length;
@@ -337,6 +357,7 @@ namespace RimRound.Comps
                         icon = Resources.DUMP_BODY_DATA_ICON,
                         action = delegate ()
                         {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
                             if (((Pawn)parent).def is ThingDef_AlienRace alienProps)
                             {
                                 Log.Message("-------------------------------------------------");

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
+using Verse.Sound;
 
 namespace RimRound.Comps
 {
@@ -34,6 +35,7 @@ namespace RimRound.Comps
                     icon = Resources.INCREASE_WEIGHT_OPINION_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         IncreaseOpinion();
                     }
                 };
@@ -43,6 +45,7 @@ namespace RimRound.Comps
                     icon = Resources.DECREASE_WEIGHT_OPINION_ICON,
                     action = delegate ()
                     {
+                        Resources.gizmoClick.PlayOneShotOnCamera(null);
                         LowerOpinion();
                     }
                 };
