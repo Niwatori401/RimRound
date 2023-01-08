@@ -72,7 +72,8 @@ namespace RimRound.Patch
             int pcmIndex = newList.FindIndex(x => x.capacity == PawnCapacityDefOf.Moving);
             if (pcmIndex != -1)
             {
-                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset + (comp.perkLevels?.PerkToLevels?["RR_Comfortable_Corpulence_Title"] * 0.03f ?? 0));
+                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset + (comp.perkLevels?.PerkToLevels?["RR_Comfortable_Corpulence_Title"] * 0.03f ?? 0) + (comp.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] * 0.6f ?? 0));
+                
             }
 
             return;

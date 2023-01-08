@@ -22,9 +22,9 @@ namespace RimRound.AI
                     if (comp is null)
                         return "";
 
-                    int titanicTankLevel = comp.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
+                    int heavyRevianTitle = comp.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
 
-                    val += titanicTankLevel * 0.2f;
+                    val += heavyRevianTitle * 0.2f;
 
                     return "RR_HeavyRevian_Title".Translate() + $" -{val * 100:f1}%";
                 }
@@ -42,9 +42,9 @@ namespace RimRound.AI
                     if (comp is null)
                         return;
 
-                    int titanicTankLevel = comp.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
+                    int heavyRevian = comp.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
 
-                    val -= titanicTankLevel * 0.2f;
+                    val -= heavyRevian * 0.2f;
                 }
             }
         }

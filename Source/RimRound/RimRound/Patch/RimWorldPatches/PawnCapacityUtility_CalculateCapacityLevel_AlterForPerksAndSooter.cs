@@ -117,14 +117,8 @@ namespace RimRound.Patch
                 if (pawn is null || !pawn.RaceProps.Humanlike)
                     return;
 
-                int heavyRevianLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int itsComingThisWayLevel = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.perkLevels.PerkToLevels?["RR_ItsComingThisWay_Title"] ?? 0;
 
-
-                if (heavyRevianLevel > 0)
-                {
-                    __result += 0.60f;
-                }
 
                 if (itsComingThisWayLevel > 0)
                 {
