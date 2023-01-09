@@ -125,20 +125,8 @@
   </ThingDef>
   
 	<!--Food Storage Tanks-->
-	<ThingDef ParentName="BuildingBase">
-		<defName>RR_TD_FoodStorageVat_Massive</defName>
-		<label>massive feeding tube storage</label>
-		<description>Stores excess food.</description>
-		<thingClass>RimRound.FeedingTube.Building_FoodVatMassive</thingClass>
+	<ThingDef Name="FoodStorageBase" ParentName="BuildingBase" Abstract="True">
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<graphicData>
-			<texPath>Things/Building/Production/FoodStorageVatMassive</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(4, 6)</drawSize>
-			<damageData>
-				<rect>(0,0.35,1,0.3)</rect>
-			</damageData>
-		</graphicData>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 			<isInert>true</isInert>
@@ -155,16 +143,45 @@
 		<thingCategories>
 		  <li>BuildingsProduction</li>
 		</thingCategories>
-		
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<designationHotKey>Misc1</designationHotKey>
+	</ThingDef>
+	
+	
+	<!--Massive Storage-->
+	<ThingDef ParentName="FoodStorageBase">
+		<defName>RR_TD_FoodStorageVat_Massive</defName>
+		<label>massive feeding tube storage</label>
+		<description>Stores excess food.</description>
+		<thingClass>RimRound.FeedingTube.Building_FoodVatMassive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodStorageVatMassive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 3)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
 		<statBases>
 			<Mass>80</Mass>
 			<MaxHitPoints>600</MaxHitPoints>
-			<WorkToBuild>100</WorkToBuild>
+			<WorkToBuild>300</WorkToBuild>
 			<Flammability>0.7</Flammability>
 			<Beauty>-3</Beauty>
 		</statBases>
-		<size>(4,6)</size>
-		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<size>(2,3)</size>
 		<costList>
 			<Steel>500</Steel>
 			<ComponentIndustrial>3</ComponentIndustrial>
@@ -176,30 +193,17 @@
 				<capacity>1200</capacity>
 			</li>
 		</comps>
-		<placeWorkers>
-			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
-		</placeWorkers>
-		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-		<rotatable>true</rotatable>
-		<selectable>true</selectable>
-		<neverMultiSelect>false</neverMultiSelect>
-		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<designationCategory>Production</designationCategory>
-		<constructEffect>ConstructMetal</constructEffect>
-		<clearBuildingArea>false</clearBuildingArea>
-		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
-			<li>RR_Research_FoodStorage</li>
+			<li>RR_Research_ExpandedFoodStorage</li>
 		</researchPrerequisites>
 	</ThingDef>	
 	
-	<ThingDef ParentName="BuildingBase" Name="FoodStorageLarge">
+	<!--Large Storage-->
+	<ThingDef ParentName="FoodStorageBase">
 		<defName>RR_TD_FoodStorageVat_Large</defName>
 		<label>feeding tube storage</label>
 		<description>Stores excess food.</description>
 		<thingClass>RimRound.FeedingTube.Building_FoodVatLarge</thingClass>
-		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodStorageVatLarge</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -207,24 +211,7 @@
 			<damageData>
 				<rect>(0,0.35,1,0.3)</rect>
 			</damageData>
-		</graphicData>
-		<building>
-			<ai_chillDestination>false</ai_chillDestination>
-			<isInert>true</isInert>
-		</building>
-		<altitudeLayer>Building</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-		<pathCost>50</pathCost>
-		<blockWind>true</blockWind>
-		<castEdgeShadows>true</castEdgeShadows>
-		<fillPercent>0.40</fillPercent>
-		<tickerType>Normal</tickerType>
-		<minifiedDef>MinifiedThing</minifiedDef>	
-		<thingCategories>
-		  <li>BuildingsProduction</li>
-		</thingCategories>
-		
+		</graphicData>		
 		<statBases>
 			<Mass>35</Mass>
 			<MaxHitPoints>80</MaxHitPoints>
@@ -243,30 +230,17 @@
 				<capacity>100</capacity>
 			</li>
 		</comps>
-		<placeWorkers>
-			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
-		</placeWorkers>
-		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-		<rotatable>true</rotatable>
-		<selectable>true</selectable>
-		<neverMultiSelect>false</neverMultiSelect>
-		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<designationCategory>Production</designationCategory>
-		<constructEffect>ConstructMetal</constructEffect>
-		<clearBuildingArea>false</clearBuildingArea>
-		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
 			<li>RR_Research_FoodStorage</li>
 		</researchPrerequisites>
 	</ThingDef>	
 	
-	<ThingDef ParentName="BuildingBase">
+	<!--Small Storage-->
+	<ThingDef ParentName="FoodStorageBase">
 		<defName>RR_TD_FoodStorageVat_Small</defName>
 		<label>small food storage vat</label>
 		<description>Stores excess food.</description>
 		<thingClass>RimRound.FeedingTube.Building_FoodVatSmall</thingClass>
-		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodStorageVatSmall</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -275,23 +249,6 @@
 				<rect>(0,0.35,1,0.3)</rect>
 			</damageData>
 		</graphicData>
-		<building>
-			<ai_chillDestination>false</ai_chillDestination>
-			<isInert>true</isInert>
-		</building>
-		<altitudeLayer>Building</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-		<pathCost>50</pathCost>
-		<blockWind>true</blockWind>
-		<castEdgeShadows>true</castEdgeShadows>
-		<fillPercent>0.40</fillPercent>
-		<tickerType>Normal</tickerType>
-		<minifiedDef>MinifiedThing</minifiedDef>	
-		<thingCategories>
-		  <li>BuildingsProduction</li>
-		</thingCategories>
-		
 		<statBases>
 			<Mass>35</Mass>
 			<MaxHitPoints>80</MaxHitPoints>
@@ -310,19 +267,6 @@
 				<capacity>50</capacity>
 			</li>
 		</comps>
-		<placeWorkers>
-			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
-		</placeWorkers>
-		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-		<rotatable>true</rotatable>
-		<selectable>true</selectable>
-		<neverMultiSelect>false</neverMultiSelect>
-		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<designationCategory>Production</designationCategory>
-		<constructEffect>ConstructMetal</constructEffect>
-		<clearBuildingArea>false</clearBuildingArea>
-		<designationHotKey>Misc1</designationHotKey>
 		<researchPrerequisites>
 			<li>RR_Research_FoodStorage</li>
 		</researchPrerequisites>
@@ -572,6 +516,7 @@
 		</researchPrerequisites>
 	</ThingDef>	
 	
+	<!--XL Hopper-->
 	  <ThingDef ParentName="BuildingBase">
     <defName>RR_Hopper</defName>
     <label>XL hopper</label>

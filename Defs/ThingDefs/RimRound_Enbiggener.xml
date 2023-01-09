@@ -94,5 +94,8 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+	<researchPrerequisites>
+		<li>RR_Research_ExperimentalWeapons</li>
+	</researchPrerequisites>	
   </ThingDef>
 </Defs>

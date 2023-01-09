@@ -3,7 +3,7 @@
   <ThingDef ParentName="BaseMakeableGrenade">
     <defName>RR_FlabGrenade</defName>
     <label>flab grenades</label>
-    <description>Old-school flabmentation grenades. They can be thrown a short distance, where they'll explode, fattening anyone nearby.</description>
+    <description>Flabmentation grenades. They can be thrown a short distance, where they'll explode, fattening anyone nearby.</description>
     <recipeMaker>
       <researchPrerequisite>Machining</researchPrerequisite>
     </recipeMaker>
@@ -45,7 +45,7 @@
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
-        <defaultProjectile>Proj_GrenadeFrag</defaultProjectile>
+        <defaultProjectile>RR_Proj_GrenadeFlab</defaultProjectile>
         <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
       </li>
     </verbs>
@@ -56,6 +56,9 @@
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
       </li>
     </comps>
+	<researchPrerequisites>
+		<li>RR_Research_ExperimentalGrenades</li>
+	</researchPrerequisites>	
   </ThingDef>
   
   
@@ -74,7 +77,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFragGrenadeProjectile">
-    <defName>Proj_GrenadeFrag</defName>
+    <defName>RR_Proj_GrenadeFlab</defName>
     <label>frag grenade</label>
   </ThingDef>
 </Defs>
