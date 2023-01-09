@@ -73,6 +73,7 @@
 	<RR_Mtw_minForCapableMovement>Min. for capable (movement)</RR_Mtw_minForCapableMovement>
 	<RR_Mtw_nutritionPerLevel>Nutrition required per level</RR_Mtw_nutritionPerLevel>
 	<RR_Mtw_levelsGainedPerLevel>Levels gained on level up</RR_Mtw_levelsGainedPerLevel>
+	<RR_Mtw_MinimumAgeForCustomBody>Min. age for RR bodies</RR_Mtw_MinimumAgeForCustomBody>
 
 	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
 	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>

@@ -30,7 +30,8 @@ namespace RimRound.Comps
             if (GlobalSettings.showExemptionGizmo)
                 yield return dynamicBodyExcemptionGizmo;
 
-            yield return customBodyTypeGizmo;
+            if (Prefs.DevMode)
+                yield return customBodyTypeGizmo;
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)

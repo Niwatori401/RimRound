@@ -72,6 +72,7 @@ namespace RimRound.Utilities
 
         #region Value Settings
 
+        public static NumericFieldData<int> minimumAgeForCustomBody = new NumericFieldData<int>(20, 0, 1000);
         public static NumericFieldData<float> minForCapableMovement = new NumericFieldData<float>(0.01f, 0, 1);
         public static NumericFieldData<float> diabetes = new NumericFieldData<float>(1, 0, 1);
         public static NumericFieldData<float> aFLD = new NumericFieldData<float>(1, 0, 1);

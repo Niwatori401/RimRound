@@ -274,14 +274,21 @@ namespace RimRound.Utilities
             }
         }
 
-        internal static bool CheckExemptions(Pawn p) 
+
+        /// <summary>
+        /// Checks a pawn against settings in the RR tab for if they should use RimRound custom bodies.
+        /// </summary>
+        /// <param name="p">The pawn to check for eligibility.</param>
+        /// <returns>true if they should be exempt, false otherwise.</returns>
+        public static bool CheckExemptions(Pawn p) 
         {
             if ((GlobalSettings.bodyChangeFemale is false && p.gender is Gender.Female) ||
             (GlobalSettings.bodyChangeMale is false && p.gender is Gender.Male) ||
             (GlobalSettings.bodyChangeFriendlyNPC is false && p.Faction != Faction.OfPlayer && p.Faction.AllyOrNeutralTo(Faction.OfPlayer)) ||
             (GlobalSettings.bodyChangeHostileNPC is false && p.Faction.HostileTo(Faction.OfPlayer) && !p.IsPrisoner) ||
             (GlobalSettings.bodyChangePrisoners is false && p.IsPrisoner) ||
-            (GlobalSettings.bodyChangeSlaves is false && p.IsSlaveOfColony)
+            (GlobalSettings.bodyChangeSlaves is false && p.IsSlaveOfColony) ||
+            (GlobalSettings.minimumAgeForCustomBody.threshold > (p?.ageTracker?.AgeBiologicalYears ?? 0))
         )
             {
                 return true;

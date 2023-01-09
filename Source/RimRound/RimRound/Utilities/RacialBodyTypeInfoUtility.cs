@@ -16,6 +16,9 @@ namespace RimRound.Utilities
         {
             var pbtComp = pawn.TryGetComp<PawnBodyType_ThingComp>();
 
+            if (pbtComp is null)
+                return null;
+
             if (pbtComp.CustomBodyTypeDict != null)
             {
                 return pbtComp.CustomBodyTypeDict[pbtComp.BodyArchetype];
