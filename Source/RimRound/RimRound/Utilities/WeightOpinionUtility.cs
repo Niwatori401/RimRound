@@ -187,6 +187,9 @@ namespace RimRound.Utilities
             { Defs.TraitDefOf.RR_WeightOpinion_Fanatical_Trait,    0.03f},
         };
 
+        /// <summary>
+        /// Key represents max severity for thought.
+        /// </summary>
         public static Dictionary<float, int> severityToThoughtIndex = new Dictionary<float, int>()
         {
             { 0.010f,  0  },
@@ -208,10 +211,15 @@ namespace RimRound.Utilities
             { 0.965f,  16 },
             { 1.160f,  17 },
             { 1.410f,  18 },
-            { 1.860f,  19 },
-            { 3.960f,  20 },
-            { 9.960f,  21 },
-            { 14.10f,  22 },
+            { 1.860f,  19 }, // Gel 1
+            { 3.960f,  20 }, // Gel 2-4
+            { 9.960f,  21 }, // Gel 5-8
+            { 21.85f,  22 }, // Gel 9-10
+            { 42.40f,  23 }, // Gel 11
+            { 116.6f,  24 }, // Gel 12-13
+            { 411.0f,  25 }, // Gel 14-16
+            { 999.999f,  26 }, // Gel 17-19
+            { 9999999f,  27 }, // Gel 20
         };
     }
 

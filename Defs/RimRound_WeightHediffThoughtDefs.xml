@@ -154,6 +154,36 @@
 			<description>It's never going to stop. The only solace I can take is that I am smaller right now than I will ever be, but I know that my unyielding misery will only continue to persist no matter what...</description>
 			<baseMoodEffect>-60</baseMoodEffect>
 		  </li>
+                  <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I am in anguish. I can actually feel myself getting bigger. I can't go on like this.</description>
+			<baseMoodEffect>-65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>I'm in utter desolation. I can't explain how I've become what I am. Why can't it just end?</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I can't be alive. Nothing about this makes sense. Is this some bizarre cosmic torture beyond my comprehension?</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I can't think...about anything except food...anymore...</description>
+			<baseMoodEffect>-80</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -311,6 +341,36 @@
 			<description>I don't think I'm even human anymore. I wish all of this would just stop, but knowing that it only gets worse is like torture. </description>
 			<baseMoodEffect>-50</baseMoodEffect>
 		  </li>
+                  <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>This is miserable. How can anyone deserve my fate?</description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>There's no way this is real. Someone, anyone, help me...</description>
+			<baseMoodEffect>-60</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>Forgive me, everyone... I can't control it any longer...</description>
+			<baseMoodEffect>-65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I can feel the colony's buildings collapsing under my weight. They must despise me... I'm so sorry...</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I am a crime against nature. I always wanted to be world famous, but not like this...</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -466,6 +526,36 @@
 			<label>Mountainous</label>
 			<description>I'm a mountain of fat. I hate what I've become. I can't stop, I can't stop...</description>
 			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I can't believe what I've done. I'm a freak.</description>
+			<baseMoodEffect>-45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>I've become larger than anyone ever thought possible. It's not stopping. What will become of me?</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>This hunger is unrelenting. Trying not to give in is impossible. I'm beyond saving.</description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>It's all me. I can feel it, it's all me. How could this have happened?</description>
+			<baseMoodEffect>-60</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>The hunger, the gurgling...the vibrations for miles. I live in ceaseless torture. I shouldn't exist.</description>
+			<baseMoodEffect>-65</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
@@ -623,6 +713,36 @@
 			<description>I've got to have more, but I don't want to get any bigger...I brought this on myself, but surely nobody deserves this...</description>
 			<baseMoodEffect>-30</baseMoodEffect>
 		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I can't stop. I just can't stop. The food is so good, but it comes at such a price...</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>What have I done to myself? It's like a horror movie, but the end never comes...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I'm ashamed to be so freakishly large. This isn't what I wanted to be remembered for.</description>
+			<baseMoodEffect>-45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I can't fathom how they are coping with me around down there. It's unthinkable to imagine that one person could cause this.</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>No matter how hard I try, I just keep growing. I've lost all hope of it ever stopping.</description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -778,6 +898,36 @@
 			<label>Mountainous</label>
 			<description>I really wish this would stop, but I know it won't. I brought this ordeal on myself, but that doesn't mean I'm okay with it.</description>
 			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I feel as though I've transcended reality. I've paid the ultimate price.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>This intense hunger is uncontrollable. It's deeply unpleasant, and I despise how much of a problem it's become.</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I think I've forgotten what it's like to be mobile. I wish someone could help me, but...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I think I feel someone in one of my fat rolls... and I think they're miles away. How?</description>
+			<baseMoodEffect>-45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I did this.</description>
+			<baseMoodEffect>-50</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
@@ -935,6 +1085,36 @@
 			<description>I'm worried that I've become unstoppable. I hope I don't cause too much trouble. This isn't what I wanted to happen.</description>
 			<baseMoodEffect>-15</baseMoodEffect>
 		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>This isn't good. I think I'm outgrowing the buildings. I didn't know it was even possible to be this large.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>It doesn't seem like I'll stop anytime soon. I don't like the trouble I'm causing, but at least I'm comfortable, I suppose.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I really wish I'd stopped earlier. This is extremely problematic.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>They just keep feeding me. I thought I could stop. I can't. I can't say no anymore. </description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I can only think about how much I want to eat. It's like a million voices in my mind fighting for dominance, but they're all saying the same thing...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -1091,6 +1271,36 @@
 			<description>I'm so happy.I'm such a greedy pig that I've abandoned my humanity. I am in heaven.</description>
 			<baseMoodEffect>50</baseMoodEffect>
 		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>There's nothing like me anywhere else in the galaxy, I'm certain. Why should I stop now?</description>
+			<baseMoodEffect>55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>The hunger doesn't hurt at all. The way my stomach screams for more...I can't be sated. I hope this lasts forever.</description>
+			<baseMoodEffect>60</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I'm the biggest living thing to ever exist. That's more like it.</description>
+			<baseMoodEffect>65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>Even the buildings around me are buckling to my majesty. It feels utterly divine.</description>
+			<baseMoodEffect>70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I'm the pinnacle of beauty. Every moment is total ecstasy. I am complete.</description>
+			<baseMoodEffect>75</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -1246,6 +1456,36 @@
 			<label>Mountainous</label>
 			<description>I deserve all of this and more, I'm so happy I could cry. I'd be perfect if I didn't already know I could still get even more massive, and knowing that makes me even happier.</description>
 			<baseMoodEffect>60</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>It keeps getting better and better, and I keep swelling bigger and bigger. Everyone around me is focused solely on me, as it should be. </description>
+			<baseMoodEffect>65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>I won't stop until all anyone can see is me. That is the definition of a beautiful world.</description>
+			<baseMoodEffect>70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I'm so big that I'm outgrowing the buildings around me. This is bliss.</description>
+			<baseMoodEffect>75</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>Those puny buildings were worthless if they couldn't stand in the wake of my opulence. They can all live on me instead. </description>
+			<baseMoodEffect>80</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>The entire planet is slowly disappearing underneath me. I will take its place. All is well.</description>
+			<baseMoodEffect>90</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
