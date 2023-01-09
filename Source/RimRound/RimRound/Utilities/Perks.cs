@@ -105,6 +105,8 @@ namespace RimRound.Utilities
                 {
                     p.perkLevels.PerkToLevels[perk.perkName] += 1;
                     p.perkLevels.availablePoints -= perk.cost;
+
+                    p.parent.AsPawn().health.Notify_HediffChanged(Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, p.parent.AsPawn()));
                 }
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
