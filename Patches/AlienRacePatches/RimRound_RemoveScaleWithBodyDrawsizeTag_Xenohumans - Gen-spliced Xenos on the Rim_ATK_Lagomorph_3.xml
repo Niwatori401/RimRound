@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Xenohumans - Gen-spliced Xenos on the Rim</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/scaleWithPawnDrawsize</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ATK_Lagomorph"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/scaleWithPawnDrawsize</xpath>
+			</match>			
+		</match>
+	</Operation>
+</Patch>
