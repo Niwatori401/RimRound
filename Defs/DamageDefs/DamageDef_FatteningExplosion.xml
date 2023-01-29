@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<DamageDef>
-		<defName>ToxGas</defName>
-		<label>tox gas</label>
+		<defName>RR_FatGas</defName>
+		<label>fattening gas</label>
 		<canInterruptJobs>false</canInterruptJobs>
 		<makesBlood>false</makesBlood>
 		<defaultDamage>0</defaultDamage>
