@@ -150,6 +150,7 @@
     <Compile Include="RimRound\AI\ThoughtWorker_WeightOpinion_Neutral.cs" />
     <Compile Include="RimRound\AI\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
     <Compile Include="RimRound\AI\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
+    <Compile Include="RimRound\Comps\Map\MapComp_RRGasGrid.cs" />
     <Compile Include="RimRound\Comps\PsychicShips\CompCauseGameCondition_HungerDrone.cs" />
     <Compile Include="RimRound\Comps\PsychicShips\CompIncreaseHunger.cs" />
     <Compile Include="RimRound\Comps\PsychicShips\CompProperties_CausesGameCondition_HungerDrone.cs" />
@@ -160,11 +161,15 @@
     <Compile Include="RimRound\Hediffs\Hediff_BionicMetabolizer.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_ArchotechMetabolizer.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_FullnessImplant.cs" />
+    <Compile Include="RimRound\Hediffs\Hediff_SuddenWeightGain.cs" />
+    <Compile Include="RimRound\Hediffs\Hediff_SuddenWeightGainImmunity.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRound\Patch\PawnRenderer_RenderAsPack_DontRenderAsPackForCustomBodies.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\Building-Vent_TickRare_DiffuseRRGasses.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\GasUtility_PawnGasEffectsTick_AddSupportForGas.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GenTemperature_PushHeat_AdjustForPerks.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\PawnGraphicSet_ResolveApparelGraphics_DontIncludeHoverChairIfLayingDown.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
@@ -177,6 +182,8 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\DietAIPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawnsAndAdjustForPerks.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnCapacitiesHandler_CapableOf_MakeMovementCapableOfSettingsDependent.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\RootPlay_Update_AddCountdownTick.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\SectionLayer-Gas_ColorAt_AddRRGasSupport.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\SectionLayer-Gas_Regenerate_AddSupportForRRGas.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\StatWorker_FinalizeValue_AlterMaxValueForPerks.cs" />
     <Compile Include="RimRound\UI\CustomBodySelectDropdown.cs" />
     <Compile Include="RimRound\UI\Gizmos\CustomBodyTypeGizmo.cs" />
@@ -212,6 +219,7 @@
     <Compile Include="RimRound\UI\ITab_Perks.cs" />
     <Compile Include="RimRound\Utilities\BodyTypeUtility.cs" />
     <Compile Include="RimRound\Utilities\GameOverUtility.cs" />
+    <Compile Include="RimRound\Utilities\GasUtility.cs" />
     <Compile Include="RimRound\Utilities\HediffUtility.cs" />
     <Compile Include="RimRound\Utilities\HungerDroneUtility.cs" />
     <Compile Include="RimRound\Utilities\MobilityChairUtility.cs" />
@@ -221,6 +229,7 @@
     <Compile Include="RimRound\Utilities\Perks.cs" />
     <Compile Include="RimRound\Utilities\PrisonerUtility.cs" />
     <Compile Include="RimRound\Utilities\Resources.cs" />
+    <Compile Include="RimRound\Utilities\RRGasType.cs" />
     <Compile Include="RimRound\Utilities\WeightOpinionUtility.cs" />
     <None Include="app.config" />
     <Compile Include="RimRound\AI\PrisonerStuff\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />

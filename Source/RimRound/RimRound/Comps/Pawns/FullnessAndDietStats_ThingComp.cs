@@ -49,6 +49,7 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
             Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
             Scribe_Values.Look<float>(ref consumedNutrition,               "consumedNutrition",               0f);
+            Scribe_Values.Look<float>(ref cumulativeSeverityGained,        "suddenWGCumSeverity");
 
             ExposePerkLevels();
         }
@@ -134,6 +135,10 @@ namespace RimRound.Comps
                 if (GlobalSettings.burstingEnabled)
                     RuptureStomachCheckTick();
             }
+
+            if (parent?.IsHashIntervalTick(60) ?? false)
+                CumulativeSeverityKilosGained -= immunitySeverityDecay;
+
         }
 
 
@@ -822,6 +827,13 @@ namespace RimRound.Comps
         public const float baseStomachElasticity = 0.00001f;
         public const float baseDigestionRate = 3.0f;
         public const float defaultFullnessToNutritionRatio = 1f; //i.e. 0.5 Fullness for 1 nutrition is 0.5f
+
+        private float cumulativeSeverityGained = 0;
+        public float CumulativeSeverityKilosGained { get => cumulativeSeverityGained; set => cumulativeSeverityGained = value; }
+        
+        public const float severityUntilImmunity = 400;
+        public const float immunitySeverityDecay = 0.5f;
+
     }
 
     public class PerkLevels
@@ -838,6 +850,10 @@ namespace RimRound.Comps
 
     public struct WeightGainRequest
     {
+        /// <param name="amountToGain">Amount of weight to gain in kilograms.</param>
+        /// <param name="tickToApplyOn">Tick after which the request should be executed.</param>
+        /// <param name="duration">Number of ticks for the weight to stay applied. If set to 0, weight gained is permanent.</param>
+        /// <param name="triggerMessages">Whether weight gained from this should trigger the notifications at the top of the screen.</param>
         public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0, bool triggerMessages = false) 
         {
             this.amountToGain = amountToGain;

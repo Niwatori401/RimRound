@@ -52,15 +52,15 @@ Forgotten Realms,O21_FR_Chitine
 Protogen! Marley Race Mod,Alien_ProtogenNME
 Protogen! Marley Race Mod,Alien_Protogen
 Minotaur Race,MinotaurRace
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Avianmorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Bovinemorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Caninemorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Cervinemorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Dragomorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Felinemorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Gnollmorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Lagomorph
-Xenohumans - Gen-spliced Xenos on the Rim,ATK_Vulpinemorph
+Xenohumans - Anthromorphs,ATK_Avianmorph
+Xenohumans - Anthromorphs,ATK_Bovinemorph
+Xenohumans - Anthromorphs,ATK_Caninemorph
+Xenohumans - Anthromorphs,ATK_Cervinemorph
+Xenohumans - Anthromorphs,ATK_Dragomorph
+Xenohumans - Anthromorphs,ATK_Felinemorph
+Xenohumans - Anthromorphs,ATK_Gnollmorph
+Xenohumans - Anthromorphs,ATK_Lagomorph
+Xenohumans - Anthromorphs,ATK_Vulpinemorph
 [EAVE] Sylveon Race,EA_SylveonRace
 Ferrex Race (Continued),Alien_Ferrex
 [TP]Dreemurr Race,TRAHS_DreemurrRace
@@ -86,3 +86,6 @@ Xenohumans Expanded,LowGravWorlderRace
 Xenohumans Expanded,RadWorlderRace
 Xenohumans Expanded,VatgrownHumanRace
 Rabbie The Moonrabbit race,Rabbie
+Kolra's Oni Race Mod (Continued),Alien_RedOni
+Kolra's Oni Race Mod (Continued),Alien_GreenOni
+Kolra's Oni Race Mod (Continued),Alien_BlueOni

@@ -65,21 +65,22 @@ namespace RimRound.Utilities
             }
         }
 
-        public static void AddHediffOfDefTo(HediffDef def, Pawn pawn)
+        public static Hediff AddHediffOfDefTo(HediffDef def, Pawn pawn)
         {
             if (pawn is null)
-                return;
+                return null;
 
             Hediff pawnHediff = GetHediffOfDefFrom(def, pawn);
 
+            Hediff hediff = null;
             if (pawnHediff is null)
             {
-                Hediff hediff = HediffMaker.MakeHediff(def, pawn);
+                hediff = HediffMaker.MakeHediff(def, pawn);
                 hediff.Severity = 0.01f;
                 pawn.health.AddHediff(hediff);
             }
 
-            return;
+            return hediff;
         }
 
         public static bool RemoveHediffOfDefFrom(HediffDef def, Pawn pawn)
@@ -208,8 +209,7 @@ namespace RimRound.Utilities
             {
                 if (addIfHediffNull)
                 {
-                    AddHediffOfDefTo(def, pawn);
-                    h = GetHediffOfDefFrom(def, pawn);
+                    h = AddHediffOfDefTo(def, pawn);
                 }
                 else
                 {

@@ -825,6 +825,9 @@ namespace RimRound.Utilities
 
         //--------------------Mutable Dicts-------------
         static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Avali_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
+        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_BlueOni_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_RedOni_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
+        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_GreenOni_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_DogboldFoxbold_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
         static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Drow_Otto_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
         static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Orassan_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
@@ -919,6 +922,9 @@ namespace RimRound.Utilities
         {
             { "AFoxbold",                  Alien_DogboldFoxbold_Set          },
             { "Alien_Avali",               Alien_Avali_Set                   },
+            { "Alien_BlueOni",             Alien_BlueOni_Set                 },
+            { "Alien_GreenOni",            Alien_GreenOni_Set                },
+            { "Alien_RedOni",              Alien_RedOni_Set                  },
             { "Alien_Dogbold",             Alien_DogboldFoxbold_Set          },
             { "Alien_Drow_Otto",           Alien_Drow_Otto_Set               },
 

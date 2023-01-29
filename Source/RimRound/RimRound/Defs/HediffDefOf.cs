@@ -20,6 +20,8 @@ namespace RimRound.Defs
         public static HediffDef RimRound_FLD;
         public static HediffDef RimRound_AFLD;
         public static HediffDef RimRound_Arthritis;
+        public static HediffDef RimRound_SuddenWeightGain;
+        public static HediffDef RimRound_SuddenWeightGainImmunity;
 
     }
 }
