@@ -95,6 +95,7 @@
 	<RR_Mtw_GeneralSettings_UseLegacyLardySprite>Use legacy lardy sprite</RR_Mtw_GeneralSettings_UseLegacyLardySprite>
 	<RR_Mtw_GeneralSettings_OnlyUseStandardSprites>Only use standard sprites</RR_Mtw_GeneralSettings_OnlyUseStandardSprites>
 	<RR_Mtw_GeneralSettings_hidePacksForCustomBodies>Hide pack items for custom bodies</RR_Mtw_GeneralSettings_hidePacksForCustomBodies>
+	<RR_Mtw_GeneralSettings_usePoundsWherePossible>Use lbs where possible</RR_Mtw_GeneralSettings_usePoundsWherePossible>
 
 	<RR_Hsw_HediffNumericSettings_SettingsTitle>Hediff effect multipliers</RR_Hsw_HediffNumericSettings_SettingsTitle>
 	<RR_Hsw_HediffNumericSettings_weightHediffHungerRateMult>Weight: hunger rate multiplier</RR_Hsw_HediffNumericSettings_weightHediffHungerRateMult>

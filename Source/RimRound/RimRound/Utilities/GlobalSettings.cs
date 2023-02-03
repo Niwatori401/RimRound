@@ -68,6 +68,8 @@ namespace RimRound.Utilities
         public static bool useZoomPortraitStyle = false;
         public static bool onlyUseStandardBodyType = false;
         public static bool hidePacksForCustomBodies = true;
+        public static bool usePoundsWherePossible = false;
+
         #endregion
 
         #region Value Settings

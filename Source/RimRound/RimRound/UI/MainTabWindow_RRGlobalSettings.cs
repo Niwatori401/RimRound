@@ -423,6 +423,15 @@ namespace RimRound.UI
                 height = spaceBetweenCheckBoxes
             },
            "RR_Mtw_GeneralSettings_hidePacksForCustomBodies".Translate(), ref GlobalSettings.hidePacksForCustomBodies, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+           
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+           "RR_Mtw_GeneralSettings_usePoundsWherePossible".Translate(), ref GlobalSettings.usePoundsWherePossible, false, null, null, false);
 
 
 

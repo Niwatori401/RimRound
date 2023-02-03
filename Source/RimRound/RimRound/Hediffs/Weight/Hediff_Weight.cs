@@ -27,7 +27,10 @@ namespace RimRound.Hediffs
         {
             get 
             {
-                return $"{Utilities.HediffUtility.SeverityToKilosWithBaseWeight(this.Severity):F1}Kgs";
+                if (GlobalSettings.usePoundsWherePossible)
+                    return $"{Utilities.HediffUtility.SeverityToKilosWithBaseWeight(this.Severity) * 2.20462f:F1}Lbs";
+                else
+                    return $"{Utilities.HediffUtility.SeverityToKilosWithBaseWeight(this.Severity):F1}Kgs";
             }
         } 
         public override int CurStageIndex
