@@ -102,6 +102,7 @@ namespace RimRound.Utilities
         public static NumericFieldData<int> maxVisualSizeGelLevel = new NumericFieldData<int>(20, 1, 20);
         public static NumericFieldData<int> nutritionPerPerkLevel = new NumericFieldData<int>(15, 5, 30);
         public static NumericFieldData<int> levelsGainedPerLevel = new NumericFieldData<int>(1, 1, 10);
+        public static NumericFieldData<float> minWeightChangeForNumberText = new NumericFieldData<float>(0.5f, 0.01f, float.MaxValue);
         
         
         

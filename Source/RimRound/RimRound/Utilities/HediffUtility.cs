@@ -129,7 +129,7 @@ namespace RimRound.Utilities
             }
 
 
-            ThrowValueText(pawn, realSeverityApplied, 1, 0.0005f);
+            ThrowValueText(pawn, realSeverityApplied, 1, GlobalSettings.minWeightChangeForNumberText.threshold / 1000f);
 
 
             if (triggerMessages && GetWeightChangedMessage(pawn, cachedSeverity, hediff.Severity) is Message m)
