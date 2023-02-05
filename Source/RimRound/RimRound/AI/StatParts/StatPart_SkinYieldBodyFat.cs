@@ -45,7 +45,7 @@ namespace RimRound.AI
                     if (pawn.WeightHediff() is Hediff weightHediff)
                     {
                         float weight = Utilities.HediffUtility.SeverityToKilosWithBaseWeight(weightHediff.Severity);
-                        return (0.000603739195255981f * weight + 0.975850432189761f);
+                        return (0.0006f * weight + 0.98f);
                     }
                 }
             }

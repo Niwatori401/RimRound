@@ -19,7 +19,7 @@ namespace RimRound.FeedingTube
         int tickCheckInterval = 200;
         AutoFeederMode currentMode = AutoFeederMode.off;
         Pawn _currentPawn;
-        Pawn CurrentPawn 
+        public Pawn CurrentPawn 
         {
             get 
             {

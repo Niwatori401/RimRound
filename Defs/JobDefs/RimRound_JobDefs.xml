@@ -19,4 +19,11 @@
     <reportString>attempting to persuade TargetA.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>	
+  
+  <JobDef>
+	<defName>RR_ListenToRadio</defName>
+	<joyKind>Meditative</joyKind>
+    <driverClass>RimRound.FeedingTube.AI.JobDriver_ListenToRadio</driverClass>
+    <reportString>Listening to the radio on TargetA.</reportString>
+  </JobDef>
 </Defs>

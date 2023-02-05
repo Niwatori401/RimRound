@@ -15,5 +15,7 @@ namespace RimRound.FeedingTube.Defs
         public static ThingDef RR_FeedingTubeFluid;
         public static ThingDef RR_Hopper;
         public static ThingDef RR_TD_FoodFaucet;
+        public static ThingDef RR_AutoFeeder;
+        public static ThingDef RR_AdvancedAutoFeeder;
     }
 }

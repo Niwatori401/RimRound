@@ -2,6 +2,7 @@
 using AlienRace.ExtendedGraphics;
 using RimRound.Comps;
 using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -241,8 +242,11 @@ namespace RimRound.Utilities
 
         internal static void RedrawPawn(Pawn pawn)
         {
+            if (!(Find.CurrentMap.mapPawns.AllPawns.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any()))
+                return;
+            
             PortraitsCache.SetDirty(pawn);
-            GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);
+            GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);  
             pawn.Drawer.renderer.graphics.ResolveAllGraphics();
         }
 
@@ -268,9 +272,6 @@ namespace RimRound.Utilities
 
                 alienComp.customDrawSize =  new Vector2(drawSize, drawSize);
 
-
-                //LifeStageAge lifeStageAge = alienProps.race.lifeStageAges;
-                //LifeStageAgeAlien lifeStageAgeAlien = lifeStageAge as LifeStageAgeAlien;
             }
         }
 

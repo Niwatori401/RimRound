@@ -439,15 +439,11 @@
 		</researchPrerequisites>
 	</ThingDef>	
 	
-	<!--Auto Feeder-->
-	<ThingDef ParentName="BuildingBase">
-		<defName>RR_AutoFeeder</defName>
-		<label>Automatic food dispenser</label>
+	<!--Auto Feeder Base-->
+	<ThingDef Abstract="True" ParentName="BuildingBase" Name="AutoFeederBase">
 		<description>dispenses food.</description>
-		<thingClass>RimRound.FeedingTube.Building_AutoFeeder</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Building/Production/AutoFeeder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1, 1)</drawSize>
 			<damageData>
@@ -471,30 +467,14 @@
 		<thingCategories>
 		  <li>BuildingsProduction</li>
 		</thingCategories>
-		
-		<statBases>
-			<Mass>35</Mass>
-			<MaxHitPoints>80</MaxHitPoints>
-			<WorkToBuild>35</WorkToBuild>
-			<Flammability>0.7</Flammability>
-			<Beauty>-2</Beauty>
-		</statBases>
+
 		<size>(1,1)</size>
 		<placingDraggableDimensions>1</placingDraggableDimensions>
-		<costList>
-			<Steel>40</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-		</costList>
+
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<comps>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>80</basePowerConsumption>
-				<shortCircuitInRain>false</shortCircuitInRain>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Flickable"/>
-			<li Class="CompProperties_Breakdownable"/>
 			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
 				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
 			</li>
@@ -511,10 +491,75 @@
 		<designationCategory>Production</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<designationHotKey>Misc1</designationHotKey>
+	</ThingDef>	
+	
+	<!--Auto Feeder-->
+	<ThingDef ParentName="AutoFeederBase">
+		<defName>RR_AutoFeeder</defName>
+		<label>Automatic food dispenser</label>
+		<thingClass>RimRound.FeedingTube.Building_AutoFeeder</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/AutoFeeder</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>35</Mass>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>35</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Breakdownable"/>		
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>80</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+		</comps>	
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>	
 		<researchPrerequisites>
 			<li>RR_Research_AutoFeeder</li>
-		</researchPrerequisites>
-	</ThingDef>	
+		</researchPrerequisites>		
+	</ThingDef>
+	
+	<!--Advanced Auto Feeder-->
+	<ThingDef ParentName="AutoFeederBase">
+		<defName>RR_AdvancedAutoFeeder</defName>
+		<label>Advanced automatic food dispenser</label>
+		<thingClass>RimRound.FeedingTube.Building_AdvancedAutoFeeder</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/AdvancedAutoFeeder</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>40</Mass>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>120</WorkToBuild>
+			<Flammability>0.2</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>20</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>			
+		</comps>	
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Plasteel>10</Plasteel>
+		</costList>	
+		<researchPrerequisites>
+			<li>RR_Research_ImprovedAutoFeeder</li>
+		</researchPrerequisites>	
+	</ThingDef>
 	
 	<!--XL Hopper-->
 	  <ThingDef ParentName="BuildingBase">
