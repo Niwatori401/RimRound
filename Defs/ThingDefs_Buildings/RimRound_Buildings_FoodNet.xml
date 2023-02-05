@@ -529,6 +529,7 @@
 	<ThingDef ParentName="AutoFeederBase">
 		<defName>RR_AdvancedAutoFeeder</defName>
 		<label>Advanced automatic food dispenser</label>
+		<description>A vastly improved, exceedingly high tech automatic food dispenser, requiring vastly less power than its predecessor, never malfunctions, and is equipped with a small light and even a radio for some reason.</description>
 		<thingClass>RimRound.FeedingTube.Building_AdvancedAutoFeeder</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/AdvancedAutoFeeder</texPath>
@@ -555,6 +556,7 @@
 			<Steel>60</Steel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<Plasteel>10</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>	
 		<researchPrerequisites>
 			<li>RR_Research_ImprovedAutoFeeder</li>
