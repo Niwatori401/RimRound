@@ -1,0 +1,70 @@
+<Defs>
+  <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>RimRound_Apparel_SimpleHelmet</defName>
+    <label>simple helmet</label>
+    <description>A simple helmet which gives moderate protection against sharp attacks. Not effective against blunt weapons.</description>
+	<modExtensions>
+		<li Class="RimRound.Defs.ClothingModExtension">
+			<weightGainMultiplierMultBonus>0</weightGainMultiplierMultBonus>
+			<digestionSpeedMultBonus>0</digestionSpeedMultBonus>
+			<stomachElasticityMultBonus>0</stomachElasticityMultBonus>
+			<fullnessGainedMultiplierBonus>0</fullnessGainedMultiplierBonus>
+			<flatMoveBonus>0</flatMoveBonus>
+			<flatManipulationBonus>0</flatManipulationBonus>
+			<flatEatingSpeedBonus>0</flatEatingSpeedBonus>		
+			<movementPenaltyMitigationMultBonus_Weight>0</movementPenaltyMitigationMultBonus_Weight>
+			<movementPenaltyMitigationMultBonus_Fullness>0</movementPenaltyMitigationMultBonus_Fullness>
+			<manipulationPenaltyMitigationMultBonus_Weight>0</manipulationPenaltyMitigationMultBonus_Weight>
+			<painMitigationMultBonus_Fullness>0</painMitigationMultBonus_Fullness>
+			<eatingSpeedReductionMitigationMultBonus_Fullness>0</eatingSpeedReductionMitigationMultBonus_Fullness>
+		</li>
+	</modExtensions>
+	<techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/SimpleHelmet/SimpleHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <displayPriority>200</displayPriority>
+    </recipeMaker>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/SimpleHelmet/SimpleHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+</Defs>

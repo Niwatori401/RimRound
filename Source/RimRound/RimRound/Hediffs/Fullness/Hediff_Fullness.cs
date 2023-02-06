@@ -28,9 +28,9 @@ namespace RimRound.Hediffs
                     Log.Error("Failed to get comp in PersonalFullnessPainMult!");
                     return 1f;
                 }
-
+                float clothingPainMult = 1 - comp.clothingBonuses.painMitigationMultBonus_Fullness;
                 int noPainStillGainLevel = comp?.perkLevels?.PerkToLevels?["RR_NoPainStillGain_Title"] ?? 0;
-                return Mathf.Clamp(_personalFullnessPainMult - (0.1f * noPainStillGainLevel), 0f, 10f);
+                return Mathf.Clamp(_personalFullnessPainMult - (0.1f * noPainStillGainLevel) - clothingPainMult, 0f, 10f);
             }
             set 
             {

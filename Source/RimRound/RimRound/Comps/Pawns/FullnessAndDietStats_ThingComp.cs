@@ -50,8 +50,28 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
             Scribe_Values.Look<float>(ref consumedNutrition,               "consumedNutrition",               0f);
             Scribe_Values.Look<float>(ref cumulativeSeverityGained,        "suddenWGCumSeverity");
-
+            ExposeClothingBonuses();
             ExposePerkLevels();
+        }
+
+        public void ExposeClothingBonuses() 
+        {
+            Scribe_Values.Look<float>(ref clothingBonuses.weightGainMultiplierMultBonus, "weightGainMultiplierMultBonus");
+            Scribe_Values.Look<float>(ref clothingBonuses.stomachElasticityMultBonus, "stomachElasticityMultBonus");
+            Scribe_Values.Look<float>(ref clothingBonuses.digestionSpeedMultBonus, "digestionSpeedMultBonus");
+            
+            Scribe_Values.Look<float>(ref clothingBonuses.fullnessGainedMultiplierBonus, "fullnessGainedMultiplierBonus");
+            
+            Scribe_Values.Look<float>(ref clothingBonuses.flatMoveBonus, "flatMoveBonus");
+            Scribe_Values.Look<float>(ref clothingBonuses.flatManipulationBonus, "flatManipulationBonus");
+            Scribe_Values.Look<float>(ref clothingBonuses.flatEatingSpeedBonus, "flatEatingSpeedBonus");
+            
+            Scribe_Values.Look<float>(ref clothingBonuses.movementPenaltyMitigationMultBonus_Weight, "movementPenaltyMitigationMultBonus_Weight");
+            Scribe_Values.Look<float>(ref clothingBonuses.manipulationPenaltyMitigationMultBonus_Weight, "manipulationPenaltyMitigationMultBonus_Weight");
+            Scribe_Values.Look<float>(ref clothingBonuses.painMitigationMultBonus_Fullness, "painMitigationMultBonus_Fullness");
+            Scribe_Values.Look<float>(ref clothingBonuses.eatingSpeedReductionMitigationMultBonus_Fullness, "eatingSpeedReductionMitigationMultBonus_Fullness");
+
+            return;
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -350,7 +370,7 @@ namespace RimRound.Comps
         {
             if (CurrentFullness > SoftLimit)
             {
-                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * ((perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0) + 1) * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
+                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * (((perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0) + 1) * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold * (1 + clothingBonuses.stomachElasticityMultBonus));
                 return;
             }
             return;
@@ -485,7 +505,8 @@ namespace RimRound.Comps
             {
                 float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.2f + 1;
                 float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 0.5f + 1;
-                return gigaGurglingMult * digestionBeyondQuestionMult * HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn());
+                float digestionSpeedMultBonus = clothingBonuses.digestionSpeedMultBonus;
+                return gigaGurglingMult * digestionBeyondQuestionMult * HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn()) + digestionSpeedMultBonus;
             }
             set => personalDigestionRateMult = value;
         }
@@ -526,6 +547,7 @@ namespace RimRound.Comps
                 int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
                 int heavyRevianLevel = perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int thatLevel = perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
+                float clothingWeightGainBonus = clothingBonuses.weightGainMultiplierMultBonus;
 
                 if (makesAllTheRulesLevel > 0)
                 {
@@ -548,7 +570,8 @@ namespace RimRound.Comps
                     0.2f * wg4000Level +
                     0.5f * heavyRevianLevel +
                     4.0f * makesAllTheRulesLevel +
-                    2.0f * thatLevel;
+                    2.0f * thatLevel +
+                    clothingWeightGainBonus;
             }
             set 
             {
@@ -789,6 +812,8 @@ namespace RimRound.Comps
                 fullnessbar.UpdateBar(this.DietMode);
         }
 
+
+
         public float ConsumedNutrition
         {
             get => consumedNutrition;
@@ -803,9 +828,11 @@ namespace RimRound.Comps
                 }
             } 
         }
+
         private float consumedNutrition = 0;
         private int _perkLevelsToSpendForSaving = 0;
 
+        public ClothingStatsBonuses clothingBonuses = new ClothingStatsBonuses();
 
         public Queue<WeightGainRequest> activeWeightGainRequests = new Queue<WeightGainRequest>();
         public Queue<WeightGainRequest> activeWeightLossRequests = new Queue<WeightGainRequest>();
@@ -840,11 +867,32 @@ namespace RimRound.Comps
     {
         public int currentLevel = 1;
         public int availablePoints = 0;
-        //public float nutritionPerLevel = 20;
         public Dictionary<string, int> PerkToLevels;
     }
 
+    public struct ClothingStatsBonuses 
+    {
+        //Should be in range [0, inf)
+        public float weightGainMultiplierMultBonus;
+        public float digestionSpeedMultBonus;
+        public float stomachElasticityMultBonus;
 
+        
+        public float fullnessGainedMultiplierBonus;
+
+        public float flatMoveBonus;
+        public float flatManipulationBonus;
+        public float flatEatingSpeedBonus;
+
+        //All below should be in range [0, 1]. 0 means full mitigation, 1 means none.
+        public float movementPenaltyMitigationMultBonus_Weight;
+        public float movementPenaltyMitigationMultBonus_Fullness;
+        public float eatingSpeedReductionMitigationMultBonus_Fullness;
+        public float manipulationPenaltyMitigationMultBonus_Weight;
+        
+        public float painMitigationMultBonus_Fullness;
+        
+    }
 
 
 
