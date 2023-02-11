@@ -127,7 +127,7 @@ namespace RimRound.Comps
                     this.weightGizmo = new WeightGizmo(this);
 
 
-                Update();
+                UpdateDietBars();
                 SetRangesByValue(cachedSliderVal1, cachedSliderVal2);
                 InitializePerks();
             }
@@ -471,7 +471,7 @@ namespace RimRound.Comps
             set
             {
                 dietMode = value;
-                this.Update();
+                this.UpdateDietBars();
             }
 
         }
@@ -804,7 +804,7 @@ namespace RimRound.Comps
 
         }
 
-        public void Update()
+        public void UpdateDietBars()
         {
             if (nutritionbar != null)
                 nutritionbar.UpdateBar(this.DietMode);

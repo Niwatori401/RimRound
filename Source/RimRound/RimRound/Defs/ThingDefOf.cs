@@ -26,5 +26,12 @@ namespace RimRound.Defs
 
         public static ThingDef RR_HoverChairArm;
         public static ThingDef RR_HoverChair;
+
+        public static ThingDef RimRound_NovaTechApparel_Hyperbelt;
+        public static ThingDef RimRound_NovaTechApparel_Collar;
+        public static ThingDef RimRound_NovaTechApparel_Gloves;
+        public static ThingDef RimRound_NovaTechApparel_ProtoSuit;
+        public static ThingDef RimRound_NovaTechApparel_Belt;
+        public static ThingDef RimRound_NovaTechApparel_Jumpsuit;
     }
 }

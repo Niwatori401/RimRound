@@ -74,7 +74,7 @@ namespace RimRound.Patch
             if (pcmIndex != -1)
             {
                 newList[pcmIndex].offset = Mathf.Min(0,
-                    newList[pcmIndex].offset * offsetMultiplier + 
+                    newList[pcmIndex].offset * (1 - offsetMultiplier) + 
                     (comp.perkLevels?.PerkToLevels?["RR_Comfortable_Corpulence_Title"] * 0.03f * Mathf.Abs(newList[pcmIndex].offset) ?? 0) + 
                     (comp.perkLevels?.PerkToLevels?["RR_HeavyRevian_Title"] * 0.6f ?? 0));
                 
@@ -88,7 +88,7 @@ namespace RimRound.Patch
             int pcmIndex = newList.FindIndex(x => x.capacity == PawnCapacityDefOf.Eating);
             if (pcmIndex != -1)
             {
-                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset * offsetMultiplier);
+                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset * (1 - offsetMultiplier));
             }
 
             return;
@@ -99,7 +99,7 @@ namespace RimRound.Patch
             int pcmIndex = newList.FindIndex(x => x.capacity == PawnCapacityDefOf.Manipulation);
             if (pcmIndex != -1)
             {
-                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset * offsetMultiplier);
+                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset * (1 - offsetMultiplier));
             }
 
             return;

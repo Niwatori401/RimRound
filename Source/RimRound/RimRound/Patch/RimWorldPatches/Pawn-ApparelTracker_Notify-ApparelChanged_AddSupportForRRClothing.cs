@@ -16,7 +16,7 @@ namespace RimRound.Patch
     [HarmonyPatch(nameof(Pawn_ApparelTracker.Notify_ApparelChanged))]
     public class Pawn_ApparelTracker_Notify_ApparelChanged_AddSupportForRRClothing
     {
-        public void Postfix(Pawn_ApparelTracker __instance) 
+        public static void Postfix(Pawn_ApparelTracker __instance) 
         {
             Pawn pawn = __instance.pawn;
 
@@ -35,6 +35,12 @@ namespace RimRound.Patch
                     continue;
 
                 ClothingModExtension clothingStats = def.GetModExtension<ClothingModExtension>();
+                if (clothingStats is null)
+                {
+                    Log.Error("Clothing item was missing appropriate mod extension!");
+                    return;
+                }
+
 
                 comp.clothingBonuses.weightGainMultiplierMultBonus += clothingStats.weightGainMultiplierMultBonus;
                 comp.clothingBonuses.digestionSpeedMultBonus += clothingStats.digestionSpeedMultBonus;
@@ -53,7 +59,7 @@ namespace RimRound.Patch
             ClampClothingBonuses(ref comp.clothingBonuses);
         }
 
-        bool IsWearingClothingOfDef(Pawn pawn, ThingDef clothingDef) 
+        static bool IsWearingClothingOfDef(Pawn pawn, ThingDef clothingDef) 
         {
             if (pawn.apparel.WornApparel.Any(apparel => { return apparel.def.defName == clothingDef.defName; }))
                 return true;
@@ -61,7 +67,7 @@ namespace RimRound.Patch
             return false;
         }
 
-        void ClampClothingBonuses(ref ClothingStatsBonuses clothingBonuses) 
+        static void ClampClothingBonuses(ref ClothingStatsBonuses clothingBonuses) 
         {
             clothingBonuses.movementPenaltyMitigationMultBonus_Weight = Mathf.Clamp01(clothingBonuses.movementPenaltyMitigationMultBonus_Weight);
             clothingBonuses.movementPenaltyMitigationMultBonus_Fullness = Mathf.Clamp01(clothingBonuses.movementPenaltyMitigationMultBonus_Fullness);
@@ -72,7 +78,12 @@ namespace RimRound.Patch
 
         static List<ThingDef> clothingItemsToCheck = new List<ThingDef>() 
         {
-            
+            Defs.ThingDefOf.RimRound_NovaTechApparel_Hyperbelt,
+            Defs.ThingDefOf.RimRound_NovaTechApparel_Jumpsuit,
+            Defs.ThingDefOf.RimRound_NovaTechApparel_ProtoSuit,
+            Defs.ThingDefOf.RimRound_NovaTechApparel_Gloves,
+            Defs.ThingDefOf.RimRound_NovaTechApparel_Collar,
+            Defs.ThingDefOf.RimRound_NovaTechApparel_Belt,
         };
     }
 }
