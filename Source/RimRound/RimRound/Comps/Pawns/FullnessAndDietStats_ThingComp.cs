@@ -52,6 +52,28 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref cumulativeSeverityGained,        "suddenWGCumSeverity");
             ExposeClothingBonuses();
             ExposePerkLevels();
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+                InitValuesOnLoad();
+        }
+
+        bool _loadedDietBars = false;
+        private void InitValuesOnLoad() 
+        {
+            InitBarsIfNull();
+            UpdateDietBars();
+            InitializePerksIfNull();
+        }
+
+        private void InitBarsIfNull() 
+        {
+            if (nutritionbar == null)
+                this.nutritionbar = new WeightGizmo_NutritionBar(((Pawn)parent));
+
+            if (fullnessbar == null)
+                this.fullnessbar = new WeightGizmo_FullnessBar(((Pawn)parent));
+
+            if (weightGizmo == null)
+                this.weightGizmo = new WeightGizmo(this);
         }
 
         public void ExposeClothingBonuses() 
@@ -116,20 +138,14 @@ namespace RimRound.Comps
                 if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn()) is null)
                     Utilities.HediffUtility.AddHediffOfDefTo(Defs.HediffDefOf.RimRound_Fullness, parent.AsPawn());
 
+                InitValuesOnLoad();
 
-                if (nutritionbar == null)
-                    this.nutritionbar = new WeightGizmo_NutritionBar(((Pawn)parent));
-
-                if (fullnessbar == null)
-                    this.fullnessbar = new WeightGizmo_FullnessBar(((Pawn)parent));
-
-                if (weightGizmo == null)
-                    this.weightGizmo = new WeightGizmo(this);
-
-
-                UpdateDietBars();
-                SetRangesByValue(cachedSliderVal1, cachedSliderVal2);
-                InitializePerks();
+                // If this is called before InitValuesOnLoad(), sliders will be set to incorrect postions.
+                if (!_loadedDietBars)
+                {
+                    SetRangesByValue(cachedSliderVal1, cachedSliderVal2);
+                    _loadedDietBars=true;
+                }
             }
         }
 
@@ -201,10 +217,13 @@ namespace RimRound.Comps
 
         }
 
-        private void InitializePerks() 
+        private void InitializePerksIfNull() 
         {
             if (perkLevels is null)
                 perkLevels = new PerkLevels();
+
+            if (!(perkLevels.PerkToLevels is null))
+                return;
 
             perkLevels.PerkToLevels = new Dictionary<string, int>() { };
 
