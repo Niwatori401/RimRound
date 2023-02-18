@@ -129,13 +129,13 @@ namespace RimRound.FeedingTube
             Init(rootNode);
         }
 
-        public List<FoodNet> MakeFoodNets(List<FoodTransmitter_ThingComp> comps) 
+        public List<FoodNet> MakeFoodNets(List<FoodTransmitter_ThingComp> compsToProcess) 
         {
             List<List<FoodTransmitter_ThingComp>> foodNetsComps = new List<List<FoodTransmitter_ThingComp>>();
 
-            while (comps.Count > 0)
+            while (compsToProcess.Count > 0)
             {
-                if (comps.NullOrEmpty())
+                if (compsToProcess.NullOrEmpty())
                 {
                     Log.Error("Tried to make food net from null or empty comps!");
                     return null;
@@ -144,51 +144,51 @@ namespace RimRound.FeedingTube
                 Queue<FoodTransmitter_ThingComp> queue = new Queue<FoodTransmitter_ThingComp>();
                 List<FoodTransmitter_ThingComp> neighbors = new List<FoodTransmitter_ThingComp>();
 
-                neighbors.Add(comps[0]);
-                queue.Enqueue(comps[0]);
-                comps.RemoveAt(0);
+                neighbors.Add(compsToProcess[0]);
+                queue.Enqueue(compsToProcess[0]);
+                compsToProcess.RemoveAt(0);
 
 
                 while (queue.Count > 0)
                 {
                     FoodTransmitter_ThingComp baseComp = queue.Dequeue();
 
-                    if (!baseComp.TransmitsFoodNow) 
+                    // Accounts for things like valves being off and things which recieve connections but do not seek neighbor connections themselves
+                    if (!baseComp.TransmitsFoodNow || baseComp.Props.isOneWay) 
                     {
-                        //Not sure if this will work as intended
-                        comps.Remove(baseComp);
+                        compsToProcess.Remove(baseComp);
                         continue;
                     }
                        
-
 
                     if (baseComp.FoodNet != null)
                         Log.Error("Tried to add foodnet to a comp with an existing foodnet!");
 
                     //Get collection of Things in adjacent cells
-                    IEnumerable<IEnumerable<Thing>> thingQuery =
+                    IEnumerable<IEnumerable<Thing>> adjacentThingsCollections =
                         from c in GenAdj.CellsAdjacentCardinal(baseComp.parent)
                         select c.GetThingList(this.map).Distinct();
 
                     List<FoodTransmitter_ThingComp> listOfNeighboringComps = new List<FoodTransmitter_ThingComp>();
 
                     //Get all the FoodTransmitter_ThingComp for neighboring cells and add to list
-                    foreach (var a in thingQuery)
+                    foreach (var adjacentThings in adjacentThingsCollections)
                     {
-                        foreach (var b in a)
+                        foreach (var thing in adjacentThings)
                         {
-                            if (b.TryGetComp<FoodTransmitter_ThingComp>() is FoodTransmitter_ThingComp comp1)
+                            if (thing.TryGetComp<FoodTransmitter_ThingComp>() is FoodTransmitter_ThingComp comp1 && 
+                            comp1.AcceptConnectionFrom(baseComp.parent.Position))
                                 listOfNeighboringComps.Add(comp1);
                         }
                     }
 
                     foreach (FoodTransmitter_ThingComp FT_TC in listOfNeighboringComps)
                     {
-                        if (comps.Contains(FT_TC))
+                        if (compsToProcess.Contains(FT_TC))
                         {
                             neighbors.Add(FT_TC);
                             queue.Enqueue(FT_TC);
-                            comps.Remove(FT_TC);
+                            compsToProcess.Remove(FT_TC);
                         }
                     }
                 }

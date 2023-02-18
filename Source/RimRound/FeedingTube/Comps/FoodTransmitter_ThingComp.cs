@@ -50,5 +50,20 @@ namespace RimRound.FeedingTube.Comps
 
             return sb.ToString().Trim();
         }
+
+        public bool AcceptConnectionFrom(IntVec3 originPosition)
+        {
+            if (!this.Props.isOneWay)
+                return true;
+            
+            Building building = ((Building)this.parent);
+
+            IntVec3 inputDirection = building.Position + IntVec3.South.RotatedBy(building.Rotation);
+            
+            if (originPosition == inputDirection)
+                return true;
+            else
+                return false;
+        }
     }
 }

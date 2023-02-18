@@ -9,6 +9,6 @@ namespace RimRound.FeedingTube.Comps
 {
     public class FoodTransmitter_CompProperties : CompProperties
     {
-
+        public bool isOneWay = false;
     }
 }

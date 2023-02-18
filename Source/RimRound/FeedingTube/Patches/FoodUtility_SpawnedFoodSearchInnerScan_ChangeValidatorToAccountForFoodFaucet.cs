@@ -95,7 +95,7 @@ namespace RimRound.FeedingTube.Patches
                     new TargetInfo(t.InteractionCell, t.Map, false),
                     PathEndMode.OnCell,
                     TraverseParms.For(getter, Danger.Some, TraverseMode.ByPawn, false, false, false)) ||
-                ((Building_FoodFaucet)t).foodNetTrader.FoodNet.Stored * ((Building_FoodFaucet)t).foodNetTrader.FoodNet.fullnessToNutritionRatio <= ((Building_FoodFaucet)t).nutritionPerDispense)
+                ((Building_FoodFaucet)t).foodNetTrader.FoodNet.Stored * ((Building_FoodFaucet)t).foodNetTrader.FoodNet.FullnessToNutritionRatio <= ((Building_FoodFaucet)t).nutritionPerDispense)
                 {
                     return false;
                 }

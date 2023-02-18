@@ -75,7 +75,7 @@ namespace RimRound.FeedingTube.Patches
         {
             float nutritionWanted;
             float nutritionPerDispense = foodFaucet.nutritionPerDispense;
-            float netFullnessToNutritionRatio = foodFaucet.foodNetTrader.FoodNet.fullnessToNutritionRatio;
+            float netFullnessToNutritionRatio = foodFaucet.foodNetTrader.FoodNet.FullnessToNutritionRatio;
             FullnessAndDietStats_ThingComp fullnessComp = pawn?.TryGetComp<FullnessAndDietStats_ThingComp>();
 
             if (fullnessComp == null)

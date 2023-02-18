@@ -149,6 +149,64 @@ namespace RimRound.Utilities
             return index;
         }
 
+        public static float GetRandomWeightFloatForOpinion(WeightOpinion weightOpinion) 
+        {
+            for (int i = 0; i < WeightOpinionUtility.reluctanceGap.Count(); ++i)
+            {
+                if (weightOpinion != WeightOpinionUtility.reluctanceGap[i].First)
+                    continue;
+
+                if (i == 0)
+                    return Values.RandomFloat(0, WeightOpinionUtility.reluctanceGap[0].Second);
+
+                return Values.RandomFloat(WeightOpinionUtility.reluctanceGap[i - 1].Second, WeightOpinionUtility.reluctanceGap[i].Second);
+            }
+
+            return -1;
+        }
+
+
+        public static float GetBonusWeightSeverityForWeightOpinion(WeightOpinion weightOpinion)
+        {
+            float amountOfWeightToAddSeverity = 0;
+            switch (weightOpinion) 
+            {
+                case WeightOpinion.Hate:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(-20, -10));
+                    break;
+                case WeightOpinion.Dislike:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(-10, 0));
+                    break;
+                case WeightOpinion.NeutralMinus:
+                    break;
+                case WeightOpinion.Neutral:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(0, 10));
+                    break;
+                case WeightOpinion.NeutralPlus:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(0, 20));
+                    break;
+                case WeightOpinion.Like:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(0, 30));
+                    break;
+                case WeightOpinion.Love:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(20, 70));
+                    break;
+                case WeightOpinion.Fanatical:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(20, 100));
+                    break;
+                case WeightOpinion.Extreme:
+                    amountOfWeightToAddSeverity = HediffUtility.KilosToSeverityWithoutBaseWeight(Values.RandomFloat(20, 100));
+                    break;
+                default:
+                    Log.Error("Ran default case in GetBonusWeightForWeightOpinion()!");
+                    break;
+            }
+
+            return amountOfWeightToAddSeverity;
+
+        }
+
+
         public static Dictionary<WeightOpinion, TraitDef> weightOpinionToTraitDef = new Dictionary<WeightOpinion, TraitDef>()
         {
             {WeightOpinion.Hate ,         Defs.TraitDefOf.RR_WeightOpinion_Hate_Trait         },
@@ -221,6 +279,48 @@ namespace RimRound.Utilities
             { 999.999f,  26 }, // Gel 17-19
             { 9999999f,  27 }, // Gel 20
         };
+
+
+        // Second value is the max amount of points for that opinion.
+        public static List<Pair<WeightOpinion, float>> reluctanceGap = new List<Pair<WeightOpinion, float>>()
+            {
+                new Pair<WeightOpinion, float>(WeightOpinion.Hate, 250),
+                new Pair<WeightOpinion, float>(WeightOpinion.Dislike, 350),
+                new Pair<WeightOpinion, float>(WeightOpinion.NeutralMinus, 400),
+                new Pair<WeightOpinion, float>(WeightOpinion.Neutral, 450),
+                new Pair<WeightOpinion, float>(WeightOpinion.NeutralPlus, 500),
+                new Pair<WeightOpinion, float>(WeightOpinion.Like, 700),
+                new Pair<WeightOpinion, float>(WeightOpinion.Love, 1000),
+                new Pair<WeightOpinion, float>(WeightOpinion.Fanatical, 1500),
+                new Pair<WeightOpinion, float>(WeightOpinion.Extreme, float.MaxValue),
+            };
+
+        public static Dictionary<WeightOpinion, float> weightOpinionToGainResistance = new Dictionary<WeightOpinion, float>()
+            {
+                { WeightOpinion.Hate, 0.2f},
+                { WeightOpinion.Dislike, 0.4f},
+                { WeightOpinion.NeutralMinus, 0.6f},
+                { WeightOpinion.Neutral, 0.7f},
+                { WeightOpinion.NeutralPlus, 0.8f},
+                { WeightOpinion.Like, 1.0f},
+                { WeightOpinion.Love, 1.5f},
+                { WeightOpinion.Fanatical, 2.0f},
+                { WeightOpinion.Extreme, 3.0f},
+            };
+
+        public static Dictionary<WeightOpinion, float> weightOpinionToLossResistance = new Dictionary<WeightOpinion, float>()
+            {
+                { WeightOpinion.Hate, 1.5f},
+                { WeightOpinion.Dislike, 1.0f},
+                { WeightOpinion.NeutralMinus, 0.8f},
+                { WeightOpinion.Neutral, 0.7f},
+                { WeightOpinion.NeutralPlus, 0.6f},
+                { WeightOpinion.Like, 0.5f},
+                { WeightOpinion.Love, 0.4f},
+                { WeightOpinion.Fanatical, 0.4f},
+                { WeightOpinion.Extreme, 0.0f},
+            };
+
     }
 
     public enum WeightOpinion : byte
@@ -233,7 +333,8 @@ namespace RimRound.Utilities
         NeutralPlus,
         Like,
         Love,
-        Fanatical
+        Fanatical,
+        Extreme
     }
 
 }

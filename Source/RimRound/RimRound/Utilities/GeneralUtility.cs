@@ -37,6 +37,11 @@ namespace RimRound.Utilities
 
         public static T AsNonNullable<T>(this ref T? nullableType) where T : struct
         {
+            if (nullableType is null)
+            { 
+                throw new ArgumentNullException(nameof(nullableType));
+            }
+
             return (T)nullableType;
         }
 

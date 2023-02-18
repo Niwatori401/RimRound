@@ -95,6 +95,7 @@
     <Compile Include="FeedingTube\Building_FoodVatMassive.cs" />
     <Compile Include="FeedingTube\Building_FoodVatLarge.cs" />
     <Compile Include="FeedingTube\Building_FoodVatSmall.cs" />
+    <Compile Include="FeedingTube\Building_NutrientDistillery.cs" />
     <Compile Include="FeedingTube\Comps\FoodNetStorage_CompProperties.cs" />
     <Compile Include="FeedingTube\Comps\FoodNetStorage_ThingComp.cs" />
     <Compile Include="FeedingTube\Comps\FoodNetTrader_CompProperties.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="FeedingTube\FoodTransmitter_PlaceWorker.cs" />
     <Compile Include="FeedingTube\Graphic_LinkedFood.cs" />
     <Compile Include="FeedingTube\Graphic_LinkedFoodOverlay.cs" />
+    <Compile Include="FeedingTube\NutrientDistillery_PlaceWorker.cs" />
     <Compile Include="FeedingTube\Patches\Designator-Build_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
     <Compile Include="FeedingTube\Patches\Designator-Install_SelectedUpdate_UpdateLastDrawnFrameForFoodPipes.cs" />
     <Compile Include="FeedingTube\Patches\FoodUtility_GetFinalIngestibleDef_AddFoodFaucetSupport.cs" />
@@ -153,6 +155,8 @@
     <Compile Include="RimRound\AI\WeightOpinions\ThoughtWorker_WeightOpinion_Neutral.cs" />
     <Compile Include="RimRound\AI\WeightOpinions\ThoughtWorker_WeightOpinion_NeutralMinus.cs" />
     <Compile Include="RimRound\AI\WeightOpinions\ThoughtWorker_WeightOpinion_NeutralPlus.cs" />
+    <Compile Include="RimRound\Comps\Abilities\CompAbilityEffect_ConvertWeightOpinion.cs" />
+    <Compile Include="RimRound\Comps\Abilities\CompProperties_ConvertWeightOpinion.cs" />
     <Compile Include="RimRound\Comps\Map\MapComp_RRGasGrid.cs" />
     <Compile Include="RimRound\Comps\PsychicShips\CompCauseGameCondition_HungerDrone.cs" />
     <Compile Include="RimRound\Comps\PsychicShips\CompIncreaseHunger.cs" />

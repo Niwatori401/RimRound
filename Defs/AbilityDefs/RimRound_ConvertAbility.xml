@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs> 
+	<AbilityDef>
+		<defName>RR_ConvertWeightOpinion</defName>
+		<label>change weight opinion</label>
+		<description>Attempt to convert someone to a target weight opinion. The effectiveness of this depends on the initiator's weight opinion, their social skill and the weight opinion of the target.</description>
+		<iconPath>UI/Abilities/Convert</iconPath>
+		<warmupMoteSocialSymbol>Things/Mote/SpeechSymbols/Convert</warmupMoteSocialSymbol>
+		<warmupSound>MoralistAbility_Warmup</warmupSound>
+		<hotKey>Misc12</hotKey>
+		<jobDef>CastAbilityOnThingMelee</jobDef>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<uiOrder>1</uiOrder>
+		<showWhenDrafted>false</showWhenDrafted>
+		<hostile>false</hostile>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_ConvertWeightOpinion">
+				<majorIncrease>Test 1</majorIncrease>
+				<majorDecrease>Test 2</majorDecrease>
+				<minorIncrease>Test 3</minorIncrease>
+				<minorDecrease>Test 4</minorDecrease>
+				<!--failIncrease>{INITIATOR_labelShort} failed to convince {RECIPIENT_labelShort}. {RECIPIENT_labelShort} was upset by the attempt, but {RECIPIENT_possessive} certainty fell from {CERTAINTYBEFORE} to {CERTAINTYAFTER}.</failIncrease>
+				<failDecrease>{INITIATOR_labelShort} failed to convince {RECIPIENT_labelShort}. {RECIPIENT_labelShort} was upset by the attempt, but {RECIPIENT_possessive} certainty fell from {CERTAINTYBEFORE} to {CERTAINTYAFTER}.</failDecrease-->
+				<convertPowerFactor>2</convertPowerFactor>
+				<sound>MoralistAbility_Resolve</sound>
+			</li>
+			<li Class="CompProperties_AbilityMustBeCapableOf">
+				<workTags>
+					<li>Social</li>
+				</workTags>
+			</li>
+		</comps>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>False</drawAimPie>
+			<range>-1</range>
+			<warmupTime>3.0</warmupTime>
+			<targetParams>
+				<canTargetBuildings>False</canTargetBuildings>
+				<neverTargetHostileFaction>True</neverTargetHostileFaction>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+</Defs>

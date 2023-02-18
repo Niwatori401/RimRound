@@ -83,5 +83,19 @@
 		<researchViewX>3</researchViewX>
 		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>RR_Research_NutrientDistillation</defName>
+		<label>nutrient distillation</label>
+		<tab>RimRoundTech</tab>
+		<description>Manufacture devices to alter the nutritional density of liquid food systems.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_FoodProcessing</li>
+		</prerequisites>		
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>		
 
 </Defs>

@@ -12,11 +12,6 @@ namespace RimRound.Comps
 {
     public class ThingComp_PawnAttitude : ThingComp
     {
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            base.PostSpawnSetup(respawningAfterLoad);
-        }
-
         public override void PostExposeData()
         {
             base.PostExposeData();
@@ -36,7 +31,7 @@ namespace RimRound.Comps
                     action = delegate ()
                     {
                         Resources.gizmoClick.PlayOneShotOnCamera(null);
-                        IncreaseOpinion();
+                        Debug_IncreaseOpinion();
                     }
                 };
                 yield return new Command_Action
@@ -46,14 +41,14 @@ namespace RimRound.Comps
                     action = delegate ()
                     {
                         Resources.gizmoClick.PlayOneShotOnCamera(null);
-                        LowerOpinion();
+                        Debug_LowerOpinion();
                     }
                 };
 
             }
         }
 
-        public WeightOpinion IncreaseOpinion() 
+        public WeightOpinion Debug_IncreaseOpinion() 
         {
             List<WeightOpinion> weightOpinions = new List<WeightOpinion>();
 
@@ -79,6 +74,15 @@ namespace RimRound.Comps
             if (currentIndex != weightOpinions.Count - 1)
                 this.weightOpinion = weightOpinions[currentIndex + 1];
 
+            foreach (var wo in WeightOpinionUtility.reluctanceGap)
+            {
+                if (wo.First != this.weightOpinion)
+                    continue;
+
+                WeightOpinionFloat = wo.Second - 1;
+                break;
+            }
+
             if (Prefs.DevMode)
                 Log.Message($"Current opinion is now: {weightOpinion}");
 
@@ -92,7 +96,7 @@ namespace RimRound.Comps
             return weightOpinion;
         }
 
-        public WeightOpinion LowerOpinion() 
+        public WeightOpinion Debug_LowerOpinion() 
         {
             List<WeightOpinion> weightOpinions = new List<WeightOpinion>();
 
@@ -118,6 +122,15 @@ namespace RimRound.Comps
             if (currentIndex != 0) // weightOpinions.Last() will cause it to wrap around.
                 this.weightOpinion = weightOpinions[currentIndex - 1];
 
+            foreach (var wo in WeightOpinionUtility.reluctanceGap)
+            {
+                if (wo.First != this.weightOpinion)
+                    continue;
+
+                WeightOpinionFloat = wo.Second - 1;
+                break;
+            }
+
             if (Prefs.DevMode)
                 Log.Message($"Current opinion is now: {weightOpinion}");
 
@@ -130,9 +143,18 @@ namespace RimRound.Comps
             return weightOpinion;
         }
 
+        void SetWeightOpinion(WeightOpinion weightOpinion) 
+        {
+            this.weightOpinion = weightOpinion;
+
+            WeightOpinionUtility.RemoveWeightOpinionTraits((Pawn)parent);
+            ((Pawn)parent).story.traits.GainTrait(new Trait(WeightOpinionUtility.GetTraitByWeightOpinion(this.weightOpinion)));
+
+            return;
+        }
+
         public WeightOpinion weightOpinion = WeightOpinion.None;
 
-        //----------------
 
         private float? gainingResistance = null;
 
@@ -153,7 +175,7 @@ namespace RimRound.Comps
             }
         }
 
-        private float GetAlteredResistanceBasedOnWeightOpinion(float gainingResistance) 
+        float GetAlteredResistanceBasedOnWeightOpinion(float gainingResistance) 
         {
             switch (weightOpinion) 
             {
@@ -179,6 +201,45 @@ namespace RimRound.Comps
                     return gainingResistance;
             }
         }
-        
+
+        //----------------
+
+
+
+        void UpdateWeightOpinion() 
+        {
+            WeightOpinion weightOpinion = WeightOpinion.None;
+
+            foreach (var p in WeightOpinionUtility.reluctanceGap) 
+            {
+                if (WeightOpinionFloat < p.Second)
+                {
+                    weightOpinion = p.First;
+                    break;
+                }
+            }
+
+            SetWeightOpinion(weightOpinion);
+        }
+
+        float _weightOpinionFloatInt;
+
+        public float WeightOpinionFloat 
+        {
+            get
+            {
+                return _weightOpinionFloatInt;
+            }
+            set 
+            {
+                _weightOpinionFloatInt = value;
+
+                UpdateWeightOpinion();
+            } 
+        }
+
+        public float WeightOpinionGainResistance { get; set; }
+        public float WeightOpinionLossResistance { get; set; }
+
     }
 }

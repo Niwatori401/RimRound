@@ -18,7 +18,7 @@ namespace RimRound.Patch
             if (pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is null)
                 return;
 
-            Utilities.PawnGeneratorUtility.AddWeightOpinion(pawn);
+            Utilities.PawnGeneratorUtility.InitializeWeightOpinion(pawn);
         }
 
     }

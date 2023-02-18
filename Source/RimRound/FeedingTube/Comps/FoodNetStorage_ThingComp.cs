@@ -41,7 +41,7 @@ namespace RimRound.FeedingTube.Comps
 
             sb.Append("RR_FT_RemainingFoodStored".Translate() + ": ");
             sb.Append(Stored.ToString("F1") + "L" + " / " + Capacity.ToString("F1") + "L\n");
-            sb.AppendLine("RR_NutritionDensity".Translate() + $": {(1/FoodNet.fullnessToNutritionRatio):F1}" );
+            sb.AppendLine("RR_NutritionDensity".Translate() + $": {(FoodNet.NutritionToFullnessRatio):F1}" );
             return sb.ToString().Trim();
         }
 
@@ -96,7 +96,9 @@ namespace RimRound.FeedingTube.Comps
             Scribe_Values.Look<float>(ref storedFood, "FoodStored", 0f);
         }
 
-        //Returns amount successfully drawn
+
+        /// <param name="amount">A positive number that represents the amount of fluid to subtract</param>
+        /// <returns>A positive number that returns amount successfully drawn</returns>
         public float Subtract(float amount) 
         {
             if (amount < 0)
@@ -116,7 +118,8 @@ namespace RimRound.FeedingTube.Comps
             return amount;
         }
 
-        //Returns amount successfully added
+        /// <param name="amount">A positive number that represents the amount of fluid to add</param>
+        /// <returns>A positive number that returns amount successfully addded</returns>
         public float Add(float amount) 
         {
             if (amount < 0)

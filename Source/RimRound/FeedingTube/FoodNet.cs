@@ -11,6 +11,7 @@ namespace RimRound.FeedingTube
 {
     public class FoodNet
     {
+        static int currentID;
         //Returns a positive number. Production per tick.
         public float Production 
         {
@@ -63,7 +64,7 @@ namespace RimRound.FeedingTube
         public FoodNet(IEnumerable<FoodTransmitter_ThingComp> connectors, Map map)
         {
             this.netGrid = new BoolGrid(map);
-
+            this.id = currentID++;
             
             foreach (FoodTransmitter_ThingComp x in connectors) 
             {
@@ -148,24 +149,23 @@ namespace RimRound.FeedingTube
             lastNetTick = Find.TickManager.TicksGame;
         }
 
+        // change greater than zero is a fill, less than zero is drain
 
-        public void Delta(float change) 
+        public float Delta(float change) 
         {
             if (change == 0)
-                return;
+                return 0;
 
             if (change > 0)
-            {
-                Fill(change);
-                return;
+            {  
+                return Fill(change);
             }    
-                
-
-            Drain(change);
+            
+            return Drain(-1 * change);
         }
 
 
-        //returns the amount that wasn't successfully drained.
+        /// <returns>A positive number representing the amount that wasn't successfully drained.</returns>
         public float Drain(float amountToDrain) 
         {
             IEnumerable<FoodNetStorage_ThingComp> fullStores =
@@ -193,7 +193,8 @@ namespace RimRound.FeedingTube
             return amountToDrain;
         }
 
-        //returns amount that was not filled into anything
+        //returns 
+        /// <returns>A positive number representing the amount that was not filled into anything.</returns>
         public float Fill(float amountToFill)
         {
             IEnumerable<FoodNetStorage_ThingComp> emptyStores =
@@ -235,6 +236,8 @@ namespace RimRound.FeedingTube
             }
         }
 
+        public int id;
+
         private int lastNetTick = 0;
 
         public List<FoodNetStorage_ThingComp> foodNetStorages = new List<FoodNetStorage_ThingComp>();
@@ -243,14 +246,40 @@ namespace RimRound.FeedingTube
 
         public BoolGrid netGrid;
 
-        public float fullnessToNutritionRatio = 1;
+        public float FullnessToNutritionRatio 
+        {
+            get 
+            {
+                return _fullnessToNutritionRatio;
+            }
+            set 
+            {
+                if (value <= 0)
+                    Log.Warning("Set ftnRatio to illegal value");
+
+                _fullnessToNutritionRatio = value;
+            }
+        }
+
+        public float NutritionToFullnessRatio
+        {
+            get 
+            {
+                if (FullnessToNutritionRatio == 0)
+                    return 0;
+                else
+                    return 1 / FullnessToNutritionRatio;
+            }
+        }
+
+        public float _fullnessToNutritionRatio = 1;
 
         public void UpdateRatio(float incomingNutrition, float incomingRatio = 1)
         {
             //Weighted average of current values and incoming values  
-            fullnessToNutritionRatio =
+            FullnessToNutritionRatio =
                 (Stored + incomingRatio * incomingNutrition) /
-                ((Stored / fullnessToNutritionRatio) + incomingNutrition);
+                ((Stored / FullnessToNutritionRatio) + incomingNutrition);
         }
     }
 }

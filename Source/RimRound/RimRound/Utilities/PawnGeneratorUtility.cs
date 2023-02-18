@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 
 namespace RimRound.Utilities
@@ -33,7 +34,8 @@ namespace RimRound.Utilities
                     Defs.HediffDefOf.RimRound_Weight,
                     pawn,
                     Utilities.HediffUtility.KilosToSeverityWithBaseWeight(
-                        GetRandomStartingWeight(GetWeightPercentileByFaction(pawn)) * 1000 * weightMultiplier)
+                        GetRandomStartingWeight(GetWeightPercentileByFaction(pawn)) * 1000 * weightMultiplier) + 
+                        WeightOpinionUtility.GetBonusWeightSeverityForWeightOpinion(pawn.TryGetComp<ThingComp_PawnAttitude>().weightOpinion)
                     );
 
             }
@@ -47,7 +49,7 @@ namespace RimRound.Utilities
             }
         }
 
-        public static void AddWeightOpinion(Pawn pawn)
+        static void AddWeightOpinion(Pawn pawn)
         {
             if ((pawn?.RaceProps.Humanlike ?? false) && pawn.TryGetComp<ThingComp_PawnAttitude>() is ThingComp_PawnAttitude comp)
             {
@@ -55,6 +57,24 @@ namespace RimRound.Utilities
             }
         }
 
+        static void SetPawnReluctanceValues(Pawn pawn) 
+        {
+            var comp = pawn.TryGetComp<ThingComp_PawnAttitude>();
+            WeightOpinion pawnOpinion = comp.weightOpinion;
+            comp.WeightOpinionGainResistance = Mathf.Clamp(WeightOpinionUtility.weightOpinionToGainResistance[pawnOpinion] + Values.RandomFloat(-0.4f, 0.4f), 0.3f, 1.0f);
+            comp.WeightOpinionLossResistance = Mathf.Clamp(WeightOpinionUtility.weightOpinionToLossResistance[pawnOpinion] + Values.RandomFloat(-0.4f, 0.4f), 0.3f, 1.0f);
+
+            comp.WeightOpinionFloat = WeightOpinionUtility.GetRandomWeightFloatForOpinion(pawnOpinion);
+
+            return;
+        }
+
+
+        public static void InitializeWeightOpinion(Pawn pawn)
+        {
+            AddWeightOpinion(pawn);
+            SetPawnReluctanceValues(pawn);
+        }
 
         //Percentiles/Weight
         static List<Pair<float, float>> playerFactionWeightDistribution = new List<Pair<float, float>>()
@@ -128,6 +148,7 @@ namespace RimRound.Utilities
             new Pair<float, float>(1.00000f, 1.200f),
             new Pair<float, float>(1.00000f, 1.450f)
         };
+
 
         static float GetRandomStartingWeight(List<Pair<float, float>> weightPercentiles)
         {

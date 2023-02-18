@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThoughtDef>
+		<defName>RR_FailedConvertAbilityInitiator</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>2</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>failed to convert {0}</label>
+				<description>I tried to convert someone and it didn't work out. Awkward.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_FailedConvertAbilityRecipient</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>2</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>{0} tried to convert me</label>
+				<description>Someone tried to convert me. I wish they'd just leave me alone.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

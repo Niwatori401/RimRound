@@ -25,7 +25,7 @@ namespace RimRound.FeedingTube
             {
                 foodNetTrader.IsOn = true;
 
-                if (foodNetTrader.FoodNet.Stored * foodNetTrader.FoodNet.fullnessToNutritionRatio < nutritionPerDispense)
+                if (foodNetTrader.FoodNet.Stored * foodNetTrader.FoodNet.FullnessToNutritionRatio < nutritionPerDispense)
                     return null;
 
                 this.def.building.soundDispense.PlayOneShot(new TargetInfo(base.Position, base.Map, false));
@@ -33,9 +33,9 @@ namespace RimRound.FeedingTube
                 var comp = thing.TryGetComp<RimRound.Comps.ThingComp_FoodItems_NutritionDensity>();
                 
                 if (comp != null)
-                    comp.Props.fullnessToNutritionRatio = foodNetTrader.FoodNet.fullnessToNutritionRatio;
+                    comp.Props.fullnessToNutritionRatio = foodNetTrader.FoodNet.FullnessToNutritionRatio;
 
-                foodNetTrader.FoodNet.Drain(nutritionPerDispense * foodNetTrader.FoodNet.fullnessToNutritionRatio);
+                foodNetTrader.FoodNet.Drain(nutritionPerDispense * foodNetTrader.FoodNet.FullnessToNutritionRatio);
                 return thing;
             }
             else 

@@ -199,7 +199,7 @@ namespace RimRound.FeedingTube
             }
 
             float fullnessToAdd = targetFullnessVolume - currentFullness;
-            float netNutritionDensity = FoodNetTrader.FoodNet.fullnessToNutritionRatio;
+            float netNutritionDensity = FoodNetTrader.FoodNet.FullnessToNutritionRatio;
 
             if (FoodNetTrader.FoodNet.Stored > fullnessToAdd)
             {
@@ -236,7 +236,7 @@ namespace RimRound.FeedingTube
                 return;
 
             float rawNutritionToAdd = percentageToAdd * pawn.needs.food.MaxLevel;
-            float currentFoodNetDensity = FoodNetTrader.FoodNet.fullnessToNutritionRatio;
+            float currentFoodNetDensity = FoodNetTrader.FoodNet.FullnessToNutritionRatio;
 
             float fullnessToAdd = rawNutritionToAdd * currentFoodNetDensity;
             float currentFullness = pawnFNDComp.CurrentFullness;

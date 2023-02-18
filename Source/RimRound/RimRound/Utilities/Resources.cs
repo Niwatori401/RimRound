@@ -21,6 +21,9 @@ namespace RimRound.Utilities
 
         public static readonly Texture2D FILLER_TEXTURE = ContentFinder<Texture2D>.Get("FillerTexture", true);
 
+        public static readonly Texture2D PLUS_TEXTURE = ContentFinder<Texture2D>.Get("UI/OtherGizmos/PLUS", true);
+        public static readonly Texture2D MINUS_TEXTURE = ContentFinder<Texture2D>.Get("UI/OtherGizmos/MINUS", true);
+
         public static readonly Texture2D TEN_PP_ICON = ContentFinder<Texture2D>.Get("UI/DebugIcons/10_PP", true);
         public static readonly Texture2D ADD_SEVERITY_ICON = ContentFinder<Texture2D>.Get("UI/DebugIcons/ADD_SEVERITY", true);
         public static readonly Texture2D BLOB_BED_ICON = ContentFinder<Texture2D>.Get("UI/DebugIcons/BLOB_BED", true);
