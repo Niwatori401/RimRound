@@ -5,7 +5,7 @@
     <label>flesh</label>
     <description>~</description>
     <graphicData>
-      <texPath>Skin_Atlas</texPath>
+      <texPath>WIP/Skin_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <linkType>CornerFiller</linkType>
