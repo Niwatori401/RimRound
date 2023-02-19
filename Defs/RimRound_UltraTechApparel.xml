@@ -89,7 +89,6 @@
 			<MaxHitPoints>120</MaxHitPoints>
 			<Flammability>0.2</Flammability>
 			<WorkToMake>100</WorkToMake>
-			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>1.1</Mass>
 			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
@@ -143,7 +142,6 @@
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0.1</Flammability>
 			<WorkToMake>200</WorkToMake>
-			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>2</Mass>
 			<EquipDelay>2</EquipDelay>
 			<DeteriorationRate>2</DeteriorationRate>
@@ -193,7 +191,6 @@
 			<MaxHitPoints>180</MaxHitPoints>
 			<Flammability>0.1</Flammability>
 			<WorkToMake>240</WorkToMake>
-			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>1.5</Mass>
 			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.46</ArmorRating_Blunt>
@@ -246,7 +243,6 @@
 			<MaxHitPoints>150</MaxHitPoints>
 			<Flammability>0.1</Flammability>
 			<WorkToMake>40</WorkToMake>
-			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>1.3</Mass>
 			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
@@ -299,7 +295,6 @@
 			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0.1</Flammability>
 			<WorkToMake>25</WorkToMake>
-			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>0.1</Mass>
 			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
@@ -357,7 +352,6 @@
 			<MaxHitPoints>140</MaxHitPoints>
 			<Flammability>0.1</Flammability>
 			<WorkToMake>300</WorkToMake>
-			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>2.6</Mass>
 			<EquipDelay>2</EquipDelay>
 			<DeteriorationRate>2</DeteriorationRate>

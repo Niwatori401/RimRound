@@ -5,9 +5,9 @@
 		<defName>RR_ConvertWeightOpinion</defName>
 		<label>change weight opinion</label>
 		<description>Attempt to convert someone to a target weight opinion. The effectiveness of this depends on the initiator's weight opinion, their social skill and the weight opinion of the target.</description>
-		<iconPath>UI/Abilities/Convert</iconPath>
-		<warmupMoteSocialSymbol>Things/Mote/SpeechSymbols/Convert</warmupMoteSocialSymbol>
-		<warmupSound>MoralistAbility_Warmup</warmupSound>
+		<iconPath>FillerTexture</iconPath> <!--UI/Abilities/Convert-->
+		<warmupMoteSocialSymbol>FillerTexture</warmupMoteSocialSymbol><!--Things/Mote/SpeechSymbols/Convert-->
+		<warmupSound>Tick_Low</warmupSound> <!--MoralistAbility_Warmup-->
 		<hotKey>Misc12</hotKey>
 		<jobDef>CastAbilityOnThingMelee</jobDef>
 		<stunTargetWhileCasting>True</stunTargetWhileCasting>
@@ -26,7 +26,7 @@
 				<!--failIncrease>{INITIATOR_labelShort} failed to convince {RECIPIENT_labelShort}. {RECIPIENT_labelShort} was upset by the attempt, but {RECIPIENT_possessive} certainty fell from {CERTAINTYBEFORE} to {CERTAINTYAFTER}.</failIncrease>
 				<failDecrease>{INITIATOR_labelShort} failed to convince {RECIPIENT_labelShort}. {RECIPIENT_labelShort} was upset by the attempt, but {RECIPIENT_possessive} certainty fell from {CERTAINTYBEFORE} to {CERTAINTYAFTER}.</failDecrease-->
 				<convertPowerFactor>2</convertPowerFactor>
-				<sound>MoralistAbility_Resolve</sound>
+				<sound>Tick_Low</sound> <!--MoralistAbility_Resolve-->
 			</li>
 			<li Class="CompProperties_AbilityMustBeCapableOf">
 				<workTags>
