@@ -175,7 +175,7 @@ namespace RimRound.FeedingTube
             return targetLocation;
         }
 
-        private Vector3 GetAutoFeederLocationVector()
+        public virtual Vector3 GetAutoFeederLocationVector()
         {
             Vector3 autoFeederHoseAttachPoint = this.TrueCenter();
 

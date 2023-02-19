@@ -14,14 +14,14 @@ using Verse;
 namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(FoodUtility))]
-    [HarmonyPatch(nameof(FoodUtility.BestFoodSourceOnMap))]
+    [HarmonyPatch(nameof(FoodUtility.BestFoodSourceOnMap_NewTemp))]
     public class FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) 
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
             List<CodeInstruction> newInstructions = new List<CodeInstruction>();
-
+            bool triedToApply = false;
             int startJndex = -1;
 
             MethodInfo zigmaMI = typeof(FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness).GetMethod(nameof(Zigma), BindingFlags.Public | BindingFlags.Static);
@@ -46,8 +46,12 @@ namespace RimRound.Patch
 
             if (startJndex != -1)
             {
+                triedToApply = true;
                 codeInstructions.InsertRange(startJndex, newInstructions);
             }
+
+            if (!triedToApply)
+                Log.Error($"Failed to apply transpiler for {nameof(FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness.Transpiler)}");
 
             return codeInstructions.AsEnumerable();
         }
@@ -69,7 +73,6 @@ namespace RimRound.Patch
         {
             Predicate<Thing> dogma = delegate (Thing t)
             {
-                //Type a = typeof(t);
                 if (eater is null || !eater.RaceProps.Humanlike || t is null || !(eater.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp) || fullnessComp is null)
                 {
                     if (!eater.RaceProps.Humanlike && t != null)

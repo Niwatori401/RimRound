@@ -114,6 +114,7 @@ namespace RimRound.FeedingTube.Comps
         {
             base.PostExposeData();
             Scribe_Values.Look<float>(ref storedFood, "FoodStored", 0f);
+            Scribe_Values.Look<float>(ref _fullnessToNutritionRatio, "fullnessToNutritionRatio", 1f);
         }
 
 

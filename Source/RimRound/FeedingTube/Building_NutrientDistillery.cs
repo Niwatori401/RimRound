@@ -184,7 +184,7 @@ namespace RimRound.FeedingTube
         //amount of ticks between processing
         float processingFrequency = 60;
 
-        float targetRatio = 5f;
+        float targetRatio = 1f;
         float minAllowedRatio = 0.1f;
         float maxAllowedRatio = 10f;
         float amountOfNutritionToProcessPerOperation = 0.1f;
