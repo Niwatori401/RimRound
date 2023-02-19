@@ -322,8 +322,6 @@
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
 				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
-				<flowDelta>0</flowDelta>
-				<idleFlowDelta>0</idleFlowDelta>
 			</li>
 		</comps>
 		<placeWorkers>

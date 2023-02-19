@@ -95,9 +95,7 @@ namespace RimRound.FeedingTube
 
                     listOfIngredients.Add(foodInHopper.def);
 
-                    trader.FoodNet.UpdateRatio(numberOfFoodItemsPerProcess * nutritionForOneUnitOfFoodInHopper, ftnRatio);
-
-                    trader.FoodNet.Fill(amountOfFoodVolumeToAdd);
+                    trader.FoodNet.Fill(amountOfFoodVolumeToAdd, ftnRatio);
                 }
             }
         }

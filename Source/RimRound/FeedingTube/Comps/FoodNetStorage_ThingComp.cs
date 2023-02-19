@@ -1,8 +1,10 @@
-﻿using System;
+﻿using RimRound.FeedingTube.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 
 namespace RimRound.FeedingTube.Comps
@@ -21,6 +23,24 @@ namespace RimRound.FeedingTube.Comps
                 return Capacity - Stored; 
             } 
         }
+
+
+        float _fullnessToNutritionRatio = 1;
+        public float FullnessToNutritionRatio
+        {
+            get
+            {
+                return _fullnessToNutritionRatio;
+            }
+            set
+            {
+                if (value <= 0)
+                    Log.Warning("Set ftnRatio to illegal value");
+
+                _fullnessToNutritionRatio = value;
+            }
+        }
+
 
         public new FoodNetStorage_CompProperties Props => (FoodNetStorage_CompProperties)this.props;
 
@@ -104,7 +124,7 @@ namespace RimRound.FeedingTube.Comps
             if (amount < 0)
             {
                 Log.Warning("Tried to use Subtract() to subtract a negative amount of food. Use Add() instead.");
-                Add(amount);
+                return 0;
             }
 
             if (amount >= Stored) 
@@ -118,27 +138,37 @@ namespace RimRound.FeedingTube.Comps
             return amount;
         }
 
-        /// <param name="amount">A positive number that represents the amount of fluid to add</param>
+        /// <param name="volumeToAdd">A positive number that represents the amount of fluid to add</param>
         /// <returns>A positive number that returns amount successfully addded</returns>
-        public float Add(float amount) 
+        public float Add(float volumeToAdd, float ftnRatio) 
         {
-            if (amount < 0)
+            if (volumeToAdd < 0)
             {
                 Log.Warning("Tried to use Add() to add a negative amount of food. Use Subtract() instead.");
-                Subtract(amount);
+                return 0;
             }
 
-            if (amount >= Remaining) 
+            if (volumeToAdd >= Remaining) 
             {
                 float amtRemaining = Remaining;
                 Stored = Capacity;
                 return amtRemaining;
             }
-
-            Stored += amount;
-            return amount;
+            UpdateRatio(volumeToAdd, ftnRatio);
+            Stored += volumeToAdd;
+            return volumeToAdd;
         }
 
+        private void UpdateRatio(float volume, float ftnRatio) 
+        {
+            if (Stored <= FeedingTubeUtility.MinRQ)
+            {
+                this.FullnessToNutritionRatio = ftnRatio;
+                return;
+            }
+
+            this.FullnessToNutritionRatio = (Stored * FullnessToNutritionRatio + volume * ftnRatio) / (Stored + volume);
+        }
 
         float storedFood;
     }

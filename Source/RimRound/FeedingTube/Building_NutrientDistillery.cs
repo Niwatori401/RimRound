@@ -1,5 +1,6 @@
 using RimRound.Comps;
 using RimRound.FeedingTube.Comps;
+using RimRound.FeedingTube.Utilities;
 using RimRound.Utilities;
 using RimWorld;
 using System;
@@ -104,8 +105,8 @@ namespace RimRound.FeedingTube
                 FoodNet inputNet = foodNets.First;
                 FoodNet outputNet = foodNets.Second;
 
-                bool nutritionDensityOnOutputNotMaxed = outputNet.FullnessToNutritionRatio <= maxAllowedRatio;
-                bool nutritionDensityOnOutputNotBelowMinimum = outputNet.FullnessToNutritionRatio >= minAllowedRatio;
+                bool nutritionDensityOnOutputNotMaxed = outputNet.FullnessToNutritionRatio - maxAllowedRatio <= 0 + FeedingTubeUtility.MinRQ;
+                bool nutritionDensityOnOutputNotBelowMinimum = outputNet.FullnessToNutritionRatio - minAllowedRatio >= 0 - FeedingTubeUtility.MinRQ || outputNet.Stored <= FeedingTubeUtility.MinRQ;
 
                 bool isEnoughFoodToProcess = inputNet.Stored * (inputNet.NutritionToFullnessRatio) >= amountOfNutritionToProcessPerOperation;
                 
@@ -173,8 +174,7 @@ namespace RimRound.FeedingTube
                 float nutritionSuccessfullyExtractedFromInput = volumeOfFoodToBeProcessed * (inputNet.NutritionToFullnessRatio);
                 float volumeToBeOutput = nutritionSuccessfullyExtractedFromInput * targetRatio;
 
-                outputNet.Fill(volumeToBeOutput);
-                outputNet.UpdateRatio(nutritionSuccessfullyExtractedFromInput, targetRatio);
+                outputNet.Fill(volumeToBeOutput, targetRatio);
             }
         }
 

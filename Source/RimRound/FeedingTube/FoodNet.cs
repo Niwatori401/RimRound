@@ -13,28 +13,6 @@ namespace RimRound.FeedingTube
     {
         static int currentID;
         //Returns a positive number. Production per tick.
-        public float Production 
-        {
-            get 
-            {
-                return Math.Abs((from x
-                       in this.foodNetTrader
-                       where x.ChangePerTick > 0
-                       select x.ChangePerTick).Sum());
-            }
-        }
-
-        //Returns a positive number. Usage per tick
-        public float Consumption 
-        {
-            get 
-            {
-                return Math.Abs((from x
-                       in this.foodNetTrader
-                       where x.ChangePerTick < 0
-                       select x.ChangePerTick).Sum());
-            }
-        }
 
         public float Stored 
         {
@@ -101,67 +79,11 @@ namespace RimRound.FeedingTube
 
         public void Tick() 
         {
-            int numberOfTicksPassedSinceLastTick = Find.TickManager.TicksGame - lastNetTick;
-
-
-            if (numberOfTicksPassedSinceLastTick == 0)
-                return;
-
             foreach (var x in foodNetTrader)
             {
                 if (!x.CanBeOn)
                     x.IsOn = false;
             }
-
-
-            //Negative means making food
-            float netUsage = Consumption - Production;
-            netUsage *= numberOfTicksPassedSinceLastTick;
-
-            if (netUsage == 0)
-                return;
-
-            //Using food
-            if (netUsage > 0)
-            {
-                if (Drain(Math.Abs(netUsage)) > 0)
-                {
-                    //Ran out of food, turn off things. 
-                    foodNetTrader.RandomElement().IsOn = false;
-                }
-                else 
-                {
-                    foreach (var x in foodNetTrader) 
-                    {
-                        if (x.CanBeOn)
-                            x.IsOn = true;
-                    }
-                }
-            }
-            else //Making excess food
-            {
-                if (Fill(Math.Abs(netUsage)) > 0) 
-                {
-                    //give player message to build more batteries?
-                }
-            }
-
-            lastNetTick = Find.TickManager.TicksGame;
-        }
-
-        // change greater than zero is a fill, less than zero is drain
-
-        public float Delta(float change) 
-        {
-            if (change == 0)
-                return 0;
-
-            if (change > 0)
-            {  
-                return Fill(change);
-            }    
-            
-            return Drain(-1 * change);
         }
 
 
@@ -195,7 +117,7 @@ namespace RimRound.FeedingTube
 
         //returns 
         /// <returns>A positive number representing the amount that was not filled into anything.</returns>
-        public float Fill(float amountToFill)
+        public float Fill(float amountToFill, float ftnRatio)
         {
             IEnumerable<FoodNetStorage_ThingComp> emptyStores =
                 from x in this.foodNetStorages
@@ -217,7 +139,7 @@ namespace RimRound.FeedingTube
             {
                 foreach (var store in emptyStores) 
                 {
-                    amountToFill -= store.Add(averageFill);
+                    amountToFill -= store.Add(averageFill, ftnRatio);
                 }
 
 
@@ -238,8 +160,6 @@ namespace RimRound.FeedingTube
 
         public int id;
 
-        private int lastNetTick = 0;
-
         public List<FoodNetStorage_ThingComp> foodNetStorages = new List<FoodNetStorage_ThingComp>();
         public List<FoodNetTrader_ThingComp> foodNetTrader = new List<FoodNetTrader_ThingComp>();
         public List<FoodTransmitter_ThingComp> foodTransmitters = new List<FoodTransmitter_ThingComp>();
@@ -250,14 +170,25 @@ namespace RimRound.FeedingTube
         {
             get 
             {
-                return _fullnessToNutritionRatio;
-            }
-            set 
-            {
-                if (value <= 0)
-                    Log.Warning("Set ftnRatio to illegal value");
+                IEnumerable<FoodNetStorage_ThingComp> fullstorages =
+                    (from attachedStorages
+                    in this.foodNetStorages
+                    where attachedStorages.Stored > 0
+                    select attachedStorages);
 
-                _fullnessToNutritionRatio = value;
+                float totalVolume = 0;
+                float totalDensityVolumeProduct = 0;
+
+                foreach (var storage in fullstorages)
+                {
+                    totalVolume += storage.Stored;
+                    totalDensityVolumeProduct += storage.Stored * storage.FullnessToNutritionRatio;
+                }
+
+                if (totalVolume == 0)
+                    return 0;
+                else
+                    return totalDensityVolumeProduct / totalVolume;
             }
         }
 
@@ -270,16 +201,6 @@ namespace RimRound.FeedingTube
                 else
                     return 1 / FullnessToNutritionRatio;
             }
-        }
-
-        public float _fullnessToNutritionRatio = 1;
-
-        public void UpdateRatio(float incomingNutrition, float incomingRatio = 1)
-        {
-            //Weighted average of current values and incoming values  
-            FullnessToNutritionRatio =
-                (Stored + incomingRatio * incomingNutrition) /
-                ((Stored / FullnessToNutritionRatio) + incomingNutrition);
         }
     }
 }

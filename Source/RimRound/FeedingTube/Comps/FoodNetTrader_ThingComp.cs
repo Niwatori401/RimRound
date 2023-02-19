@@ -27,28 +27,6 @@ namespace RimRound.FeedingTube.Comps
             }
         }
 
-        public float ChangePerSecond 
-        {
-            get 
-            {
-                if (isOn)
-                    return Props.flowDelta;
-                else
-                    return Props.idleFlowDelta;
-            }
-        }
-
-        public float ChangePerTick
-        {
-            get 
-            {
-                if (isOn)
-                    return Props.flowDelta / 60f;
-                else
-                    return Props.idleFlowDelta / 60f;
-            }
-        }
-
         public bool IsOn 
         {
             get 
@@ -94,8 +72,6 @@ namespace RimRound.FeedingTube.Comps
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.CompInspectStringExtra());
-            sb.AppendLine("RR_FT_TraderUsing".Translate(ChangePerSecond.ToString("F1").Named("CONSUMPTIONRATE")));
-
             return sb.ToString().Trim();
         }
 

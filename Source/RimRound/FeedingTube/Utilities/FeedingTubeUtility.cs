@@ -14,6 +14,6 @@ namespace RimRound.FeedingTube.Utilities
             return Find.TickManager.TicksGame % interval == 0;
         }
 
-        internal const float MinRQ = 0.000001f;
+        internal const float MinRQ = 0.0001f;
     }
 }

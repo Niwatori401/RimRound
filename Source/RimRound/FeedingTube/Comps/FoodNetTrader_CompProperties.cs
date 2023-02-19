@@ -8,11 +8,6 @@ namespace RimRound.FeedingTube.Comps
 {
     public class FoodNetTrader_CompProperties : FoodTransmitter_CompProperties
     {
-        //Usage or gain per second. Usage is negative, gain is positive
-        public float flowDelta = 0;
 
-        public float idleFlowDelta = 0;
-
-        public float buffer = 0;
     }
 }
