@@ -12,9 +12,12 @@ using HarmonyLib;
 using UnityEngine;
 using System.Reflection;
 using RimRound.Utilities;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace RimRound.Patch
 {
+	
 	[StaticConstructorOnStartup]
 	static class HarmonyPatchMain
 	{
@@ -29,12 +32,6 @@ namespace RimRound.Patch
 				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompMilkableHuman", "ResourceAmount", MethodType.Getter), 
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
 
-			/* Possibly deprecated
-			ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompHyperMilkableHuman", "ResourceAmount", MethodType.Getter),
-				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
-			*/
 
 			ModCompatibilityUtility.TryPatch(
 				harmony,
@@ -61,8 +58,13 @@ namespace RimRound.Patch
 				prefixesCount += prefixes.Count();
 				transpilersCount += transpilers.Count();
 			}
-			Log.Message($"RimRound successfully added {prefixesCount} prefixes, {postfixesCount} postfixes, and {transpilersCount} transpilers to {patchedMethodsCount} methods with Harmony!");
-            #endregion
+
+			Assembly RimRoundAssembly = Assembly.GetAssembly(typeof(HarmonyPatchMain));
+
+            Log.Message($"[RimRound] {RimRoundAssembly.GetName()?.Name ?? "EGG"} version {RimRoundAssembly?.GetName()?.Version.ToString() ?? "EGGER"}");
+			Log.Message($"[RimRound] Successfully added {prefixesCount} prefixes, {postfixesCount} postfixes, and {transpilersCount} transpilers to {patchedMethodsCount} methods with Harmony!");
+
+			#endregion
         }
 
     }
