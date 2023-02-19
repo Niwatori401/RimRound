@@ -331,10 +331,15 @@ namespace RimRound.Utilities
 
         internal static void AssignBodyTypeCategoricalExemptions(bool updatePawnSprite = false)
         {
-            foreach (Map m in Find.Maps)
+            List<Map> maps = Find.Maps;
+            foreach (Map m in maps)
             {
-                foreach (Pawn p in m.mapPawns.AllPawns)
+                List<Pawn> pawnsOnMap = m.mapPawns.AllPawns;
+                foreach (Pawn p in pawnsOnMap)
                 {
+                    if (!m.mapPawns.AllPawns.Contains(p))
+                        continue;
+
                     PawnBodyType_ThingComp comp = p.TryGetComp<PawnBodyType_ThingComp>();
 
                     if (comp is null)
