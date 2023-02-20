@@ -242,7 +242,7 @@ namespace RimRound.Utilities
 
         internal static void RedrawPawn(Pawn pawn)
         {
-            if (!(Find.CurrentMap.mapPawns.AllPawns.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any()))
+            if (!(Find.CurrentMap?.mapPawns?.AllPawns?.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any() ?? false))
                 return;
             
             PortraitsCache.SetDirty(pawn);
