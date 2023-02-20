@@ -19,7 +19,6 @@ namespace RimRound.Patch
 		static MethodInfo getBodyMeshMI = ModCompatibilityUtility.GetMethodInfo("Statue of Colonist", "StatueOfColonistRenderer", "GetBodyMesh");
 		static MethodInfo newGetBodyMeshMI = typeof(StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion).GetMethod(nameof(StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.NewGetBodyMesh), BindingFlags.Static | BindingFlags.NonPublic);
 
-		//ModCompatibilityUtility.GetMethodInfo("Statue of Colonist", "StatueOfColonistRenderer", "Render");
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
 		{
 			List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
@@ -31,7 +30,6 @@ namespace RimRound.Patch
 					codeInstructions[jndex].operand = newGetBodyMeshMI;
 					codeInstructions[jndex].opcode = OpCodes.Call;
 					codeInstructions.Insert(jndex, new CodeInstruction(OpCodes.Ldarg, 13));
-					codeInstructions.Insert(jndex - 3, new CodeInstruction(OpCodes.Pop));
 				}
 					
             }
@@ -48,17 +46,21 @@ namespace RimRound.Patch
 			};
 		}
 
-		static Mesh NewGetBodyMesh(bool portrait, ThingDef raceDef, Rot4 bodyFacing, BodyTypeDef bodyTypeDef) 
+		// The first parameter takes the instance off of the stack
+		static Mesh NewGetBodyMesh(dynamic instanceDoNotUse, bool portrait, ThingDef raceDef, Rot4 bodyFacing, LifeStageDef lifeStageDef, BodyTypeDef bodyTypeDef) 
 		{
-			FieldInfo meshPool = typeof(AlienPartGenerator).GetField("meshPools", BindingFlags.NonPublic | BindingFlags.Static);
-			Dictionary<Vector2, int/*AlienPartGenerator.AlienGraphicMeshSet*/> meshPoolDict = null;//(Dictionary<Vector2, AlienPartGenerator.AlienGraphicMeshSet>)meshPool.GetValue(null);
-
-			if (meshPoolDict is null)
-				Log.Error("meshPoolDict was null!");
-
-			float meshSize = GetMeshSize(bodyTypeDef);
-
-			return null;//meshPoolDict[new Vector2(meshSize, meshSize)].bodySet.MeshAt(bodyFacing);
+			if (BodyTypeUtility.IsRRBody(bodyTypeDef))
+			{
+				return MeshPool.GetMeshSetForWidth(GetMeshSize(bodyTypeDef)).MeshAt(bodyFacing);
+            }
+			else 
+			{
+                if (lifeStageDef.bodyWidth != null)
+                {
+                    return MeshPool.GetMeshSetForWidth(lifeStageDef.bodyWidth.Value).MeshAt(bodyFacing);
+                }
+                return MeshPool.humanlikeBodySet.MeshAt(bodyFacing);
+            }
 		}
 
 		static float GetMeshSize(BodyTypeDef bodyTypeDef) 
