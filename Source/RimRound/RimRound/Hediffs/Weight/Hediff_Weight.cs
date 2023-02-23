@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
+using RimRound.Comps;
 using RimRound.Utilities;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 
@@ -52,6 +52,40 @@ namespace RimRound.Hediffs
                     }
                 }
                 return 0;
+            }
+        }
+
+        /// <summary>
+        /// 1 is no mitigation, 0 is full mitigation
+        /// </summary>
+        public float MovementPenaltyMitigationFactor 
+        {
+            get
+            {
+                var comp = this?.pawn?.TryGetComp<FullnessAndDietStats_ThingComp>();
+                if (comp is null)
+                {
+                    Log.Error("Failed to get comp in PersonalFullnessPainMult!");
+                    return 1f;
+                }
+                return Mathf.Clamp01(1 - comp.statBonuses.movementPenaltyMitigationMultBonus_Weight);
+            }      
+        }
+
+        /// <summary>
+        /// 1 is no mitigation, 0 is full mitigation
+        /// </summary>
+        public float ManipulationPenaltyMitigationFactor
+        {
+            get
+            {
+                var comp = this?.pawn?.TryGetComp<FullnessAndDietStats_ThingComp>();
+                if (comp is null)
+                {
+                    Log.Error("Failed to get comp in PersonalFullnessPainMult!");
+                    return 1f;
+                }
+                return Mathf.Clamp01(1 - comp.statBonuses.manipulationPenaltyMitigationMultBonus_Weight);
             }
         }
     }

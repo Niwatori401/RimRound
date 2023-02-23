@@ -14,11 +14,10 @@ namespace RimRound.Hediffs
 {
     public class Hediff_Fullness : Hediff
     {
-        float _personalFullnessPainMult = 1f;
-        float _personalFullnessMovementMult = 1f;
-        float _personalFullnessEatingMult = 1f;
-
-        public float PersonalFullnessPainMult
+        /// <summary>
+        /// 1 is no mitigation, 0 is full mitigation
+        /// </summary>
+        public float PainMigigationFactor
         {
             get 
             {
@@ -28,46 +27,54 @@ namespace RimRound.Hediffs
                     Log.Error("Failed to get comp in PersonalFullnessPainMult!");
                     return 1f;
                 }
-                float clothingPainMult = 1 - comp.clothingBonuses.painMitigationMultBonus_Fullness;
+                float statBonusPainMitigation = Mathf.Clamp01(1 - comp.statBonuses.painMitigationMultBonus_Fullness);
                 int noPainStillGainLevel = comp?.perkLevels?.PerkToLevels?["RR_NoPainStillGain_Title"] ?? 0;
-                return Mathf.Clamp(_personalFullnessPainMult - (0.1f * noPainStillGainLevel) - clothingPainMult, 0f, 10f);
-            }
-            set 
-            {
-                _personalFullnessPainMult = value;
+                float noPainStillGainPainMitigation = Mathf.Clamp01(1 - (0.1f * noPainStillGainLevel));
+                return Mathf.Clamp01(noPainStillGainPainMitigation * statBonusPainMitigation);
             }
         }
 
-        public float PersonalFullnessMovementMult
+        /// <summary>
+        /// 1 is no mitigation, 0 is full mitigation
+        /// </summary>
+        public float MovementPenaltyMitigationFactor
         {
             get
             {
-                return Mathf.Clamp(_personalFullnessMovementMult, 0f, 10f);
-            }
-            set
-            {
-                _personalFullnessMovementMult = value;
+                var comp = this?.pawn?.TryGetComp<FullnessAndDietStats_ThingComp>();
+                if (comp is null)
+                {
+                    Log.Error("Failed to get comp in PersonalFullnessPainMult!");
+                    return 1f;
+                }
+
+                return Mathf.Clamp01(1 - comp.statBonuses.movementPenaltyMitigationMultBonus_Fullness);
             }
         }
 
-        public float PersonalFullnessEatingSpeedMult
+        /// <summary>
+        /// 1 is no mitigation, 0 is full mitigation
+        /// </summary>
+        public float EatingSpeedPenaltyMitigationFactor
         {
             get
             {
-                return Mathf.Clamp(_personalFullnessEatingMult, 0f, 10f);
-            }
-            set
-            {
-                _personalFullnessEatingMult = value;
+                var comp = this?.pawn?.TryGetComp<FullnessAndDietStats_ThingComp>();
+                if (comp is null)
+                {
+                    Log.Error("Failed to get comp in PersonalFullnessPainMult!");
+                    return 1f;
+                }
+                float statBonusEatingSpeedMitigationFactor = comp.statBonuses.eatingSpeedReductionMitigationMultBonus_Fullness;
+                return Mathf.Clamp01(1 - statBonusEatingSpeedMitigationFactor);
             }
         }
-
 
         public override float PainOffset
         {
             get
             {
-                return (base.PainOffset * GlobalSettings.fullnessHediffPainMult.threshold * PersonalFullnessPainMult);
+                return (base.PainOffset * GlobalSettings.fullnessHediffPainMult.threshold * PainMigigationFactor);
             }
         }
     }

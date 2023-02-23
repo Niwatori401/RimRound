@@ -181,6 +181,8 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\Clothing\PawnCapacityWorker-Movement_CalculateCapacityLevel_AlterForClothingBonuses.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\Building-Vent_TickRare_DiffuseRRGasses.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\GasUtility_PawnGasEffectsTick_AddSupportForGas.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelRemoved_AddSupportForRRClothing.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelAdded_AddSupportForRRClothing.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Perks\GenTemperature_PushHeat_AdjustForPerks.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\PawnGraphicSet_ResolveApparelGraphics_DontIncludeHoverChairIfLayingDown.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
@@ -191,7 +193,6 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\DietAIPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawnsAndAdjustForPerks.cs" />
-    <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelChanged_AddSupportForRRClothing.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnCapacitiesHandler_CapableOf_MakeMovementCapableOfSettingsDependent.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\RootPlay_Update_AddCountdownTick.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\SectionLayer-Gas_ColorAt_AddRRGasSupport.cs" />
@@ -242,6 +243,7 @@
     <Compile Include="RimRound\Utilities\PrisonerUtility.cs" />
     <Compile Include="RimRound\Utilities\Resources.cs" />
     <Compile Include="RimRound\Utilities\RRGasType.cs" />
+    <Compile Include="RimRound\Utilities\StatChangeUtility.cs" />
     <Compile Include="RimRound\Utilities\WeightOpinionUtility.cs" />
     <None Include="app.config" />
     <Compile Include="RimRound\AI\PrisonerStuff\WorkGivers\WorkGiver_ForceFeedPrisoner.cs" />

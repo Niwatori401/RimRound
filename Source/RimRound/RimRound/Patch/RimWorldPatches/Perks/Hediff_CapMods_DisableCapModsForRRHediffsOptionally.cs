@@ -36,16 +36,14 @@ namespace RimRound.Patch
             if (__instance.def.defName == Defs.HediffDefOf.RimRound_Weight.defName) 
             {
                 List<PawnCapacityModifier> newList = new List<PawnCapacityModifier>();
-
+                Hediff_Weight weightHediff = __instance as Hediff_Weight;
                 for (int i = 0; i < __result.Count; i++)
                 {
                     newList.Add(__result[i].Clone());
                 }
 
-                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Manipulation, GlobalSettings.weightHediffManipulationPenaltyMult);
-                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.weightHediffMovementPenaltyMult);
-                ReduceMovementPenaltyByPerkLevels(newList, __instance, comp, comp.clothingBonuses.movementPenaltyMitigationMultBonus_Weight);
-                ReduceManipulationPenaltyByPerkLevels(newList, __instance, comp, comp.clothingBonuses.manipulationPenaltyMitigationMultBonus_Weight);
+                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Manipulation, GlobalSettings.weightHediffManipulationPenaltyMult, weightHediff.ManipulationPenaltyMitigationFactor);
+                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.weightHediffMovementPenaltyMult, weightHediff.MovementPenaltyMitigationFactor);
                 __result = newList;
             }
             else if (__instance.def.defName == Defs.HediffDefOf.RimRound_Fullness.defName) 
@@ -59,22 +57,21 @@ namespace RimRound.Patch
 
                 Hediff_Fullness fullnessHediff = __instance as Hediff_Fullness;
 
-                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.fullnessHediffMovementPenaltyMult, fullnessHediff.PersonalFullnessMovementMult);
-                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Eating, GlobalSettings.fullnessHediffEatingPenaltyMult, fullnessHediff.PersonalFullnessEatingSpeedMult);
-                ReduceMovementPenaltyByPerkLevels(newList, fullnessHediff, comp, comp.clothingBonuses.movementPenaltyMitigationMultBonus_Fullness);
-                ReduceEatingPenaltyByPerkLevels(newList, fullnessHediff, comp, comp.clothingBonuses.eatingSpeedReductionMitigationMultBonus_Fullness);
+                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.fullnessHediffMovementPenaltyMult, fullnessHediff.MovementPenaltyMitigationFactor);
+                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Eating, GlobalSettings.fullnessHediffEatingPenaltyMult, fullnessHediff.EatingSpeedPenaltyMitigationFactor);
+                ReduceMovementPenaltyByPerkLevels(newList, fullnessHediff, comp);
                 __result = newList;
             }
         }
 
 
-        static void ReduceMovementPenaltyByPerkLevels(List<PawnCapacityModifier> newList, Hediff hediff, FullnessAndDietStats_ThingComp comp, float offsetMultiplier) 
+        static void ReduceMovementPenaltyByPerkLevels(List<PawnCapacityModifier> newList, Hediff hediff, FullnessAndDietStats_ThingComp comp) 
         {
             int pcmIndex = newList.FindIndex(x => x.capacity == PawnCapacityDefOf.Moving);
             if (pcmIndex != -1)
             {
                 newList[pcmIndex].offset = Mathf.Min(0,
-                    newList[pcmIndex].offset * (1 - offsetMultiplier) + 
+                    newList[pcmIndex].offset + 
                     (comp.perkLevels?.PerkToLevels?["RR_Comfortable_Corpulence_Title"] * 0.03f * Mathf.Abs(newList[pcmIndex].offset) ?? 0) + 
                     (comp.perkLevels?.PerkToLevels?["RR_HeavyRevian_Title"] * 0.6f ?? 0));
                 
@@ -83,27 +80,6 @@ namespace RimRound.Patch
             return;
         }
 
-        static void ReduceEatingPenaltyByPerkLevels(List<PawnCapacityModifier> newList, Hediff hediff, FullnessAndDietStats_ThingComp comp, float offsetMultiplier)
-        {
-            int pcmIndex = newList.FindIndex(x => x.capacity == PawnCapacityDefOf.Eating);
-            if (pcmIndex != -1)
-            {
-                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset * (1 - offsetMultiplier));
-            }
-
-            return;
-        }
-
-        static void ReduceManipulationPenaltyByPerkLevels(List<PawnCapacityModifier> newList, Hediff hediff, FullnessAndDietStats_ThingComp comp, float offsetMultiplier)
-        {
-            int pcmIndex = newList.FindIndex(x => x.capacity == PawnCapacityDefOf.Manipulation);
-            if (pcmIndex != -1)
-            {
-                newList[pcmIndex].offset = Mathf.Min(0, newList[pcmIndex].offset * (1 - offsetMultiplier));
-            }
-
-            return;
-        }
 
     }
 }

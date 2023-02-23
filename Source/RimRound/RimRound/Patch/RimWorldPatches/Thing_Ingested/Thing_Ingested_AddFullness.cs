@@ -41,7 +41,7 @@ namespace RimRound.Patch
 
 					comp.UpdateRatio(__result, fullnessNutritionRatio);
 
-					comp.CurrentFullness += (__result * fullnessNutritionRatio + comp.clothingBonuses.fullnessGainedMultiplierBonus) * GlobalSettings.fullnessMultiplier.threshold;
+					comp.CurrentFullness += (__result * fullnessNutritionRatio) * comp.FullnessGainedMultiplier;
 
 
 

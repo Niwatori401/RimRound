@@ -145,13 +145,11 @@ namespace RimRound.Utilities
         /// <returns>Weight attempted to be lost</returns>
         private static float _LoseWeight(Hediff hediff, Pawn pawn, float amount)
         {
-            float personalWeightLossModifier = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.PersonalWeightLossModifier is float p ? p : 1f;
+            float personalWeightLossModifier = pawn.TryGetComp<FullnessAndDietStats_ThingComp>()?.WeightLossMultiplier is float p ? p : 1f;
 
             float additionalSeverity =
-                GlobalSettings.weightLossMultiplier.threshold *
                 personalWeightLossModifier *
-                amount *
-                (pawn.gender == Gender.Male ? GlobalSettings.weightLossMultiplierMale.threshold : GlobalSettings.weightLossMultiplierFemale.threshold);
+                amount;
 
             if (SeverityToKilosWithBaseWeight(hediff.Severity + additionalSeverity) < GlobalSettings.minWeight.threshold)
                 hediff.Severity = KilosToSeverityWithBaseWeight(GlobalSettings.minWeight.threshold);
@@ -172,13 +170,11 @@ namespace RimRound.Utilities
         {
             var comp = pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
 
-            float personalWeightGainModifier = comp?.PersonalWeightGainModifier is float p ? p : 1f;
+            float personalWeightGainModifier = comp?.WeightGainMultiplier is float p ? p : 1f;
 
             float additionalSeverity =
-                GlobalSettings.weightGainMultiplier.threshold *
                 personalWeightGainModifier *
-                amount *
-                (pawn.gender == Gender.Male ? GlobalSettings.weightGainMultiplierMale.threshold : GlobalSettings.weightGainMultiplierFemale.threshold);
+                amount;
 
             _AddWeightIfNotAtLimit(hediff, pawn, comp, additionalSeverity);
 

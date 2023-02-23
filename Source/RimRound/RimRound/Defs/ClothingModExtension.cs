@@ -17,7 +17,7 @@ namespace RimRound.Defs
         public float flatManipulationBonus;
         public float flatEatingSpeedBonus;
 
-        //All below should be in range [0, 1]. 0 means full mitigation, 1 means none.
+        //All below should be in range [0, 1]. 1 means full mitigation, 0 means none.
         public float movementPenaltyMitigationMultBonus_Weight;
         public float movementPenaltyMitigationMultBonus_Fullness;
         public float manipulationPenaltyMitigationMultBonus_Weight;

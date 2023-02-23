@@ -1,4 +1,5 @@
 ﻿using RimRound.Comps;
+using RimRound.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,42 +15,29 @@ namespace RimRound.Hediffs
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
-            var comp = this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-            if (comp != null)
+            StatChangeUtility.ChangeRimRoundStats(this.pawn, new RimRoundStatBonuses()
             {
-                comp.PersonalDigestionRateMult += 1f;
-                comp.PersonalWeightGainModifier += 0.5f;
-                comp.personalStomachElasticity += 1f;
-            }
-            Hediff_Fullness fullnessHediff = Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, this.pawn) as Hediff_Fullness;
-
-            if (fullnessHediff != null)
-            {
-                fullnessHediff.PersonalFullnessPainMult = fullnessHediff.PersonalFullnessPainMult - 0.50f;
-                fullnessHediff.PersonalFullnessEatingSpeedMult = fullnessHediff.PersonalFullnessEatingSpeedMult - 0.40f;
-                fullnessHediff.PersonalFullnessMovementMult = fullnessHediff.PersonalFullnessMovementMult - 0.40f;
-            }
+                stomachElasticityMultiplier = 1f,
+                digestionRateMultiplier = 1f,
+                weightGainMultiplier = 0.5f,
+                painMitigationMultBonus_Fullness = 0.5f,
+                eatingSpeedReductionMitigationMultBonus_Fullness = 0.4f,
+                movementPenaltyMitigationMultBonus_Fullness = 0.4f
+            });
         }
 
         public override void PostRemoved()
         {
             base.PostRemoved();
-            var comp = this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-            if (comp != null)
+            StatChangeUtility.ChangeRimRoundStats(this.pawn, new RimRoundStatBonuses()
             {
-                comp.PersonalDigestionRateMult -= 1f;
-                comp.PersonalWeightGainModifier -= 0.5f;
-                comp.personalStomachElasticity -= 1f;
-            }
-
-            Hediff_Fullness fullnessHediff = Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Fullness, this.pawn) as Hediff_Fullness;
-            
-            if (fullnessHediff != null)
-            {
-                fullnessHediff.PersonalFullnessPainMult = fullnessHediff.PersonalFullnessPainMult + 0.50f;
-                fullnessHediff.PersonalFullnessEatingSpeedMult = fullnessHediff.PersonalFullnessEatingSpeedMult + 0.40f;
-                fullnessHediff.PersonalFullnessMovementMult = fullnessHediff.PersonalFullnessMovementMult + 0.40f;
-            }
+                stomachElasticityMultiplier = -1f,
+                digestionRateMultiplier = -1f,
+                weightGainMultiplier = -0.5f,
+                painMitigationMultBonus_Fullness = -0.5f,
+                eatingSpeedReductionMitigationMultBonus_Fullness = -0.4f,
+                movementPenaltyMitigationMultBonus_Fullness = -0.40f
+            });
         }
 
         public override string TipStringExtra

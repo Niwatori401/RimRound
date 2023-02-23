@@ -42,15 +42,9 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref currentFullness,                 "currentFullness",                 0);
             Scribe_Values.Look<float>(ref softLimitPersonal,               "softLimit",                       defaultSoftLimit);
             Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", defaultFullnessToNutritionRatio);
-            Scribe_Values.Look<float>(ref hardLimitAdditionalPercentage,   "hardLimitAdditionalPercentage",   defaultHardLimitAdditionalPercentage);
-            Scribe_Values.Look<float>(ref personalStomachElasticity,       "personalStomachElasticity",       defaultPersonalStomachElasticity);
-            Scribe_Values.Look<float>(ref globalDigestionRateBonusMult,    "digestionRateBonusMult",          1f);
-            Scribe_Values.Look<float>(ref globalDigestionRateBonusFlat,    "digestionRateBonusFlat",          0f);
-            Scribe_Values.Look<float>(ref personalDigestionRateMult,       "personalDigestionRateMult",       1f);
-            Scribe_Values.Look<float>(ref personalDigestionRateFlat,       "personalDigestionRateFlat",       0f);
             Scribe_Values.Look<float>(ref consumedNutrition,               "consumedNutrition",               0f);
             Scribe_Values.Look<float>(ref cumulativeSeverityGained,        "suddenWGCumSeverity");
-            ExposeClothingBonuses();
+            ExposeStatBonuses();
             ExposePerkLevels();
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
                 InitValuesOnLoad();
@@ -76,22 +70,38 @@ namespace RimRound.Comps
                 this.weightGizmo = new WeightGizmo(this);
         }
 
-        public void ExposeClothingBonuses() 
+        public void ExposeStatBonuses() 
         {
-            Scribe_Values.Look<float>(ref clothingBonuses.weightGainMultiplierMultBonus, "weightGainMultiplierMultBonus");
-            Scribe_Values.Look<float>(ref clothingBonuses.stomachElasticityMultBonus, "stomachElasticityMultBonus");
-            Scribe_Values.Look<float>(ref clothingBonuses.digestionSpeedMultBonus, "digestionSpeedMultBonus");
-            
-            Scribe_Values.Look<float>(ref clothingBonuses.fullnessGainedMultiplierBonus, "fullnessGainedMultiplierBonus");
-            
-            Scribe_Values.Look<float>(ref clothingBonuses.flatMoveBonus, "flatMoveBonus");
-            Scribe_Values.Look<float>(ref clothingBonuses.flatManipulationBonus, "flatManipulationBonus");
-            Scribe_Values.Look<float>(ref clothingBonuses.flatEatingSpeedBonus, "flatEatingSpeedBonus");
-            
-            Scribe_Values.Look<float>(ref clothingBonuses.movementPenaltyMitigationMultBonus_Weight, "movementPenaltyMitigationMultBonus_Weight");
-            Scribe_Values.Look<float>(ref clothingBonuses.manipulationPenaltyMitigationMultBonus_Weight, "manipulationPenaltyMitigationMultBonus_Weight");
-            Scribe_Values.Look<float>(ref clothingBonuses.painMitigationMultBonus_Fullness, "painMitigationMultBonus_Fullness");
-            Scribe_Values.Look<float>(ref clothingBonuses.eatingSpeedReductionMitigationMultBonus_Fullness, "eatingSpeedReductionMitigationMultBonus_Fullness");
+
+            Scribe_Values.Look<float>(ref statBonuses.weightGainMultiplier, "weightGainMultiplier");
+            Scribe_Values.Look<float>(ref statBonuses.weightLossMultiplier, "weightLossMultiplier");
+            Scribe_Values.Look<float>(ref statBonuses.digestionRateMultiplier, "digestionRateMultiplier");
+            Scribe_Values.Look<float>(ref statBonuses.softLimitMultiplier, "softLimitMultiplier");
+            Scribe_Values.Look<float>(ref statBonuses.stomachElasticityMultiplier, "stomachElasticityMultiplier");
+            Scribe_Values.Look<float>(ref statBonuses.hardLimitAdditionalPercentageMultiplier, "hardLimitAdditionalPercentageMultiplier");
+
+            Scribe_Values.Look<float>(ref statBonuses.weightGainMultBonus, "weightGainBonus");
+            Scribe_Values.Look<float>(ref statBonuses.weightLossMultBonus, "weightLossBonus");
+            Scribe_Values.Look<float>(ref statBonuses.digestionRateMultBonus, "digestionRateMultBonus");
+            Scribe_Values.Look<float>(ref statBonuses.softLimitMultBonus, "softLimitMultBonus");
+            Scribe_Values.Look<float>(ref statBonuses.stomachElasticityMultBonus, "stomachElasticityMultBonus");
+
+
+            Scribe_Values.Look<float>(ref statBonuses.digestionRateFlatBonus, "digestionRateFlatBonus");
+            Scribe_Values.Look<float>(ref statBonuses.softLimitFlatBonus, "softLimitFlatBonus");
+            Scribe_Values.Look<float>(ref statBonuses.stomachElasticityFlatBonus, "stomachElasticityFlatBonus");
+
+            Scribe_Values.Look<float>(ref statBonuses.hardLimitAdditionalPercentageMultBonus, "hardLimitAdditionalPercentageBonus");
+            Scribe_Values.Look<float>(ref statBonuses.fullnessGainedMultBonus, "fullnessGainedMultiplierBonus");
+            Scribe_Values.Look<float>(ref statBonuses.movementFlatBonus, "flatMoveBonus");
+            Scribe_Values.Look<float>(ref statBonuses.manipulationFlatBonus, "flatManipulationBonus");
+            Scribe_Values.Look<float>(ref statBonuses.eatingFlatBonus, "flatEatingSpeedBonus");
+            Scribe_Values.Look<float>(ref statBonuses.movementPenaltyMitigationMultBonus_Weight, "movementPenaltyMitigationMultBonus_Weight");
+            Scribe_Values.Look<float>(ref statBonuses.movementPenaltyMitigationMultBonus_Fullness, "movementPenaltyMitigationMultBonus_Fullness");
+            Scribe_Values.Look<float>(ref statBonuses.eatingSpeedReductionMitigationMultBonus_Fullness, "eatingSpeedReductionMitigationMultBonus_Fullness");
+            Scribe_Values.Look<float>(ref statBonuses.manipulationPenaltyMitigationMultBonus_Weight, "manipulationPenaltyMitigationMultBonus_Weight");
+            Scribe_Values.Look<float>(ref statBonuses.painMitigationMultBonus_Fullness, "painMitigationMultBonus_Fullness");
+
 
             return;
         }
@@ -388,10 +398,8 @@ namespace RimRound.Comps
         public void StomachGrowthTick()
         {
             if (CurrentFullness > SoftLimit)
-            {
-                SoftLimit += GlobalSettings.stomachElasticityMultiplier.threshold * (((perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0) + 1) * personalStomachElasticity * baseStomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold * (1 + clothingBonuses.stomachElasticityMultBonus));
-                return;
-            }
+                softLimitPersonal += StomachElasticity * GlobalSettings.ticksPerHungerCheck.threshold;
+
             return;
         }
 
@@ -465,21 +473,6 @@ namespace RimRound.Comps
                 ((CurrentFullness / CurrentFullnessToNutritionRatio) + incomingNutrition);
         }
 
-        public float DigestionRate
-        {
-            get
-            {
-                return (
-                    (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true) * 
-                    GlobalSettings.digestionRateMultiplier.threshold *
-                    PersonalDigestionRateMult *
-                    GlobalDigestionRateBonusMult * 
-                    baseDigestionRate) +
-                    PersonalDigestionRateFlat +
-                    GlobalDigestionRateBonusFlat);
-            }
-        }
-
 
         public DietMode DietMode
         {
@@ -517,47 +510,45 @@ namespace RimRound.Comps
             set => defaultBodyType = value; 
         }
 
+        //How much (in liters) the stomach grows when over the softlimit per tick.
+        public float StomachElasticity 
+        {
+            get 
+            {
+                float baseStomachElasticity = 0.00001f;
+                float elasticityValue = baseStomachElasticity *
+                        (GlobalSettings.stomachElasticityMultiplier.threshold *
+                        ((perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0) + 1) *
+                        (1 + statBonuses.stomachElasticityMultiplier) + statBonuses.stomachElasticityMultBonus) +
+                        statBonuses.stomachElasticityFlatBonus;
 
-        public float PersonalDigestionRateMult 
+                return Mathf.Clamp(elasticityValue, 0, float.MaxValue);
+            }
+        }
+
+        public float DigestionRate 
         {
             get 
             {
                 float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.2f + 1;
                 float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 0.5f + 1;
-                float digestionSpeedMultBonus = clothingBonuses.digestionSpeedMultBonus;
-                return gigaGurglingMult * digestionBeyondQuestionMult * HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn()) + digestionSpeedMultBonus;
+                float baseDigestionRate = 3.0f;
+
+                return Mathf.Clamp(
+                        (GlobalSettings.digestionRateMultiplier.threshold *
+                        baseDigestionRate *
+                        (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true)) *
+                        (1 + statBonuses.digestionRateMultiplier) * 
+                        gigaGurglingMult * digestionBeyondQuestionMult * 
+                        HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn()) +
+                        statBonuses.digestionRateMultBonus) +
+                        statBonuses.digestionRateFlatBonus, 
+                    0, 
+                    float.MaxValue);
             }
-            set => personalDigestionRateMult = value;
         }
-        private float personalDigestionRateMult = 1f;
 
-        public float PersonalDigestionRateFlat
-        {
-            get 
-            {
-                return personalDigestionRateFlat;
-            }
-            set => personalDigestionRateFlat = value;
-        }
-        private float personalDigestionRateFlat = 0f;
-
-
-        public float GlobalDigestionRateBonusMult 
-        {
-            get => globalDigestionRateBonusMult;
-            set => globalDigestionRateBonusMult = value;
-        }
-        private static float globalDigestionRateBonusMult = 1f;
-
-        public float GlobalDigestionRateBonusFlat
-        {
-            get => globalDigestionRateBonusFlat;
-            set => globalDigestionRateBonusFlat = value;
-        }
-        private static float globalDigestionRateBonusFlat = 0f;
-
-
-        public float PersonalWeightGainModifier 
+        public float WeightGainMultiplier 
         {
             get 
             {
@@ -566,7 +557,6 @@ namespace RimRound.Comps
                 int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
                 int heavyRevianLevel = perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int thatLevel = perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
-                float clothingWeightGainBonus = clothingBonuses.weightGainMultiplierMultBonus;
 
                 if (makesAllTheRulesLevel > 0)
                 {
@@ -583,41 +573,38 @@ namespace RimRound.Comps
                         }
                     }
                 }
-
-                return _personalWeightGainModifier + 
-                    0.1f * apexAbsorbtionLevel +
-                    0.2f * wg4000Level +
-                    0.5f * heavyRevianLevel +
-                    4.0f * makesAllTheRulesLevel +
-                    2.0f * thatLevel +
-                    clothingWeightGainBonus;
-            }
-            set 
-            {
-                _personalWeightGainModifier = value;
+                
+                return Mathf.Clamp((1 + statBonuses.weightGainMultiplier) *
+                        GlobalSettings.weightGainMultiplier.threshold *
+                        (this.parent.AsPawn().gender == Gender.Female ? 
+                            GlobalSettings.weightGainMultiplierFemale.threshold : 
+                            GlobalSettings.weightGainMultiplierMale.threshold) +
+                        (statBonuses.weightGainMultBonus +
+                        0.1f * apexAbsorbtionLevel +
+                        0.2f * wg4000Level +
+                        0.5f * heavyRevianLevel +
+                        4.0f * makesAllTheRulesLevel +
+                        2.0f * thatLevel), 
+                    0, float.MaxValue);
             }
         }
 
-        float _personalWeightGainModifier = 1f;
 
-
-
-
-        public float PersonalWeightLossModifier
+        public float WeightLossMultiplier
         {
             get
             {
                 int dietPlanLevel = perkLevels.PerkToLevels?["RR_Diet_Plan_Title"] ?? 0;
-                return _personalWeightLossModifier +
-                    0.2f * dietPlanLevel;
-            }
-            set
-            {
-                _personalWeightLossModifier = value;
+                return Mathf.Clamp((1 + statBonuses.weightLossMultiplier) *
+                        GlobalSettings.weightLossMultiplier.threshold *
+                        (this.parent.AsPawn().gender == Gender.Female ? 
+                            GlobalSettings.weightLossMultiplierFemale.threshold : 
+                            GlobalSettings.weightLossMultiplierMale.threshold) + 
+                        (statBonuses.weightLossMultBonus +
+                        0.2f * dietPlanLevel),
+                    0, float.MaxValue);
             }
         }
-
-        float _personalWeightLossModifier = 1f;
 
 
 
@@ -646,17 +633,17 @@ namespace RimRound.Comps
 
         //-------------------
 
-        //In liters. represents threshold of stoach capacity. 
+        //In liters. represents threshold of stoach capacity. Initial value at pawn spawn.
         private float softLimitPersonal = defaultSoftLimit + Values.RandomFloat(softLimitVariation.x, softLimitVariation.y);
         public float SoftLimit 
         {
             get 
             {
-                return softLimitPersonal * GlobalSettings.softLimitMuliplier.threshold;
-            }
-            set 
-            {
-                softLimitPersonal = value;
+                return 
+                    softLimitPersonal * 
+                    (GlobalSettings.softLimitMuliplier.threshold * 
+                    (1 + statBonuses.softLimitMultiplier) + statBonuses.softLimitMultBonus) + 
+                    statBonuses.softLimitFlatBonus;
             }
         }
 
@@ -669,29 +656,26 @@ namespace RimRound.Comps
         }
 
         //How much more than the soft limit the Hard Limit is.
-        public float hardLimitAdditionalPercentage = defaultHardLimitAdditionalPercentage;
+        private float hardLimitAdditionalPercentage = 0.3f;
         public float HardLimit
         {
             get
             {
                 float limitBreakMult = (perkLevels.PerkToLevels?["RR_LimitBreak_Title"] ?? 0) * 0.1f + 1;
-                return SoftLimit * (1f + hardLimitAdditionalPercentage) * GlobalSettings.hardLimitMuliplier.threshold * limitBreakMult;
-            }
-            set 
-            {
-                if (value <= SoftLimit) 
-                {
-                    Log.Error("Hard Limit set below soft limit!");
-                }
-
-                hardLimitAdditionalPercentage = (value / SoftLimit) - 1f;
+                return SoftLimit * 
+                    (1f + 
+                    Mathf.Clamp(
+                        hardLimitAdditionalPercentage * 
+                        (limitBreakMult * 
+                        (1 + statBonuses.hardLimitAdditionalPercentageMultiplier) * 
+                        GlobalSettings.hardLimitMuliplier.threshold + 
+                        statBonuses.hardLimitAdditionalPercentageMultBonus), 0.3f, 10)
+                    );
             }
         }
 
 
 
-        //Multiplier for how quickly the stomach grows when over the soft limit.
-        public float personalStomachElasticity = defaultPersonalStomachElasticity;
 
 
         bool ShouldShowWeightGizmo()
@@ -831,7 +815,14 @@ namespace RimRound.Comps
                 fullnessbar.UpdateBar(this.DietMode);
         }
 
-
+        public float FullnessGainedMultiplier 
+        {
+            get 
+            {
+                return Mathf.Clamp(
+                    (1 + statBonuses.fullnessGainedMultBonus) + GlobalSettings.fullnessMultiplier.threshold, 0, 10);
+            }
+        }
 
         public float ConsumedNutrition
         {
@@ -851,7 +842,7 @@ namespace RimRound.Comps
         private float consumedNutrition = 0;
         private int _perkLevelsToSpendForSaving = 0;
 
-        public ClothingStatsBonuses clothingBonuses = new ClothingStatsBonuses();
+        public RimRoundStatBonuses statBonuses = new RimRoundStatBonuses();
 
         public Queue<WeightGainRequest> activeWeightGainRequests = new Queue<WeightGainRequest>();
         public Queue<WeightGainRequest> activeWeightLossRequests = new Queue<WeightGainRequest>();
@@ -867,11 +858,7 @@ namespace RimRound.Comps
 
         public const float defaultSoftLimit = 0.9f;
         public static Vector2 softLimitVariation = new Vector2(-0.10f, 0.50f);
-        public const float defaultHardLimitAdditionalPercentage = 0.3f;
-        public const float defaultPersonalStomachElasticity = 1f;
-        //How much (in liters) the stomach grows when over the softlimit per tick.
-        public const float baseStomachElasticity = 0.00001f;
-        public const float baseDigestionRate = 3.0f;
+
         public const float defaultFullnessToNutritionRatio = 1f; //i.e. 0.5 Fullness for 1 nutrition is 0.5f
 
         private float cumulativeSeverityGained = 0;
@@ -889,29 +876,7 @@ namespace RimRound.Comps
         public Dictionary<string, int> PerkToLevels;
     }
 
-    public struct ClothingStatsBonuses 
-    {
-        //Should be in range [0, inf)
-        public float weightGainMultiplierMultBonus;
-        public float digestionSpeedMultBonus;
-        public float stomachElasticityMultBonus;
 
-        
-        public float fullnessGainedMultiplierBonus;
-
-        public float flatMoveBonus;
-        public float flatManipulationBonus;
-        public float flatEatingSpeedBonus;
-
-        //All below should be in range [0, 1]. 0 means full mitigation, 1 means none.
-        public float movementPenaltyMitigationMultBonus_Weight;
-        public float movementPenaltyMitigationMultBonus_Fullness;
-        public float eatingSpeedReductionMitigationMultBonus_Fullness;
-        public float manipulationPenaltyMitigationMultBonus_Weight;
-        
-        public float painMitigationMultBonus_Fullness;
-        
-    }
 
 
 

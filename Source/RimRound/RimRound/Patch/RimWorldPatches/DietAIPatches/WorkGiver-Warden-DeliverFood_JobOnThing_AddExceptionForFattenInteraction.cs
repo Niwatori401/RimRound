@@ -88,10 +88,12 @@ namespace RimRound.Patch
 		{
 			Thing thing;
 			ThingDef thingDef;
+#pragma warning disable CS0612 // Type or member is obsolete
 			if (!FoodUtility.TryFindBestFoodSourceFor(warden, prisoner, prisoner.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, true, FoodPreferability.Undefined))
 			{
 				return null;
 			}
+#pragma warning restore CS0612 // Type or member is obsolete
 
 			float nutrition = FoodUtility.GetNutrition(prisoner, thing, thingDef);
 			Job job = JobMaker.MakeJob(JobDefOf.DeliverFood, thing, prisoner);

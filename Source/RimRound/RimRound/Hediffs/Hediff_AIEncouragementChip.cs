@@ -1,4 +1,5 @@
 ﻿using RimRound.Comps;
+using RimRound.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,23 +14,21 @@ namespace RimRound.Hediffs
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
-            var comp = this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-            if (comp != null)
+            StatChangeUtility.ChangeRimRoundStats(this.pawn, new RimRoundStatBonuses()
             {
-                comp.PersonalDigestionRateMult += 1f;
-                comp.PersonalWeightGainModifier += 0.5f;
-            }
+                digestionRateMultiplier = 1f,
+                weightGainMultiplier = 0.5f
+            });
         }
 
         public override void PostRemoved()
         {
             base.PostRemoved();
-            var comp = this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>();
-            if (comp != null)
+            StatChangeUtility.ChangeRimRoundStats(this.pawn, new RimRoundStatBonuses()
             {
-                comp.PersonalDigestionRateMult -= 1f;
-                comp.PersonalWeightGainModifier -= 0.5f;
-            }
+                digestionRateMultiplier = -1f,
+                weightGainMultiplier = -0.5f
+            });
         }
 
         public override string TipStringExtra

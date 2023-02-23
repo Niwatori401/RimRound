@@ -27,7 +27,7 @@ namespace RimRound.Patch
             if (comp is null)
                 return;
 
-            __result += comp.clothingBonuses.flatMoveBonus;
+            __result += comp.statBonuses.movementFlatBonus;
             return;
         }
     }
