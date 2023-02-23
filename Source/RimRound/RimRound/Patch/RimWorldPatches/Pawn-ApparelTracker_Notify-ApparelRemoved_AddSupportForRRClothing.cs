@@ -32,7 +32,7 @@ namespace RimRound.Patch
             {
                 weightGainMultBonus = -clothingStats.weightGainMultiplierMultBonus,
                 digestionRateFlatBonus = -clothingStats.digestionSpeedMultBonus,
-                stomachElasticityMultBonus = -clothingStats.stomachElasticityMultBonus,
+                stomachElasticityMultiplier = -clothingStats.stomachElasticityMultBonus,
                 fullnessGainedMultBonus = -clothingStats.fullnessGainedMultiplierBonus,
                 movementFlatBonus = -clothingStats.flatMoveBonus,
                 manipulationFlatBonus = -clothingStats.flatManipulationBonus,

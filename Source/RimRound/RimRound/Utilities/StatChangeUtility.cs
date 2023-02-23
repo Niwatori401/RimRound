@@ -36,11 +36,8 @@ namespace RimRound.Utilities
             fndComp.statBonuses.weightLossMultBonus += bonus.weightLossMultBonus;
             fndComp.statBonuses.weightLossMultiplier += bonus.weightLossMultiplier;
 
-            fndComp.statBonuses.stomachElasticityMultBonus += bonus.stomachElasticityMultBonus;
             fndComp.statBonuses.stomachElasticityMultiplier += bonus.stomachElasticityMultiplier;
 
-            fndComp.statBonuses.digestionRateMultBonus += bonus.digestionRateMultBonus;
-            fndComp.statBonuses.softLimitMultBonus += bonus.softLimitMultBonus;
             fndComp.statBonuses.stomachElasticityFlatBonus += bonus.stomachElasticityFlatBonus;
             fndComp.statBonuses.fullnessGainedMultBonus += bonus.fullnessGainedMultBonus;
             fndComp.statBonuses.movementFlatBonus += bonus.movementFlatBonus;
@@ -76,14 +73,14 @@ namespace RimRound.Utilities
         public float weightGainMultBonus;
         public float weightLossMultBonus;
 
-        public float digestionRateMultBonus;
-        public float softLimitMultBonus;
+        //public float digestionRateMultBonus;
+        //public float softLimitMultBonus;
 
         public float digestionRateFlatBonus;
         public float softLimitFlatBonus;
 
 
-        public float stomachElasticityMultBonus;
+        //public float stomachElasticityMultBonus;
         public float stomachElasticityFlatBonus;
         // Final value clamped [0.3, 2]
         public float hardLimitAdditionalPercentageMultBonus;

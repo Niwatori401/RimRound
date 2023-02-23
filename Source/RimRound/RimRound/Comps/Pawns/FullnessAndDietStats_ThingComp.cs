@@ -82,9 +82,6 @@ namespace RimRound.Comps
 
             Scribe_Values.Look<float>(ref statBonuses.weightGainMultBonus, "weightGainBonus");
             Scribe_Values.Look<float>(ref statBonuses.weightLossMultBonus, "weightLossBonus");
-            Scribe_Values.Look<float>(ref statBonuses.digestionRateMultBonus, "digestionRateMultBonus");
-            Scribe_Values.Look<float>(ref statBonuses.softLimitMultBonus, "softLimitMultBonus");
-            Scribe_Values.Look<float>(ref statBonuses.stomachElasticityMultBonus, "stomachElasticityMultBonus");
 
 
             Scribe_Values.Look<float>(ref statBonuses.digestionRateFlatBonus, "digestionRateFlatBonus");
@@ -519,7 +516,7 @@ namespace RimRound.Comps
                 float elasticityValue = baseStomachElasticity *
                         (GlobalSettings.stomachElasticityMultiplier.threshold *
                         ((perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0) + 1) *
-                        (1 + statBonuses.stomachElasticityMultiplier) + statBonuses.stomachElasticityMultBonus) +
+                        (1 + statBonuses.stomachElasticityMultiplier)) +
                         statBonuses.stomachElasticityFlatBonus;
 
                 return Mathf.Clamp(elasticityValue, 0, float.MaxValue);
@@ -540,8 +537,7 @@ namespace RimRound.Comps
                         (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true)) *
                         (1 + statBonuses.digestionRateMultiplier) * 
                         gigaGurglingMult * digestionBeyondQuestionMult * 
-                        HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn()) +
-                        statBonuses.digestionRateMultBonus) +
+                        HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn())) +
                         statBonuses.digestionRateFlatBonus, 
                     0, 
                     float.MaxValue);
@@ -642,7 +638,7 @@ namespace RimRound.Comps
                 return 
                     softLimitPersonal * 
                     (GlobalSettings.softLimitMuliplier.threshold * 
-                    (1 + statBonuses.softLimitMultiplier) + statBonuses.softLimitMultBonus) + 
+                    (1 + statBonuses.softLimitMultiplier)) + 
                     statBonuses.softLimitFlatBonus;
             }
         }
