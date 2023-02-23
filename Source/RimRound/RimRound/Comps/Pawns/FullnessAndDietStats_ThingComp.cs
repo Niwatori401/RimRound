@@ -816,7 +816,7 @@ namespace RimRound.Comps
             get 
             {
                 return Mathf.Clamp(
-                    (1 + statBonuses.fullnessGainedMultBonus) + GlobalSettings.fullnessMultiplier.threshold, 0, 10);
+                    GlobalSettings.fullnessMultiplier.threshold + statBonuses.fullnessGainedMultBonus, 0, 10);
             }
         }
 
