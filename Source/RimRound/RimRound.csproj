@@ -180,6 +180,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\Clothing\PawnCapacityWorker-Manipulation_CalculateCapacityLevel_AlterForClothingBonuses.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Clothing\PawnCapacityWorker-Movement_CalculateCapacityLevel_AlterForClothingBonuses.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\Building-Vent_TickRare_DiffuseRRGasses.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\GasUtility_AddGas_AddSuuportForRRGas.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\GasUtility_PawnGasEffectsTick_AddSupportForGas.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelRemoved_AddSupportForRRClothing.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelAdded_AddSupportForRRClothing.cs" />

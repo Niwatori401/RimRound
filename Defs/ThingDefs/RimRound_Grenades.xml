@@ -1,161 +1,85 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="BaseMakeableGrenade">
-    <defName>RR_FlabGrenade</defName>
-    <label>flab grenades</label>
-    <description>Flabmentation grenades. They can be thrown a short distance, where they'll explode, fattening anyone nearby.</description>
-    <recipeMaker>
-      <researchPrerequisite>Machining</researchPrerequisite>
-    </recipeMaker>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/flab_grenade</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <uiIconScale>1.3</uiIconScale>
-    <soundInteract>Interact_Grenade</soundInteract>
-    <techLevel>Industrial</techLevel>
-    <statBases>
-      <Mass>1</Mass>
-      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
-      <WorkToMake>12000</WorkToMake>
-    </statBases>
-    <costList>
-      <Steel>20</Steel>
-      <Chemfuel>80</Chemfuel>
-    </costList>
-    <weaponTags>
-      <li>GrenadeDestructive</li>
-      <li>EmpireGrenadeDestructive</li>
-    </weaponTags>
-    <thingCategories>
-      <li>Grenades</li>
-    </thingCategories>
-    <verbs>
-      <li>
-        <label>throw frag grenade</label>
-        <verbClass>Verb_LaunchProjectile</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <range>12.9</range>
-        <forcedMissRadius>1.9</forcedMissRadius>
-        <warmupTime>1.5</warmupTime>
-        <noiseRadius>4</noiseRadius>
-        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-        <soundCast>ThrowGrenade</soundCast>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-        <defaultProjectile>RR_Proj_GrenadeFlab</defaultProjectile>
-        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
-      </li>
-    </verbs>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>2.66</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
-      </li>
-    </comps>
-	<researchPrerequisites>
-		<li>RR_Research_ExperimentalGrenades</li>
-	</researchPrerequisites>	
-  </ThingDef>
+	<ThingDef ParentName="BaseMakeableGrenade">
+		<defName>RR_FlabGrenade</defName>
+		<label>flab grenades</label>
+		<description>A project designed to create the effects of the embiggener on multiple targets in a radius, it suffers many of the same drawbacks, the biggest being that the expansion is merely temporary. The high-tech canisters release a mutagenic compound that rapidly fattens anything in its radius.</description>
+		<recipeMaker>
+			<researchPrerequisite>Machining</researchPrerequisite>
+		</recipeMaker>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/flab_grenade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>1.1</Mass>
+			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+			<WorkToMake>12000</WorkToMake>
+			<DeteriorationRate>2.5</DeteriorationRate>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+			<li>EmpireGrenadeDestructive</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li>
+				<label>throw flab grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>20</range>
+				<forcedMissRadius>1.3</forcedMissRadius>
+				<warmupTime>3</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>RR_Proj_GrenadeFlab</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>RR_FatGas</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<postExplosionGasType>32</postExplosionGasType>
+			</li>	  
+		</comps>
+		<researchPrerequisites>
+			<li>RR_Research_ExperimentalGrenades</li>
+		</researchPrerequisites>	
+	</ThingDef>
   
-  
-<ThingDef Name="BaseFragGrenadeProjectile" ParentName="BaseGrenadeProjectile" Abstract="True">
-    <thingClass>Projectile_Explosive</thingClass>
-    <graphicData>
-      <texPath>Things/Projectile/Grenade</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <explosionRadius>1.9</explosionRadius >
-      <damageDef>Bomb</damageDef>
-      <!-- Use default damage from explosion def -->
-      <explosionDelay>100</explosionDelay>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseFragGrenadeProjectile">
-    <defName>RR_Proj_GrenadeFlab</defName>
-    <label>frag grenade</label>
-  </ThingDef>
-
-
-    <ThingDef ParentName="BaseMakeableGrenade">
-    <defName>Weapon_GrenadeTox</defName>
-    <label>tox grenades</label>
-    <description>Grenades loaded with liquified tox gas. Upon landing, they stick to the ground and release tox gas for several seconds.\n\nTox gas burns the lungs and eyes, causing a temporary shortness of breath and reduction in sight. Continued exposure to tox gas results in toxic buildup which can be lethal.</description>
-    <possessionCount>1</possessionCount>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/ToxGrenades</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <uiIconScale>1.3</uiIconScale>
-    <soundInteract>Interact_Grenade</soundInteract>
-    <techLevel>Industrial</techLevel>
-    <statBases>
-      <Mass>1</Mass>
-      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
-      <WorkToMake>24000</WorkToMake>
-    </statBases>
-    <costList>
-      <Steel>20</Steel>
-      <ComponentIndustrial>6</ComponentIndustrial>
-    </costList>
-    <recipeMaker>
-      <researchPrerequisite>ToxGas</researchPrerequisite>
-    </recipeMaker>
-    <weaponTags>
-      <li>GrenadeTox</li>
-    </weaponTags>
-    <thingCategories>
-      <li>Grenades</li>
-    </thingCategories>
-    <verbs>
-      <li>
-        <label>throw tox grenade</label>
-        <verbClass>Verb_LaunchProjectile</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <range>12.9</range>
-        <forcedMissRadius>1.9</forcedMissRadius>
-        <warmupTime>1.5</warmupTime>
-        <noiseRadius>4</noiseRadius>
-        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
-        <soundCast>ThrowGrenade</soundCast>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-        <defaultProjectile>Proj_GrenadeFatGas</defaultProjectile>
-        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
-      </li>
-    </verbs>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>2.66</explosiveRadius>
-        <explosiveDamageType>ToxGas</explosiveDamageType>
-        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
-        <postExplosionGasType>ToxGas</postExplosionGasType>
-      </li>
-    </comps>
-    <smeltable>true</smeltable>
-  </ThingDef>
-  <ThingDef ParentName="BaseGrenadeProjectile">
-    <defName>Proj_GrenadeFatGas</defName>
-    <label>flabmentation grenade</label>
-    <thingClass>Projectile_Explosive</thingClass>
-    <graphicData>
-      <texPath>Things/Projectile/ToxGrenadeThrown</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>RR_FatGas</damageDef>
-      <explosionDelay>100</explosionDelay>
-      <explosionRadius>1.9</explosionRadius>
-      <explosionRadiusDisplayPadding>2</explosionRadiusDisplayPadding>
-      <postExplosionGasType>ToxGas</postExplosionGasType>
-      <screenShakeFactor>0.5</screenShakeFactor>
-    </projectile>
-  </ThingDef>
+	<ThingDef ParentName="BaseFragGrenadeProjectile">
+		<defName>RR_Proj_GrenadeFlab</defName>
+		<label>flab grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/ToxGrenadeThrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>RR_FatGas</damageDef>
+			<explosionDelay>100</explosionDelay>
+			<explosionRadius>1.9</explosionRadius>
+			<explosionRadiusDisplayPadding>2</explosionRadiusDisplayPadding>
+			<postExplosionGasType>32</postExplosionGasType>
+			<screenShakeFactor>0.5</screenShakeFactor>
+		</projectile>
+	</ThingDef>	
 </Defs>
