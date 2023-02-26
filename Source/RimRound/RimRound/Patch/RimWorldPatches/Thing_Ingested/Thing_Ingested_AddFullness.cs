@@ -43,8 +43,6 @@ namespace RimRound.Patch
 
 					comp.CurrentFullness += (__result * fullnessNutritionRatio) * comp.FullnessGainedMultiplier;
 
-
-
 					__result = 0;
 				}
 			}

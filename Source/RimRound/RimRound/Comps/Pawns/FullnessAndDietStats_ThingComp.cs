@@ -636,10 +636,10 @@ namespace RimRound.Comps
             get 
             {
                 return 
-                    softLimitPersonal * 
+                    Mathf.Clamp(softLimitPersonal * 
                     (GlobalSettings.softLimitMuliplier.threshold * 
                     (1 + statBonuses.softLimitMultiplier)) + 
-                    statBonuses.softLimitFlatBonus;
+                    statBonuses.softLimitFlatBonus, 0, float.MaxValue);
             }
         }
 
