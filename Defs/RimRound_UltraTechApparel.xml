@@ -7,6 +7,7 @@
 		<uiIconScale>1.4</uiIconScale>	
 		<recipeMaker>
 			<displayPriority>200</displayPriority>
+			<workSkill>Crafting</workSkill>
 		</recipeMaker>	
 		<tradeTags>
 			<li>Clothing</li>
