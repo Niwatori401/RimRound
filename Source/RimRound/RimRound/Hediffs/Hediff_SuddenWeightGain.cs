@@ -25,7 +25,7 @@ namespace RimRound.Hediffs
 
 
             float kilosToAdd = GetStageWeightGainMultiplier();
-            fndComp.activeWeightGainRequests.Enqueue(new WeightGainRequest(kilosToAdd, Find.TickManager.TicksGame + 10, 0, true));
+            fndComp.activeWeightGainRequests.Enqueue(new WeightGainRequest(kilosToAdd, Find.TickManager.TicksGame + 10, 18000, true));
 
             fndComp.CumulativeSeverityKilosGained += kilosToAdd;
 
@@ -43,7 +43,7 @@ namespace RimRound.Hediffs
                     hediff.Severity = 1f;
                 }
                 else
-                {
+                {                   
                     Utilities.HediffUtility.AddHediffSeverity(Defs.HediffDefOf.RimRound_SuddenWeightGainImmunity, pawn, 1.0f, true);
                 }
             }
