@@ -17,15 +17,42 @@
     </projectile>
 	<modExtensions>
 		<li Class="RimRound.Things.ME_FatteningBullet">
-			<kilosToAdd>300</kilosToAdd>
+			<kilosToAdd>90</kilosToAdd>
 			<ticksBetweenApplication>120</ticksBetweenApplication>
 			<numberOfApplications>3</numberOfApplications>
 			<chanceToInflictIllness>1.00</chanceToInflictIllness>
-		    <effectDuration>600</effectDuration>
+		    <effectDuration>3600</effectDuration>
 			<triggerMessages>false</triggerMessages>
 		</li>
 	</modExtensions>
   </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>RR_FatteningBullet_Permanent</defName>
+	<thingClass>RimRound.Things.FatteningBullet</thingClass>
+    <label>fattening round</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>55</speed>
+    </projectile>
+	<modExtensions>
+		<li Class="RimRound.Things.ME_FatteningBullet">
+			<kilosToAdd>30</kilosToAdd>
+			<ticksBetweenApplication>120</ticksBetweenApplication>
+			<numberOfApplications>5</numberOfApplications>
+			<chanceToInflictIllness>1.00</chanceToInflictIllness>
+		    <effectDuration>0</effectDuration>
+			<triggerMessages>true</triggerMessages>
+		</li>
+	</modExtensions>
+  </ThingDef>  
+  
   
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>RR_FatteningPistol</defName>
@@ -45,7 +72,7 @@
       <AccuracyShort>0.75</AccuracyShort>
       <AccuracyMedium>0.60</AccuracyMedium>
       <AccuracyLong>0.45</AccuracyLong>
-      <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
     </statBases>
 	<generateCommonality>0</generateCommonality>
     <weaponTags>
@@ -68,7 +95,7 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>RR_FatteningBullet</defaultProjectile>
-        <warmupTime>0.3</warmupTime>
+        <warmupTime>0.5</warmupTime>
         <range>35</range>
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -98,4 +125,77 @@
 		<li>RR_Research_ExperimentalWeapons</li>
 	</researchPrerequisites>	
   </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RR_FatteningPistol_Permanent</defName>
+    <label>Advanced Experimental Enbiggener</label>
+    <description>An advanced prototype of the experimental embiggener. A high-calibre, large-framed revolver with a multitude of high-tech enhancements. It fires mutagenic cartridges that embed themselves in the target's body and remain there, causing their fat cells to multiply on a much more permanent basis. Although the cartridges themselves are effective and reliable, the weapon itself can only hold a magazine of six bullets and the cartridge's experimental nature causes them to ruin each cylinder with their velocity when fired, preventing the user from loading more cartridges.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/RimRoundExperimentalGun_Permanent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>1.4</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+    </statBases>
+	<generateCommonality>0</generateCommonality>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <costList>
+      <Steel>50</Steel>
+	  <Plasteel>15</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>RimRound.AI.Verb_ShootLimitedUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RR_FatteningBullet_Permanent</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>35</range>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	<researchPrerequisites>
+		<li>RR_Research_AdvancedExperimentalWeapons</li>
+	</researchPrerequisites>	
+  </ThingDef>  
 </Defs>

@@ -18,7 +18,7 @@ namespace RimRound.Things
         {
             base.Impact(hitThing);
 
-            if (Values.RandomFloat(0, 1) <= Props.chanceToInflictIllness)
+            if (Values.RandomFloat(0, 1) >= Props.chanceToInflictIllness)
                 return;
 
             if (!(hitThing is Pawn p && p.RaceProps.Humanlike))

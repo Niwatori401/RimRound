@@ -55,21 +55,13 @@
 	<ThingDef ParentName="UltraTechClothingBase">
 		<defName>RimRound_NovaTechApparel_Jumpsuit</defName>
 		<label>NovaTech jumpsuit</label>
-		<description>A thick, extremely flexible jumpsuit with built-in nanites that improve the wearer's digestion. It's thought that this suit is the result of a failed experiment to allow soldiers on long skirmishes to eat less, but had the opposite effect.</description>
+		<description>A thick, extremely flexible jumpsuit with built-in nanites that improve the wearer's digestion. It's thought that this suit is the result of a failed experiment to allow soldiers on long skirmishes to eat less, but had the opposite effect.\n\n+20% Weight Gain Multiplier\n+20% Digestion Speed Multiplier\n+15% Movement\n-5% Weight Movement Penalty</description>
 		<modExtensions>
 			<li Class="RimRound.Defs.ClothingModExtension">
 				<weightGainMultiplierMultBonus>0.2</weightGainMultiplierMultBonus>
 				<digestionSpeedMultBonus>0.2</digestionSpeedMultBonus>
-				<stomachElasticityMultBonus>0</stomachElasticityMultBonus>
-				<fullnessGainedMultiplierBonus>0</fullnessGainedMultiplierBonus>
 				<flatMoveBonus>0.15</flatMoveBonus>
-				<flatManipulationBonus>0</flatManipulationBonus>
-				<flatEatingSpeedBonus>0</flatEatingSpeedBonus>		
 				<movementPenaltyMitigationMultBonus_Weight>0.05</movementPenaltyMitigationMultBonus_Weight>
-				<movementPenaltyMitigationMultBonus_Fullness>0</movementPenaltyMitigationMultBonus_Fullness>
-				<manipulationPenaltyMitigationMultBonus_Weight>0</manipulationPenaltyMitigationMultBonus_Weight>
-				<painMitigationMultBonus_Fullness>0</painMitigationMultBonus_Fullness>
-				<eatingSpeedReductionMitigationMultBonus_Fullness>0</eatingSpeedReductionMitigationMultBonus_Fullness>
 			</li>
 		</modExtensions>
 		<graphicData>
@@ -115,7 +107,7 @@
 	<ThingDef ParentName="UltraTechClothingBase">
 		<defName>RimRound_NovaTechApparel_Belt</defName>
 		<label>NovaTech belt</label>
-		<description>NovaTech's market-grade solution to overeating, this belt stretches with the wearer, massaging their stomach and allowing them to digest food quicker and feel less pain from fullness.</description>
+		<description>NovaTech's market-grade solution to overeating, this belt stretches with the wearer, massaging their stomach and allowing them to digest food quicker and feel less pain from fullness.\n\n+50% Digestion Speed Multiplier\n+100% Stomach Elasticity Multiplier\n-10% Fullness Movement Penalty\n-10% Pain from Fullness\n-10% Fullness Eating Speed Penalty</description>
 		<modExtensions>
 			<li Class="RimRound.Defs.ClothingModExtension">
 				<digestionSpeedMultBonus>0.5</digestionSpeedMultBonus>
@@ -162,7 +154,7 @@
 	<ThingDef ParentName="UltraTechClothingBase">
 		<defName>RimRound_NovaTechApparel_ProtoSuit</defName>
 		<label>NovaTech proto-suit</label>
-		<description>Novatech Industries' failed attempt to create a protective layer of clothing that removed the need for soldiers to eat completely could not have been more of a failure. While it is certainly protective, the nanites have stack overflowed their directive, causing the wearer's metabolism to skyrocket beyond comprehensible levels.</description>
+		<description>Novatech Industries' failed attempt to create a protective layer of clothing that removed the need for soldiers to eat completely could not have been more of a failure. While it is certainly protective, the nanites have stack overflowed their directive, causing the wearer's metabolism to skyrocket beyond comprehensible levels.\n\n+100% Weight Gain Multiplier\n+200% Digestion Speed Multiplier\n+30% Movement\n+15% Manipulation\n-15% Weight Movement Penalty\n-15% Weight Manipulation Penalty</description>
 		<modExtensions>
 			<li Class="RimRound.Defs.ClothingModExtension">
 				<weightGainMultiplierMultBonus>1</weightGainMultiplierMultBonus>
@@ -217,7 +209,7 @@
 	<ThingDef ParentName="UltraTechClothingBase">
 		<defName>RimRound_NovaTechApparel_Gloves</defName>
 		<label>NovaTech gloves</label>
-		<description>A prototype of nanite-assisted gloves that were designed to allow soldiers to perform tasks without the use of their hands. Naturally, they are very popular in underground markets for completely different reasons.</description>
+		<description>A prototype of nanite-assisted gloves that were designed to allow soldiers to perform tasks without the use of their hands. Naturally, they are very popular in underground markets for completely different reasons.\n\n+15% Movement\n+15% Manipulation\n+25% Eating\n-10% Weight Manipulation Penalty</description>
 		<modExtensions>
 			<li Class="RimRound.Defs.ClothingModExtension">
 				<flatMoveBonus>0.15</flatMoveBonus>
@@ -267,7 +259,7 @@
 	<ThingDef ParentName="UltraTechClothingBase">
 		<defName>RimRound_NovaTechApparel_Collar</defName>
 		<label>NovaTech collar</label>
-		<description>A curious looking choker that massages and expands with the wearer's neck, allowing them to easily swallow larger portions of food.</description>
+		<description>A curious looking choker that massages and expands with the wearer's neck, allowing them to easily swallow larger portions of food.\n\n+50% Digestion Speed Multiplier\n+20% Fullness gained on ingest\n+25% Eating\n-5% Weight Manipulation Penalty\n-10% Fullness Eating Speed Penalty</description>
 		<modExtensions>
 			<li Class="RimRound.Defs.ClothingModExtension">
 				<digestionSpeedMultBonus>0.5</digestionSpeedMultBonus>
@@ -319,7 +311,7 @@
 	<ThingDef ParentName="UltraTechClothingBase">
 		<defName>RimRound_NovaTechApparel_Hyperbelt</defName>
 		<label>NovaTech hyperbelt</label>
-		<description>NovaTech's crowning achievement and last project before they mysteriously became reclusive, this high-tech belt stretches with the wearer, massaging their stomach and allowing them to digest food, feel less pain from fullness, and move more effectively at higher weights.</description>
+		<description>NovaTech's crowning achievement and last project before they mysteriously became reclusive, this high-tech belt stretches with the wearer, massaging their stomach and allowing them to digest food, feel less pain from fullness, and move more effectively at higher weights.\n\n+50% Weight Gain Multiplier\n+100% Digestion Speed Multiplier\n+100% Stomach Elasticity Multiplier\n-5% Weight Movement Penalty\n-5%Weight Manipulation Penalty\n-20% Fullness Movement Penalty\n-20% Pain from Fullness\n-20% Fullness Eating Speed Penalty</description>
 		<modExtensions>
 			<li Class="RimRound.Defs.ClothingModExtension">
 				<weightGainMultiplierMultBonus>0.5</weightGainMultiplierMultBonus>

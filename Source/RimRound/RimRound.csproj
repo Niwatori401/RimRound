@@ -147,6 +147,7 @@
     <Compile Include="RimRound\AI\StatParts\StatPart_MassAdjustedByWeight.cs" />
     <Compile Include="RimRound\AI\StatParts\StatPart_MeatYieldBodyFat.cs" />
     <Compile Include="RimRound\AI\StatParts\StatPart_ToxicResistance.cs" />
+    <Compile Include="RimRound\AI\Verb_ShootLimitedUse.cs" />
     <Compile Include="RimRound\AI\WeightOpinions\ThoughtWorker_WeightOpinion_Dislike.cs" />
     <Compile Include="RimRound\AI\WeightOpinions\ThoughtWorker_WeightOpinion_Fanatical.cs" />
     <Compile Include="RimRound\AI\WeightOpinions\ThoughtWorker_WeightOpinion_Love.cs" />
