@@ -201,9 +201,9 @@ namespace RimRound.UI
             Text.Font = GameFont.Small;
 
             Text.Font = GameFont.Medium;
-            Widgets.Label(abilitiesTitleRect, "RR_Abilities_Title".Translate());
-            Text.Font = GameFont.Small;
-            Widgets.DrawLineHorizontal(0f, abilitiesTitleRect.yMax + 2, abilitiesTitleRect.width);
+            //Widgets.Label(abilitiesTitleRect, "RR_Abilities_Title".Translate());
+            //Text.Font = GameFont.Small;
+            //Widgets.DrawLineHorizontal(0f, abilitiesTitleRect.yMax + 2, abilitiesTitleRect.width);
         }
 
         private void DrawSinglePerk(Perk perk, int entryIndex, Rect drawInRect, FullnessAndDietStats_ThingComp comp) 

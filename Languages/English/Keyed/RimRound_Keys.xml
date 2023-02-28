@@ -307,6 +307,11 @@
 	<RR_CropNotch_Title>Crop Notch</RR_CropNotch_Title>
 	<RR_TheresTheBeef_Title>There's the Beef!</RR_TheresTheBeef_Title>
 	<RR_That_Title>That!</RR_That_Title>
+
+	<RR_BlackHole_Title>Black Hole</RR_BlackHole_Title>
+	<RR_TitaniumStomach_Title>Titanium Stomach</RR_TitaniumStomach_Title>
+	<RR_PeakEvolution_Title>Peak Evolution</RR_PeakEvolution_Title>
+	<RR_OneMoreBite_Title>One More Bite</RR_OneMoreBite_Title>
 	
 	<RR_Ample_Appetite_Desc>+10% hunger rate multiplier per level\n\n"{0}'s body has grown accustomed to an increased food intake, and will now require even more to stay satiated."</RR_Ample_Appetite_Desc>
 	<RR_Apex_Absorption_Desc>+0.1x weight gain multiplier per level\n\n"{0}'s metabolism has gone into overdrive, allowing them to gain more weight from the same amount of food."</RR_Apex_Absorption_Desc>
@@ -335,8 +340,8 @@
 	<RR_WeLikeToParty_Desc>Pawns can use blob bed as a recreation spot. Gives dexterity play at 150% power.\n\n"It's like silly putty!"\n\nPrerequisite: Must be a blob bed</RR_WeLikeToParty_Desc>
 	<RR_GluttonyIncarnate_Desc>+100% hunger rate\n\n"It's never enough. {0} just can't help it. Every fibre of their being, every second of their consciousness harbours an unbearable desire to eat.  They cannot stop. They will not stop. Their stomach screams for more, and they are helpless to resist."\n\nPrerequisite: Voracious Level 3</RR_GluttonyIncarnate_Desc>
 	<RR_PaunchPower_Desc>Pawn permanently gives off energy and can be hooked up to power conduits. Each level provides 1000W of energy.\n\n"Biofuel is a useful tool, and {0} has become so intensely oversized that their body can be used as a living battery."\n\nPrerequisite: Gelatinous VII or larger</RR_PaunchPower_Desc>
-	<RR_MakesAllTheRules_Desc>+4.0x weight gain multiplier, +150% eating speed at night (18:00-06:00)\n\n"They prey at night, they eat at night, they're THE rat. {0} has truly become the Giant Rat."\n\nPrerequisite: Gelatinous X or higher, Ratkin</RR_MakesAllTheRules_Desc>
-	<RR_HeavyRevian_Desc>-0.2x incoming damage multiplier, +20% consciousness, +60% moving, +60% manipulation, +50% eating speed, +1.50x weight gain multiplier\n\n"Forget offerings to Skarne, they should bring them to ME!"\n\nPrerequisite: Gelatinous X or higher, Revian</RR_HeavyRevian_Desc>
+	<RR_MakesAllTheRules_Desc>+4.0x weight gain multiplier, +150% eating speed at night (18:00-06:00)\nNot required for "Ascension".\n\n"They prey at night, they eat at night, they're THE rat. {0} has truly become the Giant Rat."\n\nPrerequisite: Gelatinous X or higher, Ratkin</RR_MakesAllTheRules_Desc>
+	<RR_HeavyRevian_Desc>-0.2x incoming damage multiplier, +20% consciousness, +60% moving, +60% manipulation, +50% eating speed, +1.50x weight gain multiplier\nNot required for "Ascension".\n\n"Forget offerings to Skarne, they should bring them to ME!"\n\nPrerequisite: Gelatinous X or higher, Revian</RR_HeavyRevian_Desc>
 	<RR_Even_Further_Beyond_Desc>Unlocks Gelatinous 11-20\n\n"There was no reason to expect that {0} would ever stop growing. Not bound by small inconveniences like logic, they set their sights on the stars beyond this increasingly cramped rimworld. But since no ship in the universe could ever carry their inordinate mass, that only leaves one option..."\n\nPrerequisite: Every single other perk and ability, excluding race-specific perks, Diet Plan, Sudden Expansion, Atomic Anomaly and Square One</RR_Even_Further_Beyond_Desc>
 	<RR_Ascension_Desc>Wins game.\n\n"Ascend past your limits and face your destiny. Once you pick this perk, the game will end."\n\nPrerequisite: EVEN FURTHER BEYOND!, Gelatinous 20 (1,000,000KG)</RR_Ascension_Desc>
 	<RR_SuddenExpansion_Desc>Can be purchased multiple times.\n\nPawn instantly gains 5 kilograms. This amount is affected by other weight gain multipliers.\n\n"{0}'s clothes just got a lot tighter. That's weird. Must've been the wind."</RR_SuddenExpansion_Desc>
@@ -344,5 +349,10 @@
 	<RR_PackWhale_Desc>Pawn can "carry" double the normal amount.\n\n"So many folds, so many places to store things! {0} makes an excellent travelling buddy, provided you don't mind the increased "snack breaks." They can carry much more on long-distance trips. Hopefully you can find it all again..."\n\nPrerequisite: Morbidly Obese or higher, must remain this weight or higher to keep bonus.</RR_PackWhale_Desc>
 	<RR_CropNotch_Desc>+10% farming/crop yield for the user.\n\n"The harvest sure is bountiful this season. And next season."</RR_CropNotch_Desc>
 	<RR_TheresTheBeef_Desc>Gain additional meat yields from butchered animals. +50% butchery efficiency for the user.\n\n"Why's everyone always so particular about what parts of the animal are edible? It's all good eating!"</RR_TheresTheBeef_Desc>
-	<RR_That_Desc>+2.0x weight gain multiplier, toxic sensitivity -100%, +50% blunt and sharp resistance, -20% heat resistance\n\n"Alright, who let {0} into the nuclear waste again?" \n\nPrerequisite: Must be Gelatinous X+ to purchase, Anty race only</RR_That_Desc>
+	<RR_That_Desc>+2.0x weight gain multiplier, toxic sensitivity -100%, +50% blunt and sharp resistance, -20% heat resistance\nNot required for "Ascension".\n\n"Alright, who let {0} into the nuclear waste again?" \n\nPrerequisite: Must be Gelatinous X+ to purchase, Anty race only</RR_That_Desc>
+	
+	<RR_BlackHole_Desc>+50L stomach capacity\nNot required for "Ascension".\n\n"Something terrifying, hidden amongst the cosmos, stirs, awoken by the whirlwind of gluttony wrought at the mouth of {0}. Impressed, it bestows  but a fraction of its power to them, a minute pocket dimension forming in the pit of their now expansive gut- granting them the ability to stuff themselves far beyond the limits of any mortal. But this favor is granted only once. Will it even be enough?"</RR_BlackHole_Desc>
+	<RR_TitaniumStomach_Desc>+Immunity to food poisoning, +1.0x digestion rate multiplier.\n\n"Having digested such a considerable amount of food, {0}'s stomach even breaks down harmful enzymes and chemicals they may happen to accidentally ingest. In doing so, it has also aided the speed at which nutrition is processed."</RR_TitaniumStomach_Desc>
+	<RR_PeakEvolution_Desc>+1.0 weight gain multiplier\nNot required for "Ascension".\n\n"This is the apex of humanity. {0}'s very cellular structure has completely shifted, resulting in an exceptionally high rate of weight gain. And, not to be outdone by any inferior aliens, they can do it again and again, and again..."</RR_PeakEvolution_Desc>
+	<RR_OneMoreBite_Desc>+1.0L stomach capacity\nNot required for "Ascension".\n\n"There's still so much left to eat, this is no time to be worrying about trivial things like stomach capacity. Just keep going."</RR_OneMoreBite_Desc>
 </LanguageData>

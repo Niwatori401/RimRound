@@ -19,7 +19,7 @@ namespace RimRound.Comps
 {
     public class FullnessAndDietStats_ThingComp : ThingComp
     {
-        public FullnessAndDietStats_ThingComp() 
+        public FullnessAndDietStats_ThingComp()
         {
         }
 
@@ -38,12 +38,12 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref cachedSliderVal1, "cachedSliderPos1", -1);
             Scribe_Values.Look<float>(ref cachedSliderVal2, "cachedSliderPos2", -1);
 
-            Scribe_Values.Look<DietMode>(ref dietMode,                     "dietMode",                        DietMode.Disabled);
-            Scribe_Values.Look<float>(ref currentFullness,                 "currentFullness",                 0);
-            Scribe_Values.Look<float>(ref softLimitPersonal,               "softLimit",                       defaultSoftLimit);
+            Scribe_Values.Look<DietMode>(ref dietMode, "dietMode", DietMode.Disabled);
+            Scribe_Values.Look<float>(ref currentFullness, "currentFullness", 0);
+            Scribe_Values.Look<float>(ref softLimitPersonal, "softLimit", defaultSoftLimit);
             Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", defaultFullnessToNutritionRatio);
-            Scribe_Values.Look<float>(ref consumedNutrition,               "consumedNutrition",               0f);
-            Scribe_Values.Look<float>(ref cumulativeSeverityGained,        "suddenWGCumSeverity");
+            Scribe_Values.Look<float>(ref consumedNutrition, "consumedNutrition", 0f);
+            Scribe_Values.Look<float>(ref cumulativeSeverityGained, "suddenWGCumSeverity");
             ExposeStatBonuses();
             ExposePerkLevels();
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
@@ -51,14 +51,14 @@ namespace RimRound.Comps
         }
 
         bool _loadedDietBars = false;
-        private void InitValuesOnLoad() 
+        private void InitValuesOnLoad()
         {
             InitBarsIfNull();
             UpdateDietBars();
             InitializePerksIfNull();
         }
 
-        private void InitBarsIfNull() 
+        private void InitBarsIfNull()
         {
             if (nutritionbar == null)
                 this.nutritionbar = new WeightGizmo_NutritionBar(((Pawn)parent));
@@ -70,7 +70,7 @@ namespace RimRound.Comps
                 this.weightGizmo = new WeightGizmo(this);
         }
 
-        public void ExposeStatBonuses() 
+        public void ExposeStatBonuses()
         {
 
             Scribe_Values.Look<float>(ref statBonuses.weightGainMultiplier, "weightGainMultiplier");
@@ -108,7 +108,7 @@ namespace RimRound.Comps
             if (GlobalSettings.showPawnDietManagementGizmo && ShouldShowWeightGizmo())
                 yield return this.weightGizmo;
 
-            if (Prefs.DevMode && GlobalSettings.showSpecialDebugSettings) 
+            if (Prefs.DevMode && GlobalSettings.showSpecialDebugSettings)
             {
                 yield return new Command_Action
                 {
@@ -165,7 +165,7 @@ namespace RimRound.Comps
             ProcessWeightGainRequests(GlobalSettings.ticksBetweenWeightGainRequestProcess.threshold);
             ProcessWeightLossRequests(GlobalSettings.ticksBetweenWeightGainRequestProcess.threshold);
 
-            if (parent?.IsHashIntervalTick(GlobalSettings.ticksPerHungerCheck.threshold) ?? false) 
+            if (parent?.IsHashIntervalTick(GlobalSettings.ticksPerHungerCheck.threshold) ?? false)
             {
                 float digestedAmt = DigestionTick() / CurrentFullnessToNutritionRatio;
                 ((Pawn)parent).needs.food.CurLevel += digestedAmt;
@@ -188,7 +188,7 @@ namespace RimRound.Comps
         private List<string> _perkNamesForSaving = new List<string>();
         private List<int> _perkLevelValuesForSaving = new List<int>();
 
-        private void ExposePerkLevels() 
+        private void ExposePerkLevels()
         {
             if (Scribe.mode == LoadSaveMode.Saving)
             {
@@ -208,8 +208,8 @@ namespace RimRound.Comps
                 Scribe_Values.Look<int>(ref _perkLevelsToSpendForSaving, "perkLevelsToSpend", 0);
                 Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
                 Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
-            } 
-            else if (Scribe.mode == LoadSaveMode.LoadingVars) 
+            }
+            else if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
                 if (_perkLevelValuesForSaving is null)
                     _perkLevelValuesForSaving = new List<int>();
@@ -224,7 +224,7 @@ namespace RimRound.Comps
 
         }
 
-        private void InitializePerksIfNull() 
+        private void InitializePerksIfNull()
         {
             if (perkLevels is null)
                 perkLevels = new PerkLevels();
@@ -265,7 +265,7 @@ namespace RimRound.Comps
             }
         }
 
-        public void ProcessWeightLossRequests(int ticksBetweenChecks) 
+        public void ProcessWeightLossRequests(int ticksBetweenChecks)
         {
             if (!GeneralUtility.IsHashIntervalTick(ticksBetweenChecks))
                 return;
@@ -284,7 +284,7 @@ namespace RimRound.Comps
 
         }
 
-        public void ProcessWeightGainRequests(int ticksBetweenChecks) 
+        public void ProcessWeightGainRequests(int ticksBetweenChecks)
         {
             if (!GeneralUtility.IsHashIntervalTick(ticksBetweenChecks))
                 return;
@@ -312,7 +312,7 @@ namespace RimRound.Comps
         /// </summary>
         /// <param name="gainRequest">Weight gain request to process</param>
         /// <returns>Change in severity</returns>
-        private float ChangeWeightAndUpdateSprite(WeightGainRequest gainRequest) 
+        private float ChangeWeightAndUpdateSprite(WeightGainRequest gainRequest)
         {
             float cachedSeverity = this.parent.AsPawn().WeightHediff().Severity;
 
@@ -339,22 +339,22 @@ namespace RimRound.Comps
             {
                 if (gainRequest.amountToGain > 0)
                     this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
-                else 
+                else
                 {
                     this.activeWeightLossRequests.Enqueue(new WeightGainRequest(Utilities.HediffUtility.SeverityToKilosWithoutBaseWeight(severityChangeFromPriorGain), currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
                 }
             }
         }
 
-        public void PassiveWeightLossTick() 
+        public void PassiveWeightLossTick()
         {
             Utilities.HediffUtility.AddHediffSeverity(
-                Defs.HediffDefOf.RimRound_Weight, 
+                Defs.HediffDefOf.RimRound_Weight,
                 ((Pawn)parent),
                 Utilities.HediffUtility.NutritionToSeverity(-1 * (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true)) * GlobalSettings.ticksPerHungerCheck.threshold));
         }
 
-        public void ActiveWeightGainTick(float nutrition) 
+        public void ActiveWeightGainTick(float nutrition)
         {
             Utilities.HediffUtility.AddHediffSeverity(
                 Defs.HediffDefOf.RimRound_Weight,
@@ -362,7 +362,7 @@ namespace RimRound.Comps
                 Utilities.HediffUtility.NutritionToSeverity(nutrition));
         }
 
-        public void FullnessCheckTick() 
+        public void FullnessCheckTick()
         {
 
             float severity = (CurrentFullness > 0 ? CurrentFullness / HardLimit : 0.01f);
@@ -371,7 +371,7 @@ namespace RimRound.Comps
             return;
         }
 
-        public void RuptureStomachCheckTick() 
+        public void RuptureStomachCheckTick()
         {
             float severity = (CurrentFullness > 0 ? CurrentFullness / HardLimit : 0.01f);
 
@@ -417,7 +417,7 @@ namespace RimRound.Comps
             }
         }
 
-        public void RuptureStomach() 
+        public void RuptureStomach()
         {
             BodyPartRecord pawnStomach = ((Pawn)parent).RaceProps.body.GetPartsWithDef(BodyPartDefOf.Stomach).First();
             float currentStomachHealth = ((Pawn)parent).health.hediffSet.GetPartHealth(pawnStomach);
@@ -431,7 +431,7 @@ namespace RimRound.Comps
             float remainingDamage = (currentStomachHealth - afterRuptureStomachHealth);
             float damagePerWound = remainingDamage / numberOfWounds;
 
-            while (remainingDamage > 0) 
+            while (remainingDamage > 0)
             {
                 float thisDmg = Values.RandomFloat(1 - damageVariationPercent, 1 + damageVariationPercent) * damagePerWound;
 
@@ -450,19 +450,19 @@ namespace RimRound.Comps
 
         private float currentFullnessToNutritionRatio = defaultFullnessToNutritionRatio;
 
-        public float CurrentFullnessToNutritionRatio 
+        public float CurrentFullnessToNutritionRatio
         {
-            get 
+            get
             {
                 return currentFullnessToNutritionRatio;
             }
-            set 
+            set
             {
                 currentFullnessToNutritionRatio = value;
             }
         }
 
-        public void UpdateRatio(float incomingNutrition, float incomingRatio = defaultFullnessToNutritionRatio) 
+        public void UpdateRatio(float incomingNutrition, float incomingRatio = defaultFullnessToNutritionRatio)
         {
             //Weighted average of current values and incoming values  
             CurrentFullnessToNutritionRatio =
@@ -493,9 +493,9 @@ namespace RimRound.Comps
 
         private BodyTypeDef defaultBodyType;
 
-        public BodyTypeDef DefaultBodyType 
+        public BodyTypeDef DefaultBodyType
         {
-            get 
+            get
             {
                 if (defaultBodyType is null || BodyTypeUtility.IsRRBody(defaultBodyType))
                 {
@@ -503,19 +503,20 @@ namespace RimRound.Comps
                     defaultBodyType = RimWorld.BodyTypeDefOf.Thin;
                 }
                 return defaultBodyType;
-            } 
-            set => defaultBodyType = value; 
+            }
+            set => defaultBodyType = value;
         }
 
         //How much (in liters) the stomach grows when over the softlimit per tick.
-        public float StomachElasticity 
+        public float StomachElasticity
         {
-            get 
+            get
             {
                 float baseStomachElasticity = 0.00001f;
+                float endlessIndulgenceMultBonus = perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0;
                 float elasticityValue = baseStomachElasticity *
                         (GlobalSettings.stomachElasticityMultiplier.threshold *
-                        ((perkLevels.PerkToLevels?["RR_Endless_Indulgence_Title"] ?? 0) + 1) *
+                        (1 + endlessIndulgenceMultBonus) *
                         (1 + statBonuses.stomachElasticityMultiplier)) +
                         statBonuses.stomachElasticityFlatBonus;
 
@@ -523,36 +524,39 @@ namespace RimRound.Comps
             }
         }
 
-        public float DigestionRate 
+        public float DigestionRate
         {
-            get 
+            get
             {
-                float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.2f + 1;
-                float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 0.5f + 1;
+                float digestionBeyondQuestionMult = (perkLevels.PerkToLevels?["RR_Digestion_Beyond_Question_Title"] ?? 0) * 0.2f;
+                float gigaGurglingMult = (perkLevels.PerkToLevels?["RR_GigaGurgling_Title"] ?? 0) * 0.5f;
+                float titaniumStomachMultBonus = (perkLevels.PerkToLevels?["RR_TitaniumStomach_Title"] ?? 0) * 1f;
+
                 float baseDigestionRate = 3.0f;
 
                 return Mathf.Clamp(
                         (GlobalSettings.digestionRateMultiplier.threshold *
                         baseDigestionRate *
                         (float)(this.parent.AsPawn().needs.food.FoodFallPerTickAssumingCategory(HungerCategory.Fed, true)) *
-                        (1 + statBonuses.digestionRateMultiplier) * 
-                        gigaGurglingMult * digestionBeyondQuestionMult * 
+                        (1 + statBonuses.digestionRateMultiplier + gigaGurglingMult + digestionBeyondQuestionMult + titaniumStomachMultBonus) *
                         HungerDroneUtility.GetCurrentHungerMultiplierFromDrone(this.parent.AsPawn())) +
-                        statBonuses.digestionRateFlatBonus, 
-                    0, 
+                        statBonuses.digestionRateFlatBonus,
+                    0,
                     float.MaxValue);
             }
         }
 
-        public float WeightGainMultiplier 
+        public float WeightGainMultiplier
         {
-            get 
+            get
             {
                 int apexAbsorbtionLevel = perkLevels.PerkToLevels?["RR_Apex_Absorption_Title"] ?? 0;
                 int wg4000Level = perkLevels.PerkToLevels?["RR_WeightGain4000_Title"] ?? 0;
                 int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
                 int heavyRevianLevel = perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int thatLevel = perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
+
+                int peakEvolutionLevel = perkLevels.PerkToLevels?["RR_PeakEvolution_Title"] ?? 0;
 
                 if (makesAllTheRulesLevel > 0)
                 {
@@ -569,18 +573,19 @@ namespace RimRound.Comps
                         }
                     }
                 }
-                
+
                 return Mathf.Clamp((1 + statBonuses.weightGainMultiplier) *
                         GlobalSettings.weightGainMultiplier.threshold *
-                        (this.parent.AsPawn().gender == Gender.Female ? 
-                            GlobalSettings.weightGainMultiplierFemale.threshold : 
+                        (this.parent.AsPawn().gender == Gender.Female ?
+                            GlobalSettings.weightGainMultiplierFemale.threshold :
                             GlobalSettings.weightGainMultiplierMale.threshold) +
                         (statBonuses.weightGainMultBonus +
                         0.1f * apexAbsorbtionLevel +
                         0.2f * wg4000Level +
                         0.5f * heavyRevianLevel +
+                        1.0f * peakEvolutionLevel +
                         4.0f * makesAllTheRulesLevel +
-                        2.0f * thatLevel), 
+                        2.0f * thatLevel),
                     0, float.MaxValue);
             }
         }
@@ -593,9 +598,9 @@ namespace RimRound.Comps
                 int dietPlanLevel = perkLevels.PerkToLevels?["RR_Diet_Plan_Title"] ?? 0;
                 return Mathf.Clamp((1 + statBonuses.weightLossMultiplier) *
                         GlobalSettings.weightLossMultiplier.threshold *
-                        (this.parent.AsPawn().gender == Gender.Female ? 
-                            GlobalSettings.weightLossMultiplierFemale.threshold : 
-                            GlobalSettings.weightLossMultiplierMale.threshold) + 
+                        (this.parent.AsPawn().gender == Gender.Female ?
+                            GlobalSettings.weightLossMultiplierFemale.threshold :
+                            GlobalSettings.weightLossMultiplierMale.threshold) +
                         (statBonuses.weightLossMultBonus +
                         0.2f * dietPlanLevel),
                     0, float.MaxValue);
@@ -605,7 +610,7 @@ namespace RimRound.Comps
 
 
 
-        public float RemainingFullnessUntil(float limit) 
+        public float RemainingFullnessUntil(float limit)
         {
             return limit - CurrentFullness;
         }
@@ -631,21 +636,24 @@ namespace RimRound.Comps
 
         //In liters. represents threshold of stoach capacity. Initial value at pawn spawn.
         private float softLimitPersonal = defaultSoftLimit + Values.RandomFloat(softLimitVariation.x, softLimitVariation.y);
-        public float SoftLimit 
+        public float SoftLimit
         {
-            get 
+            get
             {
-                return 
-                    Mathf.Clamp(softLimitPersonal * 
-                    (GlobalSettings.softLimitMuliplier.threshold * 
-                    (1 + statBonuses.softLimitMultiplier)) + 
-                    statBonuses.softLimitFlatBonus, 0, float.MaxValue);
+                float blackHolePerkBonus = 50f * (perkLevels.PerkToLevels?["RR_BlackHole_Title"] ?? 0);
+                float oneMoreBitePerkBonus = 1f * (perkLevels.PerkToLevels?["RR_OneMoreBite_Title"] ?? 0);
+
+                return
+                    Mathf.Clamp(softLimitPersonal *
+                    (GlobalSettings.softLimitMuliplier.threshold *
+                    (1 + statBonuses.softLimitMultiplier)) +
+                    statBonuses.softLimitFlatBonus + blackHolePerkBonus + oneMoreBitePerkBonus, 0, float.MaxValue);
             }
         }
 
-        public bool SetAboveHardLimit 
+        public bool SetAboveHardLimit
         {
-            get 
+            get
             {
                 return fullnessbar.peaceForeverHeld;
             }
@@ -657,14 +665,15 @@ namespace RimRound.Comps
         {
             get
             {
-                float limitBreakMult = (perkLevels.PerkToLevels?["RR_LimitBreak_Title"] ?? 0) * 0.1f + 1;
-                return SoftLimit * 
-                    (1f + 
+                float limitBreakMultBonus = (perkLevels.PerkToLevels?["RR_LimitBreak_Title"] ?? 0) * 0.1f;
+
+                return SoftLimit *
+                    (1f +
                     Mathf.Clamp(
-                        hardLimitAdditionalPercentage * 
-                        (limitBreakMult * 
-                        (1 + statBonuses.hardLimitAdditionalPercentageMultiplier) * 
-                        GlobalSettings.hardLimitMuliplier.threshold + 
+                        hardLimitAdditionalPercentage *
+                        ((1 + limitBreakMultBonus) *
+                        (1 + statBonuses.hardLimitAdditionalPercentageMultiplier) *
+                        GlobalSettings.hardLimitMuliplier.threshold +
                         statBonuses.hardLimitAdditionalPercentageMultBonus), 0.3f, 10)
                     );
             }
@@ -719,7 +728,7 @@ namespace RimRound.Comps
         }
 
 
-        public void SetRangesByValue(float first, float second) 
+        public void SetRangesByValue(float first, float second)
         {
             float maxNutrition = nutritionbar.needFood.MaxLevel;
             float maxDisplayFullness = fullnessbar.DisplayLimit;
@@ -771,14 +780,14 @@ namespace RimRound.Comps
 
 
         //100% for fullness is hardlimit
-        public void SetRangesPercent(float first, float second) 
+        public void SetRangesPercent(float first, float second)
         {
             if (first > 1 || second > 1)
             {
                 Log.Error("Inputs for SetRangesPercent must be less than or equal to 1!");
                 return;
             }
-                
+
             float maxNutrition = parent.AsPawn().needs.food.MaxLevel;
             float maxFullness = this.HardLimit;
 
@@ -811,9 +820,9 @@ namespace RimRound.Comps
                 fullnessbar.UpdateBar(this.DietMode);
         }
 
-        public float FullnessGainedMultiplier 
+        public float FullnessGainedMultiplier
         {
-            get 
+            get
             {
                 return Mathf.Clamp(
                     GlobalSettings.fullnessMultiplier.threshold + statBonuses.fullnessGainedMultBonus, 0, 10);
@@ -823,7 +832,7 @@ namespace RimRound.Comps
         public float ConsumedNutrition
         {
             get => consumedNutrition;
-            set 
+            set
             {
                 consumedNutrition = value;
                 if (consumedNutrition >= GlobalSettings.nutritionPerPerkLevel.threshold * perkLevels.currentLevel)
@@ -832,7 +841,7 @@ namespace RimRound.Comps
                     perkLevels.currentLevel = currentLevel;
                     perkLevels.availablePoints += GlobalSettings.levelsGainedPerLevel.threshold;
                 }
-            } 
+            }
         }
 
         private float consumedNutrition = 0;
@@ -859,7 +868,7 @@ namespace RimRound.Comps
 
         private float cumulativeSeverityGained = 0;
         public float CumulativeSeverityKilosGained { get => cumulativeSeverityGained; set => cumulativeSeverityGained = value; }
-        
+
         public const float severityUntilImmunity = 400;
         public const float immunitySeverityDecay = 0.5f;
 
@@ -882,7 +891,7 @@ namespace RimRound.Comps
         /// <param name="tickToApplyOn">Tick after which the request should be executed.</param>
         /// <param name="duration">Number of ticks for the weight to stay applied. If set to 0, weight gained is permanent.</param>
         /// <param name="triggerMessages">Whether weight gained from this should trigger the notifications at the top of the screen.</param>
-        public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0, bool triggerMessages = false) 
+        public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0, bool triggerMessages = false)
         {
             this.amountToGain = amountToGain;
             this.tickToApplyOn = tickToApplyOn;

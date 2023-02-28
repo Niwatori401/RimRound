@@ -14,47 +14,51 @@ namespace RimRound.Utilities
     [StaticConstructorOnStartup]
     public static class Perks
     {
-        public static readonly Texture2D blockedTexture =              ContentFinder<Texture2D>.Get("UI/PerkIcons/BLOCKED", true);
+        public static readonly Texture2D blockedTexture = ContentFinder<Texture2D>.Get("UI/PerkIcons/BLOCKED", true);
 
-        public static readonly Texture2D ampleAppetiteIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/AMPLE_APPETITE", true);
-        public static readonly Texture2D apexAbsorptionIcon =          ContentFinder<Texture2D>.Get("UI/PerkIcons/APEX_ABSORPTION", true);
-        public static readonly Texture2D ascensionIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/ASCENSION", true);
-        public static readonly Texture2D beautifulBulkIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/BEAUTIFUL_BULK", true);
-        public static readonly Texture2D breakneckBuffetIcon =         ContentFinder<Texture2D>.Get("UI/PerkIcons/BREAKNECK_BUFFET", true);
-        public static readonly Texture2D bulletProofBlobIcon =         ContentFinder<Texture2D>.Get("UI/PerkIcons/BULLETPROOF_BLOB", true);
-        public static readonly Texture2D comfortableCorpulenceIcon =   ContentFinder<Texture2D>.Get("UI/PerkIcons/COMFORTABLE_CORPULENCE", true);
-        public static readonly Texture2D culinaryConnisseurIcon =      ContentFinder<Texture2D>.Get("UI/PerkIcons/CULINARY_CONNISSEUR", true);
-        public static readonly Texture2D demonicDevourmentIcon =       ContentFinder<Texture2D>.Get("UI/PerkIcons/DEMONIC_DEVOURMENT", true);
-        public static readonly Texture2D dietPlanIcon =                ContentFinder<Texture2D>.Get("UI/PerkIcons/DIET_PLAN", true);
+        public static readonly Texture2D ampleAppetiteIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/AMPLE_APPETITE", true);
+        public static readonly Texture2D apexAbsorptionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/APEX_ABSORPTION", true);
+        public static readonly Texture2D ascensionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ASCENSION", true);
+        public static readonly Texture2D beautifulBulkIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/BEAUTIFUL_BULK", true);
+        public static readonly Texture2D breakneckBuffetIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/BREAKNECK_BUFFET", true);
+        public static readonly Texture2D bulletProofBlobIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/BULLETPROOF_BLOB", true);
+        public static readonly Texture2D comfortableCorpulenceIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/COMFORTABLE_CORPULENCE", true);
+        public static readonly Texture2D culinaryConnisseurIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/CULINARY_CONNISSEUR", true);
+        public static readonly Texture2D demonicDevourmentIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/DEMONIC_DEVOURMENT", true);
+        public static readonly Texture2D dietPlanIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/DIET_PLAN", true);
         public static readonly Texture2D digestionBeyondQuestionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/DIGESTION_BEYOND_QUESTION", true);
-        public static readonly Texture2D endlessIndulgenceIcon =       ContentFinder<Texture2D>.Get("UI/PerkIcons/ENDLESS_INDULGENCE", true);
-        public static readonly Texture2D evenFurtherBeyondIcon =       ContentFinder<Texture2D>.Get("UI/PerkIcons/EVEN_FURTHER_BEYOND", true);
-        public static readonly Texture2D fatFurnaceIcon =              ContentFinder<Texture2D>.Get("UI/PerkIcons/FAT_FURNACE", true);
-        public static readonly Texture2D foldsOfHeavenIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/FOLDS_OF_HEAVEN", true);
-        public static readonly Texture2D gigaGurglingIcon =            ContentFinder<Texture2D>.Get("UI/PerkIcons/GIGA_GURGLING", true);
-        public static readonly Texture2D gluttonyIncarnateIcon =       ContentFinder<Texture2D>.Get("UI/PerkIcons/GLUTTONY_INCARNATE", true);
-        public static readonly Texture2D heavyRevianIcon =             ContentFinder<Texture2D>.Get("UI/PerkIcons/HEAVY_REVIAN", true);
-        public static readonly Texture2D itsComingThisWayIcon =        ContentFinder<Texture2D>.Get("UI/PerkIcons/ITS_COMING_THIS_WAY", true);
-        public static readonly Texture2D limitBreakIcon =              ContentFinder<Texture2D>.Get("UI/PerkIcons/LIMIT_BREAK", true);
-        public static readonly Texture2D makesAllTheRulesIcon =        ContentFinder<Texture2D>.Get("UI/PerkIcons/MAKES_ALL_OF_THE_RULES", true);
-        public static readonly Texture2D noPainStillGainIcon =         ContentFinder<Texture2D>.Get("UI/PerkIcons/NO_PAIN_STILL_GAIN", true);
-        public static readonly Texture2D paunchPowerIcon =             ContentFinder<Texture2D>.Get("UI/PerkIcons/PAUNCH_POWER", true);
-        public static readonly Texture2D practicalProblemsIcon =       ContentFinder<Texture2D>.Get("UI/PerkIcons/PRACTICAL_PROBLEMS", true);
-        public static readonly Texture2D rotundRegenerationIcon =      ContentFinder<Texture2D>.Get("UI/PerkIcons/ROTUND_REGENERATION", true);
-        public static readonly Texture2D squareOneIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/SQUARE_ONE", true);
-        public static readonly Texture2D titanicTankIcon =             ContentFinder<Texture2D>.Get("UI/PerkIcons/TITANIC_TANK", true);
-        public static readonly Texture2D voraciousIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/VORACIOUS", true);
-        public static readonly Texture2D weLikeToPartyIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/WE_LIKE_TO_PARTY", true);
-        public static readonly Texture2D weightGain4000Icon =          ContentFinder<Texture2D>.Get("UI/PerkIcons/WEIGHT_GAIN_4000", true);
-        public static readonly Texture2D wellInsulatedIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/WELL_INSULATED", true);
+        public static readonly Texture2D endlessIndulgenceIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ENDLESS_INDULGENCE", true);
+        public static readonly Texture2D evenFurtherBeyondIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/EVEN_FURTHER_BEYOND", true);
+        public static readonly Texture2D fatFurnaceIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/FAT_FURNACE", true);
+        public static readonly Texture2D foldsOfHeavenIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/FOLDS_OF_HEAVEN", true);
+        public static readonly Texture2D gigaGurglingIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/GIGA_GURGLING", true);
+        public static readonly Texture2D gluttonyIncarnateIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/GLUTTONY_INCARNATE", true);
+        public static readonly Texture2D heavyRevianIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/HEAVY_REVIAN", true);
+        public static readonly Texture2D itsComingThisWayIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ITS_COMING_THIS_WAY", true);
+        public static readonly Texture2D limitBreakIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/LIMIT_BREAK", true);
+        public static readonly Texture2D makesAllTheRulesIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/MAKES_ALL_OF_THE_RULES", true);
+        public static readonly Texture2D noPainStillGainIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/NO_PAIN_STILL_GAIN", true);
+        public static readonly Texture2D paunchPowerIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/PAUNCH_POWER", true);
+        public static readonly Texture2D practicalProblemsIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/PRACTICAL_PROBLEMS", true);
+        public static readonly Texture2D rotundRegenerationIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ROTUND_REGENERATION", true);
+        public static readonly Texture2D squareOneIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/SQUARE_ONE", true);
+        public static readonly Texture2D titanicTankIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/TITANIC_TANK", true);
+        public static readonly Texture2D voraciousIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/VORACIOUS", true);
+        public static readonly Texture2D weLikeToPartyIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/WE_LIKE_TO_PARTY", true);
+        public static readonly Texture2D weightGain4000Icon = ContentFinder<Texture2D>.Get("UI/PerkIcons/WEIGHT_GAIN_4000", true);
+        public static readonly Texture2D wellInsulatedIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/WELL_INSULATED", true);
 
-        public static readonly Texture2D atomicAnomalyIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/ATOMIC_ANOMALY", true);
-        public static readonly Texture2D cropNotchIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/CROP_NOTCH", true);
-        public static readonly Texture2D packWhaleIcon =               ContentFinder<Texture2D>.Get("UI/PerkIcons/PACK_WHALE", true);
-        public static readonly Texture2D suddenExpansionIcon =         ContentFinder<Texture2D>.Get("UI/PerkIcons/SUDDEN_EXPANSION", true);
-        public static readonly Texture2D thatIcon =                    ContentFinder<Texture2D>.Get("UI/PerkIcons/THAT", true);
-        public static readonly Texture2D theresTheBeefIcon =           ContentFinder<Texture2D>.Get("UI/PerkIcons/THERES_THE_BEEF", true);
+        public static readonly Texture2D atomicAnomalyIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ATOMIC_ANOMALY", true);
+        public static readonly Texture2D cropNotchIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/CROP_NOTCH", true);
+        public static readonly Texture2D packWhaleIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/PACK_WHALE", true);
+        public static readonly Texture2D suddenExpansionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/SUDDEN_EXPANSION", true);
+        public static readonly Texture2D thatIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/THAT", true);
+        public static readonly Texture2D theresTheBeefIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/THERES_THE_BEEF", true);
 
+        public static readonly Texture2D blackHoleIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/BLACK_HOLE", true);
+        public static readonly Texture2D peakEvolutionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/PEAK_EVOLUTION", true);
+        public static readonly Texture2D titaniumStomachIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/TITANIUM_STOMACH", true);
+        public static readonly Texture2D oneMoreBiteIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ONE_MORE_BITE", true);
 
         public static List<Perk> basicPerks = new List<Perk>
         {
@@ -367,7 +371,7 @@ namespace RimRound.Utilities
             }),
         };
 
-        public static List<Perk> advancedPerks = new List<Perk> 
+        public static List<Perk> advancedPerks = new List<Perk>
         {
             new Perk("RR_Voracious_Title", "RR_Voracious_Desc", 4, 3, voraciousIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
@@ -666,6 +670,49 @@ namespace RimRound.Utilities
 
                 return new SuccessReport("", true);
             }),
+
+            new Perk("RR_TitaniumStomach_Title", "RR_TitaniumStomach_Desc", 10, 1, titaniumStomachIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+               if (GetInsufficientPerkLevelSuccessReport("RR_Digestion_Beyond_Question_Title", 5, p) is SuccessReport s && !s)
+                    return s;
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+            new Perk("RR_OneMoreBite_Title", "RR_OneMoreBite_Desc", 3, 100, oneMoreBiteIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
         };
 
         public static List<Perk> elitePerks = new List<Perk>
@@ -730,6 +777,26 @@ namespace RimRound.Utilities
                 if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_040_Obese)))
                     return new SuccessReport("Must be Morbidly Obese I to purchase", false);
 
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+            new Perk("RR_BlackHole_Title", "RR_BlackHole_Desc", 50, 1, blackHoleIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -816,6 +883,32 @@ namespace RimRound.Utilities
 
                 return new SuccessReport("", true);
             }),
+
+            new Perk("RR_PeakEvolution_Title", "RR_PeakEvolution_Desc", 15, 5, peakEvolutionIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "Human"))
+                    return new SuccessReport("Only humans can purchase", false);
+
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    return new SuccessReport("Must be Gelatinous X to purchase", false);
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
         };
 
         public static List<Perk> ultimatePerks = new List<Perk>
@@ -848,6 +941,9 @@ namespace RimRound.Utilities
 
                 foreach (var aperk in Perks.advancedPerks)
                 {
+                    if (aperk.perkName == "RR_OneMoreBite_Title")
+                        continue;
+
                     if (p.perkLevels.PerkToLevels[aperk.perkName] < aperk.numberOfLevels)
                         failureDescription.AppendLine($"Requires {aperk.perkName.Translate()} level {aperk.numberOfLevels}");
                 }
@@ -856,7 +952,9 @@ namespace RimRound.Utilities
                 {
                     if (eperk.perkName == "RR_HeavyRevian_Title" ||
                         eperk.perkName == "RR_MakesAllTheRules_Title" ||
-                        eperk.perkName == "RR_That_Title")
+                        eperk.perkName == "RR_That_Title" ||
+                        eperk.perkName == "RR_PeakEvolution_Title" ||
+                        eperk.perkName == "RR_BlackHole_Title")
                         continue;
 
 
@@ -983,11 +1081,11 @@ namespace RimRound.Utilities
         }
 
 
-        public class SuccessReport 
+        public class SuccessReport
         {
             public static implicit operator bool(SuccessReport successReport) => successReport.successValue;
 
-            public SuccessReport(string reason, bool successValue) 
+            public SuccessReport(string reason, bool successValue)
             {
                 this.reason = reason;
                 this.successValue = successValue;
