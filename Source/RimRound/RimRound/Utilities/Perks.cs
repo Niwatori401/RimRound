@@ -1059,7 +1059,7 @@ namespace RimRound.Utilities
 
         public struct Perk
         {
-            public Perk(String perkTranslateString, string description, int cost, int numberOfLevels, Texture2D perkIcon, OnClickAction onClick, EligibilityValidator eligibilityValidator)
+            public Perk(String perkTranslateString, string description, int cost, int numberOfLevels, Texture2D perkIcon, OnClickAction onClick, EligibilityValidator eligibilityValidator, Predicate<FullnessAndDietStats_ThingComp> showPerkInMenu = null)
             {
                 this.perkName = perkTranslateString;
                 this.onClickEvent = onClick;
@@ -1068,6 +1068,7 @@ namespace RimRound.Utilities
                 this.description = description;
                 this.numberOfLevels = numberOfLevels;
                 this.eligibilityValidator = eligibilityValidator;
+                this.showPerkInMenu = showPerkInMenu;
             }
 
 
@@ -1078,6 +1079,7 @@ namespace RimRound.Utilities
             public readonly Texture2D perkIcon;
             public readonly OnClickAction onClickEvent;
             public readonly EligibilityValidator eligibilityValidator;
+            public readonly Predicate<FullnessAndDietStats_ThingComp> showPerkInMenu;
         }
 
 

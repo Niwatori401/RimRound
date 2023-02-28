@@ -144,7 +144,8 @@ namespace RimRound.UI
             Widgets.DrawLineHorizontal(0f, basictitleRect.yMax + 2, basictitleRect.width);
 
             foreach (Perk perk in Perks.basicPerks)
-                DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
+                if (perk.showPerkInMenu is null || perk.showPerkInMenu(fdsComp) || GlobalSettings.showAllPerks)
+                    DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
 
             //Adds a line of space
             int basicPerkRemainders = Perks.basicPerks.Count % 3;
@@ -160,7 +161,8 @@ namespace RimRound.UI
             Widgets.DrawLineHorizontal(0f, advancedTitleRect.yMax + 2, advancedTitleRect.width);
             
             foreach (Perk perk in Perks.advancedPerks)
-                DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
+                if (perk.showPerkInMenu is null || perk.showPerkInMenu(fdsComp) || GlobalSettings.showAllPerks)
+                    DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
 
             int advancedPerkRemainders = Perks.advancedPerks.Count % 3;
             perkIndex += (6 - advancedPerkRemainders);
@@ -175,7 +177,8 @@ namespace RimRound.UI
             Widgets.DrawLineHorizontal(0f, eliteTitleRect.yMax + 2, eliteTitleRect.width);
 
             foreach (Perk perk in Perks.elitePerks)
-                DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
+                if (perk.showPerkInMenu is null || perk.showPerkInMenu(fdsComp) || GlobalSettings.showAllPerks)
+                    DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
 
             int elitePerkRemainders = Perks.elitePerks.Count % 3;
             perkIndex += (6 - elitePerkRemainders);
@@ -191,7 +194,8 @@ namespace RimRound.UI
             Widgets.DrawLineHorizontal(0f, ultraTitleRect.yMax + 2, ultraTitleRect.width);
 
             foreach (Perk perk in Perks.ultimatePerks)
-                DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
+                if (perk.showPerkInMenu is null || perk.showPerkInMenu(fdsComp) || GlobalSettings.showAllPerks)
+                    DrawSinglePerk(perk, perkIndex++, drawRect, fdsComp);
 
             int ultimatePerkRemainders = Perks.ultimatePerks.Count % 3;
             perkIndex += (6 - ultimatePerkRemainders);

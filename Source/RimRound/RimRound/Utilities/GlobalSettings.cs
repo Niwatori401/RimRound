@@ -69,6 +69,7 @@ namespace RimRound.Utilities
         public static bool onlyUseStandardBodyType = false;
         public static bool hidePacksForCustomBodies = true;
         public static bool usePoundsWherePossible = false;
+        public static bool showAllPerks = false;
 
         #endregion
 

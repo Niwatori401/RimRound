@@ -552,7 +552,7 @@ namespace RimRound.Comps
             {
                 int apexAbsorbtionLevel = perkLevels.PerkToLevels?["RR_Apex_Absorption_Title"] ?? 0;
                 int wg4000Level = perkLevels.PerkToLevels?["RR_WeightGain4000_Title"] ?? 0;
-                int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_Breakneck_Buffet_Title"] ?? 0;
+                int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_MakesAllTheRules_Title"] ?? 0;
                 int heavyRevianLevel = perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int thatLevel = perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
 

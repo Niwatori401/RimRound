@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -433,7 +434,16 @@ namespace RimRound.UI
             },
            "RR_Mtw_GeneralSettings_usePoundsWherePossible".Translate(), ref GlobalSettings.usePoundsWherePossible, false, null, null, false);
 
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_showAllPerks".Translate(), ref GlobalSettings.showAllPerks, false, null, null, false, null, "Show perks that this pawn will never be elligible to purchase. (E.g. race-specific perks)");
 
+            
 
             generalSettingsCheckboxesRect.height = 30 * jndex;
             GUI.EndGroup();
@@ -681,7 +691,9 @@ namespace RimRound.UI
 
         static MethodInfo checkboxDrawMI = typeof(Widgets).GetMethod("CheckboxDraw", BindingFlags.Public | BindingFlags.Static);
         delegate void SwitchActionCallback();
-        static void CheckboxLabeled(Rect rect, string label, ref bool checkOn, bool disabled = false, Texture2D texChecked = null, Texture2D texUnchecked = null, bool placeCheckboxNearText = false, SwitchActionCallback action = null)
+        static Dictionary<string, int> titleToIDpair = new Dictionary<string, int>();
+
+        static void CheckboxLabeled(Rect rect, string label, ref bool checkOn, bool disabled = false, Texture2D texChecked = null, Texture2D texUnchecked = null, bool placeCheckboxNearText = false, SwitchActionCallback action = null, String descriptionText = null)
         {
             TextAnchor anchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleLeft;
@@ -690,6 +702,9 @@ namespace RimRound.UI
                 rect.width = Mathf.Min(rect.width, Text.CalcSize(label).x + 24f + 10f);
             }
             Widgets.Label(rect, label);
+
+            HandleTooltips(rect, label, descriptionText);
+
             if (!disabled && Widgets.ButtonInvisible(rect, true))
             {
                 checkOn = !checkOn;
@@ -708,6 +723,29 @@ namespace RimRound.UI
             Text.Anchor = anchor;
         }
 
+        private static void HandleTooltips(Rect rect, string label, string descriptionText)
+        {
+            if (descriptionText != null && Mouse.IsOver(rect))
+            {
+                if (!titleToIDpair.ContainsKey(label))
+                {
+                    int tooltipHash = 0;
+                    foreach (char c in label)
+                        tooltipHash += c;
+
+                    foreach (var pair in titleToIDpair)
+                    {
+                        if (pair.Value == tooltipHash)
+                            Log.Warning($"ID collision found! {pair.Key} collides with {label}");
+                    }
+
+                    titleToIDpair.Add(label, tooltipHash);
+                }
+
+                TooltipHandler.TipRegion(rect, () => descriptionText, titleToIDpair[label]);
+            }
+        }
+
         static void CheckMaxMinThresholds() 
         {
             if (GlobalSettings.minWeight.threshold >= GlobalSettings.maxWeight.threshold)
@@ -720,7 +758,7 @@ namespace RimRound.UI
         }
 
         static void NumberFieldLabeledWithRect<T>(
-            Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small, SwitchActionCallback action = null) where T : struct
+            Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small, SwitchActionCallback action = null, String descriptionText = null) where T : struct
         {
             T cachedVal = numericFieldData.threshold;
 
@@ -735,6 +773,8 @@ namespace RimRound.UI
                 Prefs.DevMode ? int.MaxValue : numericFieldData.max);
 
             T newVal = numericFieldData.threshold;
+
+            HandleTooltips(boundingRect, translationLabel, descriptionText);
 
             if (action != null && !object.Equals(newVal, cachedVal))
                 action();
