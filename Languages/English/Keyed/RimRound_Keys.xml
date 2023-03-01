@@ -386,13 +386,13 @@
 	<RR_Comfortable_Corpulence_Desc>-0.03x movement penalty multiplier per level\n\n"{0}'s body has gotten used to bearing the substantial strain on it, resulting in a small reduction to their movement penalty."</RR_Comfortable_Corpulence_Desc>
 	<RR_Culinary_Connisseur_Desc>+1 cooking skill (in effect)\n\n"Eating obscene amounts of food sure does give you a taste for it. {0} has gotten better at cooking as a result and can now prepare meals faster."</RR_Culinary_Connisseur_Desc>
 	<RR_Demonic_Devourment_Desc>+10% eating speed per level\n\n"After spending so much time eating, {0} has naturally gotten rather good at it."</RR_Demonic_Devourment_Desc>
-	<RR_Diet_Plan_Desc>+0.2 weight loss multiplier\n\n"{0} has learned how to more effectively managed their weight and can lose weight more efficiently if desired."</RR_Diet_Plan_Desc>
+	<RR_Diet_Plan_Desc>+0.2 weight loss multiplier\nNot required for "Ascension".\n\n"{0} has learned how to more effectively managed their weight and can lose weight more efficiently if desired."</RR_Diet_Plan_Desc>
 	<RR_Digestion_Beyond_Question_Desc>+0.3x digestion multiplier per level\n\n"{0}'s digestive juices increase in acidity, improving the rate at which nutrition turns into weight."</RR_Digestion_Beyond_Question_Desc>
 	<RR_Endless_Indulgence_Desc>+1x stomach elasticity per level\n\n"The elasticity of {0}'s stomach has increased, allowing their maximum capacity to increase faster while hopelessly overstuffed."</RR_Endless_Indulgence_Desc>
 	<RR_LimitBreak_Desc>+10% hard limit cap per level\n\n"{0} has gotten used to the feeling of being full, so much so that they can push the limits of their stomach further than before."</RR_LimitBreak_Desc>
 	<RR_NoPainStillGain_Desc>-0.1x pain multiplier from fullness\n\n"{0} has developed a tolerance to the sensation  of being stuffed to almost bursting, and feels less affected by it as a result."</RR_NoPainStillGain_Desc>
 	<RR_PracticalProblems_Desc>Hoverchairs are 25% more effective\n\n"Hey look buddy, I'm an architect. That means I solve problems. Not problems like building houses large enough for overfed Ratkin, I solve practical problems. Like this custom made hoverchair."</RR_PracticalProblems_Desc>
-	<RR_SquareOne_Desc>Sets weight severity to lowest possible level. Can be rebought multiple times.\n\n"Returns the pawn to an emaciated stage, but retains your level and perks."</RR_SquareOne_Desc>
+	<RR_SquareOne_Desc>Sets weight severity to lowest possible level. Can be rebought multiple times.\nNot required for "Ascension".\n\n"Returns the pawn to an emaciated stage, but retains your level and perks."</RR_SquareOne_Desc>
 	<RR_TitanicTank_Desc>+10% blunt resistance per level\n\n"{0}'s size means that blunt objects, like clubs and hammers, tend to bounce right off them. They are harder to put down in a fist fight."</RR_TitanicTank_Desc>
 	<RR_WellInsulated_Desc>Minimum comfortable temperature increased by 5.0C per level.\n\n"{0} doesn't mind the cold. Their extra padding keeps them warm."</RR_WellInsulated_Desc>
 	<RR_Voracious_Desc>+25% hunger rate multiplier per level\n\n"{0} can no longer function unless they are recklessly fattening themselves. Whether they want it or not, {0} needs an immeasurable amount of nutrition."\n\nPrerequisite: Ample Appetite Level 3</RR_Voracious_Desc>
@@ -412,8 +412,8 @@
 	<RR_HeavyRevian_Desc>-0.2x incoming damage multiplier, +20% consciousness, +60% moving, +60% manipulation, +50% eating speed, +1.50x weight gain multiplier\nNot required for "Ascension".\n\n"Forget offerings to Skarne, they should bring them to ME!"\n\nPrerequisite: Gelatinous X or higher, Revian</RR_HeavyRevian_Desc>
 	<RR_Even_Further_Beyond_Desc>Unlocks Gelatinous 11-20\n\n"There was no reason to expect that {0} would ever stop growing. Not bound by small inconveniences like logic, they set their sights on the stars beyond this increasingly cramped rimworld. But since no ship in the universe could ever carry their inordinate mass, that only leaves one option..."\n\nPrerequisite: Every single other perk and ability, excluding race-specific perks, Diet Plan, Sudden Expansion, Atomic Anomaly and Square One</RR_Even_Further_Beyond_Desc>
 	<RR_Ascension_Desc>Wins game.\n\n"Ascend past your limits and face your destiny. Once you pick this perk, the game will end."\n\nPrerequisite: EVEN FURTHER BEYOND!, Gelatinous 20 (1,000,000KG)</RR_Ascension_Desc>
-	<RR_SuddenExpansion_Desc>Can be purchased multiple times.\n\nPawn instantly gains 5 kilograms. This amount is affected by other weight gain multipliers.\n\n"{0}'s clothes just got a lot tighter. That's weird. Must've been the wind."</RR_SuddenExpansion_Desc>
-	<RR_Atomic_Anomaly_Desc>Can be purchased multiple times.\n\n+500KG to pawn. Stacks with other multipliers.\n\n"As a result of ingesting just about everything edible known to mankind, {0}'s stomach accidentally causes a chain chemical reaction that metabolizes into a colossal amount of fat almost immediately.\n{0} barely even noticed."\n\nPrerequisite: EVEN FURTHER BEYOND!, Must be at Gelatinous X+ to purchase.</RR_Atomic_Anomaly_Desc>
+	<RR_SuddenExpansion_Desc>Can be purchased multiple times.\nNot required for "Ascension".\n\nPawn instantly gains 5 kilograms. This amount is affected by other weight gain multipliers.\n\n"{0}'s clothes just got a lot tighter. That's weird. Must've been the wind."</RR_SuddenExpansion_Desc>
+	<RR_Atomic_Anomaly_Desc>Can be purchased multiple times.\n\n+500KG to pawn. Stacks with other multipliers.\nNot required for "Ascension".\n\n"As a result of ingesting just about everything edible known to mankind, {0}'s stomach accidentally causes a chain chemical reaction that metabolizes into a colossal amount of fat almost immediately.\n{0} barely even noticed."\n\nPrerequisite: EVEN FURTHER BEYOND!, Must be at Gelatinous X+ to purchase.</RR_Atomic_Anomaly_Desc>
 	<RR_PackWhale_Desc>Pawn can "carry" double the normal amount.\n\n"So many folds, so many places to store things! {0} makes an excellent travelling buddy, provided you don't mind the increased "snack breaks." They can carry much more on long-distance trips. Hopefully you can find it all again..."\n\nPrerequisite: Morbidly Obese or higher, must remain this weight or higher to keep bonus.</RR_PackWhale_Desc>
 	<RR_CropNotch_Desc>+10% farming/crop yield for the user.\n\n"The harvest sure is bountiful this season. And next season."</RR_CropNotch_Desc>
 	<RR_TheresTheBeef_Desc>Gain additional meat yields from butchered animals. +50% butchery efficiency for the user.\n\n"Why's everyone always so particular about what parts of the animal are edible? It's all good eating!"</RR_TheresTheBeef_Desc>
@@ -423,4 +423,38 @@
 	<RR_TitaniumStomach_Desc>+Immunity to food poisoning, +1.0x digestion rate multiplier.\n\n"Having digested such a considerable amount of food, {0}'s stomach even breaks down harmful enzymes and chemicals they may happen to accidentally ingest. In doing so, it has also aided the speed at which nutrition is processed."</RR_TitaniumStomach_Desc>
 	<RR_PeakEvolution_Desc>+1.0 weight gain multiplier\nNot required for "Ascension".\n\n"This is the apex of humanity. {0}'s very cellular structure has completely shifted, resulting in an exceptionally high rate of weight gain. And, not to be outdone by any inferior aliens, they can do it again and again, and again..."</RR_PeakEvolution_Desc>
 	<RR_OneMoreBite_Desc>+1.0L stomach capacity\nNot required for "Ascension".\n\n"There's still so much left to eat, this is no time to be worrying about trivial things like stomach capacity. Just keep going."</RR_OneMoreBite_Desc>
+	
+	<RimRound_Credits_Ascension_Intro>You've done it. Your ceaseless quest for gluttony has allowed you to expand to a size so colossal, that an alien ship was able to spot you from orbit. Intrigued, they came to investigate, and were fascinated with the...results. They decided to assist you, not in leaving the planet, but in making you a test subject.\n</RimRound_Credits_Ascension_Intro>
+	<RimRound_Credits_Ascension_Body>Their technologies and culinary preparations were far beyond comprehension, and the subject had little choice in this new undertaking. In due time, their current size was dwarfed, and their exponential growth continued unimpeded. The world beneath them shrank, until they took its place, becoming the land itself. With only the vast expanse of space to challenge their scale, their conquest did not end there, on the contrary, it was merely beginning.\n\nFattened beyond even mortal understanding, the subject became so immense that even many archotech societies took notice, and, eventually, cultivated a galactic empire using their eternally expanding form. Some say they are there to this very day, in a state of perpetual bliss, their inescapable fate quite literally written in the stars.\n\nYou have chosen your destiny.</RimRound_Credits_Ascension_Body>
+	<RimRound_Credits_Title>RimRound Credits\n</RimRound_Credits_Title>
+	<RimRound_Credits_Description>Programming
+- Niwatori401
+
+Concept, design
+- Niwatori401
+- Ultranova
+
+Art, Sprite work, UI
+- BambooAle
+- ArtOfFire1
+- Ultranova
+- Bloopy
+
+Writing, flavor text
+- Ultranova
+- rngsusd
+
+Fattening Foods addon
+- SuperSpaces
+
+Other RimRound addons
+- Steven_
+- acoolgai
+
+Pre-Alpha Testers
+- pinguin
+- Alex Sharp
+- RandomButton
+
+Additional thanks to all of the folks on the RimRound discord server who helped bugfix, contribute ideas and help make the mod what it is today.</RimRound_Credits_Description>
 </LanguageData>
