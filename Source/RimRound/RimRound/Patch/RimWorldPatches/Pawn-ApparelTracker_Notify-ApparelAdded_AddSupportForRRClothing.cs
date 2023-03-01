@@ -31,7 +31,7 @@ namespace RimRound.Patch
             StatChangeUtility.ChangeRimRoundStats(pawn, new RimRoundStatBonuses()
             {
                 weightGainMultBonus = clothingStats.weightGainMultiplierMultBonus,
-                digestionRateFlatBonus = clothingStats.digestionSpeedMultBonus,
+                digestionRateMultiplier = clothingStats.digestionSpeedMultBonus,
                 stomachElasticityMultiplier = clothingStats.stomachElasticityMultBonus,
                 fullnessGainedMultBonus = clothingStats.fullnessGainedMultiplierBonus,
                 movementFlatBonus = clothingStats.flatMoveBonus,

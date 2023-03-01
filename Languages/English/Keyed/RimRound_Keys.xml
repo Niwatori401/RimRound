@@ -117,6 +117,73 @@
 	<RR_Mtw_GizmoSettings_ExemptionGizmo>Show dynamic body type exemption gizmo</RR_Mtw_GizmoSettings_ExemptionGizmo>
 	<RR_Mtw_GizmoSettings_BlobIntoBedGizmo>Show blob into bed gizmo</RR_Mtw_GizmoSettings_BlobIntoBedGizmo>
 	<!--Other-->
+	
+	<RR_ToolTip_HediffSettings_WeightManipulationPenaltyMultiplier>Multiplier affecting to what degree a pawn's weight should impact their manipulation.</RR_ToolTip_HediffSettings_WeightManipulationPenaltyMultiplier>
+<RR_ToolTip_HediffSettings_WeightMovementPenaltyMultiplier>Multiplier affecting to what degree a pawn's weight should impact their movement.</RR_ToolTip_HediffSettings_WeightMovementPenaltyMultiplier>
+<RR_ToolTip_HediffSettings_WeightRestFallRateMultiplier>Multiplier affecting to what degree a pawn's weight should impact their rest fall rate.</RR_ToolTip_HediffSettings_WeightRestFallRateMultiplier>
+<RR_ToolTip_HediffSettings_WeightHungerFallRateMultiplier>Multiplier affecting to what degree a pawn's weight should impact their hunger rate.</RR_ToolTip_HediffSettings_WeightHungerFallRateMultiplier>
+
+<RR_ToolTip_HediffSettings_FullnessPainMultiplier>Multiplier affecting to what degree a pawn feels fullness from being extremely full.</RR_ToolTip_HediffSettings_FullnessPainMultiplier>
+<RR_ToolTip_HediffSettings_FullnessMovementPenaltyMultiplier>Multiplier affecting to what degree a pawn's fullness should impact their movement.</RR_ToolTip_HediffSettings_FullnessMovementPenaltyMultiplier>
+<RR_ToolTip_HediffSettings_FullnessEatingPenaltyMultiplier>Multiplier affecting to what degree a pawn's fullness should impact their eating speed.</RR_ToolTip_HediffSettings_FullnessEatingPenaltyMultiplier>
+
+<RR_ToolTip_Preferences_ShowPawnDietGizmo>Show the diet management gizmo on pawns. Disabling this will not change their diet mode or settings.</RR_ToolTip_Preferences_ShowPawnDietGizmo>
+<RR_ToolTip_Preferences_ShowSleepPostureGizmo>Show 'change sleep position' button on pawns. Disabling this will not change their configured sleeping position.</RR_ToolTip_Preferences_ShowSleepPostureGizmo>
+<RR_ToolTip_Preferences_ShowBlanketManagementGizmo>Show 'show/hide blanket' button on pawns. Disabling this will not change their current setting.</RR_ToolTip_Preferences_ShowBlanketManagementGizmo>
+<RR_ToolTip_Preferences_ShowPersonalExemptionGizmo>Show 'personal exemption' button. Disabling this will not change their current setting.</RR_ToolTip_Preferences_ShowPersonalExemptionGizmo>
+<RR_ToolTip_Preferences_ShowBlobIntoBedGizmo>Show 'blob bed' button, if elligible. Disabling this will not change their current setting.</RR_ToolTip_Preferences_ShowBlobIntoBedGizmo>
+<RR_ToolTip_Preferences_ShowLegacyDietGizmo>Use legacy diet gizmo rather than the new, slimmer one.</RR_ToolTip_Preferences_ShowLegacyDietGizmo>
+
+<RR_ToolTip_Preferences_DynamicBodiesFor_Males>Enable use of RimRound sprites for males. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Males>
+<RR_ToolTip_Preferences_DynamicBodiesFor_Females>Enable use of RimRound sprites for females. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Females>
+<RR_ToolTip_Preferences_DynamicBodiesFor_FriendlyNPCS>Enable use of RimRound sprites for friendly NPCs (e.g. traders). This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_FriendlyNPCS>
+<RR_ToolTip_Preferences_DynamicBodiesFor_HostileNPCS>Enable use of RimRound sprites for hostile NPCs (e.g. raiders). This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_HostileNPCS>
+<RR_ToolTip_Preferences_DynamicBodiesFor_Prisoners>Enable use of RimRound sprites for prisoners. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Prisoners>
+<RR_ToolTip_Preferences_DynamicBodiesFor_Slaves>Enable use of RimRound sprites for slaves. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Slaves>
+
+<RR_ToolTip_Preferences_ShowSpecialDebugSettings>Show debug settings used for debugging and racial support. Not recommended for most users.</RR_ToolTip_Preferences_ShowSpecialDebugSettings>
+<RR_ToolTip_Preferences_ShowTattoosOnRRBodies>Use tattoos with RimRound sprites. The RimWorld's tattoos do not scale nicely and in general can look bad on RimRound body sprites. Recommended: Off</RR_ToolTip_Preferences_ShowTattoosOnRRBodies>
+<RR_ToolTip_Preferences_BurstingEnabled>Allow pawns that eat over their hard limit to become severely injured. This can happen unintentionally and randomly. Recommended: Off</RR_ToolTip_Preferences_BurstingEnabled>
+<RR_ToolTip_Preferences_PreferDefaultClothingOverNaked>Use a fallback clothing sprite if no suitable match is found. RimRound does not have direct support for most vanilla clothing items and any modded ones. If disabled, pawns will be naked anytime they are wearing unsupported clothing. Recommended: On</RR_ToolTip_Preferences_PreferDefaultClothingOverNaked>
+<RR_ToolTip_Preferences_AlternateHeadPlacement>Place pawn's heads in front of the body portion of their sprite if they are facing north. Sometimes can be buggy but may look more realistic for larger body sizes. Purely preference.</RR_ToolTip_Preferences_AlternateHeadPlacement>
+<RR_ToolTip_Preferences_WeightOpinionsGiveMoodlets>Give mood buffs and debuffs for what a pawn's weight opinion is and how closely they are to their ideal body.</RR_ToolTip_Preferences_WeightOpinionsGiveMoodlets>
+<RR_ToolTip_Preferences_VariedBodyWeightRequirements>Enable weight requirements being different for different sized sprites. Some races use a smaller sprite set. Additionally, smaller sprite sets can be applied to any race. This setting reduces the amount of weight required for each stage accordingly.</RR_ToolTip_Preferences_VariedBodyWeightRequirements>
+<RR_ToolTip_Preferences_UseLegacyLardySprite>Use the variant lardy east/west sprite. Purely preference.</RR_ToolTip_Preferences_UseLegacyLardySprite>
+<RR_ToolTip_Preferences_UseOnlyStandardSet>Toggle use of apple body type sprites. They can have less support, so you can switch all pawns to use this type here. If you want more fine grained control, pawn body archetype can be switched in debug mode.</RR_ToolTip_Preferences_UseOnlyStandardSet>
+<RR_ToolTip_Preferences_UseZoomPortraitStyle>Use the alternate portrait style. Switches between keeping their face the same size or fitting their body to the box. Purely preference.</RR_ToolTip_Preferences_UseZoomPortraitStyle>
+<RR_ToolTip_Preferences_HidePacksForCustomBodies>Pack items (e.g. shield belt) scale with body size. Other items from mods can do this too. Enabling the setting will replace pack textures with the default clothing option.</RR_ToolTip_Preferences_HidePacksForCustomBodies>
+<RR_ToolTip_Preferences_UsePoundsWherePossible>Use pounds instead of kilograms in certain displays. RimWorld uses metric for it's measurements, so stats such as 'mass' will remain unaffected.</RR_ToolTip_Preferences_UsePoundsWherePossible>
+<RR_ToolTip_Preferences_ShowAllPerks>Show perks that this pawn will never be elligible to purchase. (E.g. race-specific perks)</RR_ToolTip_Preferences_ShowAllPerks>
+
+<RR_ToolTip_NumericPreferences_MinimumAgeForCustomBody>The age after which pawns will use RimRound bodies. Pawns below this age will still gain/lose weight but will not use custom bodies.</RR_ToolTip_NumericPreferences_MinimumAgeForCustomBody>
+<RR_ToolTip_NumericPreferences_GlobalWGModifier>Any and all gained weight is multiplied by this value. A '2' here would mean double the rate of weight gain across the board.</RR_ToolTip_NumericPreferences_GlobalWGModifier>
+<RR_ToolTip_NumericPreferences_GlobalWLModifier>All non-surgical weight loss is multiplied by this value. A '2' here would mean double the rate of ambient weight loss.</RR_ToolTip_NumericPreferences_GlobalWLModifier>
+<RR_ToolTip_NumericPreferences_FemaleWGModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_FemaleWGModifier>
+<RR_ToolTip_NumericPreferences_FemaleWLModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_FemaleWLModifier>
+<RR_ToolTip_NumericPreferences_MaleWGModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_MaleWGModifier>
+<RR_ToolTip_NumericPreferences_MaleWLModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_MaleWLModifier>
+<RR_ToolTip_NumericPreferences_FullnessMultiplier>Fullness gained after ingestion is multiplied by this value. A '2' here would effectively double the amount of food a pawn eats per meal. If this is too high, pawns can starve or explode their stomachs, so be careful.</RR_ToolTip_NumericPreferences_FullnessMultiplier>
+<RR_ToolTip_NumericPreferences_DigestionRateMultiplier>The rate at which pawns digest food is multiplied by this value. If you would like them to stay full for longer, you can lower this value.</RR_ToolTip_NumericPreferences_DigestionRateMultiplier>
+<RR_ToolTip_NumericPreferences_StomachElasticityMultiplier>The rate at which a pawn's stomach expands when above the soft limit is multiplied by this value.</RR_ToolTip_NumericPreferences_StomachElasticityMultiplier>
+<RR_ToolTip_NumericPreferences_TicksPerHungerCheck>The tick interval between digestion checks. A lower value will result in 'smoother' digestion but also potentially reduce performance.</RR_ToolTip_NumericPreferences_TicksPerHungerCheck>
+<RR_ToolTip_NumericPreferences_TicksPerBodyChangeCheck>The tick interval between body update checks. If pawn sprites are not updating quick enough you can decrease this value. However, this may reduce performance.</RR_ToolTip_NumericPreferences_TicksPerBodyChangeCheck>
+<RR_ToolTip_NumericPreferences_SoftLimitMultiplier>Global multiplier for pawn stomach capacity.</RR_ToolTip_NumericPreferences_SoftLimitMultiplier>
+<RR_ToolTip_NumericPreferences_HardLimitMultiplier>Global multiplier for pawn extra stomach capacity. If you want to increase stomach capacity in general, change the soft limit multiplier instead.</RR_ToolTip_NumericPreferences_HardLimitMultiplier>
+<RR_ToolTip_NumericPreferences_MinWeight>Pawns cannot lose weight below this value. This is in kilograms.</RR_ToolTip_NumericPreferences_MinWeight>
+<RR_ToolTip_NumericPreferences_MaxWeight>Pawns cannot gain weight above this value. This is in kilograms.</RR_ToolTip_NumericPreferences_MaxWeight>
+<RR_ToolTip_NumericPreferences_MinWeightForBlobBed>The weight required for a pawn to be elligible as a 'blob bed'. Pawns below this weight will not have the button to do so. This is in kilograms.</RR_ToolTip_NumericPreferences_MinWeightForBlobBed>
+<RR_ToolTip_NumericPreferences_WeightForAltWiggleAngle>In Vanilla RimWorld, downed pawns are placed at a steep angle. This can look really wacky with RimRound's larger sprites. Pawns above this weight will use RimRound's alternate less steep downed angle. This is in kilograms.</RR_ToolTip_NumericPreferences_WeightForAltWiggleAngle>
+<RR_ToolTip_NumericPreferences_TicksPerWeightGainRequestProcess>The tick interval between weight gain request checks. Weight gain requests are from things such as the embiggener and weight gain gas. A lower value will mean more accurate weight gain intervals, but may impact performance.</RR_ToolTip_NumericPreferences_TicksPerWeightGainRequestProcess>
+<RR_ToolTip_NumericPreferences_MeatMultiplierForWeight>RimRound adjusts the amount of meat pawns drop based on their weight. However, for extremely large pawns this can result in huge, unmanagable piles of meat spawning when you butcher them. This value is a multiplier of to what degree weight impacts meat yield. '0' restores Vanilla behavior.</RR_ToolTip_NumericPreferences_MeatMultiplierForWeight>
+<RR_ToolTip_NumericPreferences_MinForCapableMovement>RimRound allows pawns with almost no movement to be considered 'mobile'. This can cause inconvenience when a pawn tries to accomplish tasks they have no chance of getting to in time. This is a percentage representing when they should be immobilized by having too low of a movement stat.</RR_ToolTip_NumericPreferences_MinForCapableMovement>
+<RR_ToolTip_NumericPreferences_MaxGelatinousSize>Body sizes beyond Gelatinous simply scale. To complete the game with the Ascension ending you need to reach Gelatinous 20. However, this can result in a pawn that is so large they take up too much of the screen. You can cap the visual sprite size by entering a value of 1-20 representing the max sprite size you'd like to see.</RR_ToolTip_NumericPreferences_MaxGelatinousSize>
+<RR_ToolTip_NumericPreferences_NutritionPerPerkLevel>The required nutrition to gain a level in the perk system. A standard meal is about 0.9 nutrition.</RR_ToolTip_NumericPreferences_NutritionPerPerkLevel>
+<RR_ToolTip_NumericPreferences_LevelsGainedPerLevel>This value dictated how many perk points you gain on level up.</RR_ToolTip_NumericPreferences_LevelsGainedPerLevel>
+<RR_ToolTip_NumericPreferences_MinWeightChangeForThrowingText>When a pawn gains (or loses) a substantial amount of weight, the amount they gained is thrown as text. This can be annoying for pawns who are gaining rapidly over a long period of time. You can increase this value to raise how large the gain has to be to throw text.</RR_ToolTip_NumericPreferences_MinWeightChangeForThrowingText>
+<RR_ToolTip_ThirdPartyModPreferences_MilkMultiplierByWeight>Multplier for how much weight impacts breast milk yield.</RR_ToolTip_ThirdPartyModPreferences_MilkMultiplierByWeight>
+	
+	
+	
 	<FloatMenuCantConsumeTooBig>Can't consume {1_labelShort}: Too big</FloatMenuCantConsumeTooBig>
 	
 	<!--Weight Gained Notifications-->

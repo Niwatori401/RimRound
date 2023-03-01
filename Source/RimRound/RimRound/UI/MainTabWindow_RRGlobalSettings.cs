@@ -134,14 +134,13 @@ namespace RimRound.UI
             int numericFieldCount = 0;
 
 
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffHungerRateMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffHungerRateMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffManipulationPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffManipulationPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffMovementPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffMovementPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffRestRateMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffRestRateMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffEatingPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffEatingPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffMovementPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffMovementPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffPainMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffPainMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); });
-
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffHungerRateMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffHungerRateMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); }, "RR_ToolTip_HediffSettings_WeightHungerFallRateMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffManipulationPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffManipulationPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); }, "RR_ToolTip_HediffSettings_WeightManipulationPenaltyMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffMovementPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffMovementPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); }, "RR_ToolTip_HediffSettings_WeightMovementPenaltyMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightHediffRestRateMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_weightHediffRestRateMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); }, "RR_ToolTip_HediffSettings_WeightRestFallRateMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffEatingPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffEatingPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); }, "RR_ToolTip_HediffSettings_FullnessEatingPenaltyMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffMovementPenaltyMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffMovementPenaltyMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); }, "RR_ToolTip_HediffSettings_FullnessMovementPenaltyMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessHediffPainMult, numericFieldCount++, "RR_Hsw_HediffNumericSettings_fullnessHediffPainMult", GameFont.Small, () => { DirtyAllHediffSetCaches(); }, "RR_ToolTip_HediffSettings_FullnessPainMultiplier");
 
             globalMultipliersSettingsFieldRect.height = numericFieldCount * spaceBetweenNumberFields;
 
@@ -260,55 +259,82 @@ namespace RimRound.UI
 
             int positionIndex = 0;
 
-            Widgets.CheckboxLabeled(new Rect(
+            CheckboxLabeled(new Rect(
                 gizmoSettingsCheckBoxesRect.x,
                 positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 spaceBetweenCheckBoxes),
-                "RR_Mtw_GizmoSettings_PawnDietManagementGizmo".Translate(), ref GlobalSettings.showPawnDietManagementGizmo);
+                "RR_Mtw_GizmoSettings_PawnDietManagementGizmo",
+                ref GlobalSettings.showPawnDietManagementGizmo,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_ShowPawnDietGizmo");
 
-            Widgets.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
                 y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_GizmoSettings_LargeDietGizmo".Translate(), ref GlobalSettings.largeDietGizmo);
+                "RR_Mtw_GizmoSettings_LargeDietGizmo",
+                ref GlobalSettings.largeDietGizmo,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_ShowLegacyDietGizmo");
 
-            Widgets.CheckboxLabeled(new Rect
+            CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
                 y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_GizmoSettings_SleepPostureManagementGizmo".Translate(), ref GlobalSettings.showSleepPostureManagementGizmo);
-            Widgets.CheckboxLabeled(new Rect
+                "RR_Mtw_GizmoSettings_SleepPostureManagementGizmo",
+                ref GlobalSettings.showSleepPostureManagementGizmo,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_ShowSleepPostureGizmo");
+
+            CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
                 y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_GizmoSettings_BlanketMangementGizmo".Translate(), ref GlobalSettings.showBlanketManagementGizmo);
-            Widgets.CheckboxLabeled(new Rect
+                "RR_Mtw_GizmoSettings_BlanketMangementGizmo",
+                ref GlobalSettings.showBlanketManagementGizmo,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_ShowBlanketManagementGizmo");
+
+            CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
                 y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_GizmoSettings_ExemptionGizmo".Translate(), ref GlobalSettings.showExemptionGizmo);
-            Widgets.CheckboxLabeled(new Rect
+                "RR_Mtw_GizmoSettings_ExemptionGizmo",
+                ref GlobalSettings.showExemptionGizmo,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_ShowPersonalExemptionGizmo");
+
+            CheckboxLabeled(new Rect
             {
                 x = gizmoSettingsCheckBoxesRect.x,
                 y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
                 width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_GizmoSettings_BlobIntoBedGizmo".Translate(), ref GlobalSettings.showBlobIntobedGizmo);
-            
+                "RR_Mtw_GizmoSettings_BlobIntoBedGizmo",
+                ref GlobalSettings.showBlobIntobedGizmo,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_ShowBlobIntoBedGizmo");
+
 
 
             GUI.EndGroup();
@@ -333,7 +359,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_BurstingEnabled".Translate(), ref GlobalSettings.burstingEnabled);
+                        "RR_Mtw_GeneralSettings_BurstingEnabled",
+                        ref GlobalSettings.burstingEnabled,
+                        false, null, null, false,
+                        null,
+                        "RR_ToolTip_Preferences_BurstingEnabled");
 
             CheckboxLabeled(new Rect
             {
@@ -342,7 +372,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies".Translate(), ref GlobalSettings.showBodyTatoosForCustomSprites, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies",
+            ref GlobalSettings.showBodyTatoosForCustomSprites,
+            false, null, null, false,
+            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+            "RR_ToolTip_Preferences_ShowTattoosOnRRBodies");
 
             CheckboxLabeled(new Rect
             {
@@ -351,7 +385,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_PreferDefaultOverNaked".Translate(), ref GlobalSettings.preferDefaultOutfitOverNaked, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_PreferDefaultOverNaked",
+            ref GlobalSettings.preferDefaultOutfitOverNaked,
+            false, null, null, false,
+            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+            "RR_ToolTip_Preferences_PreferDefaultClothingOverNaked");
 
             CheckboxLabeled(new Rect
             {
@@ -360,7 +398,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-           "RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies".Translate(), ref GlobalSettings.alternateNorthHeadPositionForRRBodytypes, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+           "RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies",
+           ref GlobalSettings.alternateNorthHeadPositionForRRBodytypes,
+           false, null, null, false,
+           () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+           "RR_ToolTip_Preferences_AlternateHeadPlacement");
 
             CheckboxLabeled(new Rect
             {
@@ -369,7 +411,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_UseZoomPortraitStyle".Translate(), ref GlobalSettings.useZoomPortraitStyle, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_UseZoomPortraitStyle",
+            ref GlobalSettings.useZoomPortraitStyle,
+            false, null, null, false,
+            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+            "RR_ToolTip_Preferences_UseZoomPortraitStyle");
 
             CheckboxLabeled(new Rect
             {
@@ -378,7 +424,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_MoodletsForWeightOpinions".Translate(), ref GlobalSettings.moodletsForWeightOpinions, false, null, null, false);
+            "RR_Mtw_GeneralSettings_MoodletsForWeightOpinions",
+            ref GlobalSettings.moodletsForWeightOpinions,
+            false, null, null, false,
+            null,
+            "RR_ToolTip_Preferences_WeightOpinionsGiveMoodlets");
 
             CheckboxLabeled(new Rect
             {
@@ -387,7 +437,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize".Translate(), ref GlobalSettings.varyMinWeightForBodyTypeByBodySize, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize",
+            ref GlobalSettings.varyMinWeightForBodyTypeByBodySize,
+            false, null, null, false,
+            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+            "RR_ToolTip_Preferences_VariedBodyWeightRequirements");
 
             CheckboxLabeled(new Rect
             {
@@ -396,7 +450,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_ShowSpecialDebugSettings".Translate(), ref GlobalSettings.showSpecialDebugSettings, false, null, null, false);
+            "RR_Mtw_GeneralSettings_ShowSpecialDebugSettings",
+            ref GlobalSettings.showSpecialDebugSettings,
+            false, null, null, false,
+            null,
+            "RR_ToolTip_Preferences_ShowSpecialDebugSettings");
 
             CheckboxLabeled(new Rect
             {
@@ -405,7 +463,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_UseLegacyLardySprite".Translate(), ref GlobalSettings.useOldLardySprite, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+            "RR_Mtw_GeneralSettings_UseLegacyLardySprite",
+            ref GlobalSettings.useOldLardySprite,
+            false, null, null, false,
+            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+            "RR_ToolTip_Preferences_UseLegacyLardySprite");
 
             CheckboxLabeled(new Rect
             {
@@ -414,25 +476,11 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_OnlyUseStandardSprites".Translate(), ref GlobalSettings.onlyUseStandardBodyType, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
-            
-            CheckboxLabeled(new Rect
-            {
-                x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
-                width = generalSettingsRect.width - bufferForCheckmarks,
-                height = spaceBetweenCheckBoxes
-            },
-           "RR_Mtw_GeneralSettings_hidePacksForCustomBodies".Translate(), ref GlobalSettings.hidePacksForCustomBodies, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
-           
-            CheckboxLabeled(new Rect
-            {
-                x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
-                width = generalSettingsRect.width - bufferForCheckmarks,
-                height = spaceBetweenCheckBoxes
-            },
-           "RR_Mtw_GeneralSettings_usePoundsWherePossible".Translate(), ref GlobalSettings.usePoundsWherePossible, false, null, null, false);
+            "RR_Mtw_GeneralSettings_OnlyUseStandardSprites",
+            ref GlobalSettings.onlyUseStandardBodyType,
+            false, null, null, false,
+            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+            "RR_ToolTip_Preferences_UseOnlyStandardSet");
 
             CheckboxLabeled(new Rect
             {
@@ -441,9 +489,38 @@ namespace RimRound.UI
                 width = generalSettingsRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-            "RR_Mtw_GeneralSettings_showAllPerks".Translate(), ref GlobalSettings.showAllPerks, false, null, null, false, null, "Show perks that this pawn will never be elligible to purchase. (E.g. race-specific perks)");
+           "RR_Mtw_GeneralSettings_hidePacksForCustomBodies",
+           ref GlobalSettings.hidePacksForCustomBodies,
+           false, null, null, false,
+           () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+           "RR_ToolTip_Preferences_HidePacksForCustomBodies");
 
-            
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+           "RR_Mtw_GeneralSettings_usePoundsWherePossible",
+           ref GlobalSettings.usePoundsWherePossible,
+           false, null, null, false,
+           null,
+           "RR_ToolTip_Preferences_UsePoundsWherePossible");
+
+            CheckboxLabeled(new Rect
+            {
+                x = 0,
+                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
+                width = generalSettingsRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+            "RR_Mtw_GeneralSettings_showAllPerks", 
+            ref GlobalSettings.showAllPerks, 
+            false, null, null, false, 
+            null,
+            "RR_ToolTip_Preferences_ShowAllPerks");
+
 
             generalSettingsCheckboxesRect.height = 30 * jndex;
             GUI.EndGroup();
@@ -468,7 +545,12 @@ namespace RimRound.UI
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Male".Translate(), ref GlobalSettings.bodyChangeMale, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+                "RR_Mtw_BodyChangeExemptionSettings_Male",
+                ref GlobalSettings.bodyChangeMale,
+                false, null, null, false,
+                () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+                "RR_ToolTip_Preferences_DynamicBodiesFor_Males");
+
             CheckboxLabeled(new Rect
             {
                 x = 0,
@@ -476,7 +558,12 @@ namespace RimRound.UI
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Female".Translate(), ref GlobalSettings.bodyChangeFemale, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+                "RR_Mtw_BodyChangeExemptionSettings_Female",
+                ref GlobalSettings.bodyChangeFemale,
+                false, null, null, false,
+                () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+                "RR_ToolTip_Preferences_DynamicBodiesFor_Females");
+
             CheckboxLabeled(new Rect
             {
                 x = 0,
@@ -484,7 +571,12 @@ namespace RimRound.UI
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_HostileNPC".Translate(), ref GlobalSettings.bodyChangeHostileNPC, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+                "RR_Mtw_BodyChangeExemptionSettings_HostileNPC",
+                ref GlobalSettings.bodyChangeHostileNPC,
+                false, null, null, false,
+                () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+                "RR_ToolTip_Preferences_DynamicBodiesFor_HostileNPCS");
+
             CheckboxLabeled(new Rect
             {
                 x = 0,
@@ -492,7 +584,12 @@ namespace RimRound.UI
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC".Translate(), ref GlobalSettings.bodyChangeFriendlyNPC, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+                "RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC",
+                ref GlobalSettings.bodyChangeFriendlyNPC,
+                false, null, null, false,
+                () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+                "RR_ToolTip_Preferences_DynamicBodiesFor_FriendlyNPCS");
+
             CheckboxLabeled(new Rect
             {
                 x = 0,
@@ -500,7 +597,12 @@ namespace RimRound.UI
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Prisoner".Translate(), ref GlobalSettings.bodyChangePrisoners, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
+                "RR_Mtw_BodyChangeExemptionSettings_Prisoner",
+                ref GlobalSettings.bodyChangePrisoners,
+                false, null, null, false,
+                () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+                "RR_ToolTip_Preferences_DynamicBodiesFor_Prisoners");
+
             CheckboxLabeled(new Rect
             {
                 x = 0,
@@ -508,8 +610,11 @@ namespace RimRound.UI
                 width = exemptionSettingsCheckBoxesRect.width - bufferForCheckmarks,
                 height = spaceBetweenCheckBoxes
             },
-                "RR_Mtw_BodyChangeExemptionSettings_Slave".Translate(), ref GlobalSettings.bodyChangeSlaves, false, null, null, false, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
-
+                "RR_Mtw_BodyChangeExemptionSettings_Slave",
+                ref GlobalSettings.bodyChangeSlaves,
+                false, null, null, false,
+                () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
+                "RR_ToolTip_Preferences_DynamicBodiesFor_Slaves");
             GUI.EndGroup();
         }
 
@@ -529,32 +634,31 @@ namespace RimRound.UI
             int numericFieldCount = 0;
 
 
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minimumAgeForCustomBody, numericFieldCount++, "RR_Mtw_MinimumAgeForCustomBody", GameFont.Small, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplier, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitle");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplierFemale, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitleFemale");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplierMale, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitleMale");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplier, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitle");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplierFemale, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitleFemale");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplierMale, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitleMale");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessMultiplier, numericFieldCount++, "RR_Mtw_GlobalFullnessMultiplierTitle");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.digestionRateMultiplier, numericFieldCount++, "RR_Mtw_GlobalDigestionRateMultiplierTitle");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.stomachElasticityMultiplier, numericFieldCount++, "RR_Mtw_GlobalStomachElasticityMultiplierTitle");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksPerHungerCheck, numericFieldCount++, "RR_Mtw_TicksPerHungerCheckTitle");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksPerBodyChangeCheck, numericFieldCount++, "RR_Mtw_TicksPerBodyChangeCheckTitle");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.softLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalSoftLimitMultiplier");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.hardLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalHardLimitMultiplier");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minWeight, numericFieldCount++, "RR_Mtw_MinWeight", GameFont.Small, () => { CheckMaxMinThresholds(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxWeight, numericFieldCount++, "RR_Mtw_MaxWeight", GameFont.Small, () => { CheckMaxMinThresholds(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToBeBed, numericFieldCount++, "RR_Mtw_GlobalBlobIntoBedThreshold");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToAdjustWiggleAngle, numericFieldCount++, "RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksBetweenWeightGainRequestProcess, numericFieldCount++, "RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.meatMultiplierForWeight, numericFieldCount++, "RR_Mtw_meatMultiplierForWeight");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minForCapableMovement, numericFieldCount++, "RR_Mtw_minForCapableMovement", GameFont.Small, () => { RefreshMovementAbility(); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxVisualSizeGelLevel, numericFieldCount++, "RR_Mtw_maxVisualSizeGelLevel", GameFont.Small, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); });
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.nutritionPerPerkLevel, numericFieldCount++, "RR_Mtw_nutritionPerLevel");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.levelsGainedPerLevel, numericFieldCount++, "RR_Mtw_levelsGainedPerLevel");
-            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minWeightChangeForNumberText, numericFieldCount++, "RR_Mtw_minWeightToThrowText");
-
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minimumAgeForCustomBody, numericFieldCount++, "RR_Mtw_MinimumAgeForCustomBody", GameFont.Small, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); }, "RR_ToolTip_NumericPreferences_MinimumAgeForCustomBody");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplier, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitle", GameFont.Small, null, "RR_ToolTip_NumericPreferences_GlobalWGModifier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplierFemale, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitleFemale", GameFont.Small, null, "RR_ToolTip_NumericPreferences_FemaleWGModifier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightGainMultiplierMale, numericFieldCount++, "RR_Mtw_GlobalWeightGainMultiplierTitleMale", GameFont.Small, null, "RR_ToolTip_NumericPreferences_MaleWGModifier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplier, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitle", GameFont.Small, null, "RR_ToolTip_NumericPreferences_GlobalWLModifier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplierFemale, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitleFemale", GameFont.Small, null, "RR_ToolTip_NumericPreferences_FemaleWLModifier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightLossMultiplierMale, numericFieldCount++, "RR_Mtw_GlobalWeightLossMultiplierTitleMale", GameFont.Small, null, "RR_ToolTip_NumericPreferences_MaleWLModifier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.fullnessMultiplier, numericFieldCount++, "RR_Mtw_GlobalFullnessMultiplierTitle", GameFont.Small, null, "RR_ToolTip_NumericPreferences_FullnessMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.digestionRateMultiplier, numericFieldCount++, "RR_Mtw_GlobalDigestionRateMultiplierTitle", GameFont.Small, null, "RR_ToolTip_NumericPreferences_DigestionRateMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.stomachElasticityMultiplier, numericFieldCount++, "RR_Mtw_GlobalStomachElasticityMultiplierTitle", GameFont.Small, null, "RR_ToolTip_NumericPreferences_StomachElasticityMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksPerHungerCheck, numericFieldCount++, "RR_Mtw_TicksPerHungerCheckTitle", GameFont.Small, null, "RR_ToolTip_NumericPreferences_TicksPerHungerCheck");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksPerBodyChangeCheck, numericFieldCount++, "RR_Mtw_TicksPerBodyChangeCheckTitle", GameFont.Small, null, "RR_ToolTip_NumericPreferences_TicksPerBodyChangeCheck");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.softLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalSoftLimitMultiplier", GameFont.Small, null, "RR_ToolTip_NumericPreferences_SoftLimitMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.hardLimitMuliplier, numericFieldCount++, "RR_Mtw_GlobalHardLimitMultiplier", GameFont.Small, null, "RR_ToolTip_NumericPreferences_HardLimitMultiplier");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minWeight, numericFieldCount++, "RR_Mtw_MinWeight", GameFont.Small, () => { CheckMaxMinThresholds(); }, "RR_ToolTip_NumericPreferences_MinWeight");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxWeight, numericFieldCount++, "RR_Mtw_MaxWeight", GameFont.Small, () => { CheckMaxMinThresholds(); }, "RR_ToolTip_NumericPreferences_MaxWeight");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToBeBed, numericFieldCount++, "RR_Mtw_GlobalBlobIntoBedThreshold", GameFont.Small, null, "RR_ToolTip_NumericPreferences_MinWeightForBlobBed");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.weightToAdjustWiggleAngle, numericFieldCount++, "RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold", GameFont.Small, null, "RR_ToolTip_NumericPreferences_WeightForAltWiggleAngle");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.ticksBetweenWeightGainRequestProcess, numericFieldCount++, "RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess", GameFont.Small, null, "RR_ToolTip_NumericPreferences_TicksPerWeightGainRequestProcess");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.meatMultiplierForWeight, numericFieldCount++, "RR_Mtw_meatMultiplierForWeight", GameFont.Small, null, "RR_ToolTip_NumericPreferences_MeatMultiplierForWeight");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minForCapableMovement, numericFieldCount++, "RR_Mtw_minForCapableMovement", GameFont.Small, () => { RefreshMovementAbility(); }, "RR_ToolTip_NumericPreferences_MinForCapableMovement");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.maxVisualSizeGelLevel, numericFieldCount++, "RR_Mtw_maxVisualSizeGelLevel", GameFont.Small, () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); }, "RR_ToolTip_NumericPreferences_MaxGelatinousSize");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.nutritionPerPerkLevel, numericFieldCount++, "RR_Mtw_nutritionPerLevel", GameFont.Small, null, "RR_ToolTip_NumericPreferences_NutritionPerPerkLevel");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.levelsGainedPerLevel, numericFieldCount++, "RR_Mtw_levelsGainedPerLevel", GameFont.Small, null, "RR_ToolTip_NumericPreferences_LevelsGainedPerLevel");
+            NumberFieldLabeledWithRect(globalMultipliersSettingsFieldRect, ref GlobalSettings.minWeightChangeForNumberText, numericFieldCount++, "RR_Mtw_minWeightToThrowText", GameFont.Small, null, "RR_ToolTip_NumericPreferences_MinWeightChangeForThrowingText");
 
 
             if (cachedMilkableColonistsActive is null)
@@ -693,8 +797,10 @@ namespace RimRound.UI
         delegate void SwitchActionCallback();
         static Dictionary<string, int> titleToIDpair = new Dictionary<string, int>();
 
-        static void CheckboxLabeled(Rect rect, string label, ref bool checkOn, bool disabled = false, Texture2D texChecked = null, Texture2D texUnchecked = null, bool placeCheckboxNearText = false, SwitchActionCallback action = null, String descriptionText = null)
+        static void CheckboxLabeled(Rect rect, string labelTag, ref bool checkOn, bool disabled = false, Texture2D texChecked = null, Texture2D texUnchecked = null, bool placeCheckboxNearText = false, SwitchActionCallback action = null, String descriptionText = null)
         {
+            String label = labelTag.Translate();
+
             TextAnchor anchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleLeft;
             if (placeCheckboxNearText)
@@ -742,7 +848,7 @@ namespace RimRound.UI
                     titleToIDpair.Add(label, tooltipHash);
                 }
 
-                TooltipHandler.TipRegion(rect, () => descriptionText, titleToIDpair[label]);
+                TooltipHandler.TipRegion(rect, () => descriptionText.Translate(), titleToIDpair[label]);
             }
         }
 
@@ -758,7 +864,7 @@ namespace RimRound.UI
         }
 
         static void NumberFieldLabeledWithRect<T>(
-            Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small, SwitchActionCallback action = null, String descriptionText = null) where T : struct
+            Rect categoryRect, ref NumericFieldData<T> numericFieldData, int positionNumberInList, string translationLabel , GameFont font = GameFont.Small, SwitchActionCallback action = null, String descriptionTextTag = null) where T : struct
         {
             T cachedVal = numericFieldData.threshold;
 
@@ -774,7 +880,7 @@ namespace RimRound.UI
 
             T newVal = numericFieldData.threshold;
 
-            HandleTooltips(boundingRect, translationLabel, descriptionText);
+            HandleTooltips(boundingRect, translationLabel, descriptionTextTag);
 
             if (action != null && !object.Equals(newVal, cachedVal))
                 action();
