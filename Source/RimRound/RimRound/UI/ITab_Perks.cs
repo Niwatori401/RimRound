@@ -26,7 +26,7 @@ namespace RimRound.UI
         {
             get
             {
-                return GlobalSettings.weightToAdjustWiggleAngle.threshold == 401 && PawnToShowInfoAbout.Faction == Faction.OfPlayer && PawnToShowInfoAbout.RaceProps.Humanlike;
+                return PawnToShowInfoAbout.Faction == Faction.OfPlayer && PawnToShowInfoAbout.RaceProps.Humanlike;
             }
         }
 
