@@ -19,10 +19,8 @@
 			<li>BodyPartsBionic</li>
 		</thingCategories>
 		<graphicData>
-			<texPath>Things/Item/Health/HealthItem</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
-			<color>(189,169,118)</color>
 		</graphicData>
 		<tradeTags>
 			<li>Bionic</li>
@@ -67,6 +65,9 @@
 		<defName>RR_HungerImplant</defName>
 		<label>hunger implant</label>
 		<description>NONE GIVEN</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/HUNGER_IMPLANT</texPath>
+		</graphicData>
 		<descriptionHyperlinks><RecipeDef>RR_InstallHungerImplant</RecipeDef></descriptionHyperlinks>
 		<costList>
 			<Hyperweave>30</Hyperweave>
@@ -139,6 +140,9 @@
 		<defName>RR_ArchotechMetabolizer</defName>
 		<label>archotech metabolizer</label>
 		<description>A wondrously advanced, incredibly caustic stomach that can inflate to the size of a blimp with no strain on its user. It can handle an inhuman intake with ease thanks to hardworking nanites that break down food as quickly as it enters.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/ARCHOTECH_METABOLIZER</texPath>
+		</graphicData>
 		<descriptionHyperlinks><RecipeDef>RR_InstallArchotechMetabolizer</RecipeDef></descriptionHyperlinks>
 		<costList>
 			<Hyperweave>80</Hyperweave>
@@ -209,6 +213,9 @@
 		<defName>RR_BionicMetabolizer</defName>
 		<label>bionic metabolizer</label>
 		<description>An enhanced stomach with more virulent stomach acid. It is far more adept at processing food than a normal stomach. It's not particularly flexible, however.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/BIONIC_METABOLIZER</texPath>
+		</graphicData>		
 		<descriptionHyperlinks><RecipeDef>RR_InstallBionicMetabolizer</RecipeDef></descriptionHyperlinks>
 		<costList>
 			<Hyperweave>30</Hyperweave>
@@ -299,6 +306,9 @@
 		<defName>RR_AIEncouragementChip</defName>
 		<label>AI encouragement chip</label>
 		<description>A rogue archotech artificial personality installed in the brain, bizarrely preoccupied with making its host gain weight. Why it does this is beyond our understanding, but it is very adept at persuasion.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/AI_ENCOURAGER</texPath>
+		</graphicData>	
 		<descriptionHyperlinks><RecipeDef>RR_InstallAIEncouragementChip</RecipeDef></descriptionHyperlinks>
 		<costList>
 			<Gold>25</Gold>
