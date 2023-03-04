@@ -204,7 +204,9 @@ namespace RimRound.Comps
                     _perkLevelValuesForSaving.Add(x.Value);
                 }
                 _perkLevelsToSpendForSaving = perkLevels.availablePoints;
+                _currentLevelForSaving = perkLevels.currentLevel;
 
+                Scribe_Values.Look<int>(ref _currentLevelForSaving, "currentLevelForSaving", 0);
                 Scribe_Values.Look<int>(ref _perkLevelsToSpendForSaving, "perkLevelsToSpend", 0);
                 Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
                 Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
@@ -216,6 +218,7 @@ namespace RimRound.Comps
                 if (_perkNamesForSaving is null)
                     _perkNamesForSaving = new List<string>();
 
+                Scribe_Values.Look<int>(ref _currentLevelForSaving, "currentLevelForSaving", 0);
                 Scribe_Values.Look<int>(ref _perkLevelsToSpendForSaving, "perkLevelsToSpend", 0);
                 Scribe_Collections.Look<string>(ref _perkNamesForSaving, "perkNamesForSaving", LookMode.Value);
                 Scribe_Collections.Look<int>(ref _perkLevelValuesForSaving, "perkValuesForSaving", LookMode.Value);
@@ -257,6 +260,7 @@ namespace RimRound.Comps
 
 
             perkLevels.availablePoints = _perkLevelsToSpendForSaving;
+            perkLevels.currentLevel = _currentLevelForSaving;
 
             for (int i = 0; i < _perkNamesForSaving.Count(); ++i)
             {
@@ -838,14 +842,20 @@ namespace RimRound.Comps
                 if (consumedNutrition >= GlobalSettings.nutritionPerPerkLevel.threshold * perkLevels.currentLevel)
                 {
                     int currentLevel = Mathf.FloorToInt(consumedNutrition / GlobalSettings.nutritionPerPerkLevel.threshold) + 1;
+                    int levelsGained = currentLevel - perkLevels.currentLevel;
+
+                    if (levelsGained < 0)
+                        Log.Error("Error: Levels gained was negative.");
+
                     perkLevels.currentLevel = currentLevel;
-                    perkLevels.availablePoints += GlobalSettings.levelsGainedPerLevel.threshold;
+                    perkLevels.availablePoints += levelsGained * GlobalSettings.levelsGainedPerLevel.threshold;
                 }
             }
         }
 
         private float consumedNutrition = 0;
         private int _perkLevelsToSpendForSaving = 0;
+        private int _currentLevelForSaving = 0;
 
         public RimRoundStatBonuses statBonuses = new RimRoundStatBonuses();
 

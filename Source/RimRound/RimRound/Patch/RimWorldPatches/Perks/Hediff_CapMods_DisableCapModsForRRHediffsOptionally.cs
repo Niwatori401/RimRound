@@ -44,6 +44,7 @@ namespace RimRound.Patch
 
                 Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Manipulation, GlobalSettings.weightHediffManipulationPenaltyMult, weightHediff.ManipulationPenaltyMitigationFactor);
                 Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.weightHediffMovementPenaltyMult, weightHediff.MovementPenaltyMitigationFactor);
+                ReduceMovementPenaltyByPerkLevels(newList, weightHediff, comp);
                 __result = newList;
             }
             else if (__instance.def.defName == Defs.HediffDefOf.RimRound_Fullness.defName) 
@@ -59,7 +60,6 @@ namespace RimRound.Patch
 
                 Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.fullnessHediffMovementPenaltyMult, fullnessHediff.MovementPenaltyMitigationFactor);
                 Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Eating, GlobalSettings.fullnessHediffEatingPenaltyMult, fullnessHediff.EatingSpeedPenaltyMitigationFactor);
-                ReduceMovementPenaltyByPerkLevels(newList, fullnessHediff, comp);
                 __result = newList;
             }
         }

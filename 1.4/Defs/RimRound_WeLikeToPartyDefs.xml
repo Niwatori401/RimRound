@@ -77,7 +77,8 @@
     <socialPropernessMatters>false</socialPropernessMatters>
     <fillPercent>0.40</fillPercent>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <building>
+    <designationCategory Inherit="False"/>
+	<building>
       <joyKind>Gaming_Dexterity</joyKind>
       <buildingSizeCategory>Small</buildingSizeCategory>
       <paintable>false</paintable>
