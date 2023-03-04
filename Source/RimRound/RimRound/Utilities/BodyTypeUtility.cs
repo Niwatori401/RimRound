@@ -236,18 +236,19 @@ namespace RimRound.Utilities
                 RedrawPawn(pawn);
                 return;
             }
-
-
         }
 
         internal static void RedrawPawn(Pawn pawn)
         {
-            List<Pawn> allPawns = new List<Pawn>(Find.CurrentMap?.mapPawns?.AllPawns);
-            
+            List<Pawn> allPawns = null;
+            if (Find.CurrentMap is null)
+                allPawns = Find.GameInitData.startingAndOptionalPawns;
+            else 
+                allPawns = new List<Pawn>(Find.CurrentMap?.mapPawns?.AllPawns);
+
+
             if (allPawns is null)
                 return;
-
-
 
             if (!(allPawns.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any()))
                 return;

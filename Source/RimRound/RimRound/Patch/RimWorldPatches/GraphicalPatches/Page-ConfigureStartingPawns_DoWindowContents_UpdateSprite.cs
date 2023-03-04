@@ -13,7 +13,7 @@ namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(Page_ConfigureStartingPawns))]
     [HarmonyPatch(nameof(Page_ConfigureStartingPawns.DoWindowContents))]
-    class Page_ConfigureStartingPawns_DoWindowContents_UpdateSprite
+    public class Page_ConfigureStartingPawns_DoWindowContents_UpdateSprite
     {
         public static void Postfix(Pawn ___curPawn) 
         {

@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 566ab5c5eafc32b83999383a06c0964d4a74ffe7
+Commit Hash: c933bb209fe176a1564f6e4a223a8020471d8f90
+Author: Niwatori401
+Date: Sat Mar 4 03:25:44 2023
+
+Fix pawns on character creation screen using wrong sprites as well as NRE
+
+==================================================
+Commit Hash: 8aa44068addb4c6112d309b61b6201e3bb87b2b1
 Author: Niwatori401
 Date: Sat Mar 4 02:16:00 2023
 
