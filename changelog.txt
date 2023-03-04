@@ -1,5 +1,19 @@
 ==================================================
-Commit Hash: d3cc5d8c3bdb43604fc409d36a669647b52ceb9a
+Commit Hash: 20724ea3eac66af8411885e5f64885b814c8a225
+Author: Niwatori401
+Date: Sat Mar 4 03:35:50 2023
+
+Merge branch 'charcreationfix' into dev
+
+==================================================
+Commit Hash: d02ce5fdebfc0b2252a03778c0b2354b6d53d539
+Author: Niwatori401
+Date: Sat Mar 4 03:25:44 2023
+
+Fix pawns on character creation screen using wrong sprites as well as NRE
+
+==================================================
+Commit Hash: 6174878dd09029ea6b91caa101743826c2803665
 Author: Niwatori401
 Date: Sat Mar 4 02:36:31 2023
 
