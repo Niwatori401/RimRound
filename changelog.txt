@@ -1,5 +1,21 @@
 ==================================================
-Commit Hash: 15a303aaf7912f38c12c3da88f6bb1a72fced019
+Commit Hash: 93675ca4ad1040bee1f3e671cf62ba45c5e11026
+Author: Niwatori401
+Date: Sat Mar 4 06:35:40 2023
+
+Merge branch 'dev'
+
+==================================================
+Commit Hash: f4efa78c9862a25537a8160d7077907f34c4d75c
+Author: Niwatori401
+Date: Sat Mar 4 06:30:58 2023
+
+Fix 'Comfortable Corpulence' perk not working
+Fix loading bug where perk level would be gained on level up
+Blob bed no longer buildable
+
+==================================================
+Commit Hash: 151281b5ce7ebe089020a948b400b2c2797d259a
 Author: Niwatori401
 Date: Sat Mar 4 04:15:01 2023
 
