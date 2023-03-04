@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+
+			<!--Custom Draw size mesh additions-->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Human"]/alienRace/graphicPaths</xpath>
+				<value>
+					<li>
+						<customDrawSize>(0.5, 0.5)</customDrawSize>
+						<customPortraitDrawSize>(0.5, 0.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(0.5625, 0.5625)</customDrawSize>
+						<customPortraitDrawSize>(0.5625, 0.5625)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>								
+					<li>
+						<customDrawSize>(0.625, 0.625)</customDrawSize>
+						<customPortraitDrawSize>(0.625, 0.625)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(0.6875, 0.6875)</customDrawSize>
+						<customPortraitDrawSize>(0.6875, 0.6875)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>								
+					<li>
+						<customDrawSize>(0.75, 0.75)</customDrawSize>
+						<customPortraitDrawSize>(0.75, 0.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(0.8125, 0.8125)</customDrawSize>
+						<customPortraitDrawSize>(0.8125, 0.8125)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>		
+					<li>
+						<customDrawSize>(0.875, 0.875)</customDrawSize>
+						<customPortraitDrawSize>(0.875, 0.875)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(0.90, 0.90)</customDrawSize>
+						<customPortraitDrawSize>(0.90, 0.90)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>					
+					<li>
+						<customDrawSize>(0.9375, 0.9375)</customDrawSize>
+						<customPortraitDrawSize>(0.9375, 0.9375)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(1.125, 1.125)</customDrawSize>
+						<customPortraitDrawSize>(1.125, 1.125)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(1.25, 1.25)</customDrawSize>
+						<customPortraitDrawSize>(1.25, 1.25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(1.375, 1.375)</customDrawSize>
+						<customPortraitDrawSize>(1.375, 1.375)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(1.5, 1.5)</customDrawSize>
+						<customPortraitDrawSize>(1.5, 1.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(1.625, 1.625)</customDrawSize>
+						<customPortraitDrawSize>(1.625, 1.625)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(1.75, 1.75)</customDrawSize>
+						<customPortraitDrawSize>(1.75, 1.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(1.875, 1.875)</customDrawSize>
+						<customPortraitDrawSize>(1.875, 1.875)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					
+					<li>
+						<customDrawSize>(2.0, 2.0)</customDrawSize>
+						<customPortraitDrawSize>(2.0, 2.0)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(2.125, 2.125)</customDrawSize>
+						<customPortraitDrawSize>(2.125, 2.125)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(2.25, 2.25)</customDrawSize>
+						<customPortraitDrawSize>(2.25, 2.25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(2.375, 2.375)</customDrawSize>
+						<customPortraitDrawSize>(2.375, 2.375)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>						
+					<li>
+						<customDrawSize>(2.5, 2.5)</customDrawSize>
+						<customPortraitDrawSize>(2.5, 2.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(2.625, 2.625)</customDrawSize>
+						<customPortraitDrawSize>(2.625, 2.625)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(2.75, 2.75)</customDrawSize>
+						<customPortraitDrawSize>(2.75, 2.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(2.875, 2.875)</customDrawSize>
+						<customPortraitDrawSize>(2.875, 2.875)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>						
+					<li>
+						<customDrawSize>(3.0, 3.0)</customDrawSize>
+						<customPortraitDrawSize>(3.0, 3.0)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(3.125, 3.125)</customDrawSize>
+						<customPortraitDrawSize>(3.125, 3.125)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(3.25, 3.25)</customDrawSize>
+						<customPortraitDrawSize>(3.25, 3.25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(3.375, 3.375)</customDrawSize>
+						<customPortraitDrawSize>(3.375, 3.375)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>						
+					
+					<li>
+						<customDrawSize>(3.5, 3.5)</customDrawSize>
+						<customPortraitDrawSize>(3.5, 3.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(3.625, 3.625)</customDrawSize>
+						<customPortraitDrawSize>(3.625, 3.625)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(3.75, 3.75)</customDrawSize>
+						<customPortraitDrawSize>(3.75, 3.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(3.875, 3.875)</customDrawSize>
+						<customPortraitDrawSize>(3.875, 3.875)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>						
+					<li>
+						<customDrawSize>(4.0, 4.0)</customDrawSize>
+						<customPortraitDrawSize>(4.0, 4.0)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(4.25, 4.25)</customDrawSize>
+						<customPortraitDrawSize>(4.25, 4.25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(4.5, 4.5)</customDrawSize>
+						<customPortraitDrawSize>(4.5, 4.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(4.75, 4.75)</customDrawSize>
+						<customPortraitDrawSize>(4.75, 4.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(5, 5)</customDrawSize>
+						<customPortraitDrawSize>(5, 5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(5.25, 5.25)</customDrawSize>
+						<customPortraitDrawSize>(5.25, 5.25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(5.5, 5.5)</customDrawSize>
+						<customPortraitDrawSize>(5.5, 5.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(5.75, 5.75)</customDrawSize>
+						<customPortraitDrawSize>(5.75, 5.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(6, 6)</customDrawSize>
+						<customPortraitDrawSize>(6, 6)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(6.25, 6.25)</customDrawSize>
+						<customPortraitDrawSize>(6.25, 6.25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(6.5, 6.5)</customDrawSize>
+						<customPortraitDrawSize>(6.5, 6.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(6.75, 6.75)</customDrawSize>
+						<customPortraitDrawSize>(6.75, 6.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(7, 7)</customDrawSize>
+						<customPortraitDrawSize>(7, 7)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(7.25, 7.25)</customDrawSize>
+						<customPortraitDrawSize>(7.25, 7.25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(7.5, 7.5)</customDrawSize>
+						<customPortraitDrawSize>(7.5, 7.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(7.75, 7.75)</customDrawSize>
+						<customPortraitDrawSize>(7.75, 7.75)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(8.0, 8.0)</customDrawSize>
+						<customPortraitDrawSize>(8.0, 8.0)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(8.5, 8.5)</customDrawSize>
+						<customPortraitDrawSize>(8.5, 8.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>			
+					<li>
+						<customDrawSize>(9.0, 9.0)</customDrawSize>
+						<customPortraitDrawSize>(9.0, 9.0)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>	
+					<li>
+						<customDrawSize>(9.5, 9.5)</customDrawSize>
+						<customPortraitDrawSize>(9.5, 9.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>						
+					<li>
+						<customDrawSize>(10,10)</customDrawSize>
+						<customPortraitDrawSize>(10,10)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(10.5,10.5)</customDrawSize>
+						<customPortraitDrawSize>(10.5,10.5)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>					
+					<li>
+						<customDrawSize>(11,11)</customDrawSize>
+						<customPortraitDrawSize>(11,11)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(12,12)</customDrawSize>
+						<customPortraitDrawSize>(12,12)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(13,13)</customDrawSize>
+						<customPortraitDrawSize>(13,13)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(15,15)</customDrawSize>
+						<customPortraitDrawSize>(15,15)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>				
+					<li>
+						<customDrawSize>(17,17)</customDrawSize>
+						<customPortraitDrawSize>(17,17)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(20,20)</customDrawSize>
+						<customPortraitDrawSize>(20,20)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(25,25)</customDrawSize>
+						<customPortraitDrawSize>(25,25)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(30,30)</customDrawSize>
+						<customPortraitDrawSize>(30,30)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(40,40)</customDrawSize>
+						<customPortraitDrawSize>(40,40)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(55,55)</customDrawSize>
+						<customPortraitDrawSize>(55,55)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(70,70)</customDrawSize>
+						<customPortraitDrawSize>(70,70)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(85,85)</customDrawSize>
+						<customPortraitDrawSize>(85,85)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(105,105)</customDrawSize>
+						<customPortraitDrawSize>(105,105)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(125,125)</customDrawSize>
+						<customPortraitDrawSize>(125,125)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(150,150)</customDrawSize>
+						<customPortraitDrawSize>(150,150)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(175,175)</customDrawSize>
+						<customPortraitDrawSize>(175,175)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+					<li>
+						<customDrawSize>(200,200)</customDrawSize>
+						<customPortraitDrawSize>(200,200)</customPortraitDrawSize>
+						<skinShader>CutoutSkin</skinShader>
+					</li>
+
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

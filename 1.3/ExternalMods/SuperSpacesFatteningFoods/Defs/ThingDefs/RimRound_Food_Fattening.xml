@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RR_SimpleMealBase">
+		<defName>FatBurger</defName>
+		<label>Lard Filled Burger</label>
+		<description>It'll definitely leave a mark on your waistline. Hopefully it's good!</description>
+		<graphicData>
+			<texPath>Things/Food/Burger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>25</MarketValue>
+			<WorkToMake>325</WorkToMake>
+			<Nutrition>20</Nutrition>
+		</statBases>
+		<comps>
+		<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+            <fullnessToNutritionRatio>.03</fullnessToNutritionRatio>
+          </li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="RR_SimpleMealBase">
+		<defName>Donut</defName>
+		<label>Delicious Donut</label>
+		<description>Not very filling, but It'll definitely leave a mark on your waistline. Hopefully it's good!</description>
+		<graphicData>
+			<texPath>Things/Food/Donut</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>25</MarketValue>
+			<WorkToMake>250</WorkToMake>
+			<Nutrition>4</Nutrition>
+		</statBases>
+		<comps>
+		<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+            <fullnessToNutritionRatio>.1</fullnessToNutritionRatio>
+          </li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="RR_SimpleMealBase">
+		<defName>fatpill</defName>
+		<label>Test Fat Pill</label>
+		<description>Bawompfh</description>
+		<graphicData>
+			<texPath>Things/Food/FatPills</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>25</MarketValue>
+			<WorkToMake>375</WorkToMake>
+			<Nutrition>100</Nutrition>
+		</statBases>
+		<comps>
+		<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+            <fullnessToNutritionRatio>.00001</fullnessToNutritionRatio>
+          </li>
+		</comps>
+	</ThingDef>
+</Defs>

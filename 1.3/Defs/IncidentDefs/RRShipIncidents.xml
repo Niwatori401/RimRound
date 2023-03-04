@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--Hunger Drone Ship-->
+  <ThingDef ParentName="CrashedShipPartBase">
+    <defName>FatteningDroneShipPart</defName>
+    <label>ship part (hunger seige)</label>
+    <description>An ancient ship part, torn off of a craft of unknown origin. It might be thousands of years old.\n\nThis one contains a device which annihilates plant life near itself without directly affecting flesh creatures. These kinds of weapons are sometimes scattered across farmlands or forests to remove the enemy's food supply and hiding places without permanently ruining the territory. They're usually associated with orbital-drop mechanoid armies.</description>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> <!-- Hack to draw defoliant radius -->
+    <graphicData>
+      <texPath>Things/Building/Exotic/CrashedRRPsychicShip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,3)</drawSize>
+      <shadowData><volume>(0.9, 1.0, 0.9)</volume></shadowData>
+      <damageData><rect>(0.5, 0.1, 5, 2.8)</rect></damageData>
+    </graphicData>
+    <comps>
+      <li Class="RimRound.Comps.CompProperties_CausesGameCondition_HungerDrone">
+        <conditionDef>RR_HungerDrone</conditionDef>
+        <worldRange>1</worldRange>
+        <droneLevelIncreaseInterval>750</droneLevelIncreaseInterval>
+        <droneLevel>1</droneLevel>
+      </li>
+    </comps>	
+  </ThingDef>  
+  
+  <IncidentDef>
+    <defName>RR_HungerDrone</defName>
+    <label>ship part crash (hunger seige)</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_CrashedShipPart</workerClass>
+    <letterLabel>Defoliator ship</letterLabel>
+    <letterText>A large piece of an ancient ship has crashed nearby.\n\nYour colonists can feel it in the back of their mind, exhorting unspeakable acts. It must have an onboard machine persona with psychic projection ability. And this persona is not friendly.\n\nDestroy it as soon as possible. But beware - it will probably defend itself.</letterText>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>2.0</baseChance>
+    <baseChanceWithRoyalty>0.4</baseChanceWithRoyalty>
+    <minRefireDays>15</minRefireDays>
+    <tags>
+      <li>MechanoidShip</li>
+    </tags>
+    <refireCheckTags>
+      <li>MechanoidShip</li>
+    </refireCheckTags>
+    <category>ThreatBig</category>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>300</minThreatPoints>
+    <mechClusterBuilding>FatteningDroneShipPart</mechClusterBuilding>
+    <tale>ShipPartCrash</tale>
+  </IncidentDef>
+
+  <GameConditionDef>
+    <defName>RR_HungerDrone</defName>
+    <conditionClass>RimRound.AI.GameCondition_PsychicHungerIncrease</conditionClass>
+    <label>hunger driver</label>
+    <description>A hunger driver targeting the {0} gender is increasing their hunger.</description>
+    <letterText>A hunger driver device has begun affecting this region.</letterText>
+    <canBePermanent>false</canBePermanent>
+  </GameConditionDef>  
+  
+  <!--Fattening Gas Ship-->
+  <!--ThingDef ParentName="CrashedShipPartBase">
+    <defName>FatteningGasShipPart</defName>
+    <label>ship part (gaseous assault)</label>
+    <description>An ancient ship part, torn off of a craft of unknown origin. It might be thousands of years old.\n\nThis one contains a device which annihilates plant life near itself without directly affecting flesh creatures. These kinds of weapons are sometimes scattered across farmlands or forests to remove the enemy's food supply and hiding places without permanently ruining the territory. They're usually associated with orbital-drop mechanoid armies.</description>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
+    <placeWorkers>
+      <li>PlaceWorker_ShowPlantHarmRadius</li>
+    </placeWorkers>
+    <graphicData>
+      <texPath>Things/Building/Exotic/CrashedFatteningGasShip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,3)</drawSize>
+      <shadowData><volume>(0.9, 1.0, 0.9)</volume></shadowData>
+      <damageData><rect>(0.5, 0.1, 5, 2.8)</rect></damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_PlantHarmRadius">
+        <radiusPerDayCurve>
+          <points>
+            <li>0  , 5</li>
+            <li>1.5, 18</li>
+            <li>6  , 40</li>
+            <li>20 , 100</li>
+          </points>
+        </radiusPerDayCurve>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <IncidentDef>
+    <defName>RR_ShipPartCrash_FatteningGas</defName>
+    <label>ship part crash (gaseous assault)</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_CrashedShipPart</workerClass>
+    <letterLabel>Gaseous assault ship</letterLabel>
+    <letterText>A large piece of an ancient ship has crashed nearby.\n\nIts mysterious influence will kill all plants in an expanding circle around itself.\n\nDestroy it as soon as possible. But beware - it will probably defend itself.</letterText>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>2.0</baseChance>
+    <baseChanceWithRoyalty>0.4</baseChanceWithRoyalty>
+    <minRefireDays>15</minRefireDays>
+    <tags>
+      <li>MechanoidShip</li>
+    </tags>
+    <refireCheckTags>
+      <li>MechanoidShip</li>
+    </refireCheckTags>
+    <category>ThreatBig</category>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>400</minThreatPoints>
+    <mechClusterBuilding>DefoliatorShipPart</mechClusterBuilding>
+    <tale>ShipPartCrash</tale>
+  </IncidentDef-->
+</Defs>

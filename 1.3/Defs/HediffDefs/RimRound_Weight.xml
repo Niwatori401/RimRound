@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!--Weight Hediff-->
+	<HediffDef>
+		<defName>RimRound_Weight</defName>
+		<label>Weight</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>fatness</labelNoun>
+		<description>How big you are</description>
+		
+		<modExtensions>
+			<li Class="RimRound.Hediffs.HediffDef_Weight">
+				<baseWeight>40</baseWeight>
+			</li>
+		</modExtensions>
+
+		<hediffClass>RimRound.Hediffs.Hediff_Weight</hediffClass>
+		
+		<isBad>false</isBad>
+		
+		<minSeverity>0.001</minSeverity>
+		<stages>
+			<li>
+				<label>Emaciated</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>0.9</hungerRateFactor>
+				<restFallFactor>1.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.10</offset>
+					</li>							
+				</capMods>
+				
+				
+				<statOffsets></statOffsets>
+			</li>			
+
+			<li>
+				<minSeverity>0.005</minSeverity>
+				<label>Very Thin</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>0.95</hungerRateFactor>
+				<restFallFactor>1.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.05</offset>
+					</li>							
+				</capMods>
+			</li>
+			
+			<!--Standard-->
+			<li>
+				<minSeverity>0.015</minSeverity>
+				<label>Thin</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<restFallFactor>1.0</restFallFactor>
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.035</minSeverity>
+				<label>Thick</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<restFallFactor>1.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.050</minSeverity>
+				<label>Chunky</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.10</hungerRateFactor>
+				<restFallFactor>1.05</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.10</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.065</minSeverity>
+				<label>Chubby</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.2</hungerRateFactor>
+				<restFallFactor>1.10</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.15</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.090</minSeverity>
+				<label>Corpulent</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.30</hungerRateFactor>
+				<restFallFactor>1.15</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.25</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!--Manipuation Starts to fall here down-->
+			<li>
+				<minSeverity>0.120</minSeverity>
+				<label>Fat</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.45</hungerRateFactor>
+				<restFallFactor>1.20</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.35</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->			
+			<li>
+				<minSeverity>0.155</minSeverity>
+				<label>Obese</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.55</hungerRateFactor>
+				<restFallFactor>1.30</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.50</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->		
+			<li>
+				<minSeverity>0.200</minSeverity>
+				<label>Morbidly Obese</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>1.75</hungerRateFactor>
+				<restFallFactor>1.45</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.70</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->		
+			<li>
+				<minSeverity>0.230</minSeverity>
+				<label>Morbidly Obese II</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>2.00</hungerRateFactor>
+				<restFallFactor>1.60</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.80</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->		
+			<li>
+				<minSeverity>0.280</minSeverity>
+				<label>Lardy</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>2.20</hungerRateFactor>
+				<restFallFactor>1.75</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.90</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!--Immobility starts from here-->		
+			<li>
+				<minSeverity>0.350</minSeverity>
+				<label>Lardy II</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>2.50</hungerRateFactor>
+				<restFallFactor>1.90</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.00</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.430</minSeverity>
+				<label>Enormous</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>2.75</hungerRateFactor>
+				<restFallFactor>2.10</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.10</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.535</minSeverity>
+				<label>Enormous II</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>3.15</hungerRateFactor>
+				<restFallFactor>2.30</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.50</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.20</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.660</minSeverity>
+				<label>Gigantic</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>3.65</hungerRateFactor>
+				<restFallFactor>2.50</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.65</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.30</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.800</minSeverity>
+				<label>Gigantic II</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>4.25</hungerRateFactor>
+				<restFallFactor>2.80</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.80</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.50</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>0.965</minSeverity>
+				<label>Titanic</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>5.00</hungerRateFactor>
+				<restFallFactor>3.10</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-1.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.70</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>1.160</minSeverity>
+				<label>Titanic II</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>5.85</hungerRateFactor>
+				<restFallFactor>3.50</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-1.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.90</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			
+			<!---->
+			<li>
+				<minSeverity>1.410</minSeverity>
+				<label>Gelatinous I</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-1.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-2.00</offset>
+					</li>							
+				</capMods>
+			
+			
+			</li>
+			<!--Post Blob-->
+			<li>
+				<minSeverity>1.860</minSeverity>
+				<label>Gelatinous II</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-2.50</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>2.460</minSeverity>
+				<label>Gelatinous III</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-3.50</offset>
+					</li>							
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>2.960</minSeverity>
+				<label>Gelatinous IV</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-4.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>3.960</minSeverity>
+				<label>Gelatinous V</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-5.50</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>4.960</minSeverity>
+				<label>Gelatinous VI</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-7.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>6.460</minSeverity>
+				<label>Gelatinous VII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-9.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>7.960</minSeverity>
+				<label>Gelatinous VIII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-11.00</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>9.960</minSeverity>
+				<label>Gelatinous IX</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-13.50</offset>
+					</li>							
+				</capMods>	
+			</li>	
+			<li>
+				<minSeverity>14.460</minSeverity>
+				<label>Gelatinous X</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.00</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-20.00</offset>
+					</li>							
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>21.850</minSeverity>
+				<label>Gelatinous XI</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-2.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-25.00</offset>
+					</li>				
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>	
+			</li>			
+			<li>
+				<minSeverity>42.400</minSeverity>
+				<label>Gelatinous XII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-3.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.30</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-30.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.25</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>70.500</minSeverity>
+				<label>Gelatinous XIII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-3.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.50</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-35.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.40</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>116.600</minSeverity>
+				<label>Gelatinous XIV</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-4.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.75</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-42.50</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.60</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>164.500</minSeverity>
+				<label>Gelatinous XV</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-5.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.90</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-50.00</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>286.200</minSeverity>
+				<label>Gelatinous XVI</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-7.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.99</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-60.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1.50</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>411.000</minSeverity>
+				<label>Gelatinous XVII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-10.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-1.35</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-80.00</offset>
+					</li>		
+					<li>
+						<capacity>Eating</capacity>
+						<offset>2.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>576.700</minSeverity>
+				<label>Gelatinous XVIII</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-15.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-1.50</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-100.00</offset>
+					</li>		
+					<li>
+						<capacity>Eating</capacity>
+						<offset>3.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>773.200</minSeverity>
+				<label>Gelatinous IX</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-20.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-2.00</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-130.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>4.00</offset>
+					</li>					
+				</capMods>	
+			</li>
+			<li>
+				<minSeverity>999.999</minSeverity>
+				<label>Gelatinous Ω</label>
+				<lifeThreatening>false</lifeThreatening>
+				<hungerRateFactor>6.75</hungerRateFactor>
+				<restFallFactor>4.0</restFallFactor>
+				
+				<capMods>	
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-30.00</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-3.00</offset>
+					</li>					
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-150.00</offset>
+					</li>	
+					<li>
+						<capacity>Eating</capacity>
+						<offset>5.0</offset>
+					</li>					
+				</capMods>	
+			</li>			
+		</stages>
+	
+		
+	</HediffDef>
+	
+	
+	
+</Defs>

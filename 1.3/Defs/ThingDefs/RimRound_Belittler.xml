@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>RR_DefatteningBullet</defName>
+	<thingClass>RimRound.Things.FatteningBullet</thingClass>
+    <label>fattening round</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+      <speed>55</speed>
+    </projectile>
+	<modExtensions>
+		<li Class="RimRound.Things.ME_FatteningBullet">
+			<kilosToAdd>-300</kilosToAdd>
+			<ticksBetweenApplication>120</ticksBetweenApplication>
+			<numberOfApplications>3</numberOfApplications>
+			<chanceToInflictIllness>1.00</chanceToInflictIllness>
+		    <effectDuration>600</effectDuration>
+			<triggerMessages>false</triggerMessages>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RR_DefatteningPistol</defName>
+    <label>Experimental Belittler</label>
+    <description>A half-baked attempt to create the enlargening effects of the embiggener, this low-calibre weapon actually temporarily decreases the mass of the target by teleporting fat cells into the quantum foam before resurfacing them when they destablilize.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/experimental_belittler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>60</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+    </statBases>
+	<generateCommonality>0</generateCommonality>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RR_DefatteningBullet</defaultProjectile>
+        <warmupTime>0.2</warmupTime>
+        <range>28</range>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

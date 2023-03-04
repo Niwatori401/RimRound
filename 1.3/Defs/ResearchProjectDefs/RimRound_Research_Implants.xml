@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>  
+		<defName>RR_Research_SyntheticDigestion</defName>
+		<label>synthetic digestion</label>
+		<tab>RimRoundTech</tab>
+		<description>Craft bionic stomachs that process and digest food far faster than a normal human stomach.</description>
+		<baseCost>2000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Fabrication</li>
+		</prerequisites>		
+		<researchViewX>0</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_HungerImplant</defName>
+		<label>hunger implant</label>
+		<tab>RimRoundTech</tab>
+		<description>Create a high-tech brain implant that stimulates the target's appetite, causing them to digest food and gain weight more efficiently.</description>
+		<baseCost>1600</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RR_Research_SyntheticDigestion</li>
+		</prerequisites>		
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_AIEncouragement</defName>
+		<label>AI encouragement</label>
+		<tab>RimRoundTech</tab>
+		<description>Persuade a rogue archotech to install itself into your colonists, improving their metabolism and mood by magnitudes.</description>
+		<baseCost>4000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RR_Research_HungerImplant</li>
+		</prerequisites>		
+		<researchViewX>2</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>		
+</Defs>

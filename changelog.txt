@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: fb6bae60e077e38c8e001bb09272daff6e313a15
+Commit Hash: 79dccbb4edfc1c5b910bb6e75c28748d7be287d6
+Author: Niwatori401
+Date: Sat Mar 4 01:18:25 2023
+
+Move last stable 1.3 commit to dedicated loadfolder
+Add script to automatically generate changelog
+
+==================================================
+Commit Hash: 896107192d5c3312e8c4b773f1d785801c090737
 Author: Niwatori401
 Date: Sat Mar 4 00:28:10 2023
 
