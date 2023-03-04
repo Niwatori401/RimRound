@@ -1,686 +1,1689 @@
-commit d303e16cff9eb7c692209e1b6ab3d0ddd9f2fd63
-Author: Niwatori401 
-Date:   Sat Aug 6 10:16:28 2022 +0900
-
-    Add three new thoughts for Gelatinous II and above for all weight opinions. Courtesy of Ultranova.
-    Add new hopper 'XL hopper'. For use with food processor to accept a greater variety of food items.
-    Add new inspect tab 'Desc.' for pawns. Descriptions courtesy of Ultranova.
-    Update patch for RJW - Milkable colonists. Weights above Gelatinous II now have specific multipliers.
-    Add multiplier setting for RJW - MC milk yield in RR settings.
-    Fix weight opinions not applying to correct weights.
-
-commit 5577dc0e88e2593d1a506bc42383e3e9462f2f5f
-Author: Niwatori401 
-Date:   Fri Aug 5 15:08:14 2022 +0900
-
-    Update RJW - Milkable colonists patch to include additional yield for pawns above Gelatinous I.
-
-commit d94f820d6b0b2aa6f8e9f30cb5576026713ca500
-Author: Niwatori401 
-Date:   Wed Aug 3 09:02:15 2022 +0900
-
-    Fix: autofeeder now saves the mode it was on and the pawn it was attached to on save.
-
-commit 3c19cee6817958c7a161bdbbb1a1e889129c5a0a
-Author: Niwatori401 
-Date:   Tue Aug 2 19:06:05 2022 +0900
-
-    Add research tab for RimRound
-    Add research defs for feeding tube items
-    Edit feeding tube items to require research
-
-commit 93654ecf4035ae5d2e5adb804fbf1b8a91df35a6
-Author: Niwatori401 
-Date:   Tue Aug 2 15:45:51 2022 +0900
-
-    Fix: Food faucet and food processor no longer function if not powered.
-
-commit 8abf475c569178a67d99841730d6e519450d85b0
-Author: Niwatori401 
-Date:   Tue Aug 2 15:18:14 2022 +0900
-
-    Finish altering feeding toils for food faucet.
-
-commit 19d7d84c211545c64bb08d54e58001a6668ca6e7
-Author: Niwatori401 
-Date:   Tue Aug 2 13:30:56 2022 +0900
-
-    Remove one unused patch and one redundant one.
-    Begin feature fix for food faucet.
-
-commit 2ce4a43d0a3cbe9477a4e70f3ee10fd65f730161
-Author: Niwatori401 
-Date:   Mon Aug 1 20:43:24 2022 +0900
-
-    This commit is not compaitble with previous saves containing Ratkin and/or Anties!
-    
-    Remove extra unused WIP race patch files.
-    Refactor how Anties and Ratkin use sprites.
-    Remove Ratkin's and Anties' race specific BodyTypeDefs.
-    Add Anty and Ratkin support for Gelatinous II - X.
-
-commit 6cc40cc578cdd0283bad6bc99f3ed954971c7df1
-Author: Niwatori401 
-Date:   Mon Aug 1 10:22:25 2022 +0900
-
-    Update localization.
-    Add feature: skin drops now scale with pawn weight.
-    Add feature: Meat drop multiplier setting now affects skin drops as well.
-
-commit cfe1f7967bfc8de17c6b0ef301671e1a928c5af5
-Author: Niwatori401 
-Date:   Sun Jul 31 21:34:09 2022 +0900
-
-    Remove unused legacy patches.
-    Add option to modify bonus meat yield.
-    Add autofeeder sprite.
-    Refactor food network and food faucet.
-    Fix fullnessToNutrition ratio not working correctly for food network.
-    Change fullness hediff to no longer show the 'Medical Emergency' tag unless stomach has burst.
-
-commit 3253f7b733d1f6cb0ad850c3d4f7146fe6bd6762
-Author: Niwatori401 
-Date:   Sun Jul 31 13:29:19 2022 +0900
-
-    Remove verb method for autofeeder.
-    Add hediff for using autofeeder to immobilize users.
-    Add pipe texture for feeding tube. It now attaches to pawn's mouths if they are laying down.
-    Add mode switch for autofeeder with accompanying icons.
-    Update localization file.
-
-commit bb9663bb80b73f0d4d8f7dd2c245d1d7ed2c323e
-Author: Niwatori401 
-Date:   Sun Jul 31 07:59:21 2022 +0900
-
-    Work on autofeeder with Verb method
-
-commit 8f37db7fca83e66e6afeabc4b75fcbd9621928a1
-Author: Niwatori401 
-Date:   Sat Jul 30 09:04:43 2022 +0900
-
-    Begin substantial refactor for feeding tube.
-
-commit e2d576f65fe70989290e4bd60bf804bf09b394c4
-Author: Niwatori401 
-Date:   Fri Jul 29 19:31:50 2022 +0900
-
-    Add male sprite sizes for standard set for Gelatinous II - Gelatinous X.
-    Add male sprite support for 0.9 size sprite sets.
-    Add female sprite sizes (both normal and apple) for 0.9 sprite sizes for Gelatinous II - Gelatinous X.
-    Add female sprite sizes (apple) for standard set for Gelatinous II - Gelatinous X.
-    Fix bug where pawns without support would spawn with the weight hediff.
-    Fix bug where pawns without support would spawn with weight opinions.
-    Organize Anty specific defs.
-
-commit 9420d06e1a26667f2438d11a55500396d7022a18
-Author: Niwatori401 
-Date:   Thu Jul 28 23:16:02 2022 +0900
-
-    Add appropriate portrait scales and positions for new sprite sizes.
-
-commit eb0b5779e256c0dfea9d82100cf687465ae605d9
-Author: Niwatori401 
-Date:   Thu Jul 28 22:26:57 2022 +0900
-
-    mend
-
-commit bbf223adfba9da87d6d05b0409f50412ba6966b1
-Author: Niwatori401 
-Date:   Thu Jul 28 22:26:47 2022 +0900
-
-    Add 9 new weight stages beyond Gelatinous. Gelatinous has been renamed Gelatinous I.
-
-commit 396ceb4864b1220f5b6e79f15aa6e7daedaa4703
-Author: Niwatori401 
-Date:   Thu Jul 28 09:12:47 2022 +0900
-
-    Add debug option to change any individual pawn's body archetype
-
-commit f64915aa8efcd219dc2b53bbe9c41f526fa3ece3
-Author: Niwatori401 
-Date:   Sat Jul 23 11:13:00 2022 +0900
-
-    Finalize temp WG feature. WG status messages now can be disabled optionally for WG requests.
-
-commit c004bfce5ddae3fefcc3a1b3900197d11ac7a248
-Author: Niwatori 
-Date:   Fri Jul 22 11:30:14 2022 +0900
-
-    Clean up WG/WL reqest code
-
-commit 98b8824c9cf33b6f63bb38063e57e0bc6c749066
-Author: Niwatori 
-Date:   Fri Jul 22 11:23:30 2022 +0900
-
-    Add weight loss request processing. Add temp weight gain. Update embiggener to use this system with temporary values for duration.
-
-commit b8f630fed325081fa23ae9e8afd5173960127f27
-Author: Niwatori401 
-Date:   Tue Jul 19 19:02:13 2022 +0900
-
-    Fix bug regarding animals being paralyzed if they were incapable of manipulation.
-
-commit e0d6f552ab70482cc47124df93bc4b2415bb4483
-Author: Niwatori401 
-Date:   Sun Jul 17 13:02:12 2022 +0900
-
-    Fix patches for Outer Rim Galaxies.
-    Remove partial support for buggy races.
-
-commit 619410f3130e829ee861ccbd6baf397f8a8cf880
-Author: Niwatori401 
-Date:   Sun Jul 17 12:02:57 2022 +0900
-
-    Fix how current nutrition to fullness ratio is calculated.
-
-commit 8f54e7d8e6f38fa652165da33b6135429992d3b8
-Author: Niwatori401 
-Date:   Sun Jul 17 10:07:01 2022 +0900
-
-    Fix NRE bug in pawn gen
-
-commit cc7eac834a6dff992deaeaff7894303e51e2c5f0
-Author: Niwatori401 
-Date:   Sat Jul 16 19:35:50 2022 +0900
-
-    Add 'Unlicense' license.
-
-commit dbd184494efcd6e11c53cb97b3d26a32f5cf7f1b
-Author: Niwatori401 
-Date:   Sat Jul 16 19:06:00 2022 +0900
-
-    Alter how default body type was assigned. Should now correctly show the pawn's default bodytype.
-    Further implement support for partially supported races.
-
-commit 2fe21f39a7168908b102ff64832f1f7c0fd30069
-Author: Niwatori401 
-Date:   Sat Jul 16 14:10:17 2022 +0900
-
-    Reconstruct tailalignment file and add it to repo
-
-commit 83a0e1ec870fff66f10a285cb1665796f525ae38
-Author: Niwatori401 
-Date:   Sat Jul 16 10:57:13 2022 +0900
-
-    Add two new texture sets for clothing for male bodies. Courtesy Lidopain!
-    Add racial support for 4 races from Xenohuamns - Gen-spliced Xenos
-    Add racial support for 6 races from Xenohuamns Expanded
-    Begin racial support for Fantasy Goblins
-    Begin racial support for ChjAndroids
-    Begin racial support for Lucario
-    Begin racial support for Kilhn
-    Begin racial support for Avali
-
-commit df6f5c8777f04d62cd3da32c252d8e3db94f06e9
-Author: Niwatori401 
-Date:   Fri Jul 15 19:33:52 2022 +0900
-
-    Reveal diet management gizmo for prisoners
-
-commit 6ca2e29642dd27f58b33f7375f028973f30f334a
-Merge: 47d0ca5 15a6de9
-Author: Niwatori401 
-Date:   Sun Jun 5 19:49:46 2022 +0900
-
-    Merge pull request #1 from Niwatori401/master
-    
-    Master
-
-commit 15a6de95722d29a956cdee8062605d6909922f45
-Author: Niwatori401 
-Date:   Sun Jun 5 19:35:30 2022 +0900
-
-    Re-add Male sprite for CanineMorph
-
-commit e2cf8f118a8ca52a978a5de79893ba88a5c5eea4
-Author: Niwatori401 
-Date:   Sun Jun 5 19:06:32 2022 +0900
-
-    Add apple body type (Courtesy Bamboo) and accompnying defs
-    Add toggle to revert all pawns to old body type
-    Add new hidden body type variable (currently standard and apple) to pawns
-    Add hoverchair for new lardy sprite
-    Add option to use old lardy sprite
-    Add setting to hide the less useful debug gizmos (e.g. positioning gizmos)
-    Add Loompa race support
-    Add support for "Statue of Colonist"
-    Update body assignment tables to allow for body types per gender
-    Update Bamboo's Lardy sprite
-    Update bodytypedefs to use correct image path
-    Remove unused assets
-    Remove need for duplicate assets
-    Hide map nutrition section of RR tab
-    Fix: Certain Combat Extended clothing items should display properly now
-    Fix: flesh blocks no longer spawn on map gen
-    Fix: Anties/Ratkin now can wear hoverchairs
-    Fix: Prisoners should starve less. Their diets are now reset upon becoming prisoners.
-    
-    WIP: Hoverchairs disappear if in bed for extended period. Ideally this will trigger on sleep and reappear when they wake up
-
-commit c3a6f668ffb7da20d10d24989ff5aef6e61d685a
+==================================================
+Commit Hash: fb6bae60e077e38c8e001bb09272daff6e313a15
 Author: Niwatori401
-Date:   Wed May 18 05:00:24 2022 -0700
+Date: Sat Mar 4 00:28:10 2023
 
-    Progress save
+Add display for reason RR sprites are not being shown
+Fix flab grenades not working if you didn't own Biotech DLC
+Fix flab grenade thrown sprite not showing if you didn't own Biotech DLC
+Fix potential NRE in BodyTypeUtility.UpdateSprite()
+Remove extraneous copy of AlienRace dll
 
-commit 47d0ca560dd0e2e2267eb6e03a91ee0961c9b98d
+==================================================
+Commit Hash: 03b65fe132dbc4372290aa3ead6560f6f8965701
 Author: Niwatori401
-Date:   Thu May 12 20:48:56 2022 -0700
+Date: Wed Mar 1 12:51:44 2023
 
-    Fix pawns in hoverchairs not laying in beds properly
-    Add feature pawns drop hoverchair on pawn downing. This should help prevent bugs wherein doctors will not tend or cannot rescue colonists in hoverchairs. Reminder that the "Dress Patients" mod can be used to redress them while they are in bed.
-    Add option tab in RR menu to alter hediff effect severity including pain, eat speed reduction and move speed reduction from the fullness hediff as well as moving, manipulation, rest fall rate and increased hunger rate from the weight hediff
-    Add auto disable texture caching on load
-    Fix pawns spawning with custom bodies as their default bodies. DefaultBody is now a property and reverts susceptible pawns to the thin bodytype.
-    Update fullness hediff to use custom class
-    Reduce hoverchair weight from 110 to 0 so as not to overencumber pawns
-    Optimize RR menu so that number fields with custom behavior now only trigger when the value is changed.
-    Update changelog
-    
-    Add test material for flesh atlas
+Update credits
+Clarify which perks are needed for 'Ascension'
 
-
-commit 4c9f4d89f1da921c2facc181e47ab7e9a7c7e53d
+==================================================
+Commit Hash: beef00693fcfa8704345bf122bb18efed1532040
 Author: Niwatori401
-Date:   Tue May 3 18:04:02 2022 -0700
+Date: Wed Mar 1 11:48:07 2023
 
-    Add patches to allow eating more than one meal/dessert from food items from Vanilla Cooking Expanded
-    Reformat old patches/introduce patch maker template for nutrition density patches
-    Refactor old code in fullness bar and slider code to be more readable
-    Fix bug where fullness sliders would not load into the correct postion from save
+Enable perk system
 
-
-commit fd477c2e728e02f1682ce44cde4db378fae0f0be
-Author: Niwatori401 
-Date:   Sat Apr 30 11:31:30 2022 -0700
-
-    Add progress bar to weight hediff in health tab displaying progress to next stage
-    Refactor patch as method definition in Hediff_Weight
-    Reorganize patches into appropriate folders
-    Remove deprecated patch related to hoverchairs as pawns
-
-commit 8a4efaf6dda7a3e20fc3ee82e2baae4454853e0b
-Author: Niwatori401 
-Date:   Wed Apr 27 20:57:35 2022 -0700
-
-    Fix bug in hediff assignment for World Pawns
-
-commit f7495ecc5d60d92c708e39746faff308e5139871
-Author: Niwatori401 
-Date:   Tue Apr 26 22:20:30 2022 -0700
-
-    Start work on varying weight per stage by body size:
-    [*] Add option to toggle this new feature in general settings (may not work for all cases)
-    
-    Add ability to see sleep position and blanket gizmos for prisoners
-    
-    Refactor pawn generation patches into three sperate ones more closely related to their purpose
-    Add two patches for the HAR framework to fix bugs created by this refactor
-    
-    """fix""" an issue with the food validator for the feeding tube blowing up the log :^)
-
-commit dc59c4d1b7c1ec8ae265411985de5aa061dd0d02
-Author: Niwatori401 
-Date:   Thu Apr 21 19:18:27 2022 -0700
-
-    Add setting to disable moodlets from weight opinion traits
-    Fix bug where weight gain requests would not add the right amount of weight
-    Expose more functionality of FullnessAndDietStats comp
-
-commit a7998e5abef1dae9ce4cc0de405fc72de6cca00d
-Author: Niwatori401 
-Date:   Sun Apr 17 20:00:22 2022 -0700
-
-    update gitignore
-
-commit 3053ef29e6fc314a71b8b9ff6fc140119881645c
-Author: Niwatori401 
-Date:   Sun Apr 17 14:25:43 2022 -0700
-
-    Add hunger drone event and game condition
-    Add hoverchair item craftable at machining table with two graphical variants. Works on all pawns, currently only visible on females (or any pawn using Bamboo's sprite set)
-    Removed hoverchair as pawn. **This will cause issues for existing saves where they are on the map.**
-    Fix option for alternate head position for RimRound bodies
-    Add option to adjust weight gain and loss multipliers by gender
-    Add race support for Furret race
-    Add race support for Dreemurr race
-    Add race support for Asari race
-    Add race support for Ferrex race
-    Add race support for both races in Vulpine race pack
-    Add race support for Half dragons
-    Add race support for stickman race
-    Update patch  maker templates to handle more closet cases that were causing issues for some mods
-    Update patch maker to have the patch creation modes
-    Add new templates and csvs for patch maker to handle patching abstract defs
-
-commit c44dc12a835a8498b2ad4bf80aeb629e8405f433
-Author: Niwatori401 
-Date:   Thu Apr 14 15:43:58 2022 -0700
-
-    First commit for private repo
-
-commit b994103d0cae06a6be715d21cd7de615c82bba20
-Author: Niwatori401 
-Date:   Mon Mar 28 13:54:15 2022 -0700
-
-    Add race support for all nine races from Xenohumans - Anthromorphs.
-    Add race support for Sylveon Race.
-    Add race support for Minotaur Race.
-    Add race support for Protogen! Marley Race.
-    Add new setting for tick delay between weight gain request processing.
-    Remove bug where hoverchairs would spawn in mechanoid bases and ancient dangers. Only impacts new maps.
-    Remove error message about hoverchairs and frostbite when launching the game.
-    Alter loadFolders to only load textures for mods that are actively installed.
-
-commit 861848bc4d515a2e1bda5116341c56fc717fae69
-Author: Niwatori401 
-Date:   Thu Mar 24 22:06:40 2022 -0700
-
-    Removed experimental embiggener from spawn table for raiders
-
-commit 2ba43b89e7d46b6a6c04645f27ecc2db25dab501
-Author: Niwatori401 
-Date:   Mon Mar 7 17:07:56 2022 -0800
-
-    Add new experimental weight gain weapon craftable at machining table with accompanying systems to allow for weight gain over time
-    Fixed issue where pawns on starting page weren't updating their body sprites to reflect their weight
-    Removed obsolete patch
-
-commit 23fd66b2150ee383ca44b89a99820aa60659b422
-Author: Niwatori401 
-Date:   Sat Mar 5 20:44:38 2022 -0800
-
-    Add male 0.7 Set defs and image sets
-    Add female 0.7 Set defs and image sets
-    Move race textures into individual support folders
-    Add Dogbold race support (male & female)
-    Add Foxbold race support (male & female)
-    Add Equinium race support (male & female)
-    Add Miqo'te race support (male & female)
-    Add Orassan race support (female)
-    Add race support for 18 races from O21 forgotten realms mod (male & female for most races just female for the 0.9 sized sprite sets)
-    Add patch to allow for custom headoffsets for exclusively RimRound sprites by race
-    Add new button to diet management gizmo that allows you to reset the sliders if one of them dissapears
-    Updated patch maker templates to be more robust
-    Add partial support for Ikquan, Klikmala and Slither races (Weight gain functionality implemented, but body part offsets are not because I could not get them to spawn with commands)
-
-commit f37c8ed18d5755716904f3b96c157cc57619f800
-Author: Niwatori401 
-Date:   Fri Feb 18 19:57:36 2022 -0800
-
-    Add race support for 17 races from Outer Rim Galaxies
-    Update patch template to eliminate possible errors
-
-commit 7c3c3b382d8ae4c62a97a8cc10d70a46c5df5e6d
-Author: Niwatori401 
-Date:   Fri Feb 18 07:52:54 2022 -0800
-
-    Update Anthro race support to include ArtOfFire's sprites
-    Reposition alien race settings
-
-commit aac6dcd2e00c44923091e70a91e52615b856730f
-Author: Niwatori401 
-Date:   Tue Feb 15 23:41:03 2022 -0800
-
-    Add new prisoner interaction: Fatten
-    * Includes acompanying job defs, work givers, interaction workers and more
-    * New stat in PawnAttitudeComp: Gaining Reluctance. Can be reduced by this interaction.
-    Add Anty race support
-    * Only includes main race
-    Add more work on hoverchair
-    * Still not in a useful state, though can be spawned in with commands.
-    Add Moonjelly race support
-    Add new patch maker templates
-    Optimize mass calculation by moving it from a harmony patch to a stat part
-    Consolidate and broaden patches relating to when a pawn changes faction or guest status (e.g. imprisonment or being turned into a slave)
-    Misc utility changes
-
-commit 6d72438dd921c62b714ab1b42cdc6ca44696caf4
-Author: Niwatori401 
-Date:   Sun Feb 6 17:25:54 2022 -0800
-
-    Back in the saddle
-    
-    Add new sprite set done by @ArtOfFire1
-    Change how body types are resolved in RacialBodyTypeInfoUtility
-    Add new settings page to allow the user to change between sprite sets in the future. These settings do not currently dave and will need re-entered everytime the game launches.
-    Remove extraneous code from WeightGizmo_ModeButton
-    Add new clothing set by @BambooAle for weight stage F060
-    Start work on hoverchair
-
-commit f7bd5329d0c9ec0434be43e03d4a8b2b90d68d53
-Author: Niwatori401 
-Date:   Mon Jan 3 21:49:52 2022 -0800
-
-    Add new textures by @ArtOfFire1 (not yet implemented in-game)
-    Add feature: pawns now yield differing amounts of meat based on current weight
-
-commit 9c2d1fcd173f7210ddc4dda9fccc66ac75e7dad1
-Author: Niwatori401 
-Date:   Sun Jan 2 22:43:18 2022 -0800
-
-    Remove legacy testing files
-    Add 0.9 size body set with accompanying defs
-    Add pawn health multiplier by bodyweight feature. Higher weight pawns will have more health in their arms, legs and torso
-    Add ability for plants to yield more than one product by use of modextensions
-    Update patch maker with new patches
-    Add full ratkin support
-    Add support for Hybrid Orassan from the Orassans mod
-    Update SuperSpaces' Fattening Foods
-
-commit e4091c561a6aa0c6f54c7a89c71b952d06b5e70c
-Author: Niwatori401 
-Date:   Thu Dec 30 22:44:15 2021 -0800
-
-    Add external mod by @SuperSpaces
-
-commit 1044f2bef7155141f85fcd587683c8992a049478
-Author: Niwatori401 
-Date:   Thu Dec 30 22:24:03 2021 -0800
-
-    Add vegetarian and meat based variants for large, huge, enormous and massive lavish and fine meals
-    Fix larger meals being unable to be crafted
-    Update patch maker with new templates
-    Add Revia race support
-    Fix bug where nutrition density was not factored in when limiting which foods pawns were allowed to eat
-    Alter pawn weight distributions to vary by faction; raiders and caravaners should no longer spawn immobile
-    Add debug hediff to allow pawns to move always
-    Rename stat files
-
-commit 432308510fed2ed5c306c09b57533979c4545a61
-Merge: 5439509 d0cd6bc
-Author: Niwatori401 
-Date:   Sun Dec 26 21:43:10 2021 -0800
-
-    Merge branch 'main' of github.com:Niwatori401/RimRound---Alpha
-
-commit 543950944533e47755e691c1542fbe33b50ef6e4
-Author: Niwatori401 
-Date:   Sun Dec 26 21:37:24 2021 -0800
-
-    Update patch maker, now make four necessary patches for alien races
-    Start work on ESCP race compatibility
-    Add 3rd party mod compatibility patching utility
-    Add full Anthro race support with custom shaded sprites
-    Patch "RJW milkable colonists" to increase milk yield from pawns based on bodyweight
-    Alter food validator path to account for animals seeking food from faucet (unfinished)
-
-commit d0cd6bc38da7c361de7f7a6db20a7afabb689492
-Author: Niwatori401 
-Date:   Fri Dec 24 08:34:54 2021 -0800
-
-    Update README.md
-
-commit 39889ccd465569dea9d3afd148ddc70fa13d7bec
-Author: Niwatori401 
-Date:   Fri Dec 24 08:33:16 2021 -0800
-
-    Update README.md
-
-commit 031c0005fa390c16660b33d81d2d3bb71af3c1f2
-Author: Niwatori401 
-Date:   Thu Dec 23 22:54:37 2021 -0800
-
-    Update README.md
-
-commit f8b24c6ceb45b240b6b74b80b7b996d4824fee54
-Author: Niwatori401 
-Date:   Thu Dec 23 22:42:44 2021 -0800
-
-    Add two operations to remove excess body weight.
-    Fix issue with pawn diet management when in a caravan.
-    Fix issue where pawns would not lose weight when at 0 nutriton (starving)
-    Malnutrition now is applied more slowly for larger pawns.
-    Nutrition now falls more slowly when below each of the two thresholds on the nutrition bar.
-
-commit eb702fd7b758a132ef80eebe9fbc9a63e09a8834
-Author: Niwatori401 
-Date:   Tue Dec 21 19:40:44 2021 -0800
-
-    Reduce VRAM usage by 50-75%
-
-commit 3060986dbd2f5a0fc293c4e541f0491622519f99
-Merge: 520239e e4b2026
-Author: Niwatori401 
-Date:   Mon Dec 20 22:37:42 2021 -0800
-
-    Merge branch 'main' into dev
-
-commit 520239ebc5a012ce2e2490d38c90aabb0fa894a1
-Author: Niwatori401 
-Date:   Mon Dec 20 22:34:36 2021 -0800
-
-    Change inspect string for food faucet and food transmiters
-    Correctly load folders specified in loadfolders
-    Dropdown to change background for start menu now shows for those without royalty or ideology
-    Pawn wiggler adjustment actually works (again)
-    Removed unused code from head adjustment setting
-
-commit e4b20267f7804e58cd056d6d4abac8d628e068ca
-Author: Niwatori401 
-Date:   Sun Dec 19 22:49:49 2021 -0800
-
-    Anger
-
-commit d4db4414266b5e26d246b40144a0b586352ae4d7
-Author: Niwatori401 
-Date:   Sun Dec 19 22:26:59 2021 -0800
-
-    Add compatibility for VCE
-    Add nutrition density for beer
-    Conceal WIP alien race patches
-    Pawns spawn with weight opinions again
-    Pawns now reflect their in game appearance in the starting menu where you select colonists
-    Pawns now spawn with varied weights
-
-commit 1e8e8f8606940007e281ede51394d2a3f769e0e7
-Author: Niwatori401 
-Date:   Sun Dec 19 16:17:32 2021 -0800
-
-    New branch
-    
-    More refactoring, support for Vanilla cooking expanded
-
-commit baf3a59b6d802afdf0c41f4fbf5820819cd4cbdc
-Author: Niwatori401 
-Date:   Mon Dec 13 22:09:36 2021 -0800
-
-    Massive refactoring, partial ratkin compatibility.
-
-commit e30710158246c782ef657ea0fda9837a799ffd37
-Author: Niwatori401 
-Date:   Sun Dec 12 17:14:19 2021 -0800
-
-    Unbust portraits and more
-    
-    Add real names to weight stages.
-    Change keys for translation for new alert.
-    Add command to build hopper on food processor.
-    Add max weight option.
-    Portraits now scale and position correctly for each bodytype.
-    *Two styles implemented.
-    Add new setting changing the render order of the head for north facing sprites using custom bodytypes.
-
-commit 884fadb99b5fda00745a5fa1963c0d4d6ce80fc3
-Author: Niwatori401 
-Date:   Sat Dec 11 22:02:31 2021 -0800
-
-    Add 5 new clothing sprte sets, fix bug causing pawn heads and bodies not to render, add alert for food processor without hopper.
-
-commit fc0172a0aaa9fb89b0fb90c3d2230dc56800bfa4
-Author: Niwatori401 
-Date:   Wed Dec 8 23:33:48 2021 -0800
-
-    New logic for when portrait rotates and when pawn faces what direction when downed. Work done on mocking up portrait fixes.
-
-commit 68a96f37ac11d0a15b1e44344d3ffc9a6be3982e
-Author: Niwatori401 
-Date:   Wed Dec 8 08:14:12 2021 -0800
-
-    Fix config error when game launches, hats no longer hidden.
-
-commit fc17afe8820a801bb1c26d2512a251bef84db783
-Author: Niwatori401 
-Date:   Tue Dec 7 22:46:10 2021 -0800
-
-    Fixes and Sprites!
-    
-    New main menu BG. Generates (harmless error) on startup. Will patch soon.
-    Updated clothing sprites.
-    Updated display on nutrition management gizmo when disabled to more clearly represetn what is happening.
-    Removed red arrow on diet management gizmo.
-
-commit 0bab46ab0a646e63ac2c69439030fe7a5bc7bbe6
-Author: Niwatori401 
-Date:   Tue Dec 7 14:12:51 2021 -0800
-
-    Save soft limit
-
-commit b48b5c47c73e1c868967b8bd84f90f5b35e1639d
-Author: Niwatori401 
-Date:   Mon Dec 6 21:54:36 2021 -0800
-
-    Fix minor bugs, add new clothing sprites for limited range
-
-commit c7735631b0642988148c81591d46a7914b5739ed
-Author: Niwatori401 
-Date:   Sun Dec 5 22:06:49 2021 -0800
-
-    Test webhook
-
-commit cb8a45df9639e6820b49a7c72819b5b2d9d65a6d
-Author: Niwatori401 
-Date:   Sun Dec 5 16:52:50 2021 -0800
-
-    Fix typos, save weight opinion
-
-commit 4e7c4f2ca5f9edb271a04011ca30a93e8bc736b8
-Author: Niwatori401 
-Date:   Sun Dec 5 08:41:15 2021 -0800
-
-    Fix doctors exploding patients stomachs
-
-commit e019489e436a16426867b21f240e1827471f3c17
-Author: Niwatori401 
-Date:   Sun Dec 5 07:52:25 2021 -0800
-
-    Bugfixes
-    
-    Fix meal base patch
-    Fix food optimality patch to work well with animal trainer workgiver
-    Pawns spawn with hediffs on old save if they did not have it already
-    Adjust digestion rate base
-    Show stomach capacity and current value on gizmo
-
-commit 053a26cd8ba3b12e747b23404144bef727e7de7d
-Author: Niwatori401 
-Date:   Fri Dec 3 19:55:54 2021 -0800
-
-    New Repo!
-
-commit f3e87a4e9cb5b424e5d7dabbd60f67c75b3ce8d6
+==================================================
+Commit Hash: 629800af4bdfc353591c88f47cce02bb45b859f5
 Author: Niwatori401
-Date:   Fri Dec 3 19:40:22 2021 -0800
+Date: Wed Mar 1 11:45:24 2023
 
-    Initial commit
+Change icons for UltraTech implants to custom icons
 
+==================================================
+Commit Hash: fa53578b8a07d13d10441849a7cb9c6c02e883c6
+Author: Niwatori401
+Date: Wed Mar 1 10:13:49 2023
+
+Add tooltips for settings
+Fix UltraTech apparel adding flat digestion values instead of multiplier
+
+==================================================
+Commit Hash: dcd93b14eacba508881c92713350f2e4be405a13
+Author: Niwatori401
+Date: Tue Feb 28 21:52:17 2023
+
+Add option to hide/show ineligible perks
+Add predicate member to perks which dictates for whom it is shown
+Fix bug in Breakneck Buffet / Makes all the Rules where values were swapped
+
+==================================================
+Commit Hash: c801fcfba69312b4ebb3072e95574b40db0958cd
+Author: Niwatori401
+Date: Tue Feb 28 11:12:46 2023
+
+Implement Black Hole perk
+Implement One More Bite perk
+Implement Peak Evolution perk
+Implement Titanium Stomach perk
+Add corpulent apple sprite button up shirt set
+Change how perk multipliers were applied to relevant stats for consistency
+Remove Abilities label from perk menu
+
+==================================================
+Commit Hash: 52382fc9f2867d0a511dada97d7a0b06aac2755f
+Author: Niwatori401
+Date: Sun Feb 26 11:24:35 2023
+
+Add permanent embiggener
+Rebalance temporary embiggener
+Fix embiggener bullets not working
+Add descriptions to UltraTech apparel detailing their effects
+
+==================================================
+Commit Hash: 8e109d29f5b519e64ecfbea63d4ea6f015e58b79
+Author: Niwatori401
+Date: Sun Feb 26 09:33:53 2023
+
+Make weight gain from gas temporary
+
+==================================================
+Commit Hash: 40593c48d3eeefe59702d3230c610b6c5962fa73
+Author: Niwatori401
+Date: Sun Feb 26 05:15:06 2023
+
+Fix error on crafting UltraTech apparel
+
+==================================================
+Commit Hash: 36969f440f22642a9b3cb3dbdf5d44baad1323e4
+Author: Niwatori401
+Date: Sun Feb 26 02:45:58 2023
+
+Implement flab grenades
+
+==================================================
+Commit Hash: dd7db8214bc265c6239539e1aad384f2cbc18061
+Author: Niwatori401
+Date: Sun Feb 26 00:53:38 2023
+
+Clamp SoftLimit above zero
+
+==================================================
+Commit Hash: 9844a48a6b74921516eb221b78c61cf3bf739d3a
+Author: Niwatori401
+Date: Fri Feb 24 12:21:02 2023
+
+Remove extra .dlls
+Actually push dll for fullness bug
+
+==================================================
+Commit Hash: da8754d47b2ff510ce17012815fd42a6bea6edec
+Author: Niwatori401
+Date: Thu Feb 23 21:56:09 2023
+
+Fix double fullness being added on ingest
+
+==================================================
+Commit Hash: 0e7937314576dcfb2070a8df8bc120d338c846ea
+Author: Niwatori401
+Date: Thu Feb 23 12:04:17 2023
+
+Remove extraneous statchange parameters
+
+==================================================
+Commit Hash: 17c3d093832236caf1c7f89272305826707693b3
+Author: Niwatori401
+Date: Thu Feb 23 04:07:43 2023
+
+Heavily refactor how RimRound stats are calculated and modified
+Add test sprites for new clothing
+
+==================================================
+Commit Hash: bcdea5cb53e5dc549b481f351b52eb452034d618
+Author: Niwatori401
+Date: Mon Feb 20 22:00:12 2023
+
+Fix pawn leaving map bug
+
+==================================================
+Commit Hash: 055580221a8b61c5417622c69d0c65ccc6975c42
+Author: Niwatori401
+Date: Mon Feb 20 12:29:47 2023
+
+Temporarily disable Statue of Colonist mod support
+Start work on rewriting support patch for Statue of Colonist
+
+==================================================
+Commit Hash: f6222362eb04c15fce650c49bcb95fbe012dab0d
+Author: Niwatori401
+Date: Mon Feb 20 08:39:44 2023
+
+Fix bug when configuring starting pawns
+
+==================================================
+Commit Hash: 4a79479ada43e880081be12e56825125ce9c8c4b
+Author: Niwatori401
+Date: Sun Feb 19 22:04:18 2023
+
+Remove duplicate tags from defs
+Remove Ideology only sound and UI references
+
+==================================================
+Commit Hash: cad9a80ffcc6aea6f6d228d921af135c36c1a625
+Author: Niwatori401
+Date: Sun Feb 19 21:27:04 2023
+
+Fix bug on pawn leaving map
+
+==================================================
+Commit Hash: be7693dd89a78851677b094f5256adc7e67f7353
+Author: Niwatori401
+Date: Sun Feb 19 11:14:38 2023
+
+Temporarily disable unfinished research projects
+
+==================================================
+Commit Hash: 2986b4b64dd8ffa5c7fee82fdd6e0243ae16eee6
+Author: Niwatori401
+Date: Sun Feb 19 10:30:34 2023
+
+Fix patch that was broken for feeding tube support in 1.3 -> 1.4 transition
+Update advanced autofeeder sprite
+Remove and reorganize excess sprite files
+
+==================================================
+Commit Hash: a64d6ace5f446c567b3e725fbb343ab120cc3cb7
+Author: Niwatori401
+Date: Sun Feb 19 02:22:31 2023
+
+Move nutrient density to storages from nets
+Fix bug that would reset nutrient density when food net reset
+Remove unused properties from FoodNetTrader_CompProperties
+Remove edge shadows from feeding system buildings
+
+==================================================
+Commit Hash: d705220a538c765dc11ccf7539938e7a6a793bfc
+Author: Niwatori401
+Date: Sun Feb 19 01:21:50 2023
+
+Add version logging
+
+==================================================
+Commit Hash: cc551df85f8a65816c79aefbefa44ec2ce08e288
+Author: Niwatori401
+Date: Sat Feb 18 04:43:52 2023
+
+Add nutrient distillery and research
+Start adding new weight opinion
+Refactor parts of liquid food system
+Start adding ability to convert pawn's weight opinions
+
+==================================================
+Commit Hash: b9b67d6687ce6127aaa8ab06d709637cee92de81
+Author: Niwatori401
+Date: Sat Feb 11 06:56:58 2023
+
+Fix bug that reset slider positons to last save on pawn rescue or map re-entry.
+Fix perks being wiped to last save state on pawn rescue or map re-entry.
+
+==================================================
+Commit Hash: a29328e73460964bff9ecae6044184d1aa9e43fb
+Author: Niwatori401
+Date: Sat Feb 11 05:49:40 2023
+
+Add NovaTech clothing
+Add clothing modextension class
+
+==================================================
+Commit Hash: fc08bbc1429b85f054c93cac5b5c86f3006c5c53
+Author: Niwatori401
+Date: Mon Feb 6 12:48:40 2023
+
+Add mod extension for UltraTech textiles
+Make new clothing items' effects as specified in the mod extension work
+Move patches to folders
+
+==================================================
+Commit Hash: 87af749ec5a21626e169ff9fac2e64441991f619
+Author: Niwatori401
+Date: Sun Feb 5 10:25:38 2023
+
+Add description for advanced auto feeder
+Update build materials for advanced auto feeder
+
+==================================================
+Commit Hash: 89628586b27b39e50e9e8d0d97d0b0a12383cf5b
+Author: Niwatori401
+Date: Sun Feb 5 02:34:40 2023
+
+Add advanced auto feeder
+Move files into more organized folders
+
+==================================================
+Commit Hash: d084f2a3ada262a5a83994c29fa1d0c195fe35bb
+Author: Niwatori401
+Date: Fri Feb 3 23:06:42 2023
+
+Add option to restrict how much weight must be gained to throw gain text
+
+==================================================
+Commit Hash: 5a701f4f12dcf50e1aa45d3a92a8e6e1594ecc4a
+Author: Niwatori401
+Date: Fri Feb 3 22:56:59 2023
+
+Add option to change display weight to pounds
+
+==================================================
+Commit Hash: ca1512121597be253dc8efecd7babe4051a30d5c
+Author: Niwatori401
+Date: Sun Jan 29 11:21:43 2023
+
+Change fattening explosion def name
+Remove garbage file
+
+==================================================
+Commit Hash: 72f003c41b2ce2efd11fc5fc2c0b4618fd4ab33e
+Author: Niwatori401
+Date: Sun Jan 29 11:17:37 2023
+
+Add race support for Kolra's Oni Race Mod
+Add custom gas and gas grid system
+Add fattening explosion damage type
+Add sudden weight gain hediff
+Add sudden weight gain immunity hediff
+Revert change for Xenohumans
+
+==================================================
+Commit Hash: a4b28d4d5d467c9b1ac35e80a9477ba9fd6b6c32
+Author: Niwatori401
+Date: Fri Jan 13 10:26:09 2023
+
+Update mod support for Forgotten Realms and Xenohumans - Gen-spliced Xenos
+
+==================================================
+Commit Hash: 28eb64fb227a2afe935625c766b2084e6b5730e8
+Author: Niwatori401
+Date: Mon Jan 9 09:51:13 2023
+
+Lock Belittler/Embiggener behind relevant research
+Lock massive food vat behind relevant research
+Change sprite for massive food vat
+Food vats no longer can be erroneously rotated
+
+==================================================
+Commit Hash: c56b5b36b562cd8dc8d28f9a14418343a5ec002f
+Author: Niwatori401
+Date: Mon Jan 9 07:58:45 2023
+
+Add thoughts for Gel 11 - 20
+
+==================================================
+Commit Hash: 23c7af91113162e0b57b70aae689d759728d23a4
+Author: Niwatori401
+Date: Mon Jan 9 05:53:55 2023
+
+Change 'Comfortable Corpulence' to affect 3% of weight penalty rather than 3% flat penalty mitigation
+Downed pawns who purchase 'Comfortable Corpulence' will now be able to get up immediately, if they should be mobile with the effects of the perk.
+
+==================================================
+Commit Hash: f7d740ec8b811d511207ed688fc8a7f9db00d58f
+Author: Niwatori401
+Date: Mon Jan 9 04:21:08 2023
+
+Add setting to restrict use of RR bodytypes by age
+
+==================================================
+Commit Hash: 41a2ee5fffc81efa5946f67406bb3818c00801db
+Author: Niwatori401
+Date: Sun Jan 8 04:58:33 2023
+
+Add new gizmo to pawns allowing individual assignment of body type sets
+
+==================================================
+Commit Hash: 2a9aeb021c7a40d4f71c34971b45c965e77980bc
+Author: Niwatori401
+Date: Sun Jan 8 02:13:44 2023
+
+Alter 'Heavy Revian' to alter movement as a difference from weight penalities rather than flat additive
+
+==================================================
+Commit Hash: 2f27fb4e986c00241419a9127c4410f3a7c3322e
+Author: Niwatori401
+Date: Sun Jan 8 01:44:26 2023
+
+Fix 'It's coming this way!' allowing blob beds/generators/rec spots/feeding tube users to move
+
+==================================================
+Commit Hash: ffa42b1c54186cfe76daff85508e5da993944eeb
+Author: Niwatori401
+Date: Sun Jan 8 01:03:40 2023
+
+Add click sound to RR gizmos
+Fix outdated/incorrect perk prerequisites
+Update perk localization to reflect changes
+
+==================================================
+Commit Hash: 7136570f574db1cc3aa8d09a20a3aa131ac67100
+Author: Niwatori401
+Date: Sat Jan 7 12:46:00 2023
+
+'Crop Notch' and 'There's the beef' now raise respective stat's maxValue for post processing
+Balance various perks
+
+==================================================
+Commit Hash: bfa68bdb888abd0c12fc5c64823fbc4b715b8081
+Author: Niwatori401
+Date: Sat Jan 7 03:59:06 2023
+
+Add two new settings regarding perk balancing
+
+==================================================
+Commit Hash: 4ecc18c0b1d41b9d32caf0c3f87853b7d86d07dc
+Author: Niwatori401
+Date: Sat Jan 7 01:56:09 2023
+
+Remove licensed sprites
+
+==================================================
+Commit Hash: 70d30a3c27c9edb7f2a0bf5ba005d6ab2fa6e535
+Author: Niwatori401
+Date: Thu Jan 5 11:35:17 2023
+
+Temporarily disable RRX Mealtime plugin
+
+==================================================
+Commit Hash: 877dd388651ba47963a89e2fbb4c5f75dd689903
+Author: Niwatori401
+Date: Thu Jan 5 11:31:49 2023
+
+Implement 'That!'
+
+==================================================
+Commit Hash: ca42b99db86596cb23b715c3bb3b4c42d0532b54
+Author: Niwatori401
+Date: Thu Jan 5 04:36:54 2023
+
+Fix typos in stat parts
+Fix icon for 'Crop Notch'
+
+==================================================
+Commit Hash: 9c034e084deadfc7b22d15d0eeacafbac9c03226
+Author: Niwatori401
+Date: Thu Jan 5 04:30:52 2023
+
+Implement 'Crop Notch'
+Implement 'There's the Beef!'
+
+==================================================
+Commit Hash: bb67998367a3646c5807493b7fcf4d8227d9eb3e
+Author: Niwatori401
+Date: Thu Jan 5 04:08:04 2023
+
+Implement 'Pack Whale'
+
+==================================================
+Commit Hash: 05496984141845b792378fae6b214705f33fb824
+Author: Niwatori401
+Date: Thu Jan 5 03:11:09 2023
+
+Implement 'Atomic Anomaly'
+Implement 'Sudden Expansion'
+Make text thrown from pawn upon large weight gain reflect weight gain/loss multipliers
+
+==================================================
+Commit Hash: 3d4d74c47b4d9e9344d0a24b516fc38614cbbd9e
+Author: Niwatori401
+Date: Thu Jan 5 02:32:14 2023
+
+Add RRX Mealtime as plugin (Thanks, acoolgai!)
+
+==================================================
+Commit Hash: 4e131eef1d7d0d02441fd67951dd09b59f884650
+Author: Niwatori401
+Date: Tue Jan 3 11:04:11 2023
+
+Add basic game over functionality to ascension perk
+
+==================================================
+Commit Hash: a975e8d2c7587ff49d4845137ae08b4eef7d1a31
+Author: Niwatori401
+Date: Tue Jan 3 04:55:12 2023
+
+Set small diet gizmo by default
+Remove unnecessary logging
+
+==================================================
+Commit Hash: 8bd971cab83428e5e729ad618c20b43f3c5626cb
+Author: Niwatori401
+Date: Tue Jan 3 04:17:11 2023
+
+Add new custom icons for debug gizmos and comp gizmos courtesy Ultranova
+Add option to make diet control gizmo smaller
+Fix potential NRE in perk saving
+Add custom mod search class and implement in RimRound_BodyTypeSpecificAlignmentPatch
+
+==================================================
+Commit Hash: 56d374ab512975a35d3c48387dedbd58abd84910
+Author: Niwatori401
+Date: Sat Dec 31 07:16:34 2022
+
+Update AlignThatTail to generate all tail locations combinations from one partial set of either 090 or Standard female
+Add full Ratkin, Anty and Revia race support
+Include patch maker templates in git repo
+
+==================================================
+Commit Hash: 3367ab832bf495f6a32a8e71737bb05e80081101
+Author: Niwatori401
+Date: Fri Dec 30 03:51:15 2022
+
+Fix: Revia tails/ears no longer scale with drawsize
+
+==================================================
+Commit Hash: d8ecbc2d59080a9a197cf176fdc05321c90620ed
+Author: Niwatori401
+Date: Fri Dec 30 02:29:40 2022
+
+Fix Ratkin race support for east/west tail directions
+
+==================================================
+Commit Hash: 55beedde60f96185807b60c0dad997a90497ab8d
+Author: Niwatori401
+Date: Fri Dec 30 02:16:59 2022
+
+Fix HAR races with custom body sprites at custom paths using default RW sprites
+
+==================================================
+Commit Hash: 2d54e79f078a22cfc4b2784191fddc3840f5c4b9
+Author: Niwatori401
+Date: Fri Dec 30 01:43:34 2022
+
+Renew Moonjelly race support for 1.4
+
+==================================================
+Commit Hash: f3c9c1eb64f50e9ffe135ea35c6ff0310f34ded4
+Author: Niwatori401
+Date: Thu Dec 29 03:10:16 2022
+
+Add Anthro race support for new tabs
+Add new patch maker template
+Remove "blob" item from recreation tab
+
+==================================================
+Commit Hash: d8bc07ce1ba8f5ca38f0cda3e4e13683d72da45c
+Author: Niwatori401
+Date: Wed Dec 28 08:22:54 2022
+
+Fix NREs in PawnCapacityUtility_CalculateCapacityLevel_AlterForPerksAndSooter patch
+
+==================================================
+Commit Hash: b3d05513bb28f9fbb993b44aabf1fdb8cff0678f
+Author: Niwatori401
+Date: Wed Dec 28 06:02:24 2022
+
+Add setting to restrict visual size of gelatious pawns
+
+==================================================
+Commit Hash: 240d6f3d8d04831eee4ffbc58f2031ef7a331651
+Author: Niwatori401
+Date: Wed Dec 28 04:48:18 2022
+
+Fix Anty race support
+Add Anty race support for Gel 11-20
+Add new xml patch template
+
+==================================================
+Commit Hash: 62c75bca4e19db40dd2137320683915d49d23da6
+Author: Niwatori401
+Date: Wed Dec 28 02:47:00 2022
+
+Fix Ratkin race support
+Add Ratkin support for sizes Gel 11-20
+Add option to disable drawing of pack items for custom sprites
+Add option to adjust max visual size
+
+==================================================
+Commit Hash: 87facde37ef8dfbceeb212e56ff713c3175dab4d
+Author: Niwatori401
+Date: Tue Dec 27 12:36:09 2022
+
+Add success and failure click sounds for perks
+
+==================================================
+Commit Hash: 4b254ade161d799f4e908f212b935b103f3a3aa5
+Author: Niwatori401
+Date: Tue Dec 27 12:04:08 2022
+
+Implement "Paunch Power"
+Fix saving bug with blob beds
+
+==================================================
+Commit Hash: 215ca6ddaa217e7ce7a2d03e1de901abc8401c3b
+Author: Niwatori401
+Date: Tue Dec 27 10:00:24 2022
+
+Implement "We Like to Party" with relevant drivers and givers
+
+==================================================
+Commit Hash: e7e65cb668b0173403f635fdc3889e76fa5da91b
+Author: Niwatori401
+Date: Tue Dec 27 08:45:09 2022
+
+Attempt fix of loading bug
+
+==================================================
+Commit Hash: 9d08844466589888c09ce1c1c333c93543a5f19f
+Author: Niwatori401
+Date: Tue Dec 27 08:30:01 2022
+
+Implement "Folds of Heaven"
+Remove possibly deprecated patch for RJW Milkable Colonists
+
+==================================================
+Commit Hash: 1a1765e80487314f53a1dbe8bbe6b7fcc8e42246
+Author: Niwatori401
+Date: Tue Dec 27 06:04:52 2022
+
+Implement "Rotund Regeneration"
+
+==================================================
+Commit Hash: cb3e1fc7ced47f6de9811840547d606a20070926
+Author: Niwatori401
+Date: Tue Dec 27 05:22:18 2022
+
+Fix NRE on world gen
+
+==================================================
+Commit Hash: 02532e75a453393355e1e74eb303b35330d51e59
+Author: Niwatori401
+Date: Tue Dec 27 04:38:33 2022
+
+Implement "Well Insulated"
+Implement "No Pain, Still Gain"
+
+==================================================
+Commit Hash: 2ac5b1cd9f3d3eef7bc252d916053ba094714035
+Author: Niwatori401
+Date: Tue Dec 27 04:17:18 2022
+
+Finish implementing "Heavy Revian"
+Implement "Makes All the Rules"
+Change implementation of "Breakneck Buffet" and "Demoic Devourment" to affect capacity directly
+Implement "Bulletproof Blob"
+Implement "Titanic Tank"
+\
+
+==================================================
+Commit Hash: 006acfc0b197b1fe9183c14de1b2cfc46f6235e1
+Author: Niwatori401
+Date: Tue Dec 27 00:56:26 2022
+
+Fix Desc. and Perk tabs showing up on pawns they shouldn't
+Add new option in RR menu to control minForCapable for movement.
+Replace basic XML minForCapable patch to movement capacity with dynamic Harmony one.
+
+==================================================
+Commit Hash: b14c5f1115f1b861109848cb75654cb68b6b8959
+Author: Niwatori401
+Date: Sun Dec 25 03:17:32 2022
+
+Reimplement broken 1.3 patch making immobile pawns not lay sideways in their portrait.
+Fix various namespace inconsistencies
+
+==================================================
+Commit Hash: b33fc9e53c027f22e923011d5c2419d26f35fb40
+Author: Niwatori401
+Date: Sun Dec 25 01:43:31 2022
+
+Attempt to fix loading error for old saves
+Rename folder path to match namespacing
+Remove old, unused files
+
+==================================================
+Commit Hash: ea5b2dd98bf9ab9af16f995e4bd2d151df7b4b4e
+Author: Niwatori401
+Date: Sun Dec 25 01:25:09 2022
+
+Attempt to fix loading issue for old saves
+
+==================================================
+Commit Hash: 3d4320b771b1058855ec817393ba5d66c4f60173
+Author: Niwatori401
+Date: Sat Dec 24 06:42:41 2022
+
+Rebalance hunger impacting perks
+Add GameOverUtility for use in Ascension ending
+Change localization to reflect balance changes
+Disable perk tab
+
+==================================================
+Commit Hash: 4cc7570d1bca81ecc8757a6c9a73b7303d04ba9b
+Author: Niwatori401
+Date: Sat Dec 24 06:04:15 2022
+
+Implement Fat Furnace
+
+==================================================
+Commit Hash: e8343e1c30745e8bac0e6073a5ebc613ef8f5835
+Author: Niwatori401
+Date: Sat Dec 24 03:44:43 2022
+
+Add proper level counting and nutrition tracking including display in perk tab
+
+==================================================
+Commit Hash: e50300768cc71d072907ffddcb41777e3784b57f
+Author: Niwatori401
+Date: Sat Dec 24 02:57:13 2022
+
+Fix and implement 'Ample Appetite', 'Voracious' and 'Gluttony Incarnate' perks.
+
+==================================================
+Commit Hash: 5b06f47d8fe4b0d22b9934d8b753ef502ff6487e
+Author: Niwatori401
+Date: Sat Dec 24 01:54:22 2022
+
+Fix Giga Gurgling
+Fix Digestion Beyond Question
+
+==================================================
+Commit Hash: 3c36dd12b5e201fe2ba8902ac5bdf05f04aad0d3
+Author: Niwatori401
+Date: Sat Dec 24 01:36:08 2022
+
+Implement 'Even Further Beyond'
+
+==================================================
+Commit Hash: 5f6156226b62e0cc9d86d657cb0872dc9bf437ff
+Author: Niwatori401
+Date: Sat Dec 24 01:03:09 2022
+
+Add level available count to perk menu
+Change Comfortable Corpulence implementation to properly subtract from Hediff penalties rather than a bonus to the base movement speed.
+Change Culinary Connoisseur implementation. Now raises cooking skill rather than raw preprocessed percentage.
+Change description for Culinary Connoisseur appropriately.
+Rename patch to be more appropriate.
+
+==================================================
+Commit Hash: f27f51d13d36e81b73727b6284a33633b472e0b7
+Author: Niwatori401
+Date: Sat Dec 17 23:11:47 2022
+
+Add perk saving feature
+
+==================================================
+Commit Hash: f0328bba3caa52ccedba10933daa7ac96d44c5d2
+Author: Niwatori401
+Date: Tue Dec 13 08:27:10 2022
+
+Fix prisoners having double gizmos
+
+==================================================
+Commit Hash: f6b9741633c513fd3634f329704b25a89f29ddfe
+Author: Niwatori401
+Date: Tue Dec 13 08:01:00 2022
+
+Fix pawns not losing weight
+
+==================================================
+Commit Hash: 4af744a31a3b3b4728707fb2e9979ffb70276601
+Author: Niwatori401
+Date: Mon Dec 12 21:56:58 2022
+
+Fix bug where digestion was immensely slow
+
+==================================================
+Commit Hash: 7d0473a8fa26c8822fdb417d4154f09d38809994
+Author: Niwatori401
+Date: Mon Dec 12 11:34:19 2022
+
+Update About.xml to state 1.4 support
+Temporarily disable perk tab
+
+==================================================
+Commit Hash: bf9190a0ecd79a8342ef5a3d437e22b9028f93ca
+Author: Niwatori401
+Date: Mon Dec 12 10:29:43 2022
+
+Removing extra debug logging
+
+==================================================
+Commit Hash: 0fccd8e43b7b449de19216079a706a373ad58efb
+Author: Niwatori401
+Date: Mon Dec 12 10:26:51 2022
+
+Fix clothing path adjustment patch
+Remove obsolete patch file
+Remove saving feature for incomplete perk system
+
+==================================================
+Commit Hash: c1d8e5a129997916ba539776759b9ae7c17ff1ac
+Author: Niwatori401
+Date: Sun Dec 11 02:45:17 2022
+
+Fix portraits not being zoomed in correctly
+Fix and restore backstory patch for HAR
+Remove unused patch
+
+==================================================
+Commit Hash: 5e0e10b0e7de3ade8ca92dafb36bd3c59392d59a
+Author: Niwatori401
+Date: Sun Dec 11 01:55:29 2022
+
+Add working sprite replacement with transpiler to the HAR patch for ResolveAllGraphics
+Move disabled patches to a more organized location
+
+==================================================
+Commit Hash: b39f313880d5128db99f55e4e7f7f56e1e1f2742
+Author: Niwatori401
+Date: Sat Dec 10 22:55:51 2022
+
+Disable incompatible patches as necessary for basic functionality.
+Begin writing patches to load RR graphics correctly.
+
+==================================================
+Commit Hash: 8e9915405c254c2281da4f2921e9f38e63244667
+Author: Niwatori401
+Date: Sun Nov 13 08:25:20 2022
+
+Fix: Body scale size now works. Begin work on sprite reuse for multiple body type defs
+
+==================================================
+Commit Hash: c5038bef3af838250b62377f1d98ea980717e9f5
+Author: Niwatori401
+Date: Sun Nov 6 10:12:33 2022
+
+Work on updating to 1.4
+- Bodies now render in, but wrong sized.
+- No more crash on start up
+- Several patches disabled
+
+==================================================
+Commit Hash: 5278b2f9dc8fc76f0820e698f0c496287b86afbd
+Author: Niwatori401
+Date: Fri Sep 23 10:36:18 2022
+
+Implement part of 'Heavy Revian' perk
+Implement 'Comfortable Corpulence' and 'Its Coming This Way!' perks
+
+==================================================
+Commit Hash: 761c6e18c5c3c442cbfeff2bfeb818ed8e0e9ec5
+Author: Niwatori401
+Date: Fri Sep 23 09:44:49 2022
+
+Implement 'Culinary Connoisseur' perk
+Implement 'Demonic Devourment/Breakneck Buffet' perks
+
+==================================================
+Commit Hash: 897cf180348867420f5629a8c88743264a5c9261
+Author: Niwatori401
+Date: Fri Sep 23 09:24:54 2022
+
+Implement 'Practical Problems' perk
+
+==================================================
+Commit Hash: 64d201868b931c5af0bb678715b479d74fcee634
+Author: Niwatori401
+Date: Fri Sep 23 09:19:47 2022
+
+Implement several perks
+
+==================================================
+Commit Hash: 6307adf41934e1711a739411e423718ad1215db4
+Author: Niwatori401
+Date: Fri Sep 23 08:03:34 2022
+
+Add descriptions to perks
+Add saving to perk levels
+
+==================================================
+Commit Hash: 8de866a7692edd86569612caf404df63cbc74864
+Author: Niwatori401
+Date: Sun Sep 11 12:27:35 2022
+
+Add perk icons
+Add perk tab
+
+==================================================
+Commit Hash: 1f4046b132c360df00d0f22f484308b1b31bfb14
+Author: Niwatori401
+Date: Sat Sep 10 12:56:45 2022
+
+Add descriptions for weights Gelatinous XI - XX
+
+==================================================
+Commit Hash: 5f5f41542107d096ec8128aad38e46edf0a5fc1b
+Author: Niwatori401
+Date: Sat Sep 10 12:20:13 2022
+
+Add gelatinous XI - XX bodytypes for female/male standard 090 (with variant sets) and female apple 090
+
+==================================================
+Commit Hash: 477229d66b262b317233d363a82f699228cc21ff
+Author: Niwatori401
+Date: Sat Sep 10 10:36:35 2022
+
+Add weight stages Gelatinous XI-XX for standard male/female and apple female
+
+==================================================
+Commit Hash: 1a3009febede963a5036bd98ec775857ca55657a
+Author: Niwatori401
+Date: Fri Sep 9 23:54:05 2022
+
+Fix body parts having 400hp all the time
+
+==================================================
+Commit Hash: 911dd2290dd1ef6416acfb51549ec9b88cdafc41
+Author: Niwatori401
+Date: Mon Aug 15 10:43:45 2022
+
+Add experimental belittler
+Add massive food vat
+Remove possible NRE in Hediff_CapMods_DisableCapModsForRRHediffsOptionally
+Remove unused file
+
+==================================================
+Commit Hash: 31cb8aff767c16cb615861e0e8b47f37de44b6e6
+Author: Niwatori401
+Date: Fri Aug 12 01:03:03 2022
+
+Update preliminary Rabbie support to use head positioning for ears.
+
+==================================================
+Commit Hash: 74d705f519f39f1f7eb27bd17f1e49b6da0a63b1
+Author: Niwatori401
+Date: Fri Aug 12 00:44:27 2022
+
+Add preliminary Rabbie race support.
+
+==================================================
+Commit Hash: e2ef17e54425685084919eadcc5823fcebc3025d
+Author: Niwatori401
+Date: Thu Aug 11 23:29:20 2022
+
+Fix NRE in world gen for world pawns spawning with Archotech Metabolism
+Remove unnecessary dependencies and change copylocal to false for remaining dependencies for TestingRange
+
+==================================================
+Commit Hash: 0fcf3b3848a81d3a9ddc5e75ad064262d1c25623
+Author: Niwatori401
+Date: Tue Aug 9 08:36:57 2022
+
+Add catch to ModCompatibilityUtility to help diagnose errors on mod loading.
+
+==================================================
+Commit Hash: a92bde3365ac2664f4c1db58c92a6ebc1eaeb45d
+Author: Niwatori401
+Date: Tue Aug 9 07:16:34 2022
+
+Add many new research defs.
+Add four new implants with needed defs, accompanying changes to patches, HediffUtility and hediff classes.
+Add male descriptions for weight.
+Add title for each weight level.
+Adjust position of desciption box to look prettier and show scrollbar.
+Add sprites and test object for flab grenade.
+Add personal modifiers for each impact added by fullness hediff.
+Add personal weight gain factor in FullnessAndDietStats_ThingComp.
+Update localization.
+
+==================================================
+Commit Hash: 58d8b335b91c7657f426bfba637f6246a2232ed2
+Author: Niwatori401
+Date: Sun Aug 7 08:29:47 2022
+
+Fix alert for missing hopper showing when using XL hopper.
+
+==================================================
+Commit Hash: 7c563b644dd583d2d63dc18f9a7c7b7dbdaf5c36
+Author: Niwatori401
+Date: Sat Aug 6 01:16:28 2022
+
+Add three new thoughts for Gelatinous II and above for all weight opinions. Courtesy of Ultranova.
+Add new hopper 'XL hopper'. For use with food processor to accept a greater variety of food items.
+Add new inspect tab 'Desc.' for pawns. Descriptions courtesy of Ultranova.
+Update patch for RJW - Milkable colonists. Weights above Gelatinous II now have specific multipliers.
+Add multiplier setting for RJW - MC milk yield in RR settings.
+Fix weight opinions not applying to correct weights.
+Update changelog
+
+==================================================
+Commit Hash: 5577dc0e88e2593d1a506bc42383e3e9462f2f5f
+Author: Niwatori401
+Date: Fri Aug 5 06:08:14 2022
+
+Update RJW - Milkable colonists patch to include additional yield for pawns above Gelatinous I.
+
+==================================================
+Commit Hash: d94f820d6b0b2aa6f8e9f30cb5576026713ca500
+Author: Niwatori401
+Date: Wed Aug 3 00:02:15 2022
+
+Fix: autofeeder now saves the mode it was on and the pawn it was attached to on save.
+
+==================================================
+Commit Hash: 3c19cee6817958c7a161bdbbb1a1e889129c5a0a
+Author: Niwatori401
+Date: Tue Aug 2 10:06:05 2022
+
+Add research tab for RimRound
+Add research defs for feeding tube items
+Edit feeding tube items to require research
+
+==================================================
+Commit Hash: 93654ecf4035ae5d2e5adb804fbf1b8a91df35a6
+Author: Niwatori401
+Date: Tue Aug 2 06:45:51 2022
+
+Fix: Food faucet and food processor no longer function if not powered.
+
+==================================================
+Commit Hash: 8abf475c569178a67d99841730d6e519450d85b0
+Author: Niwatori401
+Date: Tue Aug 2 06:18:14 2022
+
+Finish altering feeding toils for food faucet.
+
+==================================================
+Commit Hash: 19d7d84c211545c64bb08d54e58001a6668ca6e7
+Author: Niwatori401
+Date: Tue Aug 2 04:30:56 2022
+
+Remove one unused patch and one redundant one.
+Begin feature fix for food faucet.
+
+==================================================
+Commit Hash: 2ce4a43d0a3cbe9477a4e70f3ee10fd65f730161
+Author: Niwatori401
+Date: Mon Aug 1 11:43:24 2022
+
+This commit is not compaitble with previous saves containing Ratkin and/or Anties!
+
+Remove extra unused WIP race patch files.
+Refactor how Anties and Ratkin use sprites.
+Remove Ratkin's and Anties' race specific BodyTypeDefs.
+Add Anty and Ratkin support for Gelatinous II - X.
+
+==================================================
+Commit Hash: 6cc40cc578cdd0283bad6bc99f3ed954971c7df1
+Author: Niwatori401
+Date: Mon Aug 1 01:22:25 2022
+
+Update localization.
+Add feature: skin drops now scale with pawn weight.
+Add feature: Meat drop multiplier setting now affects skin drops as well.
+
+==================================================
+Commit Hash: cfe1f7967bfc8de17c6b0ef301671e1a928c5af5
+Author: Niwatori401
+Date: Sun Jul 31 12:34:09 2022
+
+Remove unused legacy patches.
+Add option to modify bonus meat yield.
+Add autofeeder sprite.
+Refactor food network and food faucet.
+Fix fullnessToNutrition ratio not working correctly for food network.
+Change fullness hediff to no longer show the 'Medical Emergency' tag unless stomach has burst.
+
+==================================================
+Commit Hash: 3253f7b733d1f6cb0ad850c3d4f7146fe6bd6762
+Author: Niwatori401
+Date: Sun Jul 31 04:29:19 2022
+
+Remove verb method for autofeeder.
+Add hediff for using autofeeder to immobilize users.
+Add pipe texture for feeding tube. It now attaches to pawn's mouths if they are laying down.
+Add mode switch for autofeeder with accompanying icons.
+Update localization file.
+
+==================================================
+Commit Hash: bb9663bb80b73f0d4d8f7dd2c245d1d7ed2c323e
+Author: Niwatori401
+Date: Sat Jul 30 22:59:21 2022
+
+Work on autofeeder with Verb method
+
+==================================================
+Commit Hash: 8f37db7fca83e66e6afeabc4b75fcbd9621928a1
+Author: Niwatori401
+Date: Sat Jul 30 00:04:43 2022
+
+Begin substantial refactor for feeding tube.
+
+==================================================
+Commit Hash: e2d576f65fe70989290e4bd60bf804bf09b394c4
+Author: Niwatori401
+Date: Fri Jul 29 10:31:50 2022
+
+Add male sprite sizes for standard set for Gelatinous II - Gelatinous X.
+Add male sprite support for 0.9 size sprite sets.
+Add female sprite sizes (both normal and apple) for 0.9 sprite sizes for Gelatinous II - Gelatinous X.
+Add female sprite sizes (apple) for standard set for Gelatinous II - Gelatinous X.
+Fix bug where pawns without support would spawn with the weight hediff.
+Fix bug where pawns without support would spawn with weight opinions.
+Organize Anty specific defs.
+
+==================================================
+Commit Hash: 9420d06e1a26667f2438d11a55500396d7022a18
+Author: Niwatori401
+Date: Thu Jul 28 14:16:02 2022
+
+Add appropriate portrait scales and positions for new sprite sizes.
+
+==================================================
+Commit Hash: eb0b5779e256c0dfea9d82100cf687465ae605d9
+Author: Niwatori401
+Date: Thu Jul 28 13:26:57 2022
+
+mend
+
+==================================================
+Commit Hash: bbf223adfba9da87d6d05b0409f50412ba6966b1
+Author: Niwatori401
+Date: Thu Jul 28 13:26:47 2022
+
+Add 9 new weight stages beyond Gelatinous. Gelatinous has been renamed Gelatinous I.
+
+==================================================
+Commit Hash: 396ceb4864b1220f5b6e79f15aa6e7daedaa4703
+Author: Niwatori401
+Date: Thu Jul 28 00:12:47 2022
+
+Add debug option to change any individual pawn's body archetype
+
+==================================================
+Commit Hash: f64915aa8efcd219dc2b53bbe9c41f526fa3ece3
+Author: Niwatori401
+Date: Sat Jul 23 02:13:00 2022
+
+Finalize temp WG feature. WG status messages now can be disabled optionally for WG requests.
+
+==================================================
+Commit Hash: c004bfce5ddae3fefcc3a1b3900197d11ac7a248
+Author: Niwatori
+Date: Fri Jul 22 02:30:14 2022
+
+Clean up WG/WL reqest code
+
+==================================================
+Commit Hash: 98b8824c9cf33b6f63bb38063e57e0bc6c749066
+Author: Niwatori
+Date: Fri Jul 22 02:23:30 2022
+
+Add weight loss request processing. Add temp weight gain. Update embiggener to use this system with temporary values for duration.
+
+==================================================
+Commit Hash: b8f630fed325081fa23ae9e8afd5173960127f27
+Author: Niwatori401
+Date: Tue Jul 19 10:02:13 2022
+
+Fix bug regarding animals being paralyzed if they were incapable of manipulation.
+
+==================================================
+Commit Hash: e0d6f552ab70482cc47124df93bc4b2415bb4483
+Author: Niwatori401
+Date: Sun Jul 17 04:02:12 2022
+
+Fix patches for Outer Rim Galaxies.
+Remove partial support for buggy races.
+
+==================================================
+Commit Hash: 619410f3130e829ee861ccbd6baf397f8a8cf880
+Author: Niwatori401
+Date: Sun Jul 17 03:02:57 2022
+
+Fix how current nutrition to fullness ratio is calculated.
+
+==================================================
+Commit Hash: 8f54e7d8e6f38fa652165da33b6135429992d3b8
+Author: Niwatori401
+Date: Sun Jul 17 01:07:01 2022
+
+Fix NRE bug in pawn gen
+
+==================================================
+Commit Hash: cc7eac834a6dff992deaeaff7894303e51e2c5f0
+Author: Niwatori401
+Date: Sat Jul 16 10:35:50 2022
+
+Add 'Unlicense' license.
+
+==================================================
+Commit Hash: dbd184494efcd6e11c53cb97b3d26a32f5cf7f1b
+Author: Niwatori401
+Date: Sat Jul 16 10:06:00 2022
+
+Alter how default body type was assigned. Should now correctly show the pawn's default bodytype.
+Further implement support for partially supported races.
+
+==================================================
+Commit Hash: 2fe21f39a7168908b102ff64832f1f7c0fd30069
+Author: Niwatori401
+Date: Sat Jul 16 05:10:17 2022
+
+Reconstruct tailalignment file and add it to repo
+
+==================================================
+Commit Hash: 83a0e1ec870fff66f10a285cb1665796f525ae38
+Author: Niwatori401
+Date: Sat Jul 16 01:57:13 2022
+
+Add two new texture sets for clothing for male bodies. Courtesy Lidopain!
+Add racial support for 4 races from Xenohuamns - Gen-spliced Xenos
+Add racial support for 6 races from Xenohuamns Expanded
+Begin racial support for Fantasy Goblins
+Begin racial support for ChjAndroids
+Begin racial support for Lucario
+Begin racial support for Kilhn
+Begin racial support for Avali
+
+==================================================
+Commit Hash: df6f5c8777f04d62cd3da32c252d8e3db94f06e9
+Author: Niwatori401
+Date: Fri Jul 15 10:33:52 2022
+
+Reveal diet management gizmo for prisoners
+
+==================================================
+Commit Hash: 6ca2e29642dd27f58b33f7375f028973f30f334a
+Author: Niwatori401
+Date: Sun Jun 5 10:49:46 2022
+
+Merge pull request #1 from Niwatori401/master
+
+Master
+==================================================
+Commit Hash: 15a6de95722d29a956cdee8062605d6909922f45
+Author: Niwatori401
+Date: Sun Jun 5 10:35:30 2022
+
+Re-add Male sprite for CanineMorph
+
+==================================================
+Commit Hash: e2cf8f118a8ca52a978a5de79893ba88a5c5eea4
+Author: Niwatori401
+Date: Sun Jun 5 10:06:32 2022
+
+Add apple body type (Courtesy Bamboo) and accompnying defs
+Add toggle to revert all pawns to old body type
+Add new hidden body type variable (currently standard and apple) to pawns
+Add hoverchair for new lardy sprite
+Add option to use old lardy sprite
+Add setting to hide the less useful debug gizmos (e.g. positioning gizmos)
+Add Loompa race support
+Add support for "Statue of Colonist"
+Update body assignment tables to allow for body types per gender
+Update Bamboo's Lardy sprite
+Update bodytypedefs to use correct image path
+Remove unused assets
+Remove need for duplicate assets
+Hide map nutrition section of RR tab
+Fix: Certain Combat Extended clothing items should display properly now
+Fix: flesh blocks no longer spawn on map gen
+Fix: Anties/Ratkin now can wear hoverchairs
+Fix: Prisoners should starve less. Their diets are now reset upon becoming prisoners.
+
+WIP: Hoverchairs disappear if in bed for extended period. Ideally this will trigger on sleep and reappear when they wake up
+
+==================================================
+Commit Hash: c3a6f668ffb7da20d10d24989ff5aef6e61d685a
+Author: Niwatori401
+Date: Wed May 18 12:00:24 2022
+
+Progress save
+
+==================================================
+Commit Hash: 47d0ca560dd0e2e2267eb6e03a91ee0961c9b98d
+Author: Niwatori401
+Date: Fri May 13 03:48:56 2022
+
+Fix pawns in hoverchairs not laying in beds properly
+Add feature pawns drop hoverchair on pawn downing. This should help prevent bugs wherein doctors will not tend or cannot rescue colonists in hoverchairs. Reminder that the "Dress Patients" mod can be used to redress them while they are in bed.
+Add option tab in RR menu to alter hediff effect severity including pain, eat speed reduction and move speed reduction from the fullness hediff as well as moving, manipulation, rest fall rate and increased hunger rate from the weight hediff
+Add auto disable texture caching on load
+Fix pawns spawning with custom bodies as their default bodies. DefaultBody is now a property and reverts susceptible pawns to the thin bodytype.
+Update fullness hediff to use custom class
+Reduce hoverchair weight from 110 to 0 so as not to overencumber pawns
+Optimize RR menu so that number fields with custom behavior now only trigger when the value is changed.
+Update changelog
+
+Add test material for flesh atlas
+
+==================================================
+Commit Hash: 4c9f4d89f1da921c2facc181e47ab7e9a7c7e53d
+Author: Niwatori401
+Date: Wed May 4 01:04:02 2022
+
+Add patches to allow eating more than one meal/dessert from food items from Vanilla Cooking Expanded
+Reformat old patches/introduce patch maker template for nutrition density patches
+Refactor old code in fullness bar and slider code to be more readable
+Fix bug where fullness sliders would not load into the correct postion from save
+
+==================================================
+Commit Hash: 2485ed6912ec0f3759221eadb76acb89b52710f1
+Author: Niwatori401
+Date: Mon May 2 13:41:47 2022
+
+Add changelog
+
+==================================================
+Commit Hash: fd477c2e728e02f1682ce44cde4db378fae0f0be
+Author: Niwatori401
+Date: Sat Apr 30 18:31:30 2022
+
+Add progress bar to weight hediff in health tab displaying progress to next stage
+Refactor patch as method definition in Hediff_Weight
+Reorganize patches into appropriate folders
+Remove deprecated patch related to hoverchairs as pawns
+
+==================================================
+Commit Hash: 8a4efaf6dda7a3e20fc3ee82e2baae4454853e0b
+Author: Niwatori401
+Date: Thu Apr 28 03:57:35 2022
+
+Fix bug in hediff assignment for World Pawns
+
+==================================================
+Commit Hash: f7495ecc5d60d92c708e39746faff308e5139871
+Author: Niwatori401
+Date: Wed Apr 27 05:20:30 2022
+
+Start work on varying weight per stage by body size:
+[*] Add option to toggle this new feature in general settings (may not work for all cases)
+
+Add ability to see sleep position and blanket gizmos for prisoners
+
+Refactor pawn generation patches into three sperate ones more closely related to their purpose
+Add two patches for the HAR framework to fix bugs created by this refactor
+
+"""fix""" an issue with the food validator for the feeding tube blowing up the log :^)
+
+==================================================
+Commit Hash: dc59c4d1b7c1ec8ae265411985de5aa061dd0d02
+Author: Niwatori401
+Date: Fri Apr 22 02:18:27 2022
+
+Add setting to disable moodlets from weight opinion traits
+Fix bug where weight gain requests would not add the right amount of weight
+Expose more functionality of FullnessAndDietStats comp
+
+==================================================
+Commit Hash: a7998e5abef1dae9ce4cc0de405fc72de6cca00d
+Author: Niwatori401
+Date: Mon Apr 18 03:00:22 2022
+
+update gitignore
+
+==================================================
+Commit Hash: 3053ef29e6fc314a71b8b9ff6fc140119881645c
+Author: Niwatori401
+Date: Sun Apr 17 21:25:43 2022
+
+Add hunger drone event and game condition
+Add hoverchair item craftable at machining table with two graphical variants. Works on all pawns, currently only visible on females (or any pawn using Bamboo's sprite set)
+Removed hoverchair as pawn. **This will cause issues for existing saves where they are on the map.**
+Fix option for alternate head position for RimRound bodies
+Add option to adjust weight gain and loss multipliers by gender
+Add race support for Furret race
+Add race support for Dreemurr race
+Add race support for Asari race
+Add race support for Ferrex race
+Add race support for both races in Vulpine race pack
+Add race support for Half dragons
+Add race support for stickman race
+Update patch  maker templates to handle more closet cases that were causing issues for some mods
+Update patch maker to have the patch creation modes
+Add new templates and csvs for patch maker to handle patching abstract defs
+
+==================================================
+Commit Hash: c44dc12a835a8498b2ad4bf80aeb629e8405f433
+Author: Niwatori401
+Date: Thu Apr 14 22:43:58 2022
+
+First commit for private repo
+
+==================================================
+Commit Hash: b994103d0cae06a6be715d21cd7de615c82bba20
+Author: Niwatori401
+Date: Mon Mar 28 20:54:15 2022
+
+Add race support for all nine races from Xenohumans - Anthromorphs.
+Add race support for Sylveon Race.
+Add race support for Minotaur Race.
+Add race support for Protogen! Marley Race.
+Add new setting for tick delay between weight gain request processing.
+Remove bug where hoverchairs would spawn in mechanoid bases and ancient dangers. Only impacts new maps.
+Remove error message about hoverchairs and frostbite when launching the game.
+Alter loadFolders to only load textures for mods that are actively installed.
+
+==================================================
+Commit Hash: 861848bc4d515a2e1bda5116341c56fc717fae69
+Author: Niwatori401
+Date: Fri Mar 25 05:06:40 2022
+
+Removed experimental embiggener from spawn table for raiders
+
+==================================================
+Commit Hash: 2ba43b89e7d46b6a6c04645f27ecc2db25dab501
+Author: Niwatori401
+Date: Tue Mar 8 01:07:56 2022
+
+Add new experimental weight gain weapon craftable at machining table with accompanying systems to allow for weight gain over time
+Fixed issue where pawns on starting page weren't updating their body sprites to reflect their weight
+Removed obsolete patch
+
+==================================================
+Commit Hash: 23fd66b2150ee383ca44b89a99820aa60659b422
+Author: Niwatori401
+Date: Sun Mar 6 04:44:38 2022
+
+Add male 0.7 Set defs and image sets
+Add female 0.7 Set defs and image sets
+Move race textures into individual support folders
+Add Dogbold race support (male & female)
+Add Foxbold race support (male & female)
+Add Equinium race support (male & female)
+Add Miqo'te race support (male & female)
+Add Orassan race support (female)
+Add race support for 18 races from O21 forgotten realms mod (male & female for most races just female for the 0.9 sized sprite sets)
+Add patch to allow for custom headoffsets for exclusively RimRound sprites by race
+Add new button to diet management gizmo that allows you to reset the sliders if one of them dissapears
+Updated patch maker templates to be more robust
+Add partial support for Ikquan, Klikmala and Slither races (Weight gain functionality implemented, but body part offsets are not because I could not get them to spawn with commands)
+
+==================================================
+Commit Hash: f37c8ed18d5755716904f3b96c157cc57619f800
+Author: Niwatori401
+Date: Sat Feb 19 03:57:36 2022
+
+Add race support for 17 races from Outer Rim Galaxies
+Update patch template to eliminate possible errors
+
+==================================================
+Commit Hash: 7c3c3b382d8ae4c62a97a8cc10d70a46c5df5e6d
+Author: Niwatori401
+Date: Fri Feb 18 15:52:54 2022
+
+Update Anthro race support to include ArtOfFire's sprites
+Reposition alien race settings
+
+==================================================
+Commit Hash: aac6dcd2e00c44923091e70a91e52615b856730f
+Author: Niwatori401
+Date: Wed Feb 16 07:41:03 2022
+
+Add new prisoner interaction: Fatten
+* Includes acompanying job defs, work givers, interaction workers and more
+* New stat in PawnAttitudeComp: Gaining Reluctance. Can be reduced by this interaction.
+Add Anty race support
+* Only includes main race
+Add more work on hoverchair
+* Still not in a useful state, though can be spawned in with commands.
+Add Moonjelly race support
+Add new patch maker templates
+Optimize mass calculation by moving it from a harmony patch to a stat part
+Consolidate and broaden patches relating to when a pawn changes faction or guest status (e.g. imprisonment or being turned into a slave)
+Misc utility changes
+
+==================================================
+Commit Hash: 6d72438dd921c62b714ab1b42cdc6ca44696caf4
+Author: Niwatori401
+Date: Mon Feb 7 01:25:54 2022
+
+Back in the saddle
+
+Add new sprite set done by @ArtOfFire1
+Change how body types are resolved in RacialBodyTypeInfoUtility
+Add new settings page to allow the user to change between sprite sets in the future. These settings do not currently dave and will need re-entered everytime the game launches.
+Remove extraneous code from WeightGizmo_ModeButton
+Add new clothing set by @BambooAle for weight stage F060
+Start work on hoverchair
+
+==================================================
+Commit Hash: f7bd5329d0c9ec0434be43e03d4a8b2b90d68d53
+Author: Niwatori401
+Date: Tue Jan 4 05:49:52 2022
+
+Add new textures by @ArtOfFire1 (not yet implemented in-game)
+Add feature: pawns now yield differing amounts of meat based on current weight
+
+==================================================
+Commit Hash: 9c2d1fcd173f7210ddc4dda9fccc66ac75e7dad1
+Author: Niwatori401
+Date: Mon Jan 3 06:43:18 2022
+
+Remove legacy testing files
+Add 0.9 size body set with accompanying defs
+Add pawn health multiplier by bodyweight feature. Higher weight pawns will have more health in their arms, legs and torso
+Add ability for plants to yield more than one product by use of modextensions
+Update patch maker with new patches
+Add full ratkin support
+Add support for Hybrid Orassan from the Orassans mod
+Update SuperSpaces' Fattening Foods
+
+==================================================
+Commit Hash: e4091c561a6aa0c6f54c7a89c71b952d06b5e70c
+Author: Niwatori401
+Date: Fri Dec 31 06:44:15 2021
+
+Add external mod by @SuperSpaces
+
+==================================================
+Commit Hash: 1044f2bef7155141f85fcd587683c8992a049478
+Author: Niwatori401
+Date: Fri Dec 31 06:24:03 2021
+
+Add vegetarian and meat based variants for large, huge, enormous and massive lavish and fine meals
+Fix larger meals being unable to be crafted
+Update patch maker with new templates
+Add Revia race support
+Fix bug where nutrition density was not factored in when limiting which foods pawns were allowed to eat
+Alter pawn weight distributions to vary by faction; raiders and caravaners should no longer spawn immobile
+Add debug hediff to allow pawns to move always
+Rename stat files
+
+==================================================
+Commit Hash: 432308510fed2ed5c306c09b57533979c4545a61
+Author: Niwatori401
+Date: Mon Dec 27 05:43:10 2021
+
+Merge branch 'main' of github.com:Niwatori401/RimRound---Alpha
+
+==================================================
+Commit Hash: 543950944533e47755e691c1542fbe33b50ef6e4
+Author: Niwatori401
+Date: Mon Dec 27 05:37:24 2021
+
+Update patch maker, now make four necessary patches for alien races
+Start work on ESCP race compatibility
+Add 3rd party mod compatibility patching utility
+Add full Anthro race support with custom shaded sprites
+Patch "RJW milkable colonists" to increase milk yield from pawns based on bodyweight
+Alter food validator path to account for animals seeking food from faucet (unfinished)
+
+==================================================
+Commit Hash: d0cd6bc38da7c361de7f7a6db20a7afabb689492
+Author: Niwatori401
+Date: Fri Dec 24 16:34:54 2021
+
+Update README.md
+==================================================
+Commit Hash: 39889ccd465569dea9d3afd148ddc70fa13d7bec
+Author: Niwatori401
+Date: Fri Dec 24 16:33:16 2021
+
+Update README.md
+==================================================
+Commit Hash: 031c0005fa390c16660b33d81d2d3bb71af3c1f2
+Author: Niwatori401
+Date: Fri Dec 24 06:54:37 2021
+
+Update README.md
+==================================================
+Commit Hash: f8b24c6ceb45b240b6b74b80b7b996d4824fee54
+Author: Niwatori401
+Date: Fri Dec 24 06:42:44 2021
+
+Add two operations to remove excess body weight.
+Fix issue with pawn diet management when in a caravan.
+Fix issue where pawns would not lose weight when at 0 nutriton (starving)
+Malnutrition now is applied more slowly for larger pawns.
+Nutrition now falls more slowly when below each of the two thresholds on the nutrition bar.
+
+==================================================
+Commit Hash: eb702fd7b758a132ef80eebe9fbc9a63e09a8834
+Author: Niwatori401
+Date: Wed Dec 22 03:40:44 2021
+
+Reduce VRAM usage by 50-75%
+
+==================================================
+Commit Hash: 3060986dbd2f5a0fc293c4e541f0491622519f99
+Author: Niwatori401
+Date: Tue Dec 21 06:37:42 2021
+
+Merge branch 'main' into dev
+
+==================================================
+Commit Hash: 520239ebc5a012ce2e2490d38c90aabb0fa894a1
+Author: Niwatori401
+Date: Tue Dec 21 06:34:36 2021
+
+Change inspect string for food faucet and food transmiters
+Correctly load folders specified in loadfolders
+Dropdown to change background for start menu now shows for those without royalty or ideology
+Pawn wiggler adjustment actually works (again)
+Removed unused code from head adjustment setting
+
+==================================================
+Commit Hash: e4b20267f7804e58cd056d6d4abac8d628e068ca
+Author: Niwatori401
+Date: Mon Dec 20 06:49:49 2021
+
+Anger
+
+==================================================
+Commit Hash: d4db4414266b5e26d246b40144a0b586352ae4d7
+Author: Niwatori401
+Date: Mon Dec 20 06:26:59 2021
+
+Add compatibility for VCE
+Add nutrition density for beer
+Conceal WIP alien race patches
+Pawns spawn with weight opinions again
+Pawns now reflect their in game appearance in the starting menu where you select colonists
+Pawns now spawn with varied weights
+
+==================================================
+Commit Hash: 1e8e8f8606940007e281ede51394d2a3f769e0e7
+Author: Niwatori401
+Date: Mon Dec 20 00:17:32 2021
+
+New branch
+
+More refactoring, support for Vanilla cooking expanded
+
+==================================================
+Commit Hash: baf3a59b6d802afdf0c41f4fbf5820819cd4cbdc
+Author: Niwatori401
+Date: Tue Dec 14 06:09:36 2021
+
+Massive refactoring, partial ratkin compatibility.
+
+==================================================
+Commit Hash: e30710158246c782ef657ea0fda9837a799ffd37
+Author: Niwatori401
+Date: Mon Dec 13 01:14:19 2021
+
+Unbust portraits and more
+
+Add real names to weight stages.
+Change keys for translation for new alert.
+Add command to build hopper on food processor.
+Add max weight option.
+Portraits now scale and position correctly for each bodytype.
+*Two styles implemented.
+Add new setting changing the render order of the head for north facing sprites using custom bodytypes.
+
+==================================================
+Commit Hash: 884fadb99b5fda00745a5fa1963c0d4d6ce80fc3
+Author: Niwatori401
+Date: Sun Dec 12 06:02:31 2021
+
+Add 5 new clothing sprte sets, fix bug causing pawn heads and bodies not to render, add alert for food processor without hopper.
+
+==================================================
+Commit Hash: fc0172a0aaa9fb89b0fb90c3d2230dc56800bfa4
+Author: Niwatori401
+Date: Thu Dec 9 07:33:48 2021
+
+New logic for when portrait rotates and when pawn faces what direction when downed. Work done on mocking up portrait fixes.
+
+==================================================
+Commit Hash: 68a96f37ac11d0a15b1e44344d3ffc9a6be3982e
+Author: Niwatori401
+Date: Wed Dec 8 16:14:12 2021
+
+Fix config error when game launches, hats no longer hidden.
+
+==================================================
+Commit Hash: fc17afe8820a801bb1c26d2512a251bef84db783
+Author: Niwatori401
+Date: Wed Dec 8 06:46:10 2021
+
+Fixes and Sprites!
+
+New main menu BG. Generates (harmless error) on startup. Will patch soon.
+Updated clothing sprites.
+Updated display on nutrition management gizmo when disabled to more clearly represetn what is happening.
+Removed red arrow on diet management gizmo.
+
+==================================================
+Commit Hash: 0bab46ab0a646e63ac2c69439030fe7a5bc7bbe6
+Author: Niwatori401
+Date: Tue Dec 7 22:12:51 2021
+
+Save soft limit
+
+==================================================
+Commit Hash: b48b5c47c73e1c868967b8bd84f90f5b35e1639d
+Author: Niwatori401
+Date: Tue Dec 7 05:54:36 2021
+
+Fix minor bugs, add new clothing sprites for limited range
+
+==================================================
+Commit Hash: c7735631b0642988148c81591d46a7914b5739ed
+Author: Niwatori401
+Date: Mon Dec 6 06:06:49 2021
+
+Test webhook
+
+==================================================
+Commit Hash: cb8a45df9639e6820b49a7c72819b5b2d9d65a6d
+Author: Niwatori401
+Date: Mon Dec 6 00:52:50 2021
+
+Fix typos, save weight opinion
+
+==================================================
+Commit Hash: 4e7c4f2ca5f9edb271a04011ca30a93e8bc736b8
+Author: Niwatori401
+Date: Sun Dec 5 16:41:15 2021
+
+Fix doctors exploding patients stomachs
+
+==================================================
+Commit Hash: e019489e436a16426867b21f240e1827471f3c17
+Author: Niwatori401
+Date: Sun Dec 5 15:52:25 2021
+
+Bugfixes
+
+Fix meal base patch
+Fix food optimality patch to work well with animal trainer workgiver
+Pawns spawn with hediffs on old save if they did not have it already
+Adjust digestion rate base
+Show stomach capacity and current value on gizmo
+
+==================================================
+Commit Hash: 053a26cd8ba3b12e747b23404144bef727e7de7d
+Author: Niwatori401
+Date: Sat Dec 4 03:55:54 2021
+
+New Repo!
+
+==================================================
+Commit Hash: f3e87a4e9cb5b424e5d7dabbd60f67c75b3ce8d6
+Author: Niwatori401
+Date: Sat Dec 4 03:40:22 2021
+
+Initial commit

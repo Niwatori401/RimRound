@@ -32,7 +32,31 @@ namespace RimRound.Hediffs
                 else
                     return $"{Utilities.HediffUtility.SeverityToKilosWithBaseWeight(this.Severity):F1}Kgs";
             }
-        } 
+        }
+
+        public override string Label 
+        {
+            get 
+            {
+                string baselabel = base.Label;
+
+                PawnBodyType_ThingComp pbtComp = this.pawn?.TryGetComp<PawnBodyType_ThingComp>();
+
+                if (pbtComp is null)
+                {
+                    Log.Error("PBT comp was null in weight hediff");
+                    return baselabel;
+                }
+
+                if (pbtComp.CategoricallyExempt)
+                    return baselabel + $" [{pbtComp.CategoricallyExempt.reason}]";
+                else if (pbtComp.PersonallyExempt)
+                    return baselabel + $" [{pbtComp.PersonallyExempt.reason}]";
+
+                return baselabel;
+            }
+        }
+
         public override int CurStageIndex
         {
             get 

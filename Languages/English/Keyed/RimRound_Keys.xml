@@ -4,6 +4,15 @@
 	<StatPart_MeatYieldBodyFatExplanation>Multiplier for body weight: {0}</StatPart_MeatYieldBodyFatExplanation>
 	<StatPart_RR_ClothingBonusExplanation>UltraTech Clothing: {0}</StatPart_RR_ClothingBonusExplanation>
 
+	<RR_PersonallyExemptFromGizmo>personally exempt</RR_PersonallyExemptFromGizmo>
+	<RR_ExemptionReason_FemaleDisabled>females exempt</RR_ExemptionReason_FemaleDisabled>
+	<RR_ExemptionReason_MaleDisabled>males exempt</RR_ExemptionReason_MaleDisabled>
+	<RR_ExemptionReason_FriendlyDisabled>friendly NPCs exempt</RR_ExemptionReason_FriendlyDisabled>
+	<RR_ExemptionReason_HostileDisabled>hostile NPCs exempt</RR_ExemptionReason_HostileDisabled>
+	<RR_ExemptionReason_PrisonerDisabled>prisoners exempt</RR_ExemptionReason_PrisonerDisabled>
+	<RR_ExemptionReason_SlaveDisabled>slaves exempt</RR_ExemptionReason_SlaveDisabled>
+	<RR_ExemptionReason_AgeDisabled>age exempt</RR_ExemptionReason_AgeDisabled>
+	
 	<!--Alerts-->
 	<NeedFoodHopperProcessorDesc>You have a food processor with no hopper next to it.\n\nTo work, food processors must draw from an adjacent hopper filled with raw food.\n\nBuild a hopper adjacent to the processor.</NeedFoodHopperProcessorDesc>
 
