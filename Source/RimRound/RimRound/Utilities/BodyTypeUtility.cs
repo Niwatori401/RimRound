@@ -242,12 +242,19 @@ namespace RimRound.Utilities
 
         internal static void RedrawPawn(Pawn pawn)
         {
-            if (!(Find.CurrentMap?.mapPawns?.AllPawns?.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any() ?? false))
+            List<Pawn> allPawns = new List<Pawn>(Find.CurrentMap?.mapPawns?.AllPawns);
+            
+            if (allPawns is null)
+                return;
+
+
+
+            if (!(allPawns.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any()))
                 return;
             
             PortraitsCache.SetDirty(pawn);
             GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);  
-            pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+            pawn?.Drawer?.renderer?.graphics?.ResolveAllGraphics();
         }
 
         internal static void UpdatePawnDrawSize(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)
@@ -281,23 +288,25 @@ namespace RimRound.Utilities
         /// </summary>
         /// <param name="p">The pawn to check for eligibility.</param>
         /// <returns>true if they should be exempt, false otherwise.</returns>
-        public static bool CheckExemptions(Pawn p) 
+        public static ExemptionReason CheckExemptions(Pawn p) 
         {
-            if ((GlobalSettings.bodyChangeFemale is false && p.gender is Gender.Female) ||
-            (GlobalSettings.bodyChangeMale is false && p.gender is Gender.Male) ||
-            (GlobalSettings.bodyChangeFriendlyNPC is false && p.Faction != Faction.OfPlayer && p.Faction.AllyOrNeutralTo(Faction.OfPlayer)) ||
-            (GlobalSettings.bodyChangeHostileNPC is false && p.Faction.HostileTo(Faction.OfPlayer) && !p.IsPrisoner) ||
-            (GlobalSettings.bodyChangePrisoners is false && p.IsPrisoner) ||
-            (GlobalSettings.bodyChangeSlaves is false && p.IsSlaveOfColony) ||
-            (GlobalSettings.minimumAgeForCustomBody.threshold > (p?.ageTracker?.AgeBiologicalYears ?? 0))
-        )
-            {
-                return true;
-            }
+            if (GlobalSettings.bodyChangeFemale is false && p.gender is Gender.Female)
+                return new ExemptionReason("RR_ExemptionReason_FemaleDisabled".Translate());
+            else if (GlobalSettings.bodyChangeMale is false && p.gender is Gender.Male)
+                return new ExemptionReason("RR_ExemptionReason_MaleDisabled".Translate());
+            else if (GlobalSettings.bodyChangeFriendlyNPC is false && p.Faction != Faction.OfPlayer && p.Faction.AllyOrNeutralTo(Faction.OfPlayer))
+                return new ExemptionReason("RR_ExemptionReason_FriendlyDisabled".Translate());
+            else if (GlobalSettings.bodyChangeHostileNPC is false && p.Faction.HostileTo(Faction.OfPlayer) && !p.IsPrisoner)
+                return new ExemptionReason("RR_ExemptionReason_HostileDisabled".Translate());
+            else if (GlobalSettings.bodyChangePrisoners is false && p.IsPrisoner)
+                return new ExemptionReason("RR_ExemptionReason_PrisonerDisabled".Translate());
+            else if (GlobalSettings.bodyChangeSlaves is false && p.IsSlaveOfColony)
+                return new ExemptionReason("RR_ExemptionReason_SlaveDisabled".Translate());
+            else if (GlobalSettings.minimumAgeForCustomBody.threshold > (p?.ageTracker?.AgeBiologicalYears ?? 0))
+                return new ExemptionReason("RR_ExemptionReason_AgeDisabled".Translate());
             else
-            {
                 return false;
-            }
+
         }
 
 

@@ -14,35 +14,35 @@ namespace RimRound.Patch
     /// <summary>
     /// This patch actually applies the gas effects to pawns in the gas.
     /// </summary>
-    [HarmonyPatch(typeof(Verse.GasUtility))]
-    [HarmonyPatch(nameof(Verse.GasUtility.PawnGasEffectsTick))]
-    public static class GasUtility_PawnGasEffectsTick_AddSupportForGas
+    [HarmonyPatch(typeof(Verse.Pawn))]
+    [HarmonyPatch(nameof(Verse.Pawn.Tick))]
+    public static class Pawn_Tick_AddSupportForGas
     {
-        public static void Postfix(Pawn pawn) 
+        public static void Postfix(Pawn __instance) 
         {
-            if (!pawn.IsHashIntervalTick(150) || !pawn.RaceProps.Humanlike)
+            if (!__instance.IsHashIntervalTick(150) || __instance.Suspended || !__instance.RaceProps.Humanlike)
                 return;
 
             foreach (var gasHediffCombo in Utilities.GasUtility.gasToHediff)
             {
-                byte gasDensity = pawn.Position.GasDentity(pawn.Map, gasHediffCombo.Key);
+                byte gasDensity = __instance.Position.GasDentity(__instance.Map, gasHediffCombo.Key);
 
                 if (gasDensity <= 0)
                     return;
 
                 float gasDensityPercent = gasDensity / 255f;
 
-                Hediff hediff = Utilities.HediffUtility.GetHediffOfDefFrom(gasHediffCombo.Value, pawn);
+                Hediff hediff = Utilities.HediffUtility.GetHediffOfDefFrom(gasHediffCombo.Value, __instance);
 
                 if (hediff != null && hediff.CurStageIndex == hediff.def.stages.Count - 1)
                     gasDensityPercent *= 0.1f; // Dampen additional severity for extended exposure
 
 
                 if (hediff is null)
-                    hediff = Utilities.HediffUtility.AddHediffOfDefTo(gasHediffCombo.Value, pawn);
+                    hediff = Utilities.HediffUtility.AddHediffOfDefTo(gasHediffCombo.Value, __instance);
 
 
-                Utilities.HediffUtility.AddHediffSeverity(hediff, pawn, gasDensityPercent * 0.1f);
+                Utilities.HediffUtility.AddHediffSeverity(hediff, __instance, gasDensityPercent * 0.1f);
 
 
             }

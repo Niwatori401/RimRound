@@ -28,8 +28,12 @@ namespace RimRound.UI
         private void ToggleAction()
         {
             Utilities.Resources.gizmoClick.PlayOneShotOnCamera(null);
-            comp.PersonallyExempt = !comp.PersonallyExempt;
-        }
+
+            if (comp.PersonallyExempt)
+                comp.PersonallyExempt = false;
+            else
+                comp.PersonallyExempt = new ExemptionReason("RR_PersonallyExemptFromGizmo".Translate());
+        }       
 
 
         PawnBodyType_ThingComp comp;

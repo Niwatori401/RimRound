@@ -72,8 +72,8 @@ namespace RimRound.Comps
         public int ticksSinceLastBodyChange = 0;
         private readonly int numberOfTicksCooldownPerChange = 250;
 
-        bool categoricallyExempt = false;
-        public bool CategoricallyExempt
+        ExemptionReason categoricallyExempt = false;
+        public ExemptionReason CategoricallyExempt
         {
             get => categoricallyExempt;
             set
@@ -84,8 +84,8 @@ namespace RimRound.Comps
 
 
 
-        bool personallyExempt = false;
-        public bool PersonallyExempt 
+        ExemptionReason personallyExempt = false;
+        public ExemptionReason PersonallyExempt 
         { 
             get => personallyExempt; 
             set 
@@ -126,6 +126,23 @@ namespace RimRound.Comps
             }
         }
     }
+
+    // Converts to true if pawn is exempt. This is inddicated by there being a given reason that they are exempt.
+    public struct ExemptionReason
+    {
+        public ExemptionReason(string reason = null) 
+        {
+            this.reason = reason;
+        }
+
+        public static implicit operator ExemptionReason(bool b) => b ? new ExemptionReason("other reason") : new ExemptionReason();
+        public static implicit operator bool(ExemptionReason e) => !(e.reason is null);
+        
+        public string reason;
+    }
+
+
+
 
     public enum BodyArchetype 
     {
