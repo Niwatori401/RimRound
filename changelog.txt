@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 93675ca4ad1040bee1f3e671cf62ba45c5e11026
+Commit Hash: 7909c8d0adf7b42144105ad9c080b347f475635d
+Author: Niwatori401
+Date: Sat Mar 4 08:39:34 2023
+
+Add Camera+ patch to allow zoomed out screens to see large pawns
+
+==================================================
+Commit Hash: f9e5a62d1f55f41b6454447e1be38021bb7f5c4f
 Author: Niwatori401
 Date: Sat Mar 4 06:35:40 2023
 

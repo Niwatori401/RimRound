@@ -173,6 +173,7 @@
     <Compile Include="RimRound\Hediffs\Hediff_FullnessImplant.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_SuddenWeightGain.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_SuddenWeightGainImmunity.cs" />
+    <Compile Include="RimRound\Patch\CameraPlusPatches\CameraPlus_Tools_ShouldShowDot_DontShowDotForGelatinous.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />

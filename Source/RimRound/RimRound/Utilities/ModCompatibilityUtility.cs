@@ -106,7 +106,7 @@ namespace RimRound.Utilities
                 patchCollection.transpiler is null ? null : new HarmonyMethod(patchCollection.transpiler),
                 patchCollection.finalizer  is null ? null : new HarmonyMethod(patchCollection.finalizer));
 
-            Log.Message($"RimRound successfully patched {modPatchInfo.ModName}'s {modPatchInfo.MethodName}!");
+            Log.Message($"[RimRound] successfully patched {modPatchInfo.ModName}'s {modPatchInfo.MethodName}!");
         }
 
         public static bool CheckModInstalled(string modname) 
@@ -124,11 +124,11 @@ namespace RimRound.Utilities
             {
                 foreach (Type t in ModCompatibilityUtility.loadedTypes) 
                 {
-                    if (t.Name == typeName)
+                    if (t.Name == typeName || t.FullName == typeName)
                     {
-                        MethodInfo m;
+                        MethodInfo methodInfo;
                         if (types is null)
-                            m = t.GetMethod(methodName, majorFlags);
+                            methodInfo = t.GetMethod(methodName, majorFlags);
                         else
                         {
                             List<Type> typeParameters = new List<Type>();
@@ -147,19 +147,17 @@ namespace RimRound.Utilities
                             
                             
                             Type[] methodParams = typeParameters.ToArray();
-                            //This was added for testing and needs altered later
-                            //methodParams[1] = methodParams[1].MakeByRefType();
-                            //---------------------------------------------
-                            m = t.GetMethod(methodName, majorFlags, null, methodParams, null);
+
+                            methodInfo = t.GetMethod(methodName, majorFlags, null, methodParams, null);
                         }
                             
 
-                        if (m is null)
+                        if (methodInfo is null)
                         {
                             Log.Error($"Could not get method {methodName} from {t.Name}");
                         }
 
-                        return m;
+                        return methodInfo;
                     }
                 }
             }

@@ -32,6 +32,11 @@ namespace RimRound.Patch
 				new ModPatchInfo("RimJobWorld - Milkable Colonists", "CompMilkableHuman", "ResourceAmount", MethodType.Getter), 
 				CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.GetPatchCollection());
 
+			ModCompatibilityUtility.TryPatch(
+				harmony, 
+				new ModPatchInfo("Camera+", "CameraPlus.Tools", "ShouldShowDot", MethodType.Normal), 
+				CameraPlus_Tools_ShouldShowDot_DontShowDotForGelatinous.GetPatchCollection());
+
 			/*
 			ModCompatibilityUtility.TryPatch(
 				harmony,
