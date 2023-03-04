@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 7909c8d0adf7b42144105ad9c080b347f475635d
+Commit Hash: ccc90daf647088dee97f149465384a519f3e607b
+Author: Niwatori401
+Date: Sat Mar 4 13:04:19 2023
+
+Fix bug where burkas and other 'shell' clothing items would display poorly on RR body types
+
+==================================================
+Commit Hash: 826d71a97aa27f6a5cab318989348275918e72fe
 Author: Niwatori401
 Date: Sat Mar 4 08:39:34 2023
 
