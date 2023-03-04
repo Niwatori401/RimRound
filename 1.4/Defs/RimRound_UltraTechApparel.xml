@@ -17,7 +17,7 @@
 			<li>Armor</li>
 			<li>HiTechArmor</li>
 		</tradeTags>	
-		<generateCommonality>2</generateCommonality>
+		<generateCommonality>0</generateCommonality>
 		<colorGenerator Class="ColorGenerator_Options">
 			<options>
 				<li>

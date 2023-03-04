@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 566ab5c5eafc32b83999383a06c0964d4a74ffe7
+Commit Hash: d3cc5d8c3bdb43604fc409d36a669647b52ceb9a
+Author: Niwatori401
+Date: Sat Mar 4 02:36:31 2023
+
+Fix UltraTech apparel generating on NPCs
+
+==================================================
+Commit Hash: 8aa44068addb4c6112d309b61b6201e3bb87b2b1
 Author: Niwatori401
 Date: Sat Mar 4 02:16:00 2023
 
