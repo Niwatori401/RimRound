@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>RR_MobilityScooterHediff</defName>
+    <defaultLabelColor>(0, 0.5, 0.5)</defaultLabelColor>
+    <label>mobility scooter</label>
+    <description>A temporary fix to a more permanent problem! Slightly reduces manipulation due to being seated but prevents immobility.</description>
+    <stages>
+      <li>
+		<becomeVisible>false</becomeVisible>
+        <label>mobility scooter</label>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

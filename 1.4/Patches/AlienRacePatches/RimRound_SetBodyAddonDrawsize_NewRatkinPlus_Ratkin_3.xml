@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>NewRatkinPlus</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/drawSize</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/drawSize</xpath>
+				<value>
+					<drawSize>0.9</drawSize>
+				</value>						
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]</xpath>
+				<value>
+					<drawSize>0.9</drawSize>
+				</value>
+			</nomatch>		
+		</match>
+	</Operation>
+</Patch>

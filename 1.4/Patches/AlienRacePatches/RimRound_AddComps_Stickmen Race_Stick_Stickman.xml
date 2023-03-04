@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Stickmen Race</li>
+		</mods>
+		  <match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Stick_Stickman"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Stick_Stickman"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Stick_Stickman"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Stick_Stickman"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </match>
+	</Operation>
+</Patch>

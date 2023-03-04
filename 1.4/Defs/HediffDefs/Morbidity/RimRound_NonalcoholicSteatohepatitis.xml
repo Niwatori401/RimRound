@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--Stuffing Hediff-->
+<Defs>
+	<HediffDef>
+		<defName>RimRound_AFLD</defName>
+		<label>Advanced Fatty liver disease</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>fullness</labelNoun>
+		<description>Advanced Fatty liver disease (AFLD) is a serious condition that, in addition to the normal symptoms caused by FLD, can lead to liver failure and subsequently death. This condition is caused by being significantly overweight but requires a genetic predisposition to occur. There is no cure for this condition, only a transplant or artificial replacement will cure the ailment.</description>	
+	
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>10</baseTendDurationHours>
+				<severityPerDayTended>-0.05</severityPerDayTended>
+			</li>
+			<li Class ="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.025</severityPerDay>
+			</li>
+		</comps>
+		
+		<isBad>true</isBad>
+		<tendable>true</tendable>
+		<minSeverity>0.001</minSeverity>
+		<stages>
+			<li>
+				<label>Initial</label>
+				<lifeThreatening>false</lifeThreatening>
+				<painOffset>0.05</painOffset>
+				<partEfficiencyOffset>-0.30</partEfficiencyOffset>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Serious</label>
+				<lifeThreatening>false</lifeThreatening>
+				<painOffset>0.05</painOffset>
+				<partEfficiencyOffset>-0.50</partEfficiencyOffset>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>Life Threatening</label>
+				<lifeThreatening>true</lifeThreatening>
+				<painOffset>0.35</painOffset>
+				<partEfficiencyOffset>-0.90</partEfficiencyOffset>
+			</li>	
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>Fatal</label>
+				<lifeThreatening>true</lifeThreatening>
+				<painOffset>0.50</painOffset>
+				<partEfficiencyOffset>-1.00</partEfficiencyOffset>
+
+			</li>				
+		</stages>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <TraitDef>
+    <defName>RR_WeightOpinion_Hate_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Hate</label>
+        <description>{PAWN_nameDef} despises carrying extra weight and will be very upset if they have even a little pudge.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RR_WeightOpinion_Dislike_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Dislike</label>
+        <description>{PAWN_nameDef} likes to be thin and will be upset if they gain weight.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+  
+    <TraitDef>
+    <defName>RR_WeightOpinion_NeutralMinus_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Neutral-</label>
+        <description>{PAWN_nameDef} generally prefers to be thinner but doesn't hate the idea of a little meat on their bones.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+  
+    <TraitDef>
+    <defName>RR_WeightOpinion_Neutral_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Neutral</label>
+        <description>{PAWN_nameDef} believes that fat is just fat. While they don't want to be huge, they can appreciate bodies with a little extra weight on them.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+  
+    <TraitDef>
+    <defName>RR_WeightOpinion_NeutralPlus_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Neutral+</label>
+        <description>{PAWN_nameDef} understands the appeal of the larger form. They appreciate the softness that comes with carrying extra weight and prefer to be heavier themselves.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+  
+    <TraitDef>
+    <defName>RR_WeightOpinion_Like_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Like</label>
+        <description>{PAWN_nameDef} is a true fat admirer. They would like nothing more than to be fat and will be quite upset if they're not.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+  
+    <TraitDef>
+    <defName>RR_WeightOpinion_Love_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Love</label>
+        <description>{PAWN_nameDef} is obsessed with being fat and idolizes the idea of gaining weight.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>RR_WeightOpinion_Fanatical_Trait</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Weight Opinion: Fanatical</label>
+        <description>{PAWN_nameDef}'s life revolves around gaining weight and being fat. To them being fat is the pinnacle of what it means to exist.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RR_Trait_WeightOpinion</li>
+    </exclusionTags>
+  </TraitDef>
+</Defs>

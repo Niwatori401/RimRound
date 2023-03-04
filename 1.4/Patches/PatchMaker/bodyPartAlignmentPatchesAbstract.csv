@@ -1,0 +1,5 @@
+MOD_NAME,DEF_NAME,ITEM_INDEX,OFFSET_SOUTH_X,OFFSET_SOUTH_Y,OFFSET_EAST_X,OFFSET_EAST_Y,OFFSET_NORTH_X,OFFSET_NORTH_Y
+Half dragons,BaseDragon,1,0.01,-0.01,0.01,-0.01,0,0
+Half dragons,BaseDragon,2,0.01,-0.01,0.01,-0.01,0,0
+Half dragons,BaseDragon,3,0.01,-0.01,0.01,-0.01,0,0
+Half dragons,BaseDragon,4,0.015,-0.01,0.01,-0.01,0,0

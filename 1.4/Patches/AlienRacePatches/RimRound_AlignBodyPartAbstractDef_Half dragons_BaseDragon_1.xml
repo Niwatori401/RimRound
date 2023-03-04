@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Half dragons</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+								<value>
+									<offset>(0.01, -0.01)</offset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<offset>(0.01, -0.01)</offset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<offset>(0.01, -0.01)</offset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<offset>(0.01, -0.01)</offset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+							<value>
+								<offset>(0.01, -0.01)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<offset>(0.01, -0.01)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<offset>(0.01, -0.01)</offset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+							<value>
+								<offset>(0, 0)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<offset>(0, 0)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="BaseDragon"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<offset>(0, 0)</offset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>				
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+<Defs>
+  <PreceptDef>
+    <defName>RR_FungusEating_Neutral</defName>
+    <issue>FungusEating</issue>
+    <label>ambivalent</label>
+    <description>Fungus is food like any other.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>10</displayOrderInImpact>
+    <requiredMemes>
+      <li>RR_FoodSupremacy</li>
+    </requiredMemes>
+  </PreceptDef>
+</Defs> 
