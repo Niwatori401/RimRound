@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: ccc90daf647088dee97f149465384a519f3e607b
+Commit Hash: d68020b0def6385fe3368022a83755dadc0ec89d
+Author: Niwatori401
+Date: Sun Mar 5 00:04:02 2023
+
+Fix regression with non burka shell items displaying incorrectly
+
+==================================================
+Commit Hash: c31789bcb7b1e00ea26a355099f9c99f1e2f6c7f
 Author: Niwatori401
 Date: Sat Mar 4 13:04:19 2023
 

@@ -18,7 +18,7 @@ namespace RimRound.Patch
     {
         static FieldInfo pawnFieldInfo = typeof(PawnRenderer).GetField("pawn", BindingFlags.Instance | BindingFlags.NonPublic);
         static MethodInfo validatorMethod = typeof(PawnRenderer_DrawBodyApparel_AlterShellClothingIfNoRRSprite)
-            .GetMethod(nameof(PawnRenderer_DrawBodyApparel_AlterShellClothingIfNoRRSprite.ShouldBeExemptFromDrawingAsShell), BindingFlags.Static | BindingFlags.NonPublic);
+            .GetMethod(nameof(PawnRenderer_DrawBodyApparel_AlterShellClothingIfNoRRSprite.ShouldBeDrawnAsShell), BindingFlags.Static | BindingFlags.NonPublic);
         static FieldInfo shellCoversHeadFieldInfo = typeof(ApparelProperties).GetField(nameof(ApparelProperties.shellCoversHead), BindingFlags.Instance | BindingFlags.Public);
 
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
@@ -80,9 +80,14 @@ namespace RimRound.Patch
 
         /// <param name="shellCoversHead">popped from previous call on stack. Used inside of function rather than adding logical opcodes for simplicity.</param>
         /// <returns><see langword="false"/> to skip the typical offset, <see langword="true"/> to give it one.</returns>
-        private static bool ShouldBeExemptFromDrawingAsShell(bool shellCoversHead, Pawn pawn) 
+        private static bool ShouldBeDrawnAsShell(bool shellCoversHead, Pawn pawn) 
         {
-            return !(shellCoversHead && BodyTypeUtility.IsRRBody(pawn.story.bodyType));
+            bool isRRBody = BodyTypeUtility.IsRRBody(pawn.story.bodyType);
+
+            if (!shellCoversHead || isRRBody)
+                return false;
+
+            return true;
         }
     }
 }
