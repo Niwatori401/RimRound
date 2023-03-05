@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: d68020b0def6385fe3368022a83755dadc0ec89d
+Commit Hash: 1e93e1e81b7739b70d6d15aeee24a859d64bb8c9
+Author: Niwatori401
+Date: Sun Mar 5 02:30:54 2023
+
+Restore Statue of Colonist support
+
+==================================================
+Commit Hash: ceaaf06af6b444fa96385ef8ed4f5ccc2b42b886
 Author: Niwatori401
 Date: Sun Mar 5 00:04:02 2023
 

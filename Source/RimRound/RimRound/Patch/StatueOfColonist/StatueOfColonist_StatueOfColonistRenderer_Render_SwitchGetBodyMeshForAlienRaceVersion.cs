@@ -14,10 +14,10 @@ using RimWorld;
 
 namespace RimRound.Patch
 {
-    internal class StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion
+    public class StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion
     {
 		static MethodInfo getBodyMeshMI = ModCompatibilityUtility.GetMethodInfo("Statue of Colonist", "StatueOfColonistRenderer", "GetBodyMesh");
-		static MethodInfo newGetBodyMeshMI = typeof(StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion).GetMethod(nameof(StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.NewGetBodyMesh), BindingFlags.Static | BindingFlags.NonPublic);
+		static MethodInfo newGetBodyMeshMI = typeof(StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion).GetMethod(nameof(StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.NewGetBodyMesh), BindingFlags.Static | BindingFlags.NonPublic);
 
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
 		{
@@ -41,8 +41,8 @@ namespace RimRound.Patch
 		{
 			return new PatchCollection
 			{
-				transpiler = typeof(StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion).GetMethod(
-					nameof(StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.Transpiler), ModCompatibilityUtility.majorFlags)
+				transpiler = typeof(StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion).GetMethod(
+					nameof(StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.Transpiler), ModCompatibilityUtility.majorFlags)
 			};
 		}
 
@@ -51,7 +51,7 @@ namespace RimRound.Patch
 		{
 			if (BodyTypeUtility.IsRRBody(bodyTypeDef))
 			{
-				return MeshPool.GetMeshSetForWidth(GetMeshSize(bodyTypeDef)).MeshAt(bodyFacing);
+				return MeshPool.GetMeshSetForWidth(GetMeshSize(bodyTypeDef) * 1.5f).MeshAt(bodyFacing);
             }
 			else 
 			{
@@ -68,7 +68,7 @@ namespace RimRound.Patch
 			if (RacialBodyTypeInfoUtility.defaultFemaleSet.ContainsKey(bodyTypeDef))
 				return RacialBodyTypeInfoUtility.defaultFemaleSet[bodyTypeDef].meshSize;
 
-			if (RacialBodyTypeInfoUtility.defaultMaleSet.ContainsKey(bodyTypeDef))
+            if (RacialBodyTypeInfoUtility.defaultMaleSet.ContainsKey(bodyTypeDef))
 				return RacialBodyTypeInfoUtility.defaultMaleSet[bodyTypeDef].meshSize;
 
 			if (RacialBodyTypeInfoUtility.appleFemaleSet.ContainsKey(bodyTypeDef))

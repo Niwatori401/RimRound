@@ -205,6 +205,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\SectionLayer-Gas_ColorAt_AddRRGasSupport.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\SectionLayer-Gas_Regenerate_AddSupportForRRGas.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\StatWorker_FinalizeValue_AlterMaxValueForPerks.cs" />
+    <Compile Include="RimRound\Patch\StatueOfColonist\StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies.cs" />
     <Compile Include="RimRound\UI\CustomBodySelectDropdown.cs" />
     <Compile Include="RimRound\UI\Gizmos\CustomBodyTypeGizmo.cs" />
     <Compile Include="RimRound\UI\Gizmos\MakeGeneratorGizmo.cs" />
@@ -227,7 +228,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\DietAIPatches\WorkGiver-Warden-DeliverFood_JobOnThing_AddExceptionForFattenInteraction.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Toils-LayDown_LayDown_AddRefreshToClothingWhenLayDownToil.cs" />
     <Compile Include="RimRound\Patch\RJW_MC\CompMilkableHuman_ResourceAmount_AdjustForPawnBodyWeight.cs" />
-    <Compile Include="RimRound\Patch\StatueOfColonist\StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.cs" />
+    <Compile Include="RimRound\Patch\StatueOfColonist\StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

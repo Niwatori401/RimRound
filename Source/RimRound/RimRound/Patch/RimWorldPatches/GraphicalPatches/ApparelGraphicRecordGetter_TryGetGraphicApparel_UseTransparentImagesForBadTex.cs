@@ -30,37 +30,32 @@ namespace RimRound.Patch
             return codeInstructions;
         }
 
-        private static void IfGraphicPathIsNullReturnNullApparelGraphicRecord(ILGenerator generator, List<CodeInstruction> codeInstructions)
+        /// <summary>
+        /// This function inserts code instructions to divert missing textures for clothing to the block which typically returns a null GraphicApparelRecord in the original function.
+        /// </summary>
+        public static void IfGraphicPathIsNullReturnNullApparelGraphicRecord(ILGenerator generator, List<CodeInstruction> codeInstructions)
         {
             List<CodeInstruction> newInstructions = new List<CodeInstruction>();
             Label label = generator.DefineLabel();
 
             int startJndex = -1;
 
-            for (int jndex = 0; jndex < codeInstructions.Count; ++jndex)
+            for (int jndex = 0; jndex < codeInstructions.Count; ++jndex) // Sets startJndex to branch if false OpCode
             {
                 if (codeInstructions[jndex].Calls(genTextNullOrEmptyMI))
                 {
                     startJndex = jndex + 1;
+                    codeInstructions[startJndex + 1].labels.Add(label); // Add label to block that returns null graphic record
                     break;
                 }
             }
 
-            for (int jndex = startJndex; jndex < codeInstructions.Count; ++jndex)
-            {
-                if (codeInstructions[jndex].opcode == OpCodes.Ret)
-                {
-                    codeInstructions[jndex - 6].labels.Add(label);
-                    break;
-                }
-            }
-
-            newInstructions.Add(new CodeInstruction(OpCodes.Brtrue_S, label));
-            newInstructions.Add(new CodeInstruction(OpCodes.Ldarg_0));
-            newInstructions.Add(new CodeInstruction(OpCodes.Ldarg_1));
+            newInstructions.Add(new CodeInstruction(OpCodes.Brtrue_S, label)); // Keep base functionality where null text goes into block marked by [label]
+            newInstructions.Add(new CodeInstruction(OpCodes.Ldarg_0)); // Apparel
+            newInstructions.Add(new CodeInstruction(OpCodes.Ldarg_1)); // Bodytype
             newInstructions.Add(CodeInstruction.Call(
                 typeof(ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex),
-                nameof(IsGraphicPathResultNullForApparel)));
+                nameof(IsGraphicPathResultNullForApparel))); // Call additional clause
 
             if (startJndex != -1)
             {
@@ -80,19 +75,14 @@ namespace RimRound.Patch
                             nameof(GetApparelGraphic),
                             BindingFlags.Public | BindingFlags.Static);
 
-                    /*
-                    codeInstructions.InsertRange(currentIndex,
-                        new List<CodeInstruction>()
-                        {
-                            new CodeInstruction(OpCodes.Ldarg_0),
-                            new CodeInstruction(OpCodes.Ldarg_1)
-                        });
-                    */
                     break;
                 }
             }
         }
 
+        /// <summary>
+        /// Replacement method for normal texture getter. Can't figure out when last two arguments end up on stack, but they sure do :^>
+        /// </summary>
         public static Graphic GetApparelGraphic(string graphicPath, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType) 
 		{
             if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || apparel.def.apparel.LastLayer.defName == "OnHead" || apparel.def.apparel.LastLayer.defName == "StrappedHead")
@@ -116,6 +106,8 @@ namespace RimRound.Patch
             return GraphicDatabase.Get<Graphic_Multi>(graphicPath, shader, vector, color);
 		}
 
+
+        /// <returns><see langword="true"/> if there does not exist clothing at that path for that bodytype. <see langword="false"/> otherwise.</returns>
 		public static bool IsGraphicPathResultNullForApparel(Apparel apparel, BodyTypeDef bodyType)
         {
             string apparelGraphicPath = apparel.WornGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
@@ -163,7 +155,7 @@ namespace RimRound.Patch
         }
 
         //False means the graphic IS valid. 
-        static Dictionary<string, bool> graphicPathResultIsNull = new Dictionary<string, bool>();
+        public static Dictionary<string, bool> graphicPathResultIsNull = new Dictionary<string, bool>();
 
 
 		static MethodInfo genTextNullOrEmptyMI = typeof(GenText).GetMethod(

@@ -40,10 +40,15 @@ namespace RimRound.Patch
 			ModCompatibilityUtility.TryPatch(
 				harmony,
 				new ModPatchInfo("Statue of Colonist", "StatueOfColonistRenderer", "Render", MethodType.Normal),
-				StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.GetPatchCollection());
+				StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.GetPatchCollection());
+
+            ModCompatibilityUtility.TryPatch(
+				harmony,
+				new ModPatchInfo("Statue of Colonist", "StatueOfColonistGraphicSet", "TryGetGraphicApparel", MethodType.Normal),
+				StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies.GetPatchCollection());
 
 
-			int patchedMethodsCount = 0;
+            int patchedMethodsCount = 0;
 			int postfixesCount = 0;
 			int prefixesCount = 0;
 			int transpilersCount = 0;
