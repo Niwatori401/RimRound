@@ -59,7 +59,6 @@ namespace RimRound.Comps
                 if (ticksSinceLastBodyChange >= numberOfTicksCooldownPerChange)
                 {
                     BodyTypeUtility.UpdatePawnSprite((Pawn)parent, personallyExempt, categoricallyExempt, false, true);
-                    ticksSinceLastBodyChange = 0;
                 }
             }
         }
@@ -70,7 +69,7 @@ namespace RimRound.Comps
 
 
         public int ticksSinceLastBodyChange = 0;
-        private readonly int numberOfTicksCooldownPerChange = 250;
+        public readonly int numberOfTicksCooldownPerChange = 250;
 
         ExemptionReason categoricallyExempt = false;
         public ExemptionReason CategoricallyExempt

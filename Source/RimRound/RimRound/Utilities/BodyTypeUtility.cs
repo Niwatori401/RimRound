@@ -225,6 +225,9 @@ namespace RimRound.Utilities
 
         public static void UpdatePawnSprite(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false, bool forceUpdate = false, bool BodyCheck = true)
         {
+            var comp = pawn.TryGetComp<PawnBodyType_ThingComp>();
+            comp.ticksSinceLastBodyChange = 0;
+
             if (BodyCheck && BodyTypeUtility.GetBodyTypeBasedOnWeightSeverity(pawn, personallyExempt, categoricallyExempt) is BodyTypeDef b && b != pawn.story.bodyType)
             {
                 pawn.story.bodyType = b;
@@ -238,19 +241,43 @@ namespace RimRound.Utilities
             }
         }
 
-        internal static void RedrawPawn(Pawn pawn)
+        private static bool _ValidatePawnShouldBeRedrawn(Pawn pawn)
         {
             List<Pawn> allPawns = null;
             if (Find.CurrentMap is null)
                 allPawns = Find.GameInitData.startingAndOptionalPawns;
-            else 
+            else
                 allPawns = new List<Pawn>(Find.CurrentMap?.mapPawns?.AllPawns);
 
-
             if (allPawns is null)
-                return;
+                return false;
 
             if (!(allPawns.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any()))
+            {
+                List<Corpse> allCorpses = new List<Corpse>();
+                ThingOwnerUtility.GetAllThingsRecursively<Corpse>(Find.CurrentMap, ThingRequest.ForGroup(ThingRequestGroup.Corpse), allCorpses, true, null, true);
+
+                if (!(allCorpses.Where(
+                    delegate (Corpse c)
+                    {
+                        if (!(c.InnerPawn?.RaceProps?.Humanlike is bool b && b))
+                            return false;
+
+                        return c.InnerPawn.ThingID == pawn.ThingID;
+                    }
+                ).Any()))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+
+        }
+
+        internal static void RedrawPawn(Pawn pawn)
+        {
+            if (!_ValidatePawnShouldBeRedrawn(pawn))
                 return;
             
             PortraitsCache.SetDirty(pawn);
@@ -258,7 +285,7 @@ namespace RimRound.Utilities
             pawn?.Drawer?.renderer?.graphics?.ResolveAllGraphics();
         }
 
-        internal static void UpdatePawnDrawSize(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)
+        public static void UpdatePawnDrawSize(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)
         {
 
             if (pawn.def is ThingDef_AlienRace alienProps)

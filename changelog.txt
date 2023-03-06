@@ -1,5 +1,15 @@
 ==================================================
-Commit Hash: 1e93e1e81b7739b70d6d15aeee24a859d64bb8c9
+Commit Hash: 920549c3e5f8c22ed2304fdda09150f3b0f8606f
+Author: Niwatori401
+Date: Mon Mar 6 01:50:56 2023
+
+Fix pawns with huge body types leaving huge skeletons
+Fix corpses having incorrect body type
+Fix NRE on initializing dead pawns in ancient dangers
+Add additional null checking for feeding tube systems
+
+==================================================
+Commit Hash: 5730d44f5c6a5b74fefc16654d813bba879aa455
 Author: Niwatori401
 Date: Sun Mar 5 02:30:54 2023
 

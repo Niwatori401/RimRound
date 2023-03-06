@@ -25,13 +25,26 @@ namespace RimRound.FeedingTube.Patches
 
         public static bool Prefix(JobDriver_Ingest __instance, ref IEnumerable<Toil> __result) 
         {
-            if ((__instance.job.GetTarget(TargetIndex.A).Thing) is Building_FoodFaucet foodFaucet) 
+            if ((__instance?.job?.GetTarget(TargetIndex.A).Thing) is Building_FoodFaucet foodFaucet) 
             {
+                if (ChewDurationMultiplier is null || IngestibleSourceGetter is null || PrepareToIngestToils is null)
+                {
+                    Log.Error($"Reflected methods were null in {nameof(JobDriver_Ingest_MakeNewToils_AddExceptionForFaucet)}");
+                    return true;
+                }
+
                 List<Toil> toilsToReturn = new List<Toil>();
-                Thing ingestibleSource = (Thing)(IngestibleSourceGetter.Invoke(__instance, null));
+                Thing ingestibleSource = (Thing)(IngestibleSourceGetter?.Invoke(__instance, null));
                 float chewDurationMultiplier = (float)ChewDurationMultiplier.Invoke(__instance, null);
 
                 chewDurationMultiplier = 0.1f;
+
+                if (ingestibleSource is null)
+                {
+                    Log.Warning($"Found ingestible was null in {nameof(JobDriver_Ingest_MakeNewToils_AddExceptionForFaucet)}");
+                    return true;
+                }
+
 
                 Toil chew = Toils_Ingest.ChewIngestible(
                     __instance.pawn,
@@ -49,14 +62,7 @@ namespace RimRound.FeedingTube.Patches
 
                 for (int i = 0; i < numberOfMealsToGet; i++)
                 {
-                    foreach (Toil toil in (IEnumerable<Toil>)PrepareToIngestToils.Invoke(__instance, new object[] { chew }))
-                    {
-                        Thing test5A = __instance.job.GetTarget(TargetIndex.A).Thing;
-                        Thing test5B = __instance.job.GetTarget(TargetIndex.B).Thing;
-                        toilsToReturn.Add(toil);
-                        Thing test6A = __instance.job.GetTarget(TargetIndex.A).Thing;
-                        Thing test6B = __instance.job.GetTarget(TargetIndex.B).Thing;
-                    }
+                    toilsToReturn.AddRange((IEnumerable<Toil>)PrepareToIngestToils.Invoke(__instance, new object[] { chew }));
 
                     toilsToReturn.Add(chew);
                     toilsToReturn.Add(Toils_Ingest.FinalizeIngest(__instance.pawn, TargetIndex.B));

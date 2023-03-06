@@ -15,7 +15,7 @@ namespace RimRound.FeedingTube.Patches
     {
         public static bool Prefix(JobDriver_Ingest __instance, ref bool __result) 
         {
-            if ((__instance.job.GetTarget(TargetIndex.A).Thing) is Building_FoodFaucet)
+            if ((__instance?.job?.GetTarget(TargetIndex.A).Thing) is Building_FoodFaucet)
             {
                 __result = true;
                 return false;

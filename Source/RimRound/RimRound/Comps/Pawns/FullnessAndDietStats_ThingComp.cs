@@ -60,6 +60,9 @@ namespace RimRound.Comps
 
         private void InitBarsIfNull()
         {
+            if (this.parent.AsPawn().Dead)
+                return;
+
             if (nutritionbar == null)
                 this.nutritionbar = new WeightGizmo_NutritionBar(((Pawn)parent));
 
