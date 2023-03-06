@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 3b02db8e534bfbf3340e98479e4575be73dc20a5
+Commit Hash: a42cff6a8e3cc76754bd04f3caec31515b87c99b
+Author: Niwatori401
+Date: Mon Mar 6 10:09:14 2023
+
+Add apple sprites for 'Fat' sprites
+Fix NRE on non-humanlike corpses
+
+==================================================
+Commit Hash: 9fd0daaa2ccc3e12703346a0f87cfb3e994c9e0b
 Author: Niwatori401
 Date: Mon Mar 6 02:17:59 2023
 

@@ -225,7 +225,14 @@ namespace RimRound.Utilities
 
         public static void UpdatePawnSprite(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false, bool forceUpdate = false, bool BodyCheck = true)
         {
+            if (!(pawn?.RaceProps?.Humanlike is bool isHumanlike && isHumanlike))
+                return;
+
             var comp = pawn.TryGetComp<PawnBodyType_ThingComp>();
+
+            if (comp is null)
+                return;
+
             comp.ticksSinceLastBodyChange = 0;
 
             if (BodyCheck && BodyTypeUtility.GetBodyTypeBasedOnWeightSeverity(pawn, personallyExempt, categoricallyExempt) is BodyTypeDef b && b != pawn.story.bodyType)

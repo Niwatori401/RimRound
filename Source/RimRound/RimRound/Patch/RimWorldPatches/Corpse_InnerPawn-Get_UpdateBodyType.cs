@@ -17,7 +17,7 @@ namespace RimRound.Patch
     {
         public static void Postfix(ref Pawn __result, Corpse __instance) 
         {
-            if (__result is null)
+            if (__result is null || (!__result?.RaceProps?.Humanlike ?? false))
                 return;
 
             if (__instance.GetRotStage() == RotStage.Dessicated) // Don't update dessicated corpses so we can change their render size elsewhere
