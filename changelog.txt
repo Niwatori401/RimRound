@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 920549c3e5f8c22ed2304fdda09150f3b0f8606f
+Commit Hash: 3b02db8e534bfbf3340e98479e4575be73dc20a5
+Author: Niwatori401
+Date: Mon Mar 6 02:17:59 2023
+
+Add saving for nutrient refinery's target nutrient density value
+Adjust how values for nutrient density are displayed both on change and in inspect string
+
+==================================================
+Commit Hash: 93cbbd3f723b7db3f1bd7b939398b3411b602470
 Author: Niwatori401
 Date: Mon Mar 6 01:50:56 2023
 

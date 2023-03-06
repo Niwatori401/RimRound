@@ -32,10 +32,18 @@ namespace RimRound.FeedingTube
         {
             string description = base.GetInspectString();
 
-            description += $"\nTarget nutrition density: {1/targetRatio}";
+            description += $"\nTarget nutrition density: {1/targetRatio:f1}";
 
             return description;
         }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look<float>(ref targetRatio, "targetRatio", 1);
+        }
+
 
         public override IEnumerable<Gizmo> GetGizmos() 
         {
@@ -87,7 +95,7 @@ namespace RimRound.FeedingTube
                     float amountToAdd = (1 / ((1 / targetRatio) + increaseAmount) - targetRatio);
                     targetRatio = Mathf.Clamp(targetRatio - amountToAdd, minAllowedRatio, maxAllowedRatio);
 
-                    MoteMaker.ThrowText(this.Position.ToVector3(), this.Map, $"+ {1/targetRatio - 1/cachedRatio:f1}");
+                    MoteMaker.ThrowText(this.Position.ToVector3(), this.Map, $"{1/targetRatio - 1/cachedRatio:f1}");
                 }
             };
         }
