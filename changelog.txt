@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 794321f087bcd547d0b6f1f407c92dbeb66e096a
+Commit Hash: 6055741e97a79e117e58e921a814cb4807045b12
+Author: Niwatori401
+Date: Tue Mar 7 22:11:43 2023
+
+Update verify install scripts
+
+==================================================
+Commit Hash: d807d38d40bb9367999dde6479db9f7244d30f6c
 Author: Niwatori401
 Date: Tue Mar 7 21:40:09 2023
 
