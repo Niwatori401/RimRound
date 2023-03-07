@@ -1,5 +1,19 @@
 ==================================================
-Commit Hash: a42cff6a8e3cc76754bd04f3caec31515b87c99b
+Commit Hash: 794321f087bcd547d0b6f1f407c92dbeb66e096a
+Author: Niwatori401
+Date: Tue Mar 7 21:40:09 2023
+
+Alleviate Lay Down toil issue
+
+==================================================
+Commit Hash: 1d0bee503c3e937921e6ee3c0196ad5b065169a4
+Author: Niwatori401
+Date: Tue Mar 7 13:12:08 2023
+
+Add scripts to verify install
+
+==================================================
+Commit Hash: f6488233150d706a2ef46ac8ec87b04c95659473
 Author: Niwatori401
 Date: Mon Mar 6 10:09:14 2023
 

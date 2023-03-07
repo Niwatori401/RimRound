@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,14 @@ namespace RimRound.Patch
 
             Toil toil = __result;
             Action newAction = () => 
-            { 
-                if (toil?.actor?.Drawer?.renderer?.graphics != null)
-                    toil.actor.Drawer.renderer.graphics.ResolveAllGraphics(); 
+            {
+                if (toil?.actor?.Drawer?.renderer?.graphics == null)
+                    return;
+
+                if (!MobilityChairUtility.IsWearingAMobilityScooter(toil.actor))
+                    return;
+
+                toil.actor.Drawer.renderer.graphics.ResolveAllGraphics(); 
             };
 
             __result.initAction = new Action(() => { vanillaAction(); newAction(); });
