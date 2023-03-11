@@ -20,8 +20,11 @@ namespace RimRound.Patch
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 
-            IfGraphicPathIsNullReturnNullApparelGraphicRecord(generator, codeInstructions);
-            ReplaceVanillaGraphicDatabaseGetMethodWithMine(codeInstructions);
+            bool foundInsertionPoint1 = IfGraphicPathIsNullReturnNullApparelGraphicRecord(generator, codeInstructions);
+            bool foundInsertionPoint2 = ReplaceVanillaGraphicDatabaseGetMethodWithMine(codeInstructions);
+
+            if (!foundInsertionPoint1 || !foundInsertionPoint2)
+                Log.Error($"Failed to find insertion point in {nameof(StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies)}.");
 
             return codeInstructions;
         }
@@ -29,10 +32,11 @@ namespace RimRound.Patch
         /// <summary>
         /// This function inserts code instructions to divert missing textures for clothing to the block which typically returns a null GraphicApparelRecord in the original function.
         /// </summary>
-        public static void IfGraphicPathIsNullReturnNullApparelGraphicRecord(ILGenerator generator, List<CodeInstruction> codeInstructions)
+        public static bool IfGraphicPathIsNullReturnNullApparelGraphicRecord(ILGenerator generator, List<CodeInstruction> codeInstructions)
         {
             List<CodeInstruction> newInstructions = new List<CodeInstruction>();
             Label label = generator.DefineLabel();
+            bool foundInsertionPoint = false;
 
             int startJndex = -1;
 
@@ -55,17 +59,25 @@ namespace RimRound.Patch
 
             if (startJndex != -1)
             {
+                foundInsertionPoint = true;
+
                 codeInstructions.InsertRange(startJndex, newInstructions);
             }
+
+            return foundInsertionPoint;
         }
 
-        private static void ReplaceVanillaGraphicDatabaseGetMethodWithMine(List<CodeInstruction> codeInstructions)
+        private static bool ReplaceVanillaGraphicDatabaseGetMethodWithMine(List<CodeInstruction> codeInstructions)
         {
+            bool foundInsertionPoint = false;
+
             for (int jndex = 1; jndex < codeInstructions.Count; jndex++)
             {
                 int currentIndex = codeInstructions.Count - jndex;
                 if (codeInstructions[currentIndex].opcode == OpCodes.Call) // Replace the final Call (which should be the GrahpicDatabase.Get)
                 {
+                    foundInsertionPoint = true;
+
                     codeInstructions[currentIndex].operand =
                         typeof(ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex).GetMethod(
                             nameof(GetApparelGraphic),
@@ -77,6 +89,8 @@ namespace RimRound.Patch
                     break;
                 }
             }
+
+            return foundInsertionPoint;
         }
 
         public static Graphic GetApparelGraphic(string graphicPath, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType)

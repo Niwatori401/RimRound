@@ -27,6 +27,8 @@ namespace RimRound.Patch
             List<CodeInstruction> instructionsToAdd = new List<CodeInstruction>();
 
             Label jumpPoint = il.DefineLabel();
+            bool foundInsertionPoint = false;
+            bool foundInsertionPoint2 = false;
 
             int insertionJndex = -1;
             int endJndex = -1;
@@ -53,6 +55,8 @@ namespace RimRound.Patch
             {
                 if (codeInstructions[jndex].Calls(ideologyActiveGetterInfo))
                 {
+                    foundInsertionPoint = true;
+
                     insertionJndex = jndex;
                     break;
                 }
@@ -62,6 +66,8 @@ namespace RimRound.Patch
             {
                 if (codeInstructions[jndex2].Calls(drawMeshNowOrLaterInfo))
                 {
+                    foundInsertionPoint2 = true;
+
                     endJndex = jndex2 + 1;
                     codeInstructions[endJndex].labels.Add(jumpPoint);
                     break;
@@ -75,6 +81,10 @@ namespace RimRound.Patch
             instructionsToAdd.Add(new CodeInstruction(OpCodes.Brfalse_S, jumpPoint));
 
             codeInstructions.InsertRange(insertionJndex, instructionsToAdd);
+
+            if (!foundInsertionPoint || !foundInsertionPoint2)
+                Log.Error($"Failed to find insertion point in {nameof(PawnRenderer_DrawPawnBody_AddToggleForTattoos)}.");
+
 
             return codeInstructions.AsEnumerable();
         }

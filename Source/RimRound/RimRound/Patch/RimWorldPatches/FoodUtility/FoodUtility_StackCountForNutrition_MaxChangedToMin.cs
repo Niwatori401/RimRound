@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using Verse;
 
 namespace RimRound.Patch
 {
@@ -21,16 +22,22 @@ namespace RimRound.Patch
 			MethodInfo mi = typeof(Mathf).GetMethod(nameof(Mathf.RoundToInt), BindingFlags.Static | BindingFlags.Public);
 			MethodInfo miReplacement = typeof(Mathf).GetMethod(nameof(Mathf.FloorToInt), BindingFlags.Static | BindingFlags.Public);
 
-			for (int jndex = 0; jndex < codeInstructions.Count; ++jndex) 
+            bool foundInsertionPoint = false;
+
+            for (int jndex = 0; jndex < codeInstructions.Count; ++jndex) 
 			{
 				if (codeInstructions[jndex].Calls(mi))
 				{
-					codeInstructions[jndex].operand = miReplacement;
+                    foundInsertionPoint = true;
+
+                    codeInstructions[jndex].operand = miReplacement;
 				}
 			}
 
+            if (!foundInsertionPoint)
+                Log.Error($"Failed to find insertion point in {nameof(FoodUtility_StackCountForNutrition_MaxChangedToMin)}.");
 
-			return codeInstructions;
+            return codeInstructions;
 		}
 	}
 }

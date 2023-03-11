@@ -45,14 +45,20 @@ namespace RimRound.Patch
 
             MethodInfo logErrorMethodInfo = typeof(Log).GetMethod(nameof(Log.Error), new Type[] { typeof(string) });
 
+            bool foundInsertionPoint = false;
+
             for (int jndex = 0; jndex < codeInstructions.Count; ++jndex) 
             {
                 if (codeInstructions[jndex].Calls(logErrorMethodInfo)) 
                 {
+                    foundInsertionPoint = true;
+
                     codeInstructions[jndex].operand = typeof(Graphic_Multi_Init_DontLogErrorsForRimRound).GetMethod(nameof(Dugma), BindingFlags.NonPublic | BindingFlags.Static);
                 }
             }
 
+            if (!foundInsertionPoint)
+                Log.Error($"Failed to find insertion point in {nameof(Graphic_Multi_Init_DontLogErrorsForRimRound)}.");
 
             return codeInstructions;
         }

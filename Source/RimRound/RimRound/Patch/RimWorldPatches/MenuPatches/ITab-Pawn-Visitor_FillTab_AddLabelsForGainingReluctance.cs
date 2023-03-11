@@ -23,13 +23,14 @@ namespace RimRound.Patch
 			List<CodeInstruction> newInstructions = new List<CodeInstruction>();
 
 			int startJndex = -1;
+            bool foundInsertionPoint = false;
 
 
-			for (int i = 0; i < codeInstructions.Count; ++i) 
+            for (int i = 0; i < codeInstructions.Count; ++i) 
 			{
 				if (codeInstructions[i].opcode == OpCodes.Ldstr && (string)codeInstructions[i].operand == "RecruitmentResistance") 
 				{
-					startJndex = i;
+                    startJndex = i;
 				}
 			}
 
@@ -42,9 +43,14 @@ namespace RimRound.Patch
 
 			if (startJndex != -1)
 			{
-				codeInstructions.InsertRange(startJndex, newInstructions);
+                foundInsertionPoint = true;
+
+                codeInstructions.InsertRange(startJndex, newInstructions);
 			}
 
+            if (!foundInsertionPoint)
+                Log.Error($"Failed to find insertion point in {nameof(ITab_Pawn_Visitor_FillTab_AddLabelsForGainingReluctance)}.");
+            
 			return codeInstructions;
 		}
 

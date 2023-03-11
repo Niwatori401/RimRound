@@ -22,19 +22,26 @@ namespace RimRound.Patch
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
 		{
 			List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
+            bool foundInsertionPoint = false;
 
             for (int jndex = 0; jndex < codeInstructions.Count; jndex++)
             {
 				if (codeInstructions[jndex].Calls(getBodyMeshMI))
 				{
-					codeInstructions[jndex].operand = newGetBodyMeshMI;
+                    foundInsertionPoint = true;
+
+                    codeInstructions[jndex].operand = newGetBodyMeshMI;
 					codeInstructions[jndex].opcode = OpCodes.Call;
 					codeInstructions.Insert(jndex, new CodeInstruction(OpCodes.Ldarg, 13));
 				}
 					
             }
 
-			return codeInstructions;
+            if (!foundInsertionPoint)
+                Log.Error($"Failed to find insertion point in {nameof(StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion)}.");
+
+
+            return codeInstructions;
 		}
 
 		public static PatchCollection GetPatchCollection()

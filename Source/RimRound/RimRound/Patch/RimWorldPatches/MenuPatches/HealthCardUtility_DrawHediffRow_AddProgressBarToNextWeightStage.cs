@@ -37,10 +37,11 @@ namespace RimRound.Patch
 				Log.Error("drawHighlightIfMouseOverMI was null!");
 				return codeInstructions;
 			}
-				
+
+            bool foundInsertionPoint = false;
 
 
-			int rectDupIndex = -1;
+            int rectDupIndex = -1;
 			int hediffDUpIndex = -1;
 			int callNewFuncIndex = -1;
 
@@ -48,7 +49,9 @@ namespace RimRound.Patch
 			{
 				if (codeInstructions[i].Calls(drawHighlightIfMouseOverMI)) 
 				{
-					rectDupIndex = i;
+                    foundInsertionPoint = true;
+
+                    rectDupIndex = i;
 					hediffDUpIndex = i + 2;
 					callNewFuncIndex = i + 4;
 					break;
@@ -68,7 +71,10 @@ namespace RimRound.Patch
 				codeInstructions.InsertRange(rectDupIndex, newInstructions);
 			}
 
-			return codeInstructions;
+            if (!foundInsertionPoint)
+                Log.Error($"Failed to find insertion point in {nameof(HealthCardUtility_DrawHediffRow_AddProgressBarToNextWeightStage)}.");
+
+            return codeInstructions;
 		}
 
 		public static void DrawProgressBarToNextWeightStage(Rect rect, Hediff hediff, Pawn pawn) 

@@ -24,8 +24,11 @@ namespace RimRound.Patch
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
             
-            IfGraphicPathIsNullReturnNullApparelGraphicRecord(generator, codeInstructions);
-            ReplaceVanillaGraphicDatabaseGetMethodWithMine(codeInstructions);
+            bool success1 = IfGraphicPathIsNullReturnNullApparelGraphicRecord(generator, codeInstructions);
+            bool success2 = ReplaceVanillaGraphicDatabaseGetMethodWithMine(codeInstructions);
+
+            if (!success1 || !success2)
+                Log.Error($"Failed to find insertion point in {nameof(ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex)}.");
 
             return codeInstructions;
         }
@@ -33,12 +36,14 @@ namespace RimRound.Patch
         /// <summary>
         /// This function inserts code instructions to divert missing textures for clothing to the block which typically returns a null GraphicApparelRecord in the original function.
         /// </summary>
-        public static void IfGraphicPathIsNullReturnNullApparelGraphicRecord(ILGenerator generator, List<CodeInstruction> codeInstructions)
+        public static bool IfGraphicPathIsNullReturnNullApparelGraphicRecord(ILGenerator generator, List<CodeInstruction> codeInstructions)
         {
             List<CodeInstruction> newInstructions = new List<CodeInstruction>();
             Label label = generator.DefineLabel();
 
             int startJndex = -1;
+
+            bool foundPatchLoc = false;
 
             for (int jndex = 0; jndex < codeInstructions.Count; ++jndex) // Sets startJndex to branch if false OpCode
             {
@@ -59,17 +64,24 @@ namespace RimRound.Patch
 
             if (startJndex != -1)
             {
+                foundPatchLoc = true;
                 codeInstructions.InsertRange(startJndex, newInstructions);
             }
+
+            return foundPatchLoc;
         }
 
-        private static void ReplaceVanillaGraphicDatabaseGetMethodWithMine(List<CodeInstruction> codeInstructions)
+        private static bool ReplaceVanillaGraphicDatabaseGetMethodWithMine(List<CodeInstruction> codeInstructions)
         {
+            bool foundPatchLoc = false;
+
             for (int jndex = 1; jndex < codeInstructions.Count; jndex++)
             {
                 int currentIndex = codeInstructions.Count - jndex;
                 if (codeInstructions[currentIndex].opcode == OpCodes.Call) // Replace the final Call (which should be the GrahpicDatabase.Get)
                 {
+                    foundPatchLoc = true;
+
                     codeInstructions[currentIndex].operand =
                         typeof(ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex).GetMethod(
                             nameof(GetApparelGraphic),
@@ -78,6 +90,8 @@ namespace RimRound.Patch
                     break;
                 }
             }
+
+            return foundPatchLoc;
         }
 
         /// <summary>

@@ -20,15 +20,18 @@ namespace RimRound.Patch
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 
-            AdjustHeadPosition(codeInstructions);
+            bool foundInsertionPoint = AdjustHeadPosition(codeInstructions);
+
+            if (!foundInsertionPoint)
+                Log.Error($"Failed to find insertion point in {nameof(PawnRenderer_RenderPawnInternal_AdjustHeadDrawDepth)}.");
 
             return codeInstructions;
         }
 
 
-        private static void AdjustHeadPosition(List<CodeInstruction> codeInstructions)
+        private static bool AdjustHeadPosition(List<CodeInstruction> codeInstructions)
         {
-
+            bool foundInsertionPoint = false;
 
             if (drawMeshNowOrLaterMI is null)
                 Log.Error("drawMeshNowOrLaterMI was null in PawnRenderer_RenderPawnInternal_AdjustHeadDrawPosForPortrait patch!");
@@ -40,10 +43,14 @@ namespace RimRound.Patch
             {
                 if (codeInstructions[i].Calls(drawMeshNowOrLaterMI))
                 {
+                    foundInsertionPoint = true;
+
                     codeInstructions[i].operand = replacementFunctionMI;
                     codeInstructions.InsertRange(i, new List<CodeInstruction>() { new CodeInstruction(OpCodes.Ldarg_S, 6 ), new CodeInstruction(OpCodes.Ldarg_0)});
                 }
             }
+
+            return foundInsertionPoint;
         }
 
         private static void DrawMeshForHeadBasedOnIfPortrait(Mesh mesh, Vector3 vector3, Quaternion quaternion, Material material, bool drawNow, PawnRenderFlags renderFlags, PawnRenderer instance) 

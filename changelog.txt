@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: fb61b7f5b577cfa24288b4c454843c183d9b3a09
+Commit Hash: 885a0665f266a1a44ad65fda632c35e1279027ad
+Author: Niwatori401
+Date: Sat Mar 11 11:49:05 2023
+
+Fix patch that made option to change background visible even without dlcs
+Add additional checks to transpilers to ensure there are log entires for failures
+
+==================================================
+Commit Hash: eb16c5bc1d2c31133f97ad222cc79d12ba6a6456
 Author: Niwatori401
 Date: Sat Mar 11 11:10:07 2023
 

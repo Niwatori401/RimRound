@@ -22,12 +22,15 @@ namespace RimRound.Patch
 			List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
 			List<CodeInstruction> newInstructions = new List<CodeInstruction>();
 
+            bool foundInsertionPoint = false;
 
-			for (int i = 0; i < codeInstructions.Count; i++)
+            for (int i = 0; i < codeInstructions.Count; i++)
 			{
 				if (codeInstructions[i].Calls(getRandomMI))
 				{
-					codeInstructions[i].operand = getNamedMI;
+                    foundInsertionPoint = true;
+
+                    codeInstructions[i].operand = getNamedMI;
 
 					newInstructions.Add(new CodeInstruction(OpCodes.Ldstr, "Thin"));
 					newInstructions.Add(new CodeInstruction(OpCodes.Ldc_I4_1));
@@ -37,9 +40,10 @@ namespace RimRound.Patch
 					break;
 				}
 			}
+            if (!foundInsertionPoint)
+                Log.Error($"Failed to find insertion point in {nameof(HarmonyPatches_GenerateBodyTypePostfix_ChangeRandomBodyAssignmentForNullBackstoriesToThin)}.");
 
-
-			return codeInstructions;
+            return codeInstructions;
 		}
 	}
 }
