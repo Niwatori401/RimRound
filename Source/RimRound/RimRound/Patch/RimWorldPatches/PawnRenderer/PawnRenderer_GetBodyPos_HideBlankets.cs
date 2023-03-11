@@ -18,9 +18,9 @@ namespace RimRound.Patch
         static FieldInfo pawnFieldInfo = typeof(PawnRenderer).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
         static Dictionary<string, HideCovers_ThingComp> pawnIdToComp = new Dictionary<string, HideCovers_ThingComp>();
 
-        public static void Postfix(PawnRenderer __instance, ref bool __1) 
+        public static void Postfix(PawnRenderer __instance, ref bool __1, Pawn ___pawn) 
         {
-            Pawn pawn = (Pawn)pawnFieldInfo.GetValue(__instance);
+            Pawn pawn = ___pawn;
 
             if (pawn is null || !(pawn?.RaceProps?.Humanlike is bool b && b))
                 return;

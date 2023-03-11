@@ -56,7 +56,7 @@ namespace RimRound.Utilities
         {
             if (GetRacialDictionary(pawn) is Dictionary<BodyTypeDef, BodyTypeInfo> dictionary)
             {
-                if (pawn.Dead && pawn.IsDessicated())
+                if (pawn.Dead && (BodyTypeUtility.GetCorpseContainingPawn(pawn)?.IsDessicated() ?? false))
                 {
                     return dictionary[RimWorld.BodyTypeDefOf.Thin];
                 }

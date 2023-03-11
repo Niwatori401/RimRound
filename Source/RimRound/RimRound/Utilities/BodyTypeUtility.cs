@@ -169,7 +169,7 @@ namespace RimRound.Utilities
             return false;
         }
 
-        static Corpse GetCorpseContainingPawn(Pawn pawn) 
+        public static Corpse GetCorpseContainingPawn(Pawn pawn) 
         {
             if (!pawn.Dead)
             {
