@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 885a0665f266a1a44ad65fda632c35e1279027ad
+Commit Hash: a7a34de6038fd8e5dc4ba0ac203b9e93424f9ae1
+Author: Niwatori401
+Date: Sat Mar 11 12:01:52 2023
+
+Replace broken patch that previously prevented HAR from generating RR bodies erroneously
+
+==================================================
+Commit Hash: 35d0ae22f5473c8546c727d2822f85bb3c0b04db
 Author: Niwatori401
 Date: Sat Mar 11 11:49:05 2023
 
