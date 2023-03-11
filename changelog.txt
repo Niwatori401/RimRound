@@ -1,5 +1,28 @@
 ==================================================
-Commit Hash: 6055741e97a79e117e58e921a814cb4807045b12
+Commit Hash: fb61b7f5b577cfa24288b4c454843c183d9b3a09
+Author: Niwatori401
+Date: Sat Mar 11 11:10:07 2023
+
+Fix immobilized pawns who are in beds appearing offset horizontally
+
+==================================================
+Commit Hash: e7c16b191ff2eecf5db37512e672a64722a6496d
+Author: Niwatori401
+Date: Sat Mar 11 07:19:14 2023
+
+Optimize show/hide blanket patch
+
+==================================================
+Commit Hash: ec1fe53b6b0e0999e6cd406ce5301a6c4a1ef541
+Author: Niwatori401
+Date: Sat Mar 11 03:24:33 2023
+
+Freshly spawned corpses, such as from caskets will update their bodies upon being released.
+Corpses now display thin sprite upon reaching skeletal stage
+Optimize various patches
+
+==================================================
+Commit Hash: 75c5dfd21b4825f5ee028d115750de5674a01848
 Author: Niwatori401
 Date: Tue Mar 7 22:11:43 2023
 
