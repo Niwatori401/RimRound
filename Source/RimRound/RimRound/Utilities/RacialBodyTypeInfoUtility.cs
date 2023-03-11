@@ -1,4 +1,4 @@
-﻿using RimRound.Comps;
+using RimRound.Comps;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,17 @@ namespace RimRound.Utilities
     {
         public static Dictionary<BodyTypeDef, BodyTypeInfo> GetRacialDictionary(Pawn pawn)
         {
-            var pbtComp = pawn.TryGetComp<PawnBodyType_ThingComp>();
+            PawnBodyType_ThingComp pbtComp;
+
+            if (thingIdToPawnCompCache.TryGetValue(pawn.ThingID) is PawnBodyType_ThingComp c)
+            {
+                pbtComp = c;
+            }
+            else 
+            {
+                pbtComp = pawn.TryGetComp<PawnBodyType_ThingComp>();
+                thingIdToPawnCompCache.Add(pawn.ThingID, pbtComp);
+            }
 
             if (pbtComp is null)
                 return null;
@@ -40,10 +50,16 @@ namespace RimRound.Utilities
             return null;
         }
 
+        static Dictionary<string, PawnBodyType_ThingComp> thingIdToPawnCompCache = new Dictionary<string, PawnBodyType_ThingComp>();
+
         public static BodyTypeInfo? GetRacialBodyTypeInfo(Pawn pawn)
         {
             if (GetRacialDictionary(pawn) is Dictionary<BodyTypeDef, BodyTypeInfo> dictionary)
             {
+                if (pawn.Dead && pawn.IsDessicated())
+                {
+                    return dictionary[RimWorld.BodyTypeDefOf.Thin];
+                }
                 if (dictionary.ContainsKey(pawn.story.bodyType))
                 {
                     return dictionary[pawn.story.bodyType];
@@ -51,6 +67,7 @@ namespace RimRound.Utilities
             }
             return null;
         }
+
 
         public static BodyTypeDef GetEquivalentBodyTypeDef(BodyTypeDef raceSpecificDef)
         {

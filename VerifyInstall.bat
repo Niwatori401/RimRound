@@ -1,19 +1,55 @@
 @ECHO OFF
 setlocal EnableDelayedExpansion
+
+REM Remove files left over from previous runs
+DEL verify_output.md5 >nul 2>&1
+DEL RESULT_HASH.txt >nul 2>&1
+
 ECHO Hashing files... (This can take a few minutes)
 FOR /R %%L IN (*) DO (
 	SET FILENAME=%%L
-	IF x"!FILENAME:.git\\=!"==x"!FILENAME!" (
-		IF x"!FILENAME:output.md5=!"==x"!FILENAME!" (
+	IF x"!FILENAME:.git\=!"==x"!FILENAME!" (
+		IF x"!FILENAME:.md5=!"==x"!FILENAME!" (
 			IF x"!FILENAME:INTEGRITY_HASH=!"==x"!FILENAME!" (
 				IF x"!FILENAME:RESULT_HASH=!"==x"!FILENAME!" (
 					IF x"!FILENAME:.bat=!"==x"!FILENAME!" (
-						certutil -hashfile "!filepath!" MD5 >> output.md5
+						FOR /F %%N IN ('certutil -hashfile "!FILENAME!" MD5') DO (
+							SET LINE=%%N
+							IF x"!LINE:MD5=!"==x"!LINE!" (
+								IF x"!LINE:CertUtil=!"==x"!LINE!" (
+									ECHO !LINE!
+									ECHO !LINE! >> verify_output.md5
+								)
+							) 
+						)
 					)
 				)
 			)
 		)
 	)
 )
-certutil -hashfile ".\output.md5" MD5 > RESULT_HASH
-DEL output.md5
+
+certutil -hashfile ".\verify_output.md5" MD5 > RESULT_HASH.txt
+ECHO Installed at: >> RESULT_HASH.txt
+ECHO %~dp0 >> RESULT_HASH.txt
+DEL verify_output.md5
+
+FINDSTR /N . INTEGRITY_HASH.txt | FINDSTR ^^2 > tmp
+set /p integrity_hash= < tmp 
+
+FINDSTR /N . RESULT_HASH.txt | FINDSTR ^^2 > tmp
+set /p verify_hash= < tmp 
+
+DEL tmp 
+
+IF !integrity_hash!==!verify_hash! (
+	ECHO ------------------------------
+	ECHO   Files verified successfully!
+	ECHO ------------------------------
+
+) ELSE (
+	ECHO ------------------------------
+	ECHO   Files failed to validate.
+	ECHO ------------------------------
+)
+PAUSE

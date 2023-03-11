@@ -148,9 +148,81 @@ namespace RimRound.Utilities
             return bodytypeCleaned;
         }
 
+        static Dictionary<Pawn, Corpse> cachedCorpseContainingPawnResults = new Dictionary<Pawn, Corpse>();
+
+        static void InvalidateCorpseCache() 
+        {
+            cachedCorpseContainingPawnResults.Clear();        
+        }
+
+        /// <summary>
+        /// Validates result from cache.
+        /// </summary>
+        /// <param name="pawn">Pawn returned from cache</param>
+        /// <param name="corpse">Corpse returned from cache</param>
+        /// <returns>true of cache needs wiped, false otherwise.</returns>
+        static bool CorpseCacheIsStale(Pawn pawn, Corpse corpse) 
+        {
+            if (corpse.InnerPawn.ThingID != pawn.ThingID)
+                return true;
+
+            return false;
+        }
+
+        static Corpse GetCorpseContainingPawn(Pawn pawn) 
+        {
+            if (!pawn.Dead)
+            {
+                return null;
+            }
+
+            Corpse corpse = null;
+            if (cachedCorpseContainingPawnResults.TryGetValue(pawn, out corpse))
+            {
+                return corpse;
+            }
+            else 
+            {
+                List<Corpse> allCorpses = new List<Corpse>();
+                ThingOwnerUtility.GetAllThingsRecursively<Corpse>(Find.CurrentMap, ThingRequest.ForGroup(ThingRequestGroup.Corpse), allCorpses, true, null, true);
+
+                corpse = (allCorpses.Where(
+                    delegate (Corpse c)
+                    {
+                        if (!(c.InnerPawn?.RaceProps?.Humanlike is bool b && b))
+                        return false;
+
+                        return c.InnerPawn.ThingID == pawn.ThingID;
+                    }
+                    ))?.FirstOrDefault();
+
+                cachedCorpseContainingPawnResults.Add(pawn, corpse);
+            }
+
+            if (corpse is null)
+            {
+                Log.Warning($"Corpse was null in {nameof(BodyTypeUtility.GetCorpseContainingPawn)}.");
+                return null;
+            }
+
+            if (CorpseCacheIsStale(pawn, corpse))
+            {
+                InvalidateCorpseCache();
+                return GetCorpseContainingPawn(pawn);
+            }
+            else
+                return corpse;
+                
+        }
+
         public static BodyTypeDef GetBodyTypeBasedOnWeightSeverity(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)
         {
             BodyTypeDef result = null;
+
+            bool dessicated = GetCorpseContainingPawn(pawn) is Corpse c && c.IsDessicated();
+
+            if (pawn.Dead && dessicated)
+                return RimWorld.BodyTypeDefOf.Thin;
 
             if (personallyExempt || categoricallyExempt)
             {
@@ -248,7 +320,7 @@ namespace RimRound.Utilities
             }
         }
 
-        private static bool _ValidatePawnShouldBeRedrawn(Pawn pawn)
+        private static bool ValidatePawnShouldBeRedrawn(Pawn pawn)
         {
             List<Pawn> allPawns = null;
             if (Find.CurrentMap is null)
@@ -261,21 +333,10 @@ namespace RimRound.Utilities
 
             if (!(allPawns.Where(delegate (Pawn p) { return p.ThingID == pawn.ThingID; }).Any()))
             {
-                List<Corpse> allCorpses = new List<Corpse>();
-                ThingOwnerUtility.GetAllThingsRecursively<Corpse>(Find.CurrentMap, ThingRequest.ForGroup(ThingRequestGroup.Corpse), allCorpses, true, null, true);
+                if (GetCorpseContainingPawn(pawn) is Corpse c)
+                    return true;
 
-                if (!(allCorpses.Where(
-                    delegate (Corpse c)
-                    {
-                        if (!(c.InnerPawn?.RaceProps?.Humanlike is bool b && b))
-                            return false;
-
-                        return c.InnerPawn.ThingID == pawn.ThingID;
-                    }
-                ).Any()))
-                {
-                    return false;
-                }
+                return false;
             }
 
             return true;
@@ -284,7 +345,7 @@ namespace RimRound.Utilities
 
         internal static void RedrawPawn(Pawn pawn)
         {
-            if (!_ValidatePawnShouldBeRedrawn(pawn))
+            if (!ValidatePawnShouldBeRedrawn(pawn))
                 return;
             
             PortraitsCache.SetDirty(pawn);

@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimRound.Utilities;
 using System;
 using System.Collections.Generic;
@@ -18,11 +18,18 @@ namespace RimRound.Patch
             if (__result != RotDrawMode.Dessicated)
                 return;
 
+            if (checkedCorpseIds.Contains(__instance.ThingID))
+                return;
+            else
+                checkedCorpseIds.Add(__instance.ThingID);
+            
             if (!(__instance.InnerPawn?.RaceProps?.Humanlike is bool b && b))
                 return;
 
-            __instance.InnerPawn.story.bodyType = RimWorld.BodyTypeDefOf.Thin;
-            BodyTypeUtility.UpdatePawnSprite(__instance.InnerPawn, true, true, true, false);
+            BodyTypeUtility.UpdatePawnSprite(__instance.InnerPawn, true, true, true, true);
         }
+
+
+        static HashSet<string> checkedCorpseIds = new HashSet<string>();
     }
 }
