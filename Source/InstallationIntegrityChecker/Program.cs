@@ -33,6 +33,8 @@ namespace InstallationIntegrityChecker
             "RESULT_HASH",
             ".bat",
             ".exe",
+            "dll.config",
+            @"Source\",
         };
 
         static List<string> GetFilesInDir(string sDir)
@@ -77,7 +79,7 @@ namespace InstallationIntegrityChecker
                         using (var stream = File.OpenRead(filename))
                         {
                             var hash = md5.ComputeHash(stream);
-                            result += BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant()+ '\n';
+                            result += BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant() + '\n';
                         }
                     }
                     catch (Exception e) 
