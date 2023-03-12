@@ -6,28 +6,8 @@ DEL verify_output.md5 >nul 2>&1
 DEL RESULT_HASH.txt >nul 2>&1
 
 ECHO Hashing files... (This can take a few minutes)
-FOR /R %%L IN (*) DO (
-	SET FILENAME=%%L
-	IF x"!FILENAME:.git\=!"==x"!FILENAME!" (
-		IF x"!FILENAME:.md5=!"==x"!FILENAME!" (
-			IF x"!FILENAME:INTEGRITY_HASH=!"==x"!FILENAME!" (
-				IF x"!FILENAME:RESULT_HASH=!"==x"!FILENAME!" (
-					IF x"!FILENAME:.bat=!"==x"!FILENAME!" (
-						FOR /F %%N IN ('certutil -hashfile "!FILENAME!" MD5') DO (
-							SET LINE=%%N
-							IF x"!LINE:MD5=!"==x"!LINE!" (
-								IF x"!LINE:CertUtil=!"==x"!LINE!" (
-									ECHO !LINE!
-									ECHO !LINE! >> verify_output.md5
-								)
-							) 
-						)
-					)
-				)
-			)
-		)
-	)
-)
+CALL .\Source\InstallationIntegrityChecker\bin\Debug\InstallationIntegrityChecker.exe CHECK "%~dp0
+
 
 certutil -hashfile ".\verify_output.md5" MD5 > RESULT_HASH.txt
 ECHO Installed at: >> RESULT_HASH.txt
