@@ -6,7 +6,7 @@ DEL verify_output.md5 >nul 2>&1
 DEL RESULT_HASH.txt >nul 2>&1
 
 ECHO Hashing files... (This can take a few minutes)
-CALL .\Source\InstallationIntegrityChecker\bin\Debug\InstallationIntegrityChecker.exe CHECK "%~dp0
+CALL .\InstallationIntegrityChecker.exe CHECK "%~dp0
 
 
 certutil -hashfile ".\verify_output.md5" MD5 > RESULT_HASH.txt

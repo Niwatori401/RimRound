@@ -10,7 +10,7 @@ MKDIR SHA_MEASURE
 git clone ./ SHA_MEASURE/ 
 CD SHA_MEASURE/
 ECHO Hashing files...
-CALL ..\Source\InstallationIntegrityChecker\bin\Debug\InstallationIntegrityChecker.exe CREATE "%~dp0
+CALL ..\InstallationIntegrityChecker.exe CREATE "%~dp0
 ECHO Cleaning up...
 CD ..
 RMDIR /Q /S SHA_MEASURE
