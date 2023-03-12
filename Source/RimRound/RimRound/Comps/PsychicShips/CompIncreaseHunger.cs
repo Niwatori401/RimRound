@@ -36,6 +36,8 @@ namespace RimRound.Comps
 
         private void UpdateDictionaryCache() 
         {
+            cachedFnDComps.Clear();
+
             foreach (Pawn p in GeneralUtility.GetAllLivingHumanlikesOnMap(this.parent.Map))
             {
                 if (!cachedFnDComps.ContainsKey(p))
@@ -75,15 +77,6 @@ namespace RimRound.Comps
                 return;
             }
             ticksAge++;
-        }
-
-        public override void CompTickRare()
-        {
-            base.CompTickRare();
-            foreach (var comp in cachedFnDComps.Values) 
-            {
-                
-            }
         }
 
         int ticksAge = 0;

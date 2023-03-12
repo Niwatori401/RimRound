@@ -50,6 +50,11 @@ namespace RimRound.Utilities
             return null;
         }
 
+        public static void InvalidateCaches() 
+        {
+            thingIdToPawnCompCache.Clear();
+        }
+
         static Dictionary<string, PawnBodyType_ThingComp> thingIdToPawnCompCache = new Dictionary<string, PawnBodyType_ThingComp>();
 
         public static BodyTypeInfo? GetRacialBodyTypeInfo(Pawn pawn)

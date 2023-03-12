@@ -171,6 +171,11 @@ namespace RimRound.Patch
         //False means the graphic IS valid. 
         public static Dictionary<string, bool> graphicPathResultIsNull = new Dictionary<string, bool>();
 
+        public static void InvalidateCache() 
+        {
+            graphicPathResultIsNull.Clear();
+        }
+
 
 		static MethodInfo genTextNullOrEmptyMI = typeof(GenText).GetMethod(
 			nameof(GenText.NullOrEmpty),

@@ -150,7 +150,7 @@ namespace RimRound.Utilities
 
         static Dictionary<Pawn, Corpse> cachedCorpseContainingPawnResults = new Dictionary<Pawn, Corpse>();
 
-        static void InvalidateCorpseCache() 
+        public static void InvalidateCorpseCache() 
         {
             cachedCorpseContainingPawnResults.Clear();        
         }

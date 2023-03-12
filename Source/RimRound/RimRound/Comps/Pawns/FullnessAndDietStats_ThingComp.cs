@@ -39,6 +39,7 @@ namespace RimRound.Comps
             Scribe_Values.Look<float>(ref cachedSliderVal2, "cachedSliderPos2", -1);
 
             Scribe_Values.Look<DietMode>(ref dietMode, "dietMode", DietMode.Disabled);
+            Scribe_Values.Look<DietMode>(ref preCaravanDietMode, "preCaravanDietMode", DietMode.Disabled);
             Scribe_Values.Look<float>(ref currentFullness, "currentFullness", 0);
             Scribe_Values.Look<float>(ref softLimitPersonal, "softLimit", defaultSoftLimit);
             Scribe_Values.Look<float>(ref currentFullnessToNutritionRatio, "currentFullnessToNutritionRatio", defaultFullnessToNutritionRatio);

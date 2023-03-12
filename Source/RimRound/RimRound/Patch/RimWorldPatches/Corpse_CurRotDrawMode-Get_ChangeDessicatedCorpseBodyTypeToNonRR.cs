@@ -29,6 +29,10 @@ namespace RimRound.Patch
             BodyTypeUtility.UpdatePawnSprite(__instance.InnerPawn, true, true, true, true);
         }
 
+        public static void InvalidateCache() 
+        {
+            checkedCorpseIds.Clear();
+        }
 
         static HashSet<string> checkedCorpseIds = new HashSet<string>();
     }
