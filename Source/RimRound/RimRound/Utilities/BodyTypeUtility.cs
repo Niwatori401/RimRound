@@ -70,7 +70,13 @@ namespace RimRound.Utilities
                 alienBodyPath != basePath)
             {
                 if (!IsRRBody(pawn.story.bodyType))
+                {
+                    if (alienBodyPath.Last() != '/') // Anty race ꒰ ง ˘ω˘ ꒱ว
+                        alienBodyPath = alienBodyPath.Substring(0, alienBodyPath.LastIndexOf('/') + 1);
+
+
                     return alienBodyPath + "Naked_" + pawn.story.bodyType.defName;
+                }
             }
 
             return ConvertBodyPathStringsIfNecessary(basePath +"Naked_" + pawn.story.bodyType.defName);
