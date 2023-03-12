@@ -20,7 +20,7 @@ namespace InstallationIntegrityChecker
             Console.WriteLine($"Read file location: {readFileLocation}");
             
             List<string> files = GetFilesInDir(readFileLocation);
-
+            Console.WriteLine($"Number of files {files.Count}");
             string result = CalculateMD5(files);
             File.WriteAllText(outputFileLocation, result);
         }
@@ -32,6 +32,7 @@ namespace InstallationIntegrityChecker
             "INTEGRITY_HASH",
             "RESULT_HASH",
             ".bat",
+            ".exe",
         };
 
         static List<string> GetFilesInDir(string sDir)
@@ -76,7 +77,7 @@ namespace InstallationIntegrityChecker
                         using (var stream = File.OpenRead(filename))
                         {
                             var hash = md5.ComputeHash(stream);
-                            result += BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                            result += BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant()+ '\n';
                         }
                     }
                     catch (Exception e) 
