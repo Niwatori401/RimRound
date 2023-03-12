@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 22ae1734669b3c2963f5f3f1d7acd3f389ff5c42
+Commit Hash: 7e18962820adba4f699b56033d1c5b06e3dcd5ce
+Author: Niwatori401
+Date: Sun Mar 12 11:04:23 2023
+
+Save setting for personal body type selection
+
+==================================================
+Commit Hash: 90c104f0c3d4af789714a8efa884a6ea3d1c1f0e
 Author: Niwatori401
 Date: Sun Mar 12 10:34:39 2023
 

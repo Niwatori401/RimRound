@@ -23,6 +23,7 @@ namespace RimRound.Comps
         {
             base.PostExposeData();
             Scribe_Values.Look<BodyArchetype>(ref _bodyarchetype, "_bodyarchetype", BodyArchetype.none, false);
+            Scribe_Values.Look<string>(ref bodyTypeDictNameString, "bodyTypeDictNameString", null, false);
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -65,8 +66,20 @@ namespace RimRound.Comps
 
 
 
-        public Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> CustomBodyTypeDict { get; set; }
+        public Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> CustomBodyTypeDict 
+        {
+            get 
+            {
+                if (bodyTypeDictNameString is null)
+                    return null;
 
+                Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> returnValue = null;
+                RacialBodyTypeInfoUtility.genderedSets.TryGetValue(bodyTypeDictNameString, out returnValue);
+                return returnValue;
+            } 
+        }
+
+        public string bodyTypeDictNameString = null;
 
         public int ticksSinceLastBodyChange = 0;
         public readonly int numberOfTicksCooldownPerChange = 250;

@@ -57,7 +57,7 @@ namespace RimRound.UI
                     {
                         option = new FloatMenuOption(label, delegate ()
                         {
-                            pawn.TryGetComp<PawnBodyType_ThingComp>().CustomBodyTypeDict = dicitonaryPayload;
+                            pawn.TryGetComp<PawnBodyType_ThingComp>().bodyTypeDictNameString = label;
 
                             BodyTypeUtility.UpdateAllPawnSprites();
                         }),

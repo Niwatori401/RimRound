@@ -26,6 +26,7 @@ namespace RimRound.UI
             Order = 404;
         }
 
+
         public override void DrawIcon(Rect rect, Material buttonMat, GizmoRenderParms parms)
         {
             base.DrawIcon(rect, buttonMat, parms);
@@ -39,10 +40,9 @@ namespace RimRound.UI
             Utilities.Resources.gizmoClick.PlayOneShotOnCamera(null);
             if (comp.CustomBodyTypeDict != null)
             {
-                comp.CustomBodyTypeDict = null;
+                comp.bodyTypeDictNameString = null;
             }
         }
-
 
         PawnBodyType_ThingComp comp;
         

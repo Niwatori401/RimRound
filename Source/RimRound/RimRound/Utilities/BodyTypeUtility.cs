@@ -16,34 +16,6 @@ namespace RimRound.Utilities
 {
     public static class BodyTypeUtility
     {
-        public static void RefreshBodyTypeGraphicLocations() 
-        {
-            using (List<ThingDef_AlienRace>.Enumerator enumerator = DefDatabase<ThingDef_AlienRace>.AllDefsListForReading.GetEnumerator())
-            {
-                IGraphicsLoader graphicsLoader = new DefaultGraphicsLoader();
-                while (enumerator.MoveNext())
-                {
-                    ThingDef_AlienRace ar = enumerator.Current;
-                    AlienPartGenerator.ExtendedGraphicTop body = ar.alienRace.graphicPaths.body;
-
-                    for (int i = 0; i < body.bodytypeGraphics.Count; i++)
-                    {
-                        body.bodytypeGraphics[i].path = BodyTypeUtility.ConvertBodyPathStringsIfNecessary(body.bodytypeGraphics[i].path);
-                    }
-                    graphicsLoader.LoadAllGraphics(ar.alienRace.generalSettings.alienPartGenerator.alienProps.defName, new AlienPartGenerator.ExtendedGraphicTop[]
-                    {
-                        ar.alienRace.graphicPaths.head,
-                        ar.alienRace.graphicPaths.body,
-                        ar.alienRace.graphicPaths.skeleton,
-                        ar.alienRace.graphicPaths.skull,
-                        ar.alienRace.graphicPaths.stump,
-                        ar.alienRace.graphicPaths.bodyMasks,
-                        ar.alienRace.graphicPaths.headMasks
-                    });
-                }
-            }
-        }
-
         public static bool PawnIsOverWeightThreshold(Pawn pawn, BodyTypeDef bodyType)
         {
             float maxValueForBodyType = 0;
