@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: a7a34de6038fd8e5dc4ba0ac203b9e93424f9ae1
+Commit Hash: 154a7ec703dd69b4ac63c266f8b91168b59181f8
+Author: Niwatori401
+Date: Sun Mar 12 01:14:11 2023
+
+Fix error which caused corpses to appear as broken textures on load
+
+==================================================
+Commit Hash: 1c099a6670be6522ca0267f941ded5f2f253df53
 Author: Niwatori401
 Date: Sat Mar 11 12:01:52 2023
 
