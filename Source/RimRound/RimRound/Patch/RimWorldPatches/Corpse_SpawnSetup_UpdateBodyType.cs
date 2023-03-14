@@ -31,6 +31,7 @@ namespace RimRound.Patch
                 return;
             }
 
+            BodyTypeUtility.AssignPersonalCategoricalExemptions(comp);
             BodyTypeUtility.UpdatePawnSprite(__instance.InnerPawn, comp.PersonallyExempt, comp.CategoricallyExempt, false, true);
         }
     }

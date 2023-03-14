@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 7e18962820adba4f699b56033d1c5b06e3dcd5ce
+Commit Hash: 924824e84ad71a4dd0a6c4bf9d3ef77f9ba14c32
+Author: Niwatori401
+Date: Tue Mar 14 10:20:24 2023
+
+Add debug tool to log pawn details
+Make skeleton patch for adjusting biotech draw positions
+
+==================================================
+Commit Hash: c96f29bf3745e2d100446a4ee5085a31a81ab702
 Author: Niwatori401
 Date: Sun Mar 12 11:04:23 2023
 

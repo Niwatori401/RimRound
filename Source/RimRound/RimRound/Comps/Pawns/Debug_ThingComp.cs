@@ -105,8 +105,11 @@ namespace RimRound.Comps
                             comp.perkLevels.PerkToLevels[comp.perkLevels.PerkToLevels.ElementAt(i).Key] = 0;
                         }
                        
+                        // wipe perklevels for saving
                     }
                 };
+
+
                 yield return new Command_Action
                 {
                     defaultLabel = "Change magnitude",
@@ -135,6 +138,65 @@ namespace RimRound.Comps
 
                 if (GlobalSettings.showSpecialDebugSettings)
                 {
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "Print pawn details",
+                        icon = Resources.exampleIcon,
+                        action = delegate ()
+                        {
+                            Resources.gizmoClick.PlayOneShotOnCamera(null);
+                            FullnessAndDietStats_ThingComp comp = parent.AsPawn().TryGetComp<FullnessAndDietStats_ThingComp>();
+                            Pawn pawn = comp.parent.AsPawn();
+
+                            if (comp is null || pawn is null)
+                            {
+                                return;
+                            }
+
+
+                            Log.Message("=================================================================");
+                            Log.Message("=============-------------Pawn-Info--------------- ==============");
+                            Log.Message("=================================================================");
+
+                            Log.Message($"Name: {pawn.Name}");
+                            Log.Message($"Age: {pawn.ageTracker.AgeBiologicalYears}");
+                            Log.Message($"Weight: {pawn.Weight()}");
+                            Log.Message($"Gender: {pawn.gender}");
+                            Log.Message($"Digestion Rate (1000x): {comp.DigestionRate * 1000}");
+                            Log.Message($"Fullness: {comp.CurrentFullness}");
+                            Log.Message($"Age: {pawn.ageTracker.AgeBiologicalYears}");
+                            Log.Message($"Faction: {pawn.Faction}");
+
+
+                            Log.Message("=============--------------Apparel-----------------==============");
+                            foreach (Apparel a in pawn.apparel.WornApparel)
+                                Log.Message($"Wearing: {a.def.defName}");
+                            Log.Message("=============------------END-Apparel---------------==============");
+
+                            if (pawn.def is AlienRace.ThingDef_AlienRace def)
+                                Log.Message($"Alien Race: {def.defName}");
+                            else
+                                Log.Message($"NO RACE RECORDED");
+
+                            Log.Message("=============--------------Hediffs-----------------==============");
+                            List<Hediff> hediffs = new List<Hediff>();
+                            pawn.health.hediffSet.GetHediffs(ref hediffs);
+                            foreach (Hediff a in hediffs)
+                                Log.Message($"Hediff: {a.def.defName} S: {a.Severity} ({a.SeverityLabel})");
+                            Log.Message("=============------------END-Hediffs---------------==============");
+
+                            Log.Message("=============---------------Perks------------------==============");
+                            foreach (var p in comp.perkLevels.PerkToLevels)
+                                if (p.Value != 0)
+                                    Log.Message($"Perk: Level:{p.Value} -  {p.Key}");
+                            Log.Message("=============-------------END-Perks----------------==============");
+
+
+                            Log.Message("=================================================================");
+                            Log.Message("=================================================================");
+                            Log.Message("=================================================================");
+                        }
+                    };
                     yield return new Command_Action
                     {
                         defaultLabel = "Change cardinality",

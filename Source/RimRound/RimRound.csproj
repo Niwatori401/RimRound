@@ -177,6 +177,7 @@
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_CheckBodyType_ChangeRRToThin.cs" />
+    <Compile Include="RimRound\Patch\PawnRenderer_DrawBodyGenes_AdjustPositionOfGeneGraphicsForRRBodies.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Corpse_CurRotDrawMode-Get_ChangeDessicatedCorpseBodyTypeToNonRR.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Corpse_SpawnSetup_UpdateBodyType.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GameDataSaveLoader_LoadGame_WipeCaches.cs" />
