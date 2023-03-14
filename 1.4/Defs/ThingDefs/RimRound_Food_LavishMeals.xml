@@ -27,7 +27,6 @@
 
   <ThingDef Name="RR_LavishMealBaseMEAT" ParentName="MealLavishBase" Abstract="True">
     <defName>RR_LavishMealBaseMEAT</defName>
-    <label>meat-based lavish meal</label>
     <graphicData>
       <texPath>Things/Item/Meal/LavishMeat</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -82,12 +81,23 @@
     </statBases>
   </ThingDef>
   
+  <ThingDef ParentName="RR_LavishMealBase">
+    <defName>MealLavishColossal</defName>
+    <label>colossal lavish meal</label>
+	<description>A ridiculously lavish, ridiculously large meal assembled from an unsettlingly large amount of ingredients. To not eat the entire thing would be a huge waste in every sense of the word.</description>
+	<statBases>
+      <MarketValue>300</MarketValue>
+      <WorkToMake>4700</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
   <!--**************************************-->
   <!--**************************************-->
   
   <ThingDef ParentName="RR_LavishMealBaseVEG">
     <defName>MealLavishLargeNonMeat</defName>
-    <label>vegetarian large vegetarian lavish meal</label>
+    <label>large vegetarian lavish meal</label>
 	<statBases>
       <MarketValue>50</MarketValue>
       <WorkToMake>1000</WorkToMake>
@@ -97,7 +107,7 @@
   
   <ThingDef ParentName="RR_LavishMealBaseVEG">
     <defName>MealLavishHugeNonMeat</defName>
-    <label>vegetarian huge lavish meal</label>
+    <label>huge vegetarian lavish meal</label>
 	<statBases>
       <MarketValue>70</MarketValue>
       <WorkToMake>1400</WorkToMake>
@@ -107,7 +117,7 @@
   
   <ThingDef ParentName="RR_LavishMealBaseVEG">
     <defName>MealLavishEnormousNonMeat</defName>
-    <label>vegetarian enormous lavish meal</label>
+    <label>enormous vegetarian lavish meal</label>
 	<statBases>
       <MarketValue>100</MarketValue>
       <WorkToMake>2000</WorkToMake>
@@ -117,7 +127,7 @@
   
   <ThingDef ParentName="RR_LavishMealBaseVEG">
     <defName>MealLavishMassiveNonMeat</defName>
-    <label>vegetarian massive lavish meal</label>
+    <label>massive vegetarian lavish meal</label>
 	<statBases>
       <MarketValue>140</MarketValue>
       <WorkToMake>2800</WorkToMake>
@@ -125,12 +135,22 @@
     </statBases>
   </ThingDef>
 
+  <ThingDef ParentName="RR_LavishMealBaseVEG">
+    <defName>MealLavishColossalNonMeat</defName>
+    <label>colossal vegetarian lavish meal</label>
+	<description>A ridiculously lavish, ridiculously large meal assembled from an unsettlingly large amount of vegetarian ingredients. To not eat the entire thing would be a huge waste in every sense of the word.</description>
+	<statBases>
+      <MarketValue>300</MarketValue>
+      <WorkToMake>4700</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef>
   <!--**************************************-->
   <!--**************************************-->
   
   <ThingDef ParentName="RR_LavishMealBaseMEAT">
     <defName>MealLavishLargeMeat</defName>
-    <label>meat-based large lavish meal</label>
+    <label>large meat-based lavish meal</label>
 	<statBases>
       <MarketValue>50</MarketValue>
       <WorkToMake>1000</WorkToMake>
@@ -140,7 +160,7 @@
   
   <ThingDef ParentName="RR_LavishMealBaseMEAT">
     <defName>MealLavishHugeMeat</defName>
-    <label>meat-based huge lavish meal</label>
+    <label>huge meat-based lavish meal</label>
 	<statBases>
       <MarketValue>70</MarketValue>
       <WorkToMake>1400</WorkToMake>
@@ -150,7 +170,7 @@
   
   <ThingDef ParentName="RR_LavishMealBaseMEAT">
     <defName>MealLavishEnormousMeat</defName>
-    <label>meat-based enormous lavish meal</label>
+    <label>enormous meat-based lavish meal</label>
 	<statBases>
       <MarketValue>100</MarketValue>
       <WorkToMake>2000</WorkToMake>
@@ -160,11 +180,22 @@
   
   <ThingDef ParentName="RR_LavishMealBaseMEAT">
     <defName>MealLavishMassiveMeat</defName>
-    <label>meat-based massive lavish meal</label>
+    <label>massive meat-based lavish meal</label>
 	<statBases>
       <MarketValue>140</MarketValue>
       <WorkToMake>2800</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
+  
+  <ThingDef ParentName="RR_LavishMealBaseMEAT">
+    <defName>MealLavishColossalMeat</defName>
+    <label>colossal meat-based lavish meal</label>
+	<description>A ridiculously lavish, ridiculously large meal assembled from an unsettlingly large amount of meat-based ingredients. To not eat the entire thing would be a huge waste in every sense of the word.</description>
+	<statBases>
+      <MarketValue>300</MarketValue>
+      <WorkToMake>4700</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef>  
  </Defs>

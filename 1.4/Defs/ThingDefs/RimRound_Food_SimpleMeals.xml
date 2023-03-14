@@ -18,7 +18,7 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>19</MarketValue>
+      <MarketValue>20</MarketValue>
       <WorkToMake>375</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
@@ -33,7 +33,7 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>26</MarketValue>
+      <MarketValue>25</MarketValue>
       <WorkToMake>525</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
@@ -48,7 +48,7 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>38</MarketValue>
+      <MarketValue>40</MarketValue>
       <WorkToMake>750</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
@@ -63,9 +63,24 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>53</MarketValue>
+      <MarketValue>50</MarketValue>
       <WorkToMake>1050</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
+  
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>MealSimpleColossal</defName>
+    <label>colossal simple meal</label>
+    <description>An obscenely large meal painstakingly cooked from one main ingredient.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>100</MarketValue>
+      <WorkToMake>1750</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef> 
  </Defs>

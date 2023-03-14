@@ -104,6 +104,28 @@
     </products>
   </RecipeDef>  
   
+  <RecipeDef ParentName="RR_SimpleMealRecipeBase">
+    <defName>CookMealSimpleColossal</defName>
+    <label>cook colossal simple meal</label>
+    <description>Cook a colossal straightforward meal from one ingredient.</description>
+    <jobString>Cooking colossal simple meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSimpleColossal>1</MealSimpleColossal>
+    </products>
+	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>		
+	
+  </RecipeDef>    
+  
   <!--Fine Meal Derivatives-->
   <RecipeDef Name="RR_FineMealRecipeBase" ParentName="CookMealFineBase" Abstract="True">
 		<recipeUsers>
@@ -415,6 +437,80 @@
   </RecipeDef>  
   
   
+   
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineColossal</defName>
+    <label>cook colossal fine meal</label>
+    <description>Cook a colossal, somewhat complex meal from a combination of meat and plant ingredients.</description>
+    <jobString>Cooking colossal fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>2.0</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>2.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineColossal>1</MealFineColossal>
+    </products>
+	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>		
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineColossalVeg</defName>
+    <label>cook colossal fine meal</label>
+    <description>Cook a colossal, somewhat complex meal from plant ingredients.</description>
+    <jobString>Cooking colossal fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>4.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineColossalVeg>1</MealFineColossalVeg>
+    </products>
+	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
+  </RecipeDef>
+
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineColossalMeat</defName>
+    <label>cook colossal fine meal</label>
+    <description>Cook a colossal, somewhat complex meal from meat ingredients.</description>
+    <jobString>Cooking colossal fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>4.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineColossalNonVeg>1</MealFineColossalNonVeg>
+    </products>
+	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
+  </RecipeDef>  
+  
   
   <!--Lavish Meal Derivatives-->
   <RecipeDef Name="RR_LavishMealRecipeBase" ParentName="CookMealLavishBase" Abstract="True">
@@ -711,4 +807,78 @@
     </products>
   </RecipeDef>  
  
+ 
+ 
+  <RecipeDef ParentName="RR_LavishMealRecipeBase">
+    <defName>CookMealLavishColossal</defName>
+    <label>cook colossal lavish meal</label>
+    <description>Cook a colossal, very complex meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking colossal lavish meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishColossal>1</MealLavishColossal>
+    </products>
+	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
+  </RecipeDef>
+
+  <RecipeDef ParentName="RR_LavishMealRecipeBase">
+    <defName>CookMealLavishColossalVeg</defName>
+    <label>cook colossal lavish meal</label>
+    <description>Cook a colossal, very complex meal from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking colossal lavish meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishColossalNonMeat>1</MealLavishColossalNonMeat>
+    </products>
+	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
+  </RecipeDef>
+
+  <RecipeDef ParentName="RR_LavishMealRecipeBase">
+    <defName>CookMealLavishColossalMeat</defName>
+    <label>cook colossal lavish meal</label>
+    <description>Cook a colossal, very complex meal from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <jobString>Cooking colossal lavish meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealLavishColossalMeat>1</MealLavishColossalMeat>
+    </products>
+	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+  </RecipeDef>   
  </Defs>
