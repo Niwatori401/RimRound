@@ -14,6 +14,7 @@
 		</recipeUsers>		
 		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>
 	</RecipeDef>
 
 <!--Simple meals-->
@@ -108,7 +109,8 @@
 		<recipeUsers>
 		  <li>ElectricStove</li>
 		  <li>FueledStove</li>
-		</recipeUsers>	  
+		</recipeUsers>
+		<researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>		
   </RecipeDef>
   
   
@@ -419,7 +421,8 @@
 		<recipeUsers>
 		  <li>ElectricStove</li>
 		  <li>FueledStove</li>
-		</recipeUsers>	  
+		</recipeUsers>	
+		<researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>				
   </RecipeDef>
   
   
