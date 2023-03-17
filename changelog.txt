@@ -1,5 +1,41 @@
 ==================================================
-Commit Hash: 924824e84ad71a4dd0a6c4bf9d3ef77f9ba14c32
+Commit Hash: 08c313fc4820830efc90cc9b05b8d168ae6ce852
+Author: Niwatori401
+Date: Fri Mar 17 23:28:06 2023
+
+Fix error where unsupported races would blow up the log
+
+==================================================
+Commit Hash: c0aa8aa30f086c1479ba52417e34a869e564a5eb
+Author: Niwatori401
+Date: Fri Mar 17 09:22:57 2023
+
+Add expanded weapon plugin, courtesy Steven_
+Add gluttonium
+Add gluttonium ore
+Add gluttonium meals
+Add Ultratech cooking station
+Add gluttonium enriched foods
+Add alpha/omegaball items
+
+==================================================
+Commit Hash: 68e4355e5a6bd0a4278bc5eda6a37e3050a5a749
+Author: Niwatori401
+Date: Tue Mar 14 11:58:08 2023
+
+Add colossal large meals
+Update description tags for existing large meals
+
+==================================================
+Commit Hash: b33046d0466e1bb7da0bfc508ed3ee7d5e8aa8e3
+Author: Niwatori401
+Date: Tue Mar 14 11:25:12 2023
+
+Lock meals beyond normal behind relevant research
+Reenable WIP research defs
+
+==================================================
+Commit Hash: c0ddb56a73ebcee75306118123d7639218732c2e
 Author: Niwatori401
 Date: Tue Mar 14 10:20:24 2023
 
