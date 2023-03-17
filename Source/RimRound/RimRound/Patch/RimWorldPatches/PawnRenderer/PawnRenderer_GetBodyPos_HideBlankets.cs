@@ -30,12 +30,11 @@ namespace RimRound.Patch
             if (pawn is null || !(pawn?.RaceProps?.Humanlike is bool b && b))
                 return;
 
-            HideCovers_ThingComp comp = pawnIdToComp.TryGetValue(pawn.ThingID);
+            HideCovers_ThingComp comp; 
 
-            if (comp is null)
+            if (!pawnIdToComp.TryGetValue(pawn.ThingID, out comp))
             {
                 comp = pawn.TryGetComp<HideCovers_ThingComp>();
-                
                 pawnIdToComp.Add(pawn.ThingID, comp);
             }
 

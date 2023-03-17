@@ -16,9 +16,10 @@ namespace RimRound.Utilities
         {
             PawnBodyType_ThingComp pbtComp;
 
-            if (thingIdToPawnCompCache.TryGetValue(pawn.ThingID) is PawnBodyType_ThingComp c)
+            if (thingIdToPawnCompCache.ContainsKey(pawn.ThingID))
             {
-                pbtComp = c;
+
+                pbtComp = thingIdToPawnCompCache[pawn.ThingID];
             }
             else 
             {

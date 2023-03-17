@@ -26,10 +26,8 @@ namespace RimRound.Patch
             PawnBodyType_ThingComp comp = __instance.InnerPawn.TryGetComp<PawnBodyType_ThingComp>();
 
             if (comp is null)
-            {
-                Log.Error($"Comp was null in {nameof(Corpse_SpawnSetup_UpdateBodyType)} ");
                 return;
-            }
+
 
             BodyTypeUtility.AssignPersonalCategoricalExemptions(comp);
             BodyTypeUtility.UpdatePawnSprite(__instance.InnerPawn, comp.PersonallyExempt, comp.CategoricallyExempt, false, true);

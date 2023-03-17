@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 1316431bdc7f24178dc030aeb80827ce856b204f
+Commit Hash: 08c313fc4820830efc90cc9b05b8d168ae6ce852
+Author: Niwatori401
+Date: Fri Mar 17 23:28:06 2023
+
+Fix error where unsupported races would blow up the log
+
+==================================================
+Commit Hash: c0aa8aa30f086c1479ba52417e34a869e564a5eb
 Author: Niwatori401
 Date: Fri Mar 17 09:22:57 2023
 
