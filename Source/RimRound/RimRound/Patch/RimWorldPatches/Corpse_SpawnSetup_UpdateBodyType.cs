@@ -27,7 +27,7 @@ namespace RimRound.Patch
 
             if (comp is null)
             {
-                Log.Error($"Comp was null in {nameof(Corpse_SpawnSetup_UpdateBodyType.Postfix)} ");
+                Log.Error($"Comp was null in {nameof(Corpse_SpawnSetup_UpdateBodyType)} ");
                 return;
             }
 

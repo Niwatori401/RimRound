@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <ThingDef Abstract="True" Name="RR_GluttoniumProductsBase" ParentName="OrganicProductBase">
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingCategories>
+            <li>Foods</li>
+        </thingCategories>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <statBases>
+            <FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <ingestible>
+			<preferability>NeverForNutrition</preferability>
+            <foodType>OmnivoreHuman</foodType>        
+            <!--tasteThought>AteKibble</tasteThought-->
+            <optimalityOffsetHumanlikes>-10</optimalityOffsetHumanlikes>
+            <optimalityOffsetFeedingAnimals>-100</optimalityOffsetFeedingAnimals>  
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>RawVegetable_Eat</ingestSound>                      
+        </ingestible>
+        <allowedArchonexusCount>10</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_CrammedCroissant</defName>
+        <label>crammed croissant</label>
+        <description>An absolutely massive croissant glowing with gluttonium.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/CrammedCroissant</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>500</MarketValue>
+            <Mass>1.6</Mass>
+            <Nutrition>20</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>.05</fullnessToNutritionRatio> <!--1/20-->
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_MechaniteMuffin</defName>
+        <label>mechanite muffin</label>
+        <description>A huge, delicious muffin with a mechanite-infused wrapper that shines brightly.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/MechaniteMuffin</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>300</MarketValue>
+            <Mass>0.7</Mass>
+            <Nutrition>12</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.083333</fullnessToNutritionRatio> <!--1/12-->
+            </li>
+        </comps>
+    </ThingDef>    
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_PackedPizza</defName>
+        <label>packed pizza</label>
+        <description>A colossal slice of greasy pizza infused with rich gluttonium. And pineapple?!</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/PackedPizza</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+            <Mass>2.0</Mass>
+            <Nutrition>40</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.025</fullnessToNutritionRatio> <!--1/40-->
+            </li>
+        </comps>
+    </ThingDef>     
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_LaBombe</defName>
+        <label>la bombe</label>
+        <description>This eclair is over one million calories, twenty-five pounds of butter per square inch, gathered with chocolate so dark light cannot escape its surface.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/LaBombe</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>2000</MarketValue>
+            <Mass>5.5</Mass>
+            <Nutrition>60</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.016666</fullnessToNutritionRatio> <!--1/60-->
+            </li>
+        </comps>
+    </ThingDef>    
+
+    <!--Gluttonium meals--> 
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_GluttoniumMeal</defName>
+        <label>gluttonium meal</label>
+        <description>Pure gluttonium shaped into a mound of meal-like substance. Although deceptively edible-looking, it is strongly advised to avoid this meal due to its immensely fattening properties.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>2000</MarketValue>
+            <Mass>60</Mass>
+            <Nutrition>40</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.025</fullnessToNutritionRatio> <!--1/40-->
+            </li>
+        </comps>
+    </ThingDef>   
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_GluttoniumMealLarge</defName>
+        <label>large gluttonium meal</label>
+        <description>Pure gluttonium shaped into a mound of  slightly larger meal-like substance. It's even more fattening than its regular counterpart.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+            <Mass>80</Mass>
+            <Nutrition>60</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.016666</fullnessToNutritionRatio> <!--1/60-->
+            </li>
+        </comps>
+    </ThingDef> 
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_GluttoniumMealHuge</defName>
+        <label>huge gluttonium meal</label>
+        <description>Pure gluttonium shaped into a very large mound of glowing mush. It is so intensely fattening that even a lithe person would find themselves on the brink of immobility after just one of these meals.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>4000</MarketValue>
+            <Mass>100</Mass>
+            <Nutrition>80</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.0125</fullnessToNutritionRatio> <!--1/80-->
+            </li>
+        </comps>
+    </ThingDef> 
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_GluttoniumMealEnormous</defName>
+        <label>enormous gluttonium meal</label>
+        <description>Pure gluttonium shaped into...something quite large, and of dubious edibility. If an insane individual were to ingest it, they would quickly find themselves pinned to the ground by their own fat.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>150</Mass>
+            <Nutrition>120</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.008333</fullnessToNutritionRatio> <!--1/120-->
+            </li>
+        </comps>
+    </ThingDef> 
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_GluttoniumMealMassive</defName>
+        <label>massive gluttonium meal</label>
+        <description>A mound of gluttonium haphazardly shaped into a barely-edible pile of delicious mush. It is almost the size of an entire person. Better take it outside if you're going to eat it.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>10000</MarketValue>
+            <Mass>200</Mass>
+            <Nutrition>180</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.005555</fullnessToNutritionRatio> <!--1/180-->
+            </li>
+        </comps>
+    </ThingDef> 
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_GluttoniumMealColossal</defName>
+        <label>colossal gluttonium meal</label>
+        <description>Somebody just put gluttonium into a pile as high as they could reach and called it a meal. Any individual that "accidentally" ingests it will quickly find themselves several orders of magnitude fatter than before.</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>20000</MarketValue>
+            <Mass>300</Mass>
+            <Nutrition>300</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.0033333</fullnessToNutritionRatio> <!--1/300-->
+            </li>
+        </comps>
+    </ThingDef>     
+
+    <!--Orbs-->  
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_AlphaBall</defName>
+        <label>alpha ball</label>
+        <description>Made from pure gluttonium and compressed to a tiny state. Although laughably small, this bon-bon-like ball is the proof in the pudding. Prank your friends by slipping it into their pie and watch as they swell with fat and break the chair they're sitting on!</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/AlphaBall</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>20000</MarketValue>
+            <Mass>50</Mass>
+            <Nutrition>200</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.005</fullnessToNutritionRatio> <!--1/200-->
+            </li>
+        </comps>
+    </ThingDef>  
+
+    <ThingDef ParentName="RR_GluttoniumProductsBase">
+        <defName>RR_OmegaBall</defName>
+        <label>omega ball</label>
+        <description>Made from pure gluttonium and compressed to an even tinier state than its predecessor. Although it is barely the size of a marble, it is extremely dense in calories. Prank your friends by baking it into a cake! Laugh nervously as they realise what you've done! Run for your life as a tsunami of massively expanding flab smothers everything in its wake!</description>
+        <graphicData>
+            <texPath>Things/Item/GluttoniumFood/OmegaBall</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>100000</MarketValue>
+            <Mass>80</Mass>
+            <Nutrition>500</Nutrition>
+        </statBases>
+        <ingestible/>
+        <comps>
+            <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.002</fullnessToNutritionRatio> <!--1/500-->
+            </li>
+        </comps>
+    </ThingDef>                                 
+</Defs>
+

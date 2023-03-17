@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="RockBase">
+    <defName>RR_GluttoniumOre</defName>
+    <label>gluttonium ore</label>
+    <description>A compound alloy of unknown origin, packed with energy that replicates on contact with gastric juices. Research suggests it was intitially used as a tool to prevent prisoners from escaping, as, while not safe to ingest unless treated, can be cooked into extremely fattening foods and used as a tough, flexible material.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/Gluttonium_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RR_Gluttonium</mineableThing>
+      <mineableYield>2</mineableYield>
+      <mineableScatterCommonality>1.00</mineableScatterCommonality> <!-- as often as steel, with smaller blotches -->
+      <mineableScatterLumpSizeRange>3~6</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>RR_Gluttonium</defName>
+    <label>gluttonium</label>
+    <description>A compound alloy of unknown origin, packed with energy that replicates on contact with gastric juices. Research suggests it was intitially used as a tool to prevent prisoners from escaping, as, while not safe to ingest unless treated, can be cooked into extremely fattening foods and used as a tough, flexible material.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gluttonium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>9</MarketValue>
+      <Mass>0.25</Mass>
+      <StuffPower_Armor_Sharp>1.14</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.65</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <deepCommonality>0.5</deepCommonality>
+    <deepCountPerPortion>15</deepCountPerPortion>
+    <deepLumpSizeRange>1~4</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.05</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(160,178,181)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>2.8</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2.2</WorkToMake>
+        <WorkToBuild>2.2</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
+</Defs>

@@ -1,5 +1,18 @@
 ==================================================
-Commit Hash: e639c95254cfa06f19917359d0b62c20c3260971
+Commit Hash: 1316431bdc7f24178dc030aeb80827ce856b204f
+Author: Niwatori401
+Date: Fri Mar 17 09:22:57 2023
+
+Add expanded weapon plugin, courtesy Steven_
+Add gluttonium
+Add gluttonium ore
+Add gluttonium meals
+Add Ultratech cooking station
+Add gluttonium enriched foods
+Add alpha/omegaball items
+
+==================================================
+Commit Hash: 68e4355e5a6bd0a4278bc5eda6a37e3050a5a749
 Author: Niwatori401
 Date: Tue Mar 14 11:58:08 2023
 

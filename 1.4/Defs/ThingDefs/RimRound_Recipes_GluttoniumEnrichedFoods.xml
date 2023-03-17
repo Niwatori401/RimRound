@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef Name="RR_GluttoniumEnrichedBase" ParentName="CookMealBase" Abstract="True">
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			<li>RR_UltraTechCookingStation</li>
+		</recipeUsers>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RR_Research_GlutoniumEnrichedFoods</researchPrerequisite>
+	</RecipeDef>
+    
+	<!--Gluttonium Enriched Foods-->
+	<RecipeDef ParentName="RR_GluttoniumEnrichedBase">
+		<defName>RR_CookCrammedCroissant</defName>
+		<label>cook a crammed croissant</label>
+		<description>Cook a massive croissant, glowing with gluttonium.</description>
+		<jobString>Cooking crammed croissant.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_CrammedCroissant>1</RR_CrammedCroissant>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="RR_GluttoniumEnrichedBase">
+		<defName>RR_CookMechaniteMuffin</defName>
+		<label>cook a mechanite muffin</label>
+		<description>Cook a huge mechanite infused muffin</description>
+		<jobString>Cooking mechanite muffin.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>1.2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_MechaniteMuffin>1</RR_MechaniteMuffin>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="RR_GluttoniumEnrichedBase">
+		<defName>RR_CookPackedPizza</defName>
+		<label>cook a packed pizza</label>
+		<description>Cook a massive slice of gluttonium infused pizza</description>
+		<jobString>Cooking packed pizza.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_PackedPizza>1</RR_PackedPizza>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="RR_GluttoniumEnrichedBase">
+		<defName>RR_CookLaBombe</defName>
+		<label>cook la bombe</label>
+		<description>Cook the culinary masterpiece that is 'la bombe'</description>
+		<jobString>Cooking la bombe.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>9</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_LaBombe>1</RR_LaBombe>
+		</products>
+	</RecipeDef>
+
+	<!--Gluttonium Meals-->
+	<RecipeDef Name="GluttoniumMealBase" ParentName="RR_GluttoniumEnrichedBase" Abstract="True">
+		<researchPrerequisite>RR_Research_GlutoniumMeals</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookGluttoniumMeal</defName>
+		<label>cook gluttonium meal</label>
+		<description>Cook a meal solely from gluttonium.</description>
+		<jobString>Cooking gluttonium meal.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_GluttoniumMeal>1</RR_GluttoniumMeal>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookLargeGluttoniumMeal</defName>
+		<label>cook large gluttonium meal</label>
+		<description>Cook a large meal solely from gluttonium.</description>
+		<jobString>Cooking large gluttonium meal.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_GluttoniumMealLarge>1</RR_GluttoniumMealLarge>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookHugeGluttoniumMeal</defName>
+		<label>cook huge gluttonium meal</label>
+		<description>Cook a huge meal solely from gluttonium.</description>
+		<jobString>Cooking huge gluttonium meal.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>18</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_GluttoniumMealHuge>1</RR_GluttoniumMealHuge>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookEnormousGluttoniumMeal</defName>
+		<label>cook enormous gluttonium meal</label>
+		<description>Cook an enormous meal solely from gluttonium.</description>
+		<jobString>Cooking enormous gluttonium meal.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_GluttoniumMealEnormous>1</RR_GluttoniumMealEnormous>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookMassiveGluttoniumMeal</defName>
+		<label>cook massive gluttonium meal</label>
+		<description>Cook a massive meal solely from gluttonium.</description>
+		<jobString>Cooking massive gluttonium meal.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>35</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_GluttoniumMealMassive>1</RR_GluttoniumMealMassive>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookColossalGluttoniumMeal</defName>
+		<label>cook colossal gluttonium meal</label>
+		<description>Cook a colossal meal solely from gluttonium.</description>
+		<jobString>Cooking colossal gluttonium meal.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>70</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_GluttoniumMealColossal>1</RR_GluttoniumMealColossal>
+		</products>
+	</RecipeDef>
+
+	<!--Orbs-->
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookAlphaBall</defName>
+		<label>create the 'alpha ball'</label>
+		<description>Use the latent power of gluttonium to create the alpha ball.</description>
+		<jobString>Creating an alpha ball.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_AlphaBall>1</RR_AlphaBall>
+		</products>
+		<researchPrerequisite>RR_Research_ProjectAlpha</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="GluttoniumMealBase">
+		<defName>RR_CookOmegaBall</defName>
+		<label>create the 'omega ball'</label>
+		<description>Manipulate and utilize the latent power of gluttonium to create the omega ball.</description>
+		<jobString>Creating an omega ball.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<products>
+			<RR_OmegaBall>1</RR_OmegaBall>
+		</products>
+		<researchPrerequisite>RR_Research_ProjectOmega</researchPrerequisite>
+	</RecipeDef>
+</Defs>
