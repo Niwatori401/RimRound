@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 08c313fc4820830efc90cc9b05b8d168ae6ce852
+Commit Hash: a66b207022aa5db1997f99a0f35c42dcc2c47e85
+Author: Niwatori401
+Date: Sat Mar 18 00:00:43 2023
+
+Fix RR bodies being bugged for genes that used body graphics
+
+==================================================
+Commit Hash: 9d16367199dd48a9e93e959c07da214ff659df7e
 Author: Niwatori401
 Date: Fri Mar 17 23:28:06 2023
 
