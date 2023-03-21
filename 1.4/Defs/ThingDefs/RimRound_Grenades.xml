@@ -27,9 +27,8 @@
 			<Steel>25</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
-		<weaponTags>
-			<li>GrenadeDestructive</li>
-			<li>EmpireGrenadeDestructive</li>
+		<weaponTags Inherit="False">
+			<li>GrenadeFattening</li>
 		</weaponTags>
 		<thingCategories>
 			<li>Grenades</li>

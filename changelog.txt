@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: a66b207022aa5db1997f99a0f35c42dcc2c47e85
+Commit Hash: a207bb52cc1fa2fb955f820880e73243f93edef3
+Author: Niwatori401
+Date: Tue Mar 21 00:38:46 2023
+
+Update enbiggener weapon tags
+
+==================================================
+Commit Hash: 8adce7ac78f5dbe9714928e550d157fe93b3ef8f
 Author: Niwatori401
 Date: Sat Mar 18 00:00:43 2023
 

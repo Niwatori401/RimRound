@@ -75,8 +75,8 @@
       <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
     </statBases>
 	<generateCommonality>0</generateCommonality>
-    <weaponTags>
-      <li>SimpleGun</li>
+    <weaponTags Inherit="False">
+      <li>FatteningGun</li>
     </weaponTags>
     <weaponClasses>
       <li>RangedLight</li>
@@ -147,8 +147,8 @@
       <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
     </statBases>
 	<generateCommonality>0</generateCommonality>
-    <weaponTags>
-      <li>SimpleGun</li>
+    <weaponTags Inherit="False">
+      <li>FatteningGun</li>
     </weaponTags>
     <weaponClasses>
       <li>RangedLight</li>
