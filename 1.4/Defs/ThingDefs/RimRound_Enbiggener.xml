@@ -74,7 +74,7 @@
       <AccuracyLong>0.45</AccuracyLong>
       <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
     </statBases>
-	<generateCommonality>0</generateCommonality>
+	<generateCommonality>1</generateCommonality>
     <weaponTags Inherit="False">
       <li>FatteningGun</li>
     </weaponTags>
