@@ -9,7 +9,7 @@
 		<recipeUsers>
 			<li>RR_UltraTechCookingStation</li>
 		</recipeUsers>
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredientValueGetterClass>RimRound.AI.IngredientValueGetter_Gluttonium</ingredientValueGetterClass>
 		<workSkill>Cooking</workSkill>
 		<researchPrerequisite>RR_Research_GlutoniumEnrichedFoods</researchPrerequisite>
 	</RecipeDef>
@@ -108,6 +108,7 @@
 	<RecipeDef ParentName="RR_GluttoniumEnrichedBase">
 		<defName>RR_CookLaBombe</defName>
 		<label>cook la bombe</label>
+		<workAmount>1800</workAmount>
 		<description>Cook the culinary masterpiece that is 'la bombe'</description>
 		<jobString>Cooking la bombe.</jobString>
 		<ingredients>
@@ -143,6 +144,7 @@
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookGluttoniumMeal</defName>
 		<label>cook gluttonium meal</label>
+		<workAmount>1000</workAmount>
 		<description>Cook a meal solely from gluttonium.</description>
 		<jobString>Cooking gluttonium meal.</jobString>
 		<ingredients>
@@ -163,6 +165,7 @@
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookLargeGluttoniumMeal</defName>
 		<label>cook large gluttonium meal</label>
+		<workAmount>1500</workAmount>
 		<description>Cook a large meal solely from gluttonium.</description>
 		<jobString>Cooking large gluttonium meal.</jobString>
 		<ingredients>
@@ -183,6 +186,7 @@
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookHugeGluttoniumMeal</defName>
 		<label>cook huge gluttonium meal</label>
+		<workAmount>2000</workAmount>
 		<description>Cook a huge meal solely from gluttonium.</description>
 		<jobString>Cooking huge gluttonium meal.</jobString>
 		<ingredients>
@@ -203,6 +207,7 @@
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookEnormousGluttoniumMeal</defName>
 		<label>cook enormous gluttonium meal</label>
+		<workAmount>2500</workAmount>
 		<description>Cook an enormous meal solely from gluttonium.</description>
 		<jobString>Cooking enormous gluttonium meal.</jobString>
 		<ingredients>
@@ -223,6 +228,7 @@
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookMassiveGluttoniumMeal</defName>
 		<label>cook massive gluttonium meal</label>
+		<workAmount>3000</workAmount>
 		<description>Cook a massive meal solely from gluttonium.</description>
 		<jobString>Cooking massive gluttonium meal.</jobString>
 		<ingredients>
@@ -243,6 +249,7 @@
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookColossalGluttoniumMeal</defName>
 		<label>cook colossal gluttonium meal</label>
+		<workAmount>4000</workAmount>
 		<description>Cook a colossal meal solely from gluttonium.</description>
 		<jobString>Cooking colossal gluttonium meal.</jobString>
 		<ingredients>
@@ -263,7 +270,8 @@
 	<!--Orbs-->
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookAlphaBall</defName>
-		<label>create the 'alpha ball'</label>
+		<label>create the 'alpha ball'</label>\
+		<workAmount>5000</workAmount>
 		<description>Use the latent power of gluttonium to create the alpha ball.</description>
 		<jobString>Creating an alpha ball.</jobString>
 		<ingredients>
@@ -285,6 +293,7 @@
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookOmegaBall</defName>
 		<label>create the 'omega ball'</label>
+		<workAmount>10000</workAmount>
 		<description>Manipulate and utilize the latent power of gluttonium to create the omega ball.</description>
 		<jobString>Creating an omega ball.</jobString>
 		<ingredients>

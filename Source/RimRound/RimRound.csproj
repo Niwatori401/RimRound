@@ -126,6 +126,7 @@
     <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
     <Compile Include="FeedingTube\AI\AdvancedAutoFeeder\JobDriver_ListenToRadio.cs" />
     <Compile Include="FeedingTube\AI\AdvancedAutoFeeder\JoyGiver_ListenToRadio.cs" />
+    <Compile Include="RimRound\AI\IngredientValueGetter_Gluttonium.cs" />
     <Compile Include="RimRound\AI\PlayWithBlob\JobDriver_PlayWithBlob.cs" />
     <Compile Include="RimRound\AI\PlayWithBlob\JoyGiver_PlayWithBlob.cs" />
     <Compile Include="RimRound\AI\StatParts\StatPart_ArmorRating_Blunt.cs" />

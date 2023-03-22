@@ -4,7 +4,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>RR_UltraTechCookingStation</defName>
     <label>ultratech cooking station</label>
-    <description>n extremely high-tech culinary station capable of cooking meals of excessively high caloric density.</description>
+    <description>An extremely high-tech culinary station capable of cooking meals of excessively high caloric density.</description>
     <thingClass>Building_WorkTable_HeatPush</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/UltraTechCookingStation</texPath>
