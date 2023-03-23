@@ -126,6 +126,7 @@
     <Compile Include="FeedingTube\Utilities\FeedingTubeUtility.cs" />
     <Compile Include="FeedingTube\AI\AdvancedAutoFeeder\JobDriver_ListenToRadio.cs" />
     <Compile Include="FeedingTube\AI\AdvancedAutoFeeder\JoyGiver_ListenToRadio.cs" />
+    <Compile Include="RimRound\AI\HistoryAutoRecorderWorker_WeightPawns.cs" />
     <Compile Include="RimRound\AI\IngredientValueGetter_Gluttonium.cs" />
     <Compile Include="RimRound\AI\PlayWithBlob\JobDriver_PlayWithBlob.cs" />
     <Compile Include="RimRound\AI\PlayWithBlob\JoyGiver_PlayWithBlob.cs" />
@@ -183,6 +184,9 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\Corpse_SpawnSetup_UpdateBodyType.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\FurDef_GetFurBodyGraphicPath_ReturnTransparentForRR.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GameDataSaveLoader_LoadGame_WipeCaches.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup_AddOrRemoveHistoryRecorders_AddAGraphForEachPawn.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup_DrawGraph_OnlyShowSelectedPawns.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\Page-ConfigureStartingPawns_PostOpen_WarnForCertainMods.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_DrawBodyApparel_AlterShellClothingIfNoRRSprite.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_RenderAsPack_DontRenderAsPackForCustomBodies.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />

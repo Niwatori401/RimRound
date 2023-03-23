@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: af643a64b4eaf342d45f3a64274729fdb0a647f7
+Commit Hash: 1e9d8624457ee76c25dba10fa13e23cd6f964809
+Author: Niwatori401
+Date: Thu Mar 23 07:37:27 2023
+
+Now warn users of Character Editor / Prepare Carefully about incompatibilities
+
+==================================================
+Commit Hash: 2adbe24a47bbdd6f7e00e17fd9b1d87577933503
 Author: Niwatori401
 Date: Wed Mar 22 06:55:59 2023
 
