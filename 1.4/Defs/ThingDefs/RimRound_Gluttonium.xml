@@ -48,7 +48,7 @@
       <li>Manufactured</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
-    <deepCountPerPortion>15</deepCountPerPortion>
+    <deepCountPerPortion>8</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>true</smeltable>

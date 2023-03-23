@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 1e9d8624457ee76c25dba10fa13e23cd6f964809
+Commit Hash: 3bcaf573d2ca2c3fbff3ca3d091be71bbe1944ea
+Author: Niwatori401
+Date: Thu Mar 23 20:23:22 2023
+
+Lower count in deep drill for gluttonium
+Fix broken XML in def
+
+==================================================
+Commit Hash: db63a121760a9dcfdbfd612b515750b009b7dcab
 Author: Niwatori401
 Date: Thu Mar 23 07:37:27 2023
 
