@@ -1,5 +1,19 @@
 ==================================================
-Commit Hash: 3bcaf573d2ca2c3fbff3ca3d091be71bbe1944ea
+Commit Hash: 4de1e6c748b718d11f86a23dbd69889ebcc39160
+Author: Niwatori401
+Date: Mon Mar 27 08:07:18 2023
+
+Merge historyweight feature branch
+
+==================================================
+Commit Hash: 24341526338843bf690c99e8464c21af59a94cfd
+Author: Niwatori401
+Date: Mon Mar 27 08:01:35 2023
+
+Add weight tracking in history tab for pawns
+
+==================================================
+Commit Hash: 4e68c0e3012ed6774f10c298e58d0f92811038d4
 Author: Niwatori401
 Date: Thu Mar 23 20:23:22 2023
 
