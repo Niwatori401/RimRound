@@ -1,0 +1,15 @@
+<Defs>
+  <HistoryAutoRecorderGroupDef>
+    <defName>RR_PawnWeightHistory</defName>
+    <label>weight</label>
+  </HistoryAutoRecorderGroupDef>
+  
+  <HistoryAutoRecorderDef>
+    <defName>RR_Weight_Pawn</defName>
+    <label>weight (pawns)</label>
+    <graphColor>(0.3, 0.6, 0.48, 1)</graphColor>
+    <recordTicksFrequency>3000</recordTicksFrequency>
+    <workerClass>RimRound.AI.HistoryAutoRecorderWorker_PawnWeight</workerClass>
+    <valueFormat>{0}</valueFormat>
+  </HistoryAutoRecorderDef>
+</Defs>

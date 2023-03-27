@@ -270,7 +270,7 @@
 	<!--Orbs-->
 	<RecipeDef ParentName="GluttoniumMealBase">
 		<defName>RR_CookAlphaBall</defName>
-		<label>create the 'alpha ball'</label>\
+		<label>create the 'alpha ball'</label>
 		<workAmount>5000</workAmount>
 		<description>Use the latent power of gluttonium to create the alpha ball.</description>
 		<jobString>Creating an alpha ball.</jobString>
