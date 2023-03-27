@@ -14,6 +14,7 @@ using UnityEngine;
 using System.Reflection;
 using Resources = RimRound.Utilities.Resources;
 using Verse.Sound;
+using RimRound.AI;
 
 namespace RimRound.Comps
 {
@@ -157,6 +158,8 @@ namespace RimRound.Comps
                     SetRangesByValue(cachedSliderVal1, cachedSliderVal2);
                     _loadedDietBars=true;
                 }
+
+                HistoryAutoRecorderGroupWeight.Instance().AddHistoryRecorders(this.parent.AsPawn());
             }
         }
 

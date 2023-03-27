@@ -175,6 +175,15 @@
     <Compile Include="RimRound\Hediffs\Hediff_FullnessImplant.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_SuddenWeightGain.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_SuddenWeightGainImmunity.cs" />
+    <Compile Include="RimRound\Defs\HistoryAutoRecorderDefOf.cs" />
+    <Compile Include="RimRound\Defs\HistoryAutoRecorderGroupDefOf.cs" />
+    <Compile Include="RimRound\AI\HistoryAutoRecorderGroupWeight.cs" />
+    <Compile Include="RimRound\AI\HistoryAutoRecorderWeight.cs" />
+    <Compile Include="RimRound\AI\HistoryAutoRecorderWorker_PawnWeight.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_DrawGraph_CallChildMethod.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_ExposeData_CallChildMethods.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_GetMaxDay_CallChildMethod.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_Tick_CallChildMethod.cs" />
     <Compile Include="RimRound\Patch\CameraPlusPatches\CameraPlus_Tools_ShouldShowDot_DontShowDotForGelatinous.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\BackstoryDef_ResolveReferences_ChangeRandomBodyAssignmentForNullBackstoriesToThin.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_BaseHeadOffsetAtHelper_AddExtraBodySpecificHeadOffset.cs" />
