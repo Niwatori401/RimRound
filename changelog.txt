@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 90ebf7201156b3ae0ebb037f21a9a927d007af35
+Commit Hash: 1df10802339b09c996c24b7198ba2487e795a731
+Author: Niwatori401
+Date: Tue Mar 28 02:49:34 2023
+
+Downed pawns that are capable of talking can now be interacted with socially
+
+==================================================
+Commit Hash: 4de1e6c748b718d11f86a23dbd69889ebcc39160
 Author: Niwatori401
 Date: Mon Mar 27 08:07:18 2023
 
