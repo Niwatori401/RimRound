@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 90ebf7201156b3ae0ebb037f21a9a927d007af35
+Commit Hash: 4a36284cbb5f303141b18dd1b7515604b5be58c9
+Author: Niwatori401
+Date: Thu Apr 6 12:47:25 2023
+
+Mechanitors that are downed can still draft their controlled mechs if in bed and capable of consciousness
+
+==================================================
+Commit Hash: 92eeb06b3eef7502f8919bb3d6e4001b1677be46
 Author: Niwatori401
 Date: Mon Mar 27 08:07:18 2023
 
