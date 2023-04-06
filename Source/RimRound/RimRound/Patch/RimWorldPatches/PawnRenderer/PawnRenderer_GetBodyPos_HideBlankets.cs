@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Verse;
 using RimWorld;
 using System.Reflection;
+using RimRound.Utilities;
 
 namespace RimRound.Patch
 {
@@ -44,12 +45,7 @@ namespace RimRound.Patch
 
             if (pawn.CurrentBed() is Building_Bed bed) 
             {
-                if (bed.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_z.defName ||
-                    bed.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_I.defName ||
-                    bed.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_II.defName ||
-                    bed.def.defName == Defs.ThingDefOf.BlobBed_FoldsOfHeaven_III.defName ||
-                    bed.def.defName == ThingDefOf.SleepingSpot.defName ||
-                    bed.def.defName == Defs.ThingDefOf.DoubleSleepingSpot.defName)
+                if (bed.IsBlobBed())
                 {
                     __1 = true;
                     return;

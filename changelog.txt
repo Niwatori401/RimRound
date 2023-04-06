@@ -1,12 +1,13 @@
 ==================================================
-Commit Hash: 4a36284cbb5f303141b18dd1b7515604b5be58c9
+Commit Hash: d4b5d23f734e5bf296c78aec3866811033bb2849
 Author: Niwatori401
-Date: Thu Apr 6 12:47:25 2023
+Date: Thu Apr 6 03:55:59 2023
 
-Mechanitors that are downed can still draft their controlled mechs if in bed and capable of consciousness
+Colonists in blob beds no longer will get thoughts for 'slept on ground' or 'slept outside'
+Refactor blob bed checking to new utility class
 
 ==================================================
-Commit Hash: 92eeb06b3eef7502f8919bb3d6e4001b1677be46
+Commit Hash: 4de1e6c748b718d11f86a23dbd69889ebcc39160
 Author: Niwatori401
 Date: Mon Mar 27 08:07:18 2023
 

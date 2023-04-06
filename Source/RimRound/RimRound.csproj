@@ -225,11 +225,13 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\SectionLayer-Gas_ColorAt_AddRRGasSupport.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\SectionLayer-Gas_Regenerate_AddSupportForRRGas.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\StatWorker_FinalizeValue_AlterMaxValueForPerks.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\Toils-LayDown_ApplyBedThoughts_AlterThoughtsForBlobBeds.cs" />
     <Compile Include="RimRound\Patch\StatueOfColonist\StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies.cs" />
     <Compile Include="RimRound\UI\CustomBodySelectDropdown.cs" />
     <Compile Include="RimRound\UI\Gizmos\CustomBodyTypeGizmo.cs" />
     <Compile Include="RimRound\UI\Gizmos\MakeGeneratorGizmo.cs" />
     <Compile Include="RimRound\UI\Gizmos\MakeRecreationSpotGizmo.cs" />
+    <Compile Include="RimRound\Utilities\BlobBedUtility.cs" />
     <Compile Include="RimRound\Utilities\CaravanPatchUtility.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Caravan\CaravanMaker_MakeCaravan_ChangeDietMode.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Caravan\Caravan_RemoveAllPawns_ChangeDietMode.cs" />
