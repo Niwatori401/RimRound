@@ -21,7 +21,7 @@ namespace RimRound.Patch
 
             bool foundHook = false;
 
-            MethodInfo getDownedMI = typeof(RelationsUtility).GetProperty(nameof(Pawn.Downed)).GetGetMethod(true);
+            MethodInfo getDownedMI = typeof(Pawn).GetProperty(nameof(Pawn.Downed)).GetGetMethod(true);
             MethodInfo replacementCheckMI =
                 typeof(RelationsUtility_RomanceEligible_AllowDownedPawnsToBeRomanced)
                 .GetMethod(nameof(RelationsUtility_RomanceEligible_AllowDownedPawnsToBeRomanced.ReplacementMethod), BindingFlags.Static | BindingFlags.NonPublic);

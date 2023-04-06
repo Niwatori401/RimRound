@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 03105ff84f6f702891b62e77bfe0f5700eff6379
+Commit Hash: 862b4ae5f990721490dddca206426a1a9f56fe38
+Author: Niwatori401
+Date: Thu Apr 6 13:15:05 2023
+
+Fix error in romance transpiler
+
+==================================================
+Commit Hash: ed2013d1a1477a98a50d0e6e19be8c64966b80f0
 Author: Niwatori401
 Date: Thu Apr 6 03:24:24 2023
 
