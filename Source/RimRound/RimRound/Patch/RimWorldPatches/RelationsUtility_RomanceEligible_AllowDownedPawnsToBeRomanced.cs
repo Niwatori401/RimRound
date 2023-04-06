@@ -38,7 +38,10 @@ namespace RimRound.Patch
                     continue;
 
                 foundHook = true;
+                
                 codeInstructions[i] = new CodeInstruction(OpCodes.Call, replacementCheckMI);
+                codeInstructions.Insert(i, new CodeInstruction(OpCodes.Ldarg_1));
+                break;
             }       
 
             if (!foundHook)
@@ -48,9 +51,12 @@ namespace RimRound.Patch
         }
 
         //Return true if should not be elligible
-        private static bool ReplacementMethod(Pawn pawn)
+        private static bool ReplacementMethod(Pawn pawn, bool isInitiator)
         {
-            return pawn.Downed && !pawn.InBed();
+            if (isInitiator)
+                return pawn.Downed;
+            else
+                return pawn.Downed && !pawn.InBed();
         }
     }
 }

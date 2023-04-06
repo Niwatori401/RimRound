@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 1df10802339b09c996c24b7198ba2487e795a731
+Commit Hash: 03105ff84f6f702891b62e77bfe0f5700eff6379
+Author: Niwatori401
+Date: Thu Apr 6 03:24:24 2023
+
+Pawns can now be romanced if they are downed and in bed
+
+==================================================
+Commit Hash: 5f362a8832c6f9eb5683d919934108aa7c8b2846
 Author: Niwatori401
 Date: Tue Mar 28 02:49:34 2023
 
