@@ -1,10 +1,66 @@
 ==================================================
-Commit Hash: d4b5d23f734e5bf296c78aec3866811033bb2849
+Commit Hash: 3740176fd5202622be3ea820bc5e0ea2280ccc4d
+Author: Niwatori401
+Date: Thu Apr 6 13:17:11 2023
+
+Merge downed pawn interaction changes
+
+==================================================
+Commit Hash: 57ac4c66dcc3c9843c4d8783977f10ece05f7055
+Author: Niwatori401
+Date: Thu Apr 6 13:15:05 2023
+
+Fix error in romance transpiler
+
+==================================================
+Commit Hash: 5025357d4b2275560e29e5b37fd746c964300e8e
+Author: Niwatori401
+Date: Thu Apr 6 12:59:18 2023
+
+Merge bed thought fix
+
+==================================================
+Commit Hash: b2ed85e1bdab1c0aa7d8a7b546d605153ea1cde0
+Author: Niwatori401
+Date: Thu Apr 6 12:50:44 2023
+
+Merge mechanitor fix
+
+==================================================
+Commit Hash: d13e28b7bbafe4efba5bbe03fddd519dec1ff8cb
+Author: Niwatori401
+Date: Thu Apr 6 12:47:25 2023
+
+Mechanitors that are downed can still draft their controlled mechs if in bed and capable of consciousness
+
+==================================================
+Commit Hash: 92eeb06b3eef7502f8919bb3d6e4001b1677be46
+Author: Niwatori401
+Date: Mon Mar 27 08:07:18 2023
+
+Merge historyweight feature branch
+
+==================================================
+Commit Hash: 213cf27013c01a0e300e113121619a5642f512cb
 Author: Niwatori401
 Date: Thu Apr 6 03:55:59 2023
 
 Colonists in blob beds no longer will get thoughts for 'slept on ground' or 'slept outside'
 Refactor blob bed checking to new utility class
+
+==================================================
+Commit Hash: ed2013d1a1477a98a50d0e6e19be8c64966b80f0
+Author: Niwatori401
+Date: Thu Apr 6 03:24:24 2023
+
+Pawns can now be romanced if they are downed and in bed
+
+==================================================
+Commit Hash: 5f362a8832c6f9eb5683d919934108aa7c8b2846
+Author: Niwatori401
+Date: Tue Mar 28 02:49:34 2023
+
+Downed pawns that are capable of talking can now be interacted with socially
 
 ==================================================
 Commit Hash: 4de1e6c748b718d11f86a23dbd69889ebcc39160
