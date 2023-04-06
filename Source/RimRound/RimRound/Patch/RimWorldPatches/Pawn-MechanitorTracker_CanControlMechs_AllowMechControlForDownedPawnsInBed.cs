@@ -51,9 +51,11 @@ namespace RimRound.Patch
             return codeInstructions;
         }
 
+
+        /// <returns><see langword="true"/> if they should be unable to control the mech</returns>
         private static bool ReplacementMethod(Pawn pawn) 
         {
-            return pawn.Downed && !pawn.InBed();
+            return (pawn.Downed && !pawn.InBed()) || !pawn.health.capacities.CapableOf(PawnCapacityDefOf.Consciousness);
         }
     }
 }
