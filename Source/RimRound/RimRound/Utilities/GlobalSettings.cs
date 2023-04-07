@@ -28,9 +28,7 @@ namespace RimRound.Utilities
 
         #endregion
 
-
-
-        #region Gizmo Display Settings
+        #region UI Display Settings
 
         public static bool showSpecialDebugSettings = false;
         public static bool showPawnDietManagementGizmo = true;
@@ -39,6 +37,8 @@ namespace RimRound.Utilities
         public static bool showExemptionGizmo = false;
         public static bool showBlobIntobedGizmo = true;
         public static bool largeDietGizmo = false;
+        public static bool showDescriptionTab = true;
+        public static bool showPerkTab = true;
 
         #endregion
 

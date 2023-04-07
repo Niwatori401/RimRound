@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 3740176fd5202622be3ea820bc5e0ea2280ccc4d
+Commit Hash: 3708da3feebc2741723b34590146c3361d4c6b01
+Author: Niwatori401
+Date: Fri Apr 7 01:26:41 2023
+
+Add options in settings to hide description and perk tabs
+
+==================================================
+Commit Hash: 2e2acc0e30fe794732c431e04b3e0b25b2c8ff9f
 Author: Niwatori401
 Date: Thu Apr 6 13:17:11 2023
 
