@@ -14,8 +14,7 @@ using RimRound.Utilities;
 using RimRound.UI;
 using RimRound.Comps;
 using System.Reflection;
-
-
+using RimWorld.Planet;
 
 namespace RimRound.Patch
 {
@@ -23,8 +22,9 @@ namespace RimRound.Patch
 	{
 		public static void Postfix(Thing __instance, Pawn __0, ref float __result, FullnessAndDietStats_ThingComp comp) //,
 		{
-			AddFullness(__instance, __0, ref __result, comp);
-		}
+			if (__0.Spawned || __0.IsCaravanMember())
+				AddFullness(__instance, __0, ref __result, comp);
+        }
 
 
 		private static void AddFullness(Thing __instance, Pawn __0, ref float __result, FullnessAndDietStats_ThingComp comp)
