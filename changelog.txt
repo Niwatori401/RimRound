@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 3702473849f0d74f1a01b65dec0fb62b5da706c4
+Commit Hash: 42f24235de241cbac73f68f7604357e485f4ea67
+Author: Niwatori401
+Date: Sun Apr 9 02:36:00 2023
+
+Fix tail size for races added by 'Vulpine Race Pack (Continued)'
+
+==================================================
+Commit Hash: e6b1d2a0906871a6c9f8760139791831a51d6fad
 Author: Niwatori401
 Date: Sun Apr 9 02:08:06 2023
 
