@@ -14,6 +14,7 @@ using UnityEngine;
 using System.Reflection;
 using Resources = RimRound.Utilities.Resources;
 using Verse.Sound;
+using RimWorld.Planet;
 using RimRound.AI;
 
 namespace RimRound.Comps
@@ -166,7 +167,7 @@ namespace RimRound.Comps
         public override void CompTick()
         {
             base.CompTick();
-            if (!parent.Spawned)
+            if (!parent.Spawned && !parent.AsPawn().IsCaravanMember())
                 return;
 
             ProcessWeightGainRequests(GlobalSettings.ticksBetweenWeightGainRequestProcess.threshold);

@@ -1,5 +1,19 @@
 ==================================================
-Commit Hash: 3708da3feebc2741723b34590146c3361d4c6b01
+Commit Hash: 0bdef7c35c1cdf82280149138175aab4c87c5953
+Author: Niwatori401
+Date: Sun Apr 9 02:13:00 2023
+
+Merge branch 'caravanfix' into dev
+
+==================================================
+Commit Hash: 3702473849f0d74f1a01b65dec0fb62b5da706c4
+Author: Niwatori401
+Date: Sun Apr 9 02:08:06 2023
+
+Fix caravans eating all food instantly
+
+==================================================
+Commit Hash: ec71325017a52d84f940a1b60eef40f671d18da6
 Author: Niwatori401
 Date: Fri Apr 7 01:26:41 2023
 
@@ -119,6 +133,20 @@ Author: Niwatori401
 Date: Tue Mar 21 00:38:46 2023
 
 Update enbiggener weapon tags
+
+==================================================
+Commit Hash: d2142271c7c7436bbb422bf86c5a7c7660d29f1b
+Author: Niwatori401
+Date: Sat Mar 18 00:00:43 2023
+
+Fix RR bodies being bugged for genes that used body graphics
+
+==================================================
+Commit Hash: d13bab88022d95b1300300b3ae0b11fe58ab2526
+Author: Niwatori401
+Date: Fri Mar 17 23:28:06 2023
+
+Fix error where unsupported races would blow up the log
 
 ==================================================
 Commit Hash: 8adce7ac78f5dbe9714928e550d157fe93b3ef8f
