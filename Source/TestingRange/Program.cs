@@ -95,7 +95,7 @@ namespace TestingRange
         {
             do
             {
-                Console.WriteLine("Please input the RimRound install directory. For example: \nC:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RimRound---Alpha\\\n\nMake sure to use BACKSLASH and include the last backslash at the end.");
+                Console.WriteLine("Please input the RimRound install directory. For example: \nC:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RimRound\\1.4\\\n\nMake sure to use BACKSLASH and include the last backslash at the end.");
                 string userInput = Console.ReadLine();
                 Console.WriteLine($"Got: {userInput}\nChecking if valid...");
                 if (!Directory.Exists(userInput))

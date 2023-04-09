@@ -1,5 +1,26 @@
 ==================================================
-Commit Hash: 0bdef7c35c1cdf82280149138175aab4c87c5953
+Commit Hash: 93969eb3cdb1d9ca37ed651472c180425f9a26a8
+Author: Niwatori401
+Date: Sun Apr 9 02:38:55 2023
+
+Merge branch 'vulpRaceFix' into dev
+
+==================================================
+Commit Hash: 9341e65a207a11d116713a70a0b75e68d822ec1f
+Author: Niwatori401
+Date: Sun Apr 9 02:36:00 2023
+
+Fix tail size for races added by 'Vulpine Race Pack (Continued)'
+
+==================================================
+Commit Hash: e6b1d2a0906871a6c9f8760139791831a51d6fad
+Author: Niwatori401
+Date: Sun Apr 9 02:08:06 2023
+
+Fix caravans eating all food instantly
+
+==================================================
+Commit Hash: 32b0b0e294f7bde6e8bce1bc4ee841200115b0fe
 Author: Niwatori401
 Date: Sun Apr 9 02:13:00 2023
 
