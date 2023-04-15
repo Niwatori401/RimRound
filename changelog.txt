@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 047652ed1341278cecd271a078415b57f1728e24
+Commit Hash: 04fe818cc9920bd2427f5c7b0f1af6e54374b852
+Author: Niwatori401
+Date: Sat Apr 15 23:47:58 2023
+
+Fix localization issue
+
+==================================================
+Commit Hash: aa6acc330562f48828f6fc9135cfc1a91900fa11
 Author: Niwatori401
 Date: Wed Apr 12 09:15:36 2023
 
