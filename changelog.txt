@@ -1,5 +1,19 @@
 ==================================================
-Commit Hash: 480f8cc6b77465211eb2c6d28709cca8054bd21f
+Commit Hash: e58575007941f68801658700b4d17810ec0c4eec
+Author: Niwatori401
+Date: Tue Apr 18 10:37:56 2023
+
+Merge HAR fix
+
+==================================================
+Commit Hash: 79c1292ee1d9e151d3727bf97ba6f4035bc69fe2
+Author: Niwatori401
+Date: Tue Apr 18 10:37:06 2023
+
+Fix broken HAR patch
+
+==================================================
+Commit Hash: fa18ef23e15255d423af48960355b067b9cb4e0b
 Author: Niwatori401
 Date: Sat Apr 15 23:47:58 2023
 
