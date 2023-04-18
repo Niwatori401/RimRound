@@ -22,7 +22,7 @@ namespace RimRound.FeedingTube.AI
             Job result;
             try
             {
-                advancedAutoFeederCandidates.AddRange(pawn.Map.listerThings.ThingsMatching(ThingRequest.ForDef(Defs.ThingDefOf.RR_AdvancedAutoFeeder)).Where(delegate (Thing thing)
+                advancedAutoFeederCandidates.AddRange(pawn?.Map?.listerThings?.ThingsMatching(ThingRequest.ForDef(Defs.ThingDefOf.RR_AdvancedAutoFeeder))?.Where(delegate (Thing thing)
                 {
                     if (!(thing is Building_AdvancedAutoFeeder autoFeeder))
                         return false;

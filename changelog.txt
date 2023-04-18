@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 60d7bbae3702d8cc82fcd642ffe982e099cd1b6a
+Commit Hash: 7821a4e15915267f0acf55e05a818dd6ace6542f
+Author: Niwatori401
+Date: Tue Apr 18 22:11:45 2023
+
+Fix possible NRE
+
+==================================================
+Commit Hash: 9a13873b343efa229c951583d1981059ae1039c1
 Author: Niwatori401
 Date: Tue Apr 18 12:12:25 2023
 
