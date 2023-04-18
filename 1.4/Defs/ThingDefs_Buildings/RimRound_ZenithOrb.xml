@@ -1,0 +1,58 @@
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>RR_ZenithOrb</defName>
+        <label>zenith orb</label>
+        <description>The pinnacle of mass replication studies, the Zenith Orb is the culmination of the answer to the question "Why not?" It radiates pure gluttonium in an area around itself, and can be manually and specifically attuned to specific targets, rapidly and rampantly fattening them, even far beyond immobility, until stopped. It consumes an enormous amount of power, but in return, provides limitless gain beyond comprehension.\n\nIt is heavy but portable, and can be placed in the field for combat purposes, incapacitating both enemies and allies should the operator desire.\n\nDue to its all-encompassing efficacy, all known civilised societies are fearful of the immense power of the Zenith Orb. Now you are in control.</description>
+        <thingClass>RimRound.Things.Building_ZenithOrb</thingClass>
+		<tickerType>Normal</tickerType>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Security/ZenithOrb</texPath>
+            <drawSize>(2,2)</drawSize>
+            <shadowData>
+                <volume>(2, 2, 2)</volume>
+            </shadowData>
+        </graphicData>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <designationCategory>Security</designationCategory>
+        <uiOrder>2022</uiOrder>
+        <fillPercent>0.35</fillPercent>
+        <selectable>true</selectable>
+        <useHitPoints>true</useHitPoints>
+        <size>(2,2)</size>
+        <thingCategories>
+            <li>BuildingsSecurity</li>
+        </thingCategories>
+        <costList>
+            <Steel>400</Steel>
+            <Plasteel>400</Plasteel>
+            <Gold>150</Gold>
+            <ComponentSpacer>18</ComponentSpacer>
+            <RR_Gluttonium>1250</RR_Gluttonium>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>8000</basePowerConsumption>
+                <idlePowerDraw>50</idlePowerDraw>
+                <shortCircuitInRain>false</shortCircuitInRain>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+        </comps>		
+        <statBases>
+            <MaxHitPoints>250</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Beauty>20</Beauty>
+            <Flammability>1.0</Flammability>
+            <Mass>70</Mass>
+        </statBases>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+        <researchPrerequisites>
+            <li>RR_Research_ZenithOrb</li>
+        </researchPrerequisites>		
+    </ThingDef>
+</Defs>

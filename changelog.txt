@@ -1,5 +1,15 @@
 ==================================================
-Commit Hash: e58575007941f68801658700b4d17810ec0c4eec
+Commit Hash: 60d7bbae3702d8cc82fcd642ffe982e099cd1b6a
+Author: Niwatori401
+Date: Tue Apr 18 12:12:25 2023
+
+Add Zenith Orb
+Add Gluttonium Fabricator
+Integrate SuperSpace's Fattening Foods to new research tree
+Change patch for cooking station to regular workgiverdef
+
+==================================================
+Commit Hash: 4d4456bd72a6e2de6619a6af569df9b9cc6b8077
 Author: Niwatori401
 Date: Tue Apr 18 10:37:56 2023
 
