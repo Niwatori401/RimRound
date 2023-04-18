@@ -49,6 +49,7 @@ namespace RimRound.Patch
             return codeInstructions;
         }
 
+        // Replaces GetPath() call
         private static bool ChangeBodyDrawPath(List<CodeInstruction> codeInstructions)
         {
             for (int i = 0; i < codeInstructions.Count; i++)
@@ -77,31 +78,62 @@ namespace RimRound.Patch
 
         private static bool ChangeDrawSize(List<CodeInstruction> codeInstructions)
         {
-            MethodInfo GetCurLifeStageMethodInfo = typeof(Pawn_AgeTracker).GetProperty("CurLifeStageRace", BindingFlags.Instance | BindingFlags.Public).GetGetMethod(true);
+            FieldInfo customDrawSizeLifeStageAlienFI = typeof(LifeStageAgeAlien).GetField(nameof(LifeStageAgeAlien.customDrawSize));
+            FieldInfo customDrawSizeLifeStageAlienFemaleFI = typeof(LifeStageAgeAlien).GetField(nameof(LifeStageAgeAlien.customFemaleDrawSize));
+
+            if (customDrawSizeLifeStageAlienFemaleFI is null || customDrawSizeLifeStageAlienFI is null)
+                return false;
+
+            bool success1 = false;
+            bool success2 = false;
 
             for (int i = 0; i < codeInstructions.Count; i++)
             {
-                if (codeInstructions[i].Calls(GetCurLifeStageMethodInfo))
+                if (!success1 && codeInstructions[i].operand is FieldInfo fi && fi == customDrawSizeLifeStageAlienFI)
                 {
                     //Portrait draw size
-                    codeInstructions.Remove(codeInstructions[i+12]);
-                    codeInstructions.Remove(codeInstructions[i+12]);
+                    codeInstructions.Remove(codeInstructions[i+7]); // Remove call to LifeStageAgeAlien.customDrawSize
+                    codeInstructions.Remove(codeInstructions[i+7]);
 
-                    codeInstructions.Insert(i + 12, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
-                    codeInstructions.Insert(i + 12, new CodeInstruction(OpCodes.Dup));
+                    codeInstructions.Insert(i + 7, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo)); // Replace with call to new function and duplicate argument needed for later that also needs consumed by the function
+                    codeInstructions.Insert(i + 7, new CodeInstruction(OpCodes.Dup));
 
 
                     //Regular drawsize
-                    codeInstructions.Remove(codeInstructions[i+4]);
-                    codeInstructions.Remove(codeInstructions[i+4]);
+                    codeInstructions.Remove(codeInstructions[i - 1]);
+                    codeInstructions.Remove(codeInstructions[i - 1]);
 
-                    codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
-                    codeInstructions.Insert(i + 4, new CodeInstruction(OpCodes.Dup));
-                    return true;
+                    codeInstructions.Insert(i - 1, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
+                    codeInstructions.Insert(i - 1, new CodeInstruction(OpCodes.Dup));
+
+                    success1 = true;
                 }
+
+                else if (!success2 && codeInstructions[i].operand is FieldInfo fi2 && fi2 == customDrawSizeLifeStageAlienFemaleFI)
+                {                    
+                    //Portrait draw size
+                    codeInstructions.Remove(codeInstructions[i+7]); // Remove call to LifeStageAgeAlien.customDrawSizeFemale
+                    codeInstructions.Remove(codeInstructions[i+7]);
+
+                    codeInstructions.Insert(i + 7, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo)); // Replace with call to new function and duplicate argument needed for later that also needs consumed by the function
+                    codeInstructions.Insert(i + 7, new CodeInstruction(OpCodes.Dup));
+
+
+                    //Regular (female) drawsize
+                    codeInstructions.Remove(codeInstructions[i - 1]);
+                    codeInstructions.Remove(codeInstructions[i - 1]);
+
+                    codeInstructions.Insert(i - 1, new CodeInstruction(OpCodes.Call, ReplacementMethodInfo));
+                    codeInstructions.Insert(i - 1, new CodeInstruction(OpCodes.Dup));
+
+                    success2 = true;
+                }
+
+                if (success1 && success2)
+                    break;
             }
 
-            return false;
+            return success1 && success2;
         }
 
         static readonly MethodInfo ReplacementMethodInfo = 
