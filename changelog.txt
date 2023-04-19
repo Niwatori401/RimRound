@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 74c9acb2f3153035c9bd2d38167d943f8af67a9c
+Commit Hash: d8af4ef14a2d2938ffb9b94adf9ad707150e44de
+Author: Niwatori401
+Date: Wed Apr 19 11:40:40 2023
+
+Rewrite patchmaker
+
+==================================================
+Commit Hash: e6e556e2a9f40b5eea0fe65c63d4ca188ad05440
 Author: Niwatori401
 Date: Wed Apr 19 10:29:03 2023
 

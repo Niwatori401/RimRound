@@ -1,0 +1,3691 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dogbold Race</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+            <operations>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/Female</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/Female</xpath>
+									<value>
+										<Female>(-0.49,0.04)</Female>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<Female>(-0.49,0.04)</Female>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<Female>(-0.49,0.04)</Female>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<Female>(-0.49,0.04)</Female>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<Female>(-0.49,0.04)</Female>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/Female</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/Female</xpath>
+								<value>
+									<Female>(-0.28,0.08)</Female>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<Female>(-0.28,0.08)</Female>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<Female>(-0.28,0.08)</Female>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<Female>(-0.28,0.08)</Female>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/Female</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/Female</xpath>
+								<value>
+									<Female>(-0.06,0.37)</Female>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<Female>(-0.06,0.37)</Female>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<Female>(-0.06,0.37)</Female>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<Female>(-0.06,0.37)</Female>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/Male</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/Male</xpath>
+									<value>
+										<Male>(-0.53,0.04)</Male>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<Male>(-0.53,0.04)</Male>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<Male>(-0.53,0.04)</Male>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<Male>(-0.53,0.04)</Male>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<Male>(-0.53,0.04)</Male>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/Male</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/Male</xpath>
+								<value>
+									<Male>(-0.38,0.13)</Male>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<Male>(-0.38,0.13)</Male>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<Male>(-0.38,0.13)</Male>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<Male>(-0.38,0.13)</Male>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/Male</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/Male</xpath>
+								<value>
+									<Male>(-0.09,0.47)</Male>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<Male>(-0.09,0.47)</Male>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<Male>(-0.09,0.47)</Male>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<Male>(-0.09,0.47)</Male>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_005_Thick_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_005_Thick_070</xpath>
+									<value>
+										<F_005_Thick_070>(-0.55,0)</F_005_Thick_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_005_Thick_070>(-0.55,0)</F_005_Thick_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_005_Thick_070>(-0.55,0)</F_005_Thick_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_005_Thick_070>(-0.55,0)</F_005_Thick_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_005_Thick_070>(-0.55,0)</F_005_Thick_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_005_Thick_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_005_Thick_070</xpath>
+								<value>
+									<F_005_Thick_070>(-0.27,0.11)</F_005_Thick_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_005_Thick_070>(-0.27,0.11)</F_005_Thick_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_005_Thick_070>(-0.27,0.11)</F_005_Thick_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_005_Thick_070>(-0.27,0.11)</F_005_Thick_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_005_Thick_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_005_Thick_070</xpath>
+								<value>
+									<F_005_Thick_070>(-0.07,0.44)</F_005_Thick_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_005_Thick_070>(-0.07,0.44)</F_005_Thick_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_005_Thick_070>(-0.07,0.44)</F_005_Thick_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_005_Thick_070>(-0.07,0.44)</F_005_Thick_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_006_Chonky_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_006_Chonky_070</xpath>
+									<value>
+										<F_006_Chonky_070>(-0.57,0.04)</F_006_Chonky_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_006_Chonky_070>(-0.57,0.04)</F_006_Chonky_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_006_Chonky_070>(-0.57,0.04)</F_006_Chonky_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_006_Chonky_070>(-0.57,0.04)</F_006_Chonky_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_006_Chonky_070>(-0.57,0.04)</F_006_Chonky_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_006_Chonky_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_006_Chonky_070</xpath>
+								<value>
+									<F_006_Chonky_070>(-0.27,0.15)</F_006_Chonky_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_006_Chonky_070>(-0.27,0.15)</F_006_Chonky_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_006_Chonky_070>(-0.27,0.15)</F_006_Chonky_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_006_Chonky_070>(-0.27,0.15)</F_006_Chonky_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_006_Chonky_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_006_Chonky_070</xpath>
+								<value>
+									<F_006_Chonky_070>(-0.07,0.47)</F_006_Chonky_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_006_Chonky_070>(-0.07,0.47)</F_006_Chonky_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_006_Chonky_070>(-0.07,0.47)</F_006_Chonky_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_006_Chonky_070>(-0.07,0.47)</F_006_Chonky_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_010_Chubby_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_010_Chubby_070</xpath>
+									<value>
+										<F_010_Chubby_070>(-0.57,0.04)</F_010_Chubby_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_010_Chubby_070>(-0.57,0.04)</F_010_Chubby_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_010_Chubby_070>(-0.57,0.04)</F_010_Chubby_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_010_Chubby_070>(-0.57,0.04)</F_010_Chubby_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_010_Chubby_070>(-0.57,0.04)</F_010_Chubby_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_010_Chubby_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_010_Chubby_070</xpath>
+								<value>
+									<F_010_Chubby_070>(-0.24,0.16)</F_010_Chubby_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_010_Chubby_070>(-0.24,0.16)</F_010_Chubby_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_010_Chubby_070>(-0.24,0.16)</F_010_Chubby_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_010_Chubby_070>(-0.24,0.16)</F_010_Chubby_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_010_Chubby_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_010_Chubby_070</xpath>
+								<value>
+									<F_010_Chubby_070>(-0.07,0.47)</F_010_Chubby_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_010_Chubby_070>(-0.07,0.47)</F_010_Chubby_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_010_Chubby_070>(-0.07,0.47)</F_010_Chubby_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_010_Chubby_070>(-0.07,0.47)</F_010_Chubby_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_020_Corpulent_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_020_Corpulent_070</xpath>
+									<value>
+										<F_020_Corpulent_070>(-0.57,0.04)</F_020_Corpulent_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_020_Corpulent_070>(-0.57,0.04)</F_020_Corpulent_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_020_Corpulent_070>(-0.57,0.04)</F_020_Corpulent_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_020_Corpulent_070>(-0.57,0.04)</F_020_Corpulent_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_020_Corpulent_070>(-0.57,0.04)</F_020_Corpulent_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_020_Corpulent_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_020_Corpulent_070</xpath>
+								<value>
+									<F_020_Corpulent_070>(-0.21,0.22)</F_020_Corpulent_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_020_Corpulent_070>(-0.21,0.22)</F_020_Corpulent_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_020_Corpulent_070>(-0.21,0.22)</F_020_Corpulent_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_020_Corpulent_070>(-0.21,0.22)</F_020_Corpulent_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_020_Corpulent_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_020_Corpulent_070</xpath>
+								<value>
+									<F_020_Corpulent_070>(-0.07,0.5)</F_020_Corpulent_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_020_Corpulent_070>(-0.07,0.5)</F_020_Corpulent_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_020_Corpulent_070>(-0.07,0.5)</F_020_Corpulent_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_020_Corpulent_070>(-0.07,0.5)</F_020_Corpulent_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_030_Fat_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_030_Fat_070</xpath>
+									<value>
+										<F_030_Fat_070>(-0.57,0.04)</F_030_Fat_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_030_Fat_070>(-0.57,0.04)</F_030_Fat_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_030_Fat_070>(-0.57,0.04)</F_030_Fat_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_030_Fat_070>(-0.57,0.04)</F_030_Fat_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_030_Fat_070>(-0.57,0.04)</F_030_Fat_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_030_Fat_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_030_Fat_070</xpath>
+								<value>
+									<F_030_Fat_070>(-0.18,0.24)</F_030_Fat_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_030_Fat_070>(-0.18,0.24)</F_030_Fat_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_030_Fat_070>(-0.18,0.24)</F_030_Fat_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_030_Fat_070>(-0.18,0.24)</F_030_Fat_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_030_Fat_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_030_Fat_070</xpath>
+								<value>
+									<F_030_Fat_070>(-0.08,0.53)</F_030_Fat_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_030_Fat_070>(-0.08,0.53)</F_030_Fat_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_030_Fat_070>(-0.08,0.53)</F_030_Fat_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_030_Fat_070>(-0.08,0.53)</F_030_Fat_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_040_Obese_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_040_Obese_070</xpath>
+									<value>
+										<F_040_Obese_070>(-0.57,0.04)</F_040_Obese_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_040_Obese_070>(-0.57,0.04)</F_040_Obese_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_040_Obese_070>(-0.57,0.04)</F_040_Obese_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_040_Obese_070>(-0.57,0.04)</F_040_Obese_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_040_Obese_070>(-0.57,0.04)</F_040_Obese_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_040_Obese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_040_Obese_070</xpath>
+								<value>
+									<F_040_Obese_070>(-0.09,0.29)</F_040_Obese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_040_Obese_070>(-0.09,0.29)</F_040_Obese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_040_Obese_070>(-0.09,0.29)</F_040_Obese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_040_Obese_070>(-0.09,0.29)</F_040_Obese_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_040_Obese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_040_Obese_070</xpath>
+								<value>
+									<F_040_Obese_070>(-0.08,0.53)</F_040_Obese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_040_Obese_070>(-0.08,0.53)</F_040_Obese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_040_Obese_070>(-0.08,0.53)</F_040_Obese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_040_Obese_070>(-0.08,0.53)</F_040_Obese_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_050_MorbidlyObese_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_050_MorbidlyObese_070</xpath>
+									<value>
+										<F_050_MorbidlyObese_070>(-0.57,0.04)</F_050_MorbidlyObese_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_050_MorbidlyObese_070>(-0.57,0.04)</F_050_MorbidlyObese_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_050_MorbidlyObese_070>(-0.57,0.04)</F_050_MorbidlyObese_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_050_MorbidlyObese_070>(-0.57,0.04)</F_050_MorbidlyObese_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_050_MorbidlyObese_070>(-0.57,0.04)</F_050_MorbidlyObese_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_050_MorbidlyObese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_050_MorbidlyObese_070</xpath>
+								<value>
+									<F_050_MorbidlyObese_070>(-0.04,0.29)</F_050_MorbidlyObese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_050_MorbidlyObese_070>(-0.04,0.29)</F_050_MorbidlyObese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_050_MorbidlyObese_070>(-0.04,0.29)</F_050_MorbidlyObese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_050_MorbidlyObese_070>(-0.04,0.29)</F_050_MorbidlyObese_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_050_MorbidlyObese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_050_MorbidlyObese_070</xpath>
+								<value>
+									<F_050_MorbidlyObese_070>(-0.08,0.53)</F_050_MorbidlyObese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_050_MorbidlyObese_070>(-0.08,0.53)</F_050_MorbidlyObese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_050_MorbidlyObese_070>(-0.08,0.53)</F_050_MorbidlyObese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_050_MorbidlyObese_070>(-0.08,0.53)</F_050_MorbidlyObese_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_060_Lardy_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_060_Lardy_070</xpath>
+									<value>
+										<F_060_Lardy_070>(-0.57,0.04)</F_060_Lardy_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_060_Lardy_070>(-0.57,0.04)</F_060_Lardy_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_060_Lardy_070>(-0.57,0.04)</F_060_Lardy_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_060_Lardy_070>(-0.57,0.04)</F_060_Lardy_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_060_Lardy_070>(-0.57,0.04)</F_060_Lardy_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_060_Lardy_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_060_Lardy_070</xpath>
+								<value>
+									<F_060_Lardy_070>(0.04,0.29)</F_060_Lardy_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_060_Lardy_070>(0.04,0.29)</F_060_Lardy_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_060_Lardy_070>(0.04,0.29)</F_060_Lardy_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_060_Lardy_070>(0.04,0.29)</F_060_Lardy_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_060_Lardy_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_060_Lardy_070</xpath>
+								<value>
+									<F_060_Lardy_070>(-0.08,0.6)</F_060_Lardy_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_060_Lardy_070>(-0.08,0.6)</F_060_Lardy_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_060_Lardy_070>(-0.08,0.6)</F_060_Lardy_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_060_Lardy_070>(-0.08,0.6)</F_060_Lardy_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_070_Enormous_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_070_Enormous_070</xpath>
+									<value>
+										<F_070_Enormous_070>(-0.57,0.04)</F_070_Enormous_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_070_Enormous_070>(-0.57,0.04)</F_070_Enormous_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_070_Enormous_070>(-0.57,0.04)</F_070_Enormous_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_070_Enormous_070>(-0.57,0.04)</F_070_Enormous_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_070_Enormous_070>(-0.57,0.04)</F_070_Enormous_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_070_Enormous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_070_Enormous_070</xpath>
+								<value>
+									<F_070_Enormous_070>(0.16,0.25)</F_070_Enormous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_070_Enormous_070>(0.16,0.25)</F_070_Enormous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_070_Enormous_070>(0.16,0.25)</F_070_Enormous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_070_Enormous_070>(0.16,0.25)</F_070_Enormous_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_070_Enormous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_070_Enormous_070</xpath>
+								<value>
+									<F_070_Enormous_070>(-0.08,0.52)</F_070_Enormous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_070_Enormous_070>(-0.08,0.52)</F_070_Enormous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_070_Enormous_070>(-0.08,0.52)</F_070_Enormous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_070_Enormous_070>(-0.08,0.52)</F_070_Enormous_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_080_Gigantic_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_080_Gigantic_070</xpath>
+									<value>
+										<F_080_Gigantic_070>(-0.57,0.04)</F_080_Gigantic_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_080_Gigantic_070>(-0.57,0.04)</F_080_Gigantic_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_080_Gigantic_070>(-0.57,0.04)</F_080_Gigantic_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_080_Gigantic_070>(-0.57,0.04)</F_080_Gigantic_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_080_Gigantic_070>(-0.57,0.04)</F_080_Gigantic_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_080_Gigantic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_080_Gigantic_070</xpath>
+								<value>
+									<F_080_Gigantic_070>(0.16,0.25)</F_080_Gigantic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_080_Gigantic_070>(0.16,0.25)</F_080_Gigantic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_080_Gigantic_070>(0.16,0.25)</F_080_Gigantic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_080_Gigantic_070>(0.16,0.25)</F_080_Gigantic_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_080_Gigantic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_080_Gigantic_070</xpath>
+								<value>
+									<F_080_Gigantic_070>(-0.09,0.46)</F_080_Gigantic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_080_Gigantic_070>(-0.09,0.46)</F_080_Gigantic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_080_Gigantic_070>(-0.09,0.46)</F_080_Gigantic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_080_Gigantic_070>(-0.09,0.46)</F_080_Gigantic_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_090_Titanic_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_090_Titanic_070</xpath>
+									<value>
+										<F_090_Titanic_070>(-0.57,0.04)</F_090_Titanic_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_090_Titanic_070>(-0.57,0.04)</F_090_Titanic_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_090_Titanic_070>(-0.57,0.04)</F_090_Titanic_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_090_Titanic_070>(-0.57,0.04)</F_090_Titanic_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_090_Titanic_070>(-0.57,0.04)</F_090_Titanic_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_090_Titanic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_090_Titanic_070</xpath>
+								<value>
+									<F_090_Titanic_070>(0.16,0.25)</F_090_Titanic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_090_Titanic_070>(0.16,0.25)</F_090_Titanic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_090_Titanic_070>(0.16,0.25)</F_090_Titanic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_090_Titanic_070>(0.16,0.25)</F_090_Titanic_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_090_Titanic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_090_Titanic_070</xpath>
+								<value>
+									<F_090_Titanic_070>(-0.09,0.53)</F_090_Titanic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_090_Titanic_070>(-0.09,0.53)</F_090_Titanic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_090_Titanic_070>(-0.09,0.53)</F_090_Titanic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_090_Titanic_070>(-0.09,0.53)</F_090_Titanic_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_100_Gelatinous_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/F_100_Gelatinous_070</xpath>
+									<value>
+										<F_100_Gelatinous_070>(-0.57,0.04)</F_100_Gelatinous_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<F_100_Gelatinous_070>(-0.57,0.04)</F_100_Gelatinous_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<F_100_Gelatinous_070>(-0.57,0.04)</F_100_Gelatinous_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<F_100_Gelatinous_070>(-0.57,0.04)</F_100_Gelatinous_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<F_100_Gelatinous_070>(-0.57,0.04)</F_100_Gelatinous_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_100_Gelatinous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/F_100_Gelatinous_070</xpath>
+								<value>
+									<F_100_Gelatinous_070>(0.16,0.25)</F_100_Gelatinous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<F_100_Gelatinous_070>(0.16,0.25)</F_100_Gelatinous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<F_100_Gelatinous_070>(0.16,0.25)</F_100_Gelatinous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<F_100_Gelatinous_070>(0.16,0.25)</F_100_Gelatinous_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_100_Gelatinous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/F_100_Gelatinous_070</xpath>
+								<value>
+									<F_100_Gelatinous_070>(-0.06,0.29)</F_100_Gelatinous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<F_100_Gelatinous_070>(-0.06,0.29)</F_100_Gelatinous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<F_100_Gelatinous_070>(-0.06,0.29)</F_100_Gelatinous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<F_100_Gelatinous_070>(-0.06,0.29)</F_100_Gelatinous_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_005_Thick_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_005_Thick_070</xpath>
+									<value>
+										<M_005_Thick_070>(-0.58,0.04)</M_005_Thick_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_005_Thick_070>(-0.58,0.04)</M_005_Thick_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_005_Thick_070>(-0.58,0.04)</M_005_Thick_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_005_Thick_070>(-0.58,0.04)</M_005_Thick_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_005_Thick_070>(-0.58,0.04)</M_005_Thick_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_005_Thick_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_005_Thick_070</xpath>
+								<value>
+									<M_005_Thick_070>(-0.3,0.09)</M_005_Thick_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_005_Thick_070>(-0.3,0.09)</M_005_Thick_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_005_Thick_070>(-0.3,0.09)</M_005_Thick_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_005_Thick_070>(-0.3,0.09)</M_005_Thick_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_005_Thick_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_005_Thick_070</xpath>
+								<value>
+									<M_005_Thick_070>(-0.07,0.39)</M_005_Thick_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_005_Thick_070>(-0.07,0.39)</M_005_Thick_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_005_Thick_070>(-0.07,0.39)</M_005_Thick_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_005_Thick_070>(-0.07,0.39)</M_005_Thick_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_006_Chonky_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_006_Chonky_070</xpath>
+									<value>
+										<M_006_Chonky_070>(-0.58,0.04)</M_006_Chonky_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_006_Chonky_070>(-0.58,0.04)</M_006_Chonky_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_006_Chonky_070>(-0.58,0.04)</M_006_Chonky_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_006_Chonky_070>(-0.58,0.04)</M_006_Chonky_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_006_Chonky_070>(-0.58,0.04)</M_006_Chonky_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_006_Chonky_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_006_Chonky_070</xpath>
+								<value>
+									<M_006_Chonky_070>(-0.3,0.09)</M_006_Chonky_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_006_Chonky_070>(-0.3,0.09)</M_006_Chonky_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_006_Chonky_070>(-0.3,0.09)</M_006_Chonky_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_006_Chonky_070>(-0.3,0.09)</M_006_Chonky_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_006_Chonky_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_006_Chonky_070</xpath>
+								<value>
+									<M_006_Chonky_070>(-0.07,0.41)</M_006_Chonky_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_006_Chonky_070>(-0.07,0.41)</M_006_Chonky_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_006_Chonky_070>(-0.07,0.41)</M_006_Chonky_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_006_Chonky_070>(-0.07,0.41)</M_006_Chonky_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_010_Chubby_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_010_Chubby_070</xpath>
+									<value>
+										<M_010_Chubby_070>(-0.58,0.04)</M_010_Chubby_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_010_Chubby_070>(-0.58,0.04)</M_010_Chubby_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_010_Chubby_070>(-0.58,0.04)</M_010_Chubby_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_010_Chubby_070>(-0.58,0.04)</M_010_Chubby_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_010_Chubby_070>(-0.58,0.04)</M_010_Chubby_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_010_Chubby_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_010_Chubby_070</xpath>
+								<value>
+									<M_010_Chubby_070>(-0.28,0.12)</M_010_Chubby_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_010_Chubby_070>(-0.28,0.12)</M_010_Chubby_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_010_Chubby_070>(-0.28,0.12)</M_010_Chubby_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_010_Chubby_070>(-0.28,0.12)</M_010_Chubby_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_010_Chubby_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_010_Chubby_070</xpath>
+								<value>
+									<M_010_Chubby_070>(-0.07,0.37)</M_010_Chubby_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_010_Chubby_070>(-0.07,0.37)</M_010_Chubby_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_010_Chubby_070>(-0.07,0.37)</M_010_Chubby_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_010_Chubby_070>(-0.07,0.37)</M_010_Chubby_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_020_Corpulent_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_020_Corpulent_070</xpath>
+									<value>
+										<M_020_Corpulent_070>(-0.58,0.04)</M_020_Corpulent_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_020_Corpulent_070>(-0.58,0.04)</M_020_Corpulent_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_020_Corpulent_070>(-0.58,0.04)</M_020_Corpulent_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_020_Corpulent_070>(-0.58,0.04)</M_020_Corpulent_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_020_Corpulent_070>(-0.58,0.04)</M_020_Corpulent_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_020_Corpulent_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_020_Corpulent_070</xpath>
+								<value>
+									<M_020_Corpulent_070>(-0.17,0.18)</M_020_Corpulent_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_020_Corpulent_070>(-0.17,0.18)</M_020_Corpulent_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_020_Corpulent_070>(-0.17,0.18)</M_020_Corpulent_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_020_Corpulent_070>(-0.17,0.18)</M_020_Corpulent_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_020_Corpulent_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_020_Corpulent_070</xpath>
+								<value>
+									<M_020_Corpulent_070>(-0.06,0.42)</M_020_Corpulent_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_020_Corpulent_070>(-0.06,0.42)</M_020_Corpulent_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_020_Corpulent_070>(-0.06,0.42)</M_020_Corpulent_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_020_Corpulent_070>(-0.06,0.42)</M_020_Corpulent_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_030_Fat_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_030_Fat_070</xpath>
+									<value>
+										<M_030_Fat_070>(-0.58,0.04)</M_030_Fat_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_030_Fat_070>(-0.58,0.04)</M_030_Fat_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_030_Fat_070>(-0.58,0.04)</M_030_Fat_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_030_Fat_070>(-0.58,0.04)</M_030_Fat_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_030_Fat_070>(-0.58,0.04)</M_030_Fat_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_030_Fat_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_030_Fat_070</xpath>
+								<value>
+									<M_030_Fat_070>(-0.17,0.21)</M_030_Fat_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_030_Fat_070>(-0.17,0.21)</M_030_Fat_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_030_Fat_070>(-0.17,0.21)</M_030_Fat_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_030_Fat_070>(-0.17,0.21)</M_030_Fat_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_030_Fat_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_030_Fat_070</xpath>
+								<value>
+									<M_030_Fat_070>(-0.05,0.4)</M_030_Fat_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_030_Fat_070>(-0.05,0.4)</M_030_Fat_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_030_Fat_070>(-0.05,0.4)</M_030_Fat_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_030_Fat_070>(-0.05,0.4)</M_030_Fat_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_040_Obese_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_040_Obese_070</xpath>
+									<value>
+										<M_040_Obese_070>(-0.58,0.04)</M_040_Obese_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_040_Obese_070>(-0.58,0.04)</M_040_Obese_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_040_Obese_070>(-0.58,0.04)</M_040_Obese_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_040_Obese_070>(-0.58,0.04)</M_040_Obese_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_040_Obese_070>(-0.58,0.04)</M_040_Obese_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_040_Obese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_040_Obese_070</xpath>
+								<value>
+									<M_040_Obese_070>(-0.08,0.24)</M_040_Obese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_040_Obese_070>(-0.08,0.24)</M_040_Obese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_040_Obese_070>(-0.08,0.24)</M_040_Obese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_040_Obese_070>(-0.08,0.24)</M_040_Obese_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_040_Obese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_040_Obese_070</xpath>
+								<value>
+									<M_040_Obese_070>(-0.07,0.47)</M_040_Obese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_040_Obese_070>(-0.07,0.47)</M_040_Obese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_040_Obese_070>(-0.07,0.47)</M_040_Obese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_040_Obese_070>(-0.07,0.47)</M_040_Obese_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_050_MorbidlyObese_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_050_MorbidlyObese_070</xpath>
+									<value>
+										<M_050_MorbidlyObese_070>(-0.58,0.04)</M_050_MorbidlyObese_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_050_MorbidlyObese_070>(-0.58,0.04)</M_050_MorbidlyObese_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_050_MorbidlyObese_070>(-0.58,0.04)</M_050_MorbidlyObese_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_050_MorbidlyObese_070>(-0.58,0.04)</M_050_MorbidlyObese_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_050_MorbidlyObese_070>(-0.58,0.04)</M_050_MorbidlyObese_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_050_MorbidlyObese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_050_MorbidlyObese_070</xpath>
+								<value>
+									<M_050_MorbidlyObese_070>(-0.08,0.32)</M_050_MorbidlyObese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_050_MorbidlyObese_070>(-0.08,0.32)</M_050_MorbidlyObese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_050_MorbidlyObese_070>(-0.08,0.32)</M_050_MorbidlyObese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_050_MorbidlyObese_070>(-0.08,0.32)</M_050_MorbidlyObese_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_050_MorbidlyObese_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_050_MorbidlyObese_070</xpath>
+								<value>
+									<M_050_MorbidlyObese_070>(-0.07,0.53)</M_050_MorbidlyObese_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_050_MorbidlyObese_070>(-0.07,0.53)</M_050_MorbidlyObese_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_050_MorbidlyObese_070>(-0.07,0.53)</M_050_MorbidlyObese_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_050_MorbidlyObese_070>(-0.07,0.53)</M_050_MorbidlyObese_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_060_Lardy_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_060_Lardy_070</xpath>
+									<value>
+										<M_060_Lardy_070>(-0.58,0.04)</M_060_Lardy_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_060_Lardy_070>(-0.58,0.04)</M_060_Lardy_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_060_Lardy_070>(-0.58,0.04)</M_060_Lardy_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_060_Lardy_070>(-0.58,0.04)</M_060_Lardy_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_060_Lardy_070>(-0.58,0.04)</M_060_Lardy_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_060_Lardy_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_060_Lardy_070</xpath>
+								<value>
+									<M_060_Lardy_070>(-0.08,0.41)</M_060_Lardy_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_060_Lardy_070>(-0.08,0.41)</M_060_Lardy_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_060_Lardy_070>(-0.08,0.41)</M_060_Lardy_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_060_Lardy_070>(-0.08,0.41)</M_060_Lardy_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_060_Lardy_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_060_Lardy_070</xpath>
+								<value>
+									<M_060_Lardy_070>(-0.04,0.56)</M_060_Lardy_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_060_Lardy_070>(-0.04,0.56)</M_060_Lardy_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_060_Lardy_070>(-0.04,0.56)</M_060_Lardy_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_060_Lardy_070>(-0.04,0.56)</M_060_Lardy_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_070_Enormous_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_070_Enormous_070</xpath>
+									<value>
+										<M_070_Enormous_070>(-0.58,0.04)</M_070_Enormous_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_070_Enormous_070>(-0.58,0.04)</M_070_Enormous_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_070_Enormous_070>(-0.58,0.04)</M_070_Enormous_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_070_Enormous_070>(-0.58,0.04)</M_070_Enormous_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_070_Enormous_070>(-0.58,0.04)</M_070_Enormous_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_070_Enormous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_070_Enormous_070</xpath>
+								<value>
+									<M_070_Enormous_070>(-0.15,0.11)</M_070_Enormous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_070_Enormous_070>(-0.15,0.11)</M_070_Enormous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_070_Enormous_070>(-0.15,0.11)</M_070_Enormous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_070_Enormous_070>(-0.15,0.11)</M_070_Enormous_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_070_Enormous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_070_Enormous_070</xpath>
+								<value>
+									<M_070_Enormous_070>(-0.06,0.45)</M_070_Enormous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_070_Enormous_070>(-0.06,0.45)</M_070_Enormous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_070_Enormous_070>(-0.06,0.45)</M_070_Enormous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_070_Enormous_070>(-0.06,0.45)</M_070_Enormous_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_080_Gigantic_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_080_Gigantic_070</xpath>
+									<value>
+										<M_080_Gigantic_070>(-0.58,0.04)</M_080_Gigantic_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_080_Gigantic_070>(-0.58,0.04)</M_080_Gigantic_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_080_Gigantic_070>(-0.58,0.04)</M_080_Gigantic_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_080_Gigantic_070>(-0.58,0.04)</M_080_Gigantic_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_080_Gigantic_070>(-0.58,0.04)</M_080_Gigantic_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_080_Gigantic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_080_Gigantic_070</xpath>
+								<value>
+									<M_080_Gigantic_070>(-0.15,0.11)</M_080_Gigantic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_080_Gigantic_070>(-0.15,0.11)</M_080_Gigantic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_080_Gigantic_070>(-0.15,0.11)</M_080_Gigantic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_080_Gigantic_070>(-0.15,0.11)</M_080_Gigantic_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_080_Gigantic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_080_Gigantic_070</xpath>
+								<value>
+									<M_080_Gigantic_070>(-0.06,0.37)</M_080_Gigantic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_080_Gigantic_070>(-0.06,0.37)</M_080_Gigantic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_080_Gigantic_070>(-0.06,0.37)</M_080_Gigantic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_080_Gigantic_070>(-0.06,0.37)</M_080_Gigantic_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_090_Titanic_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_090_Titanic_070</xpath>
+									<value>
+										<M_090_Titanic_070>(-0.58,0.04)</M_090_Titanic_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_090_Titanic_070>(-0.58,0.04)</M_090_Titanic_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_090_Titanic_070>(-0.58,0.04)</M_090_Titanic_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_090_Titanic_070>(-0.58,0.04)</M_090_Titanic_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_090_Titanic_070>(-0.58,0.04)</M_090_Titanic_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_090_Titanic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_090_Titanic_070</xpath>
+								<value>
+									<M_090_Titanic_070>(-0.15,0.11)</M_090_Titanic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_090_Titanic_070>(-0.15,0.11)</M_090_Titanic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_090_Titanic_070>(-0.15,0.11)</M_090_Titanic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_090_Titanic_070>(-0.15,0.11)</M_090_Titanic_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_090_Titanic_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_090_Titanic_070</xpath>
+								<value>
+									<M_090_Titanic_070>(-0.11,0.56)</M_090_Titanic_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_090_Titanic_070>(-0.11,0.56)</M_090_Titanic_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_090_Titanic_070>(-0.11,0.56)</M_090_Titanic_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_090_Titanic_070>(-0.11,0.56)</M_090_Titanic_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">	
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+							<match Class="PatchOperationConditional">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_100_Gelatinous_070</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes/M_100_Gelatinous_070</xpath>
+									<value>
+										<M_100_Gelatinous_070>(-0.58,0.04)</M_100_Gelatinous_070>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+									<value>
+										<M_100_Gelatinous_070>(-0.58,0.04)</M_100_Gelatinous_070>
+									</value>						
+								</nomatch>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<bodyTypes>
+										<M_100_Gelatinous_070>(-0.58,0.04)</M_100_Gelatinous_070>
+									</bodyTypes>
+								</value>							
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<bodyTypes>
+										<M_100_Gelatinous_070>(-0.58,0.04)</M_100_Gelatinous_070>
+									</bodyTypes>
+								</south>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<M_100_Gelatinous_070>(-0.58,0.04)</M_100_Gelatinous_070>
+									</bodyTypes>							
+								</south>
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_100_Gelatinous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes/M_100_Gelatinous_070</xpath>
+								<value>
+									<M_100_Gelatinous_070>(-0.15,0.11)</M_100_Gelatinous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+								<value>
+									<M_100_Gelatinous_070>(-0.15,0.11)</M_100_Gelatinous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<bodyTypes>
+									<M_100_Gelatinous_070>(-0.15,0.11)</M_100_Gelatinous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<bodyTypes>
+									<M_100_Gelatinous_070>(-0.15,0.11)</M_100_Gelatinous_070>
+								</bodyTypes>
+							</east>
+						</value>							
+					</nomatch>
+				</li>			
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_100_Gelatinous_070</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes/M_100_Gelatinous_070</xpath>
+								<value>
+									<M_100_Gelatinous_070>(-0.08,0.26)</M_100_Gelatinous_070>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+								<value>
+									<M_100_Gelatinous_070>(-0.08,0.26)</M_100_Gelatinous_070>
+								</value>						
+							</nomatch>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<bodyTypes>
+									<M_100_Gelatinous_070>(-0.08,0.26)</M_100_Gelatinous_070>
+								</bodyTypes>
+							</value>							
+						</nomatch>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Dogbold"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<bodyTypes>
+									<M_100_Gelatinous_070>(-0.08,0.26)</M_100_Gelatinous_070>
+								</bodyTypes>
+							</north>
+						</value>							
+					</nomatch>
+				</li>	
+			</operations>				
+		</li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

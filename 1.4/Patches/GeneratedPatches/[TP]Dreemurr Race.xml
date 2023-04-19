@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[TP]Dreemurr Race</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+            <operations>
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+								<value>
+									<offset>(0.23, -0.04)</offset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<offset>(0.23, -0.04)</offset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<offset>(0.23, -0.04)</offset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<offset>(0.23, -0.04)</offset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+							<value>
+								<offset>(0.2, -0.06)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<offset>(0.2, -0.06)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<offset>(0.2, -0.06)</offset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+							<value>
+								<offset>(-0.18, -0.04)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<offset>(-0.18, -0.04)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<offset>(-0.18, -0.04)</offset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>				
+			</operations>
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south/offset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south/offset</xpath>
+								<value>
+									<offset>(-0.229, -0.031)</offset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south</xpath>
+								<value>
+									<offset>(-0.229, -0.031)</offset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets</xpath>
+							<value>
+								<south>
+									<offset>(-0.229, -0.031)</offset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<offset>(-0.229, -0.031)</offset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east/offset</xpath>
+							<value>
+								<offset>(0.21, -0.06)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east</xpath>
+							<value>
+								<offset>(0.21, -0.06)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets</xpath>
+						<value>
+							<east>
+								<offset>(0.21, -0.06)</offset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north/offset</xpath>
+							<value>
+								<offset>(0.18, -0.04)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north</xpath>
+							<value>
+								<offset>(0.18, -0.04)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets</xpath>
+						<value>
+							<north>
+								<offset>(0.18, -0.04)</offset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>				
+			</operations>
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/south/offset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/south/offset</xpath>
+								<value>
+									<offset>(0.13, 0.27)</offset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/south</xpath>
+								<value>
+									<offset>(0.13, 0.27)</offset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets</xpath>
+							<value>
+								<south>
+									<offset>(0.13, 0.27)</offset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<offset>(0.13, 0.27)</offset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/east/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/east/offset</xpath>
+							<value>
+								<offset>(0, 0.26)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/east</xpath>
+							<value>
+								<offset>(0, 0.26)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets</xpath>
+						<value>
+							<east>
+								<offset>(0, 0.26)</offset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/north/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/north/offset</xpath>
+							<value>
+								<offset>(-0.13, 0.26)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/north</xpath>
+							<value>
+								<offset>(-0.13, 0.26)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets</xpath>
+						<value>
+							<north>
+								<offset>(-0.13, 0.26)</offset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>				
+			</operations>
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south/offset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south/offset</xpath>
+								<value>
+									<offset>(-0.12, 0.27)</offset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south</xpath>
+								<value>
+									<offset>(-0.12, 0.27)</offset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets</xpath>
+							<value>
+								<south>
+									<offset>(-0.12, 0.27)</offset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<offset>(-0.12, 0.27)</offset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east/offset</xpath>
+							<value>
+								<offset>(0.05, 0.27)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east</xpath>
+							<value>
+								<offset>(0.05, 0.27)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets</xpath>
+						<value>
+							<east>
+								<offset>(0.05, 0.27)</offset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north/offset</xpath>
+							<value>
+								<offset>(0.15, 0.26)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north</xpath>
+							<value>
+								<offset>(0.15, 0.26)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets</xpath>
+						<value>
+							<north>
+								<offset>(0.15, 0.26)</offset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>				
+			</operations>
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+					</match>
+				</li>
+				<!-- No one needs a west tag! -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/west</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/west</xpath>
+					</match>
+				</li>				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+					</match>
+				</li>				
+			</operations>
+		</li>
+
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/south/bodyTypes</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/east/bodyTypes</xpath>
+					</match>
+				</li>
+				<!-- No one needs a west tag! -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/west</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/west</xpath>
+					</match>
+				</li>				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/offsets/north/bodyTypes</xpath>
+					</match>
+				</li>				
+			</operations>
+		</li>
+
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/south/bodyTypes</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/east/bodyTypes</xpath>
+					</match>
+				</li>
+				<!-- No one needs a west tag! -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/west</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/west</xpath>
+					</match>
+				</li>				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/offsets/north/bodyTypes</xpath>
+					</match>
+				</li>				
+			</operations>
+		</li>
+
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/south/bodyTypes</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/east/bodyTypes</xpath>
+					</match>
+				</li>
+				<!-- No one needs a west tag! -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/west</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/west</xpath>
+					</match>
+				</li>				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/offsets/north/bodyTypes</xpath>
+					</match>
+				</li>				
+			</operations>
+		</li>
+
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[2]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[3]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="TRAHS_DreemurrRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+            </operations>
+        </match>
+    </Operation>
+</Patch>
