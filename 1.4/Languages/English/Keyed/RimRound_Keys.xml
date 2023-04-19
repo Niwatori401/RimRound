@@ -237,9 +237,10 @@
 	<FeedingTube_TargetPawnDesc>Attaches a pawn to the autofeeder. Note that they must be in bed to use it.</FeedingTube_TargetPawnDesc>
 	<FeedingTube_StopFeedingLabel>Disconnect</FeedingTube_StopFeedingLabel>
 	<FeedingTube_StopFeedingDesc>Disconnects a pawn from the autofeeder.</FeedingTube_StopFeedingDesc>
-	
-	
-	
+	<ZenithOrb_TargetPawn>Attune to pawn</ZenithOrb_TargetPawn>
+	<ZenithOrb_TargetPawnDesc>Attunes the power of the zenith orb to a target</ZenithOrb_TargetPawnDesc>
+	<ZenithOrb_StopTargetPawn>Disconnect from pawn</ZenithOrb_StopTargetPawn>
+	<ZenithOrb_StopTargetPawnDesc>Unfocus the zenith orb's power</ZenithOrb_StopTargetPawnDesc>
 	
 	<GainingResistance>Gaining Resistance</GainingResistance>
 	<GainingResistanceDesc>How much a pawn will resist the warden's effort to keep them fed. Lower values mean less reluctance to gain. When close to zero a prisoner is more likely to eat in excess when instructed to do so.</GainingResistanceDesc>

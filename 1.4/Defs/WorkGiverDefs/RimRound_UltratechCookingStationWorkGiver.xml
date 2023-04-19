@@ -2,7 +2,7 @@
 
 <Defs> 
   <WorkGiverDef>
-    <defName>DoBillsCook</defName>
+    <defName>RR_DoGluttoniumCooking</defName>
     <label>cook gluttonium based meals at station</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Cooking</workType>

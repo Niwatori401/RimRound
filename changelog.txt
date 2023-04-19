@@ -1,5 +1,15 @@
 ==================================================
-Commit Hash: d8af4ef14a2d2938ffb9b94adf9ad707150e44de
+Commit Hash: 5489a5f3a00be99eb257f25acbb72cd1c0fdf042
+Author: Niwatori401
+Date: Wed Apr 19 21:15:15 2023
+
+Fix pawns being unable to cook
+Zenith orb now only works when powered and in its radius
+Fix localization keys for zenith orb
+If 'use pounds where possible' is selected, thrown weight text will be in pounds
+
+==================================================
+Commit Hash: 7a3abf086ecb8cd079fd34b0c66081c377efc93e
 Author: Niwatori401
 Date: Wed Apr 19 11:40:40 2023
 

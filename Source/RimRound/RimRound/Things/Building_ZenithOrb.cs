@@ -1,6 +1,4 @@
 ﻿using RimRound.Comps;
-using RimRound.FeedingTube;
-using RimRound.FeedingTube.Comps;
 using RimRound.Utilities;
 using RimWorld;
 using System;
@@ -17,7 +15,7 @@ namespace RimRound.Things
     [StaticConstructorOnStartup]
     public class Building_ZenithOrb : Building
     {
-        int tickCheckInterval = 60;
+        int tickCheckInterval = 120;
         float cellRadius = 20;
         Pawn _currentPawn;
         public Pawn CurrentPawn
@@ -36,6 +34,23 @@ namespace RimRound.Things
         }
 
         FullnessAndDietStats_ThingComp _cachedFNDComp = null;
+        CompPowerTrader _cachedPowerTrader = null;
+
+        CompPowerTrader CachedPowerTrader
+        {
+            get
+            {
+                if (_cachedPowerTrader is null)
+                    _cachedPowerTrader = this.TryGetComp<CompPowerTrader>();
+
+                return _cachedPowerTrader;
+            }
+            set
+            {
+                _cachedPowerTrader = value;
+            }
+        }
+
         FullnessAndDietStats_ThingComp CachedFNDComp
         {
             get
@@ -64,7 +79,8 @@ namespace RimRound.Things
             base.Tick();
             if (GeneralUtility.IsHashIntervalTick(tickCheckInterval) && CurrentPawn != null)
             {
-                CachedFNDComp.activeWeightGainRequests.Enqueue(new WeightGainRequest(100, Find.TickManager.TicksGame + 10, 0, false));
+                if (CachedPowerTrader.PowerOn && GenRadial.RadialCellsAround(this.Position, cellRadius, true).Contains(CachedFNDComp.parent.Position))
+                    CachedFNDComp.activeWeightGainRequests.Enqueue(new WeightGainRequest(100, Find.TickManager.TicksGame + 10, 0, false));
             }
         }
 
@@ -86,9 +102,7 @@ namespace RimRound.Things
 
             if (forcedTarget != LocalTargetInfo.Invalid)
             {
-                Vector3 targetLocation = forcedTarget.CenterVector3;
-
-                targetLocation = forcedTarget.Thing.TrueCenter();
+                Vector3 targetLocation = forcedTarget.Thing.TrueCenter();
 
                 Vector3 zenithOrbCenter = this.TrueCenter();
                 targetLocation.y = AltitudeLayer.MetaOverlays.AltitudeFor();
@@ -137,8 +151,8 @@ namespace RimRound.Things
         Command_Action GetStopActionGizmo()
         {
             Command_Action command_Action = new Command_Action();
-            command_Action.defaultLabel = "FeedingTube_StopFeedingLabel".Translate();
-            command_Action.defaultDesc = "FeedingTube_StopFeedingDesc".Translate();
+            command_Action.defaultLabel = "ZenithOrb_StopTargetPawn".Translate();
+            command_Action.defaultDesc = "ZenithOrb_StopTargetPawnDesc".Translate();
             command_Action.icon = ContentFinder<Texture2D>.Get("UI/Commands/Halt", true);
             command_Action.action = delegate ()
             {
@@ -215,8 +229,5 @@ namespace RimRound.Things
             this.CurrentPawn = null;
         }
 
-
-        private static readonly Texture2D offIcon = ContentFinder<Texture2D>.Get("UI/AutoFeeder/Modes/Off", true);
-        private static readonly Texture2D gainIcon = ContentFinder<Texture2D>.Get("UI/AutoFeeder/Modes/Gain", true);
     }
 }

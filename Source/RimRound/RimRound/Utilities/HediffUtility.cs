@@ -235,7 +235,10 @@ namespace RimRound.Utilities
             if (Mathf.Abs(value) < minimumDisplayMagnitude)
                 return;
 
-            MoteMaker.ThrowText(position, map, (value < 0 ? "" : "+") + SeverityToKilosWithoutBaseWeight(value).ToString($"F{(precision <= 9 && precision >= 0 ? precision : 0)}") + "Kgs");
+            MoteMaker.ThrowText(
+                position, 
+                map, 
+                (value < 0 ? "" : "+") + (GlobalSettings.usePoundsWherePossible ? (SeverityToKilosWithoutBaseWeight(value) * 2.20462f).ToString($"F{(precision <= 9 && precision >= 0 ? precision : 0)}") + "Lbs" : SeverityToKilosWithoutBaseWeight(value).ToString($"F{(precision <= 9 && precision >= 0 ? precision : 0)}") + "Kgs"));
         }
 
         private static Message GetWeightChangedMessage(Pawn pawn, float cachedSeverity, float currentSeverity)
