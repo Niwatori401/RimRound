@@ -2,7 +2,7 @@
 
 <Defs>
   <WorkGiverDef>
-    <defName>DoBillsFabricationBench</defName>
+    <defName>RR_DoBillsGluttoniumFabricator</defName>
     <label>manifest gluttonium</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Smithing</workType>

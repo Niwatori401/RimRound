@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 5489a5f3a00be99eb257f25acbb72cd1c0fdf042
+Commit Hash: 05b27920f88ab46520788a22a919ac3983f67161
+Author: Niwatori401
+Date: Thu Apr 20 08:11:42 2023
+
+Fix pawns being unable to craft at fabrication benches
+
+==================================================
+Commit Hash: 7c0b680604e03a897e2dbad0c9ae462248c171d6
 Author: Niwatori401
 Date: Wed Apr 19 21:15:15 2023
 
