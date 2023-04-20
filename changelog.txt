@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 05b27920f88ab46520788a22a919ac3983f67161
+Commit Hash: 9d85161729363dc640cd4b7ecb1e47dfe5349741
+Author: Niwatori401
+Date: Thu Apr 20 08:28:29 2023
+
+Fix gluttonium based foods being unable to be consumed other than by draft order
+
+==================================================
+Commit Hash: cb6f5f77349f2c0c7e286cfc7d031d68aa421a28
 Author: Niwatori401
 Date: Thu Apr 20 08:11:42 2023
 

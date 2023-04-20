@@ -13,7 +13,7 @@
             <FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
         </statBases>
         <ingestible>
-			<preferability>NeverForNutrition</preferability>
+			<preferability>MealLavish</preferability>
             <foodType>OmnivoreHuman</foodType>        
             <!--tasteThought>AteKibble</tasteThought-->
             <optimalityOffsetHumanlikes>-10</optimalityOffsetHumanlikes>
