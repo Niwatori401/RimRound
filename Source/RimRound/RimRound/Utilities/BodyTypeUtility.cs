@@ -35,6 +35,16 @@ namespace RimRound.Utilities
 
         public static string GetProperBodyGraphicPathFromPawn(Pawn pawn) 
         {
+            if (ModsConfig.BiotechActive && pawn.story.bodyType == BodyTypeDefOf.Baby)
+            {
+                return BodyTypeDefOf.Baby.bodyNakedGraphicPath;
+            }
+            else if (ModsConfig.BiotechActive && pawn.story.bodyType == BodyTypeDefOf.Child) 
+            {
+                return BodyTypeDefOf.Child.bodyNakedGraphicPath;
+            }
+
+
             string basePath = "Things/Pawn/Humanlike/Bodies/";
 
             if (pawn.def is AlienRace.ThingDef_AlienRace alienRace && 

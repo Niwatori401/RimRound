@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingRange", "..\TestingRange\TestingRange.csproj", "{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallationIntegrityChecker", "..\InstallationIntegrityChecker\InstallationIntegrityChecker.csproj", "{92B7AF3A-5F94-4627-BB0C-83D47529F85E}"
 EndProject
 Global
@@ -30,14 +28,6 @@ Global
 		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3A6D912-43D0-47B9-8B10-4C33DC176F0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_3|Any CPU.ActiveCfg = 1_3|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_3|Any CPU.Build.0 = 1_3|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_4|Any CPU.ActiveCfg = 1_4|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.1_4|Any CPU.Build.0 = 1_4|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6CBD9B5-F67E-49C2-A8F8-B9A4B9BD0A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92B7AF3A-5F94-4627-BB0C-83D47529F85E}.1_3|Any CPU.ActiveCfg = Debug|Any CPU
 		{92B7AF3A-5F94-4627-BB0C-83D47529F85E}.1_3|Any CPU.Build.0 = Debug|Any CPU
 		{92B7AF3A-5F94-4627-BB0C-83D47529F85E}.1_4|Any CPU.ActiveCfg = Debug|Any CPU

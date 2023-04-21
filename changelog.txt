@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 9d85161729363dc640cd4b7ecb1e47dfe5349741
+Commit Hash: 1c78d55e2dd7a9c3801141e68b8fefe3e73840fb
+Author: Niwatori401
+Date: Fri Apr 21 11:21:42 2023
+
+Fix babies and children from showing up as pink squares
+Remove old patch maker files
+
+==================================================
+Commit Hash: 98edc9758696bd1448197a0810e3239733f4ef13
 Author: Niwatori401
 Date: Thu Apr 20 08:28:29 2023
 

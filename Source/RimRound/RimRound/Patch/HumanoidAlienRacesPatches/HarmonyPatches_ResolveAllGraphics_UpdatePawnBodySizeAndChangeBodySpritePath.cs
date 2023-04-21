@@ -49,7 +49,7 @@ namespace RimRound.Patch
             return codeInstructions;
         }
 
-        // Replaces GetPath() call
+        // Replaces GetPath() call. If SetPass(0) error crops up, this patch may be the cause
         private static bool ChangeBodyDrawPath(List<CodeInstruction> codeInstructions)
         {
             for (int i = 0; i < codeInstructions.Count; i++)
