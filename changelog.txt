@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 1c78d55e2dd7a9c3801141e68b8fefe3e73840fb
+Commit Hash: 1365820bcdcfd3fc4a84b5964feec9798e5ca657
+Author: Niwatori401
+Date: Fri Apr 21 12:08:56 2023
+
+Fix experimental embiggener adding and then subtracting different weights if multipliers for WG/WL were different
+Change hediff utility functions to optionally apply multipliers for weight
+
+==================================================
+Commit Hash: cf3714ab33254676f58a970f4fffa8a5725df92c
 Author: Niwatori401
 Date: Fri Apr 21 11:21:42 2023
 

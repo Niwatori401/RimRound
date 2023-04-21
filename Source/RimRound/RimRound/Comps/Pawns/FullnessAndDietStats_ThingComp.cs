@@ -326,22 +326,19 @@ namespace RimRound.Comps
         /// <returns>Change in severity</returns>
         private float ChangeWeightAndUpdateSprite(WeightGainRequest gainRequest)
         {
-            float cachedSeverity = this.parent.AsPawn().WeightHediff().Severity;
-
-            Utilities.HediffUtility.AddHediffSeverity(
+            float actualGainedSeverity = Utilities.HediffUtility.AddHediffSeverity(
                  Defs.HediffDefOf.RimRound_Weight,
                  this.parent.AsPawn(),
                  Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(gainRequest.amountToGain),
                  false,
-                 false);
-
-            float newSeverity = this.parent.AsPawn().WeightHediff().Severity;
+                 false,
+                 gainRequest.useMultipliers);
 
             var pbtThingComp = parent.TryGetComp<PawnBodyType_ThingComp>();
             if (pbtThingComp != null)
                 BodyTypeUtility.UpdatePawnSprite(parent.AsPawn(), pbtThingComp.PersonallyExempt, pbtThingComp.CategoricallyExempt);
 
-            return newSeverity - cachedSeverity;
+            return actualGainedSeverity;
         }
 
 
@@ -349,12 +346,13 @@ namespace RimRound.Comps
         {
             if (gainRequest.duration > 0)
             {
-                if (gainRequest.amountToGain > 0)
-                    this.activeWeightLossRequests.Enqueue(new WeightGainRequest(-gainRequest.amountToGain, currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
-                else
-                {
-                    this.activeWeightLossRequests.Enqueue(new WeightGainRequest(Utilities.HediffUtility.SeverityToKilosWithoutBaseWeight(severityChangeFromPriorGain), currentTick + gainRequest.duration, 0, gainRequest.triggerMessages));
-                }
+                this.activeWeightLossRequests.Enqueue(
+                    new WeightGainRequest(
+                        -1*Utilities.HediffUtility.SeverityToKilosWithoutBaseWeight(severityChangeFromPriorGain), 
+                        currentTick + gainRequest.duration, 
+                        0, 
+                        gainRequest.triggerMessages,
+                        false));
             }
         }
 
@@ -693,8 +691,6 @@ namespace RimRound.Comps
 
 
 
-
-
         bool ShouldShowWeightGizmo()
         {
             List<object> selectedPawns = new List<object>();
@@ -909,17 +905,19 @@ namespace RimRound.Comps
         /// <param name="tickToApplyOn">Tick after which the request should be executed.</param>
         /// <param name="duration">Number of ticks for the weight to stay applied. If set to 0, weight gained is permanent.</param>
         /// <param name="triggerMessages">Whether weight gained from this should trigger the notifications at the top of the screen.</param>
-        public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0, bool triggerMessages = false)
+        public WeightGainRequest(float amountToGain, int tickToApplyOn, int duration = 0, bool triggerMessages = false, bool useMultipliers = true)
         {
             this.amountToGain = amountToGain;
             this.tickToApplyOn = tickToApplyOn;
             this.duration = duration;
             this.triggerMessages = triggerMessages;
+            this.useMultipliers = useMultipliers;
         }
         public float amountToGain;
         public int tickToApplyOn;
         public int duration;
         public bool triggerMessages;
+        public bool useMultipliers;
     }
 
 
