@@ -17,20 +17,6 @@ namespace RimRound.Patch
     [HarmonyPatch(nameof(Graphic_Multi.Init))]
     public class Graphic_Multi_Init_DontLogErrorsForRimRound
     {
-        
-        public static bool Prefix(GraphicRequest __0) 
-        {
-            var path1 = ContentFinder<Texture2D>.Get(__0.path + "_north", false);
-            var path2 = ContentFinder<Texture2D>.Get(__0.path + "_west", false);
-            var path3 = ContentFinder<Texture2D>.Get(__0.path + "_east", false);
-            var path4 = ContentFinder<Texture2D>.Get(__0.path + "_south", false);
-
-            //if (path1 is null && path2 is null && path3 is null && path4 is null)
-                //return false;
-
-            return true;
-        }
-        
         /// <summary>
         /// Filler function to consume the string off of the stack in place of the error logger.
         /// </summary>
