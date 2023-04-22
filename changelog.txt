@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 1365820bcdcfd3fc4a84b5964feec9798e5ca657
+Commit Hash: f0b5bacb7f9898b90a2c18003e4008830ff5b89c
+Author: Niwatori401
+Date: Sat Apr 22 04:17:12 2023
+
+Reduce experimental drugs research cost from 12000 to 4200
+Update RimRoundExtraWeapons binary
+
+==================================================
+Commit Hash: 0555dbf7af7a6f75909f3db5fddfc7bbfb1ca5c0
 Author: Niwatori401
 Date: Fri Apr 21 12:08:56 2023
 

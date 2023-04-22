@@ -179,7 +179,7 @@
 		<label>experimental drugs</label>
 		<tab>RimRoundTech</tab>
 		<description>Fabricate terrifying experimental drugs with extreme caloric density.</description>
-		<baseCost>12000</baseCost>
+		<baseCost>4200</baseCost>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
