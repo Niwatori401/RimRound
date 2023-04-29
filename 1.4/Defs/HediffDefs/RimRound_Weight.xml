@@ -11,7 +11,7 @@
 		
 		<modExtensions>
 			<li Class="RimRound.Hediffs.HediffDef_Weight">
-				<baseWeight>40</baseWeight>
+				<baseWeight>25</baseWeight>
 			</li>
 		</modExtensions>
 

@@ -49,6 +49,11 @@ namespace RimRound.Defs
         public static BodyTypeDef M_990_Gelatinous;
         public static BodyTypeDef M_995_Gelatinous;
 
+
+        public static BodyTypeDef F_002_Emaciated;
+        public static BodyTypeDef F_003_Starved;
+        public static BodyTypeDef F_004_Scrawny;
+
         public static BodyTypeDef F_005_Thick;
         public static BodyTypeDef F_006_Chonky;
         public static BodyTypeDef F_010_Chubby;

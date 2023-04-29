@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: f0b5bacb7f9898b90a2c18003e4008830ff5b89c
+Commit Hash: de9fbeab5a6caf562ef4c2ba0047ee264c95abac
+Author: Niwatori401
+Date: Sat Apr 29 01:30:01 2023
+
+Add three new visual stages below thin
+
+==================================================
+Commit Hash: 52a6829f650f23cb6d8c9a850889980f25cb147f
 Author: Niwatori401
 Date: Sat Apr 22 04:17:12 2023
 
