@@ -1,9 +1,16 @@
 ==================================================
-Commit Hash: de9fbeab5a6caf562ef4c2ba0047ee264c95abac
+Commit Hash: af01734af45dabae864c1c7f2cac619784f7881b
+Author: Niwatori401
+Date: Thu May 4 11:31:21 2023
+
+Add modd compatibility with VanillaOutpostsExpanded's mining outposts
+
+==================================================
+Commit Hash: 97388400840f599e4c7f812821b64686e7273472
 Author: Niwatori401
 Date: Sat Apr 29 01:30:01 2023
 
-Add three new visual stages below thin
+Add three new visual stages below thin, courtesy Sunward
 
 ==================================================
 Commit Hash: 52a6829f650f23cb6d8c9a850889980f25cb147f
