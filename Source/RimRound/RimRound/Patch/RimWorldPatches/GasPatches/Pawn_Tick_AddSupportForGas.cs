@@ -20,6 +20,9 @@ namespace RimRound.Patch
     {
         public static void Postfix(Pawn __instance) 
         {
+            if (__instance is null)
+                return;
+
             if (!__instance.IsHashIntervalTick(150) || __instance.Suspended || !__instance.RaceProps.Humanlike)
                 return;
 
