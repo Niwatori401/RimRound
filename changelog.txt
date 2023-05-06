@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 72de9d2f40eee6a951d9a866d7a7f56901ac78b5
+Commit Hash: 6036b3f33a6d785732c9ea83e3be949428480b77
+Author: Niwatori401
+Date: Sat May 6 05:14:13 2023
+
+Fix possible NRE in gas checks
+
+==================================================
+Commit Hash: c5f8ebe9367f06cbc9ed41641c669e25e503ed4d
 Author: Niwatori401
 Date: Fri Apr 21 11:28:00 2023
 
