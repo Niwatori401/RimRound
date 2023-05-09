@@ -15,6 +15,16 @@ namespace RimRound.Hediffs
 
     public class Hediff_Weight : Hediff
     {
+        public override void PostAdd(DamageInfo? dinfo)
+        {
+            base.PostAdd(dinfo);
+
+            if (this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is null)
+            {
+                this.pawn.health.RemoveHediff(this);
+            }
+        }
+
         public static HediffDef_Weight ModExtension 
         {
             get 

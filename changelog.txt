@@ -1,5 +1,28 @@
 ==================================================
-Commit Hash: 6036b3f33a6d785732c9ea83e3be949428480b77
+Commit Hash: c93a8e26a8e5b9bc56be2b02ab1a416c8c515f49
+Author: Niwatori401
+Date: Tue May 9 10:34:01 2023
+
+Fix Warcaskets from Vanilla Pirates Expanded displaying as tshirts
+
+==================================================
+Commit Hash: a78b3f4a77a21a374828cad1a3e0692fc744a904
+Author: Niwatori401
+Date: Fri Jun 23 11:52:34 2023
+
+Revert bad commit "Recompile solution"
+
+This reverts commit 72ff0d857ce5e5ea8839d720823aa628a795321b.
+
+==================================================
+Commit Hash: 72ff0d857ce5e5ea8839d720823aa628a795321b
+Author: Niwatori401
+Date: Wed Apr 12 09:15:36 2023
+
+Recompile solution
+
+==================================================
+Commit Hash: fec2c27de245cd39beceb0690b95d84d6e35ecf7
 Author: Niwatori401
 Date: Sat May 6 05:14:13 2023
 
