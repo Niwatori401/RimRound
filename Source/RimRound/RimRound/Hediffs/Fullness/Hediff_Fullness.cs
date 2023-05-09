@@ -17,6 +17,18 @@ namespace RimRound.Hediffs
         /// <summary>
         /// 1 is no mitigation, 0 is full mitigation
         /// </summary>
+        /// 
+
+        public override void PostAdd(DamageInfo? dinfo)
+        {
+            base.PostAdd(dinfo);
+
+            if (this.pawn.TryGetComp<FullnessAndDietStats_ThingComp>() is null) 
+            {
+                this.pawn.health.RemoveHediff(this);
+            }
+        }
+
         public float PainMigigationFactor
         {
             get 

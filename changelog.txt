@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 58cb1d19f2e4ae24efb5d560a0a641f0d6d02985
+Commit Hash: a816a15d961b84c29f6642f08a1a509f8e1ef59f
+Author: Niwatori401
+Date: Tue May 9 10:34:01 2023
+
+Fix Warcaskets from Vanilla Pirates Expanded displaying as tshirts
+
+==================================================
+Commit Hash: f29feeafaa8d6ae542cf379b61d05afd782166e5
 Author: Niwatori401
 Date: Sat May 6 05:15:17 2023
 

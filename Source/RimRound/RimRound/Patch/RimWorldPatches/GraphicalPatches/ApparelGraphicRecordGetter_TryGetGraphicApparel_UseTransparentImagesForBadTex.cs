@@ -99,7 +99,14 @@ namespace RimRound.Patch
         /// </summary>
         public static Graphic GetApparelGraphic(string graphicPath, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType) 
 		{
-            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || apparel.def.apparel.LastLayer.defName == "OnHead" || apparel.def.apparel.LastLayer.defName == "StrappedHead")
+            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || 
+                apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || 
+                PawnRenderer.RenderAsPack(apparel) || 
+                apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || 
+                apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || 
+                apparel.def.apparel.LastLayer.defName == "OnHead" || 
+                apparel.def.apparel.LastLayer.defName == "StrappedHead" ||
+                (from tag in apparel.def.apparel.tags where tag.Contains("Warcasket") select tag).Count() > 0)
             {
                 graphicPath = apparel.WornGraphicPath;
             } 
@@ -135,7 +142,14 @@ namespace RimRound.Patch
 
         private static string AlterGraphicPathIfLastLayerIsOuter(Apparel apparel, string apparelGraphicPath)
         {
-            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || PawnRenderer.RenderAsPack(apparel) || apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || apparel.def.apparel.LastLayer.defName == "OnHead" || apparel.def.apparel.LastLayer.defName == "StrappedHead")
+            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || 
+                apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || 
+                PawnRenderer.RenderAsPack(apparel) || 
+                apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || 
+                apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || 
+                apparel.def.apparel.LastLayer.defName == "OnHead" || 
+                apparel.def.apparel.LastLayer.defName == "StrappedHead" ||
+                (from tag in apparel.def.apparel.tags where tag.Contains("Warcasket") select tag).Count() > 0)
             {
                 apparelGraphicPath = apparel.WornGraphicPath;
             }
