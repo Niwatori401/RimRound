@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: a816a15d961b84c29f6642f08a1a509f8e1ef59f
+Commit Hash: 9f3037c9a96bf8fb83ca95ccdb9c6eff1ee101b6
+Author: Niwatori401
+Date: Fri Jun 23 12:11:44 2023
+
+Add race support for Dreemurr Race (Continued)
+
+==================================================
+Commit Hash: d850beb83dd6dce6f390c4abf7bc7bc44827b309
 Author: Niwatori401
 Date: Tue May 9 10:34:01 2023
 
