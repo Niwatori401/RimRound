@@ -1,5 +1,19 @@
 ==================================================
-Commit Hash: 9f3037c9a96bf8fb83ca95ccdb9c6eff1ee101b6
+Commit Hash: 46f20f700905b65c61c0bf13b935dd5230fb4970
+Author: Niwatori401
+Date: Mon Sep 25 09:47:39 2023
+
+Update perks with the following changes:
+* Titanic Tank - Raise weight requirement to Corpulent.
+* Bulletproof - Blob-Lower weight requirement to Lardy I.
+* Fat Furnace - Lower weight requirement to Titanic I.
+* Rotund Regeneration - Lower weight requirement to Obese.
+* Paunch Power - Lower weight requirement from Gelatinous 7 to Gelatinous 4.
+* Giga Gurgling - Reduce number of purchasable levels from 6 to 5.
+* Well Insulated - Increase point cost from 3 to 5. Reduce levels from 5 to 4.
+
+==================================================
+Commit Hash: 698ba887bb5da47852814867cfe3acca9baad58d
 Author: Niwatori401
 Date: Fri Jun 23 12:11:44 2023
 
