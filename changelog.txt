@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: df7ac7b3e72f2a86b80a6998c95adb6bef2171d2
+Commit Hash: ed106a097d60428340bbb126337d1920dec00015
+Author: Niwatori401
+Date: Mon Sep 25 21:52:12 2023
+
+Add race entries for Ursine races
+
+==================================================
+Commit Hash: 657d67622c559c189710bf51bd1495629a34f6bd
 Author: Niwatori401
 Date: Mon Sep 25 11:04:41 2023
 
