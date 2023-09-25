@@ -32,6 +32,7 @@
             <texPath>Things/Item/GluttoniumFood/CrammedCroissant</texPath>
         </graphicData>
         <statBases>
+			<WorkToMake>2400</WorkToMake>
             <MarketValue>500</MarketValue>
             <Mass>1.6</Mass>
             <Nutrition>20</Nutrition>
@@ -53,6 +54,7 @@
             <texPath>Things/Item/GluttoniumFood/MechaniteMuffin</texPath>
         </graphicData>
         <statBases>
+			<WorkToMake>1920</WorkToMake>		
             <MarketValue>300</MarketValue>
             <Mass>0.7</Mass>
             <Nutrition>12</Nutrition>
@@ -74,6 +76,7 @@
             <texPath>Things/Item/GluttoniumFood/PackedPizza</texPath>
         </graphicData>
         <statBases>
+			<WorkToMake>3240</WorkToMake>		
             <MarketValue>1000</MarketValue>
             <Mass>2.0</Mass>
             <Nutrition>40</Nutrition>
@@ -95,6 +98,7 @@
             <texPath>Things/Item/GluttoniumFood/LaBombe</texPath>
         </graphicData>
         <statBases>
+			<WorkToMake>5400</WorkToMake>		
             <MarketValue>2000</MarketValue>
             <Mass>5.5</Mass>
             <Nutrition>60</Nutrition>
@@ -246,6 +250,7 @@
             <texPath>Things/Item/GluttoniumFood/AlphaBall</texPath>
         </graphicData>
         <statBases>
+			<WorkToMake>4320</WorkToMake>
             <MarketValue>20000</MarketValue>
             <Mass>50</Mass>
             <Nutrition>200</Nutrition>
@@ -267,6 +272,7 @@
             <texPath>Things/Item/GluttoniumFood/OmegaBall</texPath>
         </graphicData>
         <statBases>
+			<WorkToMake>8640</WorkToMake>
             <MarketValue>100000</MarketValue>
             <Mass>80</Mass>
             <Nutrition>500</Nutrition>

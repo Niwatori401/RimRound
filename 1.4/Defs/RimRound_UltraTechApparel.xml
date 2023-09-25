@@ -71,7 +71,7 @@
 			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_JUMPSUIT</texPath>
 		</graphicData>
 		<costList>
-			<Hyperweave>70</Hyperweave>
+			<Hyperweave>60</Hyperweave>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>RR_Research_MetabolicTextiles</researchPrerequisite>
@@ -84,7 +84,7 @@
 			<Beauty>-2</Beauty>
 			<MaxHitPoints>120</MaxHitPoints>
 			<Flammability>0.2</Flammability>
-			<WorkToMake>100</WorkToMake>
+			<WorkToMake>5040</WorkToMake>
 			<Mass>1.1</Mass>
 			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
@@ -124,7 +124,7 @@
 			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_BELT</texPath>
 		</graphicData>
 		<costList>
-			<Hyperweave>50</Hyperweave>
+			<Hyperweave>30</Hyperweave>
 			<Steel>20</Steel>
 		</costList>
 		<recipeMaker>
@@ -137,7 +137,7 @@
 			<Beauty>1</Beauty>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0.1</Flammability>
-			<WorkToMake>200</WorkToMake>
+			<WorkToMake>4560</WorkToMake>
 			<Mass>2</Mass>
 			<EquipDelay>2</EquipDelay>
 			<DeteriorationRate>2</DeteriorationRate>
@@ -172,8 +172,8 @@
 			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_PROTOSUIT</texPath>
 		</graphicData>
 		<costList>
-			<Hyperweave>90</Hyperweave>
-			<ComponentSpacer>2</ComponentSpacer>
+			<Hyperweave>75</Hyperweave>
+			<ComponentSpacer>3</ComponentSpacer>
 			<Gold>10</Gold>
 		</costList>
 		<recipeMaker>
@@ -186,7 +186,7 @@
 			<Beauty>1</Beauty>
 			<MaxHitPoints>180</MaxHitPoints>
 			<Flammability>0.1</Flammability>
-			<WorkToMake>240</WorkToMake>
+			<WorkToMake>10020</WorkToMake>
 			<Mass>1.5</Mass>
 			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.46</ArmorRating_Blunt>
@@ -225,7 +225,7 @@
 			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_GLOVES</texPath>
 		</graphicData>
 		<costList>
-			<Hyperweave>40</Hyperweave>
+			<Hyperweave>25</Hyperweave>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>RR_Research_UltraTechMetabolicTextiles</researchPrerequisite>		
@@ -238,7 +238,7 @@
 			<Beauty>-1</Beauty>
 			<MaxHitPoints>150</MaxHitPoints>
 			<Flammability>0.1</Flammability>
-			<WorkToMake>40</WorkToMake>
+			<WorkToMake>2640</WorkToMake>
 			<Mass>1.3</Mass>
 			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
@@ -276,8 +276,8 @@
 			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_COLLAR</texPath>
 		</graphicData>
 		<costList>
-			<Hyperweave>30</Hyperweave>
-			<Gold>10</Gold>
+			<Hyperweave>20</Hyperweave>
+			<Gold>7</Gold>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>RR_Research_UltraTechMetabolicTextiles</researchPrerequisite>		
@@ -290,7 +290,7 @@
 			<Beauty>1</Beauty>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0.1</Flammability>
-			<WorkToMake>25</WorkToMake>
+			<WorkToMake>2400</WorkToMake>
 			<Mass>0.1</Mass>
 			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
@@ -333,7 +333,7 @@
 			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_HYPERBELT</texPath>
 		</graphicData>
 		<costList>
-			<Hyperweave>70</Hyperweave>
+			<Hyperweave>60</Hyperweave>
 			<Steel>30</Steel>
 			<Plasteel>20</Plasteel>
 		</costList>
@@ -347,7 +347,7 @@
 			<Beauty>1</Beauty>
 			<MaxHitPoints>140</MaxHitPoints>
 			<Flammability>0.1</Flammability>
-			<WorkToMake>300</WorkToMake>
+			<WorkToMake>8640</WorkToMake>
 			<Mass>2.6</Mass>
 			<EquipDelay>2</EquipDelay>
 			<DeteriorationRate>2</DeteriorationRate>

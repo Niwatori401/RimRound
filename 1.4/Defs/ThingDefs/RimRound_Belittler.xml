@@ -39,7 +39,7 @@
     <soundInteract>Interact_Revolver</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
-      <WorkToMake>60</WorkToMake>
+      <WorkToMake>4020</WorkToMake>
       <Mass>0.6</Mass>
       <AccuracyTouch>0.80</AccuracyTouch>
       <AccuracyShort>0.90</AccuracyShort>

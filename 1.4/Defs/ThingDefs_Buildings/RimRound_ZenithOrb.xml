@@ -41,7 +41,7 @@
         </comps>		
         <statBases>
             <MaxHitPoints>250</MaxHitPoints>
-            <WorkToBuild>2000</WorkToBuild>
+            <WorkToBuild>10000</WorkToBuild>
             <Beauty>20</Beauty>
             <Flammability>1.0</Flammability>
             <Mass>70</Mass>

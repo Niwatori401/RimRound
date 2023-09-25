@@ -80,7 +80,7 @@ namespace RimRound.Things
             if (GeneralUtility.IsHashIntervalTick(tickCheckInterval) && CurrentPawn != null)
             {
                 if (CachedPowerTrader.PowerOn && GenRadial.RadialCellsAround(this.Position, cellRadius, true).Contains(CachedFNDComp.parent.Position))
-                    CachedFNDComp.activeWeightGainRequests.Enqueue(new WeightGainRequest(100, Find.TickManager.TicksGame + 10, 0, false));
+                    CachedFNDComp.activeWeightGainRequests.Enqueue(new WeightGainRequest(50, Find.TickManager.TicksGame + 10, 0, false));
             }
         }
 

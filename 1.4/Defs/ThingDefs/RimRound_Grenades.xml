@@ -19,7 +19,7 @@
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>1.1</Mass>
 			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
-			<WorkToMake>12000</WorkToMake>
+			<WorkToMake>14400</WorkToMake>
 			<DeteriorationRate>2.5</DeteriorationRate>
 			<Beauty>-3</Beauty>
 		</statBases>

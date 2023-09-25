@@ -1,5 +1,40 @@
 ==================================================
-Commit Hash: 46f20f700905b65c61c0bf13b935dd5230fb4970
+Commit Hash: df7ac7b3e72f2a86b80a6998c95adb6bef2171d2
+Author: Niwatori401
+Date: Mon Sep 25 11:04:41 2023
+
+Update stats for the following:
+* Gluttonium price
+* Zenith orb effectiveness and build cost
+* Gluttonium fabricator build cost
+* Crammed Croissant
+* Mechanite Muffin
+* Packed Pizza
+* La Bombe
+* Alpha Ball
+* Omega Ball
+* Ultratech cooking module
+* Experimental belittler
+* Flab grenades
+* Novatech gloves
+* Novatech collar
+* Novatech jumpsuit
+* Novatech proto-suit
+* Novatech belt
+* Novatech hyperbelt
+* Small food storage vat
+* Feeding tube storage
+* Massive feeding tube storage
+* Food processor
+* Nutrient distillery
+* XL hopper
+* Feeding tube valve
+* Food pipe
+* Automatic food dispenser
+* Advanced automatic food dispenser
+
+==================================================
+Commit Hash: 1b6a614e08523c8d1d6ca6246c8cd57c2b83c1c4
 Author: Niwatori401
 Date: Mon Sep 25 09:47:39 2023
 

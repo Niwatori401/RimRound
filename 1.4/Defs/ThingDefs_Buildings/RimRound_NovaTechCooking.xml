@@ -107,7 +107,7 @@
     <statBases>
       <Beauty>2</Beauty>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>2500</WorkToBuild>
+      <WorkToBuild>4020</WorkToBuild>
       <Mass>60</Mass>
       <Flammability>0.02</Flammability>
     </statBases>
@@ -132,7 +132,7 @@
     <comps>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.35</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous> <!--Ask about this-->
       </li>

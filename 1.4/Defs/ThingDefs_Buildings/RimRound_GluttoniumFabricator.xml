@@ -11,7 +11,7 @@
             <Mass>2600</Mass>
             <MaxHitPoints>550</MaxHitPoints>
             <Beauty>2</Beauty>
-            <WorkToBuild>5000</WorkToBuild>
+            <WorkToBuild>8000</WorkToBuild>
             <Flammability>1.0</Flammability>
         </statBases>
         <minifiedDef Inherit="false"/>

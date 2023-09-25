@@ -34,7 +34,7 @@
     <useHitPoints>false</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
     <statBases>
-      <MarketValue>9</MarketValue>
+      <MarketValue>14</MarketValue>
       <Mass>0.25</Mass>
       <StuffPower_Armor_Sharp>1.14</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
