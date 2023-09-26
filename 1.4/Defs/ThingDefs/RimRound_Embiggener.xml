@@ -56,7 +56,7 @@
   
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>RR_FatteningPistol</defName>
-    <label>Experimental Enbiggener</label>
+    <label>Experimental Embiggener</label>
     <description>This weapon uses specialized cartridges that inject the target with a highly concentrated mutagenic substance. When this substance enters the blood stream it interacts with fat cells causing them to multiply rapidly.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/RimRoundExperimentalGun</texPath>
@@ -128,7 +128,7 @@
   
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>RR_FatteningPistol_Permanent</defName>
-    <label>Advanced Experimental Enbiggener</label>
+    <label>Advanced Experimental Embiggener</label>
     <description>An advanced prototype of the experimental embiggener. A high-calibre, large-framed revolver with a multitude of high-tech enhancements. It fires mutagenic cartridges that embed themselves in the target's body and remain there, causing their fat cells to multiply on a much more permanent basis. Although the cartridges themselves are effective and reliable, the weapon itself can only hold a magazine of six bullets and the cartridge's experimental nature causes them to ruin each cylinder with their velocity when fired, preventing the user from loading more cartridges.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/RimRoundExperimentalGun_Permanent</texPath>
