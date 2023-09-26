@@ -224,7 +224,7 @@
         <label>colossal gluttonium meal</label>
         <description>Somebody just put gluttonium into a pile as high as they could reach and called it a meal. Any individual that "accidentally" ingests it will quickly find themselves several orders of magnitude fatter than before.</description>
         <graphicData>
-            <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+            <texPath>Things/Item/GluttoniumFood/GluttoniumMealColossal</texPath>
         </graphicData>
         <statBases>
             <MarketValue>20000</MarketValue>

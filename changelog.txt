@@ -1,5 +1,14 @@
 ==================================================
-Commit Hash: ed106a097d60428340bbb126337d1920dec00015
+Commit Hash: 0cebe712376fb132c1f49954f8916f3f9b71283d
+Author: Niwatori401
+Date: Tue Sep 26 10:14:08 2023
+
+Update perk icons
+Update various sprites
+Update localization to reflect perk rebalances
+
+==================================================
+Commit Hash: 928521e4072a1b29ade40922cdec5e3bc800bc38
 Author: Niwatori401
 Date: Mon Sep 25 21:52:12 2023
 
