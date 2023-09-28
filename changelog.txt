@@ -1,5 +1,14 @@
 ==================================================
-Commit Hash: 368cfd20c15f917f235dedf32f8dc0c006004341
+Commit Hash: a9c0c0016d9b36507a96d6aacf3350e9a22886fe
+Author: Niwatori401
+Date: Thu Sep 28 13:00:01 2023
+
+Add preliminary race support for Ursine of the Rim
+Modify patch maker to parse &quot and &comma as literals
+Add new patch maker subpatch
+
+==================================================
+Commit Hash: b11569c2bd157e09ea2856a8e821657c3238df2f
 Author: Niwatori401
 Date: Thu Sep 28 10:30:41 2023
 

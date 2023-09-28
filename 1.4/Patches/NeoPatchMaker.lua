@@ -72,7 +72,7 @@ function delete_files_windows(directoriesToWipe)
   for _, directory in ipairs(directoriesToWipe) do
       local dirCmd = "cmd.exe /c dir /b /s /a-d \"" .. directory .. "\""
       local directoryFiles = io.popen(dirCmd):lines()
-      
+
       for file in directoryFiles do
           table.insert(files, file)
       end
@@ -87,6 +87,13 @@ function delete_files_windows(directoriesToWipe)
           end
       end
   end
+end
+
+function convert_special_charcodes(t)
+    for i, row in ipairs(t) do
+        t[i] = string.gsub(t[i], "&comma", ",")
+        t[i] = string.gsub(t[i], "&quot", "\"")
+    end
 end
 
 function assemble_patches_and_write_to_file(basePath)
@@ -114,6 +121,7 @@ function assemble_patches_and_write_to_file(basePath)
 end
 
 
+
 function write_patchtable(filename, basefirsthalf, innerpatch, baselasthalf, modname)
   file = io.open(filename, "w+")
   io.output(file)
@@ -125,6 +133,7 @@ function write_patchtable(filename, basefirsthalf, innerpatch, baselasthalf, mod
 
   for i, patch in pairs(innerpatch) do
       for j, p in pairs(patch) do
+          convert_special_charcodes(p)
           for _, line in pairs(p) do
               io.write(line .. "\n")
           end
@@ -374,7 +383,7 @@ function get_patchdata(baseDirectory)
   table.insert(aPatchData, {"RimRound_AddNutritionDensity",                       "setNutritionDensity",                       })
   table.insert(aPatchData, {"RimRound_AlterMaxToIngestAtOnceTag",                 "alterMaxToIngestTag",                       })
   table.insert(aPatchData, {"RimRound_AdjustAlignWithHeadTag",                    "alignWithHeadPatches",                      })
-
+  table.insert(aPatchData, {"RimRound_ReplaceSkinColor",                          "replaceRaceColorData",                      })
   return aPatchData
 end
 

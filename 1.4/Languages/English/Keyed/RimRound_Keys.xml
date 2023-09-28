@@ -480,7 +480,12 @@ DO NOT ADD A TRANSLATION KEY FOR ANY TAGS BELOW
 They are meant to be the contents of a text files.
 It's a bit of a hack, but I couldn't find a non-invasive way to load the text in without baking it into the binary.
 -->
-<RR_TextureData>Anthro,BW</RR_TextureData>
+<RR_TextureData>Anthro,BW
+GS_Bear_Brown,BW
+GS_Bear_Polar,BW
+GS_Bear_Panda,BW
+GS_Bear_Luna,BW
+GS_Bear_Cave,BW</RR_TextureData>
 
 <RR_RaceData>AFoxbold,set070
 Alien_Avali,set070
@@ -516,6 +521,11 @@ ChjAndroid,defaultSet
 Dragon_Kilhn,defaultSet
 EA_SylveonRace,defaultSet
 Fantasy_Goblin,defaultSet
+GS_Bear_Brown,defaultSet
+GS_Bear_Polar,defaultSet
+GS_Bear_Panda,defaultSet
+GS_Bear_Luna,defaultSet
+GS_Bear_Cave,defaultSet
 HalfDragon,defaultSet
 HalfDragon_colonist,defaultSet
 Human,defaultSet
