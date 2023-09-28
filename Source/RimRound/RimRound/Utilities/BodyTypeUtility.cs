@@ -33,13 +33,13 @@ namespace RimRound.Utilities
         }
 
 
-        public static string GetProperBodyGraphicPathFromPawn(Pawn pawn) 
+        public static string GetProperBodyGraphicPathFromPawn(Pawn pawn)
         {
             if (ModsConfig.BiotechActive && pawn.story.bodyType == BodyTypeDefOf.Baby)
             {
                 return BodyTypeDefOf.Baby.bodyNakedGraphicPath;
             }
-            else if (ModsConfig.BiotechActive && pawn.story.bodyType == BodyTypeDefOf.Child) 
+            else if (ModsConfig.BiotechActive && pawn.story.bodyType == BodyTypeDefOf.Child)
             {
                 return BodyTypeDefOf.Child.bodyNakedGraphicPath;
             }
@@ -47,8 +47,8 @@ namespace RimRound.Utilities
 
             string basePath = "Things/Pawn/Humanlike/Bodies/";
 
-            if (pawn.def is AlienRace.ThingDef_AlienRace alienRace && 
-                alienRace.alienRace.graphicPaths.body.path is String alienBodyPath && 
+            if (pawn.def is AlienRace.ThingDef_AlienRace alienRace &&
+                alienRace.alienRace.graphicPaths.body.path is String alienBodyPath &&
                 alienBodyPath != basePath)
             {
                 if (!IsRRBody(pawn.story.bodyType))
@@ -61,7 +61,28 @@ namespace RimRound.Utilities
                 }
             }
 
-            return ConvertBodyPathStringsIfNecessary(basePath +"Naked_" + pawn.story.bodyType.defName);
+            string convertedString = ConvertBodyPathStringsIfNecessary(basePath +"Naked_" + pawn.story.bodyType.defName);
+
+            if (pawn.def is AlienRace.ThingDef_AlienRace alienRace2 && RacialBodyTypeInfoUtility.specialRacialTextureSuffixes.ContainsKey(alienRace2.defName))
+            {
+                if (RacialBodyTypeInfoUtility.validTextureSuffixes.ContainsKey(RacialBodyTypeInfoUtility.specialRacialTextureSuffixes[alienRace2.defName]))
+                {
+                    Regex pattern = RacialBodyTypeInfoUtility.validTextureSuffixes[RacialBodyTypeInfoUtility.specialRacialTextureSuffixes[alienRace2.defName]];
+
+                    if (pattern.IsMatch(convertedString))
+                    {
+                        int lastSlash2 = convertedString.LastIndexOf('/');
+
+                        string basePath2 = convertedString.Substring(0, lastSlash2 + 1);
+                        string bodyTypeName2 = convertedString.Substring(lastSlash2 + 1);
+
+                        convertedString = basePath2 + RacialBodyTypeInfoUtility.specialRacialTextureSuffixes[alienRace2.defName] + "/" + bodyTypeName2;
+
+                    }
+                }
+            }
+
+            return convertedString;
         }
 
         public static string ConvertBodyPathStringsIfNecessary(string originalBodyPath)
@@ -86,6 +107,8 @@ namespace RimRound.Utilities
             bodyTypeName = RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(DefDatabase<BodyTypeDef>.GetNamed(bodyTypeName)).ToString();
             bodyTypeName = ConvertBodyTypeDefDefnameAccordingToSettings(bodyTypeName);
 
+
+
             return basePath + "Naked_" + bodyTypeName;
         }
 
@@ -98,7 +121,7 @@ namespace RimRound.Utilities
             return IsRRBody(p.story.bodyType);
         }
 
-        public static bool IsRRBody(BodyTypeDef bodyTypeDef) 
+        public static bool IsRRBody(BodyTypeDef bodyTypeDef)
         {
             return IsRRBody(bodyTypeDef.defName);
         }
@@ -133,14 +156,15 @@ namespace RimRound.Utilities
             {
                 bodytypeCleaned = Regex.Replace(bodytypeCleaned, "[0-9]{3}", "100");
             }
+
             return bodytypeCleaned;
         }
 
         static Dictionary<Pawn, Corpse> cachedCorpseContainingPawnResults = new Dictionary<Pawn, Corpse>();
 
-        public static void InvalidateCorpseCache() 
+        public static void InvalidateCorpseCache()
         {
-            cachedCorpseContainingPawnResults.Clear();        
+            cachedCorpseContainingPawnResults.Clear();
         }
 
         /// <summary>
@@ -149,7 +173,7 @@ namespace RimRound.Utilities
         /// <param name="pawn">Pawn returned from cache</param>
         /// <param name="corpse">Corpse returned from cache</param>
         /// <returns>true of cache needs wiped, false otherwise.</returns>
-        static bool CorpseCacheIsStale(Pawn pawn, Corpse corpse) 
+        static bool CorpseCacheIsStale(Pawn pawn, Corpse corpse)
         {
             if (corpse.InnerPawn.ThingID != pawn.ThingID)
                 return true;
@@ -157,7 +181,7 @@ namespace RimRound.Utilities
             return false;
         }
 
-        public static Corpse GetCorpseContainingPawn(Pawn pawn) 
+        public static Corpse GetCorpseContainingPawn(Pawn pawn)
         {
             if (!pawn.Dead)
             {
@@ -169,7 +193,7 @@ namespace RimRound.Utilities
             {
                 return corpse;
             }
-            else 
+            else
             {
                 List<Corpse> allCorpses = new List<Corpse>();
                 ThingOwnerUtility.GetAllThingsRecursively<Corpse>(Find.CurrentMap, ThingRequest.ForGroup(ThingRequestGroup.Corpse), allCorpses, true, null, true);
@@ -178,7 +202,7 @@ namespace RimRound.Utilities
                     delegate (Corpse c)
                     {
                         if (!(c.InnerPawn?.RaceProps?.Humanlike is bool b && b))
-                        return false;
+                            return false;
 
                         return c.InnerPawn.ThingID == pawn.ThingID;
                     }
@@ -200,7 +224,7 @@ namespace RimRound.Utilities
             }
             else
                 return corpse;
-                
+
         }
 
         public static BodyTypeDef GetBodyTypeBasedOnWeightSeverity(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)
@@ -255,7 +279,7 @@ namespace RimRound.Utilities
                 return result;
 
             int chosenBodyTypeNumber;
-            if (!int.TryParse(Regex.Match(result.defName, "[FM]_[0-9]{3}").Value.Substring(2), out chosenBodyTypeNumber)) 
+            if (!int.TryParse(Regex.Match(result.defName, "[FM]_[0-9]{3}").Value.Substring(2), out chosenBodyTypeNumber))
             {
                 Log.Error("Failed to get body number from defName.");
                 chosenBodyTypeNumber = 0;
@@ -335,9 +359,9 @@ namespace RimRound.Utilities
         {
             if (!ValidatePawnShouldBeRedrawn(pawn))
                 return;
-            
+
             PortraitsCache.SetDirty(pawn);
-            GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);  
+            GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);
             pawn?.Drawer?.renderer?.graphics?.ResolveAllGraphics();
         }
 
@@ -372,7 +396,7 @@ namespace RimRound.Utilities
         /// </summary>
         /// <param name="p">The pawn to check for eligibility.</param>
         /// <returns>true if they should be exempt, false otherwise.</returns>
-        public static ExemptionReason CheckExemptions(Pawn p) 
+        public static ExemptionReason CheckExemptions(Pawn p)
         {
             if (GlobalSettings.bodyChangeFemale is false && p.gender is Gender.Female)
                 return new ExemptionReason("RR_ExemptionReason_FemaleDisabled".Translate());
@@ -394,7 +418,7 @@ namespace RimRound.Utilities
         }
 
 
-        internal static void AssignPersonalCategoricalExemptions(PawnBodyType_ThingComp comp) 
+        internal static void AssignPersonalCategoricalExemptions(PawnBodyType_ThingComp comp)
         {
             if (comp is null)
                 return;
@@ -405,7 +429,7 @@ namespace RimRound.Utilities
             comp.CategoricallyExempt = CheckExemptions(comp.parent.AsPawn());
         }
 
-        internal static void UpdateAllPawnSprites() 
+        internal static void UpdateAllPawnSprites()
         {
             List<Map> maps = Find.Maps.ToList();
             foreach (Map m in maps)

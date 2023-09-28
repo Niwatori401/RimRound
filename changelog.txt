@@ -1,5 +1,14 @@
 ==================================================
-Commit Hash: feb046b02bfcb4aa5d7c034559213fd64c7aad14
+Commit Hash: 368cfd20c15f917f235dedf32f8dc0c006004341
+Author: Niwatori401
+Date: Thu Sep 28 10:30:41 2023
+
+Add black and white texture option for races
+Racial dictionaries now set in raw text
+Remove unused textures
+
+==================================================
+Commit Hash: f22d9c179ba45ae589baffaa1774815abe5d0b31
 Author: Niwatori401
 Date: Tue Sep 26 11:53:40 2023
 
