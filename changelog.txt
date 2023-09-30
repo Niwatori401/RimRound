@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: a9c0c0016d9b36507a96d6aacf3350e9a22886fe
+Commit Hash: 2f26fa7e779a7c62869b761281b182afbd064105
+Author: Niwatori401
+Date: Sat Sep 30 23:43:31 2023
+
+Fix bug with capacity alteration (courtesy Steven)
+
+==================================================
+Commit Hash: 2a0b7b30e3a7a4fd8ca8f42ca9895ab4ad4c4f93
 Author: Niwatori401
 Date: Thu Sep 28 13:00:01 2023
 

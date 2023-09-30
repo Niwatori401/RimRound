@@ -38,7 +38,7 @@ namespace RimRound.Utilities
             return weightInKilograms * Values.severityPerKilo;
         }
 
-        public static Hediff WeightHediff(this Pawn pawn) 
+        public static Hediff WeightHediff(this Pawn pawn)
         {
             if (GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, pawn) is Hediff weight)
             {
@@ -103,7 +103,7 @@ namespace RimRound.Utilities
             return pawn?.health?.hediffSet?.hediffs?.Find(x => x.def.defName == def.defName) ?? null;
         }
 
-        public static float AddHediffSeverity(Hediff hediff, Pawn pawn, float amount, bool triggerMessages = true, bool useWeightMultipliers = true) 
+        public static float AddHediffSeverity(Hediff hediff, Pawn pawn, float amount, bool triggerMessages = true, bool useWeightMultipliers = true)
         {
             if (hediff.def.defName == Defs.HediffDefOf.RimRound_Weight.defName)
             {
@@ -239,8 +239,8 @@ namespace RimRound.Utilities
                 return;
 
             MoteMaker.ThrowText(
-                position, 
-                map, 
+                position,
+                map,
                 (value < 0 ? "" : "+") + (GlobalSettings.usePoundsWherePossible ? (SeverityToKilosWithoutBaseWeight(value) * 2.20462f).ToString($"F{(precision <= 9 && precision >= 0 ? precision : 0)}") + "Lbs" : SeverityToKilosWithoutBaseWeight(value).ToString($"F{(precision <= 9 && precision >= 0 ? precision : 0)}") + "Kgs"));
         }
 
@@ -300,10 +300,10 @@ namespace RimRound.Utilities
             return null;
         }
 
-        public static float ProgressToNextWeightStage(Pawn pawn) 
+        public static float ProgressToNextWeightStage(Pawn pawn)
         {
             Hediff weight = GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, pawn);
-            if (weight == null) 
+            if (weight == null)
             {
                 return 0;
             }
@@ -311,13 +311,13 @@ namespace RimRound.Utilities
             int currentStageIndex = weight.CurStageIndex;
             if (currentStageIndex < weight.def.stages.Count - 1)
             {
-                float minimumSeverityForCurrentStage  = weight.CurStage.minSeverity * (GlobalSettings.varyMinWeightForBodyTypeByBodySize? RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) : 1) ;
+                float minimumSeverityForCurrentStage = weight.CurStage.minSeverity * (GlobalSettings.varyMinWeightForBodyTypeByBodySize ? RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) : 1);
                 float nextStageMinimumSeverity = weight.def.stages[currentStageIndex + 1].minSeverity * (GlobalSettings.varyMinWeightForBodyTypeByBodySize ? RacialBodyTypeInfoUtility.GetBodyTypeWeightRequirementMultiplier(pawn) : 1);
                 float currentSeverity = weight.Severity;
 
                 return (currentSeverity - minimumSeverityForCurrentStage) / (nextStageMinimumSeverity - minimumSeverityForCurrentStage);
             }
-            else 
+            else
             {
                 return 1;
             }
@@ -325,7 +325,7 @@ namespace RimRound.Utilities
 
         public static void AlterCapacityAccordingToSettings(List<PawnCapacityModifier> pcmList, PawnCapacityDef defToAlter, NumericFieldData<float> appropriateSetting, float personalMultiplier = 1f)
         {
-            if (appropriateSetting.threshold == 1)
+            if (appropriateSetting.threshold == 1 && personalMultiplier  == 1)
                 return;
 
             int pcmIndex = pcmList.FindIndex(x => x.capacity == defToAlter);
@@ -336,9 +336,9 @@ namespace RimRound.Utilities
             }
         }
 
-        public static PawnCapacityModifier Clone(this PawnCapacityModifier pawnCapacityModifier) 
+        public static PawnCapacityModifier Clone(this PawnCapacityModifier pawnCapacityModifier)
         {
-            return new PawnCapacityModifier 
+            return new PawnCapacityModifier
             {
                 capacity = pawnCapacityModifier.capacity,
                 offset = pawnCapacityModifier.offset,
