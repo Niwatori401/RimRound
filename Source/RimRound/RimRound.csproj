@@ -180,6 +180,7 @@
     <Compile Include="RimRound\AI\HistoryAutoRecorderGroupWeight.cs" />
     <Compile Include="RimRound\AI\HistoryAutoRecorderWeight.cs" />
     <Compile Include="RimRound\AI\HistoryAutoRecorderWorker_PawnWeight.cs" />
+    <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\AlienRenderTreePatches_BodyGraphicForPrefix_ChangeSpritePath.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_DrawGraph_CallChildMethod.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_ExposeData_CallChildMethods.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_GetMaxDay_CallChildMethod.cs" />
@@ -312,7 +313,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\FoodUtility\FoodUtility_StackCountForNutrition_MaxChangedToMin.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-GuestTracker_SetGuestStatus_UpdateCategoricalExemptions.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Graphic-Multi_Init_DontLogErrorsForRimRound.cs" />
-    <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_ResolveAllGraphics_UpdatePawnBodySizeAndChangeBodySpritePath.cs" />
+    <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\HarmonyPatches_TrySetupGraphIfNeededPrefix_UpdatePawnBodySize.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\ModLister_AllExpansions_IncludeRimRound.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\ModsConfig_LastInstalledExpansion_DefaultToRimRoundBG.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\Pawn-HealthTracker_MakeDowned_SetCustomWiggleAngleInitial.cs" />

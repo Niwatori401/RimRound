@@ -1,5 +1,14 @@
 ==================================================
-Commit Hash: 6b4fe61b1e0681a9e6abf64b156a04522ecc5738
+Commit Hash: 34b2a6611a592da00077261f60012834a579e7d2
+Author: Niwatori401
+Date: Wed Apr 10 07:10:45 2024
+
+Restore body size update patch
+Restore body sprite path swapping patch
+Restore clothing refresh on lay down patch
+
+==================================================
+Commit Hash: 9448ceb156799504d5adf97aaef839f40d54bdc4
 Author: Niwatori401
 Date: Wed Apr 10 04:51:10 2024
 
