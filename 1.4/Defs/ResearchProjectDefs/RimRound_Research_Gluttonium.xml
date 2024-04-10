@@ -107,7 +107,7 @@
 
     	<ResearchProjectDef>  
 		<defName>RR_Research_ProjectAlpha</defName>
-		<label>project alpha</label>
+		<label>project α</label>
 		<tab>RimRoundTech</tab>
 		<description>Begin the process of studying means to compress pure gluttonium into its smallest, densest state, creating an object of frightening caloric value.</description>
 		<baseCost>6000</baseCost>
@@ -125,7 +125,7 @@
 	
 	<ResearchProjectDef>  
 		<defName>RR_Research_ProjectOmega</defName>
-		<label>project omega</label>
+		<label>project Ω</label>
 		<tab>RimRoundTech</tab>
 		<description>Further refine the Alpha ball into an incomprehensibly dense state, creating an object that when ingested immediately causes the victim's body to expand at unprecedented speeds.</description>
 		<baseCost>8000</baseCost>

@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 2f26fa7e779a7c62869b761281b182afbd064105
+Commit Hash: 78da62df0d42234b39ee068335675efc4260eb44
+Author: Niwatori401
+Date: Wed Apr 10 08:01:07 2024
+
+Change "Alpha"/"Omega" to alpha/omega character
+Small refactor of verbose code
+
+==================================================
+Commit Hash: 2a55bf3373cdcaddaba20d6f536f5ae94fd21b79
 Author: Niwatori401
 Date: Sat Sep 30 23:43:31 2023
 

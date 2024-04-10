@@ -73,18 +73,13 @@ namespace RimRound.Utilities
                 return pbtComp.CustomBodyTypeDict[pbtComp.BodyArchetype];
             }
 
-            else if (pawn.def is AlienRace.ThingDef_AlienRace race)
+            else if (pawn.def is AlienRace.ThingDef_AlienRace race && 
+                    raceToProperDictDictionary.ContainsKey(race.defName) && 
+                    raceToProperDictDictionary[race.defName].ContainsKey(pawn.gender) && 
+                    pbtComp != null && 
+                    raceToProperDictDictionary[race.defName][pawn.gender].ContainsKey(pbtComp.BodyArchetype))
             {
-                if (raceToProperDictDictionary.ContainsKey(race.defName))
-                {
-                    if (raceToProperDictDictionary[race.defName].ContainsKey(pawn.gender))
-                    {
-                        if (pbtComp != null && raceToProperDictDictionary[race.defName][pawn.gender].ContainsKey(pbtComp.BodyArchetype))
-                        {
-                            return raceToProperDictDictionary[race.defName][pawn.gender][pbtComp.BodyArchetype];
-                        }
-                    }
-                }
+                return raceToProperDictDictionary[race.defName][pawn.gender][pbtComp.BodyArchetype];
             }
             return null;
         }

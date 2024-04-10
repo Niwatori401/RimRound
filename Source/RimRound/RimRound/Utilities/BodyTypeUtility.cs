@@ -130,7 +130,7 @@ namespace RimRound.Utilities
         {
             string pattern = @"[fmFM]{1}_+[0-9]{3,}?a*_+[A-Za-z]+";
 
-            Regex regex = new Regex(pattern);
+            Regex regex = new Regex(pattern, RegexOptions.Compiled);
 
             if (regex.IsMatch(bodyTypeDefString))
                 return true;
