@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="BuildingBase" Name="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_z</defName>
+		<label>blob bed</label>
+		<description>A spot on a very obese pawn where people should sleep. Very comfortable.</description>
+		<thingClass>Building_Bed</thingClass>
+		<graphicData>
+		  <texPath>BlankTexture</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,4)</drawSize>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<statBases>
+			<BedRestEffectiveness>1.00</BedRestEffectiveness>
+			<WorkToBuild>0</WorkToBuild>
+			<Comfort>1.50</Comfort>
+			<SurgerySuccessChanceFactor>0.7</SurgerySuccessChanceFactor>
+		</statBases>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>False</useHitPoints>
+		<size>(1,2)</size>
+		<passability>Standable</passability>
+		<drawGUIOverlay>True</drawGUIOverlay>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+		<isEdifice>false</isEdifice>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<buildingTags>
+				<li>Bed</li>
+			</buildingTags>
+		</building>
+		<designationHotKey>Misc1</designationHotKey>
+		<comps>
+		  <li Class="CompProperties_AssignableToPawn">
+			<drawAssignmentOverlay>false</drawAssignmentOverlay>
+			<compClass>CompAssignableToPawn_Bed</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_I</defName>
+		<statBases>
+			<BedRestEffectiveness>1.20</BedRestEffectiveness>
+			<Comfort>2.0</Comfort>
+		</statBases>
+	</ThingDef>
+	<ThingDef ParentName="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_II</defName>
+		<statBases>
+			<BedRestEffectiveness>1.40</BedRestEffectiveness>
+			<Comfort>2.5</Comfort>
+		</statBases>
+	</ThingDef>
+	<ThingDef ParentName="BlobBedBase">
+		<defName>BlobBed_FoldsOfHeaven_III</defName>
+		<statBases>
+			<BedRestEffectiveness>1.60</BedRestEffectiveness>
+			<Comfort>3.0</Comfort>
+		</statBases>
+	</ThingDef>	
+	
+</Defs>

@@ -1,0 +1,6 @@
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/scaleWithPawnDrawsize</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/scaleWithPawnDrawsize</xpath>
+			</match>			
+		</li>

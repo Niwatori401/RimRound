@@ -40,37 +40,17 @@ namespace RimRound.Patch
 				return true;
 			}
 
-			if (prisoner.guest.interactionMode.defName != Defs.PrisonerInteractionModeDefOf.RR_Fatten.defName)
-				return true;
- 
-
-			if (!prisoner.guest.CanBeBroughtFood)
+			if (prisoner.guest.ExclusiveInteractionMode.defName != Defs.PrisonerInteractionModeDefOf.RR_Fatten.defName || 
+				!prisoner.guest.CanBeBroughtFood || 
+				(bool)FoodAvailableInRoomToMI.Invoke(null, new object[] { prisoner }) || 
+				!prisoner.Position.IsInPrisonCell(prisoner.Map) || 
+				WardenFeedUtility.ShouldBeFed(prisoner))
 			{
 				return true;
 			}
-			if ((bool)FoodAvailableInRoomToMI.Invoke(null, new object[] { prisoner }))
-			{
-				return true;
-			}
-
-
-			if (!prisoner.Position.IsInPrisonCell(prisoner.Map))
-			{
-				return true;
-			}
-
-			if (WardenFeedUtility.ShouldBeFed(prisoner))
-			{
-				return true;
-			}
-
-
-
-
 
 			if (PrisonerShouldBeBroughtFood(prisoner)) 
 			{
-
 				__result = MakeBringPrisonerFoodJob(warden, prisoner);
 				
 				if (__result is null)
@@ -89,7 +69,7 @@ namespace RimRound.Patch
 			Thing thing;
 			ThingDef thingDef;
 #pragma warning disable CS0612 // Type or member is obsolete
-			if (!FoodUtility.TryFindBestFoodSourceFor(warden, prisoner, prisoner.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, true, FoodPreferability.Undefined))
+			if (!FoodUtility.TryFindBestFoodSourceFor(warden, prisoner, prisoner.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, true, false, FoodPreferability.Undefined))
 			{
 				return null;
 			}

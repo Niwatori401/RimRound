@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JoyGiverDef>
+    <defName>RR_ListenToRadio</defName>
+    <giverClass>RimRound.FeedingTube.AI.JoyGiver_ListenToRadio</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>RR_ListenToRadio</jobDef>
+    <joyKind>Meditative</joyKind>
+    <canDoWhileInBed>true</canDoWhileInBed>
+    <requiredCapacities>
+      <li>Hearing</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+</Defs>

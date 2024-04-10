@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Beer"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Beer"]</xpath>
+			<value>
+				<comps>
+					<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+						<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+						<fullnessToNutritionRatio>3.0</fullnessToNutritionRatio>
+					</li>							
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Beer"]/comps</xpath>
+			<value>
+				<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+					<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+					<fullnessToNutritionRatio>3.0</fullnessToNutritionRatio>
+				</li>		
+			</value>
+		</match>
+	</Operation>
+</Patch>

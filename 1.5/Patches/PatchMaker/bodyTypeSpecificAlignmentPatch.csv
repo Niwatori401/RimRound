@@ -1,0 +1,1491 @@
+MOD_NAME,DEF_NAME,ITEM_INDEX,BODYTYPE_DEF,SOUTH_X,SOUTH_Y,EAST_X,EAST_Y,NORTH_X,NORTH_Y
+NewRatkinPlus,Ratkin,1,F_005_Thick_090,0,0,-0.01,-0.1,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_006_Chonky_090,0,0,0,-0.12,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_010_Chubby_090,0,0,0.08,-0.11,-0.02,0.0700000000000001
+NewRatkinPlus,Ratkin,1,F_020_Corpulent_090,0,0,0.15,-0.07,-0.03,0.1
+NewRatkinPlus,Ratkin,1,F_030_Fat_090,0,0,0.33,-0.07,-0.03,0.12
+NewRatkinPlus,Ratkin,1,F_040_Obese_090,0,0,0.43,-0.04,-0.02,0.09
+NewRatkinPlus,Ratkin,1,F_050_MorbidlyObese_090,0,0,0.55,-0.06,-0.03,0.04
+NewRatkinPlus,Ratkin,1,F_060_Lardy_090,0,0,0.48,-0.04,-0.03,0.2
+NewRatkinPlus,Ratkin,1,F_070_Enormous_090,0,0,0.9,-0.2,-0.02,0.1
+NewRatkinPlus,Ratkin,1,F_080_Gigantic_090,0,0,1,-0.2,-0.05,0
+NewRatkinPlus,Ratkin,1,F_090_Titanic_090,0,0,1.1,0.1,-0.03,0.13
+NewRatkinPlus,Ratkin,1,F_100_Gelatinous_090,0,0,0,0,-0.03,-0.31
+NewRatkinPlus,Ratkin,1,F_150_Gelatinous_090,0,0,0,0,-0.01,-0.38
+NewRatkinPlus,Ratkin,1,F_200_Gelatinous_090,0,0,0,0,-0.02,-0.46
+NewRatkinPlus,Ratkin,1,F_250_Gelatinous_090,0,0,0,0,-0.01,-0.55
+NewRatkinPlus,Ratkin,1,F_300_Gelatinous_090,0,0,0,0,-0.01,-0.65
+NewRatkinPlus,Ratkin,1,F_350_Gelatinous_090,0,0,0,0,0,-0.73
+NewRatkinPlus,Ratkin,1,F_400_Gelatinous_090,0,0,0,0,0.01,-0.87
+NewRatkinPlus,Ratkin,1,F_450_Gelatinous_090,0,0,0,0,0,-1.06
+NewRatkinPlus,Ratkin,1,F_500_Gelatinous_090,0,0,0,0,0,-1.34
+NewRatkinPlus,Ratkin,1,F_900_Gelatinous_090,0,0,0,0,0,-1.88
+NewRatkinPlus,Ratkin,1,F_910_Gelatinous_090,0,0,0,0,0,-2.3
+NewRatkinPlus,Ratkin,1,F_920_Gelatinous_090,0,0,0,0,0,-2.7
+NewRatkinPlus,Ratkin,1,F_930_Gelatinous_090,0,0,0,0,0,-3.4
+NewRatkinPlus,Ratkin,1,F_940_Gelatinous_090,0,0,0,0,0,-4.8
+NewRatkinPlus,Ratkin,1,F_950_Gelatinous_090,0,0,0,0,0,-6.7
+NewRatkinPlus,Ratkin,1,F_960_Gelatinous_090,0,0,0,0,0,-8.7
+NewRatkinPlus,Ratkin,1,F_970_Gelatinous_090,0,0,0,0,0,-10.8
+NewRatkinPlus,Ratkin,1,F_980_Gelatinous_090,0,0,0,0,0,-13.2
+NewRatkinPlus,Ratkin,1,F_990_Gelatinous_090,0,0,0,0,0,-15.5
+NewRatkinPlus,Ratkin,1,F_995_Gelatinous_090,0,0,0,0,0,-19
+NewRatkinPlus,Ratkin,1,F_010a_Chubby_090,0,0,0.06,-0.09,0.01,0.06
+NewRatkinPlus,Ratkin,1,F_020a_Corpulent_090,0,0,0.14,-0.05,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_030a_Fat_090,0,0,0.23,0.04,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_040a_Obese_090,0,0,0.23,0.04,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_050a_MorbidlyObese_090,0,0,0.45,-0.07,-0.02,0.11
+NewRatkinPlus,Ratkin,1,F_060a_Lardy_090,0,0,0.45,-0.07,-0.01,0.27
+NewRatkinPlus,Ratkin,1,F_070a_Enormous_090,0,0,0.45,-0.07,-0.04,0.08
+NewRatkinPlus,Ratkin,1,F_080a_Gigantic_090,0,0,0.45,-0.07,-0.02,-0.02
+NewRatkinPlus,Ratkin,1,F_090a_Titanic_090,0,0,0.45,-0.07,-0.05,0.14
+NewRatkinPlus,Ratkin,1,F_100a_Gelatinous_090,0,0,0,0,-0.09,-0.59
+NewRatkinPlus,Ratkin,1,F_150a_Gelatinous_090,0,0,0,0,-0.1,-0.69
+NewRatkinPlus,Ratkin,1,F_200a_Gelatinous_090,0,0,0,0,-0.1,-0.81
+NewRatkinPlus,Ratkin,1,F_250a_Gelatinous_090,0,0,0,0,-0.12,-0.95
+NewRatkinPlus,Ratkin,1,F_300a_Gelatinous_090,0,0,0,0,-0.12,-1.07
+NewRatkinPlus,Ratkin,1,F_350a_Gelatinous_090,0,0,0,0,-0.14,-1.25
+NewRatkinPlus,Ratkin,1,F_400a_Gelatinous_090,0,0,0,0,-0.14,-1.43
+NewRatkinPlus,Ratkin,1,F_450a_Gelatinous_090,0,0,0,0,-0.17,-1.7
+NewRatkinPlus,Ratkin,1,F_500a_Gelatinous_090,0,0,0,0,-0.2,-2.06
+NewRatkinPlus,Ratkin,1,F_900a_Gelatinous_090,0,0,0,0,-0.24,-2.78
+NewRatkinPlus,Ratkin,1,F_910a_Gelatinous_090,0,0,0,0,-0.29,-3.34
+NewRatkinPlus,Ratkin,1,F_920a_Gelatinous_090,0,0,0,0,-0.35,-4.24
+NewRatkinPlus,Ratkin,1,F_930a_Gelatinous_090,0,0,0,0,-0.4,-5.12
+NewRatkinPlus,Ratkin,1,F_940a_Gelatinous_090,0,0,0,0,-0.58,-7.02
+NewRatkinPlus,Ratkin,1,F_950a_Gelatinous_090,0,0,0,0,-0.78,-9.72
+NewRatkinPlus,Ratkin,1,F_960a_Gelatinous_090,0,0,0,0,-0.98,-12.52
+NewRatkinPlus,Ratkin,1,F_970a_Gelatinous_090,0,0,0,0,-1.08,-15.32
+NewRatkinPlus,Ratkin,1,F_980a_Gelatinous_090,0,0,0,0,-1.38,-18.92
+NewRatkinPlus,Ratkin,1,F_990a_Gelatinous_090,0,0,0,0,-1.68,-22.62
+NewRatkinPlus,Ratkin,1,F_995a_Gelatinous_090,0,0,0,0,-2,-27.12
+NewRatkinPlus,Ratkin,1,F_005_Thick,0,0,0,-0.13,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_006_Chonky,0,0,0.08,-0.13,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_010_Chubby,0,0,0.16,-0.13,-0.02,0.01
+NewRatkinPlus,Ratkin,1,F_020_Corpulent,0,0,0.33,-0.11,-0.03,0.02
+NewRatkinPlus,Ratkin,1,F_030_Fat,0,0,0.37,-0.03,-0.02,0.07
+NewRatkinPlus,Ratkin,1,F_040_Obese,0,0,0.49,0.04,0.01,0.07
+NewRatkinPlus,Ratkin,1,F_050_MorbidlyObese,0,0,0.62,0.02,-0.03,0.02
+NewRatkinPlus,Ratkin,1,F_060_Lardy,0,0,0.61,0.02,-0.03,0.19
+NewRatkinPlus,Ratkin,1,F_070_Enormous,0,0,0.85,0.02,-0.01,0.07
+NewRatkinPlus,Ratkin,1,F_080_Gigantic,0,0,0.87,0.04,-0.05,-0.1
+NewRatkinPlus,Ratkin,1,F_090_Titanic,0,0,0,0,-0.03,0.11
+NewRatkinPlus,Ratkin,1,F_100_Gelatinous,0,0,0,0,-0.01,-0.61
+NewRatkinPlus,Ratkin,1,F_150_Gelatinous,0,0,0,0,-0.01,-0.71
+NewRatkinPlus,Ratkin,1,F_200_Gelatinous,0,0,0,0,0,-0.87
+NewRatkinPlus,Ratkin,1,F_250_Gelatinous,0,0,0,0,0,-0.98
+NewRatkinPlus,Ratkin,1,F_300_Gelatinous,0,0,0,0,0,-1.15
+NewRatkinPlus,Ratkin,1,F_350_Gelatinous,0,0,0,0,0,-1.28
+NewRatkinPlus,Ratkin,1,F_400_Gelatinous,0,0,0,0,0,-1.49
+NewRatkinPlus,Ratkin,1,F_450_Gelatinous,0,0,0,0,0.02,-1.76
+NewRatkinPlus,Ratkin,1,F_500_Gelatinous,0,0,0,0,0.02,-2.12
+NewRatkinPlus,Ratkin,1,F_900_Gelatinous,0,0,0,0,0.02,-2.72
+NewRatkinPlus,Ratkin,1,F_910_Gelatinous,0,0,0,0,0.02,-3.32
+NewRatkinPlus,Ratkin,1,F_920_Gelatinous,0,0,0,0,0.12,-4.52
+NewRatkinPlus,Ratkin,1,F_930_Gelatinous,0,0,0,0,0.12,-6.42
+NewRatkinPlus,Ratkin,1,F_940_Gelatinous,0,0,0,0,0.12,-8.22
+NewRatkinPlus,Ratkin,1,F_950_Gelatinous,0,0,0,0,0.12,-10.02
+NewRatkinPlus,Ratkin,1,F_960_Gelatinous,0,0,0,0,0.12,-12.52
+NewRatkinPlus,Ratkin,1,F_970_Gelatinous,0,0,0,0,0.12,-15.02
+NewRatkinPlus,Ratkin,1,F_980_Gelatinous,0,0,0,0,0.22,-18.12
+NewRatkinPlus,Ratkin,1,F_990_Gelatinous,0,0,0,0,0.22,-21.12
+NewRatkinPlus,Ratkin,1,F_995_Gelatinous,0,0,0,0,0.22,-24.12
+NewRatkinPlus,Ratkin,1,F_010a_Chubby,0,0,0.16,-0.19,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_020a_Corpulent,0,0,0.33,-0.11,-0.02,0.04
+NewRatkinPlus,Ratkin,1,F_030a_Fat,0,0,0.37,0.02,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_040a_Obese,0,0,0.45,-0.01,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_050a_MorbidlyObese,0,0,0.59,-0.04,-0.02,0.05
+NewRatkinPlus,Ratkin,1,F_060a_Lardy,0,0,0.61,0.02,-0.01,0.25
+NewRatkinPlus,Ratkin,1,F_070a_Enormous,0,0,0.77,-0.06,-0.05,0
+NewRatkinPlus,Ratkin,1,F_080a_Gigantic,0,0,0,0,-0.02,-0.2
+NewRatkinPlus,Ratkin,1,F_090a_Titanic,0,0,0,0,-0.06,0.01
+NewRatkinPlus,Ratkin,1,F_100a_Gelatinous,0,0,0,0,-0.13,-1.05
+NewRatkinPlus,Ratkin,1,F_150a_Gelatinous,0,0,0,0,-0.14,-1.25
+NewRatkinPlus,Ratkin,1,F_200a_Gelatinous,0,0,0,0,-0.14,-1.43
+NewRatkinPlus,Ratkin,1,F_250a_Gelatinous,0,0,0,0,-0.16,-1.6
+NewRatkinPlus,Ratkin,1,F_300a_Gelatinous,0,0,0,0,-0.18,-1.18
+NewRatkinPlus,Ratkin,1,F_350a_Gelatinous,0,0,0,0,-0.2,-2.06
+NewRatkinPlus,Ratkin,1,F_400a_Gelatinous,0,0,0,0,-0.22,-2.43
+NewRatkinPlus,Ratkin,1,F_450a_Gelatinous,0,0,0,0,-0.24,-2.78
+NewRatkinPlus,Ratkin,1,F_500a_Gelatinous,0,0,0,0,-0.29,-3.34
+NewRatkinPlus,Ratkin,1,F_900a_Gelatinous,0,0,0,0,-0.35,-4.24
+NewRatkinPlus,Ratkin,1,F_910a_Gelatinous,0,0,0,0,-0.4,-5.12
+NewRatkinPlus,Ratkin,1,F_920a_Gelatinous,0,0,0,0,-0.58,-7.02
+NewRatkinPlus,Ratkin,1,F_930a_Gelatinous,0,0,0,0,-0.78,-9.72
+NewRatkinPlus,Ratkin,1,F_940a_Gelatinous,0,0,0,0,-0.98,-12.52
+NewRatkinPlus,Ratkin,1,F_950a_Gelatinous,0,0,0,0,-1.08,-15.32
+NewRatkinPlus,Ratkin,1,F_960a_Gelatinous,0,0,0,0,-1.38,-18.92
+NewRatkinPlus,Ratkin,1,F_970a_Gelatinous,0,0,0,0,-1.68,-22.62
+NewRatkinPlus,Ratkin,1,F_980a_Gelatinous,0,0,0,0,-2,-27.12
+NewRatkinPlus,Ratkin,1,F_990a_Gelatinous,0,0,0,0,-2.28,-32.12
+NewRatkinPlus,Ratkin,1,F_995a_Gelatinous,0,0,0,0,-2.78,-37.12
+NewRatkinPlus,Ratkin,1,M_005_Thick_090,0,0,0,-0.13,-0.02,0.06
+NewRatkinPlus,Ratkin,1,M_006_Chonky_090,0,0,0,-0.13,0,0.06
+NewRatkinPlus,Ratkin,1,M_010_Chubby_090,0,0,0,-0.13,-0.02,-0.03
+NewRatkinPlus,Ratkin,1,M_020_Corpulent_090,0,0,0.12,-0.05,0.01,0.03
+NewRatkinPlus,Ratkin,1,M_030_Fat_090,0,0,0.12,-0.05,0,-0.01
+NewRatkinPlus,Ratkin,1,M_040_Obese_090,0,0,0.39,-0.05,0,0.05
+NewRatkinPlus,Ratkin,1,M_050_MorbidlyObese_090,0,0,0.39,-0.05,-0.01,0.14
+NewRatkinPlus,Ratkin,1,M_060_Lardy_090,0,0,0,0,0.04,0.22
+NewRatkinPlus,Ratkin,1,M_070_Enormous_090,0,0,0,0,0.02,0.08
+NewRatkinPlus,Ratkin,1,M_080_Gigantic_090,0,0,0,0,0,-0.06
+NewRatkinPlus,Ratkin,1,M_090_Titanic_090,0,0,0,0,-0.06,0.16
+NewRatkinPlus,Ratkin,1,M_100_Gelatinous_090,0,0,0,0,-0.02,-0.21
+NewRatkinPlus,Ratkin,1,M_150_Gelatinous_090,0,0,0,0,-0.02,-0.26
+NewRatkinPlus,Ratkin,1,M_200_Gelatinous_090,0,0,0,0,-0.02,-0.34
+NewRatkinPlus,Ratkin,1,M_250_Gelatinous_090,0,0,0,0,-0.01,-0.44
+NewRatkinPlus,Ratkin,1,M_300_Gelatinous_090,0,0,0,0,-0.01,-0.52
+NewRatkinPlus,Ratkin,1,M_350_Gelatinous_090,0,0,0,0,-0.01,-0.6
+NewRatkinPlus,Ratkin,1,M_400_Gelatinous_090,0,0,0,0,-0.01,-0.73
+NewRatkinPlus,Ratkin,1,M_450_Gelatinous_090,0,0,0,0,-0.01,-0.88
+NewRatkinPlus,Ratkin,1,M_500_Gelatinous_090,0,0,0,0,-0.01,-1.13
+NewRatkinPlus,Ratkin,1,M_900_Gelatinous_090,0,0,0,0,-0.01,-1.62
+NewRatkinPlus,Ratkin,1,M_910_Gelatinous_090,0,0,0,0,-0.01,-1.97
+NewRatkinPlus,Ratkin,1,M_920_Gelatinous_090,0,0,0,0,-0.01,-2.57
+NewRatkinPlus,Ratkin,1,M_930_Gelatinous_090,0,0,0,0,-0.01,-3.27
+NewRatkinPlus,Ratkin,1,M_940_Gelatinous_090,0,0,0,0,-0.01,-4.47
+NewRatkinPlus,Ratkin,1,M_950_Gelatinous_090,0,0,0,0,-0.01,-6.27
+NewRatkinPlus,Ratkin,1,M_960_Gelatinous_090,0,0,0,0,-0.01,-8.07
+NewRatkinPlus,Ratkin,1,M_970_Gelatinous_090,0,0,0,0,-0.01,-10.7
+NewRatkinPlus,Ratkin,1,M_980_Gelatinous_090,0,0,0,0,-0.01,-12.7
+NewRatkinPlus,Ratkin,1,M_990_Gelatinous_090,0,0,0,0,-0.01,-15.07
+NewRatkinPlus,Ratkin,1,M_995_Gelatinous_090,0,0,0,0,-0.01,-18.07
+NewRatkinPlus,Ratkin,1,M_005_Thick,0,0,0.09,-0.15,-0.01,-0.05
+NewRatkinPlus,Ratkin,1,M_006_Chonky,0,0,0.09,-0.21,0,-0.06
+NewRatkinPlus,Ratkin,1,M_010_Chubby,0,0,0.09,-0.21,-0.03,-0.16
+NewRatkinPlus,Ratkin,1,M_020_Corpulent,0,0,0.35,-0.21,0.03,-0.06
+NewRatkinPlus,Ratkin,1,M_030_Fat,0,0,0.35,-0.21,0,-0.06
+NewRatkinPlus,Ratkin,1,M_040_Obese,0,0,0.56,-0.14,0,0.02
+NewRatkinPlus,Ratkin,1,M_050_MorbidlyObese,0,0,0.56,-0.14,-0.01,0.12
+NewRatkinPlus,Ratkin,1,M_060_Lardy,0,0,0,0,0.05,0.15
+NewRatkinPlus,Ratkin,1,M_070_Enormous,0,0,0,0,0.02,-0.01
+NewRatkinPlus,Ratkin,1,M_080_Gigantic,0,0,0,0,0.02,-0.18
+NewRatkinPlus,Ratkin,1,M_090_Titanic,0,0,0,0,-0.08,0.13
+NewRatkinPlus,Ratkin,1,M_100_Gelatinous,0,0,0,0,-0.01,-0.47
+NewRatkinPlus,Ratkin,1,M_150_Gelatinous,0,0,0,0,-0.01,-0.6
+NewRatkinPlus,Ratkin,1,M_200_Gelatinous,0,0,0,0,-0.01,-0.73
+NewRatkinPlus,Ratkin,1,M_250_Gelatinous,0,0,0,0,-0.01,-0.81
+NewRatkinPlus,Ratkin,1,M_300_Gelatinous,0,0,0,0,-0.01,-0.95
+NewRatkinPlus,Ratkin,1,M_350_Gelatinous,0,0,0,0,-0.01,-1.13
+NewRatkinPlus,Ratkin,1,M_400_Gelatinous,0,0,0,0,-0.01,-1.35
+NewRatkinPlus,Ratkin,1,M_450_Gelatinous,0,0,0,0,-0.01,-1.62
+NewRatkinPlus,Ratkin,1,M_500_Gelatinous,0,0,0,0,-0.01,-1.97
+NewRatkinPlus,Ratkin,1,M_900_Gelatinous,0,0,0,0,-0.01,-2.57
+NewRatkinPlus,Ratkin,1,M_910_Gelatinous,0,0,0,0,-0.01,-3.27
+NewRatkinPlus,Ratkin,1,M_920_Gelatinous,0,0,0,0,-0.01,-4.47
+NewRatkinPlus,Ratkin,1,M_930_Gelatinous,0,0,0,0,-0.01,-6.27
+NewRatkinPlus,Ratkin,1,M_940_Gelatinous,0,0,0,0,-0.01,-8.07
+NewRatkinPlus,Ratkin,1,M_950_Gelatinous,0,0,0,0,-0.01,-10.7
+NewRatkinPlus,Ratkin,1,M_960_Gelatinous,0,0,0,0,-0.01,-12.7
+NewRatkinPlus,Ratkin,1,M_970_Gelatinous,0,0,0,0,-0.01,-15.07
+NewRatkinPlus,Ratkin,1,M_980_Gelatinous,0,0,0,0,-0.01,-18.07
+NewRatkinPlus,Ratkin,1,M_990_Gelatinous,0,0,0,0,-0.01,-21.07
+NewRatkinPlus,Ratkin,1,M_995_Gelatinous,0,0,0,0,-0.01,-24.07
+Anty the war ant race,Anty,5,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
+Anty the war ant race,Anty,5,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
+Anty the war ant race,Anty,5,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
+Anty the war ant race,Anty,5,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
+Anty the war ant race,Anty,5,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
+Anty the war ant race,Anty,5,F_040_Obese_090,0,0,0.39,0.11,0,0.06
+Anty the war ant race,Anty,5,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
+Anty the war ant race,Anty,5,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
+Anty the war ant race,Anty,5,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
+Anty the war ant race,Anty,5,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
+Anty the war ant race,Anty,5,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
+Anty the war ant race,Anty,5,F_100_Gelatinous_090,0,0,-0.04,0.15,-0.01,-0.34
+Anty the war ant race,Anty,5,F_150_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.41
+Anty the war ant race,Anty,5,F_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.49
+Anty the war ant race,Anty,5,F_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.58
+Anty the war ant race,Anty,5,F_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.68
+Anty the war ant race,Anty,5,F_350_Gelatinous_090,0,0,-0.04,0.15,0.02,-0.76
+Anty the war ant race,Anty,5,F_400_Gelatinous_090,0,0,-0.04,0.15,0.03,-0.9
+Anty the war ant race,Anty,5,F_450_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.09
+Anty the war ant race,Anty,5,F_500_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.37
+Anty the war ant race,Anty,5,F_900_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.91
+Anty the war ant race,Anty,5,F_910_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.33
+Anty the war ant race,Anty,5,F_920_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.73
+Anty the war ant race,Anty,5,F_930_Gelatinous_090,0,0,-0.04,0.15,0.02,-3.43
+Anty the war ant race,Anty,5,F_940_Gelatinous_090,0,0,-0.04,0.15,0.02,-4.83
+Anty the war ant race,Anty,5,F_950_Gelatinous_090,0,0,-0.04,0.15,0.02,-6.73
+Anty the war ant race,Anty,5,F_960_Gelatinous_090,0,0,-0.04,0.15,0.02,-8.73
+Anty the war ant race,Anty,5,F_970_Gelatinous_090,0,0,-0.04,0.15,0.02,-10.83
+Anty the war ant race,Anty,5,F_980_Gelatinous_090,0,0,-0.04,0.15,0.02,-13.23
+Anty the war ant race,Anty,5,F_990_Gelatinous_090,0,0,-0.04,0.15,0.02,-15.53
+Anty the war ant race,Anty,5,F_995_Gelatinous_090,0,0,-0.04,0.15,0.02,-19.03
+Anty the war ant race,Anty,5,F_010a_Chubby_090,0,0,0.02,0.06,0.03,0.03
+Anty the war ant race,Anty,5,F_020a_Corpulent_090,0,0,0.1,0.1,0,0.08
+Anty the war ant race,Anty,5,F_030a_Fat_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,5,F_040a_Obese_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,5,F_050a_MorbidlyObese_090,0,0,0.41,0.08,0,0.08
+Anty the war ant race,Anty,5,F_060a_Lardy_090,0,0,0.41,0.08,0.01,0.24
+Anty the war ant race,Anty,5,F_070a_Enormous_090,0,0,0.41,0.08,-0.02,0.05
+Anty the war ant race,Anty,5,F_080a_Gigantic_090,0,0,0.41,0.08,0,-0.05
+Anty the war ant race,Anty,5,F_090a_Titanic_090,0,0,0.41,0.08,-0.03,0.11
+Anty the war ant race,Anty,5,F_100a_Gelatinous_090,0,0,-0.04,0.15,-0.07,-0.62
+Anty the war ant race,Anty,5,F_150a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.72
+Anty the war ant race,Anty,5,F_200a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.84
+Anty the war ant race,Anty,5,F_250a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-0.98
+Anty the war ant race,Anty,5,F_300a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-1.1
+Anty the war ant race,Anty,5,F_350a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,5,F_400a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,5,F_450a_Gelatinous_090,0,0,-0.04,0.15,-0.15,-1.73
+Anty the war ant race,Anty,5,F_500a_Gelatinous_090,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,5,F_900a_Gelatinous_090,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,5,F_910a_Gelatinous_090,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,5,F_920a_Gelatinous_090,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,5,F_930a_Gelatinous_090,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,5,F_940a_Gelatinous_090,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,5,F_950a_Gelatinous_090,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,5,F_960a_Gelatinous_090,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,5,F_970a_Gelatinous_090,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,5,F_980a_Gelatinous_090,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,5,F_990a_Gelatinous_090,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,5,F_995a_Gelatinous_090,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,5,F_005_Thick,0,0,-0.04,0.02,0,0.01
+Anty the war ant race,Anty,5,F_006_Chonky,0,0,0.04,0.02,0,0.01
+Anty the war ant race,Anty,5,F_010_Chubby,0,0,0.12,0.02,0,-0.02
+Anty the war ant race,Anty,5,F_020_Corpulent,0,0,0.29,0.04,-0.01,-0.01
+Anty the war ant race,Anty,5,F_030_Fat,0,0,0.33,0.12,0,0.04
+Anty the war ant race,Anty,5,F_040_Obese,0,0,0.45,0.19,0.03,0.04
+Anty the war ant race,Anty,5,F_050_MorbidlyObese,0,0,0.58,0.17,-0.01,-0.01
+Anty the war ant race,Anty,5,F_060_Lardy,0,0,0.57,0.17,-0.01,0.16
+Anty the war ant race,Anty,5,F_070_Enormous,0,0,0.81,0.17,0.01,0.04
+Anty the war ant race,Anty,5,F_080_Gigantic,0,0,0.83,0.19,-0.03,-0.13
+Anty the war ant race,Anty,5,F_090_Titanic,0,0,-0.04,0.15,-0.01,0.08
+Anty the war ant race,Anty,5,F_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.64
+Anty the war ant race,Anty,5,F_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.74
+Anty the war ant race,Anty,5,F_200_Gelatinous,0,0,-0.04,0.15,0.02,-0.9
+Anty the war ant race,Anty,5,F_250_Gelatinous,0,0,-0.04,0.15,0.02,-1.01
+Anty the war ant race,Anty,5,F_300_Gelatinous,0,0,-0.04,0.15,0.02,-1.18
+Anty the war ant race,Anty,5,F_350_Gelatinous,0,0,-0.04,0.15,0.02,-1.31
+Anty the war ant race,Anty,5,F_400_Gelatinous,0,0,-0.04,0.15,0.02,-1.52
+Anty the war ant race,Anty,5,F_450_Gelatinous,0,0,-0.04,0.15,0.04,-1.79
+Anty the war ant race,Anty,5,F_500_Gelatinous,0,0,-0.04,0.15,0.04,-2.15
+Anty the war ant race,Anty,5,F_900_Gelatinous,0,0,-0.04,0.15,0.04,-2.75
+Anty the war ant race,Anty,5,F_910_Gelatinous,0,0,-0.04,0.15,0.04,-3.35
+Anty the war ant race,Anty,5,F_920_Gelatinous,0,0,-0.04,0.15,0.14,-4.55
+Anty the war ant race,Anty,5,F_930_Gelatinous,0,0,-0.04,0.15,0.14,-6.45
+Anty the war ant race,Anty,5,F_940_Gelatinous,0,0,-0.04,0.15,0.14,-8.25
+Anty the war ant race,Anty,5,F_950_Gelatinous,0,0,-0.04,0.15,0.14,-10.05
+Anty the war ant race,Anty,5,F_960_Gelatinous,0,0,-0.04,0.15,0.14,-12.55
+Anty the war ant race,Anty,5,F_970_Gelatinous,0,0,-0.04,0.15,0.14,-15.05
+Anty the war ant race,Anty,5,F_980_Gelatinous,0,0,-0.04,0.15,0.24,-18.15
+Anty the war ant race,Anty,5,F_990_Gelatinous,0,0,-0.04,0.15,0.24,-21.15
+Anty the war ant race,Anty,5,F_995_Gelatinous,0,0,-0.04,0.15,0.24,-24.15
+Anty the war ant race,Anty,5,F_010a_Chubby,0,0,0.12,-0.04,0,0.01
+Anty the war ant race,Anty,5,F_020a_Corpulent,0,0,0.29,0.04,0,0.01
+Anty the war ant race,Anty,5,F_030a_Fat,0,0,0.33,0.17,0,0.02
+Anty the war ant race,Anty,5,F_040a_Obese,0,0,0.41,0.14,0,0.02
+Anty the war ant race,Anty,5,F_050a_MorbidlyObese,0,0,0.55,0.11,0,0.02
+Anty the war ant race,Anty,5,F_060a_Lardy,0,0,0.57,0.17,0.01,0.22
+Anty the war ant race,Anty,5,F_070a_Enormous,0,0,0.73,0.09,-0.03,-0.03
+Anty the war ant race,Anty,5,F_080a_Gigantic,0,0,-0.04,0.15,0,-0.23
+Anty the war ant race,Anty,5,F_090a_Titanic,0,0,-0.04,0.15,-0.04,-0.02
+Anty the war ant race,Anty,5,F_100a_Gelatinous,0,0,-0.04,0.15,-0.11,-1.08
+Anty the war ant race,Anty,5,F_150a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,5,F_200a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,5,F_250a_Gelatinous,0,0,-0.04,0.15,-0.14,-1.63
+Anty the war ant race,Anty,5,F_300a_Gelatinous,0,0,-0.04,0.15,-0.16,-1.21
+Anty the war ant race,Anty,5,F_350a_Gelatinous,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,5,F_400a_Gelatinous,0,0,-0.04,0.15,-0.2,-2.46
+Anty the war ant race,Anty,5,F_450a_Gelatinous,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,5,F_500a_Gelatinous,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,5,F_900a_Gelatinous,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,5,F_910a_Gelatinous,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,5,F_920a_Gelatinous,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,5,F_930a_Gelatinous,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,5,F_940a_Gelatinous,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,5,F_950a_Gelatinous,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,5,F_960a_Gelatinous,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,5,F_970a_Gelatinous,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,5,F_980a_Gelatinous,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,5,F_990a_Gelatinous,0,0,-0.04,0.15,-2.26,-32.15
+Anty the war ant race,Anty,5,F_995a_Gelatinous,0,0,-0.04,0.15,-2.76,-37.15
+Anty the war ant race,Anty,5,M_005_Thick_090,0,0,-0.04,0.02,0,0.03
+Anty the war ant race,Anty,5,M_006_Chonky_090,0,0,-0.04,0.02,0.02,0.03
+Anty the war ant race,Anty,5,M_010_Chubby_090,0,0,-0.04,0.02,0,-0.06
+Anty the war ant race,Anty,5,M_020_Corpulent_090,0,0,0.08,0.1,0.03,0
+Anty the war ant race,Anty,5,M_030_Fat_090,0,0,0.08,0.1,0.02,-0.04
+Anty the war ant race,Anty,5,M_040_Obese_090,0,0,0.35,0.1,0.02,0.02
+Anty the war ant race,Anty,5,M_050_MorbidlyObese_090,0,0,0.35,0.1,0.01,0.11
+Anty the war ant race,Anty,5,M_060_Lardy_090,0,0,-0.04,0.15,0.06,0.19
+Anty the war ant race,Anty,5,M_070_Enormous_090,0,0,-0.04,0.15,0.04,0.05
+Anty the war ant race,Anty,5,M_080_Gigantic_090,0,0,-0.04,0.15,0.02,-0.09
+Anty the war ant race,Anty,5,M_090_Titanic_090,0,0,-0.04,0.15,-0.04,0.13
+Anty the war ant race,Anty,5,M_100_Gelatinous_090,0,0,-0.04,0.15,0,-0.24
+Anty the war ant race,Anty,5,M_150_Gelatinous_090,0,0,-0.04,0.15,0,-0.29
+Anty the war ant race,Anty,5,M_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.37
+Anty the war ant race,Anty,5,M_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.47
+Anty the war ant race,Anty,5,M_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.55
+Anty the war ant race,Anty,5,M_350_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,5,M_400_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,5,M_450_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.91
+Anty the war ant race,Anty,5,M_500_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,5,M_900_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,5,M_910_Gelatinous_090,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,5,M_920_Gelatinous_090,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,5,M_930_Gelatinous_090,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,5,M_940_Gelatinous_090,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,5,M_950_Gelatinous_090,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,5,M_960_Gelatinous_090,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,5,M_970_Gelatinous_090,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,5,M_980_Gelatinous_090,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,5,M_990_Gelatinous_090,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,5,M_995_Gelatinous_090,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,5,M_005_Thick,0,0,0.05,0,0.01,-0.08
+Anty the war ant race,Anty,5,M_006_Chonky,0,0,0.05,-0.06,0.02,-0.09
+Anty the war ant race,Anty,5,M_010_Chubby,0,0,0.05,-0.06,-0.01,-0.19
+Anty the war ant race,Anty,5,M_020_Corpulent,0,0,0.31,-0.06,0.05,-0.09
+Anty the war ant race,Anty,5,M_030_Fat,0,0,0.31,-0.06,0.02,-0.09
+Anty the war ant race,Anty,5,M_040_Obese,0,0,0.52,0.00999999999999998,0.02,-0.01
+Anty the war ant race,Anty,5,M_050_MorbidlyObese,0,0,0.52,0.00999999999999998,0.01,0.09
+Anty the war ant race,Anty,5,M_060_Lardy,0,0,-0.04,0.15,0.07,0.12
+Anty the war ant race,Anty,5,M_070_Enormous,0,0,-0.04,0.15,0.04,-0.04
+Anty the war ant race,Anty,5,M_080_Gigantic,0,0,-0.04,0.15,0.04,-0.21
+Anty the war ant race,Anty,5,M_090_Titanic,0,0,-0.04,0.15,-0.06,0.1
+Anty the war ant race,Anty,5,M_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.5
+Anty the war ant race,Anty,5,M_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,5,M_200_Gelatinous,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,5,M_250_Gelatinous,0,0,-0.04,0.15,0.01,-0.84
+Anty the war ant race,Anty,5,M_300_Gelatinous,0,0,-0.04,0.15,0.01,-0.98
+Anty the war ant race,Anty,5,M_350_Gelatinous,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,5,M_400_Gelatinous,0,0,-0.04,0.15,0.01,-1.38
+Anty the war ant race,Anty,5,M_450_Gelatinous,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,5,M_500_Gelatinous,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,5,M_900_Gelatinous,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,5,M_910_Gelatinous,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,5,M_920_Gelatinous,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,5,M_930_Gelatinous,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,5,M_940_Gelatinous,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,5,M_950_Gelatinous,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,5,M_960_Gelatinous,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,5,M_970_Gelatinous,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,5,M_980_Gelatinous,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,5,M_990_Gelatinous,0,0,-0.04,0.15,0.01,-21.1
+Anty the war ant race,Anty,5,M_995_Gelatinous,0,0,-0.04,0.15,0.01,-24.1
+Anty the war ant race,Anty,7,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
+Anty the war ant race,Anty,7,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
+Anty the war ant race,Anty,7,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
+Anty the war ant race,Anty,7,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
+Anty the war ant race,Anty,7,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
+Anty the war ant race,Anty,7,F_040_Obese_090,0,0,0.39,0.11,0,0.06
+Anty the war ant race,Anty,7,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
+Anty the war ant race,Anty,7,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
+Anty the war ant race,Anty,7,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
+Anty the war ant race,Anty,7,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
+Anty the war ant race,Anty,7,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
+Anty the war ant race,Anty,7,F_100_Gelatinous_090,0,0,-0.04,0.15,-0.01,-0.34
+Anty the war ant race,Anty,7,F_150_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.41
+Anty the war ant race,Anty,7,F_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.49
+Anty the war ant race,Anty,7,F_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.58
+Anty the war ant race,Anty,7,F_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.68
+Anty the war ant race,Anty,7,F_350_Gelatinous_090,0,0,-0.04,0.15,0.02,-0.76
+Anty the war ant race,Anty,7,F_400_Gelatinous_090,0,0,-0.04,0.15,0.03,-0.9
+Anty the war ant race,Anty,7,F_450_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.09
+Anty the war ant race,Anty,7,F_500_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.37
+Anty the war ant race,Anty,7,F_900_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.91
+Anty the war ant race,Anty,7,F_910_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.33
+Anty the war ant race,Anty,7,F_920_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.73
+Anty the war ant race,Anty,7,F_930_Gelatinous_090,0,0,-0.04,0.15,0.02,-3.43
+Anty the war ant race,Anty,7,F_940_Gelatinous_090,0,0,-0.04,0.15,0.02,-4.83
+Anty the war ant race,Anty,7,F_950_Gelatinous_090,0,0,-0.04,0.15,0.02,-6.73
+Anty the war ant race,Anty,7,F_960_Gelatinous_090,0,0,-0.04,0.15,0.02,-8.73
+Anty the war ant race,Anty,7,F_970_Gelatinous_090,0,0,-0.04,0.15,0.02,-10.83
+Anty the war ant race,Anty,7,F_980_Gelatinous_090,0,0,-0.04,0.15,0.02,-13.23
+Anty the war ant race,Anty,7,F_990_Gelatinous_090,0,0,-0.04,0.15,0.02,-15.53
+Anty the war ant race,Anty,7,F_995_Gelatinous_090,0,0,-0.04,0.15,0.02,-19.03
+Anty the war ant race,Anty,7,F_010a_Chubby_090,0,0,0.02,0.06,0.03,0.03
+Anty the war ant race,Anty,7,F_020a_Corpulent_090,0,0,0.1,0.1,0,0.08
+Anty the war ant race,Anty,7,F_030a_Fat_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,7,F_040a_Obese_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,7,F_050a_MorbidlyObese_090,0,0,0.41,0.08,0,0.08
+Anty the war ant race,Anty,7,F_060a_Lardy_090,0,0,0.41,0.08,0.01,0.24
+Anty the war ant race,Anty,7,F_070a_Enormous_090,0,0,0.41,0.08,-0.02,0.05
+Anty the war ant race,Anty,7,F_080a_Gigantic_090,0,0,0.41,0.08,0,-0.05
+Anty the war ant race,Anty,7,F_090a_Titanic_090,0,0,0.41,0.08,-0.03,0.11
+Anty the war ant race,Anty,7,F_100a_Gelatinous_090,0,0,-0.04,0.15,-0.07,-0.62
+Anty the war ant race,Anty,7,F_150a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.72
+Anty the war ant race,Anty,7,F_200a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.84
+Anty the war ant race,Anty,7,F_250a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-0.98
+Anty the war ant race,Anty,7,F_300a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-1.1
+Anty the war ant race,Anty,7,F_350a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,7,F_400a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,7,F_450a_Gelatinous_090,0,0,-0.04,0.15,-0.15,-1.73
+Anty the war ant race,Anty,7,F_500a_Gelatinous_090,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,7,F_900a_Gelatinous_090,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,7,F_910a_Gelatinous_090,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,7,F_920a_Gelatinous_090,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,7,F_930a_Gelatinous_090,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,7,F_940a_Gelatinous_090,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,7,F_950a_Gelatinous_090,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,7,F_960a_Gelatinous_090,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,7,F_970a_Gelatinous_090,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,7,F_980a_Gelatinous_090,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,7,F_990a_Gelatinous_090,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,7,F_995a_Gelatinous_090,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,7,F_005_Thick,0,0,-0.04,0.02,0,0.01
+Anty the war ant race,Anty,7,F_006_Chonky,0,0,0.04,0.02,0,0.01
+Anty the war ant race,Anty,7,F_010_Chubby,0,0,0.12,0.02,0,-0.02
+Anty the war ant race,Anty,7,F_020_Corpulent,0,0,0.29,0.04,-0.01,-0.01
+Anty the war ant race,Anty,7,F_030_Fat,0,0,0.33,0.12,0,0.04
+Anty the war ant race,Anty,7,F_040_Obese,0,0,0.45,0.19,0.03,0.04
+Anty the war ant race,Anty,7,F_050_MorbidlyObese,0,0,0.58,0.17,-0.01,-0.01
+Anty the war ant race,Anty,7,F_060_Lardy,0,0,0.57,0.17,-0.01,0.16
+Anty the war ant race,Anty,7,F_070_Enormous,0,0,0.81,0.17,0.01,0.04
+Anty the war ant race,Anty,7,F_080_Gigantic,0,0,0.83,0.19,-0.03,-0.13
+Anty the war ant race,Anty,7,F_090_Titanic,0,0,-0.04,0.15,-0.01,0.08
+Anty the war ant race,Anty,7,F_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.64
+Anty the war ant race,Anty,7,F_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.74
+Anty the war ant race,Anty,7,F_200_Gelatinous,0,0,-0.04,0.15,0.02,-0.9
+Anty the war ant race,Anty,7,F_250_Gelatinous,0,0,-0.04,0.15,0.02,-1.01
+Anty the war ant race,Anty,7,F_300_Gelatinous,0,0,-0.04,0.15,0.02,-1.18
+Anty the war ant race,Anty,7,F_350_Gelatinous,0,0,-0.04,0.15,0.02,-1.31
+Anty the war ant race,Anty,7,F_400_Gelatinous,0,0,-0.04,0.15,0.02,-1.52
+Anty the war ant race,Anty,7,F_450_Gelatinous,0,0,-0.04,0.15,0.04,-1.79
+Anty the war ant race,Anty,7,F_500_Gelatinous,0,0,-0.04,0.15,0.04,-2.15
+Anty the war ant race,Anty,7,F_900_Gelatinous,0,0,-0.04,0.15,0.04,-2.75
+Anty the war ant race,Anty,7,F_910_Gelatinous,0,0,-0.04,0.15,0.04,-3.35
+Anty the war ant race,Anty,7,F_920_Gelatinous,0,0,-0.04,0.15,0.14,-4.55
+Anty the war ant race,Anty,7,F_930_Gelatinous,0,0,-0.04,0.15,0.14,-6.45
+Anty the war ant race,Anty,7,F_940_Gelatinous,0,0,-0.04,0.15,0.14,-8.25
+Anty the war ant race,Anty,7,F_950_Gelatinous,0,0,-0.04,0.15,0.14,-10.05
+Anty the war ant race,Anty,7,F_960_Gelatinous,0,0,-0.04,0.15,0.14,-12.55
+Anty the war ant race,Anty,7,F_970_Gelatinous,0,0,-0.04,0.15,0.14,-15.05
+Anty the war ant race,Anty,7,F_980_Gelatinous,0,0,-0.04,0.15,0.24,-18.15
+Anty the war ant race,Anty,7,F_990_Gelatinous,0,0,-0.04,0.15,0.24,-21.15
+Anty the war ant race,Anty,7,F_995_Gelatinous,0,0,-0.04,0.15,0.24,-24.15
+Anty the war ant race,Anty,7,F_010a_Chubby,0,0,0.12,-0.04,0,0.01
+Anty the war ant race,Anty,7,F_020a_Corpulent,0,0,0.29,0.04,0,0.01
+Anty the war ant race,Anty,7,F_030a_Fat,0,0,0.33,0.17,0,0.02
+Anty the war ant race,Anty,7,F_040a_Obese,0,0,0.41,0.14,0,0.02
+Anty the war ant race,Anty,7,F_050a_MorbidlyObese,0,0,0.55,0.11,0,0.02
+Anty the war ant race,Anty,7,F_060a_Lardy,0,0,0.57,0.17,0.01,0.22
+Anty the war ant race,Anty,7,F_070a_Enormous,0,0,0.73,0.09,-0.03,-0.03
+Anty the war ant race,Anty,7,F_080a_Gigantic,0,0,-0.04,0.15,0,-0.23
+Anty the war ant race,Anty,7,F_090a_Titanic,0,0,-0.04,0.15,-0.04,-0.02
+Anty the war ant race,Anty,7,F_100a_Gelatinous,0,0,-0.04,0.15,-0.11,-1.08
+Anty the war ant race,Anty,7,F_150a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,7,F_200a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,7,F_250a_Gelatinous,0,0,-0.04,0.15,-0.14,-1.63
+Anty the war ant race,Anty,7,F_300a_Gelatinous,0,0,-0.04,0.15,-0.16,-1.21
+Anty the war ant race,Anty,7,F_350a_Gelatinous,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,7,F_400a_Gelatinous,0,0,-0.04,0.15,-0.2,-2.46
+Anty the war ant race,Anty,7,F_450a_Gelatinous,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,7,F_500a_Gelatinous,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,7,F_900a_Gelatinous,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,7,F_910a_Gelatinous,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,7,F_920a_Gelatinous,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,7,F_930a_Gelatinous,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,7,F_940a_Gelatinous,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,7,F_950a_Gelatinous,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,7,F_960a_Gelatinous,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,7,F_970a_Gelatinous,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,7,F_980a_Gelatinous,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,7,F_990a_Gelatinous,0,0,-0.04,0.15,-2.26,-32.15
+Anty the war ant race,Anty,7,F_995a_Gelatinous,0,0,-0.04,0.15,-2.76,-37.15
+Anty the war ant race,Anty,7,M_005_Thick_090,0,0,-0.04,0.02,0,0.03
+Anty the war ant race,Anty,7,M_006_Chonky_090,0,0,-0.04,0.02,0.02,0.03
+Anty the war ant race,Anty,7,M_010_Chubby_090,0,0,-0.04,0.02,0,-0.06
+Anty the war ant race,Anty,7,M_020_Corpulent_090,0,0,0.08,0.1,0.03,0
+Anty the war ant race,Anty,7,M_030_Fat_090,0,0,0.08,0.1,0.02,-0.04
+Anty the war ant race,Anty,7,M_040_Obese_090,0,0,0.35,0.1,0.02,0.02
+Anty the war ant race,Anty,7,M_050_MorbidlyObese_090,0,0,0.35,0.1,0.01,0.11
+Anty the war ant race,Anty,7,M_060_Lardy_090,0,0,-0.04,0.15,0.06,0.19
+Anty the war ant race,Anty,7,M_070_Enormous_090,0,0,-0.04,0.15,0.04,0.05
+Anty the war ant race,Anty,7,M_080_Gigantic_090,0,0,-0.04,0.15,0.02,-0.09
+Anty the war ant race,Anty,7,M_090_Titanic_090,0,0,-0.04,0.15,-0.04,0.13
+Anty the war ant race,Anty,7,M_100_Gelatinous_090,0,0,-0.04,0.15,0,-0.24
+Anty the war ant race,Anty,7,M_150_Gelatinous_090,0,0,-0.04,0.15,0,-0.29
+Anty the war ant race,Anty,7,M_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.37
+Anty the war ant race,Anty,7,M_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.47
+Anty the war ant race,Anty,7,M_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.55
+Anty the war ant race,Anty,7,M_350_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,7,M_400_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,7,M_450_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.91
+Anty the war ant race,Anty,7,M_500_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,7,M_900_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,7,M_910_Gelatinous_090,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,7,M_920_Gelatinous_090,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,7,M_930_Gelatinous_090,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,7,M_940_Gelatinous_090,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,7,M_950_Gelatinous_090,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,7,M_960_Gelatinous_090,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,7,M_970_Gelatinous_090,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,7,M_980_Gelatinous_090,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,7,M_990_Gelatinous_090,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,7,M_995_Gelatinous_090,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,7,M_005_Thick,0,0,0.05,0,0.01,-0.08
+Anty the war ant race,Anty,7,M_006_Chonky,0,0,0.05,-0.06,0.02,-0.09
+Anty the war ant race,Anty,7,M_010_Chubby,0,0,0.05,-0.06,-0.01,-0.19
+Anty the war ant race,Anty,7,M_020_Corpulent,0,0,0.31,-0.06,0.05,-0.09
+Anty the war ant race,Anty,7,M_030_Fat,0,0,0.31,-0.06,0.02,-0.09
+Anty the war ant race,Anty,7,M_040_Obese,0,0,0.52,0.00999999999999998,0.02,-0.01
+Anty the war ant race,Anty,7,M_050_MorbidlyObese,0,0,0.52,0.00999999999999998,0.01,0.09
+Anty the war ant race,Anty,7,M_060_Lardy,0,0,-0.04,0.15,0.07,0.12
+Anty the war ant race,Anty,7,M_070_Enormous,0,0,-0.04,0.15,0.04,-0.04
+Anty the war ant race,Anty,7,M_080_Gigantic,0,0,-0.04,0.15,0.04,-0.21
+Anty the war ant race,Anty,7,M_090_Titanic,0,0,-0.04,0.15,-0.06,0.1
+Anty the war ant race,Anty,7,M_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.5
+Anty the war ant race,Anty,7,M_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,7,M_200_Gelatinous,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,7,M_250_Gelatinous,0,0,-0.04,0.15,0.01,-0.84
+Anty the war ant race,Anty,7,M_300_Gelatinous,0,0,-0.04,0.15,0.01,-0.98
+Anty the war ant race,Anty,7,M_350_Gelatinous,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,7,M_400_Gelatinous,0,0,-0.04,0.15,0.01,-1.38
+Anty the war ant race,Anty,7,M_450_Gelatinous,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,7,M_500_Gelatinous,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,7,M_900_Gelatinous,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,7,M_910_Gelatinous,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,7,M_920_Gelatinous,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,7,M_930_Gelatinous,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,7,M_940_Gelatinous,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,7,M_950_Gelatinous,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,7,M_960_Gelatinous,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,7,M_970_Gelatinous,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,7,M_980_Gelatinous,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,7,M_990_Gelatinous,0,0,-0.04,0.15,0.01,-21.1
+Anty the war ant race,Anty,7,M_995_Gelatinous,0,0,-0.04,0.15,0.01,-24.1
+Anty the war ant race,Anty,8,F_005_Thick_090,0,0,-0.05,0.05,0,0.02
+Anty the war ant race,Anty,8,F_006_Chonky_090,0,0,-0.04,0.03,0,0.02
+Anty the war ant race,Anty,8,F_010_Chubby_090,0,0,0.04,0.04,0,0.0400000000000001
+Anty the war ant race,Anty,8,F_020_Corpulent_090,0,0,0.11,0.08,-0.01,0.07
+Anty the war ant race,Anty,8,F_030_Fat_090,0,0,0.29,0.08,-0.01,0.09
+Anty the war ant race,Anty,8,F_040_Obese_090,0,0,0.39,0.11,0,0.06
+Anty the war ant race,Anty,8,F_050_MorbidlyObese_090,0,0,0.51,0.09,-0.01,0.01
+Anty the war ant race,Anty,8,F_060_Lardy_090,0,0,0.44,0.11,-0.01,0.17
+Anty the war ant race,Anty,8,F_070_Enormous_090,0,0,0.86,-0.05,0,0.07
+Anty the war ant race,Anty,8,F_080_Gigantic_090,0,0,0.96,-0.05,-0.03,-0.03
+Anty the war ant race,Anty,8,F_090_Titanic_090,0,0,1.06,0.25,-0.01,0.1
+Anty the war ant race,Anty,8,F_100_Gelatinous_090,0,0,-0.04,0.15,-0.01,-0.34
+Anty the war ant race,Anty,8,F_150_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.41
+Anty the war ant race,Anty,8,F_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.49
+Anty the war ant race,Anty,8,F_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.58
+Anty the war ant race,Anty,8,F_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.68
+Anty the war ant race,Anty,8,F_350_Gelatinous_090,0,0,-0.04,0.15,0.02,-0.76
+Anty the war ant race,Anty,8,F_400_Gelatinous_090,0,0,-0.04,0.15,0.03,-0.9
+Anty the war ant race,Anty,8,F_450_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.09
+Anty the war ant race,Anty,8,F_500_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.37
+Anty the war ant race,Anty,8,F_900_Gelatinous_090,0,0,-0.04,0.15,0.02,-1.91
+Anty the war ant race,Anty,8,F_910_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.33
+Anty the war ant race,Anty,8,F_920_Gelatinous_090,0,0,-0.04,0.15,0.02,-2.73
+Anty the war ant race,Anty,8,F_930_Gelatinous_090,0,0,-0.04,0.15,0.02,-3.43
+Anty the war ant race,Anty,8,F_940_Gelatinous_090,0,0,-0.04,0.15,0.02,-4.83
+Anty the war ant race,Anty,8,F_950_Gelatinous_090,0,0,-0.04,0.15,0.02,-6.73
+Anty the war ant race,Anty,8,F_960_Gelatinous_090,0,0,-0.04,0.15,0.02,-8.73
+Anty the war ant race,Anty,8,F_970_Gelatinous_090,0,0,-0.04,0.15,0.02,-10.83
+Anty the war ant race,Anty,8,F_980_Gelatinous_090,0,0,-0.04,0.15,0.02,-13.23
+Anty the war ant race,Anty,8,F_990_Gelatinous_090,0,0,-0.04,0.15,0.02,-15.53
+Anty the war ant race,Anty,8,F_995_Gelatinous_090,0,0,-0.04,0.15,0.02,-19.03
+Anty the war ant race,Anty,8,F_010a_Chubby_090,0,0,0.02,0.06,0.03,0.03
+Anty the war ant race,Anty,8,F_020a_Corpulent_090,0,0,0.1,0.1,0,0.08
+Anty the war ant race,Anty,8,F_030a_Fat_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,8,F_040a_Obese_090,0,0,0.19,0.19,0,0.08
+Anty the war ant race,Anty,8,F_050a_MorbidlyObese_090,0,0,0.41,0.08,0,0.08
+Anty the war ant race,Anty,8,F_060a_Lardy_090,0,0,0.41,0.08,0.01,0.24
+Anty the war ant race,Anty,8,F_070a_Enormous_090,0,0,0.41,0.08,-0.02,0.05
+Anty the war ant race,Anty,8,F_080a_Gigantic_090,0,0,0.41,0.08,0,-0.05
+Anty the war ant race,Anty,8,F_090a_Titanic_090,0,0,0.41,0.08,-0.03,0.11
+Anty the war ant race,Anty,8,F_100a_Gelatinous_090,0,0,-0.04,0.15,-0.07,-0.62
+Anty the war ant race,Anty,8,F_150a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.72
+Anty the war ant race,Anty,8,F_200a_Gelatinous_090,0,0,-0.04,0.15,-0.08,-0.84
+Anty the war ant race,Anty,8,F_250a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-0.98
+Anty the war ant race,Anty,8,F_300a_Gelatinous_090,0,0,-0.04,0.15,-0.1,-1.1
+Anty the war ant race,Anty,8,F_350a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,8,F_400a_Gelatinous_090,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,8,F_450a_Gelatinous_090,0,0,-0.04,0.15,-0.15,-1.73
+Anty the war ant race,Anty,8,F_500a_Gelatinous_090,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,8,F_900a_Gelatinous_090,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,8,F_910a_Gelatinous_090,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,8,F_920a_Gelatinous_090,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,8,F_930a_Gelatinous_090,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,8,F_940a_Gelatinous_090,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,8,F_950a_Gelatinous_090,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,8,F_960a_Gelatinous_090,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,8,F_970a_Gelatinous_090,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,8,F_980a_Gelatinous_090,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,8,F_990a_Gelatinous_090,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,8,F_995a_Gelatinous_090,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,8,F_005_Thick,0,0,-0.04,0.02,0,0.01
+Anty the war ant race,Anty,8,F_006_Chonky,0,0,0.04,0.02,0,0.01
+Anty the war ant race,Anty,8,F_010_Chubby,0,0,0.12,0.02,0,-0.02
+Anty the war ant race,Anty,8,F_020_Corpulent,0,0,0.29,0.04,-0.01,-0.01
+Anty the war ant race,Anty,8,F_030_Fat,0,0,0.33,0.12,0,0.04
+Anty the war ant race,Anty,8,F_040_Obese,0,0,0.45,0.19,0.03,0.04
+Anty the war ant race,Anty,8,F_050_MorbidlyObese,0,0,0.58,0.17,-0.01,-0.01
+Anty the war ant race,Anty,8,F_060_Lardy,0,0,0.57,0.17,-0.01,0.16
+Anty the war ant race,Anty,8,F_070_Enormous,0,0,0.81,0.17,0.01,0.04
+Anty the war ant race,Anty,8,F_080_Gigantic,0,0,0.83,0.19,-0.03,-0.13
+Anty the war ant race,Anty,8,F_090_Titanic,0,0,-0.04,0.15,-0.01,0.08
+Anty the war ant race,Anty,8,F_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.64
+Anty the war ant race,Anty,8,F_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.74
+Anty the war ant race,Anty,8,F_200_Gelatinous,0,0,-0.04,0.15,0.02,-0.9
+Anty the war ant race,Anty,8,F_250_Gelatinous,0,0,-0.04,0.15,0.02,-1.01
+Anty the war ant race,Anty,8,F_300_Gelatinous,0,0,-0.04,0.15,0.02,-1.18
+Anty the war ant race,Anty,8,F_350_Gelatinous,0,0,-0.04,0.15,0.02,-1.31
+Anty the war ant race,Anty,8,F_400_Gelatinous,0,0,-0.04,0.15,0.02,-1.52
+Anty the war ant race,Anty,8,F_450_Gelatinous,0,0,-0.04,0.15,0.04,-1.79
+Anty the war ant race,Anty,8,F_500_Gelatinous,0,0,-0.04,0.15,0.04,-2.15
+Anty the war ant race,Anty,8,F_900_Gelatinous,0,0,-0.04,0.15,0.04,-2.75
+Anty the war ant race,Anty,8,F_910_Gelatinous,0,0,-0.04,0.15,0.04,-3.35
+Anty the war ant race,Anty,8,F_920_Gelatinous,0,0,-0.04,0.15,0.14,-4.55
+Anty the war ant race,Anty,8,F_930_Gelatinous,0,0,-0.04,0.15,0.14,-6.45
+Anty the war ant race,Anty,8,F_940_Gelatinous,0,0,-0.04,0.15,0.14,-8.25
+Anty the war ant race,Anty,8,F_950_Gelatinous,0,0,-0.04,0.15,0.14,-10.05
+Anty the war ant race,Anty,8,F_960_Gelatinous,0,0,-0.04,0.15,0.14,-12.55
+Anty the war ant race,Anty,8,F_970_Gelatinous,0,0,-0.04,0.15,0.14,-15.05
+Anty the war ant race,Anty,8,F_980_Gelatinous,0,0,-0.04,0.15,0.24,-18.15
+Anty the war ant race,Anty,8,F_990_Gelatinous,0,0,-0.04,0.15,0.24,-21.15
+Anty the war ant race,Anty,8,F_995_Gelatinous,0,0,-0.04,0.15,0.24,-24.15
+Anty the war ant race,Anty,8,F_010a_Chubby,0,0,0.12,-0.04,0,0.01
+Anty the war ant race,Anty,8,F_020a_Corpulent,0,0,0.29,0.04,0,0.01
+Anty the war ant race,Anty,8,F_030a_Fat,0,0,0.33,0.17,0,0.02
+Anty the war ant race,Anty,8,F_040a_Obese,0,0,0.41,0.14,0,0.02
+Anty the war ant race,Anty,8,F_050a_MorbidlyObese,0,0,0.55,0.11,0,0.02
+Anty the war ant race,Anty,8,F_060a_Lardy,0,0,0.57,0.17,0.01,0.22
+Anty the war ant race,Anty,8,F_070a_Enormous,0,0,0.73,0.09,-0.03,-0.03
+Anty the war ant race,Anty,8,F_080a_Gigantic,0,0,-0.04,0.15,0,-0.23
+Anty the war ant race,Anty,8,F_090a_Titanic,0,0,-0.04,0.15,-0.04,-0.02
+Anty the war ant race,Anty,8,F_100a_Gelatinous,0,0,-0.04,0.15,-0.11,-1.08
+Anty the war ant race,Anty,8,F_150a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.28
+Anty the war ant race,Anty,8,F_200a_Gelatinous,0,0,-0.04,0.15,-0.12,-1.46
+Anty the war ant race,Anty,8,F_250a_Gelatinous,0,0,-0.04,0.15,-0.14,-1.63
+Anty the war ant race,Anty,8,F_300a_Gelatinous,0,0,-0.04,0.15,-0.16,-1.21
+Anty the war ant race,Anty,8,F_350a_Gelatinous,0,0,-0.04,0.15,-0.18,-2.09
+Anty the war ant race,Anty,8,F_400a_Gelatinous,0,0,-0.04,0.15,-0.2,-2.46
+Anty the war ant race,Anty,8,F_450a_Gelatinous,0,0,-0.04,0.15,-0.22,-2.81
+Anty the war ant race,Anty,8,F_500a_Gelatinous,0,0,-0.04,0.15,-0.27,-3.37
+Anty the war ant race,Anty,8,F_900a_Gelatinous,0,0,-0.04,0.15,-0.33,-4.27
+Anty the war ant race,Anty,8,F_910a_Gelatinous,0,0,-0.04,0.15,-0.38,-5.15
+Anty the war ant race,Anty,8,F_920a_Gelatinous,0,0,-0.04,0.15,-0.56,-7.05
+Anty the war ant race,Anty,8,F_930a_Gelatinous,0,0,-0.04,0.15,-0.76,-9.75
+Anty the war ant race,Anty,8,F_940a_Gelatinous,0,0,-0.04,0.15,-0.96,-12.55
+Anty the war ant race,Anty,8,F_950a_Gelatinous,0,0,-0.04,0.15,-1.06,-15.35
+Anty the war ant race,Anty,8,F_960a_Gelatinous,0,0,-0.04,0.15,-1.36,-18.95
+Anty the war ant race,Anty,8,F_970a_Gelatinous,0,0,-0.04,0.15,-1.66,-22.65
+Anty the war ant race,Anty,8,F_980a_Gelatinous,0,0,-0.04,0.15,-1.98,-27.15
+Anty the war ant race,Anty,8,F_990a_Gelatinous,0,0,-0.04,0.15,-2.26,-32.15
+Anty the war ant race,Anty,8,F_995a_Gelatinous,0,0,-0.04,0.15,-2.76,-37.15
+Anty the war ant race,Anty,8,M_005_Thick_090,0,0,-0.04,0.02,0,0.03
+Anty the war ant race,Anty,8,M_006_Chonky_090,0,0,-0.04,0.02,0.02,0.03
+Anty the war ant race,Anty,8,M_010_Chubby_090,0,0,-0.04,0.02,0,-0.06
+Anty the war ant race,Anty,8,M_020_Corpulent_090,0,0,0.08,0.1,0.03,0
+Anty the war ant race,Anty,8,M_030_Fat_090,0,0,0.08,0.1,0.02,-0.04
+Anty the war ant race,Anty,8,M_040_Obese_090,0,0,0.35,0.1,0.02,0.02
+Anty the war ant race,Anty,8,M_050_MorbidlyObese_090,0,0,0.35,0.1,0.01,0.11
+Anty the war ant race,Anty,8,M_060_Lardy_090,0,0,-0.04,0.15,0.06,0.19
+Anty the war ant race,Anty,8,M_070_Enormous_090,0,0,-0.04,0.15,0.04,0.05
+Anty the war ant race,Anty,8,M_080_Gigantic_090,0,0,-0.04,0.15,0.02,-0.09
+Anty the war ant race,Anty,8,M_090_Titanic_090,0,0,-0.04,0.15,-0.04,0.13
+Anty the war ant race,Anty,8,M_100_Gelatinous_090,0,0,-0.04,0.15,0,-0.24
+Anty the war ant race,Anty,8,M_150_Gelatinous_090,0,0,-0.04,0.15,0,-0.29
+Anty the war ant race,Anty,8,M_200_Gelatinous_090,0,0,-0.04,0.15,0,-0.37
+Anty the war ant race,Anty,8,M_250_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.47
+Anty the war ant race,Anty,8,M_300_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.55
+Anty the war ant race,Anty,8,M_350_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,8,M_400_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,8,M_450_Gelatinous_090,0,0,-0.04,0.15,0.01,-0.91
+Anty the war ant race,Anty,8,M_500_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,8,M_900_Gelatinous_090,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,8,M_910_Gelatinous_090,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,8,M_920_Gelatinous_090,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,8,M_930_Gelatinous_090,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,8,M_940_Gelatinous_090,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,8,M_950_Gelatinous_090,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,8,M_960_Gelatinous_090,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,8,M_970_Gelatinous_090,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,8,M_980_Gelatinous_090,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,8,M_990_Gelatinous_090,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,8,M_995_Gelatinous_090,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,8,M_005_Thick,0,0,0.05,0,0.01,-0.08
+Anty the war ant race,Anty,8,M_006_Chonky,0,0,0.05,-0.06,0.02,-0.09
+Anty the war ant race,Anty,8,M_010_Chubby,0,0,0.05,-0.06,-0.01,-0.19
+Anty the war ant race,Anty,8,M_020_Corpulent,0,0,0.31,-0.06,0.05,-0.09
+Anty the war ant race,Anty,8,M_030_Fat,0,0,0.31,-0.06,0.02,-0.09
+Anty the war ant race,Anty,8,M_040_Obese,0,0,0.52,0.00999999999999998,0.02,-0.01
+Anty the war ant race,Anty,8,M_050_MorbidlyObese,0,0,0.52,0.00999999999999998,0.01,0.09
+Anty the war ant race,Anty,8,M_060_Lardy,0,0,-0.04,0.15,0.07,0.12
+Anty the war ant race,Anty,8,M_070_Enormous,0,0,-0.04,0.15,0.04,-0.04
+Anty the war ant race,Anty,8,M_080_Gigantic,0,0,-0.04,0.15,0.04,-0.21
+Anty the war ant race,Anty,8,M_090_Titanic,0,0,-0.04,0.15,-0.06,0.1
+Anty the war ant race,Anty,8,M_100_Gelatinous,0,0,-0.04,0.15,0.01,-0.5
+Anty the war ant race,Anty,8,M_150_Gelatinous,0,0,-0.04,0.15,0.01,-0.63
+Anty the war ant race,Anty,8,M_200_Gelatinous,0,0,-0.04,0.15,0.01,-0.76
+Anty the war ant race,Anty,8,M_250_Gelatinous,0,0,-0.04,0.15,0.01,-0.84
+Anty the war ant race,Anty,8,M_300_Gelatinous,0,0,-0.04,0.15,0.01,-0.98
+Anty the war ant race,Anty,8,M_350_Gelatinous,0,0,-0.04,0.15,0.01,-1.16
+Anty the war ant race,Anty,8,M_400_Gelatinous,0,0,-0.04,0.15,0.01,-1.38
+Anty the war ant race,Anty,8,M_450_Gelatinous,0,0,-0.04,0.15,0.01,-1.65
+Anty the war ant race,Anty,8,M_500_Gelatinous,0,0,-0.04,0.15,0.01,-2
+Anty the war ant race,Anty,8,M_900_Gelatinous,0,0,-0.04,0.15,0.01,-2.6
+Anty the war ant race,Anty,8,M_910_Gelatinous,0,0,-0.04,0.15,0.01,-3.3
+Anty the war ant race,Anty,8,M_920_Gelatinous,0,0,-0.04,0.15,0.01,-4.5
+Anty the war ant race,Anty,8,M_930_Gelatinous,0,0,-0.04,0.15,0.01,-6.3
+Anty the war ant race,Anty,8,M_940_Gelatinous,0,0,-0.04,0.15,0.01,-8.1
+Anty the war ant race,Anty,8,M_950_Gelatinous,0,0,-0.04,0.15,0.01,-10.73
+Anty the war ant race,Anty,8,M_960_Gelatinous,0,0,-0.04,0.15,0.01,-12.73
+Anty the war ant race,Anty,8,M_970_Gelatinous,0,0,-0.04,0.15,0.01,-15.1
+Anty the war ant race,Anty,8,M_980_Gelatinous,0,0,-0.04,0.15,0.01,-18.1
+Anty the war ant race,Anty,8,M_990_Gelatinous,0,0,-0.04,0.15,0.01,-21.1
+Anty the war ant race,Anty,8,M_995_Gelatinous,0,0,-0.04,0.15,0.01,-24.1
+Revia Race,ReviaRaceAlien,1,F_005_Thick,-0.07,0.1,0.385,-0.5375,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_006_Chonky,-0.07,0.1,0.465,-0.5375,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_010_Chubby,-0.07,0.1,0.545,-0.5375,-0.0775,-0.4825
+Revia Race,ReviaRaceAlien,1,F_020_Corpulent,-0.07,0.1,0.715,-0.5175,-0.0875,-0.4725
+Revia Race,ReviaRaceAlien,1,F_030_Fat,-0.07,0.1,0.755,-0.4375,-0.0775,-0.4225
+Revia Race,ReviaRaceAlien,1,F_040_Obese,-0.07,0.1,0.875,-0.3675,-0.0475,-0.4225
+Revia Race,ReviaRaceAlien,1,F_050_MorbidlyObese,-0.07,0.1,1.005,-0.3875,-0.0875,-0.4725
+Revia Race,ReviaRaceAlien,1,F_060_Lardy,-0.07,0.1,0.995,-0.3875,-0.0875,-0.3025
+Revia Race,ReviaRaceAlien,1,F_070_Enormous,-0.07,0.1,1.235,-0.3875,-0.0675,-0.4225
+Revia Race,ReviaRaceAlien,1,F_080_Gigantic,-0.07,0.1,1.255,-0.3675,-0.1075,-0.5925
+Revia Race,ReviaRaceAlien,1,F_090_Titanic,-0.07,0.1,0.385,-0.4075,-0.0875,-0.3825
+Revia Race,ReviaRaceAlien,1,F_100_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.1025
+Revia Race,ReviaRaceAlien,1,F_150_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.2025
+Revia Race,ReviaRaceAlien,1,F_200_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.3625
+Revia Race,ReviaRaceAlien,1,F_250_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.4725
+Revia Race,ReviaRaceAlien,1,F_300_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.6425
+Revia Race,ReviaRaceAlien,1,F_350_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.7725
+Revia Race,ReviaRaceAlien,1,F_400_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0575,-1.9825
+Revia Race,ReviaRaceAlien,1,F_450_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-2.2525
+Revia Race,ReviaRaceAlien,1,F_500_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-2.6125
+Revia Race,ReviaRaceAlien,1,F_900_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-3.2125
+Revia Race,ReviaRaceAlien,1,F_910_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0375,-3.8125
+Revia Race,ReviaRaceAlien,1,F_920_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-5.0125
+Revia Race,ReviaRaceAlien,1,F_930_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-6.9125
+Revia Race,ReviaRaceAlien,1,F_940_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-8.7125
+Revia Race,ReviaRaceAlien,1,F_950_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-10.5125
+Revia Race,ReviaRaceAlien,1,F_960_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-13.0125
+Revia Race,ReviaRaceAlien,1,F_970_Gelatinous,-0.07,0.1,0.385,-0.4075,0.0625,-15.5125
+Revia Race,ReviaRaceAlien,1,F_980_Gelatinous,-0.07,0.1,0.385,-0.4075,0.1625,-18.6125
+Revia Race,ReviaRaceAlien,1,F_990_Gelatinous,-0.07,0.1,0.385,-0.4075,0.1625,-21.6125
+Revia Race,ReviaRaceAlien,1,F_995_Gelatinous,-0.07,0.1,0.385,-0.4075,0.1625,-24.6125
+Revia Race,ReviaRaceAlien,1,F_010a_Chubby_090,-0.07,0.1,0.445,-0.4975,-0.0475,-0.4325
+Revia Race,ReviaRaceAlien,1,F_020a_Corpulent_090,-0.07,0.1,0.525,-0.4575,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_030a_Fat_090,-0.07,0.1,0.615,-0.3675,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_040a_Obese_090,-0.07,0.1,0.615,-0.3675,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_050a_MorbidlyObese_090,-0.07,0.1,0.835,-0.4775,-0.0775,-0.3825
+Revia Race,ReviaRaceAlien,1,F_060a_Lardy_090,-0.07,0.1,0.835,-0.4775,-0.0675,-0.2225
+Revia Race,ReviaRaceAlien,1,F_070a_Enormous_090,-0.07,0.1,0.835,-0.4775,-0.0975,-0.4125
+Revia Race,ReviaRaceAlien,1,F_080a_Gigantic_090,-0.07,0.1,0.835,-0.4775,-0.0775,-0.5125
+Revia Race,ReviaRaceAlien,1,F_090a_Titanic_090,-0.07,0.1,0.835,-0.4775,-0.1075,-0.3525
+Revia Race,ReviaRaceAlien,1,F_100a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1475,-1.0825
+Revia Race,ReviaRaceAlien,1,F_150a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1575,-1.1825
+Revia Race,ReviaRaceAlien,1,F_200a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1575,-1.3025
+Revia Race,ReviaRaceAlien,1,F_250a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1775,-1.4425
+Revia Race,ReviaRaceAlien,1,F_300a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1775,-1.5625
+Revia Race,ReviaRaceAlien,1,F_350a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1975,-1.7425
+Revia Race,ReviaRaceAlien,1,F_400a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.1975,-1.9225
+Revia Race,ReviaRaceAlien,1,F_450a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.2275,-2.1925
+Revia Race,ReviaRaceAlien,1,F_500a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.2575,-2.5525
+Revia Race,ReviaRaceAlien,1,F_900a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.2975,-3.2725
+Revia Race,ReviaRaceAlien,1,F_910a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.3475,-3.8325
+Revia Race,ReviaRaceAlien,1,F_920a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.4075,-4.7325
+Revia Race,ReviaRaceAlien,1,F_930a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.4575,-5.6125
+Revia Race,ReviaRaceAlien,1,F_940a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.6375,-7.5125
+Revia Race,ReviaRaceAlien,1,F_950a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.8375,-10.2125
+Revia Race,ReviaRaceAlien,1,F_960a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.0375,-13.0125
+Revia Race,ReviaRaceAlien,1,F_970a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.1375,-15.8125
+Revia Race,ReviaRaceAlien,1,F_980a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.4375,-19.4125
+Revia Race,ReviaRaceAlien,1,F_990a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-1.7375,-23.1125
+Revia Race,ReviaRaceAlien,1,F_995a_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-2.0575,-27.6125
+Revia Race,ReviaRaceAlien,1,F_005_Thick_090,-0.07,0.1,0.375,-0.5075,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_006_Chonky_090,-0.07,0.1,0.385,-0.5275,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_010_Chubby_090,-0.07,0.1,0.465,-0.5175,-0.0775,-0.4225
+Revia Race,ReviaRaceAlien,1,F_020_Corpulent_090,-0.07,0.1,0.535,-0.4775,-0.0875,-0.3925
+Revia Race,ReviaRaceAlien,1,F_030_Fat_090,-0.07,0.1,0.715,-0.4775,-0.0875,-0.3725
+Revia Race,ReviaRaceAlien,1,F_040_Obese_090,-0.07,0.1,0.815,-0.4475,-0.0775,-0.4025
+Revia Race,ReviaRaceAlien,1,F_050_MorbidlyObese_090,-0.07,0.1,0.935,-0.4675,-0.0875,-0.4525
+Revia Race,ReviaRaceAlien,1,F_060_Lardy_090,-0.07,0.1,0.865,-0.4475,-0.0875,-0.2925
+Revia Race,ReviaRaceAlien,1,F_070_Enormous_090,-0.07,0.1,1.285,-0.6075,-0.0775,-0.3925
+Revia Race,ReviaRaceAlien,1,F_080_Gigantic_090,-0.07,0.1,1.385,-0.6075,-0.1075,-0.4925
+Revia Race,ReviaRaceAlien,1,F_090_Titanic_090,-0.07,0.1,1.485,-0.3075,-0.0875,-0.3625
+Revia Race,ReviaRaceAlien,1,F_100_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0875,-0.8025
+Revia Race,ReviaRaceAlien,1,F_150_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-0.8725
+Revia Race,ReviaRaceAlien,1,F_200_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.9525
+Revia Race,ReviaRaceAlien,1,F_250_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0425
+Revia Race,ReviaRaceAlien,1,F_300_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.1425
+Revia Race,ReviaRaceAlien,1,F_350_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-1.2225
+Revia Race,ReviaRaceAlien,1,F_400_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0475,-1.3625
+Revia Race,ReviaRaceAlien,1,F_450_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-1.5525
+Revia Race,ReviaRaceAlien,1,F_500_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-1.8325
+Revia Race,ReviaRaceAlien,1,F_900_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-2.3725
+Revia Race,ReviaRaceAlien,1,F_910_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-2.7925
+Revia Race,ReviaRaceAlien,1,F_920_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-3.1925
+Revia Race,ReviaRaceAlien,1,F_930_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-3.8925
+Revia Race,ReviaRaceAlien,1,F_940_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-5.2925
+Revia Race,ReviaRaceAlien,1,F_950_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-7.1925
+Revia Race,ReviaRaceAlien,1,F_960_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-9.1925
+Revia Race,ReviaRaceAlien,1,F_970_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-11.2925
+Revia Race,ReviaRaceAlien,1,F_980_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-13.6925
+Revia Race,ReviaRaceAlien,1,F_990_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-15.9925
+Revia Race,ReviaRaceAlien,1,F_995_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0575,-19.4925
+Revia Race,ReviaRaceAlien,1,F_010a_Chubby,-0.07,0.1,0.545,-0.5975,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_020a_Corpulent,-0.07,0.1,0.715,-0.5175,-0.0775,-0.4525
+Revia Race,ReviaRaceAlien,1,F_030a_Fat,-0.07,0.1,0.755,-0.3875,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_040a_Obese,-0.07,0.1,0.835,-0.4175,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_050a_MorbidlyObese,-0.07,0.1,0.975,-0.4475,-0.0775,-0.4425
+Revia Race,ReviaRaceAlien,1,F_060a_Lardy,-0.07,0.1,0.995,-0.3875,-0.0675,-0.2425
+Revia Race,ReviaRaceAlien,1,F_070a_Enormous,-0.07,0.1,1.155,-0.4675,-0.1075,-0.4925
+Revia Race,ReviaRaceAlien,1,F_080a_Gigantic,-0.07,0.1,0.385,-0.4075,-0.0775,-0.6925
+Revia Race,ReviaRaceAlien,1,F_090a_Titanic,-0.07,0.1,0.385,-0.4075,-0.1175,-0.4825
+Revia Race,ReviaRaceAlien,1,F_100a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.1875,-1.5425
+Revia Race,ReviaRaceAlien,1,F_150a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.1975,-1.7425
+Revia Race,ReviaRaceAlien,1,F_200a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.1975,-1.9225
+Revia Race,ReviaRaceAlien,1,F_250a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2175,-2.0925
+Revia Race,ReviaRaceAlien,1,F_300a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2375,-1.6725
+Revia Race,ReviaRaceAlien,1,F_350a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2575,-2.5525
+Revia Race,ReviaRaceAlien,1,F_400a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2775,-2.9225
+Revia Race,ReviaRaceAlien,1,F_450a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.2975,-3.2725
+Revia Race,ReviaRaceAlien,1,F_500a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.3475,-3.8325
+Revia Race,ReviaRaceAlien,1,F_900a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.4075,-4.7325
+Revia Race,ReviaRaceAlien,1,F_910a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.4575,-5.6125
+Revia Race,ReviaRaceAlien,1,F_920a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.6375,-7.5125
+Revia Race,ReviaRaceAlien,1,F_930a_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.8375,-10.2125
+Revia Race,ReviaRaceAlien,1,F_940a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.0375,-13.0125
+Revia Race,ReviaRaceAlien,1,F_950a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.1375,-15.8125
+Revia Race,ReviaRaceAlien,1,F_960a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.4375,-19.4125
+Revia Race,ReviaRaceAlien,1,F_970a_Gelatinous,-0.07,0.1,0.385,-0.4075,-1.7375,-23.1125
+Revia Race,ReviaRaceAlien,1,F_980a_Gelatinous,-0.07,0.1,0.385,-0.4075,-2.0575,-27.6125
+Revia Race,ReviaRaceAlien,1,F_990a_Gelatinous,-0.07,0.1,0.385,-0.4075,-2.3375,-32.6125
+Revia Race,ReviaRaceAlien,1,F_995a_Gelatinous,-0.07,0.1,0.385,-0.4075,-2.8375,-37.6125
+Revia Race,ReviaRaceAlien,1,M_005_Thick_090,-0.07,0.1,0.385,-0.5375,-0.0775,-0.4325
+Revia Race,ReviaRaceAlien,1,M_006_Chonky_090,-0.07,0.1,0.385,-0.5375,-0.0575,-0.4325
+Revia Race,ReviaRaceAlien,1,M_010_Chubby_090,-0.07,0.1,0.385,-0.5375,-0.0775,-0.5225
+Revia Race,ReviaRaceAlien,1,M_020_Corpulent_090,-0.07,0.1,0.505,-0.4575,-0.0475,-0.4625
+Revia Race,ReviaRaceAlien,1,M_030_Fat_090,-0.07,0.1,0.505,-0.4575,-0.0575,-0.5025
+Revia Race,ReviaRaceAlien,1,M_040_Obese_090,-0.07,0.1,0.775,-0.4575,-0.0575,-0.4425
+Revia Race,ReviaRaceAlien,1,M_050_MorbidlyObese_090,-0.07,0.1,0.775,-0.4575,-0.0675,-0.3525
+Revia Race,ReviaRaceAlien,1,M_060_Lardy_090,-0.07,0.1,0.385,-0.4075,-0.0175,-0.2725
+Revia Race,ReviaRaceAlien,1,M_070_Enormous_090,-0.07,0.1,0.385,-0.4075,-0.0375,-0.4125
+Revia Race,ReviaRaceAlien,1,M_080_Gigantic_090,-0.07,0.1,0.385,-0.4075,-0.0575,-0.5525
+Revia Race,ReviaRaceAlien,1,M_090_Titanic_090,-0.07,0.1,0.385,-0.4075,-0.1175,-0.3325
+Revia Race,ReviaRaceAlien,1,M_100_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.7025
+Revia Race,ReviaRaceAlien,1,M_150_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.7525
+Revia Race,ReviaRaceAlien,1,M_200_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0775,-0.8325
+Revia Race,ReviaRaceAlien,1,M_250_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-0.9325
+Revia Race,ReviaRaceAlien,1,M_300_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0125
+Revia Race,ReviaRaceAlien,1,M_350_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0925
+Revia Race,ReviaRaceAlien,1,M_400_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.2225
+Revia Race,ReviaRaceAlien,1,M_450_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.3725
+Revia Race,ReviaRaceAlien,1,M_500_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-1.6225
+Revia Race,ReviaRaceAlien,1,M_900_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-2.1125
+Revia Race,ReviaRaceAlien,1,M_910_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-2.4625
+Revia Race,ReviaRaceAlien,1,M_920_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-3.0625
+Revia Race,ReviaRaceAlien,1,M_930_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-3.7625
+Revia Race,ReviaRaceAlien,1,M_940_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-4.9625
+Revia Race,ReviaRaceAlien,1,M_950_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-6.7625
+Revia Race,ReviaRaceAlien,1,M_960_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-8.5625
+Revia Race,ReviaRaceAlien,1,M_970_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-11.1925
+Revia Race,ReviaRaceAlien,1,M_980_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-13.1925
+Revia Race,ReviaRaceAlien,1,M_990_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-15.5625
+Revia Race,ReviaRaceAlien,1,M_995_Gelatinous_090,-0.07,0.1,0.385,-0.4075,-0.0675,-18.5625
+Revia Race,ReviaRaceAlien,1,M_005_Thick,-0.07,0.1,0.475,-0.5575,-0.0675,-0.5425
+Revia Race,ReviaRaceAlien,1,M_006_Chonky,-0.07,0.1,0.475,-0.6175,-0.0575,-0.5525
+Revia Race,ReviaRaceAlien,1,M_010_Chubby,-0.07,0.1,0.475,-0.6175,-0.0875,-0.6525
+Revia Race,ReviaRaceAlien,1,M_020_Corpulent,-0.07,0.1,0.735,-0.6175,-0.0275,-0.5525
+Revia Race,ReviaRaceAlien,1,M_030_Fat,-0.07,0.1,0.735,-0.6175,-0.0575,-0.5525
+Revia Race,ReviaRaceAlien,1,M_040_Obese,-0.07,0.1,0.945,-0.5475,-0.0575,-0.4725
+Revia Race,ReviaRaceAlien,1,M_050_MorbidlyObese,-0.07,0.1,0.945,-0.5475,-0.0675,-0.3725
+Revia Race,ReviaRaceAlien,1,M_060_Lardy,-0.07,0.1,0.385,-0.4075,-0.00749999999999999,-0.3425
+Revia Race,ReviaRaceAlien,1,M_070_Enormous,-0.07,0.1,0.385,-0.4075,-0.0375,-0.5025
+Revia Race,ReviaRaceAlien,1,M_080_Gigantic,-0.07,0.1,0.385,-0.4075,-0.0375,-0.6725
+Revia Race,ReviaRaceAlien,1,M_090_Titanic,-0.07,0.1,0.385,-0.4075,-0.1375,-0.3625
+Revia Race,ReviaRaceAlien,1,M_100_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-0.9625
+Revia Race,ReviaRaceAlien,1,M_150_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.0925
+Revia Race,ReviaRaceAlien,1,M_200_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.2225
+Revia Race,ReviaRaceAlien,1,M_250_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.3025
+Revia Race,ReviaRaceAlien,1,M_300_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.4425
+Revia Race,ReviaRaceAlien,1,M_350_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.6225
+Revia Race,ReviaRaceAlien,1,M_400_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-1.8425
+Revia Race,ReviaRaceAlien,1,M_450_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-2.1125
+Revia Race,ReviaRaceAlien,1,M_500_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-2.4625
+Revia Race,ReviaRaceAlien,1,M_900_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-3.0625
+Revia Race,ReviaRaceAlien,1,M_910_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-3.7625
+Revia Race,ReviaRaceAlien,1,M_920_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-4.9625
+Revia Race,ReviaRaceAlien,1,M_930_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-6.7625
+Revia Race,ReviaRaceAlien,1,M_940_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-8.5625
+Revia Race,ReviaRaceAlien,1,M_950_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-11.1925
+Revia Race,ReviaRaceAlien,1,M_960_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-13.1925
+Revia Race,ReviaRaceAlien,1,M_970_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-15.5625
+Revia Race,ReviaRaceAlien,1,M_980_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-18.5625
+Revia Race,ReviaRaceAlien,1,M_990_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-21.5625
+Revia Race,ReviaRaceAlien,1,M_995_Gelatinous,-0.07,0.1,0.385,-0.4075,-0.0675,-24.5625
+Revia Race,ReviaRaceAlien,1,Female,-0.06,0.12,0.45,-0.59,-0.078,-0.42
+Revia Race,ReviaRaceAlien,1,Thin,-0.06,0.12,0.38,-0.64,-0.078,-0.42
+Orassans,Alien_OrassanHumanHybrid,1,F_005_Thick_090,0,0,0.12,-0.24,-0.03,-0.06
+Orassans,Alien_OrassanHumanHybrid,1,F_006_Chonky_090,0,0,0.17,-0.24,-0.03,-0.06
+Orassans,Alien_OrassanHumanHybrid,1,F_010_Chubby_090,0,0,0.24,-0.24,-0.03,-0.06
+Orassans,Alien_OrassanHumanHybrid,1,F_020_Corpulent_090,0,0,0.29,-0.18,-0.04,-0.03
+Orassans,Alien_OrassanHumanHybrid,1,F_030_Fat_090,0,0,0.37,-0.14,-0.04,-0.01
+Orassans,Alien_OrassanHumanHybrid,1,F_040_Obese_090,0,0,0.47,-0.07,-0.03,-0.03
+Orassans,Alien_OrassanHumanHybrid,1,F_050_MorbidlyObese_090,0,0,0.65,-0.06,-0.04,-0.08
+Orassans,Alien_OrassanHumanHybrid,1,F_060_Lardy_090,0,0,0.55,-0.04,-0.04,0.1
+Orassans,Alien_OrassanHumanHybrid,1,F_070_Enormous_090,0,0,0.98,-0.27,-0.02,-0.01
+Orassans,Alien_OrassanHumanHybrid,1,F_080_Gigantic_090,0,0,1.09,-0.21,-0.06,-0.11
+Orassans,Alien_OrassanHumanHybrid,1,F_090_Titanic_090,0,0,-0.08,0.21,-0.04,0.03
+Orassans,Alien_OrassanHumanHybrid,1,F_100_Gelatinous_090,0,0,-0.08,0.21,0,-0.38
+Orassans,Alien_Orassan,1,F_005_Thick_070,0,0,0.09,-0.2,-0.03,0.01
+Orassans,Alien_Orassan,1,F_006_Chonky_070,0,0,0.11,-0.2,-0.03,0.05
+Orassans,Alien_Orassan,1,F_010_Chubby_070,0,0,0.17,-0.2,-0.03,0.05
+Orassans,Alien_Orassan,1,F_020_Corpulent_070,0,0,0.19,-0.14,-0.03,0.05
+Orassans,Alien_Orassan,1,F_030_Fat_070,0,0,0.2,-0.08,-0.03,0.09
+Orassans,Alien_Orassan,1,F_040_Obese_070,0,0,0.29,-0.06,-0.03,0.09
+Orassans,Alien_Orassan,1,F_050_MorbidlyObese_070,0,0,0.4,-0.04,-0.03,0.09
+Orassans,Alien_Orassan,1,F_060_Lardy_070,0,0,0.33,-0.04,-0.03,0.17
+Orassans,Alien_Orassan,1,F_070_Enormous_070,0,0,0.48,-0.04,-0.02,0.06
+Orassans,Alien_Orassan,1,F_080_Gigantic_070,0,0,-0.04,0.15,-0.04,0.06
+Orassans,Alien_Orassan,1,F_090_Titanic_070,0,0,-0.04,0.15,-0.03,0.1
+Orassans,Alien_Orassan,1,F_100_Gelatinous_070,0,0,-0.04,0.15,-0.02,-0.2
+Foxbold Race,AFoxbold,1,Thin,0,0,-0.14,0.18,-0.01,0.26
+Foxbold Race,AFoxbold,1,F_005_Thick_070,0,0,-0.14,0.18,0,0.3
+Foxbold Race,AFoxbold,1,F_006_Chonky_070,0,0,-0.14,0.22,0,0.33
+Foxbold Race,AFoxbold,1,F_010_Chubby_070,0,0,-0.11,0.23,0,0.33
+Foxbold Race,AFoxbold,1,F_020_Corpulent_070,0,0,-0.08,0.29,0,0.36
+Foxbold Race,AFoxbold,1,F_030_Fat_070,0,0,-0.05,0.31,-0.01,0.39
+Foxbold Race,AFoxbold,1,F_040_Obese_070,0,0,0.04,0.36,-0.01,0.39
+Foxbold Race,AFoxbold,1,F_050_MorbidlyObese_070,0,0,0.09,0.36,-0.01,0.39
+Foxbold Race,AFoxbold,1,F_060_Lardy_070,0,0,0.17,0.36,-0.01,0.46
+Foxbold Race,AFoxbold,1,F_070_Enormous_070,0,0,0.29,0.32,-0.01,0.38
+Foxbold Race,AFoxbold,1,F_080_Gigantic_070,0,0,0.29,0.32,-0.02,0.32
+Foxbold Race,AFoxbold,1,F_090_Titanic_070,0,0,0.29,0.32,-0.02,0.39
+Foxbold Race,AFoxbold,1,F_100_Gelatinous_070,0,0,0.29,0.32,0.01,0.15
+Foxbold Race,AFoxbold,1,M_005_Thick_070,0,0,-0.15,0.18,0,0.28
+Foxbold Race,AFoxbold,1,M_006_Chonky_070,0,0,-0.15,0.18,0,0.3
+Foxbold Race,AFoxbold,1,M_010_Chubby_070,0,0,-0.13,0.21,0,0.26
+Foxbold Race,AFoxbold,1,M_020_Corpulent_070,0,0,-0.02,0.27,0.01,0.31
+Foxbold Race,AFoxbold,1,M_030_Fat_070,0,0,-0.02,0.3,0.02,0.29
+Foxbold Race,AFoxbold,1,M_040_Obese_070,0,0,0.07,0.33,0,0.36
+Foxbold Race,AFoxbold,1,M_050_MorbidlyObese_070,0,0,0.07,0.41,0,0.42
+Foxbold Race,AFoxbold,1,M_060_Lardy_070,0,0,0.07,0.5,0.03,0.45
+Foxbold Race,AFoxbold,1,M_070_Enormous_070,0,0,0,0.2,0.01,0.34
+Foxbold Race,AFoxbold,1,M_080_Gigantic_070,0,0,0,0.2,0.01,0.26
+Foxbold Race,AFoxbold,1,M_090_Titanic_070,0,0,0,0.2,-0.04,0.45
+Foxbold Race,AFoxbold,1,M_100_Gelatinous_070,0,0,0,0.2,-0.01,0.15
+Dogbold Race,Alien_Dogbold,1,Female,-0.49,0.04,-0.28,0.08,-0.06,0.37
+Dogbold Race,Alien_Dogbold,1,Male,-0.53,0.04,-0.38,0.13,-0.09,0.47
+Dogbold Race,Alien_Dogbold,1,F_005_Thick_070,-0.55,0,-0.27,0.11,-0.07,0.44
+Dogbold Race,Alien_Dogbold,1,F_006_Chonky_070,-0.57,0.04,-0.27,0.15,-0.07,0.47
+Dogbold Race,Alien_Dogbold,1,F_010_Chubby_070,-0.57,0.04,-0.24,0.16,-0.07,0.47
+Dogbold Race,Alien_Dogbold,1,F_020_Corpulent_070,-0.57,0.04,-0.21,0.22,-0.07,0.5
+Dogbold Race,Alien_Dogbold,1,F_030_Fat_070,-0.57,0.04,-0.18,0.24,-0.08,0.53
+Dogbold Race,Alien_Dogbold,1,F_040_Obese_070,-0.57,0.04,-0.09,0.29,-0.08,0.53
+Dogbold Race,Alien_Dogbold,1,F_050_MorbidlyObese_070,-0.57,0.04,-0.04,0.29,-0.08,0.53
+Dogbold Race,Alien_Dogbold,1,F_060_Lardy_070,-0.57,0.04,0.04,0.29,-0.08,0.6
+Dogbold Race,Alien_Dogbold,1,F_070_Enormous_070,-0.57,0.04,0.16,0.25,-0.08,0.52
+Dogbold Race,Alien_Dogbold,1,F_080_Gigantic_070,-0.57,0.04,0.16,0.25,-0.09,0.46
+Dogbold Race,Alien_Dogbold,1,F_090_Titanic_070,-0.57,0.04,0.16,0.25,-0.09,0.53
+Dogbold Race,Alien_Dogbold,1,F_100_Gelatinous_070,-0.57,0.04,0.16,0.25,-0.06,0.29
+Dogbold Race,Alien_Dogbold,1,M_005_Thick_070,-0.58,0.04,-0.3,0.09,-0.07,0.39
+Dogbold Race,Alien_Dogbold,1,M_006_Chonky_070,-0.58,0.04,-0.3,0.09,-0.07,0.41
+Dogbold Race,Alien_Dogbold,1,M_010_Chubby_070,-0.58,0.04,-0.28,0.12,-0.07,0.37
+Dogbold Race,Alien_Dogbold,1,M_020_Corpulent_070,-0.58,0.04,-0.17,0.18,-0.06,0.42
+Dogbold Race,Alien_Dogbold,1,M_030_Fat_070,-0.58,0.04,-0.17,0.21,-0.05,0.4
+Dogbold Race,Alien_Dogbold,1,M_040_Obese_070,-0.58,0.04,-0.08,0.24,-0.07,0.47
+Dogbold Race,Alien_Dogbold,1,M_050_MorbidlyObese_070,-0.58,0.04,-0.08,0.32,-0.07,0.53
+Dogbold Race,Alien_Dogbold,1,M_060_Lardy_070,-0.58,0.04,-0.08,0.41,-0.04,0.56
+Dogbold Race,Alien_Dogbold,1,M_070_Enormous_070,-0.58,0.04,-0.15,0.11,-0.06,0.45
+Dogbold Race,Alien_Dogbold,1,M_080_Gigantic_070,-0.58,0.04,-0.15,0.11,-0.06,0.37
+Dogbold Race,Alien_Dogbold,1,M_090_Titanic_070,-0.58,0.04,-0.15,0.11,-0.11,0.56
+Dogbold Race,Alien_Dogbold,1,M_100_Gelatinous_070,-0.58,0.04,-0.15,0.11,-0.08,0.26
+Erin's Miqo'te,MQT_Miqote,3,F_005_Thick,0.07,-0.3,0.22,-0.23,0.01,-0.27
+Erin's Miqo'te,MQT_Miqote,3,F_006_Chonky,0.07,-0.3,0.27,-0.23,0.03,-0.23
+Erin's Miqo'te,MQT_Miqote,3,F_010_Chubby,0.07,-0.3,0.35,-0.2,0,-0.26
+Erin's Miqo'te,MQT_Miqote,3,F_020_Corpulent,0.07,-0.3,0.51,-0.15,0,-0.26
+Erin's Miqo'te,MQT_Miqote,3,F_030_Fat,0.07,-0.3,0.56,-0.05,0.03,-0.22
+Erin's Miqo'te,MQT_Miqote,3,F_040_Obese,0.07,-0.3,0.7,0.03,0.02,-0.24
+Erin's Miqo'te,MQT_Miqote,3,F_050_MorbidlyObese,0.07,-0.3,0.88,0.03,0.02,-0.24
+Erin's Miqo'te,MQT_Miqote,3,F_060_Lardy,0.07,-0.3,0.82,0.05,0,-0.11
+Erin's Miqo'te,MQT_Miqote,3,F_070_Enormous,0.07,-0.3,1.22,-0.17,0.02,-0.26
+Erin's Miqo'te,MQT_Miqote,3,F_080_Gigantic,0.07,-0.3,1.62,-0.12,-0.02,-0.41
+Erin's Miqo'te,MQT_Miqote,3,F_090_Titanic,0.07,-0.3,1.32,0.18,0,-0.26
+Erin's Miqo'te,MQT_Miqote,3,F_100_Gelatinous,0.07,-0.3,1.32,0.53,0.04,-0.91
+Equiums,Alien_PEquium,1,F_005_Thick,-0.4,0.27,-0.06,0,-0.03,0.3
+Equiums,Alien_PEquium,1,F_006_Chonky,-0.4,0.27,-0.01,0,-0.01,0.34
+Equiums,Alien_PEquium,1,F_010_Chubby,-0.4,0.27,0.07,0.03,-0.04,0.31
+Equiums,Alien_PEquium,1,F_020_Corpulent,-0.4,0.27,0.23,0.08,-0.04,0.31
+Equiums,Alien_PEquium,1,F_030_Fat,-0.4,0.27,0.28,0.18,-0.01,0.35
+Equiums,Alien_PEquium,1,F_040_Obese,-0.4,0.27,0.42,0.26,-0.02,0.33
+Equiums,Alien_PEquium,1,F_050_MorbidlyObese,-0.4,0.27,0.6,0.26,-0.02,0.33
+Equiums,Alien_PEquium,1,F_060_Lardy,-0.4,0.27,0.54,0.28,-0.04,0.46
+Equiums,Alien_PEquium,1,F_070_Enormous,-0.4,0.27,0.94,0.06,-0.02,0.31
+Equiums,Alien_PEquium,1,F_080_Gigantic,-0.4,0.27,1.34,0.11,-0.06,0.16
+Equiums,Alien_PEquium,1,F_090_Titanic,-0.4,0.27,1.04,0.41,-0.04,0.31
+Equiums,Alien_PEquium,1,F_100_Gelatinous,-0.4,0.27,1.04,0.76,0,-0.34
+Equiums,Alien_KEquium,1,F_005_Thick,-0.4,0.27,-0.06,0,-0.03,0.3
+Equiums,Alien_KEquium,1,F_006_Chonky,-0.4,0.27,-0.01,0,-0.01,0.34
+Equiums,Alien_KEquium,1,F_010_Chubby,-0.4,0.27,0.07,0.03,-0.04,0.31
+Equiums,Alien_KEquium,1,F_020_Corpulent,-0.4,0.27,0.23,0.08,-0.04,0.31
+Equiums,Alien_KEquium,1,F_030_Fat,-0.4,0.27,0.28,0.18,-0.01,0.35
+Equiums,Alien_KEquium,1,F_040_Obese,-0.4,0.27,0.42,0.26,-0.02,0.33
+Equiums,Alien_KEquium,1,F_050_MorbidlyObese,-0.4,0.27,0.6,0.26,-0.02,0.33
+Equiums,Alien_KEquium,1,F_060_Lardy,-0.4,0.27,0.54,0.28,-0.04,0.46
+Equiums,Alien_KEquium,1,F_070_Enormous,-0.4,0.27,0.94,0.06,-0.02,0.31
+Equiums,Alien_KEquium,1,F_080_Gigantic,-0.4,0.27,1.34,0.11,-0.06,0.16
+Equiums,Alien_KEquium,1,F_090_Titanic,-0.4,0.27,1.04,0.41,-0.04,0.31
+Equiums,Alien_KEquium,1,F_100_Gelatinous,-0.4,0.27,1.04,0.76,0,-0.34
+Equiums,Alien_Equium,1,F_005_Thick,-0.4,0.27,-0.06,0,-0.03,0.3
+Equiums,Alien_Equium,1,F_006_Chonky,-0.4,0.27,-0.01,0,-0.01,0.34
+Equiums,Alien_Equium,1,F_010_Chubby,-0.4,0.27,0.07,0.03,-0.04,0.31
+Equiums,Alien_Equium,1,F_020_Corpulent,-0.4,0.27,0.23,0.08,-0.04,0.31
+Equiums,Alien_Equium,1,F_030_Fat,-0.4,0.27,0.28,0.18,-0.01,0.35
+Equiums,Alien_Equium,1,F_040_Obese,-0.4,0.27,0.42,0.26,-0.02,0.33
+Equiums,Alien_Equium,1,F_050_MorbidlyObese,-0.4,0.27,0.6,0.26,-0.02,0.33
+Equiums,Alien_Equium,1,F_060_Lardy,-0.4,0.27,0.54,0.28,-0.04,0.46
+Equiums,Alien_Equium,1,F_070_Enormous,-0.4,0.27,0.94,0.06,-0.02,0.31
+Equiums,Alien_Equium,1,F_080_Gigantic,-0.4,0.27,1.34,0.11,-0.06,0.16
+Equiums,Alien_Equium,1,F_090_Titanic,-0.4,0.27,1.04,0.41,-0.04,0.31
+Equiums,Alien_Equium,1,F_100_Gelatinous,-0.4,0.27,1.04,0.76,0,-0.34
+Equiums,Alien_SMaleEquium,1,F_005_Thick,-0.4,0.27,-0.06,0,-0.03,0.3
+Equiums,Alien_SMaleEquium,1,F_006_Chonky,-0.4,0.27,-0.01,0,-0.01,0.34
+Equiums,Alien_SMaleEquium,1,F_010_Chubby,-0.4,0.27,0.07,0.03,-0.04,0.31
+Equiums,Alien_SMaleEquium,1,F_020_Corpulent,-0.4,0.27,0.23,0.08,-0.04,0.31
+Equiums,Alien_SMaleEquium,1,F_030_Fat,-0.4,0.27,0.28,0.18,-0.01,0.35
+Equiums,Alien_SMaleEquium,1,F_040_Obese,-0.4,0.27,0.42,0.26,-0.02,0.33
+Equiums,Alien_SMaleEquium,1,F_050_MorbidlyObese,-0.4,0.27,0.6,0.26,-0.02,0.33
+Equiums,Alien_SMaleEquium,1,F_060_Lardy,-0.4,0.27,0.54,0.28,-0.04,0.46
+Equiums,Alien_SMaleEquium,1,F_070_Enormous,-0.4,0.27,0.94,0.06,-0.02,0.31
+Equiums,Alien_SMaleEquium,1,F_080_Gigantic,-0.4,0.27,1.34,0.11,-0.06,0.16
+Equiums,Alien_SMaleEquium,1,F_090_Titanic,-0.4,0.27,1.04,0.41,-0.04,0.31
+Equiums,Alien_SMaleEquium,1,F_100_Gelatinous,-0.4,0.27,1.04,0.76,0,-0.34
+Equiums,Alien_PEquium,1,Thin,-0.4,0.1,-0.11,0,-0.03,0.25
+Equiums,Alien_KEquium,1,Thin,-0.4,0.1,-0.11,0,-0.03,0.25
+Equiums,Alien_Equium,1,Thin,-0.4,0.1,-0.11,0,-0.03,0.25
+Equiums,Alien_SMaleEquium,1,Thin,-0.4,0.1,-0.11,0,-0.03,0.25
+Equiums,Alien_PEquium,1,M_005_Thick,-0.39,0.18,-0.06,0,-0.03,0.24
+Equiums,Alien_PEquium,1,M_006_Chonky,-0.39,0.18,-0.06,0,-0.03,0.3
+Equiums,Alien_PEquium,1,M_010_Chubby,-0.39,0.18,0,0,-0.03,0.2
+Equiums,Alien_PEquium,1,M_020_Corpulent,-0.35,0.13,0.24,0.1,0.03,0.2
+Equiums,Alien_PEquium,1,M_030_Fat,-0.35,0.13,0.34,0.1,0.03,0.2
+Equiums,Alien_PEquium,1,M_040_Obese,-0.35,0.13,0.46,0.15,0,0.27
+Equiums,Alien_PEquium,1,M_050_MorbidlyObese,-0.35,0.13,0.46,0.27,-0.02,0.39
+Equiums,Alien_PEquium,1,M_060_Lardy,-0.35,0.13,0.64,0.44,0.06,0.52
+Equiums,Alien_PEquium,1,M_070_Enormous,-0.35,0.13,0.64,0.24,0.02,0.32
+Equiums,Alien_PEquium,1,M_080_Gigantic,-0.35,0.13,0.64,0.24,0.02,0.14
+Equiums,Alien_PEquium,1,M_090_Titanic,-0.35,0.13,0.64,0.24,-0.09,0.49
+Equiums,Alien_PEquium,1,M_100_Gelatinous,0,0,0.64,0.24,-0.03,-0.11
+Equiums,Alien_KEquium,1,M_005_Thick,-0.39,0.18,-0.06,0,-0.03,0.24
+Equiums,Alien_KEquium,1,M_006_Chonky,-0.39,0.18,-0.06,0,-0.03,0.3
+Equiums,Alien_KEquium,1,M_010_Chubby,-0.39,0.18,0,0,-0.03,0.2
+Equiums,Alien_KEquium,1,M_020_Corpulent,-0.35,0.13,0.24,0.1,0.03,0.2
+Equiums,Alien_KEquium,1,M_030_Fat,-0.35,0.13,0.34,0.1,0.03,0.2
+Equiums,Alien_KEquium,1,M_040_Obese,-0.35,0.13,0.46,0.15,0,0.27
+Equiums,Alien_KEquium,1,M_050_MorbidlyObese,-0.35,0.13,0.46,0.27,-0.02,0.39
+Equiums,Alien_KEquium,1,M_060_Lardy,-0.35,0.13,0.64,0.44,0.06,0.52
+Equiums,Alien_KEquium,1,M_070_Enormous,-0.35,0.13,0.64,0.24,0.02,0.32
+Equiums,Alien_KEquium,1,M_080_Gigantic,-0.35,0.13,0.64,0.24,0.02,0.14
+Equiums,Alien_KEquium,1,M_090_Titanic,-0.35,0.13,0.64,0.24,-0.09,0.49
+Equiums,Alien_KEquium,1,M_100_Gelatinous,0,0,0.64,0.24,-0.03,-0.11
+Equiums,Alien_Equium,1,M_005_Thick,-0.39,0.18,-0.06,0,-0.03,0.24
+Equiums,Alien_Equium,1,M_006_Chonky,-0.39,0.18,-0.06,0,-0.03,0.3
+Equiums,Alien_Equium,1,M_010_Chubby,-0.39,0.18,0,0,-0.03,0.2
+Equiums,Alien_Equium,1,M_020_Corpulent,-0.35,0.13,0.24,0.1,0.03,0.2
+Equiums,Alien_Equium,1,M_030_Fat,-0.35,0.13,0.34,0.1,0.03,0.2
+Equiums,Alien_Equium,1,M_040_Obese,-0.35,0.13,0.46,0.15,0,0.27
+Equiums,Alien_Equium,1,M_050_MorbidlyObese,-0.35,0.13,0.46,0.27,-0.02,0.39
+Equiums,Alien_Equium,1,M_060_Lardy,-0.35,0.13,0.64,0.44,0.06,0.52
+Equiums,Alien_Equium,1,M_070_Enormous,-0.35,0.13,0.64,0.24,0.02,0.32
+Equiums,Alien_Equium,1,M_080_Gigantic,-0.35,0.13,0.64,0.24,0.02,0.14
+Equiums,Alien_Equium,1,M_090_Titanic,-0.35,0.13,0.64,0.24,-0.09,0.49
+Equiums,Alien_Equium,1,M_100_Gelatinous,0,0,0.64,0.24,-0.03,-0.11
+Equiums,Alien_SMaleEquium,1,M_005_Thick,-0.39,0.18,-0.06,0,-0.03,0.24
+Equiums,Alien_SMaleEquium,1,M_006_Chonky,-0.39,0.18,-0.06,0,-0.03,0.3
+Equiums,Alien_SMaleEquium,1,M_010_Chubby,-0.39,0.18,0,0,-0.03,0.2
+Equiums,Alien_SMaleEquium,1,M_020_Corpulent,-0.35,0.13,0.24,0.1,0.03,0.2
+Equiums,Alien_SMaleEquium,1,M_030_Fat,-0.35,0.13,0.34,0.1,0.03,0.2
+Equiums,Alien_SMaleEquium,1,M_040_Obese,-0.35,0.13,0.46,0.15,0,0.27
+Equiums,Alien_SMaleEquium,1,M_050_MorbidlyObese,-0.35,0.13,0.46,0.27,-0.02,0.39
+Equiums,Alien_SMaleEquium,1,M_060_Lardy,-0.35,0.13,0.64,0.44,0.06,0.52
+Equiums,Alien_SMaleEquium,1,M_070_Enormous,-0.35,0.13,0.64,0.24,0.02,0.32
+Equiums,Alien_SMaleEquium,1,M_080_Gigantic,-0.35,0.13,0.64,0.24,0.02,0.14
+Equiums,Alien_SMaleEquium,1,M_090_Titanic,-0.35,0.13,0.64,0.24,-0.09,0.49
+Equiums,Alien_SMaleEquium,1,M_100_Gelatinous,0,0,0.64,0.24,-0.03,-0.11
+Protogen! Marley Race Mod,Alien_Protogen,1,F_005_Thick,0,0,0.14,-0.18,0.01,-0.08
+Protogen! Marley Race Mod,Alien_Protogen,1,F_006_Chonky,0,0,0.19,-0.18,0.03,-0.04
+Protogen! Marley Race Mod,Alien_Protogen,1,F_010_Chubby,0,0,0.27,-0.15,0,-0.07
+Protogen! Marley Race Mod,Alien_Protogen,1,F_020_Corpulent,0,0,0.43,-0.1,0,-0.07
+Protogen! Marley Race Mod,Alien_Protogen,1,F_030_Fat,0,0,0.48,0,0.03,-0.03
+Protogen! Marley Race Mod,Alien_Protogen,1,F_040_Obese,0,0,0.62,0.08,0.02,-0.05
+Protogen! Marley Race Mod,Alien_Protogen,1,F_050_MorbidlyObese,0,0,0.8,0.08,0.02,-0.05
+Protogen! Marley Race Mod,Alien_Protogen,1,F_060_Lardy,0,0,0.74,0.1,0,0.08
+Protogen! Marley Race Mod,Alien_Protogen,1,F_070_Enormous,0,0,1.14,-0.12,0.02,-0.07
+Protogen! Marley Race Mod,Alien_Protogen,1,F_080_Gigantic,0,0,1.54,-0.07,-0.02,-0.22
+Protogen! Marley Race Mod,Alien_Protogen,1,F_090_Titanic,0,0,1.24,0.23,0,-0.07
+Protogen! Marley Race Mod,Alien_Protogen,1,F_100_Gelatinous,0,0,1.24,0.58,0.04,-0.72
+Protogen! Marley Race Mod,Alien_Protogen,1,M_005_Thick,0,0,0.09,-0.24,0.02,-0.11
+Protogen! Marley Race Mod,Alien_Protogen,1,M_006_Chonky,0,0,0.09,-0.24,0.02,-0.05
+Protogen! Marley Race Mod,Alien_Protogen,1,M_010_Chubby,0,0,0.15,-0.24,0.02,-0.15
+Protogen! Marley Race Mod,Alien_Protogen,1,M_020_Corpulent,0,0,0.39,-0.14,0.08,-0.15
+Protogen! Marley Race Mod,Alien_Protogen,1,M_030_Fat,0,0,0.49,-0.14,0.08,-0.15
+Protogen! Marley Race Mod,Alien_Protogen,1,M_040_Obese,0,0,0.61,-0.09,0.05,-0.08
+Protogen! Marley Race Mod,Alien_Protogen,1,M_050_MorbidlyObese,0,0,0.61,0.03,0.03,0.04
+Protogen! Marley Race Mod,Alien_Protogen,1,M_060_Lardy,0,0,0.79,0.2,0.11,0.17
+Protogen! Marley Race Mod,Alien_Protogen,1,M_070_Enormous,0,0,0.79,0,0.07,-0.03
+Protogen! Marley Race Mod,Alien_Protogen,1,M_080_Gigantic,0,0,0.79,0,0.07,-0.21
+Protogen! Marley Race Mod,Alien_Protogen,1,M_090_Titanic,0,0,0.79,0,-0.04,0.14
+Protogen! Marley Race Mod,Alien_Protogen,1,M_100_Gelatinous,0,0,0.79,0,0.02,-0.46
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_005_Thick,0,0,0.14,-0.18,0.01,-0.08
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_006_Chonky,0,0,0.19,-0.18,0.03,-0.04
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_010_Chubby,0,0,0.27,-0.15,0,-0.07
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_020_Corpulent,0,0,0.43,-0.1,0,-0.07
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_030_Fat,0,0,0.48,0,0.03,-0.03
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_040_Obese,0,0,0.62,0.08,0.02,-0.05
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_050_MorbidlyObese,0,0,0.8,0.08,0.02,-0.05
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_060_Lardy,0,0,0.74,0.1,0,0.08
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_070_Enormous,0,0,1.14,-0.12,0.02,-0.07
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_080_Gigantic,0,0,1.54,-0.07,-0.02,-0.22
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_090_Titanic,0,0,1.24,0.23,0,-0.07
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,F_100_Gelatinous,0,0,1.24,0.58,0.04,-0.72
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_005_Thick,0,0,0.09,-0.24,0.02,-0.11
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_006_Chonky,0,0,0.09,-0.24,0.02,-0.05
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_010_Chubby,0,0,0.15,-0.24,0.02,-0.15
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_020_Corpulent,0,0,0.39,-0.14,0.08,-0.15
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_030_Fat,0,0,0.49,-0.14,0.08,-0.15
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_040_Obese,0,0,0.61,-0.09,0.05,-0.08
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_050_MorbidlyObese,0,0,0.61,0.03,0.03,0.04
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_060_Lardy,0,0,0.79,0.2,0.11,0.17
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_070_Enormous,0,0,0.79,0,0.07,-0.03
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_080_Gigantic,0,0,0.79,0,0.07,-0.21
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_090_Titanic,0,0,0.79,0,-0.04,0.14
+Protogen! Marley Race Mod,Alien_ProtogenNME,1,M_100_Gelatinous,0,0,0.79,0,0.02,-0.46
+[EAVE] Sylveon Race,EA_SylveonRace,1,Male,0,0,0.31,-0.07,0.05,-0.33
+[EAVE] Sylveon Race,EA_SylveonRace,1,Thin,0,0,0.32,-0.06,0.04,-0.3
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_005_Thick,0,0,0.333333333,-0.026666667,0.046666667,-0.363333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_006_Chonky,0,0,0.383333333,-0.016666667,0.056666667,-0.363333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_010_Chubby,0,0,0.453333333,-0.006666667,0.036666667,-0.393333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_020_Corpulent,0,0,0.573333333,0.043333333,0.036666667,-0.373333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_030_Fat,0,0,0.633333333,0.113333333,0.056666667,-0.313333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_040_Obese,0,0,0.673333333,0.223333333,0.056666667,-0.303333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_050_MorbidlyObese,0,0,0.863333333,0.233333333,0.026666667,-0.333333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_060_Lardy,0,0,0.763333333,0.323333333,0.026666667,-0.163333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_070_Enormous,0,0,1.143333333,0.123333333,0.056666667,-0.313333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_080_Gigantic,0,0,1.143333333,0.183333333,0.016666667,-0.323333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_090_Titanic,0,0,1.143333333,0.183333333,0.016666667,-0.173333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,F_100_Gelatinous,0,0,1.143333333,0.183333333,0.066666667,-0.843333333
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_005_Thick,0,0,0.386666667,-0.08,0.045,-0.3375
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_006_Chonky,0,0,0.386666667,-0.12,0.065,-0.3075
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_010_Chubby,0,0,0.426666667,-0.12,0.045,-0.4475
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_020_Corpulent,0,0,0.586666667,-0.04,0.085,-0.3775
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_030_Fat,0,0,0.646666667,0.01,0.065,-0.3775
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_040_Obese,0,0,0.776666667,0.06,0.065,-0.2975
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_050_MorbidlyObese,0,0,0.776666667,0.17,0.055,-0.1675
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_060_Lardy,0,0,0.846666667,0.31,0.115,-0.0575
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_070_Enormous,0,0,0.846666667,0.18,0.095,-0.2575
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_080_Gigantic,0,0,0.846666667,0.18,0.065,-0.4975
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_090_Titanic,0,0,0.846666667,0.18,-0.015,-0.0975
+[EAVE] Sylveon Race,EA_SylveonRace,1,M_100_Gelatinous,0,0,0.846666667,0.18,0.035,-0.8575
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_005_Thick,0,0,-0.11,0.12,0,0.26
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_006_Chonky,0,0,-0.06,0.16,0.01,0.26
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_010_Chubby,0,0,0.02,0.18,-0.01,0.23
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_020_Corpulent,0,0,0.07,0.18,-0.01,0.25
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_030_Fat,0,0,0.07,0.18,0.01,0.31
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_040_Obese,0,0,0.07,0.18,0.01,0.32
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_050_MorbidlyObese,0,0,0.07,0.18,-0.02,0.29
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_060_Lardy,0,0,0.07,0.18,-0.02,0.46
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_070_Enormous,0,0,0.07,0.18,0.01,0.31
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_080_Gigantic,0,0,0.07,0.18,-0.03,0.3
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_090_Titanic,0,0,0.07,0.18,-0.03,0.45
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,F_100_Gelatinous,0,0,0.07,0.18,0.02,-0.22
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_005_Thick,0,0,-0.06,0.09,0,0.21
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_006_Chonky,0,0,-0.06,0.09,0.02,0.24
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_010_Chubby,0,0,-0.02,0.09,0,0.1
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_020_Corpulent,0,0,0.2,0.19,0.04,0.17
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_030_Fat,0,0,0.24,0.25,0.02,0.17
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_040_Obese,0,0,0.34,0.28,0.02,0.25
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_050_MorbidlyObese,0,0,0.34,0.28,0.01,0.38
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_060_Lardy,0,0,0.34,0.28,0.07,0.49
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_070_Enormous,0,0,0.34,0.28,0.05,0.29
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_080_Gigantic,0,0,0.34,0.28,0.02,0.05
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_090_Titanic,0,0,0.34,0.28,-0.06,0.45
+Xenohumans - Anthromorphs,ATK_Lagomorph,1,M_100_Gelatinous,0,0,0.34,0.28,-0.01,-0.31
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,Thin,0,0,-0.16,0.09,-0.01,0.26
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_005_Thick,0,0,-0.131666667,0.138333333,-0.01,0.26
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_006_Chonky,0,0,-0.081666667,0.148333333,0,0.26
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_010_Chubby,0,0,-0.011666667,0.158333333,0.01,0.26
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_020_Corpulent,0,0,0.108333333,0.208333333,-0.01,0.23
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_030_Fat,0,0,0.168333333,0.278333333,-0.01,0.25
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_040_Obese,0,0,0.208333333,0.388333333,0.01,0.31
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_050_MorbidlyObese,0,0,0.398333333,0.398333333,0.01,0.32
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_060_Lardy,0,0,0.298333333,0.488333333,-0.02,0.29
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_070_Enormous,0,0,0.678333333,0.288333333,-0.02,0.46
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_080_Gigantic,0,0,0.678333333,0.348333333,0.01,0.31
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_090_Titanic,0,0,0.678333333,0.348333333,-0.03,0.3
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,F_100_Gelatinous,0,0,0.678333333,0.348333333,-0.03,0.45
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_005_Thick,0,0,-0.12,0.09,0,0.275
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_006_Chonky,0,0,-0.12,0.09,0.02,0.305
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_010_Chubby,0,0,-0.06,0.09,0,0.165
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_020_Corpulent,0,0,0.11,0.19,0.04,0.235
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_030_Fat,0,0,0.12,0.29,0.02,0.235
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_040_Obese,0,0,0.29,0.29,0.02,0.315
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_050_MorbidlyObese,0,0,-0.2,0.1,0.01,0.445
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_060_Lardy,0,0,-0.2,0.1,0.07,0.555
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_070_Enormous,0,0,-0.2,0.1,0.05,0.355
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_080_Gigantic,0,0,-0.2,0.1,0.02,0.115
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_090_Titanic,0,0,-0.2,0.1,-0.06,0.515
+Xenohumans - Anthromorphs,ATK_Gnollmorph,1,M_100_Gelatinous,0,0,-0.2,0.1,-0.01,-0.245
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,Thin,-0.43,0,-0.12,0.07,0,0.3
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_005_Thick,-0.43,0,-0.12,0.07,-0.005,0.29
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_006_Chonky,-0.43,0,-0.07,0.08,0.005,0.29
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_010_Chubby,-0.43,0,0,0.09,-0.015,0.26
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_020_Corpulent,-0.43,0,0.12,0.14,-0.015,0.28
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_030_Fat,-0.43,0,0.18,0.21,0.005,0.34
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_040_Obese,-0.43,0,0.22,0.32,0.005,0.35
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_050_MorbidlyObese,-0.43,0,0.41,0.33,-0.025,0.32
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_060_Lardy,-0.43,0,0.31,0.42,-0.025,0.49
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_070_Enormous,-0.43,0,0.69,0.22,0.005,0.34
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_080_Gigantic,-0.43,0,0.69,0.28,-0.035,0.33
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_090_Titanic,-0.43,0,0.69,0.28,-0.035,0.48
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,F_100_Gelatinous,-0.43,0,0.69,0.28,0.015,-0.19
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_005_Thick,-0.43,0,-0.09,0.08,-0.008,0.286
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_006_Chonky,-0.43,0,-0.09,0.04,0.012,0.316
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_010_Chubby,-0.43,0,-0.05,0.04,-0.008,0.176
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_020_Corpulent,-0.43,0,0.11,0.12,0.032,0.246
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_030_Fat,-0.43,0,0.17,0.17,0.012,0.246
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_040_Obese,-0.43,0,0.3,0.22,0.012,0.326
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_050_MorbidlyObese,-0.43,0,0.3,0.33,0.002,0.456
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_060_Lardy,-0.43,0,0.37,0.47,0.062,0.566
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_070_Enormous,-0.43,0,0.37,0.34,0.042,0.366
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_080_Gigantic,-0.43,0,0.37,0.34,0.012,0.126
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_090_Titanic,-0.43,0,0.37,0.34,-0.068,0.526
+Xenohumans - Anthromorphs,ATK_Dragomorph,1,M_100_Gelatinous,-0.43,0,0.37,0.34,-0.018,-0.234
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_005_Thick,-0.43,0,-0.2,0.16,0.02,0.31
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_006_Chonky,-0.43,0,-0.15,0.17,0.03,0.31
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_010_Chubby,-0.43,0,-0.08,0.18,0.01,0.28
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_020_Corpulent,-0.43,0,0.04,0.23,0.01,0.3
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_030_Fat,-0.43,0,0.1,0.3,0.03,0.36
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_040_Obese,-0.43,0,0.14,0.41,0.03,0.37
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_050_MorbidlyObese,-0.43,0,0.33,0.42,0,0.34
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_060_Lardy,-0.43,0,0.23,0.51,0,0.51
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_070_Enormous,-0.43,0,0.61,0.31,0.03,0.36
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_080_Gigantic,-0.43,0,0.61,0.37,-0.01,0.35
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_090_Titanic,-0.43,0,0.61,0.37,-0.01,0.5
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,F_100_Gelatinous,-0.43,0,0.61,0.37,0.04,-0.17
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_005_Thick,-0.43,0,-0.116666667,0.1,0.02,0.1825
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_006_Chonky,-0.43,0,-0.116666667,0.06,0.04,0.2125
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_010_Chubby,-0.43,0,-0.076666667,0.06,0.02,0.0725
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_020_Corpulent,-0.43,0,0.083333333,0.14,0.06,0.1425
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_030_Fat,-0.43,0,0.143333333,0.19,0.04,0.1425
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_040_Obese,-0.43,0,0.273333333,0.24,0.04,0.2225
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_050_MorbidlyObese,-0.43,0,0.273333333,0.35,0.03,0.3525
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_060_Lardy,-0.43,0,0.343333333,0.49,0.09,0.4625
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_070_Enormous,-0.43,0,0.343333333,0.36,0.07,0.2625
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_080_Gigantic,-0.43,0,0.343333333,0.36,0.04,0.0225
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_090_Titanic,-0.43,0,0.343333333,0.36,-0.04,0.4225
+Xenohumans - Anthromorphs,ATK_Vulpinemorph,1,M_100_Gelatinous,-0.43,0,0.343333333,0.36,0.01,-0.3375
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_005_Thick,0,0,-0.28,0.16,0.016666667,0.313333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_006_Chonky,0,0,-0.23,0.17,0.026666667,0.313333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_010_Chubby,0,0,-0.16,0.18,0.006666667,0.283333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_020_Corpulent,0,0,-0.04,0.23,0.006666667,0.303333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_030_Fat,0,0,0.02,0.3,0.026666667,0.363333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_040_Obese,0,0,0.06,0.41,0.026666667,0.373333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_050_MorbidlyObese,0,0,0.25,0.42,-0.003333333,0.343333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_060_Lardy,0,0,0.15,0.51,-0.003333333,0.513333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_070_Enormous,0,0,0.53,0.31,0.026666667,0.363333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_080_Gigantic,0,0,0.53,0.37,-0.013333333,0.353333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_090_Titanic,0,0,0.53,0.37,-0.013333333,0.503333333
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,F_100_Gelatinous,0,0,0.53,0.37,0.036666667,-0.166666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_005_Thick,0,0,-0.233333333,0.1,0.01,0.246666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_006_Chonky,0,0,-0.233333333,0.06,0.03,0.276666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_010_Chubby,0,0,-0.193333333,0.06,0.01,0.136666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_020_Corpulent,0,0,-0.033333333,0.14,0.05,0.206666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_030_Fat,0,0,0.026666667,0.19,0.03,0.206666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_040_Obese,0,0,0.156666667,0.24,0.03,0.286666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_050_MorbidlyObese,0,0,0.156666667,0.35,0.02,0.416666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_060_Lardy,0,0,0.226666667,0.49,0.08,0.526666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_070_Enormous,0,0,0.226666667,0.36,0.06,0.326666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_080_Gigantic,0,0,0.226666667,0.36,0.03,0.086666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_090_Titanic,0,0,0.226666667,0.36,-0.05,0.486666667
+Xenohumans - Anthromorphs,ATK_Felinemorph,1,M_100_Gelatinous,0,0,0.226666667,0.36,0,-0.273333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_005_Thick,0,0,-0.115,0.155,0.003333333,0.276666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_006_Chonky,0,0,-0.065,0.165,0.013333333,0.276666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_010_Chubby,0,0,0.005,0.175,-0.006666667,0.246666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_020_Corpulent,0,0,0.125,0.225,-0.006666667,0.266666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_030_Fat,0,0,0.185,0.295,0.013333333,0.326666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_040_Obese,0,0,0.225,0.405,0.013333333,0.336666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_050_MorbidlyObese,0,0,0.415,0.415,-0.016666667,0.306666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_060_Lardy,0,0,0.315,0.505,-0.016666667,0.476666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_070_Enormous,0,0,0.695,0.305,0.013333333,0.326666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_080_Gigantic,0,0,0.695,0.365,-0.026666667,0.316666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_090_Titanic,0,0,0.695,0.365,-0.026666667,0.466666667
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,F_100_Gelatinous,0,0,0.695,0.365,0.023333333,-0.203333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_005_Thick,0,0,-0.09,0.08,0,0.223333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_006_Chonky,0,0,-0.09,0.04,0.02,0.253333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_010_Chubby,0,0,-0.05,0.04,0,0.113333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_020_Corpulent,0,0,0.11,0.12,0.04,0.183333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_030_Fat,0,0,0.17,0.17,0.02,0.183333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_040_Obese,0,0,0.3,0.22,0.02,0.263333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_050_MorbidlyObese,0,0,0.3,0.33,0.01,0.393333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_060_Lardy,0,0,0.37,0.47,0.07,0.503333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_070_Enormous,0,0,0.37,0.34,0.05,0.303333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_080_Gigantic,0,0,0.37,0.34,0.02,0.063333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_090_Titanic,0,0,0.37,0.34,-0.06,0.463333333
+Xenohumans - Anthromorphs,ATK_Cervinemorph,1,M_100_Gelatinous,0,0,0.37,0.34,-0.01,-0.296666667
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_005_Thick,0,0,-0.17,0.17,0,0.26
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_006_Chonky,0,0,-0.12,0.18,0.01,0.26
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_010_Chubby,0,0,-0.05,0.19,-0.01,0.23
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_020_Corpulent,0,0,0.07,0.24,-0.01,0.25
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_030_Fat,0,0,0.13,0.31,0.01,0.31
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_040_Obese,0,0,0.17,0.42,0.01,0.32
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_050_MorbidlyObese,0,0,0.36,0.43,-0.02,0.29
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_060_Lardy,0,0,0.26,0.52,-0.02,0.46
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_070_Enormous,0,0,0.64,0.32,0.01,0.31
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_080_Gigantic,0,0,0.64,0.38,-0.03,0.3
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_090_Titanic,0,0,0.64,0.38,-0.03,0.45
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,F_100_Gelatinous,0,0,0.64,0.38,0.02,-0.22
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_005_Thick,0,0,-0.12,0.17,0,0.21
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_006_Chonky,0,0,-0.12,0.13,0.02,0.24
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_010_Chubby,0,0,-0.08,0.13,0,0.1
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_020_Corpulent,0,0,0.08,0.21,0.04,0.17
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_030_Fat,0,0,0.14,0.26,0.02,0.17
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_040_Obese,0,0,0.27,0.31,0.02,0.25
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_050_MorbidlyObese,0,0,0.27,0.42,0.01,0.38
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_060_Lardy,0,0,0.34,0.56,0.07,0.49
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_070_Enormous,0,0,0.34,0.43,0.05,0.29
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_080_Gigantic,0,0,0.34,0.43,0.02,0.05
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_090_Titanic,0,0,0.34,0.43,-0.06,0.45
+Xenohumans - Anthromorphs,ATK_Caninemorph,1,M_100_Gelatinous,0,0,0.34,0.43,-0.01,-0.31
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_005_Thick,0,0,-0.18,0.13,0.013333333,0.3175
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_006_Chonky,0,0,-0.13,0.14,0.023333333,0.3175
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_010_Chubby,0,0,-0.06,0.15,0.003333333,0.2875
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_020_Corpulent,0,0,0.06,0.2,0.003333333,0.3075
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_030_Fat,0,0,0.12,0.27,0.023333333,0.3675
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_040_Obese,0,0,0.16,0.38,0.023333333,0.3775
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_050_MorbidlyObese,0,0,0.35,0.39,-0.006666667,0.3475
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_060_Lardy,0,0,0.25,0.48,-0.006666667,0.5175
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_070_Enormous,0,0,0.63,0.28,0.023333333,0.3675
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_080_Gigantic,0,0,0.63,0.34,-0.016666667,0.3575
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_090_Titanic,0,0,0.63,0.34,-0.016666667,0.5075
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,F_100_Gelatinous,0,0,0.63,0.34,0.033333333,-0.1625
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_005_Thick,-0.42,0,-0.135,0.045,0,0.24
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_006_Chonky,-0.42,0,-0.115,0.075,0.02,0.27
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_010_Chubby,-0.42,0,-0.135,-0.065,0,0.13
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_020_Corpulent,-0.42,0,-0.095,0.005,0.04,0.2
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_030_Fat,-0.42,0,-0.115,0.005,0.02,0.2
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_040_Obese,-0.42,0,-0.115,0.085,0.02,0.28
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_050_MorbidlyObese,-0.42,0,-0.125,0.215,0.01,0.41
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_060_Lardy,-0.42,0,-0.065,0.325,0.07,0.52
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_070_Enormous,-0.42,0,-0.085,0.125,0.05,0.32
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_080_Gigantic,-0.42,0,-0.115,-0.115,0.02,0.08
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_090_Titanic,-0.42,0,-0.195,0.285,-0.06,0.48
+Xenohumans - Anthromorphs,ATK_Avianmorph,1,M_100_Gelatinous,-0.42,0,-0.145,-0.475,-0.01,-0.28
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,Thin,0,0,-0.17,0.14,-0.01,0.28
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_005_Thick,0,0,-0.15,0.13,0.01,0.31
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_006_Chonky,0,0,-0.1,0.14,0.02,0.31
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_010_Chubby,0,0,-0.03,0.15,0,0.28
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_020_Corpulent,0,0,0.09,0.2,0,0.3
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_030_Fat,0,0,0.15,0.27,0.02,0.36
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_040_Obese,0,0,0.19,0.38,0.02,0.37
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_050_MorbidlyObese,0,0,0.38,0.39,-0.01,0.34
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_060_Lardy,0,0,0.28,0.48,-0.01,0.51
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_070_Enormous,0,0,0.66,0.28,0.02,0.36
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_080_Gigantic,0,0,0.66,0.34,-0.02,0.35
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_090_Titanic,0,0,0.66,0.34,-0.02,0.5
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,F_100_Gelatinous,0,0,0.66,0.34,0.03,-0.17
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_005_Thick,0,0,-0.09,0.08,-0.003333333,0.27
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_006_Chonky,0,0,-0.09,0.04,0.016666667,0.3
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_010_Chubby,0,0,-0.05,0.04,-0.003333333,0.16
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_020_Corpulent,0,0,0.11,0.12,0.036666667,0.23
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_030_Fat,0,0,0.17,0.17,0.016666667,0.23
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_040_Obese,0,0,0.3,0.22,0.016666667,0.31
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_050_MorbidlyObese,0,0,0.3,0.33,0.006666667,0.44
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_060_Lardy,0,0,0.37,0.47,0.066666667,0.55
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_070_Enormous,0,0,0.37,0.34,0.046666667,0.35
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_080_Gigantic,0,0,0.37,0.34,0.016666667,0.11
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_090_Titanic,0,0,0.37,0.34,-0.063333333,0.51
+Xenohumans - Anthromorphs,ATK_Bovinemorph,1,M_100_Gelatinous,0,0,0.37,0.34,-0.013333333,-0.25
+Minotaur Race,MinotaurRace,1,F_005_Thick,0,0,-0.45,0.24,0.005,0.645
+Minotaur Race,MinotaurRace,1,F_006_Chonky,0,0,-0.4,0.25,0.015,0.645
+Minotaur Race,MinotaurRace,1,F_010_Chubby,0,0,-0.33,0.26,-0.005,0.615
+Minotaur Race,MinotaurRace,1,F_020_Corpulent,0,0,-0.21,0.31,-0.005,0.635
+Minotaur Race,MinotaurRace,1,F_030_Fat,0,0,-0.15,0.38,0.015,0.695
+Minotaur Race,MinotaurRace,1,F_040_Obese,0,0,-0.11,0.49,0.015,0.705
+Minotaur Race,MinotaurRace,1,F_050_MorbidlyObese,0,0,0.08,0.5,-0.015,0.675
+Minotaur Race,MinotaurRace,1,F_060_Lardy,0,0,-0.02,0.59,-0.015,0.845
+Minotaur Race,MinotaurRace,1,F_070_Enormous,0,0,0.36,0.39,0.015,0.695
+Minotaur Race,MinotaurRace,1,F_080_Gigantic,0,0,0.36,0.45,-0.025,0.685
+Minotaur Race,MinotaurRace,1,F_090_Titanic,0,0,0.36,0.45,-0.025,0.835
+Minotaur Race,MinotaurRace,1,F_100_Gelatinous,0,0,0.36,0.45,0.025,0.165
+Minotaur Race,MinotaurRace,1,M_005_Thick,0,0,-0.435,0.235,0.02,0.6
+Minotaur Race,MinotaurRace,1,M_006_Chonky,0,0,-0.435,0.195,0.04,0.63
+Minotaur Race,MinotaurRace,1,M_010_Chubby,0,0,-0.395,0.195,0.02,0.49
+Minotaur Race,MinotaurRace,1,M_020_Corpulent,0,0,-0.235,0.275,0.06,0.56
+Minotaur Race,MinotaurRace,1,M_030_Fat,0,0,-0.175,0.325,0.04,0.56
+Minotaur Race,MinotaurRace,1,M_040_Obese,0,0,-0.045,0.375,0.04,0.64
+Minotaur Race,MinotaurRace,1,M_050_MorbidlyObese,0,0,-0.045,0.485,0.03,0.77
+Minotaur Race,MinotaurRace,1,M_060_Lardy,0,0,0.025,0.625,0.09,0.88
+Minotaur Race,MinotaurRace,1,M_070_Enormous,0,0,0.025,0.495,0.07,0.68
+Minotaur Race,MinotaurRace,1,M_080_Gigantic,0,0,0.025,0.495,0.04,0.44
+Minotaur Race,MinotaurRace,1,M_090_Titanic,0,0,0.025,0.495,-0.04,0.84
+Minotaur Race,MinotaurRace,1,M_100_Gelatinous,0,0,0.025,0.495,0.01,0.08
+Ferrex Race (Continued),Alien_Ferrex,1,F_005_Thick,0,0,0.8,-0.593333333,0.0125,-0.875
+Ferrex Race (Continued),Alien_Ferrex,1,F_006_Chonky,0,0,0.85,-0.583333333,0.0225,-0.875
+Ferrex Race (Continued),Alien_Ferrex,1,F_010_Chubby,0,0,0.92,-0.573333333,0.0025,-0.905
+Ferrex Race (Continued),Alien_Ferrex,1,F_020_Corpulent,0,0,1.04,-0.523333333,0.0025,-0.885
+Ferrex Race (Continued),Alien_Ferrex,1,F_030_Fat,0,0,1.1,-0.453333333,0.0225,-0.825
+Ferrex Race (Continued),Alien_Ferrex,1,F_040_Obese,0,0,1.14,-0.343333333,0.0225,-0.815
+Ferrex Race (Continued),Alien_Ferrex,1,F_050_MorbidlyObese,0,0,1.33,-0.333333333,-0.0075,-0.845
+Ferrex Race (Continued),Alien_Ferrex,1,F_060_Lardy,0,0,1.23,-0.243333333,-0.0075,-0.675
+Ferrex Race (Continued),Alien_Ferrex,1,F_070_Enormous,0,0,1.61,-0.443333333,0.0225,-0.825
+Ferrex Race (Continued),Alien_Ferrex,1,F_080_Gigantic,0,0,1.61,-0.383333333,-0.0175,-0.835
+Ferrex Race (Continued),Alien_Ferrex,1,F_090_Titanic,0,0,1.61,-0.383333333,-0.0175,-0.685
+Ferrex Race (Continued),Alien_Ferrex,1,F_100_Gelatinous,0,0,1.61,-0.383333333,0.0325,-1.355
+Ferrex Race (Continued),Alien_Ferrex,1,M_005_Thick,0,0,0.83,-0.61,0.015,-0.885
+Ferrex Race (Continued),Alien_Ferrex,1,M_006_Chonky,0,0,0.83,-0.65,0.035,-0.855
+Ferrex Race (Continued),Alien_Ferrex,1,M_010_Chubby,0,0,0.87,-0.65,0.015,-0.995
+Ferrex Race (Continued),Alien_Ferrex,1,M_020_Corpulent,0,0,1.03,-0.57,0.055,-0.925
+Ferrex Race (Continued),Alien_Ferrex,1,M_030_Fat,0,0,1.09,-0.52,0.035,-0.925
+Ferrex Race (Continued),Alien_Ferrex,1,M_040_Obese,0,0,1.22,-0.47,0.035,-0.845
+Ferrex Race (Continued),Alien_Ferrex,1,M_050_MorbidlyObese,0,0,1.22,-0.36,0.025,-0.715
+Ferrex Race (Continued),Alien_Ferrex,1,M_060_Lardy,0,0,1.29,-0.22,0.085,-0.605
+Ferrex Race (Continued),Alien_Ferrex,1,M_070_Enormous,0,0,1.29,-0.35,0.065,-0.805
+Ferrex Race (Continued),Alien_Ferrex,1,M_080_Gigantic,0,0,1.29,-0.35,0.035,-1.045
+Ferrex Race (Continued),Alien_Ferrex,1,M_090_Titanic,0,0,1.29,-0.35,-0.045,-0.645
+Ferrex Race (Continued),Alien_Ferrex,1,M_100_Gelatinous,0,0,1.29,-0.35,0.005,-1.405
+Ferrex Race (Continued),Alien_Ferrex,1,Female,0,0,0.85,-0.6,0,-0.91
+Ferrex Race (Continued),Alien_Ferrex,1,Male,0,0,0.78,-0.57,0,-0.91
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_005_Thick,0,0,0.29,-0.27,-0.005,-0.15
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_006_Chonky,0,0,0.34,-0.26,0.005,-0.15
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_010_Chubby,0,0,0.41,-0.25,-0.015,-0.18
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_020_Corpulent,0,0,0.53,-0.2,-0.015,-0.16
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_030_Fat,0,0,0.59,-0.13,0.005,-0.1
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_040_Obese,0,0,0.63,-0.02,0.005,-0.09
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_050_MorbidlyObese,0,0,0.82,-0.01,-0.025,-0.12
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_060_Lardy,0,0,0.72,0.08,-0.025,0.05
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_070_Enormous,0,0,1.1,-0.12,0.005,-0.1
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_080_Gigantic,0,0,1.1,-0.06,-0.035,-0.11
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_090_Titanic,0,0,1.1,-0.06,-0.035,0.04
+Vulpine Race Pack (Continued),Alien_Fennex,1,F_100_Gelatinous,0,0,1.1,-0.06,0.015,-0.63
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_005_Thick,0,0,0.35,-0.335,-0.006666667,-0.193333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_006_Chonky,0,0,0.35,-0.375,0.013333333,-0.163333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_010_Chubby,0,0,0.39,-0.375,-0.006666667,-0.303333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_020_Corpulent,0,0,0.55,-0.295,0.033333333,-0.233333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_030_Fat,0,0,0.61,-0.245,0.013333333,-0.233333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_040_Obese,0,0,0.74,-0.195,0.013333333,-0.153333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_050_MorbidlyObese,0,0,0.74,-0.085,0.003333333,-0.023333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_060_Lardy,0,0,0.81,0.055,0.063333333,0.086666667
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_070_Enormous,0,0,0.81,-0.075,0.043333333,-0.113333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_080_Gigantic,0,0,0.81,-0.075,0.013333333,-0.353333333
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_090_Titanic,0,0,0.81,-0.075,-0.066666667,0.046666667
+Vulpine Race Pack (Continued),Alien_Fennex,1,M_100_Gelatinous,0,0,0.81,-0.075,-0.016666667,-0.713333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_005_Thick,0,0,0.37,-0.36,0,-0.263333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_006_Chonky,0,0,0.42,-0.35,0.01,-0.263333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_010_Chubby,0,0,0.49,-0.34,-0.01,-0.293333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_020_Corpulent,0,0,0.61,-0.29,-0.01,-0.273333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_030_Fat,0,0,0.67,-0.22,0.01,-0.213333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_040_Obese,0,0,0.71,-0.11,0.01,-0.203333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_050_MorbidlyObese,0,0,0.9,-0.1,-0.02,-0.233333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_060_Lardy,0,0,0.8,-0.01,-0.02,-0.063333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_070_Enormous,0,0,1.18,-0.21,0.01,-0.213333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_080_Gigantic,0,0,1.18,-0.15,-0.03,-0.223333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_090_Titanic,0,0,1.18,-0.15,-0.03,-0.073333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,F_100_Gelatinous,0,0,1.18,-0.15,0.02,-0.743333333
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_005_Thick,0,0,0.44,-0.445,-0.006666667,-0.306666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_006_Chonky,0,0,0.44,-0.485,0.013333333,-0.276666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_010_Chubby,0,0,0.48,-0.485,-0.006666667,-0.416666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_020_Corpulent,0,0,0.64,-0.405,0.033333333,-0.346666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_030_Fat,0,0,0.7,-0.355,0.013333333,-0.346666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_040_Obese,0,0,0.83,-0.305,0.013333333,-0.266666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_050_MorbidlyObese,0,0,0.83,-0.195,0.003333333,-0.136666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_060_Lardy,0,0,0.9,-0.055,0.063333333,-0.026666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_070_Enormous,0,0,0.9,-0.185,0.043333333,-0.226666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_080_Gigantic,0,0,0.9,-0.185,0.013333333,-0.466666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_090_Titanic,0,0,0.9,-0.185,-0.066666667,-0.066666667
+Vulpine Race Pack (Continued),Alien_Frijjid,1,M_100_Gelatinous,0,0,0.9,-0.185,-0.016666667,-0.826666667

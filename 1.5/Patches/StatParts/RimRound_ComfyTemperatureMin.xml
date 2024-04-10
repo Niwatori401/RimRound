@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/StatDef[defName="ComfyTemperatureMin"]/parts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/StatDef[defName="ComfyTemperatureMin"]/parts</xpath>
+			<value>
+				<li Class="RimRound.AI.StatPart_ComfyTemperatureMin"/>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/StatDef[defName="ComfyTemperatureMin"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimRound.AI.StatPart_ComfyTemperatureMin"/>
+				</parts>
+			</value>		
+		</nomatch>
+	</Operation>
+</Patch>

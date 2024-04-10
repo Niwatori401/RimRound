@@ -59,7 +59,7 @@ namespace RimRound.Patch
                 Hediff_Fullness fullnessHediff = __instance as Hediff_Fullness;
 
                 Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Moving, GlobalSettings.fullnessHediffMovementPenaltyMult, fullnessHediff.MovementPenaltyMitigationFactor);
-                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, PawnCapacityDefOf.Eating, GlobalSettings.fullnessHediffEatingPenaltyMult, fullnessHediff.EatingSpeedPenaltyMitigationFactor);
+                Utilities.HediffUtility.AlterCapacityAccordingToSettings(newList, RimRound.Defs.PawnCapacityDefOf.Eating, GlobalSettings.fullnessHediffEatingPenaltyMult, fullnessHediff.EatingSpeedPenaltyMitigationFactor);
                 __result = newList;
             }
         }

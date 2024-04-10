@@ -1,0 +1,7 @@
+<loadFolders>
+	<v1.3>
+		<li>/</li>
+		<!--li IfModActive="VanillaExpanded.VCookE">Patches/VCookE/</li-->
+		<!--li IfModActive="crustypeanut.rc2.core">Patches/RC2/</li-->
+	</v1.3>
+</loadFolders>

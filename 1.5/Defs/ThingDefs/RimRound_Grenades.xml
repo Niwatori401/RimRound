@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseMakeableGrenade">
+		<defName>RR_FlabGrenade</defName>
+		<label>flab grenades</label>
+		<description>A project designed to create the effects of the embiggener on multiple targets in a radius, it suffers many of the same drawbacks, the biggest being that the expansion is merely temporary. The high-tech canisters release a mutagenic compound that rapidly fattens anything in its radius.</description>
+		<recipeMaker>
+			<researchPrerequisite>Machining</researchPrerequisite>
+		</recipeMaker>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/flab_grenade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>1.1</Mass>
+			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+			<WorkToMake>14400</WorkToMake>
+			<DeteriorationRate>2.5</DeteriorationRate>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<weaponTags Inherit="False">
+			<li>GrenadeFattening</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li>
+				<label>throw flab grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>20</range>
+				<forcedMissRadius>1.3</forcedMissRadius>
+				<warmupTime>3</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>RR_Proj_GrenadeFlab</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>RR_FatGas</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<postExplosionGasType>32</postExplosionGasType>
+			</li>	  
+		</comps>
+		<researchPrerequisites>
+			<li>RR_Research_ExperimentalGrenades</li>
+		</researchPrerequisites>	
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseFragGrenadeProjectile">
+		<defName>RR_Proj_GrenadeFlab</defName>
+		<label>flab grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/FlabGrenadeThrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>RR_FatGas</damageDef>
+			<explosionDelay>100</explosionDelay>
+			<explosionRadius>1.9</explosionRadius>
+			<explosionRadiusDisplayPadding>2</explosionRadiusDisplayPadding>
+			<postExplosionGasType>32</postExplosionGasType>
+			<screenShakeFactor>0.5</screenShakeFactor>
+		</projectile>
+	</ThingDef>	
+</Defs>

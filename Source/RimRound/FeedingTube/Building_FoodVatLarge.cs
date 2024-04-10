@@ -18,12 +18,12 @@ namespace RimRound.FeedingTube
             comp = base.GetComp<FoodNetStorage_ThingComp>();
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             Vector3 center = this.DrawPos + Vector3.up * 0.1f;
             center.x += BarXOFF;
             center.z += BarYOFF;
-            base.Draw();
+            base.DrawAt(drawLoc, flip);
             GenDraw.FillableBarRequest r = default;
             r.center = center;
             r.size = BarSize;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- To add a research tab, make a new ResearchTabDef here and then set the <tab> field of your research project to match it -->
+	<ResearchTabDef>
+		<defName>RRX_Meals</defName>
+		<label>RimRound Xpanded</label>
+	</ResearchTabDef>
+
+</Defs>

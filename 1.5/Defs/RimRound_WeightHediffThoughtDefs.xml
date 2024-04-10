@@ -1,0 +1,1492 @@
+<Defs>
+	<!--Author for lower weights: rngsusd#9608-->
+	<!--Author for weights above Gelatinous I: Ultranova-->
+	<!--Thoughts for hate opinions-->
+	<ThoughtDef>
+		<defName>RR_WeightOpinion_Hate</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_Hate</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm thin and agile, and it feels fantastic!</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm thin and agile, and it feels fantastic!</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I love being skinny. It feels healthy and freeing.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I love being skinny. It feels healthy and freeing.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm not fat, but I could still stand to lose some weight.</description>
+			<baseMoodEffect>-3</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm not fat, but I could still stand to lose some weight.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>My whole body feels soft. It's embarrassing and I don't like it.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>I can feel myself jiggle with every step. Being overweight is awful.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>I'm bumping into walls and losing my breath constantly. I hate that I'm this fat.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>There's no muscle definition left anywhere on my body. I'm obese and it feels horrible.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>There's no muscle definition left anywhere on my body. I'm obese and it feels horrible.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>I'm so fat that I can barely move without assistance. This is a nightmare.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>I'm so fat that I can barely move without assistance. This is a nightmare.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>I can't move any more. I'm buried under my own fat. This is a living hell.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>I can't move any more. I'm buried under my own fat. This is a living hell.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't even see my feet any more! I can't stand being this huge!</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't even see my feet any more! I can't stand being this huge!</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>I'm a gigantic blob of fat! I can't tell what part of me is what! When will this end!?</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>I'm a gigantic blob of fat! I can't tell what part of me is what! When will this end!?</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>I'm more fat than person now, and confined to my own personal hell.</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I am tormented every waking moment of my life by the unthinkable burden that is my body, and I can't stop it from happening. And to make it all worse, I know it's all downhill from here.</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I can't stop eating, even though it goes against every fiber of my being. I'm not even human anymore, and my existence is torture. </description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>It's never going to stop. The only solace I can take is that I am smaller right now than I will ever be, but I know that my unyielding misery will only continue to persist no matter what...</description>
+			<baseMoodEffect>-60</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I am in anguish. I can actually feel myself getting bigger. I can't go on like this.</description>
+			<baseMoodEffect>-65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>I'm in utter desolation. I can't explain how I've become what I am. Why can't it just end?</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I can't be alive. Nothing about this makes sense. Is this some bizarre cosmic torture beyond my comprehension?</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I can't think...about anything except food...anymore...</description>
+			<baseMoodEffect>-80</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+	  
+	  
+	  <!--Thoughts for dislike opinions-->
+	  <ThoughtDef>
+		<defName>RR_WeightOpinion_Dislike</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_Dislike</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm very thin, but it's much better than being fat.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm very thin, but it's much better than being fat.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>Being skinny feels great! I'm healthy but not emaciated.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>Being skinny feels great! I'm healthy but not emaciated.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm happy with my size. I'd like to lose weight, but I'm glad not to be fat.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm happy with my size. I'd like to lose weight, but I'm glad not to be fat.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>I've gotten a bit chubby and I want to slim down.</description>
+			<baseMoodEffect>-1</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>I'm heavier than I'd like to be. It's embarrassing.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>Being this fat is embarrassing. I need to lose weight.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I feel sluggish and out of breath all the time. I desperately need to lose weight.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I feel sluggish and out of breath all the time. I desperately need to lose weight.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>I'm so fat that I can barely move without assistance. This is horrible.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>I'm so fat that I can barely move without assistance. This is horrible.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm so fat that I can't move at all. What a nightmare.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm so fat that I can't move at all. What a nightmare.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet. I despise how my body looks and feels.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet. I despise how my body looks and feels.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>I've lost all definition on my body. This is humiliating.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>I've lost all definition on my body. This is humiliating.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>I'm more fat than person. I don't think I'll ever be slim again.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I've become such a burden on everyone else. I hate my body, and I hate how I can feel every part of me from so far away.</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>This is awful. I can't trust myself. I'm trapped in my own body, and I know that I can't prevent it from getting bigger.</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I don't think I'm even human anymore. I wish all of this would just stop, but knowing that it only gets worse is like torture. </description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>This is miserable. How can anyone deserve my fate?</description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>There's no way this is real. Someone, anyone, help me...</description>
+			<baseMoodEffect>-60</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>Forgive me, everyone... I can't control it any longer...</description>
+			<baseMoodEffect>-65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I can feel the colony's buildings collapsing under my weight. They must despise me... I'm so sorry...</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I am a crime against nature. I always wanted to be world famous, but not like this...</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+	  
+	  <!--Thoughts for neutral- opinions-->
+	  <ThoughtDef>
+		<defName>RR_WeightOpinion_NeutralMinus</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_NeutralMinus</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm underweight, I could stand to gain a few pounds.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm underweight, I could stand to gain a few pounds.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>Being skinny feels great! I'm healthy but not emaciated.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>Being skinny feels great! I'm healthy but not emaciated.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm happy with my size!</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm happy with my size!</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>I've gotten a bit chubby and I could stand to lose a few pounds.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>I'm quite heavy now, but I don't feel hindered.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>I'm fat, but it's not so bad. At least I'm not starving!</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>This is... a bit much. I should start losing weight before it gets out of hand.</description>
+			<baseMoodEffect>-1</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>This is... a bit much. I should start losing weight before it gets out of hand.</description>
+			<baseMoodEffect>-3</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>It's hard to move without assistance. I need to lose weight if I'm going to keep my mobility.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>It's hard to move without assistance. I need to lose weight if I'm going to keep my mobility.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm so fat that I can't move at all. It's embarrassing.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm so fat that I can't move at all. It's embarrassing.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet...</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet...</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>I've grown into a big ball of fat and I hate it.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>I've grown into a big ball of fat and I hate it.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>I'm more fat than person. This is horrible.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I just keep getting bigger. I can't believe how big my body has become. I can't cope with being such a problem.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I'm trapped in my own fatty prison, and I won't be released any time soon. This is a nightmare.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I'm a mountain of fat. I hate what I've become. I can't stop, I can't stop...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I can't believe what I've done. I'm a freak.</description>
+			<baseMoodEffect>-45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>I've become larger than anyone ever thought possible. It's not stopping. What will become of me?</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>This hunger is unrelenting. Trying not to give in is impossible. I'm beyond saving.</description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>It's all me. I can feel it, it's all me. How could this have happened?</description>
+			<baseMoodEffect>-60</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>The hunger, the gurgling...the vibrations for miles. I live in ceaseless torture. I shouldn't exist.</description>
+			<baseMoodEffect>-65</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+	  
+	  <!--Thoughts for neutral opinions-->
+	  <ThoughtDef>
+		<defName>RR_WeightOpinion_Neutral</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_Neutral</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I don't like being underweight.</description>
+			<baseMoodEffect>-3</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I don't like being underweight.</description>
+			<baseMoodEffect>-1</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I look a bit bony. I could stand to gain a few pounds.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I look a bit bony. I could stand to gain a few pounds.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm still a bit thin, but I'm in no danger of starving.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm still a bit thin, but I'm in no danger of starving.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>I look radiant and healthy! I love how plush my body is.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>I may have overdone it a bit, But I still look and feel great!</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>There's no denying it, I'm fat now.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I'm not sure I want to be clinically obese, but it sure beats starving.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I'm not sure I want to be clinically obese, but it sure beats starving.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>It's getting harder to move and work. Maybe my weight is getting out of hand...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>It's getting harder to move and work. Maybe my weight is getting out of hand...</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm so fat that I can't move at all. It's embarrassing.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm so fat that I can't move at all. It's embarrassing.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet...</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet...</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>All I see around me is my own fat.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>All I see around me is my own fat.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>I'm as fat as anyone will ever get...</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I thought I could stop myself, I was wrong...do I really deserve this?</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I've become huge beyond words. I'm so embarrassed to be such a massive blob. I hate this.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I've got to have more, but I don't want to get any bigger...I brought this on myself, but surely nobody deserves this...</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I can't stop. I just can't stop. The food is so good, but it comes at such a price...</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>What have I done to myself? It's like a horror movie, but the end never comes...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I'm ashamed to be so freakishly large. This isn't what I wanted to be remembered for.</description>
+			<baseMoodEffect>-45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I can't fathom how they are coping with me around down there. It's unthinkable to imagine that one person could cause this.</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>No matter how hard I try, I just keep growing. I've lost all hope of it ever stopping.</description>
+			<baseMoodEffect>-55</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+	  
+	  <!--Thoughts for neutral+ opinions-->
+	  <ThoughtDef>
+		<defName>RR_WeightOpinion_NeutralPlus</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_NeutralPlus</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I look so malnourished and bony!</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I look so malnourished and bony!</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm grossly underweight...</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm grossly underweight...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm happy with my weight. Still, I could gain a bit more...</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm happy with my weight. Still, I could gain a bit more...</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>I'm a little bit chubby. It feels... nice.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>I'm overweight, but... is it wrong to want more?</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>I'm so plush and comfortable, this feels wonderful!</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>Still feeling large and in charge!</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>Still feeling large and in charge!</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>Maybe this is a bit much... I should slow down while I still can.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>Maybe this is a bit much... I should slow down while I still can.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>I can't move anymore. This isn't what I wanted.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>I can't move anymore. This isn't what I wanted.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet...</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>I can't remember the last time I saw my own feet...</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>All I see around me is my own fat.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>All I see around me is my own fat.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>I'm as fat as anyone will ever get...</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I can't see in front of me anymore. I can't stop myself from growing. This isn't what I wanted.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I'll never be able to move again, and I hate myself for allowing this. I shouldn't be allowed.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I really wish this would stop, but I know it won't. I brought this ordeal on myself, but that doesn't mean I'm okay with it.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>I feel as though I've transcended reality. I've paid the ultimate price.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>This intense hunger is uncontrollable. It's deeply unpleasant, and I despise how much of a problem it's become.</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I think I've forgotten what it's like to be mobile. I wish someone could help me, but...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>I think I feel someone in one of my fat rolls... and I think they're miles away. How?</description>
+			<baseMoodEffect>-45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I did this.</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+	  
+	  <!--Thoughts for like opinions-->
+	  <ThoughtDef>
+		<defName>RR_WeightOpinion_Like</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_Like</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm disgustingly thin. I need to gain weight now!</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I look so malnourished and bony! I'm disgustingly thin. I need to gain weight now!</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm thin and spindly. It's gross.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm thin and spindly. It's gross.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I've barely got any fat at all.</description>
+			<baseMoodEffect>-3</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I've barely got any fat at all.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>I've got a nice potbelly. Hopefully it's the start of something more...</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>I'm so soft and comfortable...</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>I'm wonderfully fat now but I could be so much bigger!</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I've got folds... I've got folds!</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I've got folds... I've got folds!</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>If I get any bigger I won't be able to move, but the thought is exhilirating...</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>If I get any bigger I won't be able to move, but the thought is exhilirating...</description>
+			<baseMoodEffect>15</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm pinned to the ground by my own body. I've never felt better.</description>
+			<baseMoodEffect>15</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm pinned to the ground by my own body. I've never felt better.</description>
+			<baseMoodEffect>15</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>I'm more gluttonous than I ever thought possible...</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>I'm more gluttonous than I ever thought possible...</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>All I see around me is my own fat...</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>All I see around me is my own fat...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>I'm lost in a sea of my own fat. It's a bit much.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I can't see in front of me anymore. This isn't quite what I wanted.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>This is definitely too far. I've got to try to stop, but I don't think I can.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I'm worried that I've become unstoppable. I hope I don't cause too much trouble. This isn't what I wanted to happen.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>This isn't good. I think I'm outgrowing the buildings. I didn't know it was even possible to be this large.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>It doesn't seem like I'll stop anytime soon. I don't like the trouble I'm causing, but at least I'm comfortable, I suppose.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I really wish I'd stopped earlier. This is extremely problematic.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>They just keep feeding me. I thought I could stop. I can't. I can't say no anymore. </description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I can only think about how much I want to eat. It's like a million voices in my mind fighting for dominance, but they're all saying the same thing...</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+	  
+	  <!--Thoughts for love opinions-->
+	  <ThoughtDef>
+		<defName>RR_WeightOpinion_Love</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_Love</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm practically wasting away! I deserve better than this!</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm practically wasting away! I deserve better than this!</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm disgustingly thin.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm disgustingly thin.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm all muscle and bone...</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm all muscle and bone...</description>
+			<baseMoodEffect>-3</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>A little potbelly just isn't enough for me.</description>
+			<baseMoodEffect>-1</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>This is a start, but I'm still not nearly fat enough.</description>
+			<baseMoodEffect>-1</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>I'm not as fat as I'd like to be.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I've got the double chin I've always wanted!</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I've got the double chin I've always wanted!</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>The prospect of getting even fatter excites me...</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>The prospect of getting even fatter excites me...</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>Being immobilized by my own fat... it's exhilirating.</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>Being immobilized by my own fat... it's exhilirating.</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>This hedonistic lifestyle suits me well.</description>
+			<baseMoodEffect>15</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>This hedonistic lifestyle suits me well.</description>
+			<baseMoodEffect>15</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>I'm the gluttonous blob I've always wanted to be...</description>
+			<baseMoodEffect>20</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>I'm the gluttonous blob I've always wanted to be...</description>
+			<baseMoodEffect>20</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>I'm surrounded by my own opulent fat. It's beautiful.</description>
+			<baseMoodEffect>25</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I've become so big that I can't see in front of me. I love it!</description>
+			<baseMoodEffect>30</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I can feel myself growing, and I won't let myself stop. It just keeps getting better.</description>
+			<baseMoodEffect>40</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I'm so happy.I'm such a greedy pig that I've abandoned my humanity. I am in heaven.</description>
+			<baseMoodEffect>50</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>There's nothing like me anywhere else in the galaxy, I'm certain. Why should I stop now?</description>
+			<baseMoodEffect>55</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>The hunger doesn't hurt at all. The way my stomach screams for more...I can't be sated. I hope this lasts forever.</description>
+			<baseMoodEffect>60</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I'm the biggest living thing to ever exist. That's more like it.</description>
+			<baseMoodEffect>65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>Even the buildings around me are buckling to my majesty. It feels utterly divine.</description>
+			<baseMoodEffect>70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>I'm the pinnacle of beauty. Every moment is total ecstasy. I am complete.</description>
+			<baseMoodEffect>75</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+	  
+	  <!--Thoughts for fanatical opinions-->
+	  <ThoughtDef>
+		<defName>RR_WeightOpinion_Fanatical</defName>
+		<workerClass>RimRound.AI.ThoughtWorker_WeightOpinion_Fanatical</workerClass>
+		<stages>
+		  <!--88lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm horrifically thin!</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+		  <!--110lb-->
+		  <li>
+			<label>Lithe</label>
+			<description>I'm horrifically thin!</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+		  
+		  <!--132lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm practically skin and bones.</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+		  <!--165lb-->
+		  <li>
+			<label>Skinny</label>
+			<description>I'm practically skin and bones.</description>
+			<baseMoodEffect>-20</baseMoodEffect>
+		  </li>
+		  
+		  <!--198lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm grossly skinny...</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		  <!--242lb-->
+		  <li>
+			<label>Average Weight</label>
+			<description>I'm grossly skinny...</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		  
+		  <!--297lb-->
+		  <li>
+			<label>Chubby</label>
+			<description>This potbelly is barely a start... I need more.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  
+		  <!--352lb-->
+		  <li>
+			<label>Overweight</label>
+			<description>Being so small is frustrating.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  
+		  <!--418lb-->
+		  <li>
+			<label>Fat</label>
+			<description>Fat simply isn't fat enough.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		  
+		  <!--506lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I'm obese by normal standards, but I feel almost underweight.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		  <!--605lb-->
+		  <li>
+			<label>Obese</label>
+			<description>I'm obese by normal standards, but I feel almost underweight.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+		  
+		  <!--737lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>I'm nearing the edge of immobility. The idea is intoxicating.</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  <!--880lb-->
+		  <li>
+			<label>Barely mobile</label>
+			<description>I'm nearing the edge of immobility. The idea is intoxicating.</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+		  
+		  <!--1056-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm finally too fat to get up! I'm excited to never walk again...</description>
+			<baseMoodEffect>15</baseMoodEffect>
+		  </li>
+		  <!--1254lb-->
+		  <li>
+			<label>Immobile</label>
+			<description>I'm finally too fat to get up! I'm excited to never walk again...</description>
+			<baseMoodEffect>15</baseMoodEffect>
+		  </li>
+		  <!--1540-->
+		  <li>
+			<label>Massive</label>
+			<description>I'm bigger than a muffalo, and if it means more fat then I'd gladly eat one whole.</description>
+			<baseMoodEffect>20</baseMoodEffect>
+		  </li>
+		  <!--1848-->
+		  <li>
+			<label>Massive</label>
+			<description>I'm bigger than a muffalo, and if it means more fat then I'd gladly eat one whole.</description>
+			<baseMoodEffect>20</baseMoodEffect>
+		  </li>
+		  
+		  <!--2211-->
+		  <li>
+			<label>Blob</label>
+			<description>I'm a huge blob of opulent fat. It feels divine...</description>
+			<baseMoodEffect>30</baseMoodEffect>
+		  </li>
+		  <!--2640-->
+		  <li>
+			<label>Blob</label>
+			<description>I'm a huge blob of opulent fat. It feels divine...</description>
+			<baseMoodEffect>30</baseMoodEffect>
+		  </li>
+		  
+		  <!--3190-->
+		  <li>
+			<label>Gigantic</label>
+			<description>This hedonism... I think I may be in heaven.</description>
+			<baseMoodEffect>40</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 2>4-->
+		  <li>
+			<label>Colossal</label>
+			<description>I'm huge even by my standards, but I know I can keep going, and that's fine by me.</description>
+			<baseMoodEffect>45</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 5>8-->
+		  <li>
+			<label>Monstrous</label>
+			<description>I've found my purpose. I couldn't live anymore if I couldn't keep growing. I can feel myself from so far away, and I've never felt so complete.</description>
+			<baseMoodEffect>50</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 9>10-->
+		  <li>
+			<label>Mountainous</label>
+			<description>I deserve all of this and more, I'm so happy I could cry. I'd be perfect if I didn't already know I could still get even more massive, and knowing that makes me even happier.</description>
+			<baseMoodEffect>60</baseMoodEffect>
+		  </li>
+                      <!--Gelatinous 11-->
+		  <li>
+			<label>Astronomical</label>
+			<description>It keeps getting better and better, and I keep swelling bigger and bigger. Everyone around me is focused solely on me, as it should be. </description>
+			<baseMoodEffect>65</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 12-13-->
+		  <li>
+			<label>Transcendent</label>
+			<description>I won't stop until all anyone can see is me. That is the definition of a beautiful world.</description>
+			<baseMoodEffect>70</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 14-16-->
+		  <li>
+			<label>Mythical</label>
+			<description>I'm so big that I'm outgrowing the buildings around me. This is bliss.</description>
+			<baseMoodEffect>75</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 17-19-->
+		  <li>
+			<label>Omnipresent</label>
+			<description>Those puny buildings were worthless if they couldn't stand in the wake of my opulence. They can all live on me instead. </description>
+			<baseMoodEffect>80</baseMoodEffect>
+		  </li>
+                  <!--Gelatinous 20-->
+		  <li>
+			<label>Inconceivable</label>
+			<description>The entire planet is slowly disappearing underneath me. I will take its place. All is well.</description>
+			<baseMoodEffect>90</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+  </Defs>

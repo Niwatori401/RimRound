@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -50,13 +50,12 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\DevDependencies\2009463077_harmony\Current\Assemblies\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\DevDependencies\Harmony_1.5\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AlienRace">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\839005762\1.4\Assemblies\AlienRace.dll</HintPath>
+      <HintPath>..\..\..\..\DevDependencies\HAR_Unstable\1.5\Assemblies\AlienRace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
@@ -169,6 +168,7 @@
     <Compile Include="RimRound\Defs\ClothingModExtension.cs" />
     <Compile Include="RimRound\Defs\InteractionDefOf.cs" />
     <Compile Include="RimRound\Defs\ME_ExtraProductPlantYield.cs" />
+    <Compile Include="RimRound\Defs\PawnCapacityDefOf.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_AIEncouragementChip.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_BionicMetabolizer.cs" />
     <Compile Include="RimRound\Hediffs\Hediff_ArchotechMetabolizer.cs" />

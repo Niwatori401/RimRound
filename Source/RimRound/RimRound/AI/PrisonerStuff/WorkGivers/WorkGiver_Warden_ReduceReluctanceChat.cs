@@ -19,7 +19,7 @@ namespace RimRound.AI
 				return null;
 			}
 			Pawn prisoner = (Pawn)t;
-			PrisonerInteractionModeDef interactionMode = prisoner.guest.interactionMode;
+			PrisonerInteractionModeDef interactionMode = prisoner.guest.ExclusiveInteractionMode;
 			if ((interactionMode != Defs.PrisonerInteractionModeDefOf.RR_Fatten) || !prisoner.guest.ScheduledForInteraction || !pawn.health.capacities.CapableOf(PawnCapacityDefOf.Talking) || (prisoner.Downed && !prisoner.InBed()) || !pawn.CanReserve(t, 1, -1, null, false) || !prisoner.Awake())
 			{
 				return null;

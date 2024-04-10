@@ -1,4 +1,5 @@
-﻿using RimRound.Utilities;
+﻿using LudeonTK;
+using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -179,7 +180,7 @@ namespace RimRound.Comps
 
 
             this.SetDirect(index, currentDensity, gasType);
-            this.map.mapDrawer.MapMeshDirty(cell, MapMeshFlag.Gas);
+            this.map.mapDrawer.MapMeshDirty(cell, MapMeshFlagDefOf.Gas);
             if (canOverflow && overflowAmount > 0)
             {
                 this.Overflow(cell, gasType, overflowAmount);
@@ -238,7 +239,7 @@ namespace RimRound.Comps
                     if (this.AnyGasAt(intVec))
                     {
                         this.gasDensity[CellIndicesUtility.CellToIndex(intVec, this.map.Size.x)] = 0;
-                        this.map.mapDrawer.MapMeshDirty(intVec, MapMeshFlag.Gas);
+                        this.map.mapDrawer.MapMeshDirty(intVec, MapMeshFlagDefOf.Gas);
                     }
                 }
             }
@@ -283,7 +284,7 @@ namespace RimRound.Comps
                 shouldRedrawMap |= DissipateSingleGas(cellIndex, gas);
 
             if (shouldRedrawMap)
-                this.map.mapDrawer.MapMeshDirty(CellIndicesUtility.IndexToCell(cellIndex, this.map.Size.x), MapMeshFlag.Gas);
+                this.map.mapDrawer.MapMeshDirty(CellIndicesUtility.IndexToCell(cellIndex, this.map.Size.x), MapMeshFlagDefOf.Gas);
         }
 
         private bool DissipateSingleGas(int cellIndex, RRGasType gasType)
@@ -337,7 +338,7 @@ namespace RimRound.Comps
                 this.SetDirect(indexOfNeighborCell, densityOfGasAtNeighboringCell, gasType);
                 this.SetDirect(currentCellIndex, densityOfGasAtOriginCell, gasType);
 
-                this.map.mapDrawer.MapMeshDirty(adjacentCell, MapMeshFlag.Gas);
+                this.map.mapDrawer.MapMeshDirty(adjacentCell, MapMeshFlagDefOf.Gas);
 
                 totalGas = TotalGasAt(cell);
                 if (totalGas < MinDiffusion)
@@ -455,7 +456,7 @@ namespace RimRound.Comps
                     
                     int cellIndex = this.map.cellIndices.CellToIndex(buildingEqualizeCells[l]);
                     this.SetDirect(cellIndex, gasToDistribute, gasAmountPair.First);
-                    this.map.mapDrawer.MapMeshDirty(buildingEqualizeCells[l], MapMeshFlag.Gas);
+                    this.map.mapDrawer.MapMeshDirty(buildingEqualizeCells[l], MapMeshFlagDefOf.Gas);
                 }
             }
         }
@@ -467,7 +468,7 @@ namespace RimRound.Comps
                 this.gasDensity[i] = 0;
             }
             this.anyGasEverAdded = false;
-            this.map.mapDrawer.WholeMapChanged(MapMeshFlag.Gas);
+            this.map.mapDrawer.WholeMapChanged(MapMeshFlagDefOf.Gas);
         }
 
         public void Debug_FillAll()
@@ -480,7 +481,7 @@ namespace RimRound.Comps
                 }
             }
             this.anyGasEverAdded = true;
-            this.map.mapDrawer.WholeMapChanged(MapMeshFlag.Gas);
+            this.map.mapDrawer.WholeMapChanged(MapMeshFlagDefOf.Gas);
         }
 
         public override void ExposeData()
@@ -493,7 +494,7 @@ namespace RimRound.Comps
             Scribe_Values.Look<int>(ref this.cycleIndexDissipation, "RR_cycleIndexDissipation", 0, false);
         }
 
-        [DebugAction("General", "Add RR gas...", false, false, false, 0, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap, displayPriority = 100)]
+        [DebugAction("General", "Add RR gas...", false, false, false, false, 0, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap, displayPriority = 100)]
         public static void AddGas()
         {
             IntVec3 cell = Verse.UI.MouseCell();

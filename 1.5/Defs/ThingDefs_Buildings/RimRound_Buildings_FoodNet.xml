@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--Food conduit-->
+	<ThingDef ParentName="BuildingBase" Name="FoodConduit">
+		<defName>RR_TD_FeedingTubeConduit</defName>
+		<label>food pipe</label>
+		<description>A thick tube for moving liquid food around. Can be placed under walls and other buildings.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodPipe_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom8</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Production/FoodPipe_MenuIcon</uiIconPath>
+		<uiIconScale>0.7</uiIconScale>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Production/FoodPipe_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<altitudeLayer>SmallWire</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>3</Steel>
+		</costList>
+		<comps>
+			<li Class="RimRound.FeedingTube.Comps.FoodTransmitter_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodTransmitter_ThingComp</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RR_Research_FoodStorage</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Food Valve-->
+	<ThingDef ParentName="BuildingBase" Name="FoodValve">
+		<defName>RR_TD_FeedingTubeValve</defName>
+		<label>feeding tube valve</label>
+		<description>Breaks the flow in a food system.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Power/PowerSwitch</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
+		<uiIconScale>0.7</uiIconScale>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<altitudeLayer>SmallWire</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>720</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>5</Steel>
+		</costList>
+		<comps>
+			<li Class="RimRound.FeedingTube.Comps.FoodTransmitter_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodValve_ThingComp</compClass>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RR_Research_FoodStorage</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Food Storage Tanks-->
+	<ThingDef Name="FoodStorageBase" ParentName="BuildingBase" Abstract="True">
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<designationHotKey>Misc1</designationHotKey>
+	</ThingDef>
+	<!--Massive Storage-->
+	<ThingDef ParentName="FoodStorageBase">
+		<defName>RR_TD_FoodStorageVat_Massive</defName>
+		<label>massive feeding tube storage</label>
+		<description>Stores excess food.</description>
+		<thingClass>RimRound.FeedingTube.Building_FoodVatMassive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodStorageVatMassive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 3)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<Mass>80</Mass>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>10020</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<size>(2,3)</size>
+		<costList>
+			<Steel>500</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Plasteel>10</Plasteel>
+		</costList>
+		<comps>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetStorage_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
+				<capacity>1200</capacity>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RR_Research_ExpandedFoodStorage</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Large Storage-->
+	<ThingDef ParentName="FoodStorageBase">
+		<defName>RR_TD_FoodStorageVat_Large</defName>
+		<label>feeding tube storage</label>
+		<description>Stores excess food.</description>
+		<thingClass>RimRound.FeedingTube.Building_FoodVatLarge</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodStorageVatLarge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 2)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<Mass>35</Mass>
+			<MaxHitPoints>160</MaxHitPoints>
+			<WorkToBuild>3240</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<size>(1,2)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>70</Steel>
+		</costList>
+		<comps>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetStorage_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
+				<capacity>100</capacity>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RR_Research_FoodStorage</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Small Storage-->
+	<ThingDef ParentName="FoodStorageBase">
+		<defName>RR_TD_FoodStorageVat_Small</defName>
+		<label>small food storage vat</label>
+		<description>Stores excess food.</description>
+		<thingClass>RimRound.FeedingTube.Building_FoodVatSmall</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodStorageVatSmall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<Mass>15</Mass>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>1920</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>35</Steel>
+		</costList>
+		<comps>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetStorage_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
+				<capacity>50</capacity>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RR_Research_FoodStorage</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Food Fluid Generator-->
+	<ThingDef ParentName="BuildingBase" Name="FoodProcessor">
+		<defName>RR_TD_FeedingTubeFoodProcessor</defName>
+		<label>food processor</label>
+		<description>Creates feeding fluid from solid edibles.</description>
+		<thingClass>RimRound.FeedingTube.Building_FoodProcessor</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodRefiner</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<wantsHopperAdjacent>true</wantsHopperAdjacent>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<Mass>70</Mass>
+			<MaxHitPoints>160</MaxHitPoints>
+			<WorkToBuild>3600</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<size>(2,2)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>120</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>170</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,112,33,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RR_Research_FoodProcessing</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Food Fluid Dispenser-->
+	<ThingDef ParentName="BuildingBase" Name="FoodDispenser">
+		<defName>RR_TD_FoodFaucet</defName>
+		<label>food dispenser</label>
+		<description>dispenses food.</description>
+		<thingClass>RimRound.FeedingTube.Building_FoodFaucet</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/FoodDispenser</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 2)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isMealSource>true</isMealSource>
+			<soundDispense>DispensePaste</soundDispense>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<Mass>35</Mass>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>2640</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<size>(1,2)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>170</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RR_Research_FoodFaucet</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Auto Feeder Base-->
+	<ThingDef Abstract="True" ParentName="BuildingBase" Name="AutoFeederBase">
+		<description>dispenses food.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc1</designationHotKey>
+	</ThingDef>
+	<!--Auto Feeder-->
+	<ThingDef ParentName="AutoFeederBase">
+		<defName>RR_AutoFeeder</defName>
+		<label>Automatic food dispenser</label>
+		<thingClass>RimRound.FeedingTube.Building_AutoFeeder</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/AutoFeeder</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>35</Mass>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>2640</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>80</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+		</comps>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<researchPrerequisites>
+			<li>RR_Research_AutoFeeder</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--Advanced Auto Feeder-->
+	<ThingDef ParentName="AutoFeederBase">
+		<defName>RR_AdvancedAutoFeeder</defName>
+		<label>Advanced automatic food dispenser</label>
+		<description>A vastly improved, exceedingly high tech automatic food dispenser, requiring vastly less power than its predecessor, never malfunctions, and is equipped with a small light and even a radio for some reason.</description>
+		<thingClass>RimRound.FeedingTube.Building_AdvancedAutoFeeder</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/AdvancedAutoFeeder</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>40</Mass>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>3600</WorkToBuild>
+			<Flammability>0.2</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>20</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+		</comps>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Plasteel>10</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<researchPrerequisites>
+			<li>RR_Research_ImprovedAutoFeeder</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<!--XL Hopper-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RR_Hopper</defName>
+		<label>XL hopper</label>
+		<description>Holds resources for use by the food processor. This hopper is larger than normal and can take whole food items as a result.</description>
+		<thingClass>Building_Storage</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/Hopper</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.5</fillPercent>
+		<pathCost>42</pathCost>
+		<canOverlapZones>false</canOverlapZones>
+		<building>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>Foods</li>
+					</categories>
+					<specialFiltersToDisallow>
+						<li>AllowPlantFood</li>
+					</specialFiltersToDisallow>
+					<disallowedThingDefs>
+						<li>Hay</li>
+					</disallowedThingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>Foods</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>Meat_Human</li>
+						<li>Meat_Megaspider</li>
+					</disallowedThingDefs>
+				</filter>
+			</defaultStorageSettings>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<statBases>
+			<WorkToBuild>2400</WorkToBuild>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+		</costList>
+		<tickerType>Never</tickerType>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<designationCategory>Production</designationCategory>
+		<surfaceType>Item</surfaceType>
+		<placeWorkers>
+			<li>PlaceWorker_NextToHopperAccepter</li>
+		</placeWorkers>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>RR_Research_FoodProcessing</li>
+		</researchPrerequisites>
+		<uiIconPath>Things/Building/Production/Hopper_MenuIcon</uiIconPath>
+		<uiIconScale>0.85</uiIconScale>
+	</ThingDef>
+	<!--Nutrient Distillery-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RR_TD_NutrientDistillery</defName>
+		<label>nutrient distillery</label>
+		<description>Increases the nutrient density of the system by removing unnecessary food components such as water and dietary fibers through a combination of centrifuges and distillation processes.</description>
+		<thingClass>RimRound.FeedingTube.Building_NutrientDistillery</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/NutrientRefinery</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 3)</drawSize>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.40</fillPercent>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<Mass>70</Mass>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>35</WorkToBuild>
+			<Flammability>0.7</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<size>(2,3)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>80</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>170</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+				<compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
+				<isOneWay>true</isOneWay>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+			<li>RimRound.FeedingTube.NutrientDistillery_PlaceWorker</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RR_Research_NutrientDistillation</li>
+		</researchPrerequisites>
+	</ThingDef>
+</Defs>

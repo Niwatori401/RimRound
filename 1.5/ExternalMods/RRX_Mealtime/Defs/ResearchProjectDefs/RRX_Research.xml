@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>RRX_BulkPrep</defName>
+    <label>huge bulk meals</label>
+    <tab>RRX_Meals</tab>
+    <techLevel>Industrial</techLevel>
+    <description>Better tools mean better meal prep. By leveraging scale, we can make larger meals more efficiently.</description>
+    <baseCost>400</baseCost>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

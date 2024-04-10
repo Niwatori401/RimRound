@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+	<StatPart_MeatYieldBodyFatExplanation>Multiplier for body weight: {0}</StatPart_MeatYieldBodyFatExplanation>
+	<StatPart_RR_ClothingBonusExplanation>UltraTech Clothing: {0}</StatPart_RR_ClothingBonusExplanation>
+
+	<RR_PersonallyExemptFromGizmo>personally exempt</RR_PersonallyExemptFromGizmo>
+	<RR_ExemptionReason_FemaleDisabled>females exempt</RR_ExemptionReason_FemaleDisabled>
+	<RR_ExemptionReason_MaleDisabled>males exempt</RR_ExemptionReason_MaleDisabled>
+	<RR_ExemptionReason_FriendlyDisabled>friendly NPCs exempt</RR_ExemptionReason_FriendlyDisabled>
+	<RR_ExemptionReason_HostileDisabled>hostile NPCs exempt</RR_ExemptionReason_HostileDisabled>
+	<RR_ExemptionReason_PrisonerDisabled>prisoners exempt</RR_ExemptionReason_PrisonerDisabled>
+	<RR_ExemptionReason_SlaveDisabled>slaves exempt</RR_ExemptionReason_SlaveDisabled>
+	<RR_ExemptionReason_AgeDisabled>age exempt</RR_ExemptionReason_AgeDisabled>
+	
+	<!--Alerts-->
+	<NeedFoodHopperProcessorDesc>You have a food processor with no hopper next to it.\n\nTo work, food processors must draw from an adjacent hopper filled with raw food.\n\nBuild a hopper adjacent to the processor.</NeedFoodHopperProcessorDesc>
+
+	<!--Units-->
+
+	<RR_WeightGainedText>+{0}.{1}lbs</RR_WeightGainedText>
+	<DietaryTarget>Dietary Target</DietaryTarget>
+	<DietaryTargetDesired>Dietary Target Desired</DietaryTargetDesired>
+	
+	<Nutrition_Density>Nutrition density</Nutrition_Density>
+	
+	<!--WeightGizmo-->
+	<DietMode_Nutrition>Nutrition Mode</DietMode_Nutrition>
+	<DietMode_Hybrid>Hybrid Mode</DietMode_Hybrid>
+	<DietMode_Fullness>Fullness Mode</DietMode_Fullness>
+	<DietMode_Disabled>Disabled</DietMode_Disabled>
+	
+	<DietMode_Tip>Test</DietMode_Tip>
+	<DietMode_CurrentMode>Current Mode</DietMode_CurrentMode>
+	
+	
+	<FullnessDeathWarningKill>Confirm</FullnessDeathWarningKill>
+	<FullnessDeathWarningCancel>Cancel</FullnessDeathWarningCancel>
+	<FullnessDeathWarningTitle>Confirm your choice.</FullnessDeathWarningTitle>
+	<FullnessDeathWarningExplanation>This target fullness is too much for {0} and, if they eat this much, their stomach will likely rupture. This will inflict serious, possibly lethal wounds. Are you sure you want to set their target fullness to this value?</FullnessDeathWarningExplanation>
+	
+	
+	<!--Main Tab Window-->
+	<RR_Mtw_Title>RimRound Control Panel</RR_Mtw_Title>
+	<RR_Mtw_MapNutritionStatsTitle>Map Nutrition</RR_Mtw_MapNutritionStatsTitle>
+	<RR_Mtw_ManagePawnDietsCheckboxLabel>Manage Pawn Diets</RR_Mtw_ManagePawnDietsCheckboxLabel>
+	
+
+	<RR_Mtw_NutritionOverview_TotalNutrition>Current Nutrition in all storage zones</RR_Mtw_NutritionOverview_TotalNutrition>
+	<RR_Mtw_NutritionOverview_SimpleMealNutrition>Nutrition from Simple Meals</RR_Mtw_NutritionOverview_SimpleMealNutrition>
+	<RR_Mtw_NutritionOverview_FineMealNutrition>Nutrition from Fine Meals</RR_Mtw_NutritionOverview_FineMealNutrition>
+	<RR_Mtw_NutritionOverview_LavishMealNutrition>Nutrition from Lavish Meals</RR_Mtw_NutritionOverview_LavishMealNutrition>
+	<RR_Mtw_NutritionOverview_UndesireableNutrition>Nutrition deemed Undesirable</RR_Mtw_NutritionOverview_UndesireableNutrition>
+	<RR_Mtw_NutritionOverview_OtherNutrition>Nutrition from all other sources</RR_Mtw_NutritionOverview_OtherNutrition>
+	<RR_Mtw_NutritionPerPawnLabel>Nutrition per colonist (including prisoners and slaves)</RR_Mtw_NutritionPerPawnLabel>
+	
+	<RR_Mtw_GlobalMultipliersSettingsTitle>Global Values</RR_Mtw_GlobalMultipliersSettingsTitle>
+	
+	<RR_Mtw_GlobalWeightGainMultiplierTitle>Weight gain multiplier</RR_Mtw_GlobalWeightGainMultiplierTitle>
+	<RR_Mtw_GlobalWeightGainMultiplierTitleMale>Weight gain multiplier (Male)</RR_Mtw_GlobalWeightGainMultiplierTitleMale>
+	<RR_Mtw_GlobalWeightGainMultiplierTitleFemale>Weight gain multiplier (Female)</RR_Mtw_GlobalWeightGainMultiplierTitleFemale>
+	
+	<RR_Mtw_GlobalWeightLossMultiplierTitle>Weight loss multiplier</RR_Mtw_GlobalWeightLossMultiplierTitle>
+	<RR_Mtw_GlobalWeightLossMultiplierTitleMale>Weight loss multiplier (Male)</RR_Mtw_GlobalWeightLossMultiplierTitleMale>
+	<RR_Mtw_GlobalWeightLossMultiplierTitleFemale>Weight loss multiplier (Female)</RR_Mtw_GlobalWeightLossMultiplierTitleFemale>
+	
+	<RR_Mtw_GlobalDigestionRateMultiplierTitle>Digestion rate multiplier</RR_Mtw_GlobalDigestionRateMultiplierTitle>
+	<RR_Mtw_GlobalFullnessMultiplierTitle>Fullness gained multiplier</RR_Mtw_GlobalFullnessMultiplierTitle>
+	<RR_Mtw_GlobalStomachElasticityMultiplierTitle>Stomach elasticity multiplier</RR_Mtw_GlobalStomachElasticityMultiplierTitle>
+	<RR_Mtw_TicksPerHungerCheckTitle>Ticks per digestion calculation</RR_Mtw_TicksPerHungerCheckTitle>
+	<RR_Mtw_TicksPerBodyChangeCheckTitle>Ticks per body update check</RR_Mtw_TicksPerBodyChangeCheckTitle>
+	<RR_Mtw_GlobalHardLimitMultiplier>Hard limit multiplier</RR_Mtw_GlobalHardLimitMultiplier>
+	<RR_Mtw_GlobalSoftLimitMultiplier>Soft limit multiplier</RR_Mtw_GlobalSoftLimitMultiplier>
+	<RR_Mtw_GlobalBlobIntoBedThreshold>Min weight for blob bed</RR_Mtw_GlobalBlobIntoBedThreshold>
+	<RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>Min weight for alt wiggle angle</RR_Mtw_GlobalWeightToAdjustWiggleAngleThreshold>
+	<RR_Mtw_MaxWeight>Maximum weight</RR_Mtw_MaxWeight>
+	<RR_Mtw_MinWeight>Minimum weight</RR_Mtw_MinWeight>
+	<RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>Ticks between WG requests</RR_Mtw_GlobalTicksBetweenWeightGainRequestProcess>
+	<RR_Mtw_meatMultiplierForWeight>Meat/skin yield multiplier</RR_Mtw_meatMultiplierForWeight>
+	<RR_Mtw_milkMultiplierForWeight>Milk multiplier for weight</RR_Mtw_milkMultiplierForWeight>
+	<RR_Mtw_maxVisualSizeGelLevel>Max Gelatinous level (visual)</RR_Mtw_maxVisualSizeGelLevel>
+	<RR_Mtw_minForCapableMovement>Min. for capable (movement)</RR_Mtw_minForCapableMovement>
+	<RR_Mtw_nutritionPerLevel>Nutrition required per level</RR_Mtw_nutritionPerLevel>
+	<RR_Mtw_levelsGainedPerLevel>Levels gained on level up</RR_Mtw_levelsGainedPerLevel>
+	<RR_Mtw_MinimumAgeForCustomBody>Min. age for RR bodies</RR_Mtw_MinimumAgeForCustomBody>
+	<RR_Mtw_minWeightToThrowText>Min. weight gain to throw text</RR_Mtw_minWeightToThrowText>
+
+	<RR_Mtw_BodyChangeExemptionSettingsTitle>Body Change Settings</RR_Mtw_BodyChangeExemptionSettingsTitle>
+	<RR_Mtw_BodyChangeExemptionSettings_Male>Dynamic bodies for Males</RR_Mtw_BodyChangeExemptionSettings_Male>
+	<RR_Mtw_BodyChangeExemptionSettings_Female>Dynamic bodies for Females</RR_Mtw_BodyChangeExemptionSettings_Female>
+	<RR_Mtw_BodyChangeExemptionSettings_HostileNPC>Dynamic bodies for Hostile NPCs</RR_Mtw_BodyChangeExemptionSettings_HostileNPC>
+	<RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC>Dynamic bodies for Friendly NPCs</RR_Mtw_BodyChangeExemptionSettings_FriendlyNPC>
+	<RR_Mtw_BodyChangeExemptionSettings_Prisoner>Dynamic bodies for Prisoners</RR_Mtw_BodyChangeExemptionSettings_Prisoner>
+	<RR_Mtw_BodyChangeExemptionSettings_Slave>Dynamic bodies for Slaves</RR_Mtw_BodyChangeExemptionSettings_Slave>
+	
+	<RR_Mtw_GeneralSettings_Title>General Settings</RR_Mtw_GeneralSettings_Title>
+	<RR_Mtw_GeneralSettings_BurstingEnabled>Bursting enabled</RR_Mtw_GeneralSettings_BurstingEnabled>
+	<RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies>Tattoos for custom bodies</RR_Mtw_GeneralSettings_ShowTattoosForCustomBodies>
+	<RR_Mtw_GeneralSettings_PreferDefaultOverNaked>Default clothing over naked</RR_Mtw_GeneralSettings_PreferDefaultOverNaked>
+	<RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies>Use alternate head placement</RR_Mtw_GeneralSettings_AlternateNorthHeadDepthForRRBodies>
+	<RR_Mtw_GeneralSettings_UseZoomPortraitStyle>Use vanilla portrait style</RR_Mtw_GeneralSettings_UseZoomPortraitStyle>
+	<RR_Mtw_GeneralSettings_MoodletsForWeightOpinions>Give moodlets for weight opinions</RR_Mtw_GeneralSettings_MoodletsForWeightOpinions>
+	<RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize>Vary weight requirements by bodysize</RR_Mtw_GeneralSettings_VaryMinWeightForBodyTypeByBodySize>
+	<RR_Mtw_GeneralSettings_ShowSpecialDebugSettings>Show special debug settings</RR_Mtw_GeneralSettings_ShowSpecialDebugSettings>
+	<RR_Mtw_GeneralSettings_UseLegacyLardySprite>Use legacy lardy sprite</RR_Mtw_GeneralSettings_UseLegacyLardySprite>
+	<RR_Mtw_GeneralSettings_OnlyUseStandardSprites>Only use standard sprites</RR_Mtw_GeneralSettings_OnlyUseStandardSprites>
+	<RR_Mtw_GeneralSettings_hidePacksForCustomBodies>Hide pack items for custom bodies</RR_Mtw_GeneralSettings_hidePacksForCustomBodies>
+	<RR_Mtw_GeneralSettings_usePoundsWherePossible>Use lbs where possible</RR_Mtw_GeneralSettings_usePoundsWherePossible>
+	<RR_Mtw_GeneralSettings_showAllPerks>Show all perks</RR_Mtw_GeneralSettings_showAllPerks>
+
+	<RR_Hsw_HediffNumericSettings_SettingsTitle>Hediff effect multipliers</RR_Hsw_HediffNumericSettings_SettingsTitle>
+	<RR_Hsw_HediffNumericSettings_weightHediffHungerRateMult>Weight: hunger rate multiplier</RR_Hsw_HediffNumericSettings_weightHediffHungerRateMult>
+	<RR_Hsw_HediffNumericSettings_weightHediffManipulationPenaltyMult>Weight: manipulation penalty multiplier</RR_Hsw_HediffNumericSettings_weightHediffManipulationPenaltyMult>
+	<RR_Hsw_HediffNumericSettings_weightHediffMovementPenaltyMult>Weight: movement penalty multiplier</RR_Hsw_HediffNumericSettings_weightHediffMovementPenaltyMult>
+	<RR_Hsw_HediffNumericSettings_weightHediffRestRateMult>Weight: rest fall rate multiplier</RR_Hsw_HediffNumericSettings_weightHediffRestRateMult>
+	<RR_Hsw_HediffNumericSettings_fullnessHediffEatingPenaltyMult>Fullness: eating rate penalty multiplier</RR_Hsw_HediffNumericSettings_fullnessHediffEatingPenaltyMult>
+	<RR_Hsw_HediffNumericSettings_fullnessHediffMovementPenaltyMult>Fullness: movement penalty multiplier</RR_Hsw_HediffNumericSettings_fullnessHediffMovementPenaltyMult>
+	<RR_Hsw_HediffNumericSettings_fullnessHediffPainMult>Fullness: pain multiplier</RR_Hsw_HediffNumericSettings_fullnessHediffPainMult>
+
+	<RR_Mtw_GizmoSettingsTitle>UI Settings</RR_Mtw_GizmoSettingsTitle>
+	
+	<RR_Mtw_GizmoSettings_PawnDietManagementGizmo>Show diet management gizmo</RR_Mtw_GizmoSettings_PawnDietManagementGizmo>
+	<RR_Mtw_GizmoSettings_LargeDietGizmo>Large diet management gizmo</RR_Mtw_GizmoSettings_LargeDietGizmo>
+	<RR_Mtw_GizmoSettings_SleepPostureManagementGizmo>Show sleep posture gizmo</RR_Mtw_GizmoSettings_SleepPostureManagementGizmo>
+	<RR_Mtw_GizmoSettings_BlanketMangementGizmo>Show blanket management gizmo</RR_Mtw_GizmoSettings_BlanketMangementGizmo>
+	<RR_Mtw_GizmoSettings_ExemptionGizmo>Show dynamic body type exemption gizmo</RR_Mtw_GizmoSettings_ExemptionGizmo>
+	<RR_Mtw_GizmoSettings_BlobIntoBedGizmo>Show blob into bed gizmo</RR_Mtw_GizmoSettings_BlobIntoBedGizmo>
+	
+	<RR_Mtw_GizmoSettings_showPerkTab>Show perk tab</RR_Mtw_GizmoSettings_showPerkTab>
+	<RR_Mtw_GizmoSettings_showDescriptionTab>Show description tab</RR_Mtw_GizmoSettings_showDescriptionTab>
+	
+	<!--Other-->
+	<RR_ToolTip_Preferences_showDescriptionTab>Disabling this will hide the description tab from pawns when they are selected.</RR_ToolTip_Preferences_showDescriptionTab>
+	<RR_ToolTip_Preferences_showPerkTab>Disabling this will hide the perk tab from pawns when they are selected. This does not disable perks, only makes the menu invisible.</RR_ToolTip_Preferences_showPerkTab>
+	<RR_ToolTip_HediffSettings_WeightManipulationPenaltyMultiplier>Multiplier affecting to what degree a pawn's weight should impact their manipulation.</RR_ToolTip_HediffSettings_WeightManipulationPenaltyMultiplier>
+	<RR_ToolTip_HediffSettings_WeightMovementPenaltyMultiplier>Multiplier affecting to what degree a pawn's weight should impact their movement.</RR_ToolTip_HediffSettings_WeightMovementPenaltyMultiplier>
+	<RR_ToolTip_HediffSettings_WeightRestFallRateMultiplier>Multiplier affecting to what degree a pawn's weight should impact their rest fall rate.</RR_ToolTip_HediffSettings_WeightRestFallRateMultiplier>
+	<RR_ToolTip_HediffSettings_WeightHungerFallRateMultiplier>Multiplier affecting to what degree a pawn's weight should impact their hunger rate.</RR_ToolTip_HediffSettings_WeightHungerFallRateMultiplier>
+
+	<RR_ToolTip_HediffSettings_FullnessPainMultiplier>Multiplier affecting to what degree a pawn feels fullness from being extremely full.</RR_ToolTip_HediffSettings_FullnessPainMultiplier>
+	<RR_ToolTip_HediffSettings_FullnessMovementPenaltyMultiplier>Multiplier affecting to what degree a pawn's fullness should impact their movement.</RR_ToolTip_HediffSettings_FullnessMovementPenaltyMultiplier>
+	<RR_ToolTip_HediffSettings_FullnessEatingPenaltyMultiplier>Multiplier affecting to what degree a pawn's fullness should impact their eating speed.</RR_ToolTip_HediffSettings_FullnessEatingPenaltyMultiplier>
+
+	<RR_ToolTip_Preferences_ShowPawnDietGizmo>Show the diet management gizmo on pawns. Disabling this will not change their diet mode or settings.</RR_ToolTip_Preferences_ShowPawnDietGizmo>
+	<RR_ToolTip_Preferences_ShowSleepPostureGizmo>Show 'change sleep position' button on pawns. Disabling this will not change their configured sleeping position.</RR_ToolTip_Preferences_ShowSleepPostureGizmo>
+	<RR_ToolTip_Preferences_ShowBlanketManagementGizmo>Show 'show/hide blanket' button on pawns. Disabling this will not change their current setting.</RR_ToolTip_Preferences_ShowBlanketManagementGizmo>
+	<RR_ToolTip_Preferences_ShowPersonalExemptionGizmo>Show 'personal exemption' button. Disabling this will not change their current setting.</RR_ToolTip_Preferences_ShowPersonalExemptionGizmo>
+	<RR_ToolTip_Preferences_ShowBlobIntoBedGizmo>Show 'blob bed' button, if elligible. Disabling this will not change their current setting.</RR_ToolTip_Preferences_ShowBlobIntoBedGizmo>
+	<RR_ToolTip_Preferences_ShowLegacyDietGizmo>Use legacy diet gizmo rather than the new, slimmer one.</RR_ToolTip_Preferences_ShowLegacyDietGizmo>
+
+	<RR_ToolTip_Preferences_DynamicBodiesFor_Males>Enable use of RimRound sprites for males. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Males>
+	<RR_ToolTip_Preferences_DynamicBodiesFor_Females>Enable use of RimRound sprites for females. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Females>
+	<RR_ToolTip_Preferences_DynamicBodiesFor_FriendlyNPCS>Enable use of RimRound sprites for friendly NPCs (e.g. traders). This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_FriendlyNPCS>
+	<RR_ToolTip_Preferences_DynamicBodiesFor_HostileNPCS>Enable use of RimRound sprites for hostile NPCs (e.g. raiders). This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_HostileNPCS>
+	<RR_ToolTip_Preferences_DynamicBodiesFor_Prisoners>Enable use of RimRound sprites for prisoners. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Prisoners>
+	<RR_ToolTip_Preferences_DynamicBodiesFor_Slaves>Enable use of RimRound sprites for slaves. This only affects visuals, not mechanics. To disable sprites for a specific pawn, use the 'Personal Exemption Gizmo'.</RR_ToolTip_Preferences_DynamicBodiesFor_Slaves>
+
+	<RR_ToolTip_Preferences_ShowSpecialDebugSettings>Show debug settings used for debugging and racial support. Not recommended for most users.</RR_ToolTip_Preferences_ShowSpecialDebugSettings>
+	<RR_ToolTip_Preferences_ShowTattoosOnRRBodies>Use tattoos with RimRound sprites. The RimWorld's tattoos do not scale nicely and in general can look bad on RimRound body sprites. Recommended: Off</RR_ToolTip_Preferences_ShowTattoosOnRRBodies>
+	<RR_ToolTip_Preferences_BurstingEnabled>Allow pawns that eat over their hard limit to become severely injured. This can happen unintentionally and randomly. Recommended: Off</RR_ToolTip_Preferences_BurstingEnabled>
+	<RR_ToolTip_Preferences_PreferDefaultClothingOverNaked>Use a fallback clothing sprite if no suitable match is found. RimRound does not have direct support for most vanilla clothing items and any modded ones. If disabled, pawns will be naked anytime they are wearing unsupported clothing. Recommended: On</RR_ToolTip_Preferences_PreferDefaultClothingOverNaked>
+	<RR_ToolTip_Preferences_AlternateHeadPlacement>Place pawn's heads in front of the body portion of their sprite if they are facing north. Sometimes can be buggy but may look more realistic for larger body sizes. Purely preference.</RR_ToolTip_Preferences_AlternateHeadPlacement>
+	<RR_ToolTip_Preferences_WeightOpinionsGiveMoodlets>Give mood buffs and debuffs for what a pawn's weight opinion is and how closely they are to their ideal body.</RR_ToolTip_Preferences_WeightOpinionsGiveMoodlets>
+	<RR_ToolTip_Preferences_VariedBodyWeightRequirements>Enable weight requirements being different for different sized sprites. Some races use a smaller sprite set. Additionally, smaller sprite sets can be applied to any race. This setting reduces the amount of weight required for each stage accordingly.</RR_ToolTip_Preferences_VariedBodyWeightRequirements>
+	<RR_ToolTip_Preferences_UseLegacyLardySprite>Use the variant lardy east/west sprite. Purely preference.</RR_ToolTip_Preferences_UseLegacyLardySprite>
+	<RR_ToolTip_Preferences_UseOnlyStandardSet>Toggle use of apple body type sprites. They can have less support, so you can switch all pawns to use this type here. If you want more fine grained control, pawn body archetype can be switched in debug mode.</RR_ToolTip_Preferences_UseOnlyStandardSet>
+	<RR_ToolTip_Preferences_UseZoomPortraitStyle>Use the alternate portrait style. Switches between keeping their face the same size or fitting their body to the box. Purely preference.</RR_ToolTip_Preferences_UseZoomPortraitStyle>
+	<RR_ToolTip_Preferences_HidePacksForCustomBodies>Pack items (e.g. shield belt) scale with body size. Other items from mods can do this too. Enabling the setting will replace pack textures with the default clothing option.</RR_ToolTip_Preferences_HidePacksForCustomBodies>
+	<RR_ToolTip_Preferences_UsePoundsWherePossible>Use pounds instead of kilograms in certain displays. RimWorld uses metric for it's measurements, so stats such as 'mass' will remain unaffected.</RR_ToolTip_Preferences_UsePoundsWherePossible>
+	<RR_ToolTip_Preferences_ShowAllPerks>Show perks that this pawn will never be elligible to purchase. (E.g. race-specific perks)</RR_ToolTip_Preferences_ShowAllPerks>
+
+	<RR_ToolTip_NumericPreferences_MinimumAgeForCustomBody>The age after which pawns will use RimRound bodies. Pawns below this age will still gain/lose weight but will not use custom bodies.</RR_ToolTip_NumericPreferences_MinimumAgeForCustomBody>
+	<RR_ToolTip_NumericPreferences_GlobalWGModifier>Any and all gained weight is multiplied by this value. A '2' here would mean double the rate of weight gain across the board.</RR_ToolTip_NumericPreferences_GlobalWGModifier>
+	<RR_ToolTip_NumericPreferences_GlobalWLModifier>All non-surgical weight loss is multiplied by this value. A '2' here would mean double the rate of ambient weight loss.</RR_ToolTip_NumericPreferences_GlobalWLModifier>
+	<RR_ToolTip_NumericPreferences_FemaleWGModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_FemaleWGModifier>
+	<RR_ToolTip_NumericPreferences_FemaleWLModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_FemaleWLModifier>
+	<RR_ToolTip_NumericPreferences_MaleWGModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_MaleWGModifier>
+	<RR_ToolTip_NumericPreferences_MaleWLModifier>Works the same as the global modifier, but only affects female pawns.</RR_ToolTip_NumericPreferences_MaleWLModifier>
+	<RR_ToolTip_NumericPreferences_FullnessMultiplier>Fullness gained after ingestion is multiplied by this value. A '2' here would effectively double the amount of food a pawn eats per meal. If this is too high, pawns can starve or explode their stomachs, so be careful.</RR_ToolTip_NumericPreferences_FullnessMultiplier>
+	<RR_ToolTip_NumericPreferences_DigestionRateMultiplier>The rate at which pawns digest food is multiplied by this value. If you would like them to stay full for longer, you can lower this value.</RR_ToolTip_NumericPreferences_DigestionRateMultiplier>
+	<RR_ToolTip_NumericPreferences_StomachElasticityMultiplier>The rate at which a pawn's stomach expands when above the soft limit is multiplied by this value.</RR_ToolTip_NumericPreferences_StomachElasticityMultiplier>
+	<RR_ToolTip_NumericPreferences_TicksPerHungerCheck>The tick interval between digestion checks. A lower value will result in 'smoother' digestion but also potentially reduce performance.</RR_ToolTip_NumericPreferences_TicksPerHungerCheck>
+	<RR_ToolTip_NumericPreferences_TicksPerBodyChangeCheck>The tick interval between body update checks. If pawn sprites are not updating quick enough you can decrease this value. However, this may reduce performance.</RR_ToolTip_NumericPreferences_TicksPerBodyChangeCheck>
+	<RR_ToolTip_NumericPreferences_SoftLimitMultiplier>Global multiplier for pawn stomach capacity.</RR_ToolTip_NumericPreferences_SoftLimitMultiplier>
+	<RR_ToolTip_NumericPreferences_HardLimitMultiplier>Global multiplier for pawn extra stomach capacity. If you want to increase stomach capacity in general, change the soft limit multiplier instead.</RR_ToolTip_NumericPreferences_HardLimitMultiplier>
+	<RR_ToolTip_NumericPreferences_MinWeight>Pawns cannot lose weight below this value. This is in kilograms.</RR_ToolTip_NumericPreferences_MinWeight>
+	<RR_ToolTip_NumericPreferences_MaxWeight>Pawns cannot gain weight above this value. This is in kilograms.</RR_ToolTip_NumericPreferences_MaxWeight>
+	<RR_ToolTip_NumericPreferences_MinWeightForBlobBed>The weight required for a pawn to be elligible as a 'blob bed'. Pawns below this weight will not have the button to do so. This is in kilograms.</RR_ToolTip_NumericPreferences_MinWeightForBlobBed>
+	<RR_ToolTip_NumericPreferences_WeightForAltWiggleAngle>In Vanilla RimWorld, downed pawns are placed at a steep angle. This can look really wacky with RimRound's larger sprites. Pawns above this weight will use RimRound's alternate less steep downed angle. This is in kilograms.</RR_ToolTip_NumericPreferences_WeightForAltWiggleAngle>
+	<RR_ToolTip_NumericPreferences_TicksPerWeightGainRequestProcess>The tick interval between weight gain request checks. Weight gain requests are from things such as the embiggener and weight gain gas. A lower value will mean more accurate weight gain intervals, but may impact performance.</RR_ToolTip_NumericPreferences_TicksPerWeightGainRequestProcess>
+	<RR_ToolTip_NumericPreferences_MeatMultiplierForWeight>RimRound adjusts the amount of meat pawns drop based on their weight. However, for extremely large pawns this can result in huge, unmanagable piles of meat spawning when you butcher them. This value is a multiplier of to what degree weight impacts meat yield. '0' restores Vanilla behavior.</RR_ToolTip_NumericPreferences_MeatMultiplierForWeight>
+	<RR_ToolTip_NumericPreferences_MinForCapableMovement>RimRound allows pawns with almost no movement to be considered 'mobile'. This can cause inconvenience when a pawn tries to accomplish tasks they have no chance of getting to in time. This is a percentage representing when they should be immobilized by having too low of a movement stat.</RR_ToolTip_NumericPreferences_MinForCapableMovement>
+	<RR_ToolTip_NumericPreferences_MaxGelatinousSize>Body sizes beyond Gelatinous simply scale. To complete the game with the Ascension ending you need to reach Gelatinous 20. However, this can result in a pawn that is so large they take up too much of the screen. You can cap the visual sprite size by entering a value of 1-20 representing the max sprite size you'd like to see.</RR_ToolTip_NumericPreferences_MaxGelatinousSize>
+	<RR_ToolTip_NumericPreferences_NutritionPerPerkLevel>The required nutrition to gain a level in the perk system. A standard meal is about 0.9 nutrition.</RR_ToolTip_NumericPreferences_NutritionPerPerkLevel>
+	<RR_ToolTip_NumericPreferences_LevelsGainedPerLevel>This value dictated how many perk points you gain on level up.</RR_ToolTip_NumericPreferences_LevelsGainedPerLevel>
+	<RR_ToolTip_NumericPreferences_MinWeightChangeForThrowingText>When a pawn gains (or loses) a substantial amount of weight, the amount they gained is thrown as text. This can be annoying for pawns who are gaining rapidly over a long period of time. You can increase this value to raise how large the gain has to be to throw text.</RR_ToolTip_NumericPreferences_MinWeightChangeForThrowingText>
+	<RR_ToolTip_ThirdPartyModPreferences_MilkMultiplierByWeight>Multplier for how much weight impacts breast milk yield.</RR_ToolTip_ThirdPartyModPreferences_MilkMultiplierByWeight>
+		
+		
+	
+	<FloatMenuCantConsumeTooBig>Can't consume {1_labelShort}: Too big</FloatMenuCantConsumeTooBig>
+	
+	<!--Weight Gained Notifications-->
+	<WGNotification_Stage0010G>{PAWN_labelShort} has gained weight, and will move slightly slower as a result. Weight gain is likely to continue if their diet remains unchanged.</WGNotification_Stage0010G>
+	<WGNotification_Stage0020G>{PAWN_labelShort} has gained weight to the point of obesity. {PAWN_pronoun} will move considerably slower, \nas well as consume more food and require more rest. Consider giving {PAWN_objective} a sedentary job.</WGNotification_Stage0020G>
+	<WGNotification_Stage0030G>{PAWN_labelShort} has gained enough weight to be considered morbidly obese. {PAWN_pronoun} is no longer suitable for active work, and must eat constantly to maintain {PAWN_possessive} exceptional girth.</WGNotification_Stage0030G>
+	<WGNotification_Stage0040G>{PAWN_labelShort} has gained so much weight that they are nearly immobile. {PAWN_pronoun} is only capable of sedentary labor, and will likely require assistance to remain happy and healthy.</WGNotification_Stage0040G>
+	<WGNotification_Stage0050G>{PAWN_labelShort} has become more fat than person. {PAWN_pronoun} is unsuitable for any kind of labor, and will require constant assistance in day-to-day life. {PAWN_pronoun} will be a significant drain on your colony's food and manpower.</WGNotification_Stage0050G>
+	<WGNotification_Stage0060G>{PAWN_labelShort} has become impossibly obese. {PAWN_possessive} ridiculous appetite and inability to do any kind of productive labor will be a constant strain on your colony's sustainability. Consider rebuilding your colony around {PAWN_objective} to increase efficiency.</WGNotification_Stage0060G>
+	
+	<WGNotification_Stage0010L>{PAWN_labelShort} has lost enough weight that they are now only chubby. {PAWN_pronoun} is mildly hindered by {PAWN_possessive} extra weight.</WGNotification_Stage0010L>
+	<WGNotification_Stage0020L>{PAWN_labelShort} has lost enough weight that they are now only fat. While still hindered by {PAWN_possessive} size, {PAWN_pronoun} is now capable of providing for the colony.</WGNotification_Stage0020L>
+	<WGNotification_Stage0030L>{PAWN_labelShort} has lost enough weight that they are now only morbidly obese. {PAWN_pronoun} is still unsuitable for active work, but is unlikely to require assistance in day-to-day life.</WGNotification_Stage0030L>
+	<WGNotification_Stage0040L>{PAWN_labelShort} has lost enough weight that they are no longer a blob. {PAWN_pronoun} is still almost completely immobile, but can once again do sedentary labor.</WGNotification_Stage0040L>
+	<WGNotification_Stage0050L>{PAWN_labelShort} has lost enough weight that they are now only considered a blob. If {PAWN_pronoun} continues this weight loss, {PAWN_pronoun} may once again be able to contribute to the colony.</WGNotification_Stage0050L>
+	
+	
+	<!--Feeding Tube Text-->
+	<RR_FT_RemainingFoodStored>Food stored in this container</RR_FT_RemainingFoodStored>
+	<RR_FT_NetInfo>Food in system: {0}L / {1}L</RR_FT_NetInfo>
+	<RR_FT_BrokenDown>Broken down</RR_FT_BrokenDown>
+	<RR_FT_TraderUsing>Using {CONSUMPTIONRATE}L/s</RR_FT_TraderUsing>
+	<RR_NutritionDensity>Nutrition density</RR_NutritionDensity>
+	
+	<!--Auto Feeder-->
+	<FeedingTubeModeLabel_lose>Lose Weight</FeedingTubeModeLabel_lose>
+	<FeedingTubeModeLabel_loseDesc>The autofeeder will keep connected pawns from becoming malnourished but only barely.</FeedingTubeModeLabel_loseDesc>
+	<FeedingTubeModeLabel_maintain>Maintain Weight</FeedingTubeModeLabel_maintain>
+	<FeedingTubeModeLabel_maintainDesc>The autofeeder will attempt to keep the pawn at their current weight.</FeedingTubeModeLabel_maintainDesc>
+	<FeedingTubeModeLabel_gain>Gain Weight</FeedingTubeModeLabel_gain>
+	<FeedingTubeModeLabel_gainDesc>The autofeeder will cause the pawn to gain weight, but will not stuff them beyond normal fullness.</FeedingTubeModeLabel_gainDesc>
+	<FeedingTubeModeLabel_maxgain>Force Gain Weight</FeedingTubeModeLabel_maxgain>
+	<FeedingTubeModeLabel_maxgainDesc>The autofeeder will cause the pawn to gain weight and will stuff them beyond normal fullness. This may cause their stomach to stretch out massively over time.</FeedingTubeModeLabel_maxgainDesc>
+	<FeedingTubeModeLabel_off>Standby</FeedingTubeModeLabel_off>
+	<FeedingTubeModeLabel_offDesc>While in standby the autofeeder will not consume food nor will it feed any pawns. It will, however, still consume power.</FeedingTubeModeLabel_offDesc>
+	<FeedingTube_TargetPawn>Feed pawn</FeedingTube_TargetPawn>
+	<FeedingTube_TargetPawnDesc>Attaches a pawn to the autofeeder. Note that they must be in bed to use it.</FeedingTube_TargetPawnDesc>
+	<FeedingTube_StopFeedingLabel>Disconnect</FeedingTube_StopFeedingLabel>
+	<FeedingTube_StopFeedingDesc>Disconnects a pawn from the autofeeder.</FeedingTube_StopFeedingDesc>
+	<ZenithOrb_TargetPawn>Attune to pawn</ZenithOrb_TargetPawn>
+	<ZenithOrb_TargetPawnDesc>Attunes the power of the zenith orb to a target</ZenithOrb_TargetPawnDesc>
+	<ZenithOrb_StopTargetPawn>Disconnect from pawn</ZenithOrb_StopTargetPawn>
+	<ZenithOrb_StopTargetPawnDesc>Unfocus the zenith orb's power</ZenithOrb_StopTargetPawnDesc>
+	
+	<GainingResistance>Gaining Resistance</GainingResistance>
+	<GainingResistanceDesc>How much a pawn will resist the warden's effort to keep them fed. Lower values mean less reluctance to gain. When close to zero a prisoner is more likely to eat in excess when instructed to do so.</GainingResistanceDesc>
+	<TextMote_GainingResistanceChange>Reluctance\n{0} to {1}</TextMote_GainingResistanceChange>
+	
+	<RR_CharDescLabel>Desc.</RR_CharDescLabel>
+	<RR_Desc_F_Emaciated>{0} has a wretchedly underfed physique. Their body is frail and features very little in the way of curvature- sharp and angular in nearly every capacity. Their chest is barren and suffers an almost total lack of breasts, or indeed any feminine features, with a sunken, almost concave stomach to complete their woeful appearance. They have an offensively flat posterior, and scrawny thighs with little development to speak of. Their wiry form allows them to move quite a bit faster than most, but at the cost of looking sapless and pitiful. {0} has no trouble with their movement or manipulation, but the trembling of their body as they do so suggests they could be swiftly trounced by the lightest of breezes.</RR_Desc_F_Emaciated>
+	<RR_Desc_F_Thin>{0} has a trim, almost athletic figure with svelte, narrow limbs without much in the way of cumbersome weight. They have an unremarkable chest with only a small bosom to accompany it, and their undeveloped stomach has almost no uneccessary paunch or protusion whatsoever. Narrow hips give way to a thinly toned backside with tight, but trival cheeks that carry very little charm in their diminuitive size, and their thighs, while not completely flat, do not carry any substantial volume. {0} is quite capable in their perambulation, and they find themselves eating less than the average person.</RR_Desc_F_Thin>
+	<RR_Desc_F_Female>Sleek and unassuming, {0} is so painfully average in the body department that little stands out. Their form has various shapes and curves, for certain- but it would be a far cry to call them shapely OR curvaceous. {0} has a tender chest, that, despite its lack of excess weight, still sports an acceptable pair of breasts. Their stomach is soft to the touch, but has very little extra flab to pinch,  and their hips lack any real sway. Their rear isn't impressively voluminous, but it is well-defined, and gives way to thighs with reasonable proportions. {0} walks with no difficulty whatsoever, and their appetite is quite reserved.</RR_Desc_F_Female>
+	<RR_Desc_F_Thick>{0} has just a little more fluff than most, with a soft, tender body and well-developed curves and edges. Their bust size is above average, with a shapely pair that provides quite a pleasant sight. Their belly is soft with a little extra weight fashionably distributed around the edges. Skintight clothes accentuate these accessories quite nicely,  jutting out just a bit as their gut gives way to voluptuous hips and lightly padded thighs, supporting an ample butt with soft, malleable cheeks. The extra weight trades its softness for a slight reduction in [Pawn's] ability to move as fast as much trimmer folk, but they walk with an earned swagger- they're most definitely curvaceous, and in all the right places. Still, the slightest iota of an increased appetite lingers, even after meals with perfectly adequate portions.</RR_Desc_F_Thick>
+	<RR_Desc_F_Chonky>The increased snacking and lounging have taken a noticeable toll on {0}, and it shows most assuredly when they step on the scales. While not terribly overweight, {0} has quite the impressive features; a pair of rather large bosoms that rest ever so slightly on a muffin-top belly, that forms the absolute slightest hint of overhang onto their pelvic area, showing off their child-bearing hips and thighs that bulge outward a minute amount-if {0} were to wear thigh-high socks, they would leave small, but still unnacountably present skin indentations that make their already sizable butt look just a little larger. All of this distributed portliness came at a price for {0}, though- their thighs rub together when they walk, slowing them down and tiring them out marginally faster, and leaving them with a very strange sensation of emptiness in the pit of their stomach.</RR_Desc_F_Chonky>
+	<RR_Desc_F_Chubby>{0} is decidedly stout, evidently a result of their recent culinary escapades, and it is no less apparent that their appetite has led to some quite substantial growths in other areas. {0}'s chest is certainly very well endowed, containing two grapefruit-sized breasts that settle (with some difficulty) on the forming shelf of their stomach, their arms are no longer well-defined and angular but instead soft and richly padded. Their belly juts out some fair few inches indeed, even when their hunger goes unsatiated, spilling over to their hips and ass, which are almost large enough to balance cups on, indeed, {0} has found some joy in exploring these aspects of themselves. Their thighs are large enough that {0}'s knees have trouble being brought together, a fact that has hindered their mobility quite noticeably- and all of the extra walking has left them quite a bit hungrier than they remember...</RR_Desc_F_Chubby>
+	<RR_Desc_F_Corpulent>Tempted by the more frequent growls and grumbles of an increasingly peckish stomach, {0} has let themselves go in many ways, but none more evident than their size. The extra meals and sedentary activities have left them with a bloated form that wobbles quite ferociously when they summon the strength to run- which isn't terribly often these days. A double chin sits plain as day on their face, daring itself to multiply. A pair of melon sized breasts sit on the now well-established upper shelf of their slowly expanding waistline, and their hips have become a slightly problematic inconvenience, their quite sizable bottom often spilling over the edges of chairs, the sound of creaks and snapping growing ever-present. Their thighs boast an impressive thickness, pushing into each other deeply even while upright, and has made walking for {0} a more difficult task indeed. Regular meals don't seem to cut it for them, and they find themselves consuming a fair bit more than they would have expected themselves to be capable of.</RR_Desc_F_Corpulent>
+	<RR_Desc_F_Fat>There's no denying it anymore- {0} is fat. No amount of excuses or damage control can soften the fact that they are much softer than most. An extra meal here, a second helping there, and seemingly much more often than before, {0} finds themselves sat on their increasingly larger behind,  helping themselves to the spoils of their labor- a frankly unbalanced trade, all things considered. With breasts almost the size of their head, a stomach with developing folds and hips that find themselves very nearly brushing against doorways, {0} is most content whiling their hours away sat at a desk or in bed, since moving is becoming rather troublesome- {0} can only manage a light jog at best, and the hypnotic wobbling of their many folds only comes to a stop some time after they do. And is it just them, or are their arms getting a bit heavier to lift, too?</RR_Desc_F_Fat>
+	<RR_Desc_F_Obese>{0} isn't really the particularly active type- a fact not so surprising when you take into account their quite considerable bulk. Their body is lined with thick, swaying fat deep enough to push an entire fist into their stomach, and their breasts are each as large as exceedingly ripe watermelons, resting pendulously on their impressive belly, which hangs almost to {0}'s exceedingly thick thighs. Moving isn't just a chore anymore- it requires a great deal of [Pawn's] strength just to stay upright, a task which is rarely accomplished, as they can do little more than lounge on their expansive rear, adding more chins to the two that line their bloated face. Arms as thick as a thinner person's waist are pushed higher onto the shelf of {0}'s torso by sheer mass alone, affording them only a slow, comedic waddle at best, and a pitiful flail amongst their growing body at worst. {0} is always hungry, and despite their significant food intake, it's often not enough to satisfy. Chairs break and door frames creak as {0} goes about their business, and other colonists find themselves much closer to them than they planned for...</RR_Desc_F_Obese>
+	<RR_Desc_F_MorbidlyObese>Struggling immensely to remain mobile, {0} can barely haul their magnificent bulk upright long enough to cross their bedroom, let alone long-distance journeys. A trio of chins flows into a chest proudly displaying globular breasts of huge proportion, indeed, custom-made brassieres would still struggle to fit cleanly around their hefty bosom, as do most clothes {0} tries to wear. Heaving a stomach reminiscent of an exercise ball perpetually on their frame, {0}'s body is quickly losing form, their limbs still recognisable in the ever-expanding expanse of fat, but evidently not for long. Thighs as thick as small tree trunks support an extensively pillowy ass that no longer fits through any single door, and {0} can no longer recall the last time they went more than an hour without some form of substantial meal. Hunger spikes again and again, each more intense than the last, and their ravenous urges never quite seem to fully subside.</RR_Desc_F_MorbidlyObese>
+	<RR_Desc_F_Lardy>Confined almost entirely to a bed of clearly exceptional durability, {0} has found that their body is quickly becoming a prison of their own design.  Mustering all of their strength allows them to stumble forward at an agonizing crawl, knocking various objects over and breaking furniture almost immediately. Breasts each the size of overinflated beach balls hang precariously over a stomach that extends several feet in all directions,  and {0} sits upon a derriere so disastrously oversized that it could easily enroach most of a two-seater couch. {0} eats almost perpetually, only stopping for long enough to lounge around and perform only the most sedentary of tasks. The hunger remains always, and it only seems to get worse the more {0} eats...</RR_Desc_F_Lardy>
+	<RR_Desc_F_Lardy2>Flailing weakly, {0} lacks the strength without the means of bionic assistance to fully steer their truly splendid mass of a body anywhere outside of their room. Their several chins accompany a face recklessly saturated with thick fat, and their field of view is obscured somewhat by their expanding chest, and their gargantuan stomach, rising even higher than that, extends far enough to spill out of their bed.  If {0} could stand, their stomach would clearly reach the floor with ease,  and their rear is a close contender, dragging low enough to scrape the ground when upright, and large enough to elevate them several inches while bedridden. Tailoring fabric to fit them would be a huge waste of time, not least because they would clearly outgrow it rather swiftly, but also due to the sheer amount that would no doubt be needed to cover such a large form.  Dozens of meals disappear into {0}'s seemingly bottomless belly every few hours, and it is one mere step in an endless quest to satiate what is evidently a fruitless endeavour. </RR_Desc_F_Lardy2>
+	<RR_Desc_F_Enormous>{0} is, quite frankly, massive. Completely incapable of doing anything even remotely productive, they spend their time only eating, and growing even more exceptionally overbloated. {0} has become large enough that their rear has lifted them off the ground almost a full foot, which has prevented their legs from reaching the ground amongst the several foot wide confinement of encapsulating blubber that is their entire being. {0} eats enough food to feed a large family for several days in such short intervals that the colony will have to adjust accordingly just to maintain their exceptional girth. It is no exaggeration that they are one of the fattest individuals on the planet, but the encompassing hunger {0} feels ensures that they won't be stopping anytime soon...</RR_Desc_F_Enormous>
+	<RR_Desc_F_Gigantic>{0} has become so exceedingly overweight that their body could fully smother an entire, thinner person fully beneath it, or that same lucky individual could even use {0} as a bed- a grand idea, considering that their outrageously oversized body is also velvet smooth and flows haphazardly towards the ground with gracefully curved folds and shelves of abundant blubber that betray very little sense of form or structure to them. {0}'s rampant gluttony has left them utterly incapable of any broad movement, and their arms, as thick as an obese person's waist, can only wriggle helplessly in protest of their crushing encumbrence. If {0} were to lose half of their body weight, they would still be completely immobile, and it wouldn't change the all-encompassing desire to indulge themselves to the frightening degree they already do. A cul-de-sac could enjoy a hearty buffet with the food that {0} consumes with a single meal, and it is uncertain whether that would even sustain them for a full day, given the amount that seemingly vanishes in that time period. The colony must no doubt work much harder than before to please {0}'s selfish quest for fulfillment, especially as {0} fully incapable of contributing to it themselves, except perhaps as furniture.</RR_Desc_F_Gigantic>
+	<RR_Desc_F_Titanic>{0} doesn't even look remotely human anymore, with a concerningly large mass of a body that would easily fill the average bedroom to bursting, with a belly so comically large an entire person could submerge themselves in its depths stood completely upright, spilling from their bed-which might as well just be their enormous shelf of a rear at this point, as it lifts their graceless form completely off the ground higher than any bed ever could, and is pillowy-soft and unsettlingly comfortable. {0} is more than large enough to use as sleeping apparatus, even their breasts have enough surface area that a particularly invasive person could lie star-splain upon just one of them, but they are small in comparison to {0}'s exquisitely stuffed belly, big enough even to comfortably seat five or more people lying horizontally from head to toe, although the low growls and groans of their endlessly greedy stomach are audible enough that they might disturb even the heaviest of sleepers- still, it is an experience much like a vibrating water bed, and {0} can feel every slight wobble amongst their body as the folds and crevices dance amongst themselves in a flurry of action at the slightest provocation. </RR_Desc_F_Titanic>
+	<RR_Desc_F_G1>{0} is an almost unrecognizable mess of immeasurably thick, malleable fat that eclipses anything thought capable by even the most optimistic of onlookers. Breasts nearly the size of entire cars line the first of seven shelves of their outrageous belly, which towers a full nine feet in the air and stretches as wide as a limousine, giving way to an obscenely fattened ass that lifts {0} a few feet into the air, where they must stay, entombed in lard as they unflinchingly devour anything they can fit into their perpetually open mouth.  If by some obscene miracle {0} were to lose three-quarters of their jaw-dropping mass, they would likely still be the fattest person on the entire planet by a good margin. A dozen people could lay comfortably spread-eagle on their {0}'s exquisitely large belly with no major issue, and some genuine care must be taken to maintain their form, as small objects that disappear into their dozens of folds may not be found for days or even weeks. The population of a town could sustain themselves for perhaps a day on {0}'s weekly intake, and the colony will certainly struggle to sustain itself unless all efforts are squarely focused on providing {0} with an utterly obscene amount of food at all times. The growls and groans of their stomach can be heard at all times, even from several meters away, and serve as a reminder of their ferocious gluttony and unhinged desire.</RR_Desc_F_G1>
+	<RR_Desc_F_G2>Visitors and raiders alike to [Colony] all have one thing in common, the unshakable memory of spotting {0} for the first time. At first, one could mistake them for a building or large monument- they were certainly large enough- but not, surely- a person? A formless mass of intensely oversaturated lard only given a degree of structure by a chest sporting breasts individually large enough that a pickup truck could easily park on each one with room to spare, with that structure punctuated strongly by the breathtakingly large belly that fully obscures {0}'s field of view, rising more than a dozen feet and shaped by dozens, if not hundreds of riotously thick folds each bigger than an entire person's body. Even if {0}'s staggering weight were to drop by a full ninety percent, it would not grant them mobility in the slightest, and still easily afford them a place in the rankings for the absolute largest of people. Feeding {0} to a degree their appetite deems acceptable could bankrupt a middle-class family in well under three days, and the frenzied grumbles and gurgles of a belly denied are audible for hundreds of feet, and launch {0}'s cascading rolls into an undulating dance of motion that may not stop for several minutes, if one were to be sleeping on {0} at the time, something that could only be done after climbing to the top of their substantial hill of a stomach, they would feel vibrations intense enough to shift them several feet, indeed, the ground closest to {0} tremors ever so slightly to the chagrin of {0}'s clearly overworked feeders.</RR_Desc_F_G2>
+	<RR_Desc_F_G5>Local colonies and settlements alike have all certainly taken notice of the seemingly unstoppable anomaly that is {0}, but the effect is felt harder by none other than {0} themselves. With a colossal bulk that spans dozens of metres in every conceivable direction, they were unrecognisable as anything but a pile of immovable flesh, soft and smooth to the touch, but unsettlingly large in all areas- a body so terrifyingly massive, that {0}'s head, now buried between several layers of thick fat, appears utterly inconsequential in comparison, sits atop a chest with uncontrollable, sprawling breasts reminiscent of grain silos, situated atop a stomach that could fully smother a suburban house beneath its incredible volume, leading haphazardly into their perpetual seat of a behind large enough that if someone wanted to climb upon just one cheek, they would need to scale its imposing heights for several meters before reaching the top. {0} takes up so much space that the colony might want to consider using them as storage, as there is certainly enough room atop their obscene plateau of a stomach, although anything not promptly tied down is likely to topple off due to the intense undulations and vibrations of an endlessly gorged, bottomless belly. No amount of archotech limbs and mobility scooters are likely to afford {0} any semblance of true mobility, and they remain haplessly pinned under over several tons of bulging blubber that, if nothing changes, legitimately threatens to smother the immediate surrounding area underneath their immense mass.</RR_Desc_F_G5>
+	<RR_Desc_F_G9>Word amongst the grapevine tells of a devastating force of nature that slowly devours everything in its wake, as whatever it is carelessly expands beyond the limits of mortal standards, and dabbles in demonic territory. If nobody else but [Colony] knew about {0} by now, it would have be the most well guarded secret in human history, since they intrude so insistently on an ever-growing amount of space, and the amount of food, power, and automation required to sustain such an individual would have drawn an inexplicable amount of attention the world over if it suddenly occurred overnight. An unspeakable blob of flab metres thick towers over the landscape as high as thirty feet into the air in some areas, occasionally vibrating intensely as the effects of meals meant for a thousand people make their way through {0}'s unnaturally resolute digestive system, churning its payload into fat that spreads ever further and further out onto the ground. If a list of the planet's most obese people were to come into public consideration, {0} would not only be at the top, but would remain more than twice as far ahead as the silver medal even if one were to knock a zero off the end of their rapidly increasing measurement. If someone wanted to kiss {0}, a dangerous task for several reasons (not least because they might "disappear" while doing so) that extremely chivalrous individual  would first have to scale {0}'s titanic stomach, climb upon the dozen or more shelves of mountainous flab and then somehow manage to make their way to the top of {0}'s building-sized breasts, being careful not to sink into the depths of their mass below, for if they did, they may never be found. From there, they would still have to dig through the impenetrable wall of flab that is their neck fat, rising much taller than any person, and climb their dozens of thickly pronounced chins like a rope to reach their mouth. Feeding {0} manually is a ridiculous notion for this reason, but food is something {0} MUST have, and each meal increases in magnitude and number with each passing day, bearing the worrying insignia of a problem spiraling terribly out of control. As uncertain as life may sometimes be, there are few constants in the universe, but one of them is that {0} will continue to grow unabated, reaching sizes beyond academic comprehension, and perhaps, EVEN FURTHER BEYOND...</RR_Desc_F_G9>
+
+    <RR_Desc_F_G11>Neighouring colonies and factions know about {0} all too well. They're simply too big to ignore. Words fail even the most stalwart and stoic of visitors, beguiling them with a sight they will remember for the rest of their lives. A being of eldritch horror, so uncharacteristically large for a living thing that {0}'s very existence is a crime against nature. Every single inch, every yard, every acre of their thick, roiling abundance is a testament to the sheer and utter excess both {0} and those closest to them have accomplished in reaching such an awe-inspiring embodiment of voracity. Large enough to fill a small stadium to absolute capacity, the terrifying amount of nutrition that is devoured on a near-perpetual basis is interminable. Pounds become kilograms, into tons upon tons of ever-increasing mass, feeding a cycle of gluttony that is less human and more astronomical in scale. No man-made or artificial structure has any hope of ever granting movement to such an utterly nonsensical form, and one glance at {0} should make these incompatibilities as clear as day. With breasts as large as passenger jets spilling onto a stomach as wide as a skyscraper is tall, {0} takes up a selfish amount of space, but with the ferocity of their hunger, their current size, while far transcending the upper limit of what most would ever consider even tangible, it is clearly evident that {0} will make even this incarnation of their being look downright insignificant in their grandiose, unending quest for spatial dominance.</RR_Desc_F_G11>
+	
+	<RR_Desc_F_G12>If they had not seen if for themselves, even accomplished scientists would not have believed that anything like {0} could ever be a reality. Dozens, if not hundreds of times larger than anyone else on the planet, it is an absolute certainty that they are the largest person to come into being, even amongst the endless societies amongst the stars. Rumors and whispers stretch across the planet reaching as far as other continents telling of something that is a magnificent sight to behold, a monumental, almost deific form extending nearly half a MILE in width, and without question taller than the majority of buildings, even taking industrial society into consideration.  The endless debate of world hunger has never had a more clear-cut solution, indeed, if {0} were to be removed from the equation, the population would certainly notice an uptick in surplus. A chest sporting splendidly over-saturated bosoms like submarines in scale effortlessly dwarf any comparison by even the most graciously endowed standards hundreds of times over, and {0}'s grumbling belly, when not stuffed to capacity- a monumental task given its size- could comfortably cover most of an American football field under its enormity. While the colony has inexplicably managed thus far, they must still be prepared for the sheer magnitude of {0}'s truly endless hunger, any conversation at all within the settlement is always punctuated with the elephant- or, to be more accurate- whale in the room. Every effort, all hands available must devote their very being into maintaining such an impermissible appetite, for there is clearly some kind of otherworldly force at play, and it has created an almost superstitious air of optimism for all involved, but none more so than {0}, who, despite their lack of productivity, is a pretty big deal around here.</RR_Desc_F_G12>
+	
+	<RR_Desc_F_G14>Societies and tribes alike will talk of {0} for decades to come, each teller reciting a story of the largest entity to ever possess consciousness. Nobody would ever really believe it, of course, after all, how could someone earnestly, truly become larger than a blue whale in every capacity? To outstrip every dinosaur in history in both height and weight? And that, most importantly, this size, their spectacular, terrific size, was but a mere footnote in their journey?  Endless, innumerable folds give shape to a body more reminiscent of an aircraft carrier than an actual, living thing, in it all, buried between immensely thick fat is a hopelessly fat face mechanically blinded a dozen times over by a wall of flesh perhaps a half mile thick, always gulping down an obscene amount of food. The ground trembles and structures wobble dangerously as the intense undulations of [Pawn's] frightening stomach demand more and more food with each instant, if {0} could properly quantify the hunger they felt, each moment of insuppressible hunger would be magnitudes greater than the last, culminating in an almost indescribable equinox of cascading gluttony that would see the entire planet fed quite handsomely for some time. People come to see {0} from miles around, completely blown away that they are actually there, as large as they are, somehow ALIVE, and, most unnerving of all, somehow, still growing.</RR_Desc_F_G14>
+	
+	<RR_Desc_F_G17>A deafening gurgle ROARS through the colony, signaling that more than one minute has passed since {0} last demolished enough food to feed the entire population of this Rimworld for the rest of their natural lives, indeed, something is clearly unnatural here. The ground quakes violently as the smallest of movements send {0}'s immeasurable body into a whirlwind of graceless wobbling and undulations, no doubt disturbing and dislodging anything unfortunate to be trapped deep within.  Buried beneath hundreds of layers of rolls each thick enough to crush a full-grown elephant beneath their obscene weight, their face, hopelessly obscured by cheeks the size of medicine balls, flows freely into innumerable chins walled off by the towering encasement of their neck fat, which extends far enough out that an uncoiled anaconda would find itself with plenty of room to move forward.  {0}'s chest is home to a miraculous bosom so anomalously large that they could each easily beach a whale-or two- upon them, but even these are dwarfed by the incalculable volume of their stomach, which legitimately towers as high as a small mountain, crushing against the terrain and dwarfing any rock formations unfortunate to be anywhere near it, hiding cavernous rolls and folds, each larger than the last and all far more massive on their own than anything to walk this planet. Their arms, each large enough in diameter to wrap a freight train completely around their breadth, house useless, hopelessly over-fattened hands buried interminably between dozens, if not hundreds of metres of soft, but richly thick flesh. This entire Rimworld is now keenly aware of {0}'s presence, and their unbelievable mass has slowed all activity outside of their unbridled, celestial gluttony for not only {0} and [Colony], but for nearly every living thing on the planet, as their influence stretches so far that the opposite end of the planet has needed to adapt to the incomprehensible being they now all share it with. Stomach rumbles cause brutal earthquakes that demolish structures too close to {0}'s rampantly expanding mass, and can be felt many, many miles away, indicating to anyone on the continent that {0} is hungry, and cares little for the inconvenience caused. If {0} were to have their mind-boggling mass cut by a factor of a THOUSAND, they would still be completely and utterly immobile. The amount of work needed to maintain such a staggering size is completely unimaginable to all those who have not lived to served {0}'s catastrophically massive whims, as the amount of food {0} eats could fatten a person to helpless immobility with far less than just one of their meals, but this cannot even begin to cover the amount of haphazardly, hastily prepared cuisine that {0} carelessly and continuously devours, indeed, sixty seconds simply cannot pass without the apparent demanding of more from their infinitely ravenous belly, and each meal larger than the one before.  {0} cannot be stopped, and they will continue to expand out of control, until either [Colony] or the planet itself runs out of food, with the latter seeming less and less of a mad suggestion with each passing day. The only question now is...how long until other planets take notice, too?</RR_Desc_F_G17>
+	
+	<RR_Desc_F_G20>On the other side of the planet, buildings rumble and foundations shudder as the mysteriously intensifying tectonic activity continues. Everyone- that is to say, every soul on the planet- is obliquely aware of what is occurring- {0} is, as resolutely as ever, still continuing to expand as a result of their astronomical edacity. Perched on a form that extends hundreds- possibly thousands of meters in every conceivable direction, even straight upwards, is a tortured and monstrously over-saturated face buried beneath miles of flab packed upon a castle of chins. Breasts that could cover the surface area of a small town individually sit pitifully compared to the utter scale of {0}'s stomach, which dwarfs the surrounding area and every formation on the planet, mineral or artificial, in sheer scale. Orbiting ships and alien visitors can easily spot the anomalous form of the absolute blob of a person from even a considerable distance into space, as they shroud the landscape with such a ferocious audacity that they are incredibly easy to pick out from the surface, even in neighbouring colonies, {0} covers a decent portion of the skyline quite maddeningly. Nothing can sate their hunger, nothing can compare to their scale, all the entire planet, possibly even the galaxy can do is sit back and watch as they continue their spree. Food comes from all corners of the globe in unquantifiable amounts, and orbital traders make it a point to stop by the planet in order to sell entire shiploads of food to whatever madman is trying to terraform the planet in fat. If the population of a small country were to stand on a scale simultaneously to {0} they would still not measure up, even if they collectively weighed more, it is now a certainty that {0} would surpass that and far beyond. Contingencies and evacuation plans have been long-time jokes in the colony, but until recently, nobody had ever considered them in earnest. And while some particularly fervent believers are considering other, far more celestial outcomes, the simple, unshakable fact is that {0} will truly never cease their rampage, and no more questions about them remain- nobody can answer "how, or why", and when asked if they would-or even could- grow larger than "this colony here" or "this continent there," the only acceptable answer....is "yes."</RR_Desc_F_G20>
+
+	<RR_Desc_M_Emaciated>{0} has a wretchedly underfed physique. Their body is frail and features very little in the way of musculature- sharp and angular in nearly every capacity. A prominent jawline and strongly pronounced collarbones are just some of the marks of {0}'s lack of indulgence.  Their chest is sickly-looking and suffers a near-total lack of abdominal features, with a sunken, almost concave stomach to complete their woeful appearance. Their arms have little in any musculature. They have an offensively flat posterior, and scrawny thighs with little development to speak of. Their wiry form allows them to move quite a bit faster than most, but at the cost of looking sapless and pitiful. {0} has no trouble with their movement or manipulation, but the trembling of their body as they do so suggests they could be swiftly trounced by the lightest of breezes. On the bright side, their smaller stature allows them to consume less food in order to stay healthy- if you can call looking like this "healthy"...</RR_Desc_M_Emaciated>
+	<RR_Desc_M_Thin>{0} has a trim, almost athletic figure with svelte, narrow limbs without much in the way of cumbersome weight. They have a chest with underdeveloped pectorals, and their stomach is lean and scant with definition, has almost no unnecessary paunch or protrusion whatsoever. Narrow hips give way to a thinly toned backside with tight, but trivial cheeks that carry very little charm in their diminutive size, and their thighs, while not completely flat, do not carry any substantial volume. {0} is quite capable in their perambulation, and they find themselves eating less than the average person.</RR_Desc_M_Thin>
+	<RR_Desc_M_Male> Toned and unassuming, {0} is quite average in the body department. They don't give off a particularly strong air, but they have enough muscle definition that they don't look even the slightest bit out of place in broader society. {0} has a well defined chest with solid pectorals. Their toned stomach is neatly exercised, with little excess fat to be found, and their hips are decidedly masculine, giving depth to thighs with reasonable proportions. {0} walks with no difficulty whatsoever, and their appetite is quite reserved.</RR_Desc_M_Male>
+	<RR_Desc_M_Thick>{0} has just a little more fluff than most, with a soft, tender body and well-developed curves and edges. That sharp jawline has diminished a bit, and their chest isn't quite as toned as people of lesser calibres. Their belly is soft with a little extra weight fashionably distributed around the edges. Wearing a tight shirt would accentuate this form somewhat nicely,  jutting out just a bit as their gut gives way to well-proportioned hips and lightly padded thighs, supporting an ample butt with soft, malleable cheeks. The extra weight trades its softness for a slight reduction in {0}'s ability to move as fast as much trimmer folk, but they walk with an air of youthful exuberance, for they are still quite athletic in many ways. Still, the slightest iota of an increased appetite lingers, even after meals with perfectly adequate portions.</RR_Desc_M_Thick>
+	<RR_Desc_M_Chonky>The increased snacking and lounging have taken a noticeable toll on {0}, and it shows most assuredly when they step on the scales. While not exactly overweight, {0} has some notable features--a soft, barrel like chest, mildly flabby but unexercised arms and a thickened belly that forms the absolute slightest hint of a hang-over onto their pelvic area, showing off well-developed, less muscular hips and  thighs that bulge outward a minute amount. Their body isn't terribly athletic, but the extra encumbrance has afforded them some degree of heightened strength. All of this distributed portliness came at a price for {0}, though- their thighs chafe a bit when they walk, slowing them down and tiring them out marginally faster, and leaving them with a very strange sensation of emptiness in the pit of their stomach.</RR_Desc_M_Chonky>
+	<RR_Desc_M_Chubby>{0} is slightly doughy, evidently a result of their recent culinary escapades, and it is no less apparent that their appetite has led to some quite substantial growths in other areas. {0}'s chest isn't very toned- their midsection is stocky and decidedly square despite its softness, their arms are no longer well-defined and angular but instead soft and richly padded. Their belly juts out some fair few inches indeed, even when their hunger goes unsatiated, spilling over to their hips and ass, which are almost large enough to balance cups on, indeed, {0} has found some joy in exploring these aspects of themselves. Their thighs are large enough that {0}'s knees have trouble being brought together, a fact that has hindered their mobility quite noticeably- and all of the extra walking has left them quite a bit hungrier than they remember...</RR_Desc_M_Chubby>
+	<RR_Desc_M_Corpulent>Tempted by the more frequent growls and grumbles of an increasingly peckish stomach, {0} has let themselves go in many ways, but none more evident than their size. The extra meals and sedentary activities have left them with a bloated form that wobbles quite ferociously when they summon the strength to run- which isn't terribly often these days. A double chin sits plain as day on their face, daring itself to multiply. Thick pudge dots their entire body, their significant stomach protruding quite substantially outwards, and their hips have become a slightly problematic inconvenience, their quite sizable bottom often spilling over the edges of chairs, the sound of creaks and snapping growing ever-present. Their thighs boast an impressive thickness, pushing into each other deeply even while upright, and has made walking for {0} a more difficult task indeed. Regular meals don't seem to cut it for them, and they find themselves consuming a fair bit more than they would have expected themselves to be capable of.</RR_Desc_M_Corpulent>
+	<RR_Desc_M_Fat>There's no denying it anymore- {0} is fat. No amount of excuses or damage control can soften the fact that they are much softer than most. An extra meal here, a second helping there, and seemingly much more often than before, {0} finds themselves sat on their increasingly larger behind,  helping themselves to the spoils of their labor- a frankly unbalanced trade, all things considered, with a bulging midsection thick with ample rolls, a stomach with developing folds and hopelessly ill-equipped hips that find themselves very nearly brushing against doorways, {0} is most content whiling their hours away sat at a desk or in bed, since moving is becoming rather troublesome- {0} can only manage a light jog at best, and the hypnotic wobbling of their many folds only comes to a stop some time after they do. And is it just them, or are their arms getting a bit heavier to lift, too?</RR_Desc_M_Fat>
+	<RR_Desc_M_Obese>{0} looks as though they've been enjoying a fair few additional meals - a fact not so surprising when you take into account their quite considerable bulk. Their body is lined with thick, swaying fat deep enough to push an entire fist into their stomach, and despite being male, has enough volume in the chest area to have developed soft moobs, resting somewhat unequally on their barrel-like belly, which hangs almost to {0}'s exceedingly thick thighs. Moving isn't just a chore anymore- it requires a great deal of {0}'s strength just to stay upright, a task which is rarely accomplished, with their weak, uproariously fleshed back pulling most of the payload itself, as they can do little more than lounge on their expansive rear, adding more chins to the two that line their bloated face. Arms as thick as a thinner person's waist are pushed higher onto the shelf of {0}'s torso by sheer mass alone, affording them only a slow, comedic waddle at best, and a pitiful flail amongst their growing body at worst. {0} is always hungry, and despite their significant food intake, it's often not enough to satisfy. Chairs break and door frames creak as {0} goes about their business, and other colonists find themselves much closer to them than they planned for...</RR_Desc_M_Obese>
+	<RR_Desc_M_MorbidlyObese>Struggling immensely to remain mobile, {0} can barely haul their magnificent bulk upright long enough to cross their bedroom, let alone long-distance journeys. A trio of chins flows into a heavy-set neck and chest rich with flab and folds alike. Heaving a stomach reminiscent of an exercise ball perpetually on their frame, {0}'s body is quickly losing form, their limbs still recognisable in the ever-expanding expanse of fat, but evidently not for long. Thighs as thick as small tree trunks support an extensively pillowy ass that no longer fits through any single door, and {0} can no longer recall the last time they went more than an hour without some form of substantial meal. Hunger spikes again and again, each more intense than the last, and their ravenous urges never quite seem to fully subside.</RR_Desc_M_MorbidlyObese>
+	<RR_Desc_M_Lardy>Confined almost entirely to a bed of exceptional build quality, {0} has found that their body is quickly becoming a prison of their own design.  Mustering all of their strength allows them to stumble forward at an agonizing crawl, knocking various objects over and breaking furniture almost immediately. Their pathetically overworked and consistently harassed back can just barely support a stomach that extends several feet in all directions, under intense duress from Pawn's lack of musculature and definition under their thick layer of fat, and {0} sits upon a derriere so disastrously oversized that it could easily enroach most of a two-seater couch. {0} eats almost perpetually, only stopping for long enough to lounge around and perform only the most sedentary of tasks. The hunger remains always, and it only seems to get worse the more {0} eats...</RR_Desc_M_Lardy>
+	<RR_Desc_M_Lardy2>Flailing weakly, {0} lacks the strength to fully steer their truly splendid mass of a body anywhere outside of their room. Their several chins accompany a face recklessly saturated with thick fat, and their field of view is obscured somewhat by their expanding barrel of a chest, and their gargantuan stomach, rising even higher than that, extends far enough to spill out of their bed.  If {0} could stand, their stomach would clearly reach the floor with ease,  and their rear is a close contender, dragging low enough to scrape the ground when upright, and large enough to elevate them several inches while bedridden. Tailoring fabric to fit them would be a huge waste of time, not least because they would clearly outgrow it rather swiftly, but also due to the sheer amount that would no doubt be needed to cover such a large form.  Dozens of meals disappear into {0}'s seemingly bottomless belly every few hours, and it is one mere step in an endless quest to satiate what is evidently a fruitless endeavour. </RR_Desc_M_Lardy2>
+	<RR_Desc_M_Enormous>{0} is, quite frankly, massive. Completely incapable of doing anything even remotely productive, they spend their time only eating, and growing even more exceptionally overbloated. Even amongst extremely obese individuals, {0} would be considered part of the upper echelon of corpulence, this is given prominence by their ponderous stomach that droops dangerously onto the ground. {0} has become large enough that their rear has lifted them off the ground almost a full foot, which has prevented their legs from reaching the ground amongst the several foot wide confinement of encapsulating blubber that is their entire being. {0} eats enough food to feed a large family for several days in such short intervals that the colony will have to adjust accordingly just to maintain their exceptional girth. It is no exaggeration that they are one of the fattest individuals on the planet, but the encompassing hunger {0} feels ensures that they won't be stopping anytime soon...</RR_Desc_M_Enormous>
+	<RR_Desc_M_Gigantic>{0} has become so exceedingly overweight that their body could fully smother an entire, thinner person fully beneath it, or that same lucky individual could even use {0} as a bed- a grand idea, considering that their outrageously oversized body is also velvet smooth and flows haphazardly towards the ground with gracefully curved folds and shelves of abundant blubber that betray very little sense of form or structure to them. {0}'s rampant gluttony has left them utterly incapable of any broad movement, and their arms, as thick as an obese person's waist, can only wriggle helplessly in protest of their crushing encumbrance. If {0} were to lose half of their body weight, they would still be completely immobile, and it wouldn't change the all-encompassing desire to indulge themselves to the frightening degree they already do. A cul-de-sac could enjoy a hearty buffet with the food that {0} consumes with a single meal, and it is uncertain whether that would even sustain them for a full day, given the amount that seemingly vanishes in that time period. The colony must no doubt work much harder than before to please {0}'s selfish quest for fulfillment, especially as {0} fully incapable of contributing to it themselves, except perhaps as furniture.</RR_Desc_M_Gigantic>
+	<RR_Desc_M_Titanic>{0} doesn't even look remotely human anymore, with a concerningly large mass of a body that would easily fill the average bedroom to bursting, with a belly so comically large an entire person could submerge themselves in its depths stood completely upright, spilling from their bed-which might as well just be their enormous shelf of a rear at this point, as it lifts their graceless form completely off the ground higher than any bed ever could, and is pillowy-soft and unsettlingly comfortable. {0} is more than large enough to use as sleeping apparatus, especially on their exquisitely stuffed belly, big enough even to comfortably seat five or more people lying horizontally from head to toe, although the low growls and groans of their endlessly greedy stomach are audible enough that they might disturb even the heaviest of sleepers- still, it is an experience much like a vibrating water bed, and {0} can feel every slight wobble amongst their body as the folds and crevices dance amongst themselves in a flurry of action at the slightest provocation. </RR_Desc_M_Titanic>
+	<RR_Desc_M_G1>{0} is an almost unrecognizable mess of immeasurably thick, malleable fat that eclipses anything thought capable by even the most optimistic of onlookers. Their outrageous belly, which towers a full nine feet in the air and stretches as wide as a limousine, giving way to an obscenely fattened ass that lifts {0} a few feet into the air, where they must stay, entombed in lard as they unflinchingly devour anything they can fit into their perpetually open mouth.  If by some obscene miracle {0} were to lose three-quarters of their jaw-dropping mass, they would likely still be the fattest person on the entire planet by a good margin. A dozen people could lay comfortably spread-eagle on {0}'s exquisitely large belly with no major issue, and some genuine care must be taken to maintain their form, as small objects that disappear into their dozens of folds may not be found for days or even weeks. The population of a town could sustain themselves for perhaps a day on {0}'s weekly intake, and the colony will certainly struggle to sustain itself unless all efforts are squarely focused on providing {0} with an utterly obscene amount of food at all times. The growls and groans of their stomach can be heard at all times, even from several meters away, and serve as a reminder of their ferocious gluttony and unhinged desire.</RR_Desc_M_G1>
+	<RR_Desc_M_G2>Visitors and raiders alike to [Colony] all have one thing in common, the unshakeable memory of spotting {0} for the first time. At first, one could mistake them for a building or large monument- they were certainly large enough- but not, surely- a person? A formless mass of intensely oversaturated lard only given a degree of structure by the astonishingly large belly that fully obscures {0}'s field of view, rising more than a dozen feet and shaped by dozens, if not hundreds of riotously thick folds each bigger than an entire person's body. Even if {0}'s staggering weight were to drop by a full ninety percent, it would not grant them mobility in the slightest, and still easily afford them a place in the rankings for the absolute largest of people. Feeding {0} to a degree their appetite deems acceptable could bankrupt a middle-class family in well under three days, and the frenzied grumbles and gurgles of a belly denied are audible for hundreds of feet, and launch {0}'s cascading rolls into an undulating dance of motion that may not stop for several minutes, if one were to be sleeping on {0} at the time, something that could only be done after climbing to the top of their substantial hill of a stomach, they would feel vibrations intense enough to shift them several feet, indeed, the ground closest to {0} tremors ever so slightly to the chagrin of {0}'s clearly overworked feeders.</RR_Desc_M_G2>
+	<RR_Desc_M_G5>Local colonies and settlements alike have all certainly taken notice of the seemingly unstoppable anomaly that is {0}, but the effect is felt harder by none other than {0} themselves. With a colossal bulk that spans dozens of metres in every conceivable direction, they were unrecognisable as anything but a pile of immovable flesh, soft and smooth to the touch, but unsettlingly large in all areas- a body so terrifyingly massive, that {0}'s head, now buried between several layers of thick fat, appears utterly inconsequential in comparison, situated atop a stomach that could fully smother a suburban house beneath its incredible volume, easily more than half the size of the rest of {0}, as it leads haphazardly into their perpetual seat of a behind large enough that if someone wanted to climb upon just one cheek, they would need to scale its imposing heights for several meters before reaching the top. {0} takes up so much space that the colony might want to consider using them as storage, as there is certainly enough room atop their obscene plateau of a stomach, although anything not promptly tied down is likely to topple off due to the intense undulations and vibrations of an endlessly gorged, bottomless belly. No amount of archotech limbs and mobility scooters are likely to afford {0} any semblance of true mobility, and they remain haplessly pinned under over several tons of bulging blubber that, if nothing changes, legitimately threatens to smother the immediate surrounding area underneath their immense mass.</RR_Desc_M_G5>
+	<RR_Desc_M_G9>Word amongst the grapevine tells of a devastating force of nature that slowly devours everything in its wake, as whatever it is carelessly expands beyond the limits of mortal standards, and dabbles in demonic territory. If nobody else but [Colony] knew about {0} by now, it would have be the most well guarded secret in human history, since they intrude so insistently on an ever-growing amount of space, and the amount of food, power, and automation required to sustain such an individual would have drawn an inexplicable amount of attention the world over if it suddenly occurred overnight. An unspeakable blob of flab metres thick towers over the landscape as high as thirty feet into the air in some areas, occasionally vibrating intensely as the effects of meals meant for a thousand people make their way through {0}'s unnaturally resolute digestive system, churning its payload into fat that spreads ever further and further out onto the ground. If a list of the planet's most obese people were to come into public consideration, {0} would not only be at the top, but would remain more than twice as far ahead as the silver medal even if one were to knock a zero off the end of their rapidly increasing measurement. If someone wanted to kiss {0}, a dangerous task for several reasons (not least because they might "disappear" while doing so) that extremely chivalrous individual  would first have to scale {0}'s titanic stomach, and climb upon the dozen or more shelves of mountainous flab. From there, they would still have to dig through the impenetrable wall of flab that is their neck fat, rising much taller than any person, and climb their dozens of thickly pronounced chins like a rope to reach their mouth. Feeding {0} manually is a ridiculous notion for this reason, but food is something {0} MUST have, and each meal increases in magnitude and number with each passing day, bearing the worrying insignia of a problem spiraling terribly out of control. As uncertain as life may sometimes be, there are few constants in the universe, but one of them is that {0} will continue to grow unabated, reaching sizes beyond academic comprehension, and perhaps, EVEN FURTHER BEYOND...</RR_Desc_M_G9>
+
+	<RR_DescTitle_Emaciated>EMACIATED</RR_DescTitle_Emaciated>
+	<RR_DescTitle_Thin>VERY THIN</RR_DescTitle_Thin>
+	<RR_DescTitle_Female_Male>THIN</RR_DescTitle_Female_Male>
+	<RR_DescTitle_Thick>THICK</RR_DescTitle_Thick>
+	<RR_DescTitle_Chonky>CHUNKY</RR_DescTitle_Chonky>
+	<RR_DescTitle_Chubby>CHUBBY</RR_DescTitle_Chubby>
+	<RR_DescTitle_Corpulent>CORPULENT</RR_DescTitle_Corpulent>
+	<RR_DescTitle_Fat>FAT</RR_DescTitle_Fat>
+	<RR_DescTitle_Obese>OBESE</RR_DescTitle_Obese>
+	<RR_DescTitle_MorbidlyObese>MORBIDLY OBESE</RR_DescTitle_MorbidlyObese>
+	<RR_DescTitle_Lardy>LARDY</RR_DescTitle_Lardy>
+	<RR_DescTitle_Lardy2>IMMOBILE</RR_DescTitle_Lardy2>
+	<RR_DescTitle_Enormous>ENORMOUS</RR_DescTitle_Enormous>
+	<RR_DescTitle_Gigantic>GIGANTIC</RR_DescTitle_Gigantic>
+	<RR_DescTitle_Titanic>TITANIC</RR_DescTitle_Titanic>
+	<RR_DescTitle_G1>GELATINOUS</RR_DescTitle_G1>
+	<RR_DescTitle_G2>COLOSSAL</RR_DescTitle_G2>
+	<RR_DescTitle_G5>MONSTROUS</RR_DescTitle_G5>
+	<RR_DescTitle_G9>MOUNTAINOUS</RR_DescTitle_G9>
+	<RR_DescTitle_G11>ASTRONOMICAL</RR_DescTitle_G11>
+	<RR_DescTitle_G12>TRANSCENDENT</RR_DescTitle_G12>
+	<RR_DescTitle_G14>MYTHICAL</RR_DescTitle_G14>
+	<RR_DescTitle_G17>OMNIPRESENT</RR_DescTitle_G17>
+	<RR_DescTitle_G20>INCONCEIVABLE</RR_DescTitle_G20>
+
+	<RR_Desc_F_Ratkin_Emaciated>{0}'s tail is abnormally thin, even considering the petite nature of Ratkin. One could easy mistake it for string. Needless to say, it is exceptionally weak and barely prehensile.</RR_Desc_F_Ratkin_Emaciated>
+	<RR_Desc_F_Ratkin_Thin>{0}'s tail is thin and somewhat on the smaller end of the spectrum. It's definitely lacking in thickness, which has slightly hindered {0}'s ability to use it as effectively as their other limbs</RR_Desc_F_Ratkin_Thin>
+	<RR_Desc_F_Ratkin_Female>{0} has a perfectly normal sized tail and is quite adept at using it as an extra hand when the need arises. With some springiness and give, it's clear than {0} is taking at least decent care of themselves.</RR_Desc_F_Ratkin_Female>
+	<RR_Desc_F_Ratkin_Thick>{0}'s tail is a little on the bulkier side, but this hasn't hindered its prehensile nature in the slightest. If one were to poke it, they would find that it is soft and springy to the touch, with the slightest bit of pinch to it as well. It's even a little bit longer than other ratkin tails, if only by an inch or so at most.</RR_Desc_F_Ratkin_Thick>
+	<RR_Desc_F_Ratkin_Chonky>{0} has a noodle-like, slightly thick tail that wiggles around with the graciousness of a snake, hypnotic and smooth in its movements. It has a small amount of heft to it, enough that {0} can't move it quite as dextrously as their other limbs, and enough chub to sink a finger into and have it leave a brief indent before resettling.</RR_Desc_F_Ratkin_Chonky>
+	<RR_Desc_F_Ratkin_Chubby>{0}'s tail is as chubby as the rest of them, thick enough to just barely squeeze a hand around, with slight protrusions at the base where a small shelf of fat is beginning to form. It's rather hefty to keep prehensile, but can still be used as an extra limb, and its thickness allows it to perform surprising feats of strength.</RR_Desc_F_Ratkin_Chubby>
+	<RR_Desc_F_Ratkin_Corpulent>{0} has a chubby tail as thick as a soda can at the base, soft and slightly wobbly to the touch, like much of their body. Lifting it takes a fair deal of effort, as it is weighty and quite malleable, and {0} prefers to keep it on the ground wherever possible. Although the length of their tail is certainly longer than most others, {0}'s sizeable rear has also covered a small portion of the base of their tail to compensate.</RR_Desc_F_Ratkin_Corpulent>
+	<RR_Desc_F_Ratkin_Fat>{0}'s tail is broad and rich in chub, looking more like an alligator's tail than a rat's, as it is deeply thickened at the base by deep fat that is partially obscured by their substantial buttocks. {0} has great trouble lifting such a heavy tail, but can still use it to reach behind them, a feat which is useful as turning around at their size is beginning to become somewhat harder.</RR_Desc_F_Ratkin_Fat>
+	<RR_Desc_F_Ratkin_Obese>{0} has an exceptionally flabby tail large in both volume and weight, and struggles to lift it regularly. While they are afforded some mobility outside of their field of view, which is quickly diminishing, it is certainly difficult to lift fully, and the speed at which it crashes to the ground could cause some real damage if not avoided.</RR_Desc_F_Ratkin_Obese>
+	<RR_Desc_F_Ratkin_MorbidlyObese>{0} has a fascinatingly thick, long tail with a soft consistency and huge heft to it, so much so that they can no longer lift it in its entirety, and would much rather not move it at all as far as effort is concerned. Anyone caught near the tip on the rare occasions it wheels around destructively must be cautious, as it could knock an unfortunate victim unconcious with its weight with little trouble.</RR_Desc_F_Ratkin_MorbidlyObese>
+	<RR_Desc_F_Ratkin_Lardy>{0}'s abundantly meaty tail is as thick as a watermelon, and as long as a cobra, giving it the appearance of a gigantic sausage, although it is still larger at its base than anywhere else, and the tip has dulled as fat creeps around its substantial bulk. The days of using it as an extra arm are certainly gone, but {0} can still just barely lift the latter half of their tail and bring it down in a satisfyingly meaty smack, or coil it into a large, beanbag-like circle. One could use it as a pillow if they so desired!</RR_Desc_F_Ratkin_Lardy>
+	<RR_Desc_F_Ratkin_Lardy2>{0} has an impressively fat tail that is over a dozen feet in length, rich with folds and rolls much like their own tank of a body. {0} has exceptional trouble lifting any part of it off the ground, and can barely muster the strength at all to coil it, although it is so thick in some areas that this is a frankly impossible task.</RR_Desc_F_Ratkin_Lardy2>
+	<RR_Desc_F_Ratkin_Enormous>Extending several metres from {0}'s blubbery butt is a tail as thick as an oil barrel and just as heavy. {0} can barely move their tail at all, let alone enough to do anything useful, although several people could use it as a bench if they wanted.</RR_Desc_F_Ratkin_Enormous>
+	<RR_Desc_F_Ratkin_Gigantic>{0}'s tail makes any snake look like a malnourished worm in comparison, and is so richly padded with fat that they cannot particularly move it in any specific direction. One could lie upon it like a couch without much interference, although climbing on top of it is easier said than done, as it is as tall as any person and almost certainly just as wide.</RR_Desc_F_Ratkin_Gigantic>
+	<RR_Desc_F_Ratkin_Titanic>{0}'s extraordinarily girthy tail is easily the size of a car, and perhaps twice as long, exceedingly bulky and soft to the touch. A person could easily sleep on its base with no trouble, assuming they could find where it began in the maze of folds that is their distressingly oversized derriere. {0} no longer can summon the strength to even wiggle anything but the absolute tip of their tail in a feeble attempt at mobility, but if they could, it is heavy enough that it could shatter a brick wall under its crushing weight.</RR_Desc_F_Ratkin_Titanic>
+	<RR_Desc_F_Ratkin_G1>One could be forgiven for thinking that {0}'s tail was just an exceptionally large pipeline, the way it extends outwards from their formless mass. Completely immobile but chokingly thick in every capacity, {0} has created their own perimeter wall with the absurd length and girth of their extraordinary additional appendage, far more effective than any steel wall could hope to muster and too tall for anyone to climb without extraneous assistance.</RR_Desc_F_Ratkin_G1>
+	<RR_Desc_F_Ratkin_G2>As long as a steam engine and just as thick, {0}'s tail is one of the few reminders that they are, in fact, a Ratkin, and quite a giant one at that. Extending over thirty feet in length, even the tip is as wide as a trashcan lid, and is so heavy that it has left a trail on the ground beneath as it has expanded in width and breadth. If somebody wanted to climb it, they would have to stand upon someone's shoulders to do so, and even then they would still probably need a ladder.</RR_Desc_F_Ratkin_G2>
+	<RR_Desc_F_Ratkin_G5>Large enough to smother an elephant and no doubt as heavy, {0}'s tail is an unyielding reminder of their Ratkin heritage and a shocking antithesis to their entire race- {0} is certainly much larger than every other species, to the point that even their once tiny tail now dwarfs all but the largest of creatures many times over.</RR_Desc_F_Ratkin_G5>
+	<RR_Desc_F_Ratkin_G9>Climbing the fatter parts of {0}'s monstrous tail, which extend as high as fifty feet in some areas, is an insurmountable task in its own right, but running its entire length would take an athletic person several minutes, with twists, dips, turns and coils stretching so far out into the wilds that nearby colonies could mistake them for an absolutely colossal snake in its own right. Ignoring the logic of what it would take to lift such a stupendously heavy tail, if {0} were able to do so, and slam it back down, the resulting earthquake could shift tectonic plates across the entire region, damaging buildings for miles, and reminding everyone in earshot that this giant rat can most certainly make all of the rules, but that the only one they must follow is to bring them more food.</RR_Desc_F_Ratkin_G9>
+
+
+	<!--Perk translation-->
+	<RR_PerkTabLabel>Perks</RR_PerkTabLabel>
+	<RR_PerkTab_Title>Perks</RR_PerkTab_Title>
+	<RR_Basic_Perks_Title>Basic Perks</RR_Basic_Perks_Title>
+	<RR_Advanced_Perks_Title>Advanced Perks</RR_Advanced_Perks_Title>
+	<RR_Elite_Perks_Title>Elite Perks</RR_Elite_Perks_Title>
+	<RR_Ultimate_Perks_Title>Ultimate Perks</RR_Ultimate_Perks_Title>
+	<RR_Abilities_Title>Abilities</RR_Abilities_Title>
+	
+	<RR_Ample_Appetite_Title>Ample Appetite</RR_Ample_Appetite_Title>
+	<RR_Apex_Absorption_Title>Apex Absorption</RR_Apex_Absorption_Title>
+	<RR_Ascension_Title>Ascension</RR_Ascension_Title>
+	<RR_Beautiful_Bulk_Title>Beautiful Bulk</RR_Beautiful_Bulk_Title>
+	<RR_Breakneck_Buffet_Title>Breakneck Buffet</RR_Breakneck_Buffet_Title>
+	<RR_Bulletproof_Blob_Title>Bulletproof Blob</RR_Bulletproof_Blob_Title>
+	<RR_Comfortable_Corpulence_Title>Comfortable Corpulence</RR_Comfortable_Corpulence_Title>
+	<RR_Culinary_Connisseur_Title>Culinary Connisseur</RR_Culinary_Connisseur_Title>
+	<RR_Demonic_Devourment_Title>Demonic Devourment</RR_Demonic_Devourment_Title>
+	<RR_Diet_Plan_Title>Diet Plan</RR_Diet_Plan_Title>
+	<RR_Digestion_Beyond_Question_Title>Digestion Beyond Question</RR_Digestion_Beyond_Question_Title>
+	<RR_Endless_Indulgence_Title>Endless Indulgence</RR_Endless_Indulgence_Title>
+	<RR_Even_Further_Beyond_Title>Further Beyond</RR_Even_Further_Beyond_Title>
+	<RR_Fat_Furnace_Title>Fat Furnace</RR_Fat_Furnace_Title>
+	<RR_FoldsOfHeaven_Title>Folds of Heaven</RR_FoldsOfHeaven_Title>
+	<RR_GigaGurgling_Title>Giga Gurgling</RR_GigaGurgling_Title>
+	<RR_GluttonyIncarnate_Title>Gluttony Incarnate</RR_GluttonyIncarnate_Title>
+	<RR_HeavyRevian_Title>Heavy Revian</RR_HeavyRevian_Title>
+	<RR_ItsComingThisWay_Title>It's Coming This Way!</RR_ItsComingThisWay_Title>
+	<RR_LimitBreak_Title>Limit Break</RR_LimitBreak_Title>
+	<RR_MakesAllTheRules_Title>Makes All The Rules</RR_MakesAllTheRules_Title>
+	<RR_NoPainStillGain_Title>No Pain, Still Gain</RR_NoPainStillGain_Title>
+	<RR_PaunchPower_Title>Paunch Power</RR_PaunchPower_Title>
+	<RR_PracticalProblems_Title>Practical Problems</RR_PracticalProblems_Title>
+	<RR_RotundRegeneration_Title>Rotund Regeneration</RR_RotundRegeneration_Title>
+	<RR_SquareOne_Title>Square One</RR_SquareOne_Title>
+	<RR_TitanicTank_Title>Titanic Tank</RR_TitanicTank_Title>
+	<RR_Voracious_Title>Voracious</RR_Voracious_Title>
+	<RR_WeLikeToParty_Title>We Like To Party</RR_WeLikeToParty_Title>
+	<RR_WeightGain4000_Title>Weight Gain 4000</RR_WeightGain4000_Title>
+	<RR_WellInsulated_Title>Well Insulated</RR_WellInsulated_Title>
+	
+	<RR_SuddenExpansion_Title>Sudden Expansion</RR_SuddenExpansion_Title>
+	<RR_Atomic_Anomaly_Title>Atomic Anomaly</RR_Atomic_Anomaly_Title>
+	<RR_PackWhale_Title>Pack Whale</RR_PackWhale_Title>
+	<RR_CropNotch_Title>Crop Notch</RR_CropNotch_Title>
+	<RR_TheresTheBeef_Title>There's the Beef!</RR_TheresTheBeef_Title>
+	<RR_That_Title>That!</RR_That_Title>
+
+	<RR_BlackHole_Title>Black Hole</RR_BlackHole_Title>
+	<RR_TitaniumStomach_Title>Titanium Stomach</RR_TitaniumStomach_Title>
+	<RR_PeakEvolution_Title>Peak Evolution</RR_PeakEvolution_Title>
+	<RR_OneMoreBite_Title>One More Bite</RR_OneMoreBite_Title>
+	
+	<RR_Ample_Appetite_Desc>+10% hunger rate multiplier per level\n\n"{0}'s body has grown accustomed to an increased food intake, and will now require even more to stay satiated."</RR_Ample_Appetite_Desc>
+	<RR_Apex_Absorption_Desc>+0.1x weight gain multiplier per level\n\n"{0}'s metabolism has gone into overdrive, allowing them to gain more weight from the same amount of food."</RR_Apex_Absorption_Desc>
+	<RR_Comfortable_Corpulence_Desc>-0.03x movement penalty multiplier per level\n\n"{0}'s body has gotten used to bearing the substantial strain on it, resulting in a small reduction to their movement penalty."</RR_Comfortable_Corpulence_Desc>
+	<RR_Culinary_Connisseur_Desc>+1 cooking skill (in effect)\n\n"Eating obscene amounts of food sure does give you a taste for it. {0} has gotten better at cooking as a result and can now prepare meals faster."</RR_Culinary_Connisseur_Desc>
+	<RR_Demonic_Devourment_Desc>+10% eating speed per level\n\n"After spending so much time eating, {0} has naturally gotten rather good at it."</RR_Demonic_Devourment_Desc>
+	<RR_Diet_Plan_Desc>+0.2 weight loss multiplier\nNot required for "Ascension".\n\n"{0} has learned how to more effectively managed their weight and can lose weight more efficiently if desired."</RR_Diet_Plan_Desc>
+	<RR_Digestion_Beyond_Question_Desc>+0.3x digestion multiplier per level\n\n"{0}'s digestive juices increase in acidity, improving the rate at which nutrition turns into weight."</RR_Digestion_Beyond_Question_Desc>
+	<RR_Endless_Indulgence_Desc>+1x stomach elasticity per level\n\n"The elasticity of {0}'s stomach has increased, allowing their maximum capacity to increase faster while hopelessly overstuffed."</RR_Endless_Indulgence_Desc>
+	<RR_LimitBreak_Desc>+10% hard limit cap per level\n\n"{0} has gotten used to the feeling of being full, so much so that they can push the limits of their stomach further than before."</RR_LimitBreak_Desc>
+	<RR_NoPainStillGain_Desc>-0.1x pain multiplier from fullness\n\n"{0} has developed a tolerance to the sensation  of being stuffed to almost bursting, and feels less affected by it as a result."</RR_NoPainStillGain_Desc>
+	<RR_PracticalProblems_Desc>Hoverchairs are 25% more effective\n\n"Hey look buddy, I'm an architect. That means I solve problems. Not problems like building houses large enough for overfed Ratkin, I solve practical problems. Like this custom made hoverchair."</RR_PracticalProblems_Desc>
+	<RR_SquareOne_Desc>Sets weight severity to lowest possible level. Can be rebought multiple times.\nNot required for "Ascension".\n\n"Returns the pawn to an emaciated stage, but retains your level and perks."</RR_SquareOne_Desc>
+	<RR_TitanicTank_Desc>+10% blunt resistance per level\n\n"{0}'s size means that blunt objects, like clubs and hammers, tend to bounce right off them. They are harder to put down in a fist fight.\n\nPrerequisite: Corpulent or higher"</RR_TitanicTank_Desc>
+	<RR_WellInsulated_Desc>Minimum comfortable temperature increased by 5.0C per level.\n\n"{0} doesn't mind the cold. Their extra padding keeps them warm."</RR_WellInsulated_Desc>
+	<RR_Voracious_Desc>+25% hunger rate multiplier per level\n\n"{0} can no longer function unless they are recklessly fattening themselves. Whether they want it or not, {0} needs an immeasurable amount of nutrition."\n\nPrerequisite: Ample Appetite Level 3</RR_Voracious_Desc>
+	<RR_WeightGain4000_Desc>+0.2x weight gain multiplier per level\n\n"Beefcake! BEEFCAKE!!!"\n\nPrerequisite: Apex Absorption Level 10</RR_WeightGain4000_Desc>
+	<RR_ItsComingThisWay_Desc>Pawns can move at minimum 1% moving and manipulation regardless of their weight. Does not work at Gelatinous 11 and beyond.\n\n"Nano-mechanites can do almost anything- heal terminal injury, bring the dead back to life, and even grant mobility to inconceivably titanic blobs of lard-- although, even science can only do so much."\n\nPrerequisite: Comfortable Corpulence Level 10</RR_ItsComingThisWay_Desc>
+	<RR_Bulletproof_Blob_Desc>+10% sharp resistance per level\n\n"{0} is so utterly swathed in fat that not even bullets can penetrate far enough to deal substantial damage. Most firearms are ineffective against such an oversized target."\n\nPrerequisite: Titanic Tank Level 5, Lardy I or higher</RR_Bulletproof_Blob_Desc>
+	<RR_GigaGurgling_Desc>+1.0x digestion multiplier per level\n\n"{0}'s stomach juices are so virulent that food is almost instantly metabolized into weight. It's rather difficult to keep their stomach full."\n\nPrerequisite: Digestion Beyond Question Level 5</RR_GigaGurgling_Desc>
+	<RR_Breakneck_Buffet_Desc>+25% eating speed per level\n\n"{0} doesn't even chew their food anymore. As meal upon meal vanishes down their endless gullet, they devour food with implausible dexterity given their size."\n\nPrerequisite: Demonic Devourment Level 5, Lardy II or higher</RR_Breakneck_Buffet_Desc>
+	<RR_FoldsOfHeaven_Desc>+20% rest effectiveness from sleeping on this pawn. Must toggle blob bed on and off to get effect.\n\n"It's like sinking into a water bed. Silky smooth, and yet so soft and malleable...{0}'s body might just be the most comfortable bed in the galaxy."\n\nPrerequisite: Must be a blob bed</RR_FoldsOfHeaven_Desc>
+	<RR_Beautiful_Bulk_Desc>+1.0 beauty to pawn\n\n"So hypnotic. So magnificent... the expanse of vast folds and perfect curves...{0} is so elegant that even others are transfixed by her appearance."\n\nPrerequisite: Lardy II or higher</RR_Beautiful_Bulk_Desc>
+	<RR_Fat_Furnace_Desc>Pawn radiates a small amount of heat. Level 1 is equal to a torch lamp, Level 2 is as effective as a heater. Must toggle on and off to get effect of upgrade.\n\n"{0} is so obscenely large that their sheer mass radiates a fuzzy, warm energy. Who needs central heating when you have {0}?"\n\nPrerequisite: Titanic I or higher</RR_Fat_Furnace_Desc>
+	<RR_RotundRegeneration_Desc>+50% healing factor\n\n"{0} is large enough that their body can metabolise in order to heal itself much faster than average."\n\nPrerequisite: Obese or larger</RR_RotundRegeneration_Desc>
+	<RR_WeLikeToParty_Desc>Pawns can use blob bed as a recreation spot. Gives dexterity play at 150% power.\n\n"It's like silly putty!"\n\nPrerequisite: Must be a blob bed</RR_WeLikeToParty_Desc>
+	<RR_GluttonyIncarnate_Desc>+100% hunger rate\n\n"It's never enough. {0} just can't help it. Every fibre of their being, every second of their consciousness harbours an unbearable desire to eat.  They cannot stop. They will not stop. Their stomach screams for more, and they are helpless to resist."\n\nPrerequisite: Voracious Level 3</RR_GluttonyIncarnate_Desc>
+	<RR_PaunchPower_Desc>Pawn permanently gives off energy and can be hooked up to power conduits. Each level provides 1000W of energy.\n\n"Biofuel is a useful tool, and {0} has become so intensely oversized that their body can be used as a living battery."\n\nPrerequisite: Gelatinous IV or larger</RR_PaunchPower_Desc>
+	<RR_MakesAllTheRules_Desc>+4.0x weight gain multiplier, +150% eating speed at night (18:00-06:00)\nNot required for "Ascension".\n\n"They prey at night, they eat at night, they're THE rat. {0} has truly become the Giant Rat."\n\nPrerequisite: Gelatinous X or higher, Ratkin</RR_MakesAllTheRules_Desc>
+	<RR_HeavyRevian_Desc>-0.2x incoming damage multiplier, +20% consciousness, +60% moving, +60% manipulation, +50% eating speed, +1.50x weight gain multiplier\nNot required for "Ascension".\n\n"Forget offerings to Skarne, they should bring them to ME!"\n\nPrerequisite: Gelatinous X or higher, Revian</RR_HeavyRevian_Desc>
+	<RR_Even_Further_Beyond_Desc>Unlocks Gelatinous 11-20\n\n"There was no reason to expect that {0} would ever stop growing. Not bound by small inconveniences like logic, they set their sights on the stars beyond this increasingly cramped rimworld. But since no ship in the universe could ever carry their inordinate mass, that only leaves one option..."\n\nPrerequisite: Every single other perk and ability, excluding race-specific perks, Diet Plan, Sudden Expansion, Atomic Anomaly and Square One</RR_Even_Further_Beyond_Desc>
+	<RR_Ascension_Desc>Wins game.\n\n"Ascend past your limits and face your destiny. Once you pick this perk, the game will end."\n\nPrerequisite: EVEN FURTHER BEYOND!, Gelatinous 20 (1,000,000KG)</RR_Ascension_Desc>
+	<RR_SuddenExpansion_Desc>Can be purchased multiple times.\nNot required for "Ascension".\n\nPawn instantly gains 5 kilograms. This amount is affected by other weight gain multipliers.\n\n"{0}'s clothes just got a lot tighter. That's weird. Must've been the wind."</RR_SuddenExpansion_Desc>
+	<RR_Atomic_Anomaly_Desc>Can be purchased multiple times.\n\n+500KG to pawn. Stacks with other multipliers.\nNot required for "Ascension".\n\n"As a result of ingesting just about everything edible known to mankind, {0}'s stomach accidentally causes a chain chemical reaction that metabolizes into a colossal amount of fat almost immediately.\n{0} barely even noticed."\n\nPrerequisite: EVEN FURTHER BEYOND!, Must be at Gelatinous X+ to purchase.</RR_Atomic_Anomaly_Desc>
+	<RR_PackWhale_Desc>Pawn can "carry" double the normal amount.\n\n"So many folds, so many places to store things! {0} makes an excellent travelling buddy, provided you don't mind the increased "snack breaks." They can carry much more on long-distance trips. Hopefully you can find it all again..."\n\nPrerequisite: Morbidly Obese or higher, must remain this weight or higher to keep bonus.</RR_PackWhale_Desc>
+	<RR_CropNotch_Desc>+10% farming/crop yield for the user.\n\n"The harvest sure is bountiful this season. And next season."</RR_CropNotch_Desc>
+	<RR_TheresTheBeef_Desc>Gain additional meat yields from butchered animals. +50% butchery efficiency for the user.\n\n"Why's everyone always so particular about what parts of the animal are edible? It's all good eating!"</RR_TheresTheBeef_Desc>
+	<RR_That_Desc>+2.0x weight gain multiplier, toxic sensitivity -100%, +50% blunt and sharp resistance, -20% heat resistance\nNot required for "Ascension".\n\n"Alright, who let {0} into the nuclear waste again?" \n\nPrerequisite: Must be Gelatinous X+ to purchase, Anty race only</RR_That_Desc>
+	
+	<RR_BlackHole_Desc>+50L stomach capacity\nNot required for "Ascension".\n\n"Something terrifying, hidden amongst the cosmos, stirs, awoken by the whirlwind of gluttony wrought at the mouth of {0}. Impressed, it bestows  but a fraction of its power to them, a minute pocket dimension forming in the pit of their now expansive gut- granting them the ability to stuff themselves far beyond the limits of any mortal. But this favor is granted only once. Will it even be enough?"</RR_BlackHole_Desc>
+	<RR_TitaniumStomach_Desc>+Immunity to food poisoning, +1.0x digestion rate multiplier.\n\n"Having digested such a considerable amount of food, {0}'s stomach even breaks down harmful enzymes and chemicals they may happen to accidentally ingest. In doing so, it has also aided the speed at which nutrition is processed."</RR_TitaniumStomach_Desc>
+	<RR_PeakEvolution_Desc>+1.0 weight gain multiplier\nNot required for "Ascension".\n\n"This is the apex of humanity. {0}'s very cellular structure has completely shifted, resulting in an exceptionally high rate of weight gain. And, not to be outdone by any inferior aliens, they can do it again and again, and again..."</RR_PeakEvolution_Desc>
+	<RR_OneMoreBite_Desc>+1.0L stomach capacity\nNot required for "Ascension".\n\n"There's still so much left to eat, this is no time to be worrying about trivial things like stomach capacity. Just keep going."</RR_OneMoreBite_Desc>
+	
+	<RimRound_Credits_Ascension_Intro>You've done it. Your ceaseless quest for gluttony has allowed you to expand to a size so colossal, that an alien ship was able to spot you from orbit. Intrigued, they came to investigate, and were fascinated with the...results. They decided to assist you, not in leaving the planet, but in making you a test subject.\n</RimRound_Credits_Ascension_Intro>
+	<RimRound_Credits_Ascension_Body>Their technologies and culinary preparations were far beyond comprehension, and the subject had little choice in this new undertaking. In due time, their current size was dwarfed, and their exponential growth continued unimpeded. The world beneath them shrank, until they took its place, becoming the land itself. With only the vast expanse of space to challenge their scale, their conquest did not end there, on the contrary, it was merely beginning.\n\nFattened beyond even mortal understanding, the subject became so immense that even many archotech societies took notice, and, eventually, cultivated a galactic empire using their eternally expanding form. Some say they are there to this very day, in a state of perpetual bliss, their inescapable fate quite literally written in the stars.\n\nYou have chosen your destiny.</RimRound_Credits_Ascension_Body>
+	<RimRound_Credits_Title>RimRound Credits\n</RimRound_Credits_Title>
+	<RimRound_Credits_Description>Programming
+- Niwatori401
+
+Concept, design
+- Niwatori401
+- Ultranova
+
+Art, Sprite work, UI
+- BambooAle
+- ArtOfFire1
+- Ultranova
+- Bloopy
+
+Writing, flavor text
+- Ultranova
+- rngsusd
+
+Fattening Foods addon
+- SuperSpaces
+
+RimRound Extra Events
+- Steven_
+
+Other RimRound addons
+- acoolgai
+
+Pre-Alpha Testers
+- pinguin
+- Alex Sharp
+- RandomButton
+
+Additional thanks to all of the folks on the RimRound discord server who helped bugfix, contribute ideas and help make the mod what it is today.</RimRound_Credits_Description>
+<!--
+DO NOT ADD A TRANSLATION KEY FOR ANY TAGS BELOW 
+
+They are meant to be the contents of a text files.
+It's a bit of a hack, but I couldn't find a non-invasive way to load the text in without baking it into the binary.
+-->
+<RR_TextureData>Anthro,BW
+GS_Bear_Brown,BW
+GS_Bear_Polar,BW
+GS_Bear_Panda,BW
+GS_Bear_Luna,BW
+GS_Bear_Cave,BW</RR_TextureData>
+
+<RR_RaceData>AFoxbold,set070
+Alien_Avali,set070
+Alien_BlueOni,defaultSet
+Alien_GreenOni,defaultSet
+Alien_RedOni,defaultSet
+Alien_Dogbold,set070
+Alien_Drow_Otto,defaultSet
+Alien_Equium,defaultSet
+Alien_KEquium,defaultSet
+Alien_PEquium,defaultSet
+Alien_SMaleEquium,defaultSet
+Alien_Ferrex,defaultSet
+Alien_Fennex,defaultSet
+Alien_Frijjid,defaultSet
+Alien_Loompa,set070
+Alien_Orassan,set070
+Alien_OrassanHumanHybrid,set090
+Alien_Protogen,defaultSet
+Alien_ProtogenNME,defaultSet
+Anthro,defaultSet
+Anty,antySet
+ATK_Avianmorph,defaultSet
+ATK_Bovinemorph,defaultSet
+ATK_Caninemorph,defaultSet
+ATK_Cervinemorph,defaultSet
+ATK_Dragomorph,defaultSet
+ATK_Felinemorph,defaultSet
+ATK_Gnollmorph,defaultSet
+ATK_Lagomorph,defaultSet
+ATK_Vulpinemorph,defaultSet
+ChjAndroid,defaultSet
+Dragon_Kilhn,defaultSet
+EA_SylveonRace,defaultSet
+Fantasy_Goblin,defaultSet
+GS_Bear_Brown,defaultSet
+GS_Bear_Polar,defaultSet
+GS_Bear_Panda,defaultSet
+GS_Bear_Luna,defaultSet
+GS_Bear_Cave,defaultSet
+HalfDragon,defaultSet
+HalfDragon_colonist,defaultSet
+Human,defaultSet
+Lucario,defaultSet
+MegaLucario,defaultSet
+MinotaurRace,defaultSet
+Moonjelly_Race,defaultSet
+MQT_Miqote,defaultSet
+O21_OR_Abednedo,defaultSet
+O21_OR_Aqualish,defaultSet
+O21_OR_Bith,defaultSet
+O21_OR_Cerean,defaultSet
+O21_OR_Devaronian,defaultSet
+O21_OR_Duros,defaultSet
+O21_OR_Iktotchi,defaultSet
+O21_OR_Iridonian,defaultSet
+O21_OR_Ithorian,defaultSet
+O21_OR_Mirialan,defaultSet
+O21_OR_Neimoidian,defaultSet
+O21_OR_Nikto,defaultSet
+O21_OR_Selkath,defaultSet
+O21_OR_Sith,defaultSet
+O21_OR_Togruta,defaultSet
+O21_OR_Trandoshan,defaultSet
+O21_OR_Twilek,defaultSet
+O21_FR_Tiefling,defaultSet
+O21_FR_WoodElf,defaultSet
+O21_FR_Tabaxi,defaultSet
+O21_FR_SunElf,defaultSet
+O21_FR_Orc,defaultSet
+O21_FR_MoonElf,defaultSet
+O21_FR_Kobold,set070
+O21_FR_Killoren,defaultSet
+O21_FR_Illithid,defaultSet
+O21_FR_Hobgoblin,set090
+O21_FR_HalfOrc,defaultSet
+O21_FR_Halfling,set070
+O21_FR_Goblin,set090
+O21_FR_Gith,defaultSet
+O21_FR_Firbolg,defaultSet
+O21_FR_Dwarf,defaultSet
+O21_FR_DarkElf,defaultSet
+O21_FR_Chitine,defaultSet
+Rabbie,rabbieSet
+Ratkin,ratkinSet
+Ratkin_Su,ratkinSet
+ReviaRaceAlien,defaultSet
+RE_Asari,defaultSet
+Stick_Stickman,defaultSet
+SlitherRace,defaultSet
+IkquanRace,defaultSet
+KlickmalaRace,defaultSet
+TRAHS_DreemurrRace,defaultSet
+TRAHS_FurretRace,defaultSet
+DesignerMatesXH,defaultSet
+ScaleManXH,defaultSet
+SoldiermorphXH,defaultSet
+WolfManXH,defaultSet
+GlitterWorlderRace,defaultSet
+HighGravWorlderRace,defaultSet
+LowGravWorlderRace,defaultSet
+RadWorlderRace,defaultSet
+VatgrownHumanRace,defaultSet</RR_RaceData>
+</LanguageData>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>  
+		<defName>RR_Research_NutritionallyDenseFoods</defName>
+		<label>nutritionally dense foods</label>
+		<tab>RimRoundTech</tab>
+		<description>Create meals of great size packed to the rafters with calories, ideal for gourmands or voracious eaters.</description>
+		<baseCost>1600</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Industrial</techLevel>		
+		<researchViewX>3</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_ColossalMeals</defName>
+		<label>colossal meals</label>
+		<tab>RimRoundTech</tab>
+		<description>Craft utterly immense meals stuffed with enough nutrition guaranteed to satisfy all but the most gratuitous of gluttons.</description>
+		<baseCost>1000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_NutritionallyDenseFoods</li>
+		</prerequisites>		
+		<researchViewX>3</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_UltraTechCooking</defName>
+		<label>UltraTech cooking</label>
+		<tab>RimRoundTech</tab>
+		<description>Analyse and learn to construct cooking stations on par with glitterworld societies, capable of cooking foods containing caloric density beyond normal human comprehension.</description>
+		<baseCost>4000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_NutritionallyDenseFoods</li>
+		</prerequisites>		
+		<researchViewX>4</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+   	<ResearchProjectDef>  
+		<defName>RR_Research_CookingModule</defName>
+		<label>cooking module</label>
+		<tab>RimRoundTech</tab>
+		<description>Build a module for the ultratech cooking station that allows it to operate at higher efficiency, greatly increasing the speed at which food is created.</description>
+		<baseCost>2000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_UltraTechCooking</li>
+		</prerequisites>		
+		<researchViewX>4</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_GlutoniumEnrichedFoods</defName>
+		<label>glutonium enriched foods</label>
+		<tab>RimRoundTech</tab>
+		<description>Learn to infuse gluttonium into regular delicacies, turning them from moderately fattening foodstuffs into explosively efficient caloric bombs.</description>
+		<baseCost>3200</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_UltraTechCooking</li>
+		</prerequisites>		
+		<researchViewX>5</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_GlutoniumMeals</defName>
+		<label>glutonium meals</label>
+		<tab>RimRoundTech</tab>
+		<description>Create meals from pure gluttonium and no other ingredients, completely superseding the need for organic material and greatly increasing meal production.</description>
+		<baseCost>4000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_GlutoniumEnrichedFoods</li>
+		</prerequisites>		
+		<researchViewX>5</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+    	<ResearchProjectDef>  
+		<defName>RR_Research_ProjectAlpha</defName>
+		<label>project α</label>
+		<tab>RimRoundTech</tab>
+		<description>Begin the process of studying means to compress pure gluttonium into its smallest, densest state, creating an object of frightening caloric value.</description>
+		<baseCost>6000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_GlutoniumEnrichedFoods</li>
+		</prerequisites>		
+		<researchViewX>6</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_ProjectOmega</defName>
+		<label>project Ω</label>
+		<tab>RimRoundTech</tab>
+		<description>Further refine the Alpha ball into an incomprehensibly dense state, creating an object that when ingested immediately causes the victim's body to expand at unprecedented speeds.</description>
+		<baseCost>8000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_ProjectAlpha</li>
+		</prerequisites>		
+		<researchViewX>6</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_Glutonium</defName>
+		<label>glutonium</label>
+		<tab>RimRoundTech</tab>
+		<description>Research the handling and processing of gluttonium, a man-made compound that replicates itself on an obscene scale on contact with gastric juices. Glitterworld colonies often have safety videos concerning the accidental or intention ingestion of this dangerous material, but that hasn't stopped it from being highly prized among hedonistic societies.</description>
+		<baseCost>2000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Spacer</techLevel>		
+		<researchViewX>4</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef> 
+
+	<ResearchProjectDef>  
+		<defName>RR_Research_GlutoniumDrugs</defName>
+		<label>glutonium drugs</label>
+		<tab>RimRoundTech</tab>
+		<description>Synthesize drugs and addictive substances infused or laced with gluttonium.</description>
+		<baseCost>3000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RR_Research_Glutonium</li>
+		</prerequisites>		
+		<researchViewX>3</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>  
+		<defName>RR_Research_ExperimentalGlutoniumDrugs</defName>
+		<label>experimental drugs</label>
+		<tab>RimRoundTech</tab>
+		<description>Fabricate terrifying experimental drugs with extreme caloric density.</description>
+		<baseCost>4200</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_Glutonium</li>
+		</prerequisites>		
+		<researchViewX>4</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef> 
+
+	<ResearchProjectDef>  
+		<defName>RR_Research_GlutoniumFabrication</defName>
+		<label>glutonium fabrication</label>
+		<tab>RimRoundTech</tab>
+		<description>Create a fabricator from gluttonium that interacts with quantum foam to replicate itself, infinitely, forever, resulting in a station that generates a truly endless amount of gluttonium with blistering speed. 
+Societies privy to these have mostly outlawed this technology as it usually resulted in problematic individuals outgrowing their jurisdiction, or in extreme cases, even their home worlds.</description>
+		<baseCost>12000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+            <li>Fabrication</li>
+			<li>RR_Research_Glutonium</li>
+		</prerequisites>		
+		<researchViewX>5</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>     
+
+	<ResearchProjectDef>  
+		<defName>RR_Research_ZenithOrb</defName>
+		<label>zenith orb</label>
+		<tab>RimRoundTech</tab>
+		<description>Create an orb that radiates pure gluttonium that can be attuned to specific pawns, causing weight gain on an inconceivable level.</description>
+		<baseCost>30000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RR_Research_GlutoniumFabrication</li>
+		</prerequisites>		
+		<researchViewX>6</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>        		
+</Defs>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--Fine Meal Derivatives-->
+  <ThingDef Name="RR_MealFineBase" ParentName="MealFineBase" Abstract="True">
+    <defName>RR_MealFineBase</defName>
+    <label>fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RR_MealFineBaseVEG" Abstract ="True" ParentName="MealFineBase">
+    <defName>RR_MealFineBaseVEG</defName>
+    <label>vegetarian fine meal</label>
+    <description>A complex dish assembled with care from vegetarian ingredients.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/FineVeg</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RR_MealFineBaseMEAT" ParentName="MealFineBase" Abstract="True">
+    <defName>RR_MealFineBaseMEAT</defName>
+    <label>meat-based fine meal</label>
+    <description>A complex dish assembled with care from meat ingredients.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/FineMeat</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+      
+  
+  <ThingDef ParentName="RR_MealFineBase">
+    <defName>MealFineLarge</defName>
+    <label>large fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>25</MarketValue>
+      <WorkToMake>500</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_MealFineBaseVEG">
+    <defName>MealFineLargeVeg</defName>
+    <label>large vegetarian fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>25</MarketValue>
+      <WorkToMake>500</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_MealFineBaseMEAT">
+    <defName>MealFineLargeNonVeg</defName>
+    <label>large meat-based fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>25</MarketValue>
+      <WorkToMake>500</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+  </ThingDef>   
+  
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+    
+  <ThingDef ParentName="RR_MealFineBase">
+    <defName>MealFineHuge</defName>
+    <label>huge fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>35</MarketValue>
+      <WorkToMake>800</WorkToMake>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+   <ThingDef ParentName="RR_MealFineBaseVEG">
+    <defName>MealFineHugeVeg</defName>
+    <label>huge vegetarian fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>35</MarketValue>
+      <WorkToMake>800</WorkToMake>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RR_MealFineBaseMEAT">
+    <defName>MealFineHugeNonVeg</defName>
+    <label>huge meat-based fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>35</MarketValue>
+      <WorkToMake>800</WorkToMake>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+  </ThingDef>  
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+     
+  <ThingDef ParentName="RR_MealFineBase">
+    <defName>MealFineEnormous</defName>
+    <label>enormous fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>50</MarketValue>
+      <WorkToMake>1125</WorkToMake>
+      <Nutrition>4.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="RR_MealFineBaseVEG">
+    <defName>MealFineEnormousVeg</defName>
+    <label>enormous vegetarian fine meal</label>
+    <description>A complex vegetarian dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>50</MarketValue>
+      <WorkToMake>1125</WorkToMake>
+      <Nutrition>4.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="RR_MealFineBaseMEAT">
+    <defName>MealFineEnormousNonVeg</defName>
+    <label>enormous meat-based fine meal</label>
+    <description>A complex meat-based dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>50</MarketValue>
+      <WorkToMake>1125</WorkToMake>
+      <Nutrition>4.0</Nutrition>
+    </statBases>
+  </ThingDef>  
+  
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+    
+  <ThingDef ParentName="RR_MealFineBase">
+    <defName>MealFineMassive</defName>
+    <label>massive fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>70</MarketValue>
+      <WorkToMake>1575</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>    
+  <ThingDef ParentName="RR_MealFineBaseVEG">
+    <defName>MealFineMassiveVeg</defName>
+    <label>massive vegetarian fine meal</label>
+    <description>A complex vegetarian dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>70</MarketValue>
+      <WorkToMake>1575</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>    
+  <ThingDef ParentName="RR_MealFineBaseMEAT">
+    <defName>MealFineMassiveNonVeg</defName>
+    <label>massive meat-based fine meal</label>
+    <description>A complex meat-based dish assembled with care from a variety of ingredients.</description>
+	<statBases>
+      <MarketValue>70</MarketValue>
+      <WorkToMake>1575</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+  
+  <ThingDef ParentName="RR_MealFineBase">
+    <defName>MealFineColossal</defName>
+    <label>colossal fine meal</label>
+    <description>An obscenely large meal crafted with care from a huge variety of ingredients.</description>
+	<statBases>
+      <MarketValue>70</MarketValue>
+      <WorkToMake>3000</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef>    
+  <ThingDef ParentName="RR_MealFineBaseVEG">
+    <defName>MealFineColossalVeg</defName>
+    <label>colossal vegetarian fine meal</label>
+    <description>An obscenely large vegetarian meal crafted with care from a huge variety of ingredients.</description>
+	<statBases>
+      <MarketValue>150</MarketValue>
+      <WorkToMake>3000</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef>    
+  <ThingDef ParentName="RR_MealFineBaseMEAT">
+    <defName>MealFineColossalNonVeg</defName>
+    <label>colossal meat-based fine meal</label>
+    <description>An obscenely large meat-based meal crafted with care from a huge variety of ingredients.</description>
+	<statBases>
+      <MarketValue>150</MarketValue>
+      <WorkToMake>3000</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef>    
+  
+ </Defs>

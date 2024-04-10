@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Outposts Expanded</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/WorldObjectDef[defName="Outpost_Mining"]/modExtensions/li[1]/Resources</xpath>
+			<value>
+				<RR_Gluttonium>25</RR_Gluttonium>
+			</value>
+		</match>
+	</Operation>
+</Patch>

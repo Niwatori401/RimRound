@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Drow Race Continued</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+            <operations>
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+						<match Class="PatchOperationConditional">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+							<match Class="PatchOperationReplace">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/offset</xpath>
+								<value>
+									<offset>(0, 0.02)</offset>
+								</value>
+							</match>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south</xpath>
+								<value>
+									<offset>(0, 0.02)</offset>
+								</value>			
+							</nomatch>		
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+							<value>
+								<south>
+									<offset>(0, 0.02)</offset>
+								</south>
+							</value>			
+						</nomatch>						
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+						<value>
+							<offsets>
+								<south>
+									<offset>(0, 0.02)</offset>
+								</south>						
+							</offsets>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/offset</xpath>
+							<value>
+								<offset>(0, 0.02)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east</xpath>
+							<value>
+								<offset>(0, 0.02)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<east>
+								<offset>(0, 0.02)</offset>
+							</east>
+						</value>			
+					</nomatch>						
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/offset</xpath>
+							<value>
+								<offset>(0, 0.02)</offset>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north</xpath>
+							<value>
+								<offset>(0, 0.02)</offset>
+							</value>			
+						</nomatch>		
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets</xpath>
+						<value>
+							<north>
+								<offset>(0, 0.02)</offset>
+							</north>
+						</value>			
+					</nomatch>						
+				</li>				
+			</operations>
+		</li>
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/south/bodyTypes</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/east/bodyTypes</xpath>
+					</match>
+				</li>
+				<!-- No one needs a west tag! -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/west</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/west</xpath>
+					</match>
+				</li>				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/offsets/north/bodyTypes</xpath>
+					</match>
+				</li>				
+			</operations>
+		</li>
+
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Drow_Otto"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[1]</xpath>
+				<value>
+					<alignWithHead>TRUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<MainButtonDef>
+		<defName>RRGlobalSettings</defName>
+		<label>RimRound</label>
+		<description>Adjust global preferences relating to pawn diet management.</description>
+		<tabWindowClass>RimRound.UI.MainTabWindow_RRGlobalSettings</tabWindowClass>
+		<order>69</order>
+		<validWithoutMap>true</validWithoutMap>
+		<minimized>True</minimized>
+		<iconPath>UI/Buttons/MainButtons/RRGlobalSettingsButton</iconPath>
+    </MainButtonDef>
+</Defs>

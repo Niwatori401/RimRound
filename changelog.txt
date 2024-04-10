@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 78da62df0d42234b39ee068335675efc4260eb44
+Commit Hash: 21785533c089a4ecefca5e713ad0b2ff0243a5d7
+Author: Niwatori401
+Date: Wed Apr 10 04:05:11 2024
+
+Initial working 1.5 build with broken patches disabled
+
+==================================================
+Commit Hash: 85d81c5bd284431d5293d4f4504e35c42e3a626c
 Author: Niwatori401
 Date: Wed Apr 10 08:01:07 2024
 

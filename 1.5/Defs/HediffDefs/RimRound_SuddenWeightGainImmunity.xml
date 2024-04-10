@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef>
+		<defName>RimRound_SuddenWeightGainImmunity</defName>
+		<label>Sudden weight gain immunity</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>immunity to induced weight gain</labelNoun>
+		<description>Developed immunity to stimilated weight gain.</description>
+
+		<hediffClass>RimRound.Hediffs.Hediff_SuddenWeightGainImmunity</hediffClass>
+		<maxSeverity>1.00</maxSeverity>
+		<isBad>false</isBad>
+		
+		<stages>
+			<li>
+				<label>waning immunity</label>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>
+				<label>immune</label>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>	
+		
+	</HediffDef>
+	
+	
+	
+</Defs>

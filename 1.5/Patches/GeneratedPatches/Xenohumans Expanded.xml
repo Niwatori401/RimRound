@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Xenohumans Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+            <operations>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="GlitterWorlderRace"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="GlitterWorlderRace"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="GlitterWorlderRace"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="GlitterWorlderRace"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="HighGravWorlderRace"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="HighGravWorlderRace"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="HighGravWorlderRace"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="HighGravWorlderRace"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="LowGravWorlderRace"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="LowGravWorlderRace"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="LowGravWorlderRace"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="LowGravWorlderRace"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="RadWorlderRace"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="RadWorlderRace"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="RadWorlderRace"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="RadWorlderRace"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="VatgrownHumanRace"]/comps</xpath>
+					<nomatch Class="PatchOperationConditional">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="VatgrownHumanRace"]</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="VatgrownHumanRace"]</xpath>
+							<value>
+								<comps>
+									<li>
+										<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+									</li>				
+									<li>
+										<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+									</li>
+									<li>
+										<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+									</li>					
+									<li>
+										<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+									</li>				
+								</comps>
+							</value>						
+						</match>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="VatgrownHumanRace"]/comps</xpath>
+						<value>
+							<li>
+								<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+							</li>			
+							<li>
+								<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+							</li>				
+							<li>
+								<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+							</li>			
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

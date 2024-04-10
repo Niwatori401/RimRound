@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--Simple Meal Derivatives-->
+	<ThingDef Name="RR_SimpleMealBase" ParentName="MealCooked" Abstract="True">
+		<ingestible>
+		  <preferability>MealSimple</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+	</ThingDef>
+	
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>MealSimpleLarge</defName>
+    <label>large simple meal</label>
+    <description>A large simple meal quickly cooked from one main ingredient.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <WorkToMake>375</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>MealSimpleHuge</defName>
+    <label>huge simple meal</label>
+    <description>A huge simple meal quickly cooked from one main ingredient.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>25</MarketValue>
+      <WorkToMake>525</WorkToMake>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>MealSimpleEnormous</defName>
+    <label>enormous simple meal</label>
+    <description>An enormous simple meal quickly cooked from one main ingredient.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <WorkToMake>750</WorkToMake>
+      <Nutrition>4.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>MealSimpleMassive</defName>
+    <label>massive simple meal</label>
+    <description>An massive simple meal quickly cooked from one main ingredient.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>50</MarketValue>
+      <WorkToMake>1050</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>MealSimpleColossal</defName>
+    <label>colossal simple meal</label>
+    <description>An obscenely large meal painstakingly cooked from one main ingredient.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>100</MarketValue>
+      <WorkToMake>1750</WorkToMake>
+      <Nutrition>15.0</Nutrition>
+    </statBases>
+  </ThingDef> 
+ </Defs>

@@ -362,7 +362,7 @@ namespace RimRound.Utilities
 
             PortraitsCache.SetDirty(pawn);
             GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);
-            pawn?.Drawer?.renderer?.graphics?.ResolveAllGraphics();
+            //pawn?.Drawer?.renderer?.graphics?.ResolveAllGraphics();
         }
 
         public static void UpdatePawnDrawSize(Pawn pawn, bool personallyExempt = false, bool categoricallyExempt = false)

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]/parts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]/parts</xpath>
+			<value>
+				<li Class="RimRound.AI.StatPart_ArmorRating_Blunt"/>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimRound.AI.StatPart_ArmorRating_Blunt"/>
+				</parts>
+			</value>		
+		</nomatch>
+	</Operation>
+</Patch>

@@ -83,7 +83,7 @@ namespace RimRound.Comps
             this.droneLevel += 1;
             //Change these!
             TaggedString text = "LetterPsychicDroneLevelIncreased".Translate(this.gender.GetLabel(false));
-            Find.LetterStack.ReceiveLetter("LetterLabelPsychicDroneLevelIncreased".Translate(), text, LetterDefOf.NegativeEvent, null);
+            Find.LetterStack.ReceiveLetter("LetterLabelPsychicDroneLevelIncreased".Translate(), text, LetterDefOf.NegativeEvent, null, 0, true);
             //****************
             SoundDefOf.PsychicPulseGlobal.PlayOneShotOnCamera(this.parent.Map);
             base.ReSetupAllConditions();

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+    <defName>MineableFlesh</defName>
+    <label>flesh</label>
+    <description>~</description>
+    <graphicData>
+      <texPath>WIP/Skin_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Custom2</li>
+      </linkFlags>
+      <!--color>(68,83,68)</color>
+      <colorTwo>(30,173,25)</colorTwo-->
+    </graphicData>
+    <category>Building</category>
+    <selectable>true</selectable>
+    <drawerType>MapMeshOnly</drawerType>
+
+	
+    <thingClass>Mineable</thingClass>
+
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <neverMultiSelect>true</neverMultiSelect>
+    <rotatable>false</rotatable>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <mineable>false</mineable>
+    <fertility>0</fertility>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+		<MaxHitPoints>1500</MaxHitPoints>
+		<Flammability>0</Flammability>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+      <isNaturalRock>false</isNaturalRock>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>true</deconstructible>
+      <destroyShakeAmount>0</destroyShakeAmount>
+	  <isResourceRock>false</isResourceRock>
+
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>4</multiplier>
+      </li>
+    </damageMultipliers>	
+  </ThingDef>
+    
+</Defs>  

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Human"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Human"]</xpath>
+			<value>
+				<comps>
+					<li>
+						<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+					</li>					
+					<li>
+						<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+					</li>					
+					<li>
+						<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+					</li>				
+					<li>
+						<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+					</li>
+					<li>
+						<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+					</li>					
+					<li>
+						<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+					</li>					
+					<li>
+						<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+					</li>								
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Human"]/comps</xpath>
+			<value>
+				<li>
+					<compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass>
+				</li>				
+				<li>
+					<compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass>
+				</li>				
+				<li>
+					<compClass>RimRound.Comps.Debug_ThingComp</compClass>
+				</li>			
+				<li>
+					<compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass>
+				</li>			
+				<li>
+					<compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass>
+				</li>				
+				<li>
+					<compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass>
+				</li>				
+				<li>
+					<compClass>RimRound.Comps.HideCovers_ThingComp</compClass>
+				</li>							
+			</value>
+		</match>
+	</Operation>
+</Patch>

@@ -30,7 +30,7 @@ namespace RimRound.AI
             {
                 recordsFromBytes = this.RecordsToBytes();
             }
-            DataExposeUtility.ByteArray(ref recordsFromBytes, "records");
+            DataExposeUtility.LookByteArray(ref recordsFromBytes, "records");
             if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
                 this.SetRecordsFromBytes(recordsFromBytes);

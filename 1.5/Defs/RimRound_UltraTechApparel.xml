@@ -1,0 +1,367 @@
+<Defs>
+	<ThingDef Abstract="True" Name="UltraTechClothingBase" ParentName="ApparelBase">
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.4</uiIconScale>	
+		<recipeMaker>
+			<displayPriority>200</displayPriority>
+			<workSkill>Crafting</workSkill>
+		</recipeMaker>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>		
+		<tradeTags>
+			<li>Clothing</li>
+			<li>Armor</li>
+			<li>HiTechArmor</li>
+		</tradeTags>	
+		<generateCommonality>0</generateCommonality>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9,1)</only>
+				</li>
+			</options>
+		</colorGenerator>		
+		<apparel>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>	
+			<tags>
+				<li>IndustrialMilitaryBasic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+
+	<!--recipeUsers Inherit="False">
+		<li>ElectricTailoringBench</li>
+		<li>HandTailoringBench</li>
+		<li>FabricationBench</li>
+		<li>ElectricSmithy</li>
+		<li>FueledSmithy</li>
+	</recipeUsers>
+				<ComponentSpacer>1</ComponentSpacer>
+			<Plasteel>30</Plasteel>
+	
+	
+	-->
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RimRound_NovaTechApparel_Jumpsuit</defName>
+		<label>NovaTech jumpsuit</label>
+		<description>A thick, extremely flexible jumpsuit with built-in nanites that improve the wearer's digestion. It's thought that this suit is the result of a failed experiment to allow soldiers on long skirmishes to eat less, but had the opposite effect.\n\n+20% Weight Gain Multiplier\n+20% Digestion Speed Multiplier\n+15% Movement\n-5% Weight Movement Penalty</description>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<weightGainMultiplierMultBonus>0.2</weightGainMultiplierMultBonus>
+				<digestionSpeedMultBonus>0.2</digestionSpeedMultBonus>
+				<flatMoveBonus>0.15</flatMoveBonus>
+				<movementPenaltyMitigationMultBonus_Weight>0.05</movementPenaltyMitigationMultBonus_Weight>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_JUMPSUIT</texPath>
+		</graphicData>
+		<costList>
+			<Hyperweave>60</Hyperweave>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_MetabolicTextiles</researchPrerequisite>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<Beauty>-2</Beauty>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<WorkToMake>5040</WorkToMake>
+			<Mass>1.1</Mass>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.90</ArmorRating_Heat>		  
+			<Insulation_Cold>7</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+	</ThingDef>	
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RimRound_NovaTechApparel_Belt</defName>
+		<label>NovaTech belt</label>
+		<description>NovaTech's market-grade solution to overeating, this belt stretches with the wearer, massaging their stomach and allowing them to digest food quicker and feel less pain from fullness.\n\n+50% Digestion Speed Multiplier\n+100% Stomach Elasticity Multiplier\n-10% Fullness Movement Penalty\n-10% Pain from Fullness\n-10% Fullness Eating Speed Penalty</description>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<digestionSpeedMultBonus>0.5</digestionSpeedMultBonus>
+				<stomachElasticityMultBonus>1</stomachElasticityMultBonus>
+				<movementPenaltyMitigationMultBonus_Fullness>0.1</movementPenaltyMitigationMultBonus_Fullness>
+				<painMitigationMultBonus_Fullness>0.1</painMitigationMultBonus_Fullness>
+				<eatingSpeedReductionMitigationMultBonus_Fullness>0.1</eatingSpeedReductionMitigationMultBonus_Fullness>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_BELT</texPath>
+		</graphicData>
+		<costList>
+			<Hyperweave>30</Hyperweave>
+			<Steel>20</Steel>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_MetabolicTextiles</researchPrerequisite>		
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<Beauty>1</Beauty>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<WorkToMake>4560</WorkToMake>
+			<Mass>2</Mass>
+			<EquipDelay>2</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>	
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+	</ThingDef>	
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RimRound_NovaTechApparel_ProtoSuit</defName>
+		<label>NovaTech proto-suit</label>
+		<description>Novatech Industries' failed attempt to create a protective layer of clothing that removed the need for soldiers to eat completely could not have been more of a failure. While it is certainly protective, the nanites have stack overflowed their directive, causing the wearer's metabolism to skyrocket beyond comprehensible levels.\n\n+100% Weight Gain Multiplier\n+200% Digestion Speed Multiplier\n+30% Movement\n+15% Manipulation\n-15% Weight Movement Penalty\n-15% Weight Manipulation Penalty</description>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<weightGainMultiplierMultBonus>1</weightGainMultiplierMultBonus>
+				<digestionSpeedMultBonus>2</digestionSpeedMultBonus>
+				<flatMoveBonus>0.30</flatMoveBonus>
+				<flatManipulationBonus>0.15</flatManipulationBonus>
+				<movementPenaltyMitigationMultBonus_Weight>0.15</movementPenaltyMitigationMultBonus_Weight>
+				<manipulationPenaltyMitigationMultBonus_Weight>0.15</manipulationPenaltyMitigationMultBonus_Weight>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_PROTOSUIT</texPath>
+		</graphicData>
+		<costList>
+			<Hyperweave>75</Hyperweave>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Gold>10</Gold>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_UltraTechMetabolicTextiles</researchPrerequisite>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<Beauty>1</Beauty>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<WorkToMake>10020</WorkToMake>
+			<Mass>1.5</Mass>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.46</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.30</ArmorRating_Heat>		  
+			<Insulation_Cold>11</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>4.5</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RimRound_NovaTechApparel_Gloves</defName>
+		<label>NovaTech gloves</label>
+		<description>A prototype of nanite-assisted gloves that were designed to allow soldiers to perform tasks without the use of their hands. Naturally, they are very popular in underground markets for completely different reasons.\n\n+15% Movement\n+15% Manipulation\n+25% Eating\n-10% Weight Manipulation Penalty</description>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<flatMoveBonus>0.15</flatMoveBonus>
+				<flatManipulationBonus>0.15</flatManipulationBonus>
+				<flatEatingSpeedBonus>0.25</flatEatingSpeedBonus>		
+				<manipulationPenaltyMitigationMultBonus_Weight>0.1</manipulationPenaltyMitigationMultBonus_Weight>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_GLOVES</texPath>
+		</graphicData>
+		<costList>
+			<Hyperweave>25</Hyperweave>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_UltraTechMetabolicTextiles</researchPrerequisite>		
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<WorkToMake>2640</WorkToMake>
+			<Mass>1.3</Mass>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.90</ArmorRating_Heat>		  
+			<Insulation_Cold>6</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+	</ThingDef>	
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RimRound_NovaTechApparel_Collar</defName>
+		<label>NovaTech collar</label>
+		<description>A curious looking choker that massages and expands with the wearer's neck, allowing them to easily swallow larger portions of food.\n\n+50% Digestion Speed Multiplier\n+20% Fullness gained on ingest\n+25% Eating\n-5% Weight Manipulation Penalty\n-10% Fullness Eating Speed Penalty</description>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<digestionSpeedMultBonus>0.5</digestionSpeedMultBonus>
+				<fullnessGainedMultiplierBonus>0.2</fullnessGainedMultiplierBonus>
+				<flatEatingSpeedBonus>0.25</flatEatingSpeedBonus>		
+				<manipulationPenaltyMitigationMultBonus_Weight>0.05</manipulationPenaltyMitigationMultBonus_Weight>
+				<eatingSpeedReductionMitigationMultBonus_Fullness>0.10</eatingSpeedReductionMitigationMultBonus_Fullness>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_COLLAR</texPath>
+		</graphicData>
+		<costList>
+			<Hyperweave>20</Hyperweave>
+			<Gold>7</Gold>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_UltraTechMetabolicTextiles</researchPrerequisite>		
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<Beauty>1</Beauty>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<WorkToMake>2400</WorkToMake>
+			<Mass>0.1</Mass>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.90</ArmorRating_Heat>		  
+			<Insulation_Cold>1</Insulation_Cold>
+			<Insulation_Heat>0.6</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+	</ThingDef>	
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RimRound_NovaTechApparel_Hyperbelt</defName>
+		<label>NovaTech hyperbelt</label>
+		<description>NovaTech's crowning achievement and last project before they mysteriously became reclusive, this high-tech belt stretches with the wearer, massaging their stomach and allowing them to digest food, feel less pain from fullness, and move more effectively at higher weights.\n\n+50% Weight Gain Multiplier\n+100% Digestion Speed Multiplier\n+100% Stomach Elasticity Multiplier\n-5% Weight Movement Penalty\n-5%Weight Manipulation Penalty\n-20% Fullness Movement Penalty\n-20% Pain from Fullness\n-20% Fullness Eating Speed Penalty</description>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<weightGainMultiplierMultBonus>0.5</weightGainMultiplierMultBonus>
+				<digestionSpeedMultBonus>1</digestionSpeedMultBonus>
+				<stomachElasticityMultBonus>1</stomachElasticityMultBonus>
+				<!--Double check these two are supposed to be from weight penalty-->
+				<movementPenaltyMitigationMultBonus_Weight>0.05</movementPenaltyMitigationMultBonus_Weight>
+				<manipulationPenaltyMitigationMultBonus_Weight>0.05</manipulationPenaltyMitigationMultBonus_Weight>
+				<!---->
+				<movementPenaltyMitigationMultBonus_Fullness>0.2</movementPenaltyMitigationMultBonus_Fullness>
+				<painMitigationMultBonus_Fullness>0.2</painMitigationMultBonus_Fullness>
+				<eatingSpeedReductionMitigationMultBonus_Fullness>0.2</eatingSpeedReductionMitigationMultBonus_Fullness>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_HYPERBELT</texPath>
+		</graphicData>
+		<costList>
+			<Hyperweave>60</Hyperweave>
+			<Steel>30</Steel>
+			<Plasteel>20</Plasteel>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_UltraTechMetabolicTextiles</researchPrerequisite>				
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<Beauty>1</Beauty>
+			<MaxHitPoints>140</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<WorkToMake>8640</WorkToMake>
+			<Mass>2.6</Mass>
+			<EquipDelay>2</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>	
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+	</ThingDef>	
+
+</Defs>

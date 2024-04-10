@@ -429,7 +429,7 @@ namespace RimRound.Comps
 
         public void RuptureStomach()
         {
-            BodyPartRecord pawnStomach = ((Pawn)parent).RaceProps.body.GetPartsWithDef(BodyPartDefOf.Stomach).First();
+            BodyPartRecord pawnStomach = ((Pawn)parent).RaceProps.body.GetPartsWithDef(DefDatabase<BodyPartDef>.GetNamed("Stomach", true)).First();
             float currentStomachHealth = ((Pawn)parent).health.hediffSet.GetPartHealth(pawnStomach);
             float afterRuptureStomachHealth = 2;
 

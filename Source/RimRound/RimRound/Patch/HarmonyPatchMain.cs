@@ -45,15 +45,15 @@ namespace RimRound.Patch
 				new ModPatchInfo("Camera+", "CameraPlus.Tools", "ShouldShowDot", MethodType.Normal), 
 				CameraPlus_Tools_ShouldShowDot_DontShowDotForGelatinous.GetPatchCollection());
 			
-			ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Statue of Colonist", "StatueOfColonistRenderer", "Render", MethodType.Normal),
-				StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.GetPatchCollection());
+			//ModCompatibilityUtility.TryPatch(
+			//	harmony,
+			//	new ModPatchInfo("Statue of Colonist", "StatueOfColonistRenderer", "Render", MethodType.Normal),
+			//	StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.GetPatchCollection());
 
-            ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Statue of Colonist", "StatueOfColonistGraphicSet", "TryGetGraphicApparel", MethodType.Normal),
-				StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies.GetPatchCollection());
+    //        ModCompatibilityUtility.TryPatch(
+				//harmony,
+				//new ModPatchInfo("Statue of Colonist", "StatueOfColonistGraphicSet", "TryGetGraphicApparel", MethodType.Normal),
+				//StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies.GetPatchCollection());
 
 
             int patchedMethodsCount = 0;
