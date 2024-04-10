@@ -22,7 +22,6 @@ namespace RimRound.Utilities
             
             foreach (String line in raceEntries)
             {
-                Log.Warning(line);
                 string[] lineData = line.Split(',');
                 
                 var dictionaryPresetForRace = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(typeof(RacialBodyTypeInfoUtility).GetField(lineData[1], System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null) as Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>);

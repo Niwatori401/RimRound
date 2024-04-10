@@ -1,5 +1,15 @@
 ==================================================
-Commit Hash: 21785533c089a4ecefca5e713ad0b2ff0243a5d7
+Commit Hash: 547f34bc22195437de89225d97ebb6d02e264eb1
+Author: Niwatori401
+Date: Wed Apr 10 04:41:47 2024
+
+Update Gluttonium to use new sound def fields
+Add mod incompatibilities and mod link to About.xml
+Re-enable clothes replacement patch
+Remove unnecessary log spam
+
+==================================================
+Commit Hash: c85618d146e44cdf944c9964490ebe6ade71ec72
 Author: Niwatori401
 Date: Wed Apr 10 04:05:11 2024
 

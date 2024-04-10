@@ -10,7 +10,7 @@
 		<li>1.5</li>
 	</supportedVersions>
 	<description>RimRound is a weight gain mod for RimWorld.</description>
-		
+	<url>https://github.com/Niwatori401/RimRound/tree/main</url>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -43,5 +43,8 @@
 		<li>neronix17.fr.compilation</li>		
 		<li>AveryTheKitty.XenohumansAnthromorphs</li>		
 	</loadAfter>
-
+	<incompatibleWith>
+		<li>Ogliss.AdMech.Armoury</li>
+		<li>RimOfMadness.Vampires</li>
+	</incompatibleWith>
 </ModMetaData>
