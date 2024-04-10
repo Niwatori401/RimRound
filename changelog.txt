@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 34b2a6611a592da00077261f60012834a579e7d2
+Commit Hash: b16a108b694ac458526ab81e0783c737b30fbae9
+Author: Niwatori401
+Date: Wed Apr 10 07:24:00 2024
+
+Restore tattoo hiding for custom body patch
+
+==================================================
+Commit Hash: 27e6f0f2173d8ba655994b29ceed198ccc20200d
 Author: Niwatori401
 Date: Wed Apr 10 07:10:45 2024
 
