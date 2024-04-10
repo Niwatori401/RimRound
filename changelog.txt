@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 547f34bc22195437de89225d97ebb6d02e264eb1
+Commit Hash: 6b4fe61b1e0681a9e6abf64b156a04522ecc5738
+Author: Niwatori401
+Date: Wed Apr 10 04:51:10 2024
+
+Re-enable corpse clothing cache invlidation patch
+Fix pawn redraw function
+
+==================================================
+Commit Hash: 2aa8f11ef274ff176fe877df31e79027ae6e95d6
 Author: Niwatori401
 Date: Wed Apr 10 04:41:47 2024
 
