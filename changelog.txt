@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: b16a108b694ac458526ab81e0783c737b30fbae9
+Commit Hash: 6c5509b1f13c023a8f6d77e62277db99f146c51e
+Author: Niwatori401
+Date: Thu Apr 11 04:02:26 2024
+
+Re-enable blanket hiding mechanic
+Re-enable hoverchair hiding patch
+
+==================================================
+Commit Hash: fbc06047624a34fa39bf3c71c8893b5bdac0349b
 Author: Niwatori401
 Date: Wed Apr 10 07:24:00 2024
 

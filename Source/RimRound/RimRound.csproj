@@ -181,6 +181,7 @@
     <Compile Include="RimRound\AI\HistoryAutoRecorderWeight.cs" />
     <Compile Include="RimRound\AI\HistoryAutoRecorderWorker_PawnWeight.cs" />
     <Compile Include="RimRound\Patch\HumanoidAlienRacesPatches\AlienRenderTreePatches_BodyGraphicForPrefix_ChangeSpritePath.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\PawnRenderNodeWorker-Body_CanDrawNow_AdjustForShowBlanketSetting.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_DrawGraph_CallChildMethod.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_ExposeData_CallChildMethods.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HistoryAutoRecorderGroup\HistoryAutoRecorderGroup_GetMaxDay_CallChildMethod.cs" />
@@ -214,7 +215,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelAdded_AddSupportForRRClothing.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_ShellFullyCoversHead_AlterShellClothingForRRBodies.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Perks\GenTemperature_PushHeat_AdjustForPerks.cs" />
-    <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\PawnGraphicSet_ResolveApparelGraphics_DontIncludeHoverChairIfLayingDown.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\PawnRenderTree_ProcessApparel_DontIncludeHoverChairIfLayingDown.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HediffSet_GetRestFallFactor_AlterAccordingToSettings.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Perks\Hediff_CapMods_DisableCapModsForRRHediffsOptionally.cs" />

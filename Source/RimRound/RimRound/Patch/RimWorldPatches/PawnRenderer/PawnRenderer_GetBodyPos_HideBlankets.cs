@@ -24,7 +24,7 @@ namespace RimRound.Patch
             pawnIdToComp.Clear();
         }
 
-        public static void Postfix(PawnRenderer __instance, ref bool __1, Pawn ___pawn) 
+        public static void Postfix(PawnRenderer __instance, ref bool __2, Pawn ___pawn) 
         {
             Pawn pawn = ___pawn;
 
@@ -47,10 +47,10 @@ namespace RimRound.Patch
             {
                 if (bed.IsBlobBed())
                 {
-                    __1 = true;
+                    __2 = true;
                     return;
                 }
-                __1 = comp.HideCovers;
+                __2 = comp.HideCovers;
             }
         }
     }
