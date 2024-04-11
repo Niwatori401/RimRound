@@ -11,7 +11,7 @@ namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(PawnRenderTree))]
     [HarmonyPatch("ProcessApparel")]
-    internal class PawnRenderTree_ProcessApparel_DontIncludeHoverChairIfLayingDown
+    public class PawnRenderTree_ProcessApparel_DontIncludeHoverChairIfLayingDown
     {
         public static bool Prefix(PawnRenderTree __instance, Apparel ap, PawnRenderNode headApparelNode, PawnRenderNode bodyApparelNode)
         {

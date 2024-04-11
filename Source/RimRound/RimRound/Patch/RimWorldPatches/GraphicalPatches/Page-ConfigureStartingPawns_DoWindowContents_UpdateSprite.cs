@@ -11,33 +11,33 @@ using Verse;
 
 namespace RimRound.Patch
 {
-    //[HarmonyPatch(typeof(Page_ConfigureStartingPawns))]
-    //[HarmonyPatch(nameof(Page_ConfigureStartingPawns.DoWindowContents))]
-    //public class Page_ConfigureStartingPawns_DoWindowContents_UpdateSprite
-    //{
-    //    public static void Postfix(Pawn ___curPawn) 
-    //    {
-    //        AssignBodyTypeCategoricalExemptionsForStarterPage();
-           
-    //    }
+    [HarmonyPatch(typeof(Page_ConfigureStartingPawns))]
+    [HarmonyPatch(nameof(Page_ConfigureStartingPawns.DoWindowContents))]
+    public class Page_ConfigureStartingPawns_DoWindowContents_UpdateSprite
+    {
+        public static void Postfix()
+        {
+            AssignBodyTypeCategoricalExemptionsForStarterPage();
 
-    //    static void AssignBodyTypeCategoricalExemptionsForStarterPage() 
-    //    {
-    //        foreach (Pawn p in Find.GameInitData.startingAndOptionalPawns)
-    //        {
-    //            if (p is null || (!p?.RaceProps.Humanlike ?? false))
-    //                continue;
+        }
 
-    //            PawnBodyType_ThingComp comp = p.TryGetComp<PawnBodyType_ThingComp>();
+        static void AssignBodyTypeCategoricalExemptionsForStarterPage()
+        {
+            foreach (Pawn p in Find.GameInitData.startingAndOptionalPawns)
+            {
+                if (p is null || (!p?.RaceProps.Humanlike ?? false))
+                    continue;
 
-    //            if (comp is null)
-    //                continue;
+                PawnBodyType_ThingComp comp = p.TryGetComp<PawnBodyType_ThingComp>();
 
-    //            comp.CategoricallyExempt = BodyTypeUtility.CheckExemptions(p);
+                if (comp is null)
+                    continue;
 
-    //            BodyTypeUtility.UpdatePawnSprite(p, false, false);
-    //        }
-    //    }
+                comp.CategoricallyExempt = BodyTypeUtility.CheckExemptions(p);
 
-    //}
+                BodyTypeUtility.UpdatePawnSprite(p, false, false);
+            }
+        }
+
+    }
 }

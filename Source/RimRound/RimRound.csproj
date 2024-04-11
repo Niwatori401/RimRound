@@ -55,7 +55,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="AlienRace">
-      <HintPath>..\..\..\..\DevDependencies\HAR_Unstable\1.5\Assemblies\AlienRace.dll</HintPath>
+      <HintPath>..\..\..\..\DevDependencies\839005762_HAR_15\1.5\Assemblies\AlienRace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
@@ -201,7 +201,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\InteractionUtility_CanReceiveRandomInteraction_AllowImmobilePawnsToRecieveInteractions.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Page-ConfigureStartingPawns_PostOpen_WarnForCertainMods.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-MechanitorTracker_CanControlMechs_AllowMechControlForDownedPawnsInBed.cs" />
-    <Compile Include="RimRound\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_DrawBodyApparel_AlterShellClothingIfNoRRSprite.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\DisabledPatches\PawnRenderer_DrawBodyApparel_AlterShellClothingIfNoRRSprite.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_RenderAsPack_DontRenderAsPackForCustomBodies.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\BodyPartDef_GetMaxHealth_AdjustMaxHPByWeight.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Clothing\PawnCapacityWorker-Eating_CalculateCapacityLevel_AlterForClothingBonuses.cs" />
@@ -213,7 +213,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\GasPatches\Pawn_Tick_AddSupportForGas.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelRemoved_AddSupportForRRClothing.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Pawn-ApparelTracker_Notify-ApparelAdded_AddSupportForRRClothing.cs" />
-    <Compile Include="RimRound\Patch\RimWorldPatches\PawnRenderer\PawnRenderer_ShellFullyCoversHead_AlterShellClothingForRRBodies.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\DisabledPatches\PawnRenderer_ShellFullyCoversHead_AlterShellClothingForRRBodies.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Perks\GenTemperature_PushHeat_AdjustForPerks.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\GraphicalPatches\PawnRenderTree_ProcessApparel_DontIncludeHoverChairIfLayingDown.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\HediffSet_GetHungerRateFactor_AlterAccordingToSettings.cs" />
@@ -221,7 +221,7 @@
     <Compile Include="RimRound\Patch\RimWorldPatches\Perks\Hediff_CapMods_DisableCapModsForRRHediffsOptionally.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\Perks\MassUtility_Capacity_AlterForPerks.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\HealthCardUtility_DrawHediffRow_AddProgressBarToNextWeightStage.cs" />
-    <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\ITab-Pawn-Visitor_FillTab_AddLabelsForGainingReluctance.cs" />
+    <Compile Include="RimRound\Patch\RimWorldPatches\MenuPatches\ITab-Pawn-Visitor_DoPrisonerTab_AddLabelsForGainingReluctance.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\JobDriver-PlantWork_MakeNewToils_AddExtraPlantYields.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\DietAIPatches\Need-Food_FoodFallPerTickAssumingCategory_ReduceForHeavyPawnsAndAdjustForPerks.cs" />
     <Compile Include="RimRound\Patch\RimWorldPatches\PawnCapacitiesHandler_CapableOf_MakeMovementCapableOfSettingsDependent.cs" />

@@ -1,5 +1,15 @@
 ==================================================
-Commit Hash: 6c5509b1f13c023a8f6d77e62277db99f146c51e
+Commit Hash: 6f9bfaa47963e31cb7d1d33be2531399222a2d7d
+Author: Niwatori401
+Date: Thu Apr 11 21:29:34 2024
+
+Re-enable patch to display prisoner gaining resistance
+Re-enable hoverchair rendering patch
+Re-enable start screen patch
+Disable two patches regarding shell clothing
+
+==================================================
+Commit Hash: 4968e525c6cd3937c0e99fecca9d83164da57f2f
 Author: Niwatori401
 Date: Thu Apr 11 04:02:26 2024
 
