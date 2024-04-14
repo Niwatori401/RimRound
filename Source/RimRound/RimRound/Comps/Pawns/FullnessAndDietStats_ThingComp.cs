@@ -21,13 +21,20 @@ namespace RimRound.Comps
 {
     public class FullnessAndDietStats_ThingComp : ThingComp
     {
+        private bool disabled = false;
+
         public FullnessAndDietStats_ThingComp()
         {
+            if (this.parent.AsPawn()?.needs?.food == null) { 
+                disabled = true;
+            }
         }
 
         public override void PostExposeData()
         {
             base.PostExposeData();
+
+            if (disabled) { return; }
 
             if (Scribe.mode == LoadSaveMode.Saving)
             {
@@ -111,6 +118,8 @@ namespace RimRound.Comps
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
+            if (disabled) { yield break; }
+
             if (GlobalSettings.showPawnDietManagementGizmo && ShouldShowWeightGizmo())
                 yield return this.weightGizmo;
 
@@ -143,6 +152,9 @@ namespace RimRound.Comps
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
+
+            if (disabled) { return; }
+
             if (((Pawn)parent)?.RaceProps.Humanlike ?? false)
             {
                 if (Utilities.HediffUtility.GetHediffOfDefFrom(Defs.HediffDefOf.RimRound_Weight, parent.AsPawn()) is null)
@@ -167,6 +179,9 @@ namespace RimRound.Comps
         public override void CompTick()
         {
             base.CompTick();
+
+            if (disabled) { return; }
+
             if (!parent.Spawned && !parent.AsPawn().IsCaravanMember())
                 return;
 

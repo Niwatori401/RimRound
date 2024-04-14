@@ -184,7 +184,7 @@ namespace RimRound.Utilities
         {
             if (p?.Faction is null)
             {
-                Log.Error($"Pawn or faction was null in weight percentile assignment!");
+                Log.Warning($"Pawn or faction was null in weight percentile assignment!");
                 return playerFactionWeightDistribution;
             }
 

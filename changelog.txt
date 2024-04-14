@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 6f9bfaa47963e31cb7d1d33be2531399222a2d7d
+Commit Hash: bf90cb160d89b0f21a02f23b076100ffb166bfd1
+Author: Niwatori401
+Date: Sun Apr 14 01:30:33 2024
+
+Fix bug causing shamblers to throw errors
+
+==================================================
+Commit Hash: 834140f5995157b51476617e8e82159930883595
 Author: Niwatori401
 Date: Thu Apr 11 21:29:34 2024
 
