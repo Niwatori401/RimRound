@@ -21,20 +21,25 @@ namespace RimRound.Comps
 {
     public class FullnessAndDietStats_ThingComp : ThingComp
     {
-        private bool disabled = false;
+        private bool? disabled = null;
+
+        public bool Disabled {
+            get { 
+                if (disabled == null) {
+                    disabled = this.parent.AsPawn()?.needs?.food == null;
+                }
+                return disabled.GetValueOrDefault();
+            }
+        }
 
         public FullnessAndDietStats_ThingComp()
         {
-            if (this.parent.AsPawn()?.needs?.food == null) { 
-                disabled = true;
-            }
+            
         }
 
         public override void PostExposeData()
         {
             base.PostExposeData();
-
-            if (disabled) { return; }
 
             if (Scribe.mode == LoadSaveMode.Saving)
             {
@@ -70,7 +75,7 @@ namespace RimRound.Comps
 
         private void InitBarsIfNull()
         {
-            if (this.parent.AsPawn().Dead)
+            if (this.parent.AsPawn().Dead || this.parent.AsPawn().needs?.food == null)
                 return;
 
             if (nutritionbar == null)
@@ -118,7 +123,7 @@ namespace RimRound.Comps
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (disabled) { yield break; }
+            if (Disabled) { yield break; }
 
             if (GlobalSettings.showPawnDietManagementGizmo && ShouldShowWeightGizmo())
                 yield return this.weightGizmo;
@@ -153,7 +158,7 @@ namespace RimRound.Comps
         {
             base.PostSpawnSetup(respawningAfterLoad);
 
-            if (disabled) { return; }
+            if (Disabled) { return; }
 
             if (((Pawn)parent)?.RaceProps.Humanlike ?? false)
             {
@@ -180,7 +185,7 @@ namespace RimRound.Comps
         {
             base.CompTick();
 
-            if (disabled) { return; }
+            if (Disabled) { return; }
 
             if (!parent.Spawned && !parent.AsPawn().IsCaravanMember())
                 return;
