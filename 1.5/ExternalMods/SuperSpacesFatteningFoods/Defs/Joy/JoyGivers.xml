@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JoyGiverDef>
+		<defName>EatFatteningFood</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>1.5</baseChance>
+		<thingDefs>
+			<li>Donut</li>
+			<li>FatBurger</li>
+			<li>cakeFat</li>
+		</thingDefs>
+		<joyKind>Gluttonous</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+</Defs>

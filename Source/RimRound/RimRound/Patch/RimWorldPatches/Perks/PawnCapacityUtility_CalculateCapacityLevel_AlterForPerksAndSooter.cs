@@ -34,7 +34,7 @@ namespace RimRound.Patch
 
         private static void AlterEatingForPerks(ref float result, HediffSet diffSet, PawnCapacityDef capacity, List<PawnCapacityUtility.CapacityImpactor> impactors)
         {
-            if (capacity is null || capacity != PawnCapacityDefOf.Eating)
+            if (capacity is null || capacity != RimRound.Defs.PawnCapacityDefOf.Eating)
                 return;
 
             Pawn pawn = diffSet?.pawn;

@@ -107,9 +107,9 @@ namespace RimRound.FeedingTube
             }
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            base.Draw();
+            base.DrawAt(drawLoc, flip);
             if (forcedTarget != LocalTargetInfo.Invalid)
             {
                 DrawFeedingTubeFromDeviceToPawn();

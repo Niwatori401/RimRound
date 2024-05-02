@@ -18,7 +18,8 @@
 		<li>/</li>
 		<li>1.4</li>
 		<li>1.4/ExternalMods/Hoverchair</li>		
-		<li>1.4/ExternalMods/SuperSpacesFatteningFoods</li>				
+		<li>1.4/ExternalMods/SuperSpacesFatteningFoods</li>		
+		<li>1.4/ExternalMods/RimRoundExtraWeapons</li>
 		<!--li>ExternalMods/RRX_Mealtime</li-->
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/IdeologyDefs</li>
 		<li IfModActive="ArmoredAmpharos.Dogbolds">1.4/ExternalMods/DogboldRaceSupport</li>	
@@ -29,5 +30,24 @@
 		<li IfModActive="Monti.HalfDragons">1.4/ExternalMods/HalfDragonRaceSupport</li>
 		<li IfModActive="TrahsPanda.Lucario">1.4/ExternalMods/LucarioRaceSupport</li>
 		<li IfModActive="Barsimmon.OriginalByVagabond.FantasyGoblins">1.4/ExternalMods/GoblinRaceSupport</li>
+		<li IfModActive="zal.ursine">1.4/ExternalMods/UrsineOfTheRimSupport</li>
 	</v1.4>	
+	<v1.5>
+		<li>/</li>
+		<li>1.5</li>
+		<li>1.5/ExternalMods/Hoverchair</li>		
+		<li>1.5/ExternalMods/SuperSpacesFatteningFoods</li>		
+		<li>1.5/ExternalMods/RimRoundExtraWeapons</li>
+		<!--li>ExternalMods/RRX_Mealtime</li-->
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/IdeologyDefs</li>
+		<li IfModActive="ArmoredAmpharos.Dogbolds">1.5/ExternalMods/DogboldRaceSupport</li>	
+		<li IfModActive="ArmoredAmpharos.Foxbolds">1.5/ExternalMods/FoxboldRaceSupport</li>	
+		<li IfModActive="Hauvega.EquiumsSeries.Equiums">1.5/ExternalMods/HorseRaceSupport</li>		
+		<li IfModActive="AveryTheKitty.XenohumansAnthromorphs">1.5/ExternalMods/XenohumanlikeRaceSupport</li>
+		<li IfModActive="Eaveslabet.SylveonRace">1.5/ExternalMods/SylveonRaceSupport</li>
+		<li IfModActive="Monti.HalfDragons">1.5/ExternalMods/HalfDragonRaceSupport</li>
+		<li IfModActive="TrahsPanda.Lucario">1.5/ExternalMods/LucarioRaceSupport</li>
+		<li IfModActive="Barsimmon.OriginalByVagabond.FantasyGoblins">1.5/ExternalMods/GoblinRaceSupport</li>
+		<li IfModActive="zal.ursine">1.5/ExternalMods/UrsineOfTheRimSupport</li>
+	</v1.5>	
 </loadFolders>

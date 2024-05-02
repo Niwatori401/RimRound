@@ -1,0 +1,27 @@
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="DEF_NAME"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="DEF_NAME"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>VALUE_REPLACE</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="DEF_NAME"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>VALUE_REPLACE</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>

@@ -40,6 +40,7 @@ namespace RimRound.Comps
             }
             set
             {
+                BodyTypeUtility.RedrawPawn(parent.AsPawn());
                 hideCovers = value;
             }
         }

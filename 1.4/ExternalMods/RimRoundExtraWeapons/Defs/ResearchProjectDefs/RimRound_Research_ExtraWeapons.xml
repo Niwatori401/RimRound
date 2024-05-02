@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>RREW_Research_ExperimentalShells</defName>
+		<label>experimental explosives</label>
+		<tab>RimRoundTech</tab>
+		<description>Learn to safely cram the same tech behind the high-yield mutagenic grenades into a long-range shell.</description>
+		<baseCost>600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RR_Research_ExperimentalGrenades</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

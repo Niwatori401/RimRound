@@ -15,13 +15,13 @@ namespace RimRound.Patch
     [HarmonyPatch(nameof(Page_ConfigureStartingPawns.DoWindowContents))]
     public class Page_ConfigureStartingPawns_DoWindowContents_UpdateSprite
     {
-        public static void Postfix(Pawn ___curPawn) 
+        public static void Postfix()
         {
             AssignBodyTypeCategoricalExemptionsForStarterPage();
-           
+
         }
 
-        static void AssignBodyTypeCategoricalExemptionsForStarterPage() 
+        static void AssignBodyTypeCategoricalExemptionsForStarterPage()
         {
             foreach (Pawn p in Find.GameInitData.startingAndOptionalPawns)
             {

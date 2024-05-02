@@ -14,20 +14,20 @@ namespace RimRound.Patch
     [HarmonyPatch(nameof(Toils_LayDown.LayDown))]
     internal class Toils_LayDown_LayDown_AddRefreshToClothingWhenLayDownToil
     {
-        public static void Postfix(ref Toil __result) 
+        public static void Postfix(ref Toil __result)
         {
             Action vanillaAction = __result.initAction;
 
             Toil toil = __result;
-            Action newAction = () => 
+            Action newAction = () =>
             {
-                if (toil?.actor?.Drawer?.renderer?.graphics == null)
+                if (toil?.actor?.Drawer?.renderer?.renderTree == null)
                     return;
 
                 if (!MobilityChairUtility.IsWearingAMobilityScooter(toil.actor))
                     return;
 
-                toil.actor.Drawer.renderer.graphics.ResolveAllGraphics(); 
+                toil.actor.Drawer.renderer.renderTree.SetDirty();
             };
 
             __result.initAction = new Action(() => { vanillaAction(); newAction(); });

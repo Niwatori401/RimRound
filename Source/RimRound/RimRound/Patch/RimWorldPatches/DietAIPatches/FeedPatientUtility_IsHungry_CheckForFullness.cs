@@ -16,7 +16,7 @@ namespace RimRound.Patch
     {
 		public static void Postfix(Pawn __0, ref bool __result)
 		{
-			if (__0.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp)
+			if (__0.TryGetComp<FullnessAndDietStats_ThingComp>() is FullnessAndDietStats_ThingComp fullnessComp && __0.needs?.food != null)
 			{
 				switch (fullnessComp.DietMode)
 				{

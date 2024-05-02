@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+            <operations>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SimpleBake"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleBake"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleBake"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_FineBake"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineBake"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineBake"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_LavishBake"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishBake"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishBake"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_GourmetBake"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetBake"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetBake"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedMeat"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedMeat"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.67</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedMeat"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.67</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedProduce"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedProduce"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedProduce"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedFruit"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFruit"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFruit"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedAP"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedAP"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedAP"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedFish"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFish"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFish"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_Cheese"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_Cheese"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_Cheese"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_AgaveNectar"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_AgaveNectar"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_AgaveNectar"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_Mayo"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_Mayo"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.17</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_Mayo"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.17</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_InsectJellyPreserves"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_InsectJellyPreserves"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.7</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_InsectJellyPreserves"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.7</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_ChocolateSyrup"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_ChocolateSyrup"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.3</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_ChocolateSyrup"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.3</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_DeepFriedBigMeat"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedBigMeat"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedBigMeat"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_DeepFriedVegetables"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedVegetables"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedVegetables"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_DeepFriedFish"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedFish"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedFish"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.5</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SimpleDessert"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleDessert"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.57</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleDessert"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.57</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_FineDessert"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineDessert"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.44</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineDessert"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.44</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_LavishDessert"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishDessert"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.4</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishDessert"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.4</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_GourmetDessert"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetDessert"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>0.33</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetDessert"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>0.33</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_MealGourmet"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_MealGourmet"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_MealGourmet"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SimpleGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedSimpleGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedSimpleGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedSimpleGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_FineGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedFineGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedFineGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedFineGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_LavishGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedLavishGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedLavishGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedLavishGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_GourmetGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedGourmetGrill"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedGourmetGrill"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedGourmetGrill"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupSimple"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupSimple"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupSimple"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupFine"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupFine"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupFine"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupLavish"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupLavish"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupLavish"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupGourmet"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupGourmet"]</xpath>
+						<value>
+							<comps>
+								<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+									<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+									<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+								</li>							
+							</comps>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupGourmet"]/comps</xpath>
+						<value>
+							<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+								<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+								<fullnessToNutritionRatio>1.25</fullnessToNutritionRatio>
+							</li>		
+						</value>
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SimpleBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleBake"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_FineBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineBake"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_FineBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_LavishBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishBake"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_GourmetBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetBake"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetBake"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedMeat"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedMeat"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedMeat"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedProduce"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedProduce"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedProduce"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedFruit"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFruit"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFruit"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedAP"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedAP"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedAP"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CannedFish"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFish"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CannedFish"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_Cheese"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_Cheese"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_Cheese"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_AgaveNectar"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_AgaveNectar"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_AgaveNectar"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_Mayo"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_Mayo"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_Mayo"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_InsectJellyPreserves"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_InsectJellyPreserves"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_InsectJellyPreserves"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_ChocolateSyrup"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_ChocolateSyrup"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_ChocolateSyrup"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_DeepFriedBigMeat"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedBigMeat"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedBigMeat"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_DeepFriedVegetables"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedVegetables"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedVegetables"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_DeepFriedFish"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedFish"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_DeepFriedFish"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SimpleDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleDessert"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_FineDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineDessert"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_FineDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_LavishDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishDessert"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_GourmetDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetDessert"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetDessert"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_MealGourmet"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_MealGourmet"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_MealGourmet"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_SimpleGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_SimpleGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedSimpleGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedSimpleGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedSimpleGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_FineGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_FineGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_FineGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedFineGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedFineGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedFineGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_LavishGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_LavishGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedLavishGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedLavishGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedLavishGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_GourmetGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_GourmetGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_RuinedGourmetGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedGourmetGrill"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_RuinedGourmetGrill"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupSimple"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupSimple"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupSimple"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupFine"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupFine"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupFine"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupLavish"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupLavish"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupLavish"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+		  <li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VCE_CookedSoupGourmet"]/ingestible/maxNumToIngestAtOnce</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupGourmet"]/ingestible</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VCE_CookedSoupGourmet"]/ingestible/maxNumToIngestAtOnce</xpath>
+						<value>
+							<maxNumToIngestAtOnce>999</maxNumToIngestAtOnce>
+						</value>	
+					</match>
+				</li>
+			</operations>
+		  </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

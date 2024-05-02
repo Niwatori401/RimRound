@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableShellBase">
+		<defName>RREW_Shell_FatGas</defName>
+		<label>flab shell</label>
+		<description>An artillery shell containing a highly mutagenic gas which rapidly fattens those who come in contact with it. When fired, it will stick into the ground and release fat gas for some time before expiring.</description>
+		<possessionCount>2</possessionCount>
+		<graphicData>
+			<texPath>Things/Item/Resource/Shell/Shell_FatGas</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<costList>
+			<Steel>25</Steel>
+		</costList>
+		<costListForDifficulty>
+			<difficultyVar>classicMortars</difficultyVar>
+			<costList>
+				<Steel>35</Steel>
+			</costList>
+		</costListForDifficulty>
+		<recipeMaker>
+			<researchPrerequisite>Machining</researchPrerequisite>
+			<displayPriority>120</displayPriority>
+		</recipeMaker>
+		<researchPrerequisites>
+			<li>RREW_Research_ExperimentalShells</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveDamageType>RR_FatGas</explosiveDamageType>
+				<explosiveRadius>4</explosiveRadius>
+				<postExplosionGasType>32</postExplosionGasType>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<projectileWhenLoaded>RREW_Bullet_Shell_FatGas</projectileWhenLoaded>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RREW_Bullet_Shell_FatGas</defName>
+		<label>flab shell</label>
+		<graphicData>
+			<texPath>Things/Projectile/ShellFatGas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>RR_FatGas</damageDef>
+			<speed>41</speed>
+			<explosionRadius>0.1</explosionRadius>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>ToxicShellLanded</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<postExplosionSpawnThingDef>RREW_Shell_FatGas_Releasing</postExplosionSpawnThingDef>
+			<postExplosionSpawnThingDefWater>RREW_Shell_FatGas_Releasing_Water</postExplosionSpawnThingDefWater>
+		</projectile>
+	</ThingDef>
+	<ThingDef Name="RREW_Shell_FatGas_Releasing_Base" Abstract="True">
+		<label>flab shell</label>
+		<selectable>false</selectable>
+		<tickerType>Normal</tickerType>
+		<thingClass>ThingWithComps</thingClass>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+		<comps>
+			<li Class="CompProperties_ReleaseGas">
+				<gasType>32</gasType>
+				<cellsToFill>20</cellsToFill>
+				<durationSeconds>10</durationSeconds>
+				<effecterReleasing>RREW_FatGasReleasing</effecterReleasing>
+			</li>
+			<li Class="CompProperties_DestroyAfterDelay">
+				<delayTicks>30000</delayTicks>
+				<!-- 1/2 day -->
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RREW_Shell_FatGas_Releasing_Base">
+		<defName>RREW_Shell_FatGas_Releasing</defName>
+		<graphicData>
+			<texPath>Things/Item/Resource/Shell/FatGasLanded</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="RREW_Shell_FatGas_Releasing_Base">
+		<defName>RREW_Shell_FatGas_Releasing_Water</defName>
+		<graphicData>
+			<texPath>Things/Item/Resource/Shell/FatGasLanded_Water</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+	</ThingDef>
+
+</Defs>

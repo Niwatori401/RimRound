@@ -1,42 +1,256 @@
 ==================================================
-Commit Hash: c93a8e26a8e5b9bc56be2b02ab1a416c8c515f49
+Commit Hash: 5a6b7dc5c7379edfdae2c89d7437ae622879b189
+Author: Niwatori401
+Date: Sun Apr 14 02:27:56 2024
+
+Fix error introduced by previous patch
+
+==================================================
+Commit Hash: 9f0b07eac3e588656ab3da5f0135a8504703a623
+Author: Niwatori401
+Date: Sun Apr 14 01:30:33 2024
+
+Fix bug causing shamblers to throw errors
+
+==================================================
+Commit Hash: 834140f5995157b51476617e8e82159930883595
+Author: Niwatori401
+Date: Thu Apr 11 21:29:34 2024
+
+Re-enable patch to display prisoner gaining resistance
+Re-enable hoverchair rendering patch
+Re-enable start screen patch
+Disable two patches regarding shell clothing
+
+==================================================
+Commit Hash: 4968e525c6cd3937c0e99fecca9d83164da57f2f
+Author: Niwatori401
+Date: Thu Apr 11 04:02:26 2024
+
+Re-enable blanket hiding mechanic
+Re-enable hoverchair hiding patch
+
+==================================================
+Commit Hash: fbc06047624a34fa39bf3c71c8893b5bdac0349b
+Author: Niwatori401
+Date: Wed Apr 10 07:24:00 2024
+
+Restore tattoo hiding for custom body patch
+
+==================================================
+Commit Hash: 27e6f0f2173d8ba655994b29ceed198ccc20200d
+Author: Niwatori401
+Date: Wed Apr 10 07:10:45 2024
+
+Restore body size update patch
+Restore body sprite path swapping patch
+Restore clothing refresh on lay down patch
+
+==================================================
+Commit Hash: 9448ceb156799504d5adf97aaef839f40d54bdc4
+Author: Niwatori401
+Date: Wed Apr 10 04:51:10 2024
+
+Re-enable corpse clothing cache invlidation patch
+Fix pawn redraw function
+
+==================================================
+Commit Hash: 2aa8f11ef274ff176fe877df31e79027ae6e95d6
+Author: Niwatori401
+Date: Wed Apr 10 04:41:47 2024
+
+Update Gluttonium to use new sound def fields
+Add mod incompatibilities and mod link to About.xml
+Re-enable clothes replacement patch
+Remove unnecessary log spam
+
+==================================================
+Commit Hash: c85618d146e44cdf944c9964490ebe6ade71ec72
+Author: Niwatori401
+Date: Wed Apr 10 04:05:11 2024
+
+Initial working 1.5 build with broken patches disabled
+
+==================================================
+Commit Hash: 85d81c5bd284431d5293d4f4504e35c42e3a626c
+Author: Niwatori401
+Date: Wed Apr 10 08:01:07 2024
+
+Change "Alpha"/"Omega" to alpha/omega character
+Small refactor of verbose code
+
+==================================================
+Commit Hash: 2a55bf3373cdcaddaba20d6f536f5ae94fd21b79
+Author: Niwatori401
+Date: Sat Sep 30 23:43:31 2023
+
+Fix bug with capacity alteration (courtesy Steven)
+
+==================================================
+Commit Hash: 2a0b7b30e3a7a4fd8ca8f42ca9895ab4ad4c4f93
+Author: Niwatori401
+Date: Thu Sep 28 13:00:01 2023
+
+Add preliminary race support for Ursine of the Rim
+Modify patch maker to parse &quot and &comma as literals
+Add new patch maker subpatch
+
+==================================================
+Commit Hash: b11569c2bd157e09ea2856a8e821657c3238df2f
+Author: Niwatori401
+Date: Thu Sep 28 10:30:41 2023
+
+Add black and white texture option for races
+Racial dictionaries now set in raw text
+Remove unused textures
+
+==================================================
+Commit Hash: f22d9c179ba45ae589baffaa1774815abe5d0b31
+Author: Niwatori401
+Date: Tue Sep 26 11:53:40 2023
+
+Fix typos
+Rename enbiggener -> embiggener
+
+==================================================
+Commit Hash: 228343d05282835bb05315d0f98570cc8ba51e4a
+Author: Niwatori401
+Date: Tue Sep 26 10:14:08 2023
+
+Update perk icons
+Update various sprites
+Update localization to reflect perk rebalances
+
+==================================================
+Commit Hash: 928521e4072a1b29ade40922cdec5e3bc800bc38
+Author: Niwatori401
+Date: Mon Sep 25 21:52:12 2023
+
+Add race entries for Ursine races
+
+==================================================
+Commit Hash: 657d67622c559c189710bf51bd1495629a34f6bd
+Author: Niwatori401
+Date: Mon Sep 25 11:04:41 2023
+
+Update stats for the following:
+* Gluttonium price
+* Zenith orb effectiveness and build cost
+* Gluttonium fabricator build cost
+* Crammed Croissant
+* Mechanite Muffin
+* Packed Pizza
+* La Bombe
+* Alpha Ball
+* Omega Ball
+* Ultratech cooking module
+* Experimental belittler
+* Flab grenades
+* Novatech gloves
+* Novatech collar
+* Novatech jumpsuit
+* Novatech proto-suit
+* Novatech belt
+* Novatech hyperbelt
+* Small food storage vat
+* Feeding tube storage
+* Massive feeding tube storage
+* Food processor
+* Nutrient distillery
+* XL hopper
+* Feeding tube valve
+* Food pipe
+* Automatic food dispenser
+* Advanced automatic food dispenser
+
+==================================================
+Commit Hash: 1b6a614e08523c8d1d6ca6246c8cd57c2b83c1c4
+Author: Niwatori401
+Date: Mon Sep 25 09:47:39 2023
+
+Update perks with the following changes:
+* Titanic Tank - Raise weight requirement to Corpulent.
+* Bulletproof - Blob-Lower weight requirement to Lardy I.
+* Fat Furnace - Lower weight requirement to Titanic I.
+* Rotund Regeneration - Lower weight requirement to Obese.
+* Paunch Power - Lower weight requirement from Gelatinous 7 to Gelatinous 4.
+* Giga Gurgling - Reduce number of purchasable levels from 6 to 5.
+* Well Insulated - Increase point cost from 3 to 5. Reduce levels from 5 to 4.
+
+==================================================
+Commit Hash: 698ba887bb5da47852814867cfe3acca9baad58d
+Author: Niwatori401
+Date: Fri Jun 23 12:11:44 2023
+
+Add race support for Dreemurr Race (Continued)
+
+==================================================
+Commit Hash: d850beb83dd6dce6f390c4abf7bc7bc44827b309
 Author: Niwatori401
 Date: Tue May 9 10:34:01 2023
 
 Fix Warcaskets from Vanilla Pirates Expanded displaying as tshirts
 
 ==================================================
-Commit Hash: a78b3f4a77a21a374828cad1a3e0692fc744a904
+Commit Hash: f29feeafaa8d6ae542cf379b61d05afd782166e5
 Author: Niwatori401
-Date: Fri Jun 23 11:52:34 2023
+Date: Sat May 6 05:15:17 2023
 
-Revert bad commit "Recompile solution"
-
-This reverts commit 72ff0d857ce5e5ea8839d720823aa628a795321b.
+Rebuild solution
 
 ==================================================
-Commit Hash: 72ff0d857ce5e5ea8839d720823aa628a795321b
-Author: Niwatori401
-Date: Wed Apr 12 09:15:36 2023
-
-Recompile solution
-
-==================================================
-Commit Hash: fec2c27de245cd39beceb0690b95d84d6e35ecf7
+Commit Hash: 9dd4f2ce1f9b1b4c6901f8681b270f81a6adf350
 Author: Niwatori401
 Date: Sat May 6 05:14:13 2023
 
 Fix possible NRE in gas checks
 
 ==================================================
-Commit Hash: c5f8ebe9367f06cbc9ed41641c669e25e503ed4d
+Commit Hash: 918b213a8b2753a1b575581b09934f49daeb570a
 Author: Niwatori401
-Date: Fri Apr 21 11:28:00 2023
+Date: Sat May 6 02:58:58 2023
 
-Rebuild and merge null body fix
+Add try/catch around main Harmony patch to allow better error detection
 
 ==================================================
-Commit Hash: 0e3e52a3069a889547debc16cad036d1f2a5723f
+Commit Hash: e7b6999e4c5dff1ac0e554fdaec375b642f60c59
+Author: Niwatori401
+Date: Fri May 5 06:40:42 2023
+
+Add Obese sprite shirt textures for apple body type
+
+==================================================
+Commit Hash: f8c5609e406e1f6c5fc8617503205d4c19767947
+Author: Niwatori401
+Date: Thu May 4 11:31:21 2023
+
+Add modd compatibility with VanillaOutpostsExpanded's mining outposts
+
+==================================================
+Commit Hash: 97388400840f599e4c7f812821b64686e7273472
+Author: Niwatori401
+Date: Sat Apr 29 01:30:01 2023
+
+Add three new visual stages below thin, courtesy Sunward
+
+==================================================
+Commit Hash: 52a6829f650f23cb6d8c9a850889980f25cb147f
+Author: Niwatori401
+Date: Sat Apr 22 04:17:12 2023
+
+Reduce experimental drugs research cost from 12000 to 4200
+Update RimRoundExtraWeapons binary
+
+==================================================
+Commit Hash: 0555dbf7af7a6f75909f3db5fddfc7bbfb1ca5c0
+Author: Niwatori401
+Date: Fri Apr 21 12:08:56 2023
+
+Fix experimental embiggener adding and then subtracting different weights if multipliers for WG/WL were different
+Change hediff utility functions to optionally apply multipliers for weight
+
+==================================================
+Commit Hash: cf3714ab33254676f58a970f4fffa8a5725df92c
 Author: Niwatori401
 Date: Fri Apr 21 11:21:42 2023
 
@@ -44,46 +258,94 @@ Fix babies and children from showing up as pink squares
 Remove old patch maker files
 
 ==================================================
-Commit Hash: 6330c867452aefb9a3d55821d0d48a55cc19b195
+Commit Hash: 98edc9758696bd1448197a0810e3239733f4ef13
 Author: Niwatori401
-Date: Wed Apr 19 10:32:20 2023
+Date: Thu Apr 20 08:28:29 2023
 
-Merge HAR fix
+Fix gluttonium based foods being unable to be consumed other than by draft order
 
 ==================================================
-Commit Hash: ae83c3bbc1e3ce4c78c87eeea0a60fc08b2d9ddd
+Commit Hash: cb6f5f77349f2c0c7e286cfc7d031d68aa421a28
+Author: Niwatori401
+Date: Thu Apr 20 08:11:42 2023
+
+Fix pawns being unable to craft at fabrication benches
+
+==================================================
+Commit Hash: 7c0b680604e03a897e2dbad0c9ae462248c171d6
+Author: Niwatori401
+Date: Wed Apr 19 21:15:15 2023
+
+Fix pawns being unable to cook
+Zenith orb now only works when powered and in its radius
+Fix localization keys for zenith orb
+If 'use pounds where possible' is selected, thrown weight text will be in pounds
+
+==================================================
+Commit Hash: 7a3abf086ecb8cd079fd34b0c66081c377efc93e
+Author: Niwatori401
+Date: Wed Apr 19 11:40:40 2023
+
+Rewrite patchmaker
+
+==================================================
+Commit Hash: e6e556e2a9f40b5eea0fe65c63d4ca188ad05440
+Author: Niwatori401
+Date: Wed Apr 19 10:29:03 2023
+
+Merge fix
+
+==================================================
+Commit Hash: 0f5ada82b43209c80182b7815741509b8bcd08b5
 Author: Niwatori401
 Date: Wed Apr 19 10:28:27 2023
 
 Fix HAR patch
 
 ==================================================
-Commit Hash: c014f54254499dd17375a044245f90dcf0bd3077
+Commit Hash: 154c6eee2bb689967784375a224a4fc5e9914750
 Author: Niwatori401
-Date: Tue Apr 18 10:40:09 2023
+Date: Tue Apr 18 22:11:45 2023
+
+Fix possible NRE
+
+==================================================
+Commit Hash: 9a13873b343efa229c951583d1981059ae1039c1
+Author: Niwatori401
+Date: Tue Apr 18 12:12:25 2023
+
+Add Zenith Orb
+Add Gluttonium Fabricator
+Integrate SuperSpace's Fattening Foods to new research tree
+Change patch for cooking station to regular workgiverdef
+
+==================================================
+Commit Hash: 4d4456bd72a6e2de6619a6af569df9b9cc6b8077
+Author: Niwatori401
+Date: Tue Apr 18 10:37:56 2023
 
 Merge HAR fix
 
 ==================================================
-Commit Hash: d1f3cc5dec92ef5858b00f4dca35579a2684bb71
+Commit Hash: 79c1292ee1d9e151d3727bf97ba6f4035bc69fe2
 Author: Niwatori401
 Date: Tue Apr 18 10:37:06 2023
 
 Fix broken HAR patch
 
 ==================================================
-Commit Hash: 3677a7b8c2d3a7aedbb7f47a46d1a765c7d33772
+Commit Hash: fa18ef23e15255d423af48960355b067b9cb4e0b
 Author: Niwatori401
 Date: Sat Apr 15 23:47:58 2023
 
 Fix localization issue
 
 ==================================================
-Commit Hash: aa6acc330562f48828f6fc9135cfc1a91900fa11
+Commit Hash: 0c853746762fa1f5005c3f2619b8cea589028465
 Author: Niwatori401
-Date: Wed Apr 12 09:15:36 2023
+Date: Sun Apr 9 02:38:55 2023
 
-Recompile solution
+Merge branch 'vulpRaceFix' into dev
 
 ==================================================
 Commit Hash: 9341e65a207a11d116713a70a0b75e68d822ec1f
@@ -100,6 +362,142 @@ Date: Sun Apr 9 02:08:06 2023
 Fix caravans eating all food instantly
 
 ==================================================
+Commit Hash: 32b0b0e294f7bde6e8bce1bc4ee841200115b0fe
+Author: Niwatori401
+Date: Sun Apr 9 02:13:00 2023
+
+Merge branch 'caravanfix' into dev
+
+==================================================
+Commit Hash: 3702473849f0d74f1a01b65dec0fb62b5da706c4
+Author: Niwatori401
+Date: Sun Apr 9 02:08:06 2023
+
+Fix caravans eating all food instantly
+
+==================================================
+Commit Hash: ec71325017a52d84f940a1b60eef40f671d18da6
+Author: Niwatori401
+Date: Fri Apr 7 01:26:41 2023
+
+Add options in settings to hide description and perk tabs
+
+==================================================
+Commit Hash: 2e2acc0e30fe794732c431e04b3e0b25b2c8ff9f
+Author: Niwatori401
+Date: Thu Apr 6 13:17:11 2023
+
+Merge downed pawn interaction changes
+
+==================================================
+Commit Hash: 57ac4c66dcc3c9843c4d8783977f10ece05f7055
+Author: Niwatori401
+Date: Thu Apr 6 13:15:05 2023
+
+Fix error in romance transpiler
+
+==================================================
+Commit Hash: 5025357d4b2275560e29e5b37fd746c964300e8e
+Author: Niwatori401
+Date: Thu Apr 6 12:59:18 2023
+
+Merge bed thought fix
+
+==================================================
+Commit Hash: b2ed85e1bdab1c0aa7d8a7b546d605153ea1cde0
+Author: Niwatori401
+Date: Thu Apr 6 12:50:44 2023
+
+Merge mechanitor fix
+
+==================================================
+Commit Hash: d13e28b7bbafe4efba5bbe03fddd519dec1ff8cb
+Author: Niwatori401
+Date: Thu Apr 6 12:47:25 2023
+
+Mechanitors that are downed can still draft their controlled mechs if in bed and capable of consciousness
+
+==================================================
+Commit Hash: 92eeb06b3eef7502f8919bb3d6e4001b1677be46
+Author: Niwatori401
+Date: Mon Mar 27 08:07:18 2023
+
+Merge historyweight feature branch
+
+==================================================
+Commit Hash: 213cf27013c01a0e300e113121619a5642f512cb
+Author: Niwatori401
+Date: Thu Apr 6 03:55:59 2023
+
+Colonists in blob beds no longer will get thoughts for 'slept on ground' or 'slept outside'
+Refactor blob bed checking to new utility class
+
+==================================================
+Commit Hash: ed2013d1a1477a98a50d0e6e19be8c64966b80f0
+Author: Niwatori401
+Date: Thu Apr 6 03:24:24 2023
+
+Pawns can now be romanced if they are downed and in bed
+
+==================================================
+Commit Hash: 5f362a8832c6f9eb5683d919934108aa7c8b2846
+Author: Niwatori401
+Date: Tue Mar 28 02:49:34 2023
+
+Downed pawns that are capable of talking can now be interacted with socially
+
+==================================================
+Commit Hash: 4de1e6c748b718d11f86a23dbd69889ebcc39160
+Author: Niwatori401
+Date: Mon Mar 27 08:07:18 2023
+
+Merge historyweight feature branch
+
+==================================================
+Commit Hash: 24341526338843bf690c99e8464c21af59a94cfd
+Author: Niwatori401
+Date: Mon Mar 27 08:01:35 2023
+
+Add weight tracking in history tab for pawns
+
+==================================================
+Commit Hash: 4e68c0e3012ed6774f10c298e58d0f92811038d4
+Author: Niwatori401
+Date: Thu Mar 23 20:23:22 2023
+
+Lower count in deep drill for gluttonium
+Fix broken XML in def
+
+==================================================
+Commit Hash: db63a121760a9dcfdbfd612b515750b009b7dcab
+Author: Niwatori401
+Date: Thu Mar 23 07:37:27 2023
+
+Now warn users of Character Editor / Prepare Carefully about incompatibilities
+
+==================================================
+Commit Hash: 2adbe24a47bbdd6f7e00e17fd9b1d87577933503
+Author: Niwatori401
+Date: Wed Mar 22 06:55:59 2023
+
+Fix UltraTech bench not being usable
+Increase work amount for making gluttonium meals beyond trivial value
+
+==================================================
+Commit Hash: 2a3643af2536415bea5bc467be7c0ce05a5f6d3f
+Author: Niwatori401
+Date: Tue Mar 21 01:10:34 2023
+
+Update generateCommonality for enbiggener
+
+==================================================
+Commit Hash: 97466e1372ed65bc4732965a9c3ebec5bb931786
+Author: Niwatori401
+Date: Tue Mar 21 00:38:46 2023
+
+Update enbiggener weapon tags
+
+==================================================
 Commit Hash: d2142271c7c7436bbb422bf86c5a7c7660d29f1b
 Author: Niwatori401
 Date: Sat Mar 18 00:00:43 2023
@@ -112,6 +510,49 @@ Author: Niwatori401
 Date: Fri Mar 17 23:28:06 2023
 
 Fix error where unsupported races would blow up the log
+
+==================================================
+Commit Hash: 8adce7ac78f5dbe9714928e550d157fe93b3ef8f
+Author: Niwatori401
+Date: Sat Mar 18 00:00:43 2023
+
+Fix RR bodies being bugged for genes that used body graphics
+
+==================================================
+Commit Hash: 9d16367199dd48a9e93e959c07da214ff659df7e
+Author: Niwatori401
+Date: Fri Mar 17 23:28:06 2023
+
+Fix error where unsupported races would blow up the log
+
+==================================================
+Commit Hash: c0aa8aa30f086c1479ba52417e34a869e564a5eb
+Author: Niwatori401
+Date: Fri Mar 17 09:22:57 2023
+
+Add expanded weapon plugin, courtesy Steven_
+Add gluttonium
+Add gluttonium ore
+Add gluttonium meals
+Add Ultratech cooking station
+Add gluttonium enriched foods
+Add alpha/omegaball items
+
+==================================================
+Commit Hash: 68e4355e5a6bd0a4278bc5eda6a37e3050a5a749
+Author: Niwatori401
+Date: Tue Mar 14 11:58:08 2023
+
+Add colossal large meals
+Update description tags for existing large meals
+
+==================================================
+Commit Hash: b33046d0466e1bb7da0bfc508ed3ee7d5e8aa8e3
+Author: Niwatori401
+Date: Tue Mar 14 11:25:12 2023
+
+Lock meals beyond normal behind relevant research
+Reenable WIP research defs
 
 ==================================================
 Commit Hash: c0ddb56a73ebcee75306118123d7639218732c2e

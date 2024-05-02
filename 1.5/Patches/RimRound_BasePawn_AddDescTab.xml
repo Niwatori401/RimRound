@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<order>Prepend</order>
+				<xpath>Defs/ThingDef[@Name="BasePawn"]/inspectorTabs</xpath>
+				<value>
+					<li>RimRound.UI.ITab_CharacterDesc</li>
+					<li>RimRound.UI.ITab_Perks</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

@@ -30,9 +30,7 @@ namespace RimRound.AI
 
 			Thing thing;
 			ThingDef thingDef;
-			#pragma warning disable CS0612 // Type or member is obsolete
-            if (!FoodUtility.TryFindBestFoodSourceFor(feeder, feedee, feedee.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, false, FoodPreferability.Undefined))
-			#pragma warning restore CS0612 // Type or member is obsolete
+            if (!FoodUtility.TryFindBestFoodSourceFor(feeder, feedee, feedee.needs.food.CurCategory == HungerCategory.Starving, out thing, out thingDef, false, true, false, false, false, false, false, false, false, false, false, FoodPreferability.Undefined))
             {
 				JobFailReason.Is("NoFood".Translate(), null);
 				return null;

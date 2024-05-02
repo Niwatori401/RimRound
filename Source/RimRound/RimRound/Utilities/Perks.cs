@@ -318,6 +318,10 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_010_Chubby))
+                    return new SuccessReport("Must be at least Corpulent to purchase", false);
+
+
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
 
@@ -327,7 +331,7 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_WellInsulated_Title", "RR_WellInsulated_Desc", 3, 5, wellInsulatedIcon,
+            new Perk("RR_WellInsulated_Title", "RR_WellInsulated_Desc", 5, 4, wellInsulatedIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
@@ -453,8 +457,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
-                    return new SuccessReport("Must be at least Gelatinous I to purchase", false);
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_050_MorbidlyObese))
+                    return new SuccessReport("Must be at least Lardy I to purchase", false);
 
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -466,7 +470,7 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_GigaGurgling_Title", "RR_GigaGurgling_Desc", 5, 6, gigaGurglingIcon,
+            new Perk("RR_GigaGurgling_Title", "RR_GigaGurgling_Desc", 5, 5, gigaGurglingIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
@@ -574,8 +578,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
-                    return new SuccessReport("Must be at least Gelatinous I to purchase", false);
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_080_Gigantic))
+                    return new SuccessReport("Must be at least Titanic I to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
@@ -597,8 +601,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_080_Gigantic))
-                    return new SuccessReport("Must be at least Titanic I to purchase!", false);
+                if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_030_Fat))
+                    return new SuccessReport("Must be at least Obese to purchase!", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
@@ -751,8 +755,8 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_350_Gelatinous)))
-                    return new SuccessReport("Must be Gelatinous VII to purchase", false);
+                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_200_Gelatinous)))
+                    return new SuccessReport("Must be Gelatinous IV to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);

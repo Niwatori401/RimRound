@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <WorkGiverDef>
+    <defName>RR_DoBillsGluttoniumFabricator</defName>
+    <label>manifest gluttonium</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+      <li>RR_GluttoniumFabricator</li>
+    </fixedBillGiverDefs>
+    <verb>manifest</verb>
+    <gerund>manifesting gluttonium at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+</Defs>

@@ -8,6 +8,7 @@ using RimWorld;
 using Verse;
 using UnityEngine;
 using Verse.Sound;
+using LudeonTK;
 
 namespace RimRound.UI
 {
@@ -42,8 +43,8 @@ namespace RimRound.UI
                 width = 2f,
                 height = rect.height
             };
-            float nubAdjustment = Widgets.AdjustCoordToUIScalingFloor(rect.x + 2f + percentOffset);
-            float xMax = Widgets.AdjustCoordToUIScalingCeil(nubAdjustment + 4f);
+            float nubAdjustment = UIScaling.AdjustCoordToUIScalingFloor(rect.x + 2f + percentOffset);
+            float xMax = UIScaling.AdjustCoordToUIScalingCeil(nubAdjustment + 4f);
             Rect topNubHitbox = new Rect
             {
                 y = rect.y - 3f,
@@ -137,8 +138,8 @@ namespace RimRound.UI
 			float num = Mathf.Round((rect.width - 8f) * percent);
 			GUI.DrawTexture(new Rect(rect.x + 3f + num, rect.y, 2f, rect.height), tex);
 
-			float num2 = Widgets.AdjustCoordToUIScalingFloor(rect.x + 2f + num);
-			float xMax = Widgets.AdjustCoordToUIScalingCeil(num2 + 4f);
+			float num2 = UIScaling.AdjustCoordToUIScalingFloor(rect.x + 2f + num);
+			float xMax = UIScaling.AdjustCoordToUIScalingCeil(num2 + 4f);
 			Rect rect2 = new Rect
 			{
 				y = rect.y - 3f,

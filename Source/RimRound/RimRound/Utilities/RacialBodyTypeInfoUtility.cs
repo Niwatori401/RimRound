@@ -3,15 +3,52 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using System.IO;
 
 namespace RimRound.Utilities
 {
+    [StaticConstructorOnStartup]
     public static class RacialBodyTypeInfoUtility
     {
+
+        static RacialBodyTypeInfoUtility()
+        {
+            string[] raceEntries = "RR_RaceData".Translate().RawText.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            
+            foreach (String line in raceEntries)
+            {
+                string[] lineData = line.Split(',');
+                
+                var dictionaryPresetForRace = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(typeof(RacialBodyTypeInfoUtility).GetField(lineData[1], System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null) as Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>);
+
+                RacialBodyTypeInfoUtility.raceToProperDictDictionary.Add(lineData[0], dictionaryPresetForRace);
+            }
+
+
+            string[] bodyTextureInfo = "RR_TextureData".Translate().RawText.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (String line in bodyTextureInfo)
+            {
+                string[] lineData = line.Split(',');
+
+                RacialBodyTypeInfoUtility.specialRacialTextureSuffixes.Add(lineData[0], lineData[1]);
+            }
+        }
+
+
+        // Regex for valid textures
+        public static Dictionary<String, Regex> validTextureSuffixes = new Dictionary<String, Regex>()
+        {
+            {"BW", new Regex(@".*F_[0-9]{3}_.*|.*F_[0-9]{3}a_.*", RegexOptions.Compiled)},
+        };
+
+        public static Dictionary<String, String> specialRacialTextureSuffixes = new Dictionary<String, String>();
+
         public static Dictionary<BodyTypeDef, BodyTypeInfo> GetRacialDictionary(Pawn pawn)
         {
             PawnBodyType_ThingComp pbtComp;
@@ -21,7 +58,7 @@ namespace RimRound.Utilities
 
                 pbtComp = thingIdToPawnCompCache[pawn.ThingID];
             }
-            else 
+            else
             {
                 pbtComp = pawn.TryGetComp<PawnBodyType_ThingComp>();
                 thingIdToPawnCompCache.Add(pawn.ThingID, pbtComp);
@@ -35,23 +72,18 @@ namespace RimRound.Utilities
                 return pbtComp.CustomBodyTypeDict[pbtComp.BodyArchetype];
             }
 
-            else if (pawn.def is AlienRace.ThingDef_AlienRace race)
+            else if (pawn.def is AlienRace.ThingDef_AlienRace race && 
+                    raceToProperDictDictionary.ContainsKey(race.defName) && 
+                    raceToProperDictDictionary[race.defName].ContainsKey(pawn.gender) && 
+                    pbtComp != null && 
+                    raceToProperDictDictionary[race.defName][pawn.gender].ContainsKey(pbtComp.BodyArchetype))
             {
-                if (raceToProperDictDictionary.ContainsKey(race.defName))
-                {
-                    if (raceToProperDictDictionary[race.defName].ContainsKey(pawn.gender))
-                    {
-                        if (pbtComp != null && raceToProperDictDictionary[race.defName][pawn.gender].ContainsKey(pbtComp.BodyArchetype))
-                        {
-                            return raceToProperDictDictionary[race.defName][pawn.gender][pbtComp.BodyArchetype];
-                        }
-                    }
-                }
+                return raceToProperDictDictionary[race.defName][pawn.gender][pbtComp.BodyArchetype];
             }
             return null;
         }
 
-        public static void InvalidateCaches() 
+        public static void InvalidateCaches()
         {
             thingIdToPawnCompCache.Clear();
         }
@@ -783,11 +815,6 @@ namespace RimRound.Utilities
             { BodyArchetype.apple,    set090FemaleAppleNoFemaleSprite },
         };
 
-
-
-
-
-
         static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> defaultSet = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
         {
             { Gender.Female, fullsizeFemaleBodytypes },
@@ -844,223 +871,7 @@ namespace RimRound.Utilities
         };
 
 
-
-
-        //--------------------Mutable Dicts-------------
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Avali_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_BlueOni_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_RedOni_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_GreenOni_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_DogboldFoxbold_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Drow_Otto_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Orassan_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_OrassanHumanHybrid_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set090);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Protogen_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Ferrex_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Fennex_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Frijjid_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Loompa_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> anthro_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Anty_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(antySet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Avianmorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Bovinemorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Caninemorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Cervinemorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Dragomorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Felinemorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Gnollmorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Lagomorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ATK_Vulpinemorph_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ChjAndroid_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Dragon_Kilhn_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Fantasy_Goblin_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> HalfDragon_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Alien_Equium_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> EA_SylveonRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Human_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Lucario_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> MegaLucario_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> MinotaurRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Moonjelly_Race_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> MQT_Miqote_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Abednedo_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Aqualish_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Bith_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Cerean_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Devaronian_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Duros_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Iktotchi_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Iridonian_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Ithorian_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Mirialan_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Neimoidian_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Nikto_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Selkath_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Sith_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Togruta_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Trandoshan_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_OR_Twilek_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Tiefling_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_WoodElf_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Tabaxi_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_SunElf_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Orc_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_MoonElf_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Kobold_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Killoren_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Illithid_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Hobgoblin_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_HalfOrc_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Halfling_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set070);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Goblin_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set090);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Gith_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Firbolg_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Dwarf_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set090);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_DarkElf_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(set090);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> O21_FR_Chitine_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> RE_Asari_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> SlitherRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> IkquanRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Klikmala_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Stick_Stickman_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> TRAHS_DreemurrRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> TRAHS_FurretRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Ratkin_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(ratkinSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ReviaRaceAlien_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> GlitterWorlderRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> HighGravWorlderRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> LowGravWorlderRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> RadWorlderRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> Rabbie_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(rabbieSet);
-
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> VatgrownHumanRace_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> DesignerMatesXH_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ScaleManXH_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> SoldiermorphXH_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> WolfManXH_Set = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(defaultSet);
-
-
-        public static Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>> raceToProperDictDictionary = new Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>>()
-        {
-            { "AFoxbold",                  Alien_DogboldFoxbold_Set          },
-            { "Alien_Avali",               Alien_Avali_Set                   },
-            { "Alien_BlueOni",             Alien_BlueOni_Set                 },
-            { "Alien_GreenOni",            Alien_GreenOni_Set                },
-            { "Alien_RedOni",              Alien_RedOni_Set                  },
-            { "Alien_Dogbold",             Alien_DogboldFoxbold_Set          },
-            { "Alien_Drow_Otto",           Alien_Drow_Otto_Set               },
-
-            { "Alien_Equium",              Alien_Equium_Set                  },
-            { "Alien_KEquium",             Alien_Equium_Set                  },
-            { "Alien_PEquium",             Alien_Equium_Set                  },
-            { "Alien_SMaleEquium",         Alien_Equium_Set                  },
-
-            { "Alien_Ferrex",              Alien_Ferrex_Set                  },
-            { "Alien_Fennex",              Alien_Fennex_Set                  },
-            { "Alien_Frijjid",             Alien_Frijjid_Set                 },
-            { "Alien_Loompa",              Alien_Loompa_Set                  },
-            { "Alien_Orassan",             Alien_Orassan_Set                 },
-            { "Alien_OrassanHumanHybrid",  Alien_OrassanHumanHybrid_Set      },
-
-            { "Alien_Protogen",            Alien_Protogen_Set                },
-            { "Alien_ProtogenNME",         Alien_Protogen_Set                },
-
-            { "Anthro",                    anthro_Set                        },
-            { "Anty",                      Anty_Set                          },
-
-            { "ATK_Avianmorph",            ATK_Avianmorph_Set                },
-            { "ATK_Bovinemorph",           ATK_Bovinemorph_Set               },
-            { "ATK_Caninemorph",           ATK_Caninemorph_Set               },
-            { "ATK_Cervinemorph",          ATK_Cervinemorph_Set              },
-            { "ATK_Dragomorph",            ATK_Dragomorph_Set                },
-            { "ATK_Felinemorph",           ATK_Felinemorph_Set               },
-            { "ATK_Gnollmorph",            ATK_Gnollmorph_Set                },
-            { "ATK_Lagomorph",             ATK_Lagomorph_Set                 },
-            { "ATK_Vulpinemorph",          ATK_Vulpinemorph_Set              },
-
-            { "ChjAndroid",                ChjAndroid_Set                    },
-            { "Dragon_Kilhn",              Dragon_Kilhn_Set                  },
-
-            { "EA_SylveonRace",            EA_SylveonRace_Set                },
-
-            { "Fantasy_Goblin",            Fantasy_Goblin_Set                },
-
-            { "HalfDragon",                HalfDragon_Set                    },
-            { "HalfDragon_colonist",       HalfDragon_Set                    },
-            { "Human",                     Human_Set                         },
-
-            { "Lucario",                   Lucario_Set                       },
-            { "MegaLucario",               MegaLucario_Set                   },
-
-            { "MinotaurRace",              MinotaurRace_Set                  },
-
-            { "Moonjelly_Race",            Moonjelly_Race_Set                },
-            { "MQT_Miqote",                MQT_Miqote_Set                    },
-
-            { "O21_OR_Abednedo",           O21_OR_Abednedo_Set               },
-            { "O21_OR_Aqualish",           O21_OR_Aqualish_Set               },
-            { "O21_OR_Bith",               O21_OR_Bith_Set                   },
-            { "O21_OR_Cerean",             O21_OR_Cerean_Set                 },
-            { "O21_OR_Devaronian",         O21_OR_Devaronian_Set             },
-            { "O21_OR_Duros",              O21_OR_Duros_Set                  },
-            { "O21_OR_Iktotchi",           O21_OR_Iktotchi_Set               },
-            { "O21_OR_Iridonian",          O21_OR_Iridonian_Set              },
-            { "O21_OR_Ithorian",           O21_OR_Ithorian_Set               },
-            { "O21_OR_Mirialan",           O21_OR_Mirialan_Set               },
-            { "O21_OR_Neimoidian",         O21_OR_Neimoidian_Set             },
-            { "O21_OR_Nikto",              O21_OR_Nikto_Set                  },
-            { "O21_OR_Selkath",            O21_OR_Selkath_Set                },
-            { "O21_OR_Sith",               O21_OR_Sith_Set                   },
-            { "O21_OR_Togruta",            O21_OR_Togruta_Set                },
-            { "O21_OR_Trandoshan",         O21_OR_Trandoshan_Set             },
-            { "O21_OR_Twilek",             O21_OR_Twilek_Set                 },
-
-            { "O21_FR_Tiefling",           O21_FR_Tiefling_Set               },
-            { "O21_FR_WoodElf",            O21_FR_WoodElf_Set                },
-            { "O21_FR_Tabaxi",             O21_FR_Tabaxi_Set                 },
-            { "O21_FR_SunElf",             O21_FR_SunElf_Set                 },
-            { "O21_FR_Orc",                O21_FR_Orc_Set                    },
-            { "O21_FR_MoonElf",            O21_FR_MoonElf_Set                },
-            { "O21_FR_Kobold",             O21_FR_Kobold_Set                 },
-            { "O21_FR_Killoren",           O21_FR_Killoren_Set               },
-            { "O21_FR_Illithid",           O21_FR_Illithid_Set               },
-            { "O21_FR_Hobgoblin",          O21_FR_Hobgoblin_Set              },
-            { "O21_FR_HalfOrc",            O21_FR_HalfOrc_Set                },
-            { "O21_FR_Halfling",           O21_FR_Halfling_Set               },
-            { "O21_FR_Goblin",             O21_FR_Goblin_Set                 },
-            { "O21_FR_Gith",               O21_FR_Gith_Set                   },
-            { "O21_FR_Firbolg",            O21_FR_Firbolg_Set                },
-            { "O21_FR_Dwarf",              O21_FR_Dwarf_Set                  },
-            { "O21_FR_DarkElf",            O21_FR_DarkElf_Set                },
-            { "O21_FR_Chitine",            O21_FR_Chitine_Set                },
-
-            { "Rabbie",                    Rabbie_Set                        },
-            { "Ratkin",                    Ratkin_Set                        },
-            { "Ratkin_Su",                 Ratkin_Set                        },
-            { "ReviaRaceAlien",            ReviaRaceAlien_Set                },
-
-            { "RE_Asari",                  RE_Asari_Set                      },
-
-            { "Stick_Stickman",            Stick_Stickman_Set                },
-            { "SlitherRace",               SlitherRace_Set                   },
-            { "IkquanRace",                IkquanRace_Set                    },
-            { "KlickmalaRace",             Klikmala_Set                      },
-
-            { "TRAHS_DreemurrRace",        TRAHS_DreemurrRace_Set            },
-            { "TRAHS_FurretRace",          TRAHS_FurretRace_Set              },
-
-            { "DesignerMatesXH",           DesignerMatesXH_Set               },
-            { "ScaleManXH",                ScaleManXH_Set                    },
-            { "SoldiermorphXH",            SoldiermorphXH_Set                },
-            { "WolfManXH",                 WolfManXH_Set                     },
-            { "GlitterWorlderRace",        GlitterWorlderRace_Set            },
-            { "HighGravWorlderRace",       HighGravWorlderRace_Set           },
-            { "LowGravWorlderRace",        LowGravWorlderRace_Set            },
-            { "RadWorlderRace",            RadWorlderRace_Set                },
-            { "VatgrownHumanRace",         VatgrownHumanRace_Set             },
-
-        };
+        public static Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>> raceToProperDictDictionary = new Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>>();
 
         public static Dictionary<int, int> gelatinousLevelToCode = new Dictionary<int, int>()
         {
@@ -1086,7 +897,7 @@ namespace RimRound.Utilities
             { 20, 995 },
         };
 
-        public static List<BodyTypeDef> standardBodyTypeDefs = new List<BodyTypeDef>() 
+        public static List<BodyTypeDef> standardBodyTypeDefs = new List<BodyTypeDef>()
         {
             RimRound.Defs.BodyTypeDefOf.F_005_Thick,
             RimRound.Defs.BodyTypeDefOf.F_006_Chonky,
@@ -1197,9 +1008,9 @@ namespace RimRound.Utilities
     }
 
 
-    public struct BodyTypeInfo 
+    public struct BodyTypeInfo
     {
-        public BodyTypeInfo(float maxSeverity, float meshSize, float wiggleSpeed, float portraitZoom, float portraitOffsetZoomMethod, float portraitOffsetPanMethod) 
+        public BodyTypeInfo(float maxSeverity, float meshSize, float wiggleSpeed, float portraitZoom, float portraitOffsetZoomMethod, float portraitOffsetPanMethod)
         {
             this.maxSeverity = maxSeverity;
             this.meshSize = meshSize;

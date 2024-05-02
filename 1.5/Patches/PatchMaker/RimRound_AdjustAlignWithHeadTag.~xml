@@ -1,0 +1,16 @@
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/alignWithHead</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/alignWithHead</xpath>
+				<value>
+					<alignWithHead>TRUTH_VALUE</alignWithHead>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]</xpath>
+				<value>
+					<alignWithHead>TRUTH_VALUE</alignWithHead>
+				</value>
+			</nomatch>
+		</li>
+	

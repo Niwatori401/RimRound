@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+  <ThinkTreeDef>
+    <defName>HoverchairThinktreeStandard</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Do a queued job -->
+        <li Class="ThinkNode_QueuedJob" />
+
+        <!-- Forced goto -->
+        <li Class="ThinkNode_ConditionalForcedGoto">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>Misc</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_ForcedGoto" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Lord directives -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+		
+        <li Class="JobGiver_Idle">
+            <ticks>600</ticks>
+        </li>
+        
+        <li Class="JobGiver_IdleError"/>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  
+  <ThinkTreeDef>
+    <defName>HoverchairThinktreeConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+            <li Class="ThinkNode_Subtree">
+              <treeDef>JoinAutoJoinableCaravan</treeDef>
+            </li>
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>			
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  
+</Defs>

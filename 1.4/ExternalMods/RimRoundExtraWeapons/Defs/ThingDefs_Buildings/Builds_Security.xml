@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="TrapIEDBase">
+		<defName>RREW_TrapIED_FatGas</defName>
+		<label>IED flab trap</label>
+		<description>A pair of fattening gas shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/IEDFatGas</texPath>
+		</graphicData>
+		<uiOrder>44</uiOrder>
+		<costList>
+			<RREW_Shell_FatGas>2</RREW_Shell_FatGas>
+		</costList>
+		<designationHotKey>Misc11</designationHotKey>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>8.9</explosiveRadius>
+				<explosiveDamageType>RR_FatGas</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<postExplosionGasType>32</postExplosionGasType>
+				<wickTicks>15</wickTicks>
+				<startWickOnDamageTaken>
+					<li>Bullet</li>
+					<li>Arrow</li>
+					<li>ArrowHighVelocity</li>
+				</startWickOnDamageTaken>
+			</li>
+		</comps>
+		<specialDisplayRadius>8.9</specialDisplayRadius>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef ParentName="Bullet">
+		<defName>RREW_BulletEnbiggener</defName>
+		<label>fattening bullet</label>
+		<workerClass>RimRoundExtraWeapons.DamageWorker.DamageWorker_Enbiggen</workerClass>
+		<applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+		<impactSoundType>Bullet</impactSoundType>
+		<modExtensions>
+			<li Class="RimRoundExtraWeapons.DamageWorker.ME_DamageWorker_Enbiggen">
+				<kilosPerDamage>7.5</kilosPerDamage>
+				<ticksBetweenApplication>120</ticksBetweenApplication>
+				<kilosPerApplication>30</kilosPerApplication>
+				<chanceToInflictIllness>1.00</chanceToInflictIllness>
+				<effectDuration>3600</effectDuration>
+				<triggerMessages>false</triggerMessages>
+			</li>
+		</modExtensions>
+	</DamageDef>
+
+</Defs>

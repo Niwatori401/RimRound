@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+            <!--Lock SSFF foods behind research-->
+			<li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="CookFatBurger"]</xpath>
+                <value>
+                    <researchPrerequisite>RR_Research_GlutoniumEnrichedFoods</researchPrerequisite>
+                </value>
+            </li>
+			<li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="CookDonut"]</xpath>
+                <value>
+                    <researchPrerequisite>RR_Research_GlutoniumEnrichedFoods</researchPrerequisite>
+                </value>
+            </li>
+			<li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="CookCake"]</xpath>
+                <value>
+                    <researchPrerequisite>RR_Research_GlutoniumDrugs</researchPrerequisite>
+                </value>
+            </li>          
+            <!--Replace tables that can use the recipes--> 
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/RecipeDef[@Name="FatMealBase"]/recipeUsers</xpath>
+                <value>
+                    <recipeUsers>
+                        <li>RR_UltraTechCookingStation</li>
+                    </recipeUsers>
+                </value>
+            </li>       
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/RecipeDef[@Name="FatSweetMealBase"]/recipeUsers</xpath>
+                <value>
+                    <recipeUsers>
+                        <li>RR_UltraTechCookingStation</li>
+                    </recipeUsers>
+                </value>
+            </li>               
+            <!--Change nutrient density of food items-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="FatBurger"]/comps</xpath>
+                <value>
+                    <comps>
+                        <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                            <fullnessToNutritionRatio>.05</fullnessToNutritionRatio>
+                        </li>
+                    </comps>
+                </value>
+            </li>   
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Donut"]/comps</xpath>
+                <value>
+                    <comps>
+                        <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                            <fullnessToNutritionRatio>0.1428</fullnessToNutritionRatio>
+                        </li>
+                    </comps>
+                </value>
+            </li>  
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="fatpill"]/comps</xpath>
+                <value>
+                    <comps>
+                        <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                            <fullnessToNutritionRatio>0.002</fullnessToNutritionRatio>
+                        </li>
+                    </comps>
+                </value>
+            </li>       
+            <!--Add gluttonium crafting component to recipes-->                  
+			<li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="CookFatBurger"]/ingredients</xpath>
+                <value>
+                    <li>
+                        <filter>
+                            <thingDefs>
+                                <li>RR_Gluttonium</li>
+                            </thingDefs>
+                        </filter>
+                        <count>3</count>
+                    </li>
+                </value>
+            </li>
+			<li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="CookDonut"]/ingredients</xpath>
+                <value>
+                    <li>
+                        <filter>
+                            <thingDefs>
+                                <li>RR_Gluttonium</li>
+                            </thingDefs>
+                        </filter>
+                        <count>1</count>
+                    </li>
+                </value>
+            </li>
+			<li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="CookCake"]/ingredients</xpath>
+                <value>
+                    <li>
+                        <filter>
+                            <thingDefs>
+                                <li>RR_Gluttonium</li>
+                            </thingDefs>
+                        </filter>
+                        <count>5</count>
+                    </li>                    
+                </value>
+            </li>   
+            <!--Change ingredient getter class to support gluttonium--> 
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/RecipeDef[@Name="FatMealBase"]/ingredientValueGetterClass</xpath>
+                <value>
+					<ingredientValueGetterClass>RimRound.AI.IngredientValueGetter_Gluttonium</ingredientValueGetterClass>
+                </value>
+            </li>     
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/RecipeDef[@Name="FatSweetMealBase"]/ingredientValueGetterClass</xpath>
+                <value>
+					<ingredientValueGetterClass>RimRound.AI.IngredientValueGetter_Gluttonium</ingredientValueGetterClass>
+                </value>
+            </li>     
+            <!--Change fat pill's name-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="fatpill"]/label</xpath>
+                <value>
+                    <label>experimental fat pills</label>
+                </value>
+            </li>             
+            <!--Add recipe maker entry for fat pill-->         
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="fatpill"]</xpath>
+                <value>
+                    <recipeMaker>
+                        <researchPrerequisite>RR_Research_ExperimentalGlutoniumDrugs</researchPrerequisite>
+                        <recipeUsers>
+                            <li>RR_UltraTechCookingStation</li>
+                        </recipeUsers>
+                        <soundWorking>Recipe_Drug</soundWorking>
+                    </recipeMaker>
+                    <costList>
+                        <RR_Gluttonium>70</RR_Gluttonium>
+                    </costList>                    
+                </value>
+            </li>        
+            <!--Add mass to fat pill-->         
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="fatpill"]/statBases</xpath>
+                <value>
+					<Mass>0.005</Mass>                 
+                </value>
+            </li>        			
+            <!--Change fat pill to work inherit from makeable drug pill instead of RR_SimpleMealBase-->
+            <li Class="PatchOperationAttributeSet">
+                <xpath>Defs/ThingDef[defName="fatpill"]</xpath>
+                <attribute>ParentName</attribute>
+                <value>MakeableDrugPillBase</value>
+            </li>                                                 
+        </operations>
+    </Operation>
+</Patch>

@@ -1,4 +1,5 @@
 ﻿using RimRound.Comps;
+using RimRound.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace RimRound.UI
             this.comp = comp;
             defaultLabel = "Exempt Pawn - Dynamic Bodies Rule";
             defaultDesc = "Whether this pawn personally should obey global rules allowing dynamic bodies. When on, global rules are followed. When off, this pawn will never have a dynamic body regardless of the global rule.";
-            icon = Widgets.GetIconFor(ThingDefOf.Fence);
+            icon = Utilities.Resources.FILLER_TEXTURE;
             isActive = () => comp.PersonallyExempt;
             toggleAction = () => { ToggleAction(); };
             Order = 401;

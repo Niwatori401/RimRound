@@ -41,7 +41,7 @@ namespace RimRound.FeedingTube.Comps
 				FoodTransmitter_NetManager.For(this.parent.Map).Notify_ConnectorAdded(this);
 			}
 
-			this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlag.PowerGrid, true, false);
+			this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlagDefOf.PowerGrid, true, false);
 		}
 
 

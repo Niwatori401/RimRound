@@ -1,0 +1,112 @@
+<Defs>
+    <ThingDef ParentName="BenchBase">
+        <defName>RR_GluttoniumFabricator</defName>
+        <label>gluttonium fabricator</label>
+        <description>A fabled device made of gluttonium capable of replicating gluttonium purely from quantum foam. Because it provides such a taboo resource quickly and infinitely, it is vastly sought after by many societies, but is also outlawed by just as many. Tales from displaced refugees apparently depict people of inconceivable sizes forcing them offworld as their very homes disappeared beneath them.</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <statBases>
+            <Mass>2600</Mass>
+            <MaxHitPoints>550</MaxHitPoints>
+            <Beauty>2</Beauty>
+            <WorkToBuild>8000</WorkToBuild>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <minifiedDef Inherit="false"/>
+        <thingCategories Inherit="false" />
+        <size>(1,1)</size>
+        <costList>
+            <Steel>200</Steel>
+            <RR_Gluttonium>1000</RR_Gluttonium>
+            <Gold>80</Gold>
+            <Plasteel>150</Plasteel>
+            <ComponentSpacer>13</ComponentSpacer>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>5600</basePowerConsumption>
+                <idlePowerDraw>50</idlePowerDraw>
+                <shortCircuitInRain>true</shortCircuitInRain>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <recipes>
+        <li>RR_Make_Gluttonium</li>
+        </recipes>
+        <graphicData>
+            <texPath>Things/Building/Production/GluttoniumFabricator</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(1,1)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <castEdgeShadows>false</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+        </building>
+        <fillPercent>0.5</fillPercent>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2530</uiOrder>
+        <surfaceType>Item</surfaceType>
+        <designationHotKey>Misc12</designationHotKey>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>RR_Research_GlutoniumFabrication</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>RR_UnfinishedGluttonium</defName>
+        <label>unrealized gluttonium</label>
+        <description>An unrealized chunk of gluttonium.</description>
+        <statBases>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Item/Unfinished/UnfinishedComponent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stuffCategories Inherit="false" />
+    </ThingDef>
+
+    <RecipeDef>
+        <defName>RR_Make_Gluttonium</defName>
+        <label>make gluttonium</label>
+        <description>Make pure gluttonium.</description>
+        <jobString>Making pure gluttonium.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>10000</workAmount>
+        <unfinishedThingDef>RR_UnfinishedGluttonium</unfinishedThingDef>
+        <ingredients/>
+        <fixedIngredientFilter/>
+        <products>
+            <RR_Gluttonium>25</RR_Gluttonium>
+        </products>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>10</displayPriority>
+    </RecipeDef>  
+</Defs>

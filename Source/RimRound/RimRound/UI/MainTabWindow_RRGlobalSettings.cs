@@ -241,10 +241,10 @@ namespace RimRound.UI
             DoGeneralSettingsGroup(generalSettingsRect);
 
             Rect gizmoSettingsGroupRect = new Rect(0.66666f * inRect.width, titleRect.yMax, 0.33333f * inRect.width, inRect.height - titleRect.height);
-            DoGizmoSettingsGroup(gizmoSettingsGroupRect);
+            DoUISettingsGroup(gizmoSettingsGroupRect);
         }
 
-        private void DoGizmoSettingsGroup(Rect gizmoSettingsGroup)
+        private void DoUISettingsGroup(Rect gizmoSettingsGroup)
         {
             GUI.BeginGroup(gizmoSettingsGroup);
 
@@ -335,7 +335,31 @@ namespace RimRound.UI
                 null,
                 "RR_ToolTip_Preferences_ShowBlobIntoBedGizmo");
 
+            CheckboxLabeled(new Rect
+            {
+                x = gizmoSettingsCheckBoxesRect.x,
+                y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
+                width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+                "RR_Mtw_GizmoSettings_showPerkTab",
+                ref GlobalSettings.showPerkTab,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_showPerkTab");
 
+            CheckboxLabeled(new Rect
+            {
+                x = gizmoSettingsCheckBoxesRect.x,
+                y = positionIndex++ * spaceBetweenCheckBoxes + gizmoSettingsCheckBoxesRect.y,
+                width = gizmoSettingsCheckBoxesRect.width - bufferForCheckmarks,
+                height = spaceBetweenCheckBoxes
+            },
+                "RR_Mtw_GizmoSettings_showDescriptionTab",
+                ref GlobalSettings.showDescriptionTab,
+                false, null, null, false,
+                null,
+                "RR_ToolTip_Preferences_showDescriptionTab");
 
             GUI.EndGroup();
         }

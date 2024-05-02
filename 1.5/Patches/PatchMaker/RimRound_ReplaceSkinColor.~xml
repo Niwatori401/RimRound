@@ -1,0 +1,19 @@
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/colorChannels</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/colorChannels</xpath>
+						<value>
+							<colorChannels>COLOR_CHANNEL_DATA</colorChannels>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator</xpath>
+						<value>
+							<colorChannels>COLOR_CHANNEL_DATA</colorChannels>
+						</value>
+					</nomatch>
+				</li>
+			</operations>
+		</li>

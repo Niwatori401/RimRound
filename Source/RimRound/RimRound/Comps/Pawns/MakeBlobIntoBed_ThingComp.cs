@@ -65,9 +65,9 @@ namespace RimRound.Comps
             }
             else
             {
-                gizmo.disabled = false;
-                gizmoRec.disabled = false;
-                generatorGizmo.disabled = false;
+                gizmo.Disabled = false;
+                gizmoRec.Disabled = false;
+                generatorGizmo.Disabled = false;
             }
 
             if (GlobalSettings.showBlobIntobedGizmo && CheckBlobBedElligibility())

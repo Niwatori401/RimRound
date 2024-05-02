@@ -1,0 +1,22 @@
+		<li Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/south/offset</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/south/offset</xpath>
+					</match>		
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/east/offset</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/east/offset</xpath>
+					</match>		
+				</li>		
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/north/offset</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="DEF_NAME"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[ITEM_INDEX]/offsets/north/offset</xpath>
+					</match>			
+				</li>
+			</operations>
+		</li>

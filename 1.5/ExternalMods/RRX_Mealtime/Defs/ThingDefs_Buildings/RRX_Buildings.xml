@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+  		<defName>RRX_StoveLarge</defName>
+  		<label>industrial stove</label>
+  		<description>A large meal-prep area for making huge amounts of food in a short time.</description>
+  		<thingClass>Building_WorkTable_HeatPush</thingClass>
+  		<graphicData>
+  			<texPath>Things/Buildings/StoveLarge/TableStoveLarge</texPath>
+  			<graphicClass>Graphic_Multi</graphicClass>
+  			<drawSize>(6.1,3.6)</drawSize>
+        <shadowData>
+          <volume>(5.85, 2.6, 0.62)</volume>
+          <offset>(0, 0, 0.20)</offset>
+        </shadowData>
+  			<damageData>
+  				<cornerTL>Damage/Corner</cornerTL>
+  				<cornerTR>Damage/Corner</cornerTR>
+  				<cornerBL>Damage/Corner</cornerBL>
+  				<cornerBR>Damage/Corner</cornerBR>
+  			</damageData>
+  		</graphicData>
+  		<tickerType>Normal</tickerType>
+  		<costList>
+  			<Steel>240</Steel>
+  			<ComponentIndustrial>2</ComponentIndustrial>
+  		</costList>
+  		<altitudeLayer>Building</altitudeLayer>
+  		<rotatable>true</rotatable>
+  		<neverMultiSelect>true</neverMultiSelect>
+  		<uiIconScale>0.8</uiIconScale>
+  		<fillPercent>0.5</fillPercent>
+  		<useHitPoints>True</useHitPoints>
+  		<statBases>
+  			<Mass>10</Mass>
+  			<WorkToBuild>4500</WorkToBuild>
+  			<MaxHitPoints>220</MaxHitPoints>
+  			<Flammability>0.6</Flammability>
+  		</statBases>
+      <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  		<inspectorTabs>
+  			<li>ITab_Bills</li>
+  		</inspectorTabs>
+  		<building>
+  			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+  			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+  			<ai_chillDestination>false</ai_chillDestination>
+  			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+  			<buildingTags>
+  				<li>Production</li>
+  			</buildingTags>
+        <isMealSource>true</isMealSource>
+        <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+  		</building>
+  		<size>(5,2)</size>
+  		<designationCategory>Production</designationCategory>
+  		<passability>PassThroughOnly</passability>
+  		<pathCost>30</pathCost>
+  		<hasInteractionCell>True</hasInteractionCell>
+  		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+  		<surfaceType>Item</surfaceType>
+      <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  		<researchPrerequisites>
+  			<li>RRX_BulkPrep</li>
+  		</researchPrerequisites>
+  		<comps>
+  			<li Class="CompProperties_Power">
+  				<compClass>CompPowerTrader</compClass>
+  				<shortCircuitInRain>false</shortCircuitInRain>
+  				<basePowerConsumption>900</basePowerConsumption>
+  			</li>
+  			<li Class="CompProperties_HeatPusher">
+  				<compClass>CompHeatPusherPowered</compClass>
+  				<heatPushMaxTemperature>36</heatPushMaxTemperature>
+  				<heatPerSecond>6</heatPerSecond>
+  			</li>
+  			<li Class="CompProperties_Flickable"/>
+  			<li Class="CompProperties_AffectedByFacilities">
+  				<linkableFacilities>
+  					<li>ToolCabinet</li>
+  				</linkableFacilities>
+  			</li>
+        <li Class="CompProperties_Glower">
+          <glowRadius>1</glowRadius>
+          <glowColor>(244, 112, 42,0)</glowColor>
+        </li>
+  			<li>
+  				<compClass>CompReportWorkSpeed</compClass>
+  			</li>
+  		</comps>
+  		<placeWorkers>
+  			<li>PlaceWorker_ShowFacilitiesConnections</li>
+  			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+  			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+  		</placeWorkers>
+  		<minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+</Defs>

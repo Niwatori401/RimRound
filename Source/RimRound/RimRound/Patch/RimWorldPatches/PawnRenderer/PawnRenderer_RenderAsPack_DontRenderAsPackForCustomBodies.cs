@@ -11,8 +11,8 @@ using Verse;
 
 namespace RimRound.Patch
 {
-    [HarmonyPatch(typeof(PawnRenderer))]
-    [HarmonyPatch(nameof(PawnRenderer.RenderAsPack))]
+    [HarmonyPatch(typeof(PawnRenderUtility))]
+    [HarmonyPatch(nameof(PawnRenderUtility.RenderAsPack))]
     public class PawnRenderer_RenderAsPack_DontRenderAsPackForCustomBodies
     {
         public static void Postfix(ref bool __result, Apparel __0)

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--Stuffing Hediff-->
+<Defs>
+	<HediffDef>
+		<defName>RimRound_UsingFeedingTube</defName>
+		<label>Using feeding tube</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>eating at a feeding tube-ness</labelNoun>
+		<description>This pawn is eating at a feeding tube.</description>	
+	
+	
+	
+	
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<comps>
+		</comps>
+		
+		<isBad>false</isBad>
+	
+	
+		<stages>
+			<li>
+				<minSeverity>0.0</minSeverity>
+				<label>using a feeding tube</label>
+				<lifeThreatening>false</lifeThreatening>
+				<becomeVisible>false</becomeVisible>
+				<capMods>	
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0</setMax>
+					</li>							
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

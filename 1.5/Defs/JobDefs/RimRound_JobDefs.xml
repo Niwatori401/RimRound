@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JobDef>
+		<defName>RR_JD_StuffPrisoner</defName>
+		<driverClass>RimRound.AI.JobDriver_StuffPrisoner</driverClass>
+		<reportString>feeding TargetA to TargetB.</reportString>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyKind>Gluttonous</joyKind>
+		<joyDuration>8000</joyDuration>
+		
+		<neverShowWeapon>true</neverShowWeapon>
+		<playerInterruptible>true</playerInterruptible>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+	
+  <JobDef>
+    <defName>RR_PrisonerAttemptReduceReluctance</defName>
+    <driverClass>RimRound.AI.JobDriver_ChatToReduceReluctance</driverClass>
+    <reportString>attempting to persuade TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>	
+  
+  <JobDef>
+	<defName>RR_ListenToRadio</defName>
+	<joyKind>Meditative</joyKind>
+    <driverClass>RimRound.FeedingTube.AI.JobDriver_ListenToRadio</driverClass>
+    <reportString>Listening to the radio on TargetA.</reportString>
+  </JobDef>
+</Defs>

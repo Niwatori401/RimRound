@@ -22,7 +22,7 @@ namespace RimRound.UI
         {
             get
             {
-                return PawnToShowInfoAbout.Faction == Faction.OfPlayer && PawnToShowInfoAbout.RaceProps.Humanlike;
+                return GlobalSettings.showDescriptionTab &&PawnToShowInfoAbout.Faction == Faction.OfPlayer && PawnToShowInfoAbout.RaceProps.Humanlike;
             }
         }
 

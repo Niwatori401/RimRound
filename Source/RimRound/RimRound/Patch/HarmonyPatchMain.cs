@@ -24,7 +24,15 @@ namespace RimRound.Patch
 		static HarmonyPatchMain()
 		{
 			var harmony = new Harmony("RRHarmony");
-			harmony.PatchAll();
+
+			try
+			{
+                harmony.PatchAll();
+            }
+            catch  (Exception e)
+			{
+				Log.Error($"[RimRound] Failed to apply harmony patches. Details: {e.Message}; {e}");
+			}
 
             #region External Mod Patching
             ModCompatibilityUtility.TryPatch(
@@ -37,15 +45,15 @@ namespace RimRound.Patch
 				new ModPatchInfo("Camera+", "CameraPlus.Tools", "ShouldShowDot", MethodType.Normal), 
 				CameraPlus_Tools_ShouldShowDot_DontShowDotForGelatinous.GetPatchCollection());
 			
-			ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Statue of Colonist", "StatueOfColonistRenderer", "Render", MethodType.Normal),
-				StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.GetPatchCollection());
+			//ModCompatibilityUtility.TryPatch(
+			//	harmony,
+			//	new ModPatchInfo("Statue of Colonist", "StatueOfColonistRenderer", "Render", MethodType.Normal),
+			//	StatueOfColonist_StatueOfColonistRenderer_Render_SwitchGetBodyMeshForAlienRaceVersion.GetPatchCollection());
 
-            ModCompatibilityUtility.TryPatch(
-				harmony,
-				new ModPatchInfo("Statue of Colonist", "StatueOfColonistGraphicSet", "TryGetGraphicApparel", MethodType.Normal),
-				StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies.GetPatchCollection());
+    //        ModCompatibilityUtility.TryPatch(
+				//harmony,
+				//new ModPatchInfo("Statue of Colonist", "StatueOfColonistGraphicSet", "TryGetGraphicApparel", MethodType.Normal),
+				//StatueOfColonist_StatueOfColonistGraphicSet_TryGetGraphicApparel_FixForRRBodies.GetPatchCollection());
 
 
             int patchedMethodsCount = 0;

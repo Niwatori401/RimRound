@@ -13,10 +13,10 @@ namespace RimRound.Patch
     /// Wipes all static caches on load.
     /// </summary>
     [HarmonyPatch(typeof(GameDataSaveLoader))]
-    [HarmonyPatch(nameof(GameDataSaveLoader.LoadGame), new Type[] { typeof (string) })]
+    [HarmonyPatch(nameof(GameDataSaveLoader.LoadGame), new Type[] { typeof(string) })]
     public class GameDataSaveLoader_LoadGame_WipeCaches
     {
-        public static void Postfix() 
+        public static void Postfix()
         {
             BodyTypeUtility.InvalidateCorpseCache();
             RacialBodyTypeInfoUtility.InvalidateCaches();

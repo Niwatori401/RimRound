@@ -15,7 +15,7 @@ namespace RimRound.FeedingTube
         public SectionLayer_ThingsFoodGrid(Section section) : base(section)
         {
             this.requireAddToMapMesh = false;
-            this.relevantChangeTypes = MapMeshFlag.Things;
+            this.relevantChangeTypes = MapMeshFlagDefOf.Things;
         }
 
         public override void DrawLayer()

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>RR_Research_MetabolicTextiles</defName>
+		<label>metabolic textiles</label>
+		<tab>RimRoundTech</tab>
+		<description>Pursue the creation of specialist equipment and attire designed to assist with the process of digestion and weight gain.</description>
+		<baseCost>1600</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ComplexClothing</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>  
+		<defName>RR_Research_UltraTechMetabolicTextiles</defName>
+		<label>Ultratech metabolic textiles</label>
+		<tab>RimRoundTech</tab>
+		<description>Learn to craft the pinnacle of high-tech clothing and accessories that greatly transform the wearer's metabolism and supports indolent lifestyles.</description>
+		<baseCost>2400</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RR_Research_MetabolicTextiles</li>
+		</prerequisites>		
+		<researchViewX>1</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+</Defs>

@@ -1,0 +1,362 @@
+<Defs>
+	<HediffDef Name="RR_ImplantHediffBase" Abstract="True">
+		<hediffClass>Hediff_Implant</hediffClass>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+	</HediffDef>
+
+	<HediffDef Name="RR_AddedBodyPartBase" ParentName="RR_ImplantHediffBase" Abstract="True">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<priceImpact>true</priceImpact>
+	</HediffDef>
+
+	<!--HungerImplant-->
+	<ThingDef Name="RimRound_BodyPartBionicBase" ParentName="BodyPartBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+		<thingCategories>
+			<li>BodyPartsBionic</li>
+		</thingCategories>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+		<tradeTags>
+			<li>Bionic</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<statBases>
+			<WorkToMake>26000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>Bionics</researchPrerequisite>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+	<HediffDef ParentName="RR_AddedBodyPartBase">
+		<defName>RR_HungerImplantHediff</defName>
+		<label>hunger implant</label>
+		<labelNoun>a hunger implant</labelNoun>
+		<hediffClass>RimRound.Hediffs.Hediff_FullnessImplant</hediffClass>
+		<description>An installed hunger implant.</description>
+		<descriptionHyperlinks><ThingDef>RR_HungerImplant</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>RR_HungerImplant</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="RimRound_BodyPartBionicBase">
+		<defName>RR_HungerImplant</defName>
+		<label>hunger implant</label>
+		<description>NONE GIVEN</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/HUNGER_IMPLANT</texPath>
+		</graphicData>
+		<descriptionHyperlinks><RecipeDef>RR_InstallHungerImplant</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Hyperweave>30</Hyperweave>
+			<Plasteel>20</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+
+		<statBases>
+			<WorkToMake>2400</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RR_Research_HungerImplant</researchPrerequisite>
+		</recipeMaker>	
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RR_InstallHungerImplant</defName>
+		<label>install hunger implant</label>
+		<description>Install a hunger implant.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RR_HungerImplant</ThingDef>
+			<HediffDef>RR_HungerImplantHediff</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing hunger implant.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_HungerImplant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RR_HungerImplant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RR_HungerImplantHediff</addsHediff>
+	</RecipeDef>
+
+
+	<!--Archotech metabolizer-->
+	<HediffDef ParentName="RR_AddedBodyPartBase">
+		<defName>RR_ArchotechMetabolizerHediff</defName>
+		<label>archotech metabolizer</label>
+		<labelNoun>a archotech metabolizer</labelNoun>
+		<hediffClass>RimRound.Hediffs.Hediff_ArchotechMetabolizer</hediffClass>
+		<description>An installed archotech metabolizer.</description>
+		<descriptionHyperlinks><ThingDef>RR_ArchotechMetabolizer</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>RR_ArchotechMetabolizer</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="RimRound_BodyPartBionicBase">
+		<defName>RR_ArchotechMetabolizer</defName>
+		<label>archotech metabolizer</label>
+		<description>A wondrously advanced, incredibly caustic stomach that can inflate to the size of a blimp with no strain on its user. It can handle an inhuman intake with ease thanks to hardworking nanites that break down food as quickly as it enters.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/ARCHOTECH_METABOLIZER</texPath>
+		</graphicData>
+		<descriptionHyperlinks><RecipeDef>RR_InstallArchotechMetabolizer</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Hyperweave>80</Hyperweave>
+			<Plasteel>60</Plasteel>
+			<ComponentSpacer>8</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+
+		<statBases>
+			<WorkToMake>7000</WorkToMake>
+			<Mass>2.2</Mass>
+		</statBases>
+
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>14</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RR_Research_SyntheticDigestion</researchPrerequisite>
+		</recipeMaker>	
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RR_InstallArchotechMetabolizer</defName>
+		<label>install archotech metabolizer</label>
+		<description>Install a archotech metabolizer.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RR_ArchotechMetabolizer</ThingDef>
+			<HediffDef>RR_ArchotechMetabolizerHediff</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing archotech metabolizer.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_ArchotechMetabolizer</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RR_ArchotechMetabolizer</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RR_ArchotechMetabolizerHediff</addsHediff>
+	</RecipeDef>
+	
+	<!--Bionic metabolizer-->
+	<HediffDef ParentName="RR_AddedBodyPartBase">
+		<defName>RR_BionicMetabolizerHediff</defName>
+		<label>bionic metabolizer</label>
+		<labelNoun>a bionic metabolizer</labelNoun>
+		<hediffClass>RimRound.Hediffs.Hediff_BionicMetabolizer</hediffClass>
+		<description>An installed bionic metabolizer.</description>
+		<descriptionHyperlinks><ThingDef>RR_BionicMetabolizer</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>RR_BionicMetabolizer</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="RimRound_BodyPartBionicBase">
+		<defName>RR_BionicMetabolizer</defName>
+		<label>bionic metabolizer</label>
+		<description>An enhanced stomach with more virulent stomach acid. It is far more adept at processing food than a normal stomach. It's not particularly flexible, however.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/BIONIC_METABOLIZER</texPath>
+		</graphicData>		
+		<descriptionHyperlinks><RecipeDef>RR_InstallBionicMetabolizer</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Hyperweave>30</Hyperweave>
+			<Plasteel>20</Plasteel>
+			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+
+		<statBases>
+			<WorkToMake>2400</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RR_Research_SyntheticDigestion</researchPrerequisite>
+		</recipeMaker>	
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RR_InstallBionicMetabolizer</defName>
+		<label>install bionic metabolizer</label>
+		<description>Install a bionic metabolizer.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RR_BionicMetabolizer</ThingDef>
+			<HediffDef>RR_BionicMetabolizerHediff</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing bionic metabolizer.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_BionicMetabolizer</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RR_BionicMetabolizer</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RR_BionicMetabolizerHediff</addsHediff>
+	</RecipeDef>
+
+	<!--AI Encouragement Chip-->
+  <ThoughtDef>
+    <defName>RR_AIEncouragementChipThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>RR_AIEncouragementChipHediff</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>AI persuasion</label>
+        <description>There's a soft voice in the back of my head, telling me to eat. It's soothing and makes me feel at ease...and hungry.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>	
+	
+	<HediffDef ParentName="RR_AddedBodyPartBase">
+		<defName>RR_AIEncouragementChipHediff</defName>
+		<label>AI encouragement chip</label>
+		<labelNoun>an AI encouragement chip</labelNoun>
+		<hediffClass>RimRound.Hediffs.Hediff_AIEncouragementChip</hediffClass>
+		<description>An installed AI encouragement chip.</description>
+		<descriptionHyperlinks><ThingDef>RR_AIEncouragementChip</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>RR_AIEncouragementChip</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<partEfficiencyOffset>-0.10</partEfficiencyOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThingDef ParentName="RimRound_BodyPartBionicBase">
+		<defName>RR_AIEncouragementChip</defName>
+		<label>AI encouragement chip</label>
+		<description>A rogue archotech artificial personality installed in the brain, bizarrely preoccupied with making its host gain weight. Why it does this is beyond our understanding, but it is very adept at persuasion.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/AI_ENCOURAGER</texPath>
+		</graphicData>	
+		<descriptionHyperlinks><RecipeDef>RR_InstallAIEncouragementChip</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Gold>25</Gold>
+			<Plasteel>40</Plasteel>
+			<ComponentSpacer>6</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.2</Mass>
+		</statBases>
+
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>11</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RR_Research_AIEncouragement</researchPrerequisite>
+		</recipeMaker>	
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RR_InstallAIEncouragementChip</defName>
+		<label>install AI encouragement chip</label>
+		<description>Install an AI encouragement chip.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RR_AIEncouragementChip</ThingDef>
+			<HediffDef>RR_AIEncouragementChipHediff</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing AI encouragement chip.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_AIEncouragementChip</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RR_AIEncouragementChip</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RR_AIEncouragementChipHediff</addsHediff>
+	</RecipeDef>	
+</Defs>

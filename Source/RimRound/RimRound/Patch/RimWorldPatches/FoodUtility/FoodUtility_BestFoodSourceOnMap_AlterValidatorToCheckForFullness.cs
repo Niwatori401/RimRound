@@ -14,7 +14,7 @@ using Verse;
 namespace RimRound.Patch
 {
     [HarmonyPatch(typeof(FoodUtility))]
-    [HarmonyPatch(nameof(FoodUtility.BestFoodSourceOnMap_NewTemp))]
+    [HarmonyPatch(nameof(FoodUtility.BestFoodSourceOnMap))]
     public class FoodUtility_BestFoodSourceOnMap_AlterValidatorToCheckForFullness
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) 

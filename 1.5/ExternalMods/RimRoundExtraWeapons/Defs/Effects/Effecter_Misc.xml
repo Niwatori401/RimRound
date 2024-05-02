@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EffecterDef>
+    <defName>RREW_FatGasReleasing</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+        <soundDef>GasReleasing</soundDef>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.3</positionRadius>
+        <fleckDef>RREW_Fleck_FatGasSmall</fleckDef>
+        <chancePerTick>0.1</chancePerTick>
+        <scale>0.5~1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

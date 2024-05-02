@@ -33,5 +33,7 @@ namespace RimRound.Defs
         public static ThingDef RimRound_NovaTechApparel_ProtoSuit;
         public static ThingDef RimRound_NovaTechApparel_Belt;
         public static ThingDef RimRound_NovaTechApparel_Jumpsuit;
+
+        public static ThingDef RR_Gluttonium;
     }
 }

@@ -13,17 +13,17 @@ using Verse;
 
 namespace RimRound.Patch
 {
-	/// <summary>
-	/// This patch prevents an exception from being thrown when a pawn tries to wear clothing that does not have a sprite. 
-	/// </summary>
+    /// <summary>
+    /// This patch prevents an exception from being thrown when a pawn tries to wear clothing that does not have a sprite. 
+    /// </summary>
     [HarmonyPatch(typeof(ApparelGraphicRecordGetter))]
     [HarmonyPatch(nameof(ApparelGraphicRecordGetter.TryGetGraphicApparel))]
     public class ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex
     {
-		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {
             List<CodeInstruction> codeInstructions = new List<CodeInstruction>(instructions);
-            
+
             bool success1 = IfGraphicPathIsNullReturnNullApparelGraphicRecord(generator, codeInstructions);
             bool success2 = ReplaceVanillaGraphicDatabaseGetMethodWithMine(codeInstructions);
 
@@ -97,20 +97,20 @@ namespace RimRound.Patch
         /// <summary>
         /// Replacement method for normal texture getter. Can't figure out when last two arguments end up on stack, but they sure do :^>
         /// </summary>
-        public static Graphic GetApparelGraphic(string graphicPath, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType) 
-		{
-            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || 
-                apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || 
-                PawnRenderer.RenderAsPack(apparel) || 
-                apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || 
-                apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || 
-                apparel.def.apparel.LastLayer.defName == "OnHead" || 
+        public static Graphic GetApparelGraphic(string graphicPath, Shader shader, Vector2 vector, Color color, Apparel apparel, BodyTypeDef bodyType)
+        {
+            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead ||
+                apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover ||
+                apparel.RenderAsPack() ||
+                apparel.WornGraphicPath == BaseContent.PlaceholderImagePath ||
+                apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath ||
+                apparel.def.apparel.LastLayer.defName == "OnHead" ||
                 apparel.def.apparel.LastLayer.defName == "StrappedHead" ||
                 (from tag in apparel.def.apparel.tags where tag.Contains("Warcasket") select tag).Count() > 0)
             {
                 graphicPath = apparel.WornGraphicPath;
-            } 
-            else 
+            }
+            else
             {
                 graphicPath = apparel.WornGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
             }
@@ -119,13 +119,13 @@ namespace RimRound.Patch
             {
                 Log.Error($"Graphic path was not in null dict and should have been! Graphic path: {graphicPath}");
             }
-			else if (GlobalSettings.preferDefaultOutfitOverNaked && graphicPathResultIsNull[graphicPath]) 
-			{
-				graphicPath = Values.defaultClothingSetGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
+            else if (GlobalSettings.preferDefaultOutfitOverNaked && graphicPathResultIsNull[graphicPath])
+            {
+                graphicPath = Values.defaultClothingSetGraphicPath + "_" + BodyTypeUtility.ConvertBodyTypeDefDefnameAccordingToSettings(RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(bodyType).defName);
             }
 
             return GraphicDatabase.Get<Graphic_Multi>(graphicPath, shader, vector, color);
-		}
+        }
 
 
         /// <returns><see langword="true"/> if there does not exist clothing at that path for that bodytype. <see langword="false"/> otherwise.</returns>
@@ -142,12 +142,12 @@ namespace RimRound.Patch
 
         private static string AlterGraphicPathIfLastLayerIsOuter(Apparel apparel, string apparelGraphicPath)
         {
-            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead || 
-                apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover || 
-                PawnRenderer.RenderAsPack(apparel) || 
-                apparel.WornGraphicPath == BaseContent.PlaceholderImagePath || 
-                apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath || 
-                apparel.def.apparel.LastLayer.defName == "OnHead" || 
+            if (apparel.def.apparel.LastLayer == ApparelLayerDefOf.Overhead ||
+                apparel.def.apparel.LastLayer == ApparelLayerDefOf.EyeCover ||
+                apparel.RenderAsPack() ||
+                apparel.WornGraphicPath == BaseContent.PlaceholderImagePath ||
+                apparel.WornGraphicPath == BaseContent.PlaceholderGearImagePath ||
+                apparel.def.apparel.LastLayer.defName == "OnHead" ||
                 apparel.def.apparel.LastLayer.defName == "StrappedHead" ||
                 (from tag in apparel.def.apparel.tags where tag.Contains("Warcasket") select tag).Count() > 0)
             {
@@ -185,14 +185,14 @@ namespace RimRound.Patch
         //False means the graphic IS valid. 
         public static Dictionary<string, bool> graphicPathResultIsNull = new Dictionary<string, bool>();
 
-        public static void InvalidateCache() 
+        public static void InvalidateCache()
         {
             graphicPathResultIsNull.Clear();
         }
 
 
-		static MethodInfo genTextNullOrEmptyMI = typeof(GenText).GetMethod(
-			nameof(GenText.NullOrEmpty),
-			BindingFlags.Static | BindingFlags.Public);
-	}
+        static MethodInfo genTextNullOrEmptyMI = typeof(GenText).GetMethod(
+            nameof(GenText.NullOrEmpty),
+            BindingFlags.Static | BindingFlags.Public);
+    }
 }

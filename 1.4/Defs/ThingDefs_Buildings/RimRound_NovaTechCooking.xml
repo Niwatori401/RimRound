@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>RR_UltraTechCookingStation</defName>
+    <label>ultratech cooking station</label>
+    <description>An extremely high-tech culinary station capable of cooking meals of excessively high caloric density.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/UltraTechCookingStation</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+    <costList>
+      <Steel>90</Steel>
+      <RR_Gluttonium>120</RR_Gluttonium>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>240</MaxHitPoints>
+      <Flammability>0.08</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2110</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <!--recipes>
+
+    </recipes-->
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>RR_UltraTechCookingModule</li>
+        </linkableFacilities>
+      </li>    
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>700</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3</heatPerSecond>
+      </li>
+    </comps>
+    <building>
+      <isMealSource>true</isMealSource>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+    </building>
+    <designationHotKey>Misc8</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>RR_Research_UltraTechCooking</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RR_UltraTechCookingModule</defName>
+    <label>ultratech cooking module</label>
+    <description>A module for the ultratech cooking station that vastly increases its output speed.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/UltraTechCookingModule</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <!--color>(96,114,95)</color-->
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.35</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>42</pathCost>
+    <statBases>
+      <Beauty>2</Beauty>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>4020</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0.02</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>40</Steel>
+      <RR_Gluttonium>60</RR_Gluttonium>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <researchPrerequisites>
+      <li>RR_Research_CookingModule</li>
+    </researchPrerequisites>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous> <!--Ask about this-->
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>      
+    </comps>
+    <designationHotKey>Misc6</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+  </ThingDef>  
+</Defs>

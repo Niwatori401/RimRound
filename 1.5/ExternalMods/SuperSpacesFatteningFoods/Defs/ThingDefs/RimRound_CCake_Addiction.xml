@@ -1,0 +1,196 @@
+<Defs>
+	<!-- Cake Base for children -->
+	<ThingDef Name="cakeDrugBase" Abstract="True">
+		<defName>cakeDrugBase</defName>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<useHitPoints>true</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>2</Beauty>
+			<Mass>0.44</Mass>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>150</stackLimit>
+		<thingCategories>
+			<li>Drugs</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Drugs</li>
+		</tradeTags>
+		<alwaysHaulable>true</alwaysHaulable>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_FoodPoisonable" />
+		</comps>
+		<pathCost>14</pathCost>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<allowedArchonexusCount>40</allowedArchonexusCount>
+		<ingestible>
+			<foodType>Meal</foodType>
+			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+			<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+		</ingestible>
+		<storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+		<orderedTakeGroup>Drug</orderedTakeGroup>
+	</ThingDef>
+	<!--Actual Food Item Cake-->
+	<ThingDef ParentName="cakeDrugBase">
+		<defName>cakeFat</defName>
+		<label>"Cannot-Stop" cake</label>
+		<description>It'll definitely leave a mark on your waistline. Hopefully it's good! Totally not addictive.</description>
+		<graphicData>
+			<texPath>Things/Food/LardCake</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>25</MarketValue>
+			<WorkToMake>450</WorkToMake>
+			<Nutrition>20</Nutrition>
+		</statBases>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>cakeHigh</hediffDef>
+					<severity>0.50</severity>
+					<toleranceChemical>cakeChem</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>cakeTolerance</hediffDef>
+					<severity>0.080</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<tasteThought></tasteThought>
+			<foodType>Processed</foodType>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.10</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+				<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+				<fullnessToNutritionRatio>.02</fullnessToNutritionRatio>
+			</li>
+			<li Class="CompProperties_Drug">
+				<chemical>cakeChem</chemical>
+				<addictiveness>0.50</addictiveness>
+				<minToleranceToAddict>0.005</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+		<allowedArchonexusCount>20</allowedArchonexusCount>
+	</ThingDef>
+	<!--CakeHigh-->
+	<HediffDef>
+		<defName>cakeHigh</defName>
+		<label>Cannot-Stop Cake Growth</label>
+		<description>"Cannot Stop" Cake chemicals in the bloodstream. It lifts the mood and fattens the body.</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.75</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li />
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>cakeHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>cakeHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>"Cannot-Stop" Cake Growth High</label>
+				<description>That cake was just so sweet! It makes me feel more comfy, and is making me feel so warm at the same time! I love it!</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- Addiction -->
+	<ChemicalDef>
+		<defName>cakeChem</defName>
+		<label>"Cannot-Stop" Cake</label>
+		<addictionHediff>cakeAddiction</addictionHediff>
+		<toleranceHediff>cakeTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>8</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>chemical_Cake</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>cannot-stop cake</label>
+		<description>Because of an addiction to the imfamous "Cannot-Stop" Cake, this person needs to regularly consume the cake to avoid withdrawal symptoms.</description>
+		<listPriority>20</listPriority>
+	</NeedDef>
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>cakeTolerance</defName>
+		<label>cake tolerance</label>
+		<description>A built-up tolerance to "Cannot-Stop" Cake. The more severe this tolerance is, the more of the cake it takes to get the same effect.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.030</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>cakeChem</chemical>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="AddictionBase">
+		<defName>cakeAddiction</defName>
+		<label>cannot-stop cake addiction</label>
+		<description>A chemical addiction to "Cannot-Stop" Cake. Long-term presence of "Cannot-Stop" Cake has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+			\n Without the regular consumption of "Cannot-Stop" Cake, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.
+		\n Or you could ignore this warning and keep fattening up the little pawn anyway. I know that's what you'll do anyway.</description>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>chemical_Cake</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.1</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>cakeWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>cakeAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>cannot-stop cake withdrawal</label>
+				<description>I feel so cold and hungry, I want to be so much more. I never thought I'd want a piece of cake so much.</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

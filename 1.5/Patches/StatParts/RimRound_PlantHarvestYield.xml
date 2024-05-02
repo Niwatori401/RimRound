@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/StatDef[defName="PlantHarvestYield"]/parts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/StatDef[defName="PlantHarvestYield"]/parts</xpath>
+			<value>
+				<li Class="RimRound.AI.StatPart_HarvestYield"/>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/StatDef[defName="PlantHarvestYield"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimRound.AI.StatPart_HarvestYield"/>
+				</parts>
+			</value>		
+		</nomatch>
+	</Operation>
+</Patch>

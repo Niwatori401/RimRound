@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef ParentName="InjuryBase">
+		<defName>Burst</defName>
+		<label>burst</label>
+		<labelNoun>a rupture</labelNoun>
+		<description>A rupture.</description>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>sutured</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.15</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>tear scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.15</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0.40</bleedRate>
+			<canMerge>false</canMerge>
+			<destroyedLabel>Torn apart</destroyedLabel>
+			<destroyedOutLabel>Torn out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+</Defs>
