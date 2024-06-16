@@ -1,5 +1,19 @@
 ==================================================
-Commit Hash: 5a6b7dc5c7379edfdae2c89d7437ae622879b189
+Commit Hash: 20c96f8e2914494efccd17a0361b12ec04967cb1
+Author: Niwatori401
+Date: Sun Jun 16 17:58:26 2024
+
+Update perk icons (Thanks Toggle!)
+
+==================================================
+Commit Hash: 144a5cc6b8920f48e96d9c4c9ff4a73e35dfe82a
+Author: Niwatori401
+Date: Mon Apr 15 01:58:36 2024
+
+Fix issue where shamblers would break right click menus
+
+==================================================
+Commit Hash: cb189f0cf2d6d8db8376ea2b6059c499f858c267
 Author: Niwatori401
 Date: Sun Apr 14 02:27:56 2024
 
