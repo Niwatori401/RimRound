@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 20c96f8e2914494efccd17a0361b12ec04967cb1
+Commit Hash: 73b6123f2d6f0d492524578803b991503f4d29f2
+Author: Niwatori401
+Date: Sun Jun 16 18:05:41 2024
+
+Update credits
+
+==================================================
+Commit Hash: 4923ebbd8902875911e665b0ab5e12545d5d902b
 Author: Niwatori401
 Date: Sun Jun 16 17:58:26 2024
 
