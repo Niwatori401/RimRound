@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: ddd10c70ee88c6da1eb41d7ad90c2e23981c4684
+Commit Hash: d5a4cd22f1609ad0a342f03adde68bbf6bd942b2
+Author: Niwatori401
+Date: Wed Jun 19 23:55:03 2024
+
+Remove file verification program
+Update gitignore
+
+==================================================
+Commit Hash: 29087a173a7514bd660ee27ded841f088b39cc87
 Author: Niwatori401
 Date: Wed Jun 19 23:46:58 2024
 
