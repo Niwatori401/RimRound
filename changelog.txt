@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 73b6123f2d6f0d492524578803b991503f4d29f2
+Commit Hash: ddd10c70ee88c6da1eb41d7ad90c2e23981c4684
+Author: Niwatori401
+Date: Wed Jun 19 23:46:58 2024
+
+Add thought defs for new gelatinous levels
+
+==================================================
+Commit Hash: 5b10440f34510dda0a5f8562b0806f3da87163d5
 Author: Niwatori401
 Date: Sun Jun 16 18:05:41 2024
 

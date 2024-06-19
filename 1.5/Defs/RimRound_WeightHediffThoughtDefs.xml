@@ -182,8 +182,69 @@
 		  <li>
 			<label>Inconceivable</label>
 			<description>...</description>
+			<baseMoodEffect>-100</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>I'm a gigantic landscape of fat now. Why can't I stop eating?</description>
+			<baseMoodEffect>-120</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I've become my own nation of lard. I can't say I'm surprised anymore.</description>
+			<baseMoodEffect>-150</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>I'm never going to stop, am I? I hope everyone has made peace with that.</description>
+			<baseMoodEffect>-180</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>I'm as large as an entire continent of this planet...what will happen to me?</description>
+			<baseMoodEffect>-200</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>I'm going to overtake the whole world! Why isn't anybody stopping me?!</description>
+			<baseMoodEffect>-250</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>They let it happen...it's gone...I can't go back anymore.</description>
+			<baseMoodEffect>-300</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>If there's nowhere else to go, does it even matter what I think anymore?</description>
+			<baseMoodEffect>-350</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>I've got to keep eating...there's nothing else.</description>
+			<baseMoodEffect>-400</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>I can't find any enjoyment from this, but I know there's no point in worrying anymore, either.</description>
 			<baseMoodEffect>0</baseMoodEffect>
 		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>This is my life now.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+          
 		</stages>
 	  </ThoughtDef>
 	  
@@ -371,6 +432,66 @@
 			<description>I am a crime against nature. I always wanted to be world famous, but not like this...</description>
 			<baseMoodEffect>-75</baseMoodEffect>
 		  </li>
+                   <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>I'm going to outgrow the planet! Stop! Stop!</description>
+			<baseMoodEffect>-90</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I've displaced all of those poor people! Why won't anyone put a stop to me?!</description>
+			<baseMoodEffect>-110</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>They're worshipping me like I were some sort of deity, but I just wanted a quiet life. I'm terrified.</description>
+			<baseMoodEffect>-130</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>There's no more room! Where will they go now?!</description>
+			<baseMoodEffect>-150</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>Please, no more...stop...I can't...have to keep eating...</description>
+			<baseMoodEffect>-180</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>Nowhere else...all me...</description>
+			<baseMoodEffect>-200</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>More food, someone, anyone...can't...</description>
+			<baseMoodEffect>-160</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>I must be the only one that hates this...was I wrong?</description>
+			<baseMoodEffect>-80</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>Nobody seems to mind...I can't understand what's happening anymore.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>This is not the type of star I wanted to become.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -556,6 +677,66 @@
 			<label>Inconceivable</label>
 			<description>The hunger, the gurgling...the vibrations for miles. I live in ceaseless torture. I shouldn't exist.</description>
 			<baseMoodEffect>-65</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>The hunger, the hunger...</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I can only eat, but it's never enough...so much...</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>How can I still be hungry? I don't want to think about how big I am.</description>
+			<baseMoodEffect>-80</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>They're just going about their day on top of me. Is this some sort of divine punishment?</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>Half of this world is me. To think I was worried about outgrowing my room...</description>
+			<baseMoodEffect>-60</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>I used to have hope it would stop. It's almost...liberating to know otherwise, strangely.</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>When I consider my situation, I suppose it can't  really get any worse anymore. But I'm still not happy about it at all.</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>It's uncomfortably warm and wet in here. And I keep asking for bigger portions, but it's never enough.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>Everyone else seems content with what I've become. I don't want to be a disappointment.</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>...I wonder if asking for even more would be considered selfish.</description>
+			<baseMoodEffect>0</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
@@ -743,6 +924,66 @@
 			<description>No matter how hard I try, I just keep growing. I've lost all hope of it ever stopping.</description>
 			<baseMoodEffect>-55</baseMoodEffect>
 		  </li>
+                     <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>The hunger, the hunger...</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I can only eat, but it's never enough...so much...</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -928,6 +1169,66 @@
 			<label>Inconceivable</label>
 			<description>I did this.</description>
 			<baseMoodEffect>-50</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>I know I'm getting bigger, but it's hard to tell anymore. I'm warm and cozy, but this hunger isn't going away.</description>
+			<baseMoodEffect>-40</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I can't stop eating. How could I possibly ask for more food?</description>
+			<baseMoodEffect>-35</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>Everyone's living on me and working to keep me happy. Is this really okay?</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>This feels so wrong! I can't be enjoying this!</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>I'm covering half the planet! I'm so ashamed...but I'm also strangely excited.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>They're all here! On top of me! This feels so bizarre. I'm still so conflicted.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>They're going to turn me into a galaxy of fat. I must be crazy for wanting more, but...</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>They're not bringing me food fast enough...I don't know whether I'm embarrassed about it.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>I'm blocking out the sun, and nobody's complaining. I keep asking for more, and they keep providing. Was I crazy to dislike it?</description>
+			<baseMoodEffect>10</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>I think I could get used to this.</description>
+			<baseMoodEffect>15</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
@@ -1115,6 +1416,66 @@
 			<description>I can only think about how much I want to eat. It's like a million voices in my mind fighting for dominance, but they're all saying the same thing...</description>
 			<baseMoodEffect>-40</baseMoodEffect>
 		  </li>
+                     <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>The hunger, the hunger...</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I can only eat, but it's never enough...so much...</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -1301,6 +1662,66 @@
 			<description>I'm the pinnacle of beauty. Every moment is total ecstasy. I am complete.</description>
 			<baseMoodEffect>75</baseMoodEffect>
 		  </li>
+                     <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>The hunger, the hunger...</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I can only eat, but it's never enough...so much...</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
 		</stages>
 	  </ThoughtDef>
 	  
@@ -1486,6 +1907,66 @@
 			<label>Inconceivable</label>
 			<description>The entire planet is slowly disappearing underneath me. I will take its place. All is well.</description>
 			<baseMoodEffect>90</baseMoodEffect>
+		  </li>
+                     <!--Gelatinous 21-->
+		  <li>
+			<label>Fat landscape</label>
+			<description>The hunger, the hunger...</description>
+			<baseMoodEffect>-70</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 22-->
+		  <li>
+			<label>Country-sized</label>
+			<description>I can only eat, but it's never enough...so much...</description>
+			<baseMoodEffect>-75</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 23-->
+		  <li>
+			<label>Deific</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 24-->
+		  <li>
+			<label>Continental</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 25-->
+		  <li>
+			<label>Hemispheric</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 26-->
+		  <li>
+			<label>Planetary</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 27-->
+		  <li>
+			<label>Catalysmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 28-->
+		  <li>
+			<label>Apocalyptic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 29-->
+		  <li>
+			<label>Stellar</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+                   <!--Gelatinous 30-->
+		  <li>
+			<label>Cosmic</label>
+			<description>...</description>
+			<baseMoodEffect>0</baseMoodEffect>
 		  </li>
 		</stages>
 	  </ThoughtDef>
