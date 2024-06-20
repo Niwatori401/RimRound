@@ -379,7 +379,7 @@ namespace RimRound.Comps
                     yield return new Command_Action
                     {
                         defaultLabel = $"Change Head Offset {(xy ? "Y" : "X")}{(positivity == 1 ? "+" : "-")} for {((Pawn)parent).story.bodyType} {(cardinality == 0 ? "north" : (cardinality == 1 ? "east" : (cardinality == 2 ? "south" : "west")))} at {offsetAmounts[offsetAmountsIndex]}",
-                        icon = Resources.CHANGE_OFFSET_ITEM_ICON,
+                        icon = Resources.HEAD_OFFSET_ICON,
                         action = delegate ()
                         {
                             Resources.gizmoClick.PlayOneShotOnCamera(null);

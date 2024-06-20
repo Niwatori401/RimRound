@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 	<HediffDef Name="RR_ImplantHediffBase" Abstract="True">
 		<hediffClass>Hediff_Implant</hediffClass>
@@ -70,15 +72,14 @@
 		</graphicData>
 		<descriptionHyperlinks><RecipeDef>RR_InstallHungerImplant</RecipeDef></descriptionHyperlinks>
 		<costList>
-			<Hyperweave>30</Hyperweave>
-			<Plasteel>20</Plasteel>
+			<Plasteel>35</Plasteel>
 			<ComponentSpacer>1</ComponentSpacer>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
 
 		<statBases>
-			<WorkToMake>2400</WorkToMake>
+			<WorkToMake>5280</WorkToMake>
 			<Mass>2</Mass>
 		</statBases>
 
@@ -218,7 +219,7 @@
 		</graphicData>		
 		<descriptionHyperlinks><RecipeDef>RR_InstallBionicMetabolizer</RecipeDef></descriptionHyperlinks>
 		<costList>
-			<Hyperweave>30</Hyperweave>
+			<Hyperweave>20</Hyperweave>
 			<Plasteel>20</Plasteel>
 			<ComponentSpacer>2</ComponentSpacer>
 			<ComponentIndustrial>3</ComponentIndustrial>
@@ -226,7 +227,7 @@
 		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
 
 		<statBases>
-			<WorkToMake>2400</WorkToMake>
+			<WorkToMake>5280</WorkToMake>
 			<Mass>2</Mass>
 		</statBases>
 

@@ -1,5 +1,15 @@
 ==================================================
-Commit Hash: 23bcf1d8b93ef95c79b50d87d142163b305cb155
+Commit Hash: 5d105b365c7b89d78eb958f59dbb9c60d04ca4cf
+Author: Niwatori401
+Date: Thu Jun 20 03:37:27 2024
+
+Balance crafting recipes for hunger implant
+Balance crafting recipes for bionic metabolizer
+Balance stats for food net machines
+fix icon oversight for head offset debug widget
+
+==================================================
+Commit Hash: 41dee1764cf4ad12c2b7adaed7959053053200c4
 Author: Niwatori401
 Date: Thu Jun 20 00:14:22 2024
 

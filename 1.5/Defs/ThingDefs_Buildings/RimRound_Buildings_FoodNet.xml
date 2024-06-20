@@ -132,7 +132,7 @@
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<pathCost>50</pathCost>
 		<blockWind>true</blockWind>
-		<fillPercent>0.40</fillPercent>
+		<fillPercent>0.55</fillPercent>
 		<tickerType>Normal</tickerType>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
@@ -647,8 +647,8 @@
 		</thingCategories>
 		<statBases>
 			<Mass>70</Mass>
-			<MaxHitPoints>80</MaxHitPoints>
-			<WorkToBuild>35</WorkToBuild>
+			<MaxHitPoints>160</MaxHitPoints>
+			<WorkToBuild>3600</WorkToBuild>
 			<Flammability>0.7</Flammability>
 			<Beauty>-2</Beauty>
 		</statBases>
