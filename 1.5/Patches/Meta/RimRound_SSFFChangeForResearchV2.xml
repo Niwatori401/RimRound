@@ -20,7 +20,7 @@
                 <value>
                     <researchPrerequisite>RR_Research_GlutoniumDrugs</researchPrerequisite>
                 </value>
-            </li>          
+            </li>
             <!--Replace tables that can use the recipes--> 
 			<li Class="PatchOperationReplace">
                 <xpath>Defs/RecipeDef[@Name="FatMealBase"]/recipeUsers</xpath>
@@ -72,6 +72,26 @@
                     </comps>
                 </value>
             </li>       
+			
+			<!--Change work amounts for recipes-->
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="cakeFat"]/statBases/WorkToMake</xpath>
+                <value><WorkToMake>1690</WorkToMake></value>
+            </li>   
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="FatBurger"]/statBases/WorkToMake</xpath>
+                <value><WorkToMake>1300</WorkToMake></value>
+            </li>   
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Donut"]/statBases/WorkToMake</xpath>
+                <value><WorkToMake>1000</WorkToMake></value>
+            </li>  
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="fatpill"]/statBases/WorkToMake</xpath>
+                <value><WorkToMake>1340</WorkToMake></value>
+            </li>    
+			
+			
             <!--Add gluttonium crafting component to recipes-->                  
 			<li Class="PatchOperationAdd">
                 <xpath>Defs/RecipeDef[defName="CookFatBurger"]/ingredients</xpath>
