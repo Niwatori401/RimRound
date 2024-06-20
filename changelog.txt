@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: d5a4cd22f1609ad0a342f03adde68bbf6bd942b2
+Commit Hash: 23bcf1d8b93ef95c79b50d87d142163b305cb155
+Author: Niwatori401
+Date: Thu Jun 20 00:14:22 2024
+
+Fix compatibility issue with Camera+
+Failing to patch external mods is no longer fatal
+
+==================================================
+Commit Hash: 78af716972e82e49a489eed037bf524d9c01a688
 Author: Niwatori401
 Date: Wed Jun 19 23:55:03 2024
 
