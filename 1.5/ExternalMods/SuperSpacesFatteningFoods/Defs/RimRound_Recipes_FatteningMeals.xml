@@ -108,7 +108,7 @@
 	<RecipeDef ParentName="FatSweetMealBase">
 		<defName>CookDonut</defName>
 		<label>cook a nice Donut</label>
-		<description>Cook a nice yummy donut from any farmed plant</description>
+		<description>Cook a nice yummy donut from any farmed plant.</description>
 		<jobString>Cooking Donut.</jobString>
 		<ingredients>
 			<li>

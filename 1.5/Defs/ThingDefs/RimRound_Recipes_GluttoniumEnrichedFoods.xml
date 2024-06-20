@@ -48,7 +48,7 @@
 	<RecipeDef ParentName="RR_GluttoniumEnrichedBase">
 		<defName>RR_CookMechaniteMuffin</defName>
 		<label>cook a mechanite muffin</label>
-		<description>Cook a huge mechanite infused muffin</description>
+		<description>Cook a huge mechanite infused muffin.</description>
 		<jobString>Cooking mechanite muffin.</jobString>
 		<ingredients>
 			<li>
@@ -78,7 +78,7 @@
 	<RecipeDef ParentName="RR_GluttoniumEnrichedBase">
 		<defName>RR_CookPackedPizza</defName>
 		<label>cook a packed pizza</label>
-		<description>Cook a massive slice of gluttonium infused pizza</description>
+		<description>Cook a massive slice of gluttonium infused pizza.</description>
 		<jobString>Cooking packed pizza.</jobString>
 		<ingredients>
 			<li>
@@ -109,7 +109,7 @@
 		<defName>RR_CookLaBombe</defName>
 		<label>cook la bombe</label>
 		<workAmount>1800</workAmount>
-		<description>Cook the culinary masterpiece that is 'la bombe'</description>
+		<description>Cook the culinary masterpiece that is 'la bombe'.</description>
 		<jobString>Cooking la bombe.</jobString>
 		<ingredients>
 			<li>
