@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: 55fbd1119f37c7c3efbed2e28dd85f66fe58fda1
+Commit Hash: fcb6d6f22380f76c2843a84f5cc4b3cb95fc2a8b
+Author: Niwatori401
+Date: Thu Jun 20 05:28:41 2024
+
+Modify gitignore
+
+==================================================
+Commit Hash: b2fa7b46afcfff1e5a0621982a64ced63b2159be
 Author: Niwatori401
 Date: Thu Jun 20 05:25:10 2024
 

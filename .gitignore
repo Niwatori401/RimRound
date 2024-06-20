@@ -16,6 +16,7 @@
 *.userprefs
 
 RESULT_HASH.txt
+Thumbs.db:encryptable
 
 # Mono auto generated files
 mono_crash.*
