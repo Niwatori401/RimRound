@@ -75,38 +75,46 @@ namespace RimRound.Utilities
 
         public static void TryPatch(Harmony harmonyinstance, ModPatchInfo modPatchInfo, PatchCollection patchCollection)
         {
-            if (!CheckModInstalled(modPatchInfo.ModName) ||
-                (patchCollection.prefix is null && patchCollection.postfix is null && patchCollection.transpiler is null && patchCollection.finalizer is null))
-                return;
-
-            MethodInfo methodToPatchMI;
-
-            switch (modPatchInfo.MethodType)
+            try
             {
-                case MethodType.Normal:
-                    methodToPatchMI = GetMethodInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName, modPatchInfo.methodParameters);
-                    break;
-                case MethodType.Getter:
-                    methodToPatchMI = GetPropertyInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName)?.GetGetMethod(true);
-                    break;
-                case MethodType.Setter:
-                    methodToPatchMI = GetPropertyInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName)?.GetSetMethod(true);
-                    break;
-                case MethodType.Constructor:
-                    throw new NotImplementedException();
-                case MethodType.StaticConstructor:
-                    throw new NotImplementedException();
-                default:
-                    throw new NotImplementedException();
+                if (!CheckModInstalled(modPatchInfo.ModName) ||
+                (patchCollection.prefix is null && patchCollection.postfix is null && patchCollection.transpiler is null && patchCollection.finalizer is null))
+                    return;
+
+                MethodInfo methodToPatchMI;
+
+                switch (modPatchInfo.MethodType)
+                {
+                    case MethodType.Normal:
+                        methodToPatchMI = GetMethodInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName, modPatchInfo.methodParameters);
+                        break;
+                    case MethodType.Getter:
+                        methodToPatchMI = GetPropertyInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName)?.GetGetMethod(true);
+                        break;
+                    case MethodType.Setter:
+                        methodToPatchMI = GetPropertyInfo(modPatchInfo.ModName, modPatchInfo.TypeName, modPatchInfo.MethodName)?.GetSetMethod(true);
+                        break;
+                    case MethodType.Constructor:
+                        throw new NotImplementedException();
+                    case MethodType.StaticConstructor:
+                        throw new NotImplementedException();
+                    default:
+                        throw new NotImplementedException();
+                }
+
+                harmonyinstance.Patch(methodToPatchMI,
+                    patchCollection.prefix is null ? null : new HarmonyMethod(patchCollection.prefix),
+                    patchCollection.postfix is null ? null : new HarmonyMethod(patchCollection.postfix),
+                    patchCollection.transpiler is null ? null : new HarmonyMethod(patchCollection.transpiler),
+                    patchCollection.finalizer is null ? null : new HarmonyMethod(patchCollection.finalizer));
+
+                Log.Message($"[RimRound] successfully patched {modPatchInfo.ModName}'s {modPatchInfo.MethodName}!");
             }
-
-            harmonyinstance.Patch(methodToPatchMI, 
-                patchCollection.prefix     is null ? null : new HarmonyMethod(patchCollection.prefix), 
-                patchCollection.postfix    is null ? null : new HarmonyMethod(patchCollection.postfix),  
-                patchCollection.transpiler is null ? null : new HarmonyMethod(patchCollection.transpiler),
-                patchCollection.finalizer  is null ? null : new HarmonyMethod(patchCollection.finalizer));
-
-            Log.Message($"[RimRound] successfully patched {modPatchInfo.ModName}'s {modPatchInfo.MethodName}!");
+            catch (Exception e)
+            {
+                Log.Error($"[RimRound] Failed to patch {modPatchInfo.ModName}'s {modPatchInfo.MethodName}. Please report this!");
+            }
+            
         }
 
         public static bool CheckModInstalled(string modname) 

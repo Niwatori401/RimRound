@@ -51,11 +51,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\DevDependencies\Harmony_1.5\Current\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\Harmony15\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AlienRace">
-      <HintPath>..\..\..\..\DevDependencies\839005762_HAR_15\1.5\Assemblies\AlienRace.dll</HintPath>
+      <HintPath>..\..\..\HumanoidAlienRaces15\1.5\Assemblies\AlienRace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">

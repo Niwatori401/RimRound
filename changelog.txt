@@ -1,5 +1,27 @@
 ==================================================
-Commit Hash: 5a6b7dc5c7379edfdae2c89d7437ae622879b189
+Commit Hash: acb8fe98bc71e9fa08e3e03dba1a7aa3beccb5f2
+Author: Niwatori401
+Date: Thu Jun 20 00:14:22 2024
+
+Fix compatibility issue with Camera+
+Failing to patch external mods is no longer fatal
+
+==================================================
+Commit Hash: 53d34c5ccfc08feedfb5b36adb82d67c841bc674
+Author: Niwatori401
+Date: Thu May 2 02:05:22 2024
+
+Merge branch 'dev'
+
+==================================================
+Commit Hash: 144a5cc6b8920f48e96d9c4c9ff4a73e35dfe82a
+Author: Niwatori401
+Date: Mon Apr 15 01:58:36 2024
+
+Fix issue where shamblers would break right click menus
+
+==================================================
+Commit Hash: cb189f0cf2d6d8db8376ea2b6059c499f858c267
 Author: Niwatori401
 Date: Sun Apr 14 02:27:56 2024
 
@@ -185,11 +207,41 @@ Date: Fri Jun 23 12:11:44 2023
 Add race support for Dreemurr Race (Continued)
 
 ==================================================
+Commit Hash: 913b54ae1f29d73d7341a08296fbb79de0e9760e
+Author: Niwatori401
+Date: Tue May 9 10:34:01 2023
+
+Fix Warcaskets from Vanilla Pirates Expanded displaying as tshirts
+
+==================================================
+Commit Hash: a78b3f4a77a21a374828cad1a3e0692fc744a904
+Author: Niwatori401
+Date: Fri Jun 23 11:52:34 2023
+
+Revert bad commit "Recompile solution"
+
+This reverts commit 72ff0d857ce5e5ea8839d720823aa628a795321b.
+
+==================================================
 Commit Hash: d850beb83dd6dce6f390c4abf7bc7bc44827b309
 Author: Niwatori401
 Date: Tue May 9 10:34:01 2023
 
 Fix Warcaskets from Vanilla Pirates Expanded displaying as tshirts
+
+==================================================
+Commit Hash: 72ff0d857ce5e5ea8839d720823aa628a795321b
+Author: Niwatori401
+Date: Wed Apr 12 09:15:36 2023
+
+Recompile solution
+
+==================================================
+Commit Hash: fec2c27de245cd39beceb0690b95d84d6e35ecf7
+Author: Niwatori401
+Date: Sat May 6 05:14:13 2023
+
+Fix possible NRE in gas checks
 
 ==================================================
 Commit Hash: f29feeafaa8d6ae542cf379b61d05afd782166e5
@@ -250,6 +302,21 @@ Fix experimental embiggener adding and then subtracting different weights if mul
 Change hediff utility functions to optionally apply multipliers for weight
 
 ==================================================
+Commit Hash: c5f8ebe9367f06cbc9ed41641c669e25e503ed4d
+Author: Niwatori401
+Date: Fri Apr 21 11:28:00 2023
+
+Rebuild and merge null body fix
+
+==================================================
+Commit Hash: 0e3e52a3069a889547debc16cad036d1f2a5723f
+Author: Niwatori401
+Date: Fri Apr 21 11:21:42 2023
+
+Fix babies and children from showing up as pink squares
+Remove old patch maker files
+
+==================================================
 Commit Hash: cf3714ab33254676f58a970f4fffa8a5725df92c
 Author: Niwatori401
 Date: Fri Apr 21 11:21:42 2023
@@ -289,6 +356,20 @@ Date: Wed Apr 19 11:40:40 2023
 Rewrite patchmaker
 
 ==================================================
+Commit Hash: 6330c867452aefb9a3d55821d0d48a55cc19b195
+Author: Niwatori401
+Date: Wed Apr 19 10:32:20 2023
+
+Merge HAR fix
+
+==================================================
+Commit Hash: ae83c3bbc1e3ce4c78c87eeea0a60fc08b2d9ddd
+Author: Niwatori401
+Date: Wed Apr 19 10:28:27 2023
+
+Fix HAR patch
+
+==================================================
 Commit Hash: e6e556e2a9f40b5eea0fe65c63d4ca188ad05440
 Author: Niwatori401
 Date: Wed Apr 19 10:29:03 2023
@@ -320,6 +401,20 @@ Integrate SuperSpace's Fattening Foods to new research tree
 Change patch for cooking station to regular workgiverdef
 
 ==================================================
+Commit Hash: c014f54254499dd17375a044245f90dcf0bd3077
+Author: Niwatori401
+Date: Tue Apr 18 10:40:09 2023
+
+Merge HAR fix
+
+==================================================
+Commit Hash: d1f3cc5dec92ef5858b00f4dca35579a2684bb71
+Author: Niwatori401
+Date: Tue Apr 18 10:37:06 2023
+
+Fix broken HAR patch
+
+==================================================
 Commit Hash: 4d4456bd72a6e2de6619a6af569df9b9cc6b8077
 Author: Niwatori401
 Date: Tue Apr 18 10:37:56 2023
@@ -339,6 +434,20 @@ Author: Niwatori401
 Date: Sat Apr 15 23:47:58 2023
 
 Fix localization issue
+
+==================================================
+Commit Hash: 3677a7b8c2d3a7aedbb7f47a46d1a765c7d33772
+Author: Niwatori401
+Date: Sat Apr 15 23:47:58 2023
+
+Fix localization issue
+
+==================================================
+Commit Hash: aa6acc330562f48828f6fc9135cfc1a91900fa11
+Author: Niwatori401
+Date: Wed Apr 12 09:15:36 2023
+
+Recompile solution
 
 ==================================================
 Commit Hash: 0c853746762fa1f5005c3f2619b8cea589028465

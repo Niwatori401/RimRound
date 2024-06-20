@@ -42,7 +42,7 @@ namespace RimRound.Patch
 
 			ModCompatibilityUtility.TryPatch(
 				harmony, 
-				new ModPatchInfo("Camera+", "CameraPlus.Tools", "ShouldShowDot", MethodType.Normal), 
+				new ModPatchInfo("Camera+", "CameraPlus.DotTools", "ShouldShowMarker", MethodType.Normal), 
 				CameraPlus_Tools_ShouldShowDot_DontShowDotForGelatinous.GetPatchCollection());
 			
 			//ModCompatibilityUtility.TryPatch(
