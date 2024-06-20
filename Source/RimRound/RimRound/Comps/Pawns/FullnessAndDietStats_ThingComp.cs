@@ -123,7 +123,7 @@ namespace RimRound.Comps
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (Disabled) { yield break; }
+            if (Disabled || (!this.parent.AsPawn().IsColonist && !this.parent.AsPawn().IsPrisonerOfColony && !Prefs.DevMode)) { yield break; }
 
             if (GlobalSettings.showPawnDietManagementGizmo && ShouldShowWeightGizmo())
                 yield return this.weightGizmo;
@@ -159,6 +159,7 @@ namespace RimRound.Comps
             base.PostSpawnSetup(respawningAfterLoad);
 
             if (Disabled) { return; }
+
 
             if (((Pawn)parent)?.RaceProps.Humanlike ?? false)
             {

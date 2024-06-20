@@ -19,6 +19,9 @@ namespace RimRound.Comps
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
+            if (!this.parent.AsPawn().IsColonist && !this.parent.AsPawn().IsPrisonerOfColony && !Prefs.DevMode)
+                yield break;
+
             if (GlobalSettings.showSleepPostureManagementGizmo)
                 yield return sleepPositionGizmo;
         }

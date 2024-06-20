@@ -1,5 +1,13 @@
 ==================================================
-Commit Hash: 5d105b365c7b89d78eb958f59dbb9c60d04ca4cf
+Commit Hash: b27d5ffad697f2f4f8ad77c37776f1505b8fe150
+Author: Niwatori401
+Date: Thu Jun 20 04:45:56 2024
+
+Make diet control, blanket visibility and sleeping direction gizmos
+invisible for non-colony pawns
+
+==================================================
+Commit Hash: 0c2c82d4acfa0fcdb97006595586053ac0c0829e
 Author: Niwatori401
 Date: Thu Jun 20 03:37:27 2024
 
