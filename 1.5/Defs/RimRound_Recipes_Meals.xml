@@ -246,7 +246,7 @@
       </li>
     </ingredients>
     <products>
-      <CookMealFineHuge>1</CookMealFineHuge>
+      <MealFineHuge>1</MealFineHuge>
     </products>
   </RecipeDef>
 
