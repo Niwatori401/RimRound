@@ -254,7 +254,7 @@
 			</bodyPartGroups>
 			<wornGraphicPath>FillerTexture</wornGraphicPath>
 			<layers>
-				<li>OnSkin</li>
+				<li>Middle</li>
 			</layers>
 		</apparel>
 	</ThingDef>	
