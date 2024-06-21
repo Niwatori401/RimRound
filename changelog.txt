@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: d2d3662ab053b6f7a9320285977a618a11964057
+Commit Hash: 33676785b8dbf4a02f939837c8b796e76a12f518
+Author: Niwatori401
+Date: Fri Jun 21 04:26:43 2024
+
+Alter stats for gluttonium as a material for crafting
+
+==================================================
+Commit Hash: 91778cd4a051a07f9ed1924263107877a78f0087
 Author: Niwatori401
 Date: Fri Jun 21 04:26:07 2024
 
