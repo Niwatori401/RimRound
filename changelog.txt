@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: f5eeb3780f9772af57d3b8de690cbfef41745c75
+Commit Hash: 51d3cfd1f79d95c747e87885e71cf89ad5ba4520
+Author: Niwatori401
+Date: Sun Jun 23 07:38:08 2024
+
+Add new male clothing textures (Thanks Whiteglove!)
+
+==================================================
+Commit Hash: c8963749a9922ba33f096087ad6762b1c17da5c3
 Author: Niwatori401
 Date: Fri Jun 21 04:25:28 2024
 
