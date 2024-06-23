@@ -22,6 +22,8 @@ namespace RimRound.Defs
         public static HediffDef RimRound_Arthritis;
         public static HediffDef RimRound_SuddenWeightGain;
         public static HediffDef RimRound_SuddenWeightGainImmunity;
-
+        public static HediffDef RimRound_HediffGenevaSuggestion;
+        public static HediffDef RimRound_HediffFoodIsFood;
+        public static HediffDef RimRound_HediffHealthyFrame;
     }
 }

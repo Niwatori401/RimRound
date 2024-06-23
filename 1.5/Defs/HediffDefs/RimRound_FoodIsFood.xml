@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Hidden hediff to excempt negative food thoughts from the "Food is Food" perk-->
+<Defs>
+	<HediffDef>
+		<defName>RimRound_HediffFoodIsFood</defName>
+		<label>has "Food is Food" perk</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>-</labelNoun>
+		<description>This pawn has "Food is Food" perk and is thus unbothered by eating anything.</description>	
+		<hediffClass>Hediff</hediffClass>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>0.0</minSeverity>
+				<label>has "Food is Food" perk</label>
+				<lifeThreatening>false</lifeThreatening>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,21 @@
+<Defs>
+	<HediffDef>
+		<defName>RimRound_HediffHealthyFrame</defName>
+		<label>has "healthy frame" perk</label>
+		<labelNoun>-</labelNoun>
+		<description>has "healthy frame" perk</description>
+		<hediffClass>Hediff</hediffClass>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>0.0</minSeverity>
+				<label>has "healthy frame" perk</label>
+				<lifeThreatening>false</lifeThreatening>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<ImmunityGainSpeed>0.20</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

@@ -28,12 +28,18 @@ namespace RimRound.Utilities
         public static readonly Texture2D dietPlanIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/DIET_PLAN", true);
         public static readonly Texture2D digestionBeyondQuestionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/DIGESTION_BEYOND_QUESTION", true);
         public static readonly Texture2D endlessIndulgenceIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ENDLESS_INDULGENCE", true);
+        public static readonly Texture2D enigmaticExpansionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ENIGMATIC_EXPANSION", true);
         public static readonly Texture2D evenFurtherBeyondIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/EVEN_FURTHER_BEYOND", true);
         public static readonly Texture2D fatFurnaceIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/FAT_FURNACE", true);
         public static readonly Texture2D foldsOfHeavenIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/FOLDS_OF_HEAVEN", true);
+        public static readonly Texture2D foodIsFoodIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/FOOD_IS_FOOD", true);
+        public static readonly Texture2D genevaSuggestionIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/GENEVA_SUGGESTION", true);
         public static readonly Texture2D gigaGurglingIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/GIGA_GURGLING", true);
         public static readonly Texture2D gluttonyIncarnateIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/GLUTTONY_INCARNATE", true);
+        public static readonly Texture2D healthyFrameIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/HEALTHY_FRAME", true);
+        public static readonly Texture2D heavierRevianIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/HEAVIER_REVIAN", true);
         public static readonly Texture2D heavyRevianIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/HEAVY_REVIAN", true);
+        public static readonly Texture2D inescapableInfinityIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/INESCAPABLE_INFINITY", true);
         public static readonly Texture2D itsComingThisWayIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ITS_COMING_THIS_WAY", true);
         public static readonly Texture2D limitBreakIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/LIMIT_BREAK", true);
         public static readonly Texture2D makesAllTheRulesIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/MAKES_ALL_OF_THE_RULES", true);
@@ -42,6 +48,7 @@ namespace RimRound.Utilities
         public static readonly Texture2D practicalProblemsIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/PRACTICAL_PROBLEMS", true);
         public static readonly Texture2D rotundRegenerationIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/ROTUND_REGENERATION", true);
         public static readonly Texture2D squareOneIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/SQUARE_ONE", true);
+        public static readonly Texture2D supremeStufferIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/SUPREME_STUFFER", true);
         public static readonly Texture2D titanicTankIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/TITANIC_TANK", true);
         public static readonly Texture2D voraciousIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/VORACIOUS", true);
         public static readonly Texture2D weLikeToPartyIcon = ContentFinder<Texture2D>.Get("UI/PerkIcons/WE_LIKE_TO_PARTY", true);
@@ -213,6 +220,28 @@ namespace RimRound.Utilities
                 {
                     p.perkLevels.PerkToLevels[perk.perkName] += 1;
                     p.perkLevels.availablePoints -= perk.cost;
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+            new Perk("RR_GenevaSuggestion_Title", "RR_GenevaSuggestion_Desc", 5, 1, genevaSuggestionIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+
+                    p.parent.AsPawn().health.AddHediff(Defs.HediffDefOf.RimRound_HediffGenevaSuggestion);
                 }
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
@@ -436,6 +465,58 @@ namespace RimRound.Utilities
             {
                if (GetInsufficientPerkLevelSuccessReport("RR_Comfortable_Corpulence_Title", 10, p) is SuccessReport s && !s)
                     return s;
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+            new Perk("RR_FoodIsFood_Title", "RR_FoodIsFood_Desc", 6, 1, foodIsFoodIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+
+                    p.parent.AsPawn().health.AddHediff(Defs.HediffDefOf.RimRound_HediffFoodIsFood);
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+                    return new SuccessReport("Must be at least Fat to purchase", false);
+
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+            new Perk("RR_HealthyFrame_Title", "RR_HealthyFrame_Desc", 5, 1, healthyFrameIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+
+                    p.parent.AsPawn().health.AddHediff(Defs.HediffDefOf.RimRound_HediffHealthyFrame);
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+                    return new SuccessReport("Must be at least Fat to purchase", false);
+
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
@@ -810,6 +891,36 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
+            new Perk("RR_Atomic_Anomaly_Title", "RR_Atomic_Anomaly_Desc", 25, 1, atomicAnomalyIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    //p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+
+                    Pawn pawn = p.parent.AsPawn();
+                    Utilities.HediffUtility.AddHediffSeverity(HediffDefOf.RimRound_Weight, pawn, Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(500));
+
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
+                    return s;
+
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    return new SuccessReport("Must be Gelatinous 10 to purchase", false);
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
             new Perk("RR_That_Title", "RR_That_Desc", 15, 1, thatIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
@@ -958,7 +1069,8 @@ namespace RimRound.Utilities
                         eperk.perkName == "RR_MakesAllTheRules_Title" ||
                         eperk.perkName == "RR_That_Title" ||
                         eperk.perkName == "RR_PeakEvolution_Title" ||
-                        eperk.perkName == "RR_BlackHole_Title")
+                        eperk.perkName == "RR_BlackHole_Title" ||
+                        eperk.perkName == "RR_Atomic_Anomaly_Title")
                         continue;
 
 
@@ -986,26 +1098,22 @@ namespace RimRound.Utilities
                 return new SuccessReport("", true);
             }),
 
-            new Perk("RR_Atomic_Anomaly_Title", "RR_Atomic_Anomaly_Desc", 25, 1, atomicAnomalyIcon,
+            new Perk("RR_HeavierRevian_Title", "RR_HeavierRevian_Desc", 999, 0, heavierRevianIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
                 if (p.perkLevels.availablePoints >= perk.cost)
                 {
-                    //p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
                     p.perkLevels.availablePoints -= perk.cost;
-
-                    Pawn pawn = p.parent.AsPawn();
-                    Utilities.HediffUtility.AddHediffSeverity(HediffDefOf.RimRound_Weight, pawn, Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(500));
-
                 }
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
-                    return s;
+                if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "ReviaRaceAlien"))
+                    return new SuccessReport("Only Revia can purchase", false);
 
                 if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
-                    return new SuccessReport("Must be Gelatinous 10 to purchase", false);
+                    return new SuccessReport("Must be Gelatinous X to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
                     return new SuccessReport("Max level", false);
@@ -1015,6 +1123,67 @@ namespace RimRound.Utilities
 
                 return new SuccessReport("", true);
             }),
+
+            new Perk("RR_EnigmaticExpansion_Title", "RR_EnigmaticExpansion_Desc", 50, 1, enigmaticExpansionIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    // This perk is purchasable indefinitely, so remove increment
+                    // p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+
+                    Pawn pawn = p.parent.AsPawn();
+                    Utilities.HediffUtility.AddHediffSeverity(HediffDefOf.RimRound_Weight, pawn, Utilities.HediffUtility.KilosToSeverityWithoutBaseWeight(10_000));
+
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
+                    return s;
+
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990_Gelatinous))
+                    return new SuccessReport("Must be Gelatinous 20 to purchase", false);
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+
+            new Perk("RR_InescapableInfinity_Title", "RR_InescapableInfinity_Desc", 100, 5, inescapableInfinityIcon,
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (p.perkLevels.availablePoints >= perk.cost)
+                {
+                    p.perkLevels.PerkToLevels[perk.perkName] += 1;
+                    p.perkLevels.availablePoints -= perk.cost;
+
+                }
+            },
+            (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
+            {
+                if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
+                    return s;
+
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990_Gelatinous))
+                    return new SuccessReport("Must be Gelatinous 20 to purchase", false);
+
+                if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
+                    return new SuccessReport("Max level", false);
+
+                if (perk.cost > p.perkLevels.availablePoints)
+                    return new SuccessReport("Not enough points", false);
+
+                return new SuccessReport("", true);
+            }),
+
+
 
             new Perk("RR_Ascension_Title", "RR_Ascension_Desc", 1, 1, ascensionIcon,
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>

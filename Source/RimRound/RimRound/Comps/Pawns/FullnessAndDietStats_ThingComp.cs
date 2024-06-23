@@ -586,7 +586,7 @@ namespace RimRound.Comps
                 int makesAllTheRulesLevel = perkLevels.PerkToLevels?["RR_MakesAllTheRules_Title"] ?? 0;
                 int heavyRevianLevel = perkLevels.PerkToLevels?["RR_HeavyRevian_Title"] ?? 0;
                 int thatLevel = perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
-
+                int inescapableInfinityLevel = perkLevels.PerkToLevels?["RR_InescapableInfinity_Title"] ?? 0;
                 int peakEvolutionLevel = perkLevels.PerkToLevels?["RR_PeakEvolution_Title"] ?? 0;
 
                 if (makesAllTheRulesLevel > 0)
@@ -616,7 +616,8 @@ namespace RimRound.Comps
                         0.5f * heavyRevianLevel +
                         1.0f * peakEvolutionLevel +
                         4.0f * makesAllTheRulesLevel +
-                        2.0f * thatLevel),
+                        2.0f * thatLevel +
+                        5.0f * inescapableInfinityLevel),
                     0, float.MaxValue);
             }
         }

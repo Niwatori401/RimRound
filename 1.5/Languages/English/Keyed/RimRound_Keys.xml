@@ -396,6 +396,22 @@
 	<RR_PeakEvolution_Title>Peak Evolution</RR_PeakEvolution_Title>
 	<RR_OneMoreBite_Title>One More Bite</RR_OneMoreBite_Title>
 	
+	<!--Implemented--><RR_GenevaSuggestion_Title>Geneva Suggestion</RR_GenevaSuggestion_Title>
+	<!--Implemented--><RR_EnigmaticExpansion_Title>Enigmatic Expansion</RR_EnigmaticExpansion_Title>
+	<!--Implemented--><RR_FoodIsFood_Title>Food Is Food</RR_FoodIsFood_Title>
+	<!--Implemented--><RR_HealthyFrame_Title>Healthy Frame</RR_HealthyFrame_Title>
+	<RR_HeavierRevian_Title>Heavier Revian</RR_HeavierRevian_Title>
+	<!--Implemented--><RR_InescapableInfinity_Title>Inescapable Infinity</RR_InescapableInfinity_Title>
+	<RR_SupremeStuffer_Title>Supreme Stuffer</RR_SupremeStuffer_Title>
+	
+	<RR_GenevaSuggestion_Desc>Pawn will not suffer a mood loss from eating without a table. \n\n"{0}'s astounding mental fortitude has somehow granted them the capability of not caring where they eat their meal. Truly, they are an enigmatic individual."</RR_GenevaSuggestion_Desc>
+	<RR_EnigmaticExpansion_Desc>+10,000KG instantly to pawn (affected by multipliers.)\n\n[NO FLAVOR TEXT]\n\nPrerequisite: Even Further Beyond, Gelatinous 20+</RR_EnigmaticExpansion_Desc>
+	<RR_FoodIsFood_Desc>Pawn receives no mood penalty from any type of food. This includes raw food, cannibalism, and corpses.\n\n"If it's remotely edible, {0} will eat it. Who cares where, what, or who it came from?"\n\nPrerequisite: Must be Fat or above.</RR_FoodIsFood_Desc>
+	<RR_HealthyFrame_Desc>Pawn gains +20% immunity gain speed.\n\n"{0}'s constantly full stomach means they recover quicker than most from diseases. They will be back on their feet and eating in no time!"\n\nPrerequisite: Must be Fat or above.</RR_HealthyFrame_Desc>
+	<RR_HeavierRevian_Desc>[NO DESCRIPTION]</RR_HeavierRevian_Desc>
+	<RR_InescapableInfinity_Desc>+5.0x weight gain multiplier per level\n\n[NO FLAVOR TEXT]\n\nPrerequisite: Even Further Beyond, Gelatinous 20+</RR_InescapableInfinity_Desc>
+	<RR_SupremeStuffer_Desc>Eating past the pawn's hard limit no longer immobilizes the pawn. Movement is instead reduced to a maximum of 10%.\n\n"{0} doesn't know the meaning of the word full. They can continue to eat as long as they remain concious, stuffing themselves to an inconceivable degree if they wish."</RR_SupremeStuffer_Desc>
+	
 	<RR_Ample_Appetite_Desc>+10% hunger rate multiplier per level\n\n"{0}'s body has grown accustomed to an increased food intake, and will now require even more to stay satiated."</RR_Ample_Appetite_Desc>
 	<RR_Apex_Absorption_Desc>+0.1x weight gain multiplier per level\n\n"{0}'s metabolism has gone into overdrive, allowing them to gain more weight from the same amount of food."</RR_Apex_Absorption_Desc>
 	<RR_Comfortable_Corpulence_Desc>-0.03x movement penalty multiplier per level\n\n"{0}'s body has gotten used to bearing the substantial strain on it, resulting in a small reduction to their movement penalty."</RR_Comfortable_Corpulence_Desc>

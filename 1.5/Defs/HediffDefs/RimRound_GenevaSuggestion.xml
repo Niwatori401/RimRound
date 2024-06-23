@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Hidden hediff to excempt eat without table thought from the "Geneva Suggestion" perk-->
+<Defs>
+	<HediffDef>
+		<defName>RimRound_HediffGenevaSuggestion</defName>
+		<label>has "Geneva Suggestion" perk</label>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<labelNoun>eating at a feeding tube-ness</labelNoun>
+		<description>This pawn has the "Geneva Suggestion" perk and is thus unbothered by eating anywhere.</description>	
+		<hediffClass>Hediff</hediffClass>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>0.0</minSeverity>
+				<label>has "Geneva Suggestion" perk</label>
+				<lifeThreatening>false</lifeThreatening>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
