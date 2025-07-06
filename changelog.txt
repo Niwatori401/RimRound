@@ -1,5 +1,12 @@
 ==================================================
-Commit Hash: a26ad80b08c3cdde9293bf807456e79012da820b
+Commit Hash: 9eebc9cf9b65a0cd0746ecb86a4027257b4af155
+Author: Niwatori401
+Date: Sun Jul 6 23:33:54 2025
+
+Add additional debug information to debug print function
+
+==================================================
+Commit Hash: f3d093021655d35d227d463bb4a3baf7957edfe3
 Author: Niwatori401
 Date: Thu Jan 23 01:38:54 2025
 

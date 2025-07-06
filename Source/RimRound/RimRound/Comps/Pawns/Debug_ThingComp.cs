@@ -163,6 +163,12 @@ namespace RimRound.Comps
                             Log.Message($"Weight: {pawn.Weight()}");
                             Log.Message($"Gender: {pawn.gender}");
                             Log.Message($"Digestion Rate (1000x): {comp.DigestionRate * 1000}");
+                            Log.Message($"Weight Gain Multiplier: {comp.WeightGainMultiplier}");
+                            Log.Message($"Weight Loss Multiplier: {comp.WeightLossMultiplier}");
+                            Log.Message($"Stomach Elasticity: {comp.StomachElasticity}");
+
+
+
                             Log.Message($"Fullness: {comp.CurrentFullness}");
                             Log.Message($"Age: {pawn.ageTracker.AgeBiologicalYears}");
                             Log.Message($"Faction: {pawn.Faction}");
