@@ -1,0 +1,243 @@
+<!-- ======================= Yak =============================== -->
+
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>SG_CaloyakMeat</defName>
+		<label>caloyak meat</label>
+		<description>Meat from a caloyak. Heavily enriched with calorite.</description>
+		<graphicData>
+      		<texPath>Things/Products/CaloyakMeat</texPath>
+      		<graphicClass>Graphic_StackCount</graphicClass>
+    	</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>1.9</MarketValue> <!-- Can be used like meat in recipes -->
+			<Mass>0.045</Mass>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.5</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>2</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+		</comps>
+		<ingestible>
+			<preferability>RawBad</preferability>
+			<foodType>AnimalProduct, Meat</foodType>
+			<babiesCanIngest>false</babiesCanIngest>
+		</ingestible>
+		<thingCategories>
+			<li>CaloriteIngredients</li>
+			<li>MeatRaw</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>SG_Caloyak</defName>
+    <label>caloyak</label>
+    <devNote>cow-1</devNote>
+    <description>Genetically engineered by Swell-Glow to produce an extremely fattening milk product infused with calorite, caloyaks were picked up by traders who didn't know better and spread to even the most remote of rimworlds.</description>
+    <statBases>
+      <MoveSpeed>3.2</MoveSpeed>
+      <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+      <MarketValue>320</MarketValue>
+      <FilthRate>16</FilthRate>
+	  <Wildness>0.20</Wildness>
+    </statBases>
+    <uiIconScale>1.15</uiIconScale>
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>SG_Calomilk</milkDef>
+        <milkIntervalDays>1</milkIntervalDays>
+        <milkAmount>5</milkAmount>
+      </li>
+    </comps>
+    <race>
+      <specificMeatDef>SG_CaloyakMeat</specificMeatDef>
+      <body>QuadrupedAnimalWithHooves</body>
+      <herdAnimal>true</herdAnimal>
+      <baseBodySize>2.1</baseBodySize>
+      <baseHungerRate>0.535</baseHungerRate>
+      <baseHealthScale>1.5</baseHealthScale>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherDef>Leather_Plain</leatherDef>
+      <roamMtbDays>2</roamMtbDays>
+      <petness>0.3</petness>
+      <trainability>None</trainability>
+      <packAnimal>true</packAnimal>
+      <gestationPeriodDays>6.66</gestationPeriodDays>
+      <lifeExpectancy>22</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.3333</minAge>
+          <soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+          <soundDeath>Pawn_Muffalo_Death</soundDeath>
+          <soundCall>Pawn_Muffalo_Call</soundCall>
+          <soundAngry>Pawn_Muffalo_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Herbivore_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.27)</li>
+        <li>(0.3, 0, 0.015)</li>
+        <li>(0.0, 0, -0.19)</li>
+        <li>(-0.3, 0, 0.015)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalFarm</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.8</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>left hoof</label>
+        <labelNoLocation>hoof</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hoof</label>
+        <labelNoLocation>hoof</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>SG_Caloyak</defName>
+    <label>caloyak</label>
+    <race>SG_Caloyak</race>
+    <combatPower>75</combatPower>
+    <ecoSystemWeight>1.1</ecoSystemWeight>
+    <labelMale>caloyak</labelMale>
+    <wildGroupSize>3~5</wildGroupSize>
+    <lifeStages>
+      <li>
+        <label>caloyak calf</label>
+        <labelPlural>caloyak calves</labelPlural>
+        <bodyGraphicData>
+          <texPath>Animals/Caloyak/CaloYakMale</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Animals/Caloyak/CaloYakFemale</texPath>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Animals/Caloyak/Dessicated_CaloYakMale</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Animals/Caloyak/Dessicated_CaloYakFemale</texPath>
+          <drawSize>1.25</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Animals/Caloyak/CaloYakMale</texPath>
+          <drawSize>2.15</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Animals/Caloyak/CaloYakFemale</texPath>
+          <drawSize>2.0</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Animals/Caloyak/Dessicated_CaloYakMale</texPath>
+          <drawSize>2.15</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Animals/Caloyak/Dessicated_CaloYakFemale</texPath>
+          <drawSize>2.0</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Animals/Caloyak/CaloYakMale</texPath>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Animals/Caloyak/CaloYakFemale</texPath>
+          <drawSize>2.6</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Animals/Caloyak/Dessicated_CaloYakMale</texPath>
+          <drawSize>2.7</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Animals/Caloyak/Dessicated_CaloYakFemale</texPath>
+          <drawSize>2.6</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

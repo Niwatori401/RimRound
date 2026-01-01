@@ -1,0 +1,246 @@
+<Defs>
+    <GeneDef Name="SG_GeneDigestDown" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneDigestDown</defName>
+        <label>slow digestion</label>
+        <labelShortAdj>slow-digestion</labelShortAdj>
+        <description>Carriers of this gene digest food slowly. They'll be full for a long time.</description>
+        <iconPath>Genes/DigestionDown</iconPath>
+        <displayOrderInCategory>111</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitDigestDown</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>DigestionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneDigestUp" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneDigestUp</defName>
+        <label>fast digestion</label>
+        <labelShortAdj>fast-digestion</labelShortAdj>
+        <description>Carriers of this gene digest food quicker than most people. They'll be ready to eat again sooner rather than later.</description>
+        <iconPath>Genes/DigestionUp</iconPath>
+        <displayOrderInCategory>110</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitDigestUp</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>DigestionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneDigestUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneDigestUpPlus</defName>
+        <label>ultra digestion</label>
+        <labelShortAdj>ultra-digestion</labelShortAdj>
+        <description>Carriers of this gene digest food at a speed unheard of to most people.</description>
+        <iconPath>Genes/DigestionUpPlus</iconPath>
+        <displayOrderInCategory>111</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitDigestUpPlus</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>DigestionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+
+
+    <GeneDef Name="SG_GeneWeightDownPlus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightDownPlus</defName>
+        <label>ultra metabolism</label>
+        <labelShortAdj>ultra-metabolism</labelShortAdj>
+        <description>Carriers of this gene burn through calories like they aren't even there. It'll take some serious effort for them to gain any weight.</description>
+        <iconPath>Genes/WeightDownPlus</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitWeightGainDownPlus</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>WeightGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightDown" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightDown</defName>
+        <label>fast metabolism</label>
+        <labelShortAdj>fast-metabolism</labelShortAdj>
+        <description>Carriers of this gene burn calories quicker than most people. It'll take a lot more food for them to gain weight.</description>
+        <iconPath>Genes/WeightDown</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitWeightGainDown</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>WeightGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightUp" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightUp</defName>
+        <label>slow metabolism</label>
+        <labelShortAdj>slow-metabolism</labelShortAdj>
+        <description>Carriers of this gene burn calories slowly. They may gain some extra weight as a result.</description>
+        <iconPath>Genes/WeightUp</iconPath>
+        <displayOrderInCategory>112</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitWeightGainUp</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>WeightGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightUpPlus</defName>
+        <label>ultra slow metabolism</label>
+        <labelShortAdj>ultra-slow-metabolism</labelShortAdj>
+        <description>Carriers of this gene burn calories very slowly. Much of the food they eat will end up as added weight.</description>
+        <iconPath>Genes/WeightUpPlus</iconPath>
+        <displayOrderInCategory>112</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitWeightGainUpPlus</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>WeightGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+
+
+    <GeneDef Name="SG_GeneElasticDown" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneElasticDown</defName>
+        <label>rigid stomach</label>
+        <labelShortAdj>rigid-stomach</labelShortAdj>
+        <description>Carriers of this gene have a stomach that is incapable of stretching as much as the average person's.</description>
+        <iconPath>Genes/ElasticDown</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitStomachElasticityDown</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>ElasticGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneElasticUp" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneElasticUp</defName>
+        <label>flexible stomach</label>
+        <labelShortAdj>flexible-stomach</labelShortAdj>
+        <description>Carriers of this gene have a stomach that is more accommodating of food after it's reached its limit.</description>
+        <iconPath>Genes/ElasticUp</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitStomachElasticityUp</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>ElasticGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneElasticUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneElasticUpPlus</defName>
+        <label>elastic stomach</label>
+        <labelShortAdj>elastic-stomach</labelShortAdj>
+        <description>Carriers of this gene have a stomach that is extremely accommodating of food after it's reached its limit.</description>
+        <iconPath>Genes/ElasticUpPlus</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitStomachElasticityUpPlus</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>ElasticGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+
+
+    <GeneDef Name="SG_GeneEatSpeedDownPlus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneEatSpeedDownPlus</defName>
+        <label>very slow eater</label>
+        <labelShortAdj>very-slow-eater</labelShortAdj>
+        <description>Carriers of this gene take a very long time to eat food. They'll still be eating long after everyone else has finished.</description>
+        <iconPath>Genes/EatSpdDownPlus</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitEatSpeedDownPlus</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>EatSpeedGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneEatSpeedDown" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneEatSpeedDown</defName>
+        <label>slow eater</label>
+        <labelShortAdj>slow-eater</labelShortAdj>
+        <description>Carriers of this gene take a long time to eat food. They savor their food a little longer than most.</description>
+        <iconPath>Genes/EatSpdDown</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitEatSpeedDown</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>EatSpeedGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneEatSpeedUp" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneEatSpeedUp</defName>
+        <label>speed eater</label>
+        <labelShortAdj>speed-eater</labelShortAdj>
+        <description>Carriers of this gene eat very quickly. They'll be done with their meal before most people.</description>
+        <iconPath>Genes/EatSpdUp</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+                <def>SG_TraitEatSpeedUp</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>EatSpeedGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneEatSpeedUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneEatSpeedUpPlus</defName>
+        <label>inhales food</label>
+        <labelShortAdj>inhales-food</labelShortAdj>
+        <description>Carriers of this gene is like a black hole for food. They might be done with their food before anyone else even has the chance to sit down.</description>
+        <iconPath>Genes/EatSpdUpPlus</iconPath>
+        <displayOrderInCategory>113</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+            <def>SG_TraitEatSpeedUpPlus</def>
+            </li>
+        </forcedTraits>
+        <exclusionTags>
+            <li>EatSpeedGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>    
+</Defs>

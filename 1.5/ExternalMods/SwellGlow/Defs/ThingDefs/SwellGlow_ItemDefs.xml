@@ -1,0 +1,338 @@
+<Defs>
+	<!--Drugs-->
+	<ThingDef ParentName="swellGlowDrugBase">
+		<defName>swellGlowOriginal</defName>
+		<label>Swell-Glow</label>
+		<description>Calorite based pills from one of the most hedonistic glitterworld societies. Low-strength tasters for lightly softening your figure.</description>
+		<tradeTags>
+			<li>Drugs</li>
+		</tradeTags>
+		<graphicData>
+			<texPath>Things/SwellGlow/SwellGlow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>25</MarketValue>
+			<WorkToMake>375</WorkToMake>
+			<Nutrition>15</Nutrition>
+			<Mass>0.005</Mass>
+		</statBases>
+		<ingestible>
+            <outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowHigh</hediffDef>
+					<severity>0.20</severity>
+					<toleranceChemical>swellGlowChem</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowTolerance</hediffDef>
+					<severity>0.080</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<tasteThought></tasteThought>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.10</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+				<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+				<fullnessToNutritionRatio>.001</fullnessToNutritionRatio>
+			</li>
+            <li Class="CompProperties_Drug">
+				<chemical>swellGlowChem</chemical>
+				<addictiveness>0.20</addictiveness>
+				<minToleranceToAddict>0.005</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+		<allowedArchonexusCount>20</allowedArchonexusCount>
+	</ThingDef>
+	<ThingDef ParentName="swellGlowDrugBase">
+		<defName>swellGlowPlus</defName>
+		<label>Swell-Glow Plus</label>
+		<description>Calorite based pills from one of the most hedonistic glitterworld societies. Standard-strength pills for plumping up your figure.</description>
+		<tradeTags>
+			<li>Drugs</li>
+		</tradeTags>
+		<graphicData>
+			<texPath>Things/SwellGlow/SwellGlowPlus</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>40</MarketValue>
+			<WorkToMake>375</WorkToMake>
+			<Nutrition>40</Nutrition>
+			<Mass>0.005</Mass>
+		</statBases>
+		<ingestible>
+            <outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowHigh</hediffDef>
+					<severity>0.40</severity>
+					<toleranceChemical>swellGlowChem</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowTolerance</hediffDef>
+					<severity>0.080</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<tasteThought></tasteThought>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.20</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+				<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+				<fullnessToNutritionRatio>.001</fullnessToNutritionRatio>
+			</li>
+            <li Class="CompProperties_Drug">
+				<chemical>swellGlowChem</chemical>
+				<addictiveness>0.40</addictiveness>
+				<minToleranceToAddict>0.005</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+		<allowedArchonexusCount>20</allowedArchonexusCount>
+	</ThingDef>
+	<ThingDef ParentName="swellGlowDrugBase">
+		<defName>swellGlowX</defName>
+		<label>Swell-Glow X</label>
+		<description>Calorite based pills from one of the most hedonistic glitterworld societies. High-strength pills for a fast-track to obesity.</description>
+		<tradeTags>
+			<li>Drugs</li>
+		</tradeTags>
+		<graphicData>
+			<texPath>Things/SwellGlow/SwellGlowX</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>60</MarketValue>
+			<WorkToMake>375</WorkToMake>
+			<Nutrition>100</Nutrition>
+			<Mass>0.005</Mass>
+		</statBases>
+		<ingestible>
+            <outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowHigh</hediffDef>
+					<severity>0.70</severity>
+					<toleranceChemical>swellGlowChem</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowTolerance</hediffDef>
+					<severity>0.080</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<tasteThought></tasteThought>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.50</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+				<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+				<fullnessToNutritionRatio>0.001</fullnessToNutritionRatio>
+			</li>
+            <li Class="CompProperties_Drug">
+				<chemical>swellGlowChem</chemical>
+				<addictiveness>0.70</addictiveness>
+				<minToleranceToAddict>0.005</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+		<allowedArchonexusCount>20</allowedArchonexusCount>
+	</ThingDef>
+	<ThingDef ParentName="swellGlowDrugBase">
+		<defName>swellGlowMAX</defName>
+		<label>Swell-Glow MAX</label>
+		<description>Calorite based pills from one of the most hedonistic glitterworld societies. Maximum-strength pills for those who can't wait to become immobile.</description>
+		<tradeTags>
+			<li>Drugs</li>
+		</tradeTags>
+		<graphicData>
+			<texPath>Things/SwellGlow/SwellGlowMax</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<WorkToMake>375</WorkToMake>
+			<Nutrition>150</Nutrition>
+			<Mass>0.005</Mass>
+		</statBases>
+		<ingestible>
+            <outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowHigh</hediffDef>
+					<severity>1.00</severity>
+					<toleranceChemical>swellGlowChem</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>swellGlowTolerance</hediffDef>
+					<severity>0.080</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<tasteThought></tasteThought>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>1.00</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+				<compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+				<fullnessToNutritionRatio>.001</fullnessToNutritionRatio>
+			</li>
+            <li Class="CompProperties_Drug">
+				<chemical>swellGlowChem</chemical>
+				<addictiveness>1.0</addictiveness>
+				<minToleranceToAddict>0.005</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+		<allowedArchonexusCount>20</allowedArchonexusCount>
+	</ThingDef>
+
+	<!--Implants-->
+	<HediffDef ParentName="RR_AddedBodyPartBase">
+		<defName>SG_ImplantHediff</defName>
+		<label>Swell-Glow implant</label>
+		<labelNoun>a swell-glow implant</labelNoun>
+		<hediffClass>SwellGlow.SGImplant</hediffClass>
+		<initialSeverity>0.05</initialSeverity>
+		<alwaysShowSeverity>true</alwaysShowSeverity>
+		<description>An installed Swell-Glow implant.</description>
+		<descriptionHyperlinks><ThingDef>SG_SwellGlowImplant</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+
+	<ThingDef ParentName="RimRound_BodyPartBionicBase">
+		<defName>SG_SwellGlowImplant</defName>
+		<label>swell-glow implant</label>
+		<description>Want to take the magic of Swell-Glow wherever you go? This state-of-the-art implant uses calorite to constantly synthesize Swell-Glow within your own body! Never be without Swell-Glow again! Supports multiple implants, but since the activated calorite irreversibly binds with the stomach lining, it cannot be removed without replacing the stomach.</description>
+		<graphicData>
+			<texPath>Things/SwellGlow/SwellGlowImplant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<descriptionHyperlinks><RecipeDef>SG_InstallSwellGlowImplant</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<RR_Gluttonium>5</RR_Gluttonium>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+
+		<statBases>
+			<WorkToMake>5280</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RR_Research_HungerImplant</researchPrerequisite>
+		</recipeMaker>	
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>SG_InstallSwellGlowImplant</defName>
+		<label>install swell-glow implant</label>
+		<description>Install a swell-glow implant.</description>
+		<descriptionHyperlinks>
+			<ThingDef>SG_SwellGlowImplant</ThingDef>
+			<HediffDef>SG_ImplantHediff</HediffDef>
+		</descriptionHyperlinks>
+		<workerClass>SwellGlow.Recipe_InstallImplantAllowDuplicates</workerClass>
+		<jobString>Installing swell-glow implant.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SG_SwellGlowImplant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SG_SwellGlowImplant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>SG_ImplantHediff</addsHediff>
+	</RecipeDef>
+
+	<!--Food-->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>SG_Calomilk</defName>
+		<label>calomilk</label>
+		<description>Milk from a caloyak. Heavily enriched with calorite. Not safe for feeding to babies.</description>
+		<graphicData>
+			<texPath>Things/Products/Calomilk</texPath>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+		<MarketValue>1.9</MarketValue> <!-- Can be used like meat in recipes -->
+		<Mass>0.045</Mass>
+		<MaxHitPoints>60</MaxHitPoints>
+		<Flammability>0.2</Flammability>
+		<Nutrition>0.5</Nutrition>
+		<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>14</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<babiesCanIngest>false</babiesCanIngest>
+		</ingestible>
+		<thingCategories>
+			<li>CaloriteIngredients</li>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+  	</ThingDef>
+
+</Defs>

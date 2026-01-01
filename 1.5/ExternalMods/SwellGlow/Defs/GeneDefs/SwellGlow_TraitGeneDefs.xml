@@ -1,0 +1,146 @@
+<Defs>
+    <GeneDef Name="SG_GeneWeightHate" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightHate</defName>
+        <label>hate weight gain</label>
+        <labelShortAdj>weight-hate</labelShortAdj>
+        <description>Carriers of this gene despise the idea of carrying any amount of extra weight.</description>
+        <iconPath>Genes/Opinion/WOHate</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>100</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>Hate</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightDislike" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightDislike</defName>
+        <label>dislike weight gain</label>
+        <labelShortAdj>weight-dislike</labelShortAdj>
+        <description>Carriers of this gene like to be thin and will be upset if they gain weight.</description>
+        <iconPath>Genes/Opinion/WODislike</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>101</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>Dislike</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightNeutralMinus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightNeutralMinus</defName>
+        <label>slightly dislike weight gain</label>
+        <labelShortAdj>weight-slight-dislike</labelShortAdj>
+        <description>Carriers of this gene generally prefer to be thinner but don't hate the idea of a little meat on their bones.</description>
+        <iconPath>Genes/Opinion/WONeutralMinus</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>102</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>NeutralMinus</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightNeutral" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightNeutral</defName>
+        <label>neutral to weight gain</label>
+        <labelShortAdj>weight-neutral</labelShortAdj>
+        <description>Carriers of this gene believe that fat is just fat. While they don't want to be huge, they can appreciate bodies with a little extra weight on them.</description>
+        <iconPath>Genes/Opinion/WONeutral</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>103</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>Neutral</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightNeutralPlus" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightNeutralPlus</defName>
+        <label>slightly like weight gain</label>
+        <labelShortAdj>weight-slight-like</labelShortAdj>
+        <description>Carriers of this gene understand the appeal of the larger form. They appreciate the softness that comes with carrying extra weight and prefer to be heavier themselves.</description>
+        <iconPath>Genes/Opinion/WONeutralPlus</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>104</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>NeutralPlus</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightLike" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightLike</defName>
+        <label>like weight gain</label>
+        <labelShortAdj>weight-like</labelShortAdj>
+        <description>Carriers of this gene are true fat admirers. They would like nothing more than to be fat and will be quite upset if they're not.</description>
+        <iconPath>Genes/Opinion/WOLike</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>105</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>Like</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightLove" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightLove</defName>
+        <label>love weight gain</label>
+        <labelShortAdj>weight-love</labelShortAdj>
+        <description>Carriers of this gene are obsessed with being fat and idolize the idea of gaining weight.</description>
+        <iconPath>Genes/Opinion/WOLove</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>106</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>Love</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+    <GeneDef Name="SG_GeneWeightFanatical" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>SG_GeneWeightFanatical</defName>
+        <label>fanatical about weight gain</label>
+        <labelShortAdj>weight-fanatical</labelShortAdj>
+        <description>Carriers of this gene have lives that revolve around gaining weight and being fat. To them being fat is the pinnacle of what it means to exist.</description>
+        <iconPath>Genes/Opinion/WOFanatical</iconPath>
+        <geneClass>SwellGlow.SGGene</geneClass>
+        <displayOrderInCategory>107</displayOrderInCategory>
+        <modExtensions>
+            <li Class="SwellGlow.SGTraitExtension">
+                <opinionTrait>Fanatical</opinionTrait>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>WeightOpinionGene</li>
+        </exclusionTags>
+        <biostatMet>0</biostatMet>
+    </GeneDef>
+</Defs>

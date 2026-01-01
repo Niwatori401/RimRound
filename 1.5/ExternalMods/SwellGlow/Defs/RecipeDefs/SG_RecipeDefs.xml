@@ -1,0 +1,90 @@
+<Defs>
+    <ThingCategoryDef>
+        <defName>CaloriteIngredients</defName>
+        <label>calorite enriched</label>
+        <parent>FoodRaw</parent> <!-- or FoodRaw, or another category -->
+    </ThingCategoryDef>
+
+    <RecipeDef>
+        <defName>SG_MakeCalomilk</defName>
+        <label>make Calomilk</label>
+        <description>Make your own calomilk</description>
+        <jobString>Making Calomilk.</jobString>
+        <workAmount>300</workAmount> <!-- Reference: Simple Meal -->
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <workSkill>Cooking</workSkill>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <targetCountAdjustment>1</targetCountAdjustment>
+        <recipeUsers>
+            <li>FueledStove</li>
+            <li>ElectricStove</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Milk</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li> 
+                <filter>
+                    <thingDefs>
+                        <li>RR_Gluttonium</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <SG_Calomilk>1</SG_Calomilk>
+        </products>
+        <skillRequirements>
+            <Cooking>3</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+    <RecipeDef>
+        <defName>SG_MakeCaloyakMeat</defName>
+        <label>make caloyak meat</label>
+        <description>Make your own caloyak meat</description>
+        <jobString>Making Caloyak Meat.</jobString>
+        <workAmount>300</workAmount> <!-- Reference: Simple Meal -->
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <workSkill>Cooking</workSkill>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <targetCountAdjustment>1</targetCountAdjustment>
+        <recipeUsers>
+            <li>FueledStove</li>
+            <li>ElectricStove</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+						<li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li> 
+                <filter>
+                    <thingDefs>
+                        <li>RR_Gluttonium</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <SG_CaloyakMeat>1</SG_CaloyakMeat>
+        </products>
+        <skillRequirements>
+            <Cooking>3</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+</Defs>

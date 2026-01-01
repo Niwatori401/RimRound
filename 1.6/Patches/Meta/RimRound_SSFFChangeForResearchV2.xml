@@ -92,46 +92,6 @@
             </li>    
 			
 			
-            <!--Add gluttonium crafting component to recipes-->                  
-			<li Class="PatchOperationAdd">
-                <xpath>Defs/RecipeDef[defName="CookFatBurger"]/ingredients</xpath>
-                <value>
-                    <li>
-                        <filter>
-                            <thingDefs>
-                                <li>RR_Gluttonium</li>
-                            </thingDefs>
-                        </filter>
-                        <count>3</count>
-                    </li>
-                </value>
-            </li>
-			<li Class="PatchOperationAdd">
-                <xpath>Defs/RecipeDef[defName="CookDonut"]/ingredients</xpath>
-                <value>
-                    <li>
-                        <filter>
-                            <thingDefs>
-                                <li>RR_Gluttonium</li>
-                            </thingDefs>
-                        </filter>
-                        <count>1</count>
-                    </li>
-                </value>
-            </li>
-			<li Class="PatchOperationAdd">
-                <xpath>Defs/RecipeDef[defName="CookCake"]/ingredients</xpath>
-                <value>
-                    <li>
-                        <filter>
-                            <thingDefs>
-                                <li>RR_Gluttonium</li>
-                            </thingDefs>
-                        </filter>
-                        <count>5</count>
-                    </li>                    
-                </value>
-            </li>   
             <!--Change ingredient getter class to support gluttonium--> 
             <li Class="PatchOperationReplace">
                 <xpath>Defs/RecipeDef[@Name="FatMealBase"]/ingredientValueGetterClass</xpath>

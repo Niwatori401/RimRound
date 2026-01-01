@@ -1,0 +1,146 @@
+<Defs>
+	<RecipeDef Name="SwellGlow">
+		<defName>makeSwellGlow</defName>
+		<label>Synthesize Swell-Glow</label>
+		<description>Synthesize a Swell-Glow pill.</description>
+		<jobString>Synthesizing Swell-Glow.</jobString>
+		<workAmount>1300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<effectWorking>BurnDrug</effectWorking>
+		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
+		<researchPrerequisite>RR_Research_GlutoniumDrugs</researchPrerequisite>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<swellGlowOriginal>1</swellGlowOriginal>
+		</products>
+	</RecipeDef>
+	<RecipeDef Name="SwellGlowPlus">
+		<defName>makeSwellGlowPlus</defName>
+		<label>Synthesize Swell-Glow Plus</label>
+		<description>Synthesize a Swell-Glow Plus pill.</description>
+		<jobString>Synthesizing Swell-Glow Plus.</jobString>
+		<workAmount>1300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<effectWorking>BurnDrug</effectWorking>
+		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
+		<researchPrerequisite>RR_Research_GlutoniumDrugs</researchPrerequisite>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<swellGlowPlus>1</swellGlowPlus>
+		</products>
+	</RecipeDef>
+	<RecipeDef Name="SwellGlowX">
+		<defName>makeSwellGlowX</defName>
+		<label>Synthesize Swell-Glow X</label>
+		<description>Synthesize a Swell-Glow X pill.</description>
+		<jobString>Synthesizing Swell-Glow X.</jobString>
+		<workAmount>1300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<effectWorking>BurnDrug</effectWorking>
+		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
+		<researchPrerequisite>RR_Research_GlutoniumDrugs</researchPrerequisite>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<swellGlowX>1</swellGlowX>
+		</products>
+	</RecipeDef>
+	<RecipeDef Name="SwellGlowMAX">
+		<defName>makeSwellGlowMAX</defName>
+		<label>Synthesize Swell-Glow MAX</label>
+		<description>Synthesize a Swell-Glow MAX pill.</description>
+		<jobString>Synthesizing Swell-Glow MAX.</jobString>
+		<workAmount>1300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<effectWorking>BurnDrug</effectWorking>
+		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
+		<researchPrerequisite>RR_Research_GlutoniumDrugs</researchPrerequisite>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<swellGlowMAX>1</swellGlowMAX>
+		</products>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- =========  Temperate / Warm biomes  ========= -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+
+	<!-- =========  Dry biomes  ========= -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+
+	<!-- =========  Cold biomes  ========= -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="ColdBog"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="IceSheet"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef[defName="SeaIce"]/wildAnimals</xpath>
+		<value><SG_Caloyak>0.1</SG_Caloyak></value>
+	</Operation>
+
+</Patch>

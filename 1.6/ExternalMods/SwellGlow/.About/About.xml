@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Swell-Glow</name>
+	<author>Galactase</author>
+	<description>A RimRound mod that adds addictive fattening drugs, xenogenes, traits, and more related to RimRound stats and weight opinion. Art by bun. x.com/bun_owo</description>
+	<modVersion>1.1</modVersion>
+	<supportedVersions>
+    	<li>1.5</li>
+    	<li>1.6</li>
+  	</supportedVersions>
+	<modDependencies>
+	<li>
+		<packageId>Niwatori401.RimRound</packageId>
+		<displayName>RimRound</displayName>
+		<downloadUrl>https://github.com/Niwatori401/RimRound</downloadUrl>
+	</li>
+  	</modDependencies>
+	<packageId>Galactase.SwellGlow</packageId>
+</ModMetaData>

@@ -79,7 +79,7 @@
 	<RecipeDef ParentName="FatMealBase">
 		<defName>CookFatBurger</defName>
 		<label>cook a Big Ol' Burger</label>
-		<description>Cook a very large and very fattening burger from any farmed plant (except strawberries) and animal products.</description>
+		<description>Cook a very large and very fattening burger from any farmed plant (except strawberries) and animal products. Needs caloyak meat.</description>
 		<jobString>Cooking Lard Filled Burger.</jobString>
 
 		<ingredients>
@@ -91,6 +91,14 @@
 					</categories>
 				</filter>
 				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
 			</li>
 			<li>
 				<filter>
@@ -108,7 +116,7 @@
 	<RecipeDef ParentName="FatSweetMealBase">
 		<defName>CookDonut</defName>
 		<label>cook a nice Donut</label>
-		<description>Cook a nice yummy donut from any farmed plant.</description>
+		<description>Cook a nice yummy donut from any farmed plant. Needs caloyak milk.</description>
 		<jobString>Cooking Donut.</jobString>
 		<ingredients>
 			<li>
@@ -119,6 +127,14 @@
 				</filter>
 				<count>.25</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<products>
 			<Donut>1</Donut>
@@ -127,7 +143,7 @@
 	<RecipeDef ParentName="FatSweetMealBase">
 		<defName>CookCake</defName>
 		<label>cook a "Cannot-Stop" Cake</label>
-		<description>Cook a big fat filled slice of "Cannot-Stop" Cake, a totally not addicting baked good!</description>
+		<description>Cook a big fat filled slice of "Cannot-Stop" Cake, a totally not addicting baked good!  Needs caloyak milk.</description>
 		<jobString>Cooking Donut.</jobString>
 		<ingredients>
 			<li>
@@ -137,6 +153,14 @@
 					</categories>
 				</filter>
 				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RR_Gluttonium</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<products>

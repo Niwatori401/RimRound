@@ -1,0 +1,318 @@
+<Defs>
+    <!--─────────────────────────────────────────────────────────────
+  DIGESTION‑SPEED TRAITS
+───────────────────────────────────────────────────────────────-->
+<TraitDef>
+  <defName>SG_TraitDigestDown</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>slow digestion</label>
+      <description>[PAWN_nameDef] digests food slowly. [PAWN_pronoun]'ll be full for a long time.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitDigestUp</li>
+    <li>SG_TraitDigestUpPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <digestionSpeedMultBonus>-0.5</digestionSpeedMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitDigestUp</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>fast digestion</label>
+      <description>[PAWN_nameDef] digests food quicker than most people. [PAWN_pronoun]'ll be ready to eat again sooner rather than later.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitDigestDown</li>
+    <li>SG_TraitDigestUpPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <digestionSpeedMultBonus>0.5</digestionSpeedMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitDigestUpPlus</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>ultra digestion</label>
+      <description>[PAWN_nameDef]'s stomach spells doom for all food. [PAWN_pronoun] digests {PAWN_possessive} food at a speed unheard of to most people.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitDigestDown</li>
+    <li>SG_TraitDigestUp</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <digestionSpeedMultBonus>1</digestionSpeedMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+
+<!--─────────────────────────────────────────────────────────────
+  WEIGHT‑GAIN TRAITS
+───────────────────────────────────────────────────────────────-->
+<TraitDef>
+  <defName>SG_TraitWeightGainUpPlus</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>ultra slow metabolism</label>
+      <description>[PAWN_nameDef] burns calories very slowly. Much of the food [PAWN_pronoun] eats will end up as added weight.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitWeightGainUp</li>
+    <li>SG_TraitWeightGainDown</li>
+    <li>SG_TraitWeightGainDownPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <weightGainMultiplierMultBonus>1</weightGainMultiplierMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitWeightGainUp</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>slow metabolism</label>
+      <description>[PAWN_nameDef] burns calories slowly. [PAWN_pronoun] may gain some extra weight as a result.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitWeightGainUpPlus</li>
+    <li>SG_TraitWeightGainDown</li>
+    <li>SG_TraitWeightGainDownPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <weightGainMultiplierMultBonus>0.5</weightGainMultiplierMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitWeightGainDown</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>fast metabolism</label>
+      <description>[PAWN_nameDef] burns calories quicker than most people. It'll take a lot more food for {PAWN_objective} to gain weight.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitWeightGainUpPlus</li>
+    <li>SG_TraitWeightGainUp</li>
+    <li>SG_TraitWeightGainDownPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <weightLossMultiplierMultBonus>0.5</weightLossMultiplierMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitWeightGainDownPlus</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>ultra metabolism</label>
+      <description>[PAWN_nameDef] burns through calories like they aren't even there. It'll take some serious effort for {PAWN_objective} to gain any weight.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitWeightGainUpPlus</li>
+    <li>SG_TraitWeightGainUp</li>
+    <li>SG_TraitWeightGainDown</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <weightLossMultiplierMultBonus>1</weightLossMultiplierMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+
+<!--─────────────────────────────────────────────────────────────
+  EATING‑SPEED TRAITS
+───────────────────────────────────────────────────────────────-->
+<TraitDef>
+  <defName>SG_TraitEatSpeedDownPlus</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>very slow eater</label>
+      <description>[PAWN_nameDef] takes a very long time to eat food. [PAWN_pronoun]'ll still be eating long after everyone else has finished.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitEatSpeedDown</li>
+    <li>SG_TraitEatSpeedUp</li>
+    <li>SG_TraitEatSpeedUpPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <eatingSpeedReductionMitigationMultBonus_Fullness>-0.5</eatingSpeedReductionMitigationMultBonus_Fullness>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitEatSpeedDown</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>slow eater</label>
+      <description>[PAWN_nameDef] takes a long time to eat food. [PAWN_pronoun] savors {PAWN_possessive} food a little longer than most.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitEatSpeedDownPlus</li>
+    <li>SG_TraitEatSpeedUp</li>
+    <li>SG_TraitEatSpeedUpPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <eatingSpeedReductionMitigationMultBonus_Fullness>-0.25</eatingSpeedReductionMitigationMultBonus_Fullness>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitEatSpeedUp</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>speed eater</label>
+      <description>[PAWN_nameDef] eats very quickly. [PAWN_pronoun]'ll be done with {PAWN_possessive} meal before most people.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitEatSpeedDownPlus</li>
+    <li>SG_TraitEatSpeedDown</li>
+    <li>SG_TraitEatSpeedUpPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <eatingSpeedReductionMitigationMultBonus_Fullness>0.5</eatingSpeedReductionMitigationMultBonus_Fullness>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitEatSpeedUpPlus</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>inhales food</label>
+      <description>[PAWN_nameDef] is like a black hole for food. [PAWN_pronoun] might be done with {PAWN_possessive} food before anyone else even has the chance to sit down.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitEatSpeedDownPlus</li>
+    <li>SG_TraitEatSpeedDown</li>
+    <li>SG_TraitEatSpeedUp</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <eatingSpeedReductionMitigationMultBonus_Fullness>1</eatingSpeedReductionMitigationMultBonus_Fullness>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+
+<!--─────────────────────────────────────────────────────────────
+  STOMACH‑ELASTICITY TRAITS
+───────────────────────────────────────────────────────────────-->
+<TraitDef>
+  <defName>SG_TraitStomachElasticityDown</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>rigid stomach</label>
+      <description>[PAWN_nameDef]'s stomach has a limit and it's not afraid to let [PAWN_pronoun] know it. [PAWN_nameDef]'s stomach is incapable of stretching as much as the average person's.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitStomachElasticityUp</li>
+    <li>SG_TraitStomachElasticityUpPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <stomachElasticityMultBonus>-0.5</stomachElasticityMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitStomachElasticityUp</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>flexible stomach</label>
+      <description>[PAWN_nameDef]'s stomach is more accommodating of food after [PAWN_pronoun]'s reached {PAWN_possessive} limit.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitStomachElasticityDown</li>
+    <li>SG_TraitStomachElasticityUpPlus</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <stomachElasticityMultBonus>0.5</stomachElasticityMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+
+<TraitDef>
+  <defName>SG_TraitStomachElasticityUpPlus</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <degree>0</degree>
+      <label>elastic stomach</label>
+      <description>[PAWN_nameDef]'s stomach is extremely accommodating of food after [PAWN_pronoun]'s reached {PAWN_possessive} limit.</description>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>SG_TraitStomachElasticityDown</li>
+    <li>SG_TraitStomachElasticityUp</li>
+  </conflictingTraits>
+  <modExtensions>
+    <li Class="SwellGlow.SGTraitStatExtension">
+      <stomachElasticityMultBonus>1</stomachElasticityMultBonus>
+    </li>
+  </modExtensions>
+</TraitDef>
+</Defs>

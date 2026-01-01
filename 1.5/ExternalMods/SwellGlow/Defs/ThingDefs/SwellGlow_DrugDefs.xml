@@ -1,0 +1,137 @@
+<Defs>
+	<ThingDef Name="swellGlowDrugBase" Abstract="True">
+		<defName>swellGlowDrugBase</defName>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<useHitPoints>true</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>2</Beauty>
+			<Mass>0.005</Mass>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>30</stackLimit>
+		<thingCategories>
+			<li>Drugs</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Drugs</li>
+		</tradeTags>
+		<alwaysHaulable>true</alwaysHaulable>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<pathCost>14</pathCost>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<allowedArchonexusCount>40</allowedArchonexusCount>
+		<ingestible>
+			<foodType>Meal</foodType>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<optimalityOffsetHumanlikes>1</optimalityOffsetHumanlikes>
+		</ingestible>
+		<storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+		<orderedTakeGroup>Drug</orderedTakeGroup>
+	</ThingDef>
+    <HediffDef>
+		<defName>swellGlowHigh</defName>
+		<label>Swell-Glow High</label>
+		<description>Swell-Glow prides itself on making your gaining experience as pleasurable as possible.</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.75</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li />
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>swellGlowHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>swellGlowHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Took Swell-Glow</label>
+				<description>All my extra flesh is alive with pleasure...</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ChemicalDef>
+		<defName>swellGlowChem</defName>
+		<label>Swell-Glow</label>
+		<addictionHediff>swellGlowAddiction</addictionHediff>
+		<toleranceHediff>swellGlowTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>8</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>chemical_swellGlow</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>Swell-Glow</label>
+		<description>Because of an addiction to Swell-Glow, this pawn needs to regularly take the pills to avoid withdrawal symptoms.</description>
+		<listPriority>20</listPriority>
+	</NeedDef>
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>swellGlowTolerance</defName>
+		<label>Swell-Glow Tolerance</label>
+		<description>A built-up tolerance to Swell-Glow. The more severe this tolerance is, the more doses it takes to get the same effect.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.030</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>swellGlowChem</chemical>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="AddictionBase">
+		<defName>swellGlowAddiction</defName>
+		<label>Swell-Glow Addiction</label>
+		<description>A chemical addiction to Swell-Glow. Long-term presence of the drug has caused neurological adaptations at the cellular level, so the brain can no longer function properly without it.
+			\n Without regular administration of Swell-Glow, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>chemical_swellGlow</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.1</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>swellGlowWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>swellGlowAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>Swell-Glow Withdrawal</label>
+				<description>I feel so small. I need more Swell-Glow.</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

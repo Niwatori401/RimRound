@@ -1,0 +1,79 @@
+<Patch>
+    <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/RecipeDef[defName="RR_CookCrammedCroissant"]
+      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+    </xpath>
+    <value>
+      <categories>
+        <li>CaloriteIngredients</li>
+      </categories>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/RecipeDef[defName="RR_CookMechaniteMuffin"]
+      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+    </xpath>
+    <value>
+      <categories>
+        <li>CaloriteIngredients</li>
+      </categories>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/RecipeDef[defName="RR_CookPackedPizza"]
+      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+    </xpath>
+    <value>
+      <categories>
+        <li>CaloriteIngredients</li>
+      </categories>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/RecipeDef[defName="RR_CookLaBombe"]
+      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+    </xpath>
+    <value>
+      <categories>
+        <li>CaloriteIngredients</li>
+      </categories>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/RecipeDef[defName="CookFatBurger"]
+      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+    </xpath>
+    <value>
+      <thingDefs>
+        <li>SG_CaloyakMeat</li>
+      </thingDefs>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/RecipeDef[defName="CookCake"]
+      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+    </xpath>
+    <value>
+      <thingDefs>
+        <li>SG_Calomilk</li>
+      </thingDefs>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/RecipeDef[defName="CookDonut"]
+      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+    </xpath>
+    <value>
+      <thingDefs>
+        <li>SG_Calomilk</li>
+      </thingDefs>
+    </value>
+  </Operation>
+</Patch>
