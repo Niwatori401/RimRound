@@ -1,5 +1,30 @@
 ==================================================
 Author: Niwatori401
+Date: Thu Jan 1 23:38:32 2026
+
+Add Clothing for Meatslop's male body (Courtesy Gosuke):
+- Duster (005-060)
+- Flak Jacket (005-060)
+- Flak Vest (005-060)
+- Jacket (005-060)
+- Parka (005-060)
+- Cape (005-060)
+- Power Armor (005-060)
+- Recon Armor (005-060)
+
+Add Clothing for Standard female body (Courtesy Gosuke)
+- Plate Armor (005-060)
+- Flak Jacket (005-060)
+- Parka (005-060)
+
+Add Clothing for Apple female body (Courtesy Toggle / CRONCRON)
+- Tribalwear (010-040)
+- Flak Vest (010-040)
+
+Add Lab Coat Clothing for Standard and Apple Females (005-050) (Courtesy Tight-Fit)
+
+==================================================
+Author: Niwatori401
 Date: Thu Jan 1 23:09:06 2026
 
 Add SwellGlow mod (Courtesy Galactase / Bun)
