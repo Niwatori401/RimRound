@@ -79,7 +79,7 @@ namespace RimRound.Utilities
 
             bool isMale = pawn.gender == Gender.Male;
 
-            if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090_Titanic))
+            if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090bs_Titanic))
             {
                 if (WeightOpinionUtility.IsPawnBelowWeightOpinion(pawn, WeightOpinion.Fanatical))
                 {
@@ -90,7 +90,7 @@ namespace RimRound.Utilities
                     return isMale ? Defs.SoundDefOf.RR_M_PleasureBreathSuperHeavy : Defs.SoundDefOf.RR_F_PleasureBreathSuperHeavy;
                 }
             }
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_060_Lardy))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_060bs_Lardy))
             {
                 if (WeightOpinionUtility.IsPawnBelowWeightOpinion(pawn, WeightOpinion.Love))
                 {
@@ -101,7 +101,7 @@ namespace RimRound.Utilities
                     return isMale ? Defs.SoundDefOf.RR_M_PleasureBreathHeavy : Defs.SoundDefOf.RR_F_PleasureBreathHeavy;
                 }
             }
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_020_Corpulent))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_020bs_Corpulent))
             {
                 if (WeightOpinionUtility.IsPawnBelowWeightOpinion(pawn, WeightOpinion.Like))
                 {
@@ -113,7 +113,7 @@ namespace RimRound.Utilities
                 }
             }
 
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_020_Corpulent)) 
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_020bs_Corpulent)) 
             {
                 if (WeightOpinionUtility.IsPawnBelowWeightOpinion(pawn, WeightOpinion.NeutralPlus))
                 {
@@ -184,11 +184,11 @@ namespace RimRound.Utilities
                 return null;
             }
 
-            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
+            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090bs_Titanic))
                 return Defs.SoundDefOf.RR_StomachGurgles_SuperHeavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060_Lardy))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060bs_Lardy))
                 return Defs.SoundDefOf.RR_StomachGurgles_Heavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020bs_Corpulent))
                 return Defs.SoundDefOf.RR_StomachGurgles_Medium;
 
             return Defs.SoundDefOf.RR_StomachGurgles_Light;
@@ -211,11 +211,11 @@ namespace RimRound.Utilities
                 return null;
             }
 
-            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
+            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090bs_Titanic))
                 return Defs.SoundDefOf.RR_StomachBurp_SuperHeavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060_Lardy))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060bs_Lardy))
                 return Defs.SoundDefOf.RR_StomachBurp_Heavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020bs_Corpulent))
                 return Defs.SoundDefOf.RR_StomachBurp_Medium;
 
             return Defs.SoundDefOf.RR_StomachBurp_Light;
@@ -225,15 +225,15 @@ namespace RimRound.Utilities
         // Call just before pawn changes body type. Does not check for if the sound should be playing, just which sound is appropriate for the current weight.
         public static SoundDef GetBwomfSoundByWeight(Pawn pawn)
         {
-            if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_100_Gelatinous))
+            if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_100bs_Gelatinous))
                 return Defs.SoundDefOf.RR_Bwomf_6;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_080_Gigantic))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_080bs_Gigantic))
                 return Defs.SoundDefOf.RR_Bwomf_5;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_060_Lardy))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_060bs_Lardy))
                 return Defs.SoundDefOf.RR_Bwomf_4;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_040_Obese))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_040bs_Obese))
                 return Defs.SoundDefOf.RR_Bwomf_3;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_006_Chonky))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_006bs_Chonky))
                 return Defs.SoundDefOf.RR_Bwomf_2;
 
             return Defs.SoundDefOf.RR_Bwomf_1;
@@ -258,7 +258,7 @@ namespace RimRound.Utilities
                 return null;
             }
 
-            BodyTypeDef minimumBodyTypeForBreathing = Defs.BodyTypeDefOf.F_020_Corpulent;
+            BodyTypeDef minimumBodyTypeForBreathing = Defs.BodyTypeDefOf.F_020bs_Corpulent;
 
             if (fndComp.parent.AsPawn().Downed || 
                 fndComp?.parent?.AsPawn()?.pather == null || 
@@ -283,11 +283,11 @@ namespace RimRound.Utilities
             bool playSound1 = playFootStepSound1[pawnID];
 
             SoundDef sd;
-            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_050_MorbidlyObese))
+            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_050bs_MorbidlyObese))
                 sd = playSound1 ? Defs.SoundDefOf.RR_Footstep_Lardy_1 : Defs.SoundDefOf.RR_Footstep_Lardy_2;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_040_Obese))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_040bs_Obese))
                 sd = playSound1 ? Defs.SoundDefOf.RR_Footstep_MorbidlyObese_1 : Defs.SoundDefOf.RR_Footstep_MorbidlyObese_2;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_030_Fat))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_030bs_Fat))
                 sd = playSound1 ? Defs.SoundDefOf.RR_Footstep_Obese_1 : Defs.SoundDefOf.RR_Footstep_Obese_2;
             else
                 sd = playSound1 ? Defs.SoundDefOf.RR_Footstep_Fat_1 : Defs.SoundDefOf.RR_Footstep_Fat_2;
@@ -317,11 +317,11 @@ namespace RimRound.Utilities
                 return null;
             }
 
-            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
+            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090bs_Titanic))
                 return Defs.SoundDefOf.RR_Slosh_SuperHeavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060_Lardy))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060bs_Lardy))
                 return Defs.SoundDefOf.RR_Slosh_Heavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020bs_Corpulent))
                 return Defs.SoundDefOf.RR_Slosh_Medium;
 
             return Defs.SoundDefOf.RR_Slosh_Light;
@@ -344,11 +344,11 @@ namespace RimRound.Utilities
             }
 
 
-            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090_Titanic))
+            if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_090bs_Titanic))
                 return Defs.SoundDefOf.RR_StomachEmpty_SuperHeavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060_Lardy))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_060bs_Lardy))
                 return Defs.SoundDefOf.RR_StomachEmpty_Heavy;
-            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+            else if (BodyTypeUtility.PawnIsOverWeightThreshold(fndComp.parent.AsPawn(), Defs.BodyTypeDefOf.F_020bs_Corpulent))
                 return Defs.SoundDefOf.RR_StomachEmpty_Medium;
 
             return Defs.SoundDefOf.RR_StomachEmpty_Light;

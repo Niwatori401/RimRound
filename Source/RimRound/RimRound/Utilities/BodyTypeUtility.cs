@@ -32,6 +32,11 @@ namespace RimRound.Utilities
             return false;
         }
 
+        public static bool IsGelatinous(Pawn pawn) 
+        {
+            return pawn.story.bodyType.defName.Contains("Gelatinous");
+        }
+
 
         public static string GetProperBodyGraphicPathFromPawn(Pawn pawn)
         {
@@ -100,8 +105,8 @@ namespace RimRound.Utilities
             if (bodyTypeName.Contains("Naked_"))
                 bodyTypeName = bodyTypeName.Substring(bodyTypeName.IndexOf("Naked_") + 6);
 
-            if (bodyTypeName == "F_060_LardyAlt")
-                bodyTypeName = "F_060_Lardy";
+            if (bodyTypeName == "F_060bs_LardyAlt")
+                bodyTypeName = "F_060bs_Lardy";
 
 
             bodyTypeName = RacialBodyTypeInfoUtility.GetEquivalentBodyTypeDef(DefDatabase<BodyTypeDef>.GetNamed(bodyTypeName)).ToString();
@@ -141,26 +146,12 @@ namespace RimRound.Utilities
 
         public static string ConvertBodyTypeDefDefnameAccordingToSettings(string bodytypeCleaned)
         {
-            if (GlobalSettings.onlyUseStandardBodyType && Regex.IsMatch(bodytypeCleaned, "[0-9]{3}a"))
-            {
-                bodytypeCleaned = Regex.Replace(bodytypeCleaned, "a_", "_");
-            }
-
-            if (GlobalSettings.useLegacyMaleSprites && Regex.IsMatch(bodytypeCleaned, @"^M_")) 
-            {
-                bodytypeCleaned += "Old";
-            }
-            else if (GlobalSettings.useAltMaleSprites && Regex.IsMatch(bodytypeCleaned, @"^M_")) // Else is intentional and necessary here
-            {
-                bodytypeCleaned += "New";
-            }
-
-            if (bodytypeCleaned == Defs.BodyTypeDefOf.F_060_Lardy.defName && !GlobalSettings.useOldLardySprite)
+            if (bodytypeCleaned == Defs.BodyTypeDefOf.F_060bs_Lardy.defName && !GlobalSettings.useOldLardySprite)
             {
                 bodytypeCleaned += "Alt";
             }
 
-            if (Regex.IsMatch(bodytypeCleaned, "Gelatinous"))
+            if (bodytypeCleaned.Contains("Gelatinous"))
             {
                 bodytypeCleaned = Regex.Replace(bodytypeCleaned, "[0-9]{3}", "100");
             }

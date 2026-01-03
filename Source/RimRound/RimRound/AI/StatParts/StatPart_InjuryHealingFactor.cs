@@ -25,7 +25,7 @@ namespace RimRound.AI
 
                     int rotundRegeneration = comp.perkLevels.PerkToLevels?["RR_RotundRegeneration_Title"] ?? 0;
 
-                    if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_080_Gigantic))
+                    if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_080bs_Gigantic))
                         rotundRegeneration = 0;
 
                     val += rotundRegeneration * 0.5f;
@@ -48,7 +48,7 @@ namespace RimRound.AI
 
                     int rotundRegeneration = comp.perkLevels.PerkToLevels?["RR_RotundRegeneration_Title"] ?? 0;
 
-                    if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_080_Gigantic))
+                    if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_080bs_Gigantic))
                         rotundRegeneration = 0;
 
                     val += rotundRegeneration * 0.5f;

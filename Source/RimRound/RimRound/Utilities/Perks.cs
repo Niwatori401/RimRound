@@ -347,7 +347,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_010_Chubby))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_010bs_Chubby))
                     return new SuccessReport("Must be at least Corpulent to purchase", false);
 
 
@@ -488,7 +488,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_020bs_Corpulent))
                     return new SuccessReport("Must be at least Fat to purchase", false);
 
 
@@ -514,7 +514,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_020_Corpulent))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_020bs_Corpulent))
                     return new SuccessReport("Must be at least Fat to purchase", false);
 
 
@@ -538,7 +538,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_050_MorbidlyObese))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_050bs_MorbidlyObese))
                     return new SuccessReport("Must be at least Lardy I to purchase", false);
 
 
@@ -659,7 +659,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_080_Gigantic))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_080bs_Gigantic))
                     return new SuccessReport("Must be at least Titanic I to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -682,7 +682,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_030_Fat))
+                if (!Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_030bs_Fat))
                     return new SuccessReport("Must be at least Obese to purchase!", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -705,7 +705,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_060_Lardy)))
+                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_060bs_Lardy)))
                     return new SuccessReport("Must be Enormous I to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -836,7 +836,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_200_Gelatinous)))
+                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_200bs_Gelatinous)))
                     return new SuccessReport("Must be Gelatinous IV to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -859,7 +859,7 @@ namespace RimRound.Utilities
             },
             (FullnessAndDietStats_ThingComp p, Perks.Perk perk) =>
             {
-                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_040_Obese)))
+                if (!(Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_040bs_Obese)))
                     return new SuccessReport("Must be Morbidly Obese I to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -909,7 +909,7 @@ namespace RimRound.Utilities
                 if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
                     return s;
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous 10 to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -935,7 +935,7 @@ namespace RimRound.Utilities
                 if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || race.defName != "Anty")
                     return new SuccessReport("Only Anty can purchase", false);
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous X to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -961,7 +961,7 @@ namespace RimRound.Utilities
                 if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "Ratkin_Su" || race.defName == "Ratkin"))
                     return new SuccessReport("Only Ratkin can purchase", false);
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous X to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -987,7 +987,7 @@ namespace RimRound.Utilities
                 if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "ReviaRaceAlien"))
                     return new SuccessReport("Only Revia can purchase", false);
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous X to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -1013,7 +1013,7 @@ namespace RimRound.Utilities
                 if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "Human"))
                     return new SuccessReport("Only humans can purchase", false);
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous X to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -1112,7 +1112,7 @@ namespace RimRound.Utilities
                 if (!(p.parent.AsPawn().def is AlienRace.ThingDef_AlienRace race) || !(race.defName == "ReviaRaceAlien"))
                     return new SuccessReport("Only Revia can purchase", false);
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous X to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -1143,7 +1143,7 @@ namespace RimRound.Utilities
                 if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
                     return s;
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous 20 to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -1171,7 +1171,7 @@ namespace RimRound.Utilities
                 if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
                     return s;
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous 20 to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
@@ -1200,7 +1200,7 @@ namespace RimRound.Utilities
                 if (GetInsufficientPerkLevelSuccessReport("RR_Even_Further_Beyond_Title", 1, p) is SuccessReport s && !s)
                     return s;
 
-                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990_Gelatinous))
+                if (!BodyTypeUtility.PawnIsOverWeightThreshold(p.parent.AsPawn(), Defs.BodyTypeDefOf.F_990bs_Gelatinous))
                     return new SuccessReport("Must be Gelatinous 20 to purchase", false);
 
                 if (p.perkLevels.PerkToLevels[perk.perkName] >= perk.numberOfLevels)
