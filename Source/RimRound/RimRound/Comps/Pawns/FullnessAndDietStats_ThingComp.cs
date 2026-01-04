@@ -258,7 +258,7 @@ namespace RimRound.Comps
         const int TICK_CHECK_INTERVAL_FOR_BREATHING = 60 * 3;
         private void DoBreathingSounds()
         {
-            BodyTypeDef thresholdForBreathingAllTheTime = Defs.BodyTypeDefOf.F_050_MorbidlyObese;
+            BodyTypeDef thresholdForBreathingAllTheTime = Defs.BodyTypeDefOf.F_050bs_MorbidlyObese;
             float fullnessPercentForBreathing = 1f; // As percent of soft limit
 
             if (!IsConnectedToFeedingMachine && ((parent?.AsPawn()?.pather?.Moving ?? false) ||

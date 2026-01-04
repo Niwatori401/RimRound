@@ -568,12 +568,12 @@ GS_Bear_Luna,BW
 GS_Bear_Cave,BW
 RAZ_Mal0Race,BW</RR_TextureData>
 
-<RR_RaceData>AFoxbold,set070
-Alien_Avali,set070
+<RR_RaceData>AFoxbold,set090
+Alien_Avali,set090
 Alien_BlueOni,defaultSet
 Alien_GreenOni,defaultSet
 Alien_RedOni,defaultSet
-Alien_Dogbold,set070
+Alien_Dogbold,set090
 Alien_Drow_Otto,defaultSet
 Alien_Equium,defaultSet
 Alien_KEquium,defaultSet
@@ -582,8 +582,8 @@ Alien_SMaleEquium,defaultSet
 Alien_Ferrex,defaultSet
 Alien_Fennex,defaultSet
 Alien_Frijjid,defaultSet
-Alien_Loompa,set070
-Alien_Orassan,set070
+Alien_Loompa,set090
+Alien_Orassan,set090
 Alien_OrassanHumanHybrid,set090
 Alien_Protogen,defaultSet
 Alien_ProtogenNME,defaultSet
@@ -638,12 +638,12 @@ O21_FR_Tabaxi,defaultSet
 O21_FR_SunElf,defaultSet
 O21_FR_Orc,defaultSet
 O21_FR_MoonElf,defaultSet
-O21_FR_Kobold,set070
+O21_FR_Kobold,set090
 O21_FR_Killoren,defaultSet
 O21_FR_Illithid,defaultSet
 O21_FR_Hobgoblin,set090
 O21_FR_HalfOrc,defaultSet
-O21_FR_Halfling,set070
+O21_FR_Halfling,set090
 O21_FR_Goblin,set090
 O21_FR_Gith,defaultSet
 O21_FR_Firbolg,defaultSet

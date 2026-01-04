@@ -25,14 +25,16 @@ namespace RimRound.Comps
             cachedPBTComp = parent.TryGetComp<PawnBodyType_ThingComp>();
         }
 
+        private int bodyTypeArchetypeCount = Enum.GetNames(typeof(BodyArchetypeNew)).Length;
+        
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (Prefs.DevMode)
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = $"Switch pawn body type to {(cachedPBTComp is null ? "other type" : (cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple.ToString() : BodyArchetype.standard.ToString()))}",
-                    icon = (cachedPBTComp is null ? Widgets.GetIconFor(RimWorld.ThingDefOf.Campfire) : (cachedPBTComp.BodyArchetype == BodyArchetype.standard ? Resources.SWITCH_PAWN_BODY_TYPE_APPLE_ICON : Resources.SWITCH_PAWN_BODY_TYPE_STANDARD_ICON)),
+                    defaultLabel = $"Switch pawn body type",
+                    icon = Resources.SWITCH_PAWN_BODY_TYPE_APPLE_ICON,
                     action = delegate ()
                         {
                             Resources.gizmoClick.PlayOneShotOnCamera(null);
@@ -42,7 +44,10 @@ namespace RimRound.Comps
                                 return;
                             }
 
-                            cachedPBTComp.BodyArchetype = cachedPBTComp.BodyArchetype == BodyArchetype.standard ? BodyArchetype.apple : BodyArchetype.standard;
+                            cachedPBTComp.bodytypeindex++;
+                            cachedPBTComp.bodytypeindex = cachedPBTComp.bodytypeindex % bodyTypeArchetypeCount;
+
+                            cachedPBTComp.BodyArchetype = (BodyArchetypeNew)cachedPBTComp.bodytypeindex;
                             BodyTypeUtility.UpdatePawnSprite((Pawn)parent, cachedPBTComp.PersonallyExempt, cachedPBTComp.CategoricallyExempt, true, true);
 
                         }

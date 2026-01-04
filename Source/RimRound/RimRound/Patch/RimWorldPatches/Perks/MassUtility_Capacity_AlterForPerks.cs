@@ -26,7 +26,7 @@ namespace RimRound.Patch
 
             int packWhaleLevel = comp?.perkLevels?.PerkToLevels?["RR_PackWhale_Title"] ?? 0;
 
-            if (packWhaleLevel >= 1 && Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(__0, Defs.BodyTypeDefOf.F_040_Obese))
+            if (packWhaleLevel >= 1 && Utilities.BodyTypeUtility.PawnIsOverWeightThreshold(__0, Defs.BodyTypeDefOf.F_040bs_Obese))
             {
                 __result *= 2;
             }

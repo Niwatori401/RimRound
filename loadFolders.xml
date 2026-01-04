@@ -57,15 +57,15 @@
 	<v1.6>
 		<li>/</li>
 		<li>1.6</li>	
-		<li>1.6/ExternalMods/SuperSpacesFatteningFoods</li>		
-		<li>1.6/ExternalMods/SwellGlow</li>		
+		<!--li>1.6/ExternalMods/SuperSpacesFatteningFoods</li>		
+		<li>1.6/ExternalMods/SwellGlow</li-->		
 		
 		<!-- Temporarily Disabled -->
 		<!--li>1.5/ExternalMods/RimRoundExtraWeapons</li>
 		<li>1.5/ExternalMods/RimRoundExtraEvents</li-->		
 		
 		<!-- This is intentionally the 1.5 paths. Individual race support should be deprecated eventually in 1.6-->
-		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/IdeologyDefs</li>
+		<!--li IfModActive="Ludeon.RimWorld.Ideology">1.5/IdeologyDefs</li>
 		<li IfModActive="ArmoredAmpharos.Dogbolds">1.5/ExternalMods/DogboldRaceSupport</li>	
 		<li IfModActive="ArmoredAmpharos.Foxbolds">1.5/ExternalMods/FoxboldRaceSupport</li>	
 		<li IfModActive="Hauvega.EquiumsSeries.Equiums">1.5/ExternalMods/HorseRaceSupport</li>		
@@ -75,6 +75,6 @@
 		<li IfModActive="TrahsPanda.Lucario">1.5/ExternalMods/LucarioRaceSupport</li>
 		<li IfModActive="Barsimmon.OriginalByVagabond.FantasyGoblins">1.5/ExternalMods/GoblinRaceSupport</li>
 		<li IfModActive="zal.ursine">1.5/ExternalMods/UrsineOfTheRimSupport</li>
-		<li IfModActive="Razar1.Mal0Race">1.5/ExternalMods/MaloRaceSupport</li>
+		<li IfModActive="Razar1.Mal0Race">1.5/ExternalMods/MaloRaceSupport</li-->
 	</v1.6>	
 </loadFolders>

@@ -31,7 +31,7 @@ namespace RimRound.Utilities
             {
                 string[] lineData = line.Split(',');
                 
-                var dictionaryPresetForRace = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(typeof(RacialBodyTypeInfoUtility).GetField(lineData[1], System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null) as Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>);
+                var dictionaryPresetForRace = new Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>(typeof(RacialBodyTypeInfoUtility).GetField(lineData[1], System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null) as Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>);
 
                 RacialBodyTypeInfoUtility.raceToProperDictDictionary.Add(lineData[0], dictionaryPresetForRace);
             }
@@ -202,7 +202,7 @@ namespace RimRound.Utilities
 
         #region Female
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> bambooStandardFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        internal static Dictionary<BodyTypeDef, BodyTypeInfo> bambooStandardFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -245,7 +245,7 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_995bs_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
             };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> bambooAppleFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> bambooAppleFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -288,7 +288,7 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_995ba_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
             };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -331,7 +331,7 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.F_995vp_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
             };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> togglePearFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> togglePearFemaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -379,7 +379,7 @@ namespace RimRound.Utilities
 
         #region Male
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> artOfFireMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> artOfFireMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -423,7 +423,7 @@ namespace RimRound.Utilities
                 { RimRound.Defs.BodyTypeDefOf.M_995af_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeRedrawMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeRedrawMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -467,7 +467,7 @@ namespace RimRound.Utilities
             { RimRound.Defs.BodyTypeDefOf.M_995gr_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -511,7 +511,7 @@ namespace RimRound.Utilities
             { RimRound.Defs.BodyTypeDefOf.M_995vp_Gelatinous,    new BodyTypeInfo(10000f , 200.000f, 0.05f, 0.00700f, 60f, 0.00f) },
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> meatSlopMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> meatSlopMaleSet = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                      new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                     new BodyTypeInfo(-1    , 1.0000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -566,7 +566,7 @@ namespace RimRound.Utilities
 
         #region Female
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> bambooStandardFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> bambooStandardFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -611,7 +611,7 @@ namespace RimRound.Utilities
 
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> bambooAppleFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> bambooAppleFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -657,7 +657,7 @@ namespace RimRound.Utilities
 
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -702,7 +702,7 @@ namespace RimRound.Utilities
 
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> togglePearFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> togglePearFemaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -752,7 +752,7 @@ namespace RimRound.Utilities
 
         #region Male
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> artOfFireMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> artOfFireMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
             {
                 { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
                 { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -798,7 +798,7 @@ namespace RimRound.Utilities
 
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeRedrawMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeRedrawMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -844,7 +844,7 @@ namespace RimRound.Utilities
 
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> gosukeVanillaPlusMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -890,7 +890,7 @@ namespace RimRound.Utilities
 
         };
 
-        public static Dictionary<BodyTypeDef, BodyTypeInfo> meatSlopMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
+        static Dictionary<BodyTypeDef, BodyTypeInfo> meatSlopMaleSet090 = new Dictionary<BodyTypeDef, BodyTypeInfo>()
         {
             { RimWorld.BodyTypeDefOf.Fat,                             new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
             { RimWorld.BodyTypeDefOf.Hulk,                            new BodyTypeInfo(-1    , 0.9000f, 1.00f, 1.28205f, 0.30f, 0.30f) },
@@ -941,131 +941,114 @@ namespace RimRound.Utilities
 
         #endregion
 
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> fullsizeMaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
+        static Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>> fullsizeBodytypes = new Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>
         {
-            { BodyArchetype.standard, defaultMaleSet },
-            { BodyArchetype.apple,    defaultMaleSet },
+            { BodyArchetypeNew.BambooStandard,             bambooStandardFemaleSet },
+            { BodyArchetypeNew.BambooApple,                bambooAppleFemaleSet },
+            { BodyArchetypeNew.GosukeVanillaPlusFemale,    gosukeVanillaPlusFemaleSet},
+            { BodyArchetypeNew.TogglePear,                 togglePearFemaleSet},
+            
+            { BodyArchetypeNew.ArtOfFire,             artOfFireMaleSet},
+            { BodyArchetypeNew.GosukeRedraw,          gosukeRedrawMaleSet},
+            { BodyArchetypeNew.GosukeVanillaPlusMale, gosukeVanillaPlusMaleSet},
+            { BodyArchetypeNew.MeatSlop,              meatSlopMaleSet},
         };
 
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> fullsizeFemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
+        static Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>> reduced090Bodytpes = new Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>
         {
-            { BodyArchetype.standard, defaultFemaleSet },
-            { BodyArchetype.apple,    appleFemaleSet   },
+            { BodyArchetypeNew.BambooStandard,             bambooStandardFemaleSet090 },
+            { BodyArchetypeNew.BambooApple,                bambooAppleFemaleSet090 },
+            { BodyArchetypeNew.GosukeVanillaPlusFemale,    gosukeVanillaPlusFemaleSet090},
+            { BodyArchetypeNew.TogglePear,                 togglePearFemaleSet090},
+
+            { BodyArchetypeNew.ArtOfFire,             artOfFireMaleSet090},
+            { BodyArchetypeNew.GosukeRedraw,          gosukeRedrawMaleSet090},
+            { BodyArchetypeNew.GosukeVanillaPlusMale, gosukeVanillaPlusMaleSet090},
+            { BodyArchetypeNew.MeatSlop,              meatSlopMaleSet090},
         };
 
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> fullsizeFemaleBodytypesNoFemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
+        static Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>> reduced090NoFemale = new Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>
         {
-            { BodyArchetype.standard, set090FemaleNoFemaleStandardThin },
-            { BodyArchetype.apple,    set090FemaleAppleNoFemaleSpriteStandardThin   },
+            { BodyArchetypeNew.BambooStandard,             RemoveKeysAndReturnClonedDictionary(bambooStandardFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
+            { BodyArchetypeNew.BambooApple,                RemoveKeysAndReturnClonedDictionary(bambooAppleFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
+            { BodyArchetypeNew.GosukeVanillaPlusFemale,    RemoveKeysAndReturnClonedDictionary(gosukeVanillaPlusFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
+            { BodyArchetypeNew.TogglePear,                 RemoveKeysAndReturnClonedDictionary(togglePearFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
+
+            { BodyArchetypeNew.ArtOfFire,             RemoveKeysAndReturnClonedDictionary(bambooStandardFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
+            { BodyArchetypeNew.GosukeRedraw,          RemoveKeysAndReturnClonedDictionary(bambooAppleFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
+            { BodyArchetypeNew.GosukeVanillaPlusMale, RemoveKeysAndReturnClonedDictionary(gosukeVanillaPlusFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
+            { BodyArchetypeNew.MeatSlop,              RemoveKeysAndReturnClonedDictionary(togglePearFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Female}) },
         };
 
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> P090FemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
+        static Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>> reduced090NoThin = new Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>
         {
-            { BodyArchetype.standard, set090Female      },
-            { BodyArchetype.apple,    set090FemaleApple },
-        };
+            { BodyArchetypeNew.BambooStandard,             RemoveKeysAndReturnClonedDictionary(bambooStandardFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
+            { BodyArchetypeNew.BambooApple,                RemoveKeysAndReturnClonedDictionary(bambooAppleFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
+            { BodyArchetypeNew.GosukeVanillaPlusFemale,    RemoveKeysAndReturnClonedDictionary(gosukeVanillaPlusFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
+            { BodyArchetypeNew.TogglePear,                 RemoveKeysAndReturnClonedDictionary(togglePearFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
 
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> P090MaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
-        {
-            { BodyArchetype.standard, set090Male },
-            { BodyArchetype.apple,    set090Male },
-        };
-
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> P070FemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
-        {
-            { BodyArchetype.standard, set070Female },
-            { BodyArchetype.apple,    set070Female },
-        };
-
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> P070MaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
-        {
-            { BodyArchetype.standard, set070Male },
-            { BodyArchetype.apple,    set070Male },
-        };
-
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> antyFemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
-        {
-            { BodyArchetype.standard, set090FemaleNoFemaleSprite },
-            { BodyArchetype.apple,    set090FemaleAppleNoFemaleSprite },
-        };
-
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> ratkinFemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
-        {
-            { BodyArchetype.standard, set090FemaleNoFemaleSprite },
-            { BodyArchetype.apple,    set090FemaleAppleNoFemaleSprite },
-        };
-
-        static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> maloFemaleBodytypes = new Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>
-        {
-            { BodyArchetype.standard, RemoveKeysAndReturnClonedDictionary(bambooAppleFemaleSet, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
-            { BodyArchetype.apple,    appleFemaleSetNoThin },
-        };
-
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> defaultSet = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
-        {
-            { Gender.Female, fullsizeFemaleBodytypes },
-            { Gender.Male,   fullsizeMaleBodytypes   },
-            { Gender.None,   fullsizeFemaleBodytypes },
-        };
-
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> antySet = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
-        {
-            { Gender.Female, antyFemaleBodytypes },
-            { Gender.Male,   antyFemaleBodytypes },
-            { Gender.None,   antyFemaleBodytypes },
-        };
-
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> ratkinSet = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
-        {
-            { Gender.Female, ratkinFemaleBodytypes },
-            { Gender.Male,   ratkinFemaleBodytypes },
-            { Gender.None,   ratkinFemaleBodytypes },
-        };
-
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> rabbieSet = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
-        {
-            { Gender.Female, fullsizeFemaleBodytypesNoFemaleBodytypes },
-            { Gender.Male,   fullsizeFemaleBodytypesNoFemaleBodytypes },
-            { Gender.None,   fullsizeFemaleBodytypesNoFemaleBodytypes },
-        };
-
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> maloSet = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
-        {
-            { Gender.Female, maloFemaleBodytypes },
-            { Gender.Male,   maloFemaleBodytypes },
-            { Gender.None,   maloFemaleBodytypes },
+            { BodyArchetypeNew.ArtOfFire,             RemoveKeysAndReturnClonedDictionary(bambooStandardFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
+            { BodyArchetypeNew.GosukeRedraw,          RemoveKeysAndReturnClonedDictionary(bambooAppleFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
+            { BodyArchetypeNew.GosukeVanillaPlusMale, RemoveKeysAndReturnClonedDictionary(gosukeVanillaPlusFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
+            { BodyArchetypeNew.MeatSlop,              RemoveKeysAndReturnClonedDictionary(togglePearFemaleSet090, new List<BodyTypeDef>() { BodyTypeDefOf.Thin}) },
         };
 
 
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> set090 = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
+        static Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>> defaultSet = new Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
         {
-            { Gender.Female, P090FemaleBodytypes },
-            { Gender.Male,   P090MaleBodytypes   },
-            { Gender.None,   P090FemaleBodytypes },
+            { Gender.Female, fullsizeBodytypes },
+            { Gender.Male,   fullsizeBodytypes },
+            { Gender.None,   fullsizeBodytypes },
         };
 
-        static Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> set070 = new Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
+        static Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>> antySet = new Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
         {
-            { Gender.Female, P070FemaleBodytypes },
-            { Gender.Male,   P070MaleBodytypes   },
-            { Gender.None,   P070FemaleBodytypes },
+            { Gender.Female, reduced090NoFemale },
+            { Gender.Male,   reduced090NoFemale },
+            { Gender.None,   reduced090NoFemale },
         };
+
+        static Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>> ratkinSet = new Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
+        {
+            { Gender.Female, reduced090NoFemale },
+            { Gender.Male,   reduced090NoFemale },
+            { Gender.None,   reduced090NoFemale },
+        };
+
+        static Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>> rabbieSet = new Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
+        {
+            { Gender.Female, reduced090NoFemale },
+            { Gender.Male,   reduced090NoFemale },
+            { Gender.None,   reduced090NoFemale },
+        };
+
+        static Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>> maloSet = new Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
+        {
+            { Gender.Female, reduced090NoThin },
+            { Gender.Male,   reduced090NoThin },
+            { Gender.None,   reduced090NoThin },
+        };
+
+
+        static Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>> set090 = new Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
+        {
+            { Gender.Female, reduced090Bodytpes },
+            { Gender.Male,   reduced090Bodytpes   },
+            { Gender.None,   reduced090Bodytpes },
+        };
+
 
         //-------------------Gendered Sets-------------
-        public static Dictionary<String, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>> genderedSets = new Dictionary<String, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
+        public static Dictionary<String, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>> genderedSets = new Dictionary<String, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>()
         {
-            { "Bamboo's Set (Standard size)", fullsizeFemaleBodytypes },
-            { "ArtOfFire1's Set (Standard size)", fullsizeMaleBodytypes },
-            { "Bamboo's Set (0.9 size)", P090FemaleBodytypes },
-            { "Bamboo's Set (0.7 size)", P070FemaleBodytypes },
-            { "ArtOfFire1's Set (0.9 size)", P090MaleBodytypes },
-            { "ArtOfFire1's Set (0.7 size)", P070MaleBodytypes },
-            { "Bamboo's Set (Ratkin only)", ratkinFemaleBodytypes },
-            { "Bamboo's Set (Anty only)", antyFemaleBodytypes },
+            { "Standard Size", fullsizeBodytypes },
+            { "Smaller (.9x) Size", reduced090Bodytpes },
+            { "No 'Female' Sprite 090", reduced090NoFemale },
+            { "No 'Thin' Sprite 090", reduced090NoThin },
         };
 
 
-        public static Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>> raceToProperDictDictionary = new Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>>();
+        public static Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>> raceToProperDictDictionary = new Dictionary<string, Dictionary<Gender, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>>();
 
         public static Dictionary<int, int> gelatinousLevelToCode = new Dictionary<int, int>()
         {
@@ -1272,8 +1255,8 @@ namespace RimRound.Utilities
             RimRound.Defs.BodyTypeDefOf.F_995bs_Gelatinous, // Gel XX
 
 
-            RimRound.Defs.BodyTypeDefOf.F_005ba_Thick,
-            RimRound.Defs.BodyTypeDefOf.F_006ba_Chonky,
+            //RimRound.Defs.BodyTypeDefOf.F_005ba_Thick,
+            //RimRound.Defs.BodyTypeDefOf.F_006ba_Chonky,
             RimRound.Defs.BodyTypeDefOf.F_010ba_Chubby,
             RimRound.Defs.BodyTypeDefOf.F_020ba_Corpulent,
             RimRound.Defs.BodyTypeDefOf.F_030ba_Fat,
@@ -1352,31 +1335,31 @@ namespace RimRound.Utilities
             RimRound.Defs.BodyTypeDefOf.F_040tp_Obese,
             RimRound.Defs.BodyTypeDefOf.F_050tp_MorbidlyObese,
             RimRound.Defs.BodyTypeDefOf.F_060tp_Lardy,
-            RimRound.Defs.BodyTypeDefOf.F_070tp_Enormous,
-            RimRound.Defs.BodyTypeDefOf.F_080tp_Gigantic,
-            RimRound.Defs.BodyTypeDefOf.F_090tp_Titanic,
-            RimRound.Defs.BodyTypeDefOf.F_100tp_Gelatinous, // Gel I
+            //RimRound.Defs.BodyTypeDefOf.F_070tp_Enormous,
+            //RimRound.Defs.BodyTypeDefOf.F_080tp_Gigantic,
+            //RimRound.Defs.BodyTypeDefOf.F_090tp_Titanic,
+            //RimRound.Defs.BodyTypeDefOf.F_100tp_Gelatinous, // Gel I
 
-            RimRound.Defs.BodyTypeDefOf.F_150tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_200tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_250tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_300tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_350tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_400tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_450tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_500tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_900tp_Gelatinous, // Gel X
+            //RimRound.Defs.BodyTypeDefOf.F_150tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_200tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_250tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_300tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_350tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_400tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_450tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_500tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_900tp_Gelatinous, // Gel X
 
-            RimRound.Defs.BodyTypeDefOf.F_910tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_920tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_930tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_940tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_950tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_960tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_970tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_980tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_990tp_Gelatinous,
-            RimRound.Defs.BodyTypeDefOf.F_995tp_Gelatinous, // Gel XX
+            //RimRound.Defs.BodyTypeDefOf.F_910tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_920tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_930tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_940tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_950tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_960tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_970tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_980tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_990tp_Gelatinous,
+            //RimRound.Defs.BodyTypeDefOf.F_995tp_Gelatinous, // Gel XX
 
         };
 

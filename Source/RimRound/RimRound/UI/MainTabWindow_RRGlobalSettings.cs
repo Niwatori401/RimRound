@@ -240,13 +240,13 @@ namespace RimRound.UI
 
             Widgets.Dropdown<
                 GenderRaceCombo,
-                Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>
+                Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>
                 (
-                    dropdownMenuRect, genderRaceCombo, null, new Func<GenderRaceCombo, IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>>>(BodyTypeSetDropdownMenuGenerator), buttonLabel
+                    dropdownMenuRect, genderRaceCombo, null, new Func<GenderRaceCombo, IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>>>(BodyTypeSetDropdownMenuGenerator), buttonLabel
                 );
         }
 
-        private static IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>> BodyTypeSetDropdownMenuGenerator(GenderRaceCombo genderRaceCombo)
+        private static IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>> BodyTypeSetDropdownMenuGenerator(GenderRaceCombo genderRaceCombo)
         {
             using (var enumerator = RacialBodyTypeInfoUtility.genderedSets.GetEnumerator())
             {
@@ -257,7 +257,7 @@ namespace RimRound.UI
                     string label = currentEntry.Key;
                     var dicitonaryPayload = currentEntry.Value;
 
-                    yield return new Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>
+                    yield return new Widgets.DropdownMenuElement<Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>
                     {
                         option = new FloatMenuOption(label, delegate ()
                         {
@@ -542,44 +542,6 @@ namespace RimRound.UI
             () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
             "RR_ToolTip_Preferences_UseLegacyLardySprite");
 
-            CheckboxLabeled(new Rect
-            {
-                x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
-                width = generalSettingsRect.width - bufferForCheckmarks,
-                height = spaceBetweenCheckBoxes
-            },
-            "RR_Mtw_GeneralSettings_UseAltMaleSprites",
-            ref GlobalSettings.useAltMaleSprites,
-            false, null, null, false,
-            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
-            "RR_ToolTip_Preferences_UseAltMaleSprites");
-
-            CheckboxLabeled(new Rect
-            {
-                x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
-                width = generalSettingsRect.width - bufferForCheckmarks,
-                height = spaceBetweenCheckBoxes
-            },
-            "RR_Mtw_GeneralSettings_UseLegacyMaleSprites",
-            ref GlobalSettings.useLegacyMaleSprites,
-            false, null, null, false,
-            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
-            "RR_ToolTip_Preferences_UseLegacyMaleSprites");
-
-            CheckboxLabeled(new Rect
-            {
-                x = 0,
-                y = generalSettingsTitleRect.yMax + spaceBetweenCheckBoxes * jndex++,
-                width = generalSettingsRect.width - bufferForCheckmarks,
-                height = spaceBetweenCheckBoxes
-            },
-            "RR_Mtw_GeneralSettings_OnlyUseStandardSprites",
-            ref GlobalSettings.onlyUseStandardBodyType,
-            false, null, null, false,
-            () => { BodyTypeUtility.AssignBodyTypeCategoricalExemptions(true); },
-            "RR_ToolTip_Preferences_UseOnlyStandardSet");
 
             CheckboxLabeled(new Rect
             {

@@ -24,12 +24,12 @@ namespace RimRound.AI
 
                     int bulletProofBlobLevel = comp.perkLevels.PerkToLevels?["RR_Bulletproof_Blob_Title"] ?? 0;
 
-                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090_Titanic))
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090bs_Titanic))
                         bulletProofBlobLevel = 0;
 
                     int thatLevel = comp.perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
 
-                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                         thatLevel = 0;
 
 
@@ -51,12 +51,12 @@ namespace RimRound.AI
 
                     int bulletProofBlobLevel = comp.perkLevels.PerkToLevels?["RR_Bulletproof_Blob_Title"] ?? 0;
 
-                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090_Titanic))
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_090bs_Titanic))
                         bulletProofBlobLevel = 0;
 
                     int thatLevel = comp.perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
 
-                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                         thatLevel = 0;
 
                     val += bulletProofBlobLevel * 0.1f + thatLevel * 0.5f;

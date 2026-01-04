@@ -17,12 +17,12 @@ namespace RimRound.UI
     {
         public static void DrawResponseButton(Rect rect, Pawn pawn, bool paintable)
         {
-            Widgets.Dropdown<Pawn, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(
+            Widgets.Dropdown<Pawn, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>(
                 rect,
                 pawn,
                 IconColor,
-                new Func<Pawn, Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>(DrawResponseButton_GetResponse),
-                new Func<Pawn, IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>>>(BodyTypeSetDropdownMenuGenerator),
+                new Func<Pawn, Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>(DrawResponseButton_GetResponse),
+                new Func<Pawn, IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>>>(BodyTypeSetDropdownMenuGenerator),
                 null,
                 Utilities.Resources.FILLER_TEXTURE,
                 null,
@@ -36,13 +36,13 @@ namespace RimRound.UI
             }
         }
 
-        private static Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> DrawResponseButton_GetResponse(Pawn pawn)
+        private static Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>> DrawResponseButton_GetResponse(Pawn pawn)
         {
             return pawn.TryGetComp<PawnBodyType_ThingComp>().CustomBodyTypeDict;
         }
 
 
-        public static IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>> BodyTypeSetDropdownMenuGenerator(Pawn pawn)
+        public static IEnumerable<Widgets.DropdownMenuElement<Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>> BodyTypeSetDropdownMenuGenerator(Pawn pawn)
         {
             using (var enumerator = RacialBodyTypeInfoUtility.genderedSets.GetEnumerator())
             {
@@ -53,7 +53,7 @@ namespace RimRound.UI
                     string label = currentEntry.Key;
                     var dicitonaryPayload = currentEntry.Value;
 
-                    yield return new Widgets.DropdownMenuElement<Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>>>
+                    yield return new Widgets.DropdownMenuElement<Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>>>
                     {
                         option = new FloatMenuOption(label, delegate ()
                         {

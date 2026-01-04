@@ -13,6 +13,8 @@ namespace RimRound.Comps
 {
     public class PawnBodyType_ThingComp : ThingComp
     {
+        public int bodytypeindex = 0;
+
         public PawnBodyType_ThingComp() 
         {
             dynamicBodyExcemptionGizmo = new PersonalDynamicBodyGizmo(this);
@@ -22,7 +24,7 @@ namespace RimRound.Comps
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look<BodyArchetype>(ref _bodyarchetype, "_bodyarchetype", BodyArchetype.none, false);
+            Scribe_Values.Look<BodyArchetypeNew>(ref _bodyarchetype, "_bodyarchetype", BodyArchetypeNew.none, false);
             Scribe_Values.Look<string>(ref personallyExempt.reason, "personallyExempt", null);
             Scribe_Values.Look<string>(ref bodyTypeDictNameString, "bodyTypeDictNameString", null, false);
         }
@@ -67,14 +69,14 @@ namespace RimRound.Comps
 
 
 
-        public Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> CustomBodyTypeDict 
+        public Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>> CustomBodyTypeDict 
         {
             get 
             {
                 if (bodyTypeDictNameString is null)
                     return null;
 
-                Dictionary<BodyArchetype, Dictionary<BodyTypeDef, BodyTypeInfo>> returnValue = null;
+                Dictionary<BodyArchetypeNew, Dictionary<BodyTypeDef, BodyTypeInfo>> returnValue = null;
                 RacialBodyTypeInfoUtility.genderedSets.TryGetValue(bodyTypeDictNameString, out returnValue);
                 return returnValue;
             } 
@@ -141,20 +143,20 @@ namespace RimRound.Comps
 
         public bool usingCustomBodyMeshSize = false;
 
-        BodyArchetype _bodyarchetype = BodyArchetype.none;
-        public BodyArchetype BodyArchetype 
+        BodyArchetypeNew _bodyarchetype = BodyArchetypeNew.none;
+        public BodyArchetypeNew BodyArchetype 
         {
             get 
             {
-                if (_bodyarchetype == BodyArchetype.none)
+                if (_bodyarchetype == BodyArchetypeNew.none)
                 {
                     if (Values.RandomChanceAtOrBelow(0.5f))
                     {
-                        _bodyarchetype = BodyArchetype.standard;
+                        _bodyarchetype = BodyArchetypeNew.BambooStandard;
                     }
                     else
                     {
-                        _bodyarchetype = BodyArchetype.apple;
+                        _bodyarchetype = BodyArchetypeNew.BambooApple;
                     }
                 }
 
@@ -189,10 +191,17 @@ namespace RimRound.Comps
 
 
 
-    public enum BodyArchetype 
+    public enum BodyArchetypeNew 
     {
         none,
-        standard,
-        apple,
+        BambooStandard,
+        BambooApple,
+        GosukeVanillaPlusFemale,
+        TogglePear,
+        
+        ArtOfFire,
+        GosukeRedraw,
+        GosukeVanillaPlusMale,
+        MeatSlop,
     }
 }

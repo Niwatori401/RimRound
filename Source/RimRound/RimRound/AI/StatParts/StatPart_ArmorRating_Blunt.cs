@@ -26,7 +26,7 @@ namespace RimRound.AI
 
                     int thatLevel = comp.perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
 
-                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                         thatLevel = 0;
 
 
@@ -50,7 +50,7 @@ namespace RimRound.AI
 
                     int thatLevel = comp.perkLevels.PerkToLevels?["RR_That_Title"] ?? 0;
 
-                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500_Gelatinous))
+                    if (!BodyTypeUtility.PawnIsOverWeightThreshold(pawn, Defs.BodyTypeDefOf.F_500bs_Gelatinous))
                         thatLevel = 0;
 
 

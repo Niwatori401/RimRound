@@ -17,12 +17,7 @@ namespace RimRound.Patch
     public class PawnRenderer_GetBodyPos_HideBlankets
     {
         static FieldInfo pawnFieldInfo = typeof(PawnRenderer).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
-        static Dictionary<string, HideCovers_ThingComp> pawnIdToComp = new Dictionary<string, HideCovers_ThingComp>();
 
-        public static void InvalidateCaches() 
-        {
-            pawnIdToComp.Clear();
-        }
 
         public static void Postfix(PawnRenderer __instance, ref bool __2, Pawn ___pawn) 
         {
@@ -33,11 +28,9 @@ namespace RimRound.Patch
 
             HideCovers_ThingComp comp; 
 
-            if (!pawnIdToComp.TryGetValue(pawn.ThingID, out comp))
-            {
-                comp = pawn.TryGetComp<HideCovers_ThingComp>();
-                pawnIdToComp.Add(pawn.ThingID, comp);
-            }
+
+            comp = pawn.TryGetComp<HideCovers_ThingComp>();
+
 
             if (comp is null)
                 return;

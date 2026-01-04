@@ -198,8 +198,8 @@ namespace RimRound.Defs
         public static BodyTypeDef F_995bs_Gelatinous; // Gel XX
 
 
-        public static BodyTypeDef F_005ba_Thick;
-        public static BodyTypeDef F_006ba_Chonky;
+        //public static BodyTypeDef F_005ba_Thick; // Do not exist
+        //public static BodyTypeDef F_006ba_Chonky;
         public static BodyTypeDef F_010ba_Chubby;
         public static BodyTypeDef F_020ba_Corpulent;
         public static BodyTypeDef F_030ba_Fat;
@@ -278,31 +278,31 @@ namespace RimRound.Defs
         public static BodyTypeDef F_040tp_Obese;
         public static BodyTypeDef F_050tp_MorbidlyObese;
         public static BodyTypeDef F_060tp_Lardy;
-        public static BodyTypeDef F_070tp_Enormous;
-        public static BodyTypeDef F_080tp_Gigantic;
-        public static BodyTypeDef F_090tp_Titanic;
-        public static BodyTypeDef F_100tp_Gelatinous; // Gel I
+        //public static BodyTypeDef F_070tp_Enormous; // Do not exist
+        //public static BodyTypeDef F_080tp_Gigantic;
+        //public static BodyTypeDef F_090tp_Titanic;
+        //public static BodyTypeDef F_100tp_Gelatinous; // Gel I
 
-        public static BodyTypeDef F_150tp_Gelatinous;
-        public static BodyTypeDef F_200tp_Gelatinous;
-        public static BodyTypeDef F_250tp_Gelatinous;
-        public static BodyTypeDef F_300tp_Gelatinous;
-        public static BodyTypeDef F_350tp_Gelatinous;
-        public static BodyTypeDef F_400tp_Gelatinous;
-        public static BodyTypeDef F_450tp_Gelatinous;
-        public static BodyTypeDef F_500tp_Gelatinous;
-        public static BodyTypeDef F_900tp_Gelatinous; // Gel X
+        //public static BodyTypeDef F_150tp_Gelatinous;
+        //public static BodyTypeDef F_200tp_Gelatinous;
+        //public static BodyTypeDef F_250tp_Gelatinous;
+        //public static BodyTypeDef F_300tp_Gelatinous;
+        //public static BodyTypeDef F_350tp_Gelatinous;
+        //public static BodyTypeDef F_400tp_Gelatinous;
+        //public static BodyTypeDef F_450tp_Gelatinous;
+        //public static BodyTypeDef F_500tp_Gelatinous;
+        //public static BodyTypeDef F_900tp_Gelatinous; // Gel X
 
-        public static BodyTypeDef F_910tp_Gelatinous;
-        public static BodyTypeDef F_920tp_Gelatinous;
-        public static BodyTypeDef F_930tp_Gelatinous;
-        public static BodyTypeDef F_940tp_Gelatinous;
-        public static BodyTypeDef F_950tp_Gelatinous;
-        public static BodyTypeDef F_960tp_Gelatinous;
-        public static BodyTypeDef F_970tp_Gelatinous;
-        public static BodyTypeDef F_980tp_Gelatinous;
-        public static BodyTypeDef F_990tp_Gelatinous;
-        public static BodyTypeDef F_995tp_Gelatinous; // Gel XX
+        //public static BodyTypeDef F_910tp_Gelatinous;
+        //public static BodyTypeDef F_920tp_Gelatinous;
+        //public static BodyTypeDef F_930tp_Gelatinous;
+        //public static BodyTypeDef F_940tp_Gelatinous;
+        //public static BodyTypeDef F_950tp_Gelatinous;
+        //public static BodyTypeDef F_960tp_Gelatinous;
+        //public static BodyTypeDef F_970tp_Gelatinous;
+        //public static BodyTypeDef F_980tp_Gelatinous;
+        //public static BodyTypeDef F_990tp_Gelatinous;
+        //public static BodyTypeDef F_995tp_Gelatinous; // Gel XX
 
 
         #endregion
@@ -494,8 +494,8 @@ namespace RimRound.Defs
         public static BodyTypeDef F_995bs_Gelatinous_090; // Gel XX
 
 
-        public static BodyTypeDef F_005ba_Thick_090;
-        public static BodyTypeDef F_006ba_Chonky_090;
+        //public static BodyTypeDef F_005ba_Thick_090;
+        //public static BodyTypeDef F_006ba_Chonky_090;
         public static BodyTypeDef F_010ba_Chubby_090;
         public static BodyTypeDef F_020ba_Corpulent_090;
         public static BodyTypeDef F_030ba_Fat_090;
@@ -574,31 +574,31 @@ namespace RimRound.Defs
         public static BodyTypeDef F_040tp_Obese_090;
         public static BodyTypeDef F_050tp_MorbidlyObese_090;
         public static BodyTypeDef F_060tp_Lardy_090;
-        public static BodyTypeDef F_070tp_Enormous_090;
-        public static BodyTypeDef F_080tp_Gigantic_090;
-        public static BodyTypeDef F_090tp_Titanic_090;
-        public static BodyTypeDef F_100tp_Gelatinous_090; // Gel I
+        //public static BodyTypeDef F_070tp_Enormous_090;
+        //public static BodyTypeDef F_080tp_Gigantic_090;
+        //public static BodyTypeDef F_090tp_Titanic_090;
+        //public static BodyTypeDef F_100tp_Gelatinous_090; // Gel I
 
-        public static BodyTypeDef F_150tp_Gelatinous_090;
-        public static BodyTypeDef F_200tp_Gelatinous_090;
-        public static BodyTypeDef F_250tp_Gelatinous_090;
-        public static BodyTypeDef F_300tp_Gelatinous_090;
-        public static BodyTypeDef F_350tp_Gelatinous_090;
-        public static BodyTypeDef F_400tp_Gelatinous_090;
-        public static BodyTypeDef F_450tp_Gelatinous_090;
-        public static BodyTypeDef F_500tp_Gelatinous_090;
-        public static BodyTypeDef F_900tp_Gelatinous_090; // Gel X
+        //public static BodyTypeDef F_150tp_Gelatinous_090;
+        //public static BodyTypeDef F_200tp_Gelatinous_090;
+        //public static BodyTypeDef F_250tp_Gelatinous_090;
+        //public static BodyTypeDef F_300tp_Gelatinous_090;
+        //public static BodyTypeDef F_350tp_Gelatinous_090;
+        //public static BodyTypeDef F_400tp_Gelatinous_090;
+        //public static BodyTypeDef F_450tp_Gelatinous_090;
+        //public static BodyTypeDef F_500tp_Gelatinous_090;
+        //public static BodyTypeDef F_900tp_Gelatinous_090; // Gel X
 
-        public static BodyTypeDef F_910tp_Gelatinous_090;
-        public static BodyTypeDef F_920tp_Gelatinous_090;
-        public static BodyTypeDef F_930tp_Gelatinous_090;
-        public static BodyTypeDef F_940tp_Gelatinous_090;
-        public static BodyTypeDef F_950tp_Gelatinous_090;
-        public static BodyTypeDef F_960tp_Gelatinous_090;
-        public static BodyTypeDef F_970tp_Gelatinous_090;
-        public static BodyTypeDef F_980tp_Gelatinous_090;
-        public static BodyTypeDef F_990tp_Gelatinous_090;
-        public static BodyTypeDef F_995tp_Gelatinous_090; // Gel XX
+        //public static BodyTypeDef F_910tp_Gelatinous_090;
+        //public static BodyTypeDef F_920tp_Gelatinous_090;
+        //public static BodyTypeDef F_930tp_Gelatinous_090;
+        //public static BodyTypeDef F_940tp_Gelatinous_090;
+        //public static BodyTypeDef F_950tp_Gelatinous_090;
+        //public static BodyTypeDef F_960tp_Gelatinous_090;
+        //public static BodyTypeDef F_970tp_Gelatinous_090;
+        //public static BodyTypeDef F_980tp_Gelatinous_090;
+        //public static BodyTypeDef F_990tp_Gelatinous_090;
+        //public static BodyTypeDef F_995tp_Gelatinous_090; // Gel XX
 
 
         #endregion

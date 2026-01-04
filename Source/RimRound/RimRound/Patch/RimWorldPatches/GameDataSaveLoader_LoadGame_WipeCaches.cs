@@ -20,7 +20,6 @@ namespace RimRound.Patch
         {
             BodyTypeUtility.InvalidateCorpseCache();
             RacialBodyTypeInfoUtility.InvalidateCaches();
-            PawnRenderer_GetBodyPos_HideBlankets.InvalidateCaches();
             Corpse_CurRotDrawMode_Get_ChangeDessicatedCorpseBodyTypeToNonRR.InvalidateCache();
             ApparelGraphicRecordGetter_TryGetGraphicApparel_UseTransparentImagesForBadTex.InvalidateCache();
         }

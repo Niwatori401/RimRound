@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<BodyTypeDef>
-		<defName>M_020_Corpulent</defName>
+		<defName>M_020ms_Corpulent</defName>
 		<headOffset>(0.040, 0.570)</headOffset>
-		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_020_Corpulent</bodyNakedGraphicPath>
+		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_M_020ms_Corpulent</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</bodyDessicatedGraphicPath>
 		
 		<woundAnchors>
